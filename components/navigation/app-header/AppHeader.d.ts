@@ -1,0 +1,15 @@
+/**
+ * Global app header — brand mark + wordmark (accent "F") on the left;
+ * back-to-modules and logout icon buttons on the right.
+ * @startingPoint section="Navigation" subtitle="Global header with brand mark + logout" viewport="700x100"
+ */
+export interface AppHeaderProps {
+  /** Path/URL to the brand mark image (assets/forge-mark.png). */
+  markSrc?: string;
+  /** True when inside a module (Treino/Nutrição/Perfil) — shows back-to-modules icon. */
+  inModule?: boolean;
+  onBackToModules?: () => void;
+  onLogout?: () => void;
+}
+
+export function AppHeader(props: AppHeaderProps): JSX.Element;

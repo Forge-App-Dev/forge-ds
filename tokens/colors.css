@@ -1,0 +1,84 @@
+/* Forge Design System — color tokens
+   Source: FORGE_DESIGN_SYSTEM.md + src/theme/tokens.js (mateusutz/forge-app) */
+:root {
+  /* Surfaces (dark graphite theme — Forge base) */
+  --forge-bg: #0B0F19;
+  --forge-surface: #161E2E;
+  --forge-surface-raised: #1B2536;
+  --forge-panel: #121215;
+  --forge-border: #2A3344;
+  --forge-border-input: #2E3A4D;
+  --forge-divider: #1B2536;
+
+  /* Text */
+  --forge-text: #f0f0f2;
+  --forge-text-muted: #9a9aa2;
+  --forge-text-dim: #7a7a82;
+  --forge-text-faint: #6a6a72;
+  --forge-text-dimmer: #5a5a62;
+
+  /* Brand + semantic */
+  --forge-accent: #EF4444;       /* Forge brand red */
+  --forge-on-accent: #FFFFFF;
+  --forge-success: #10B981;
+  --forge-warning: #F59E0B;
+  --forge-danger: #e36a5a;
+
+  /* Nutrition module accent ("Fuel") */
+  --forge-nutrition: #10B981;
+
+  /* Fixed macro colors — never change, part of family identity */
+  --forge-macro-protein: #E5645E;
+  --forge-macro-carb: #E0A23B;
+  --forge-macro-fat: #4C9BD6;
+
+  /* Assignable category palette — canonical order */
+  --forge-cat-1: #EF4444;
+  --forge-cat-2: #2563EB;
+  --forge-cat-3: #8B5CF6;
+  --forge-cat-4: #10B981;
+  --forge-cat-5: #F59E0B;
+  --forge-cat-6: #EC4899;
+
+  /* Extended category palette (when more colors are needed) */
+  --forge-cat-ext-1: #38BDF8;
+  --forge-cat-ext-2: #34D399;
+  --forge-cat-ext-3: #FB923C;
+  --forge-cat-ext-4: #84CC16;
+  --forge-cat-ext-5: #F472B6;
+  --forge-cat-ext-6: #22D3EE;
+  --forge-cat-ext-7: #A78BFA;
+  --forge-cat-ext-8: #FBBF24;
+  --forge-cat-ext-9: #818CF8;
+
+  /* Semantic aliases used across components */
+  --surface-bg: var(--forge-bg);
+  --surface-card: var(--forge-surface);
+  --surface-raised: var(--forge-surface-raised);
+  --surface-panel: var(--forge-panel);
+  --border-card: var(--forge-border);
+  --border-input: var(--forge-border-input);
+  --text-body: var(--forge-text);
+  --text-secondary: var(--forge-text-muted);
+}
+
+/* Light theme variant ("sibling app" pattern, e.g. a "Fuel" app) —
+   same components/radii/type/spacing, surfaces + text flipped, accent swapped.
+   Opt in with class="forge-theme-light" on a container. */
+.forge-theme-light {
+  --forge-bg: #F7F6F4;
+  --forge-surface: #FFFFFF;
+  --forge-surface-raised: #F0EFEC;
+  --forge-panel: #FFFFFF;
+  --forge-border: #E4E2DD;
+  --forge-border-input: #DAD7D0;
+  --forge-divider: #EAE8E3;
+
+  --forge-text: #1B1D22;
+  --forge-text-muted: #5C5E66;
+  --forge-text-dim: #7A7C82;
+  --forge-text-faint: #94969B;
+  --forge-text-dimmer: #B2B3B7;
+
+  --forge-accent: #10B981;
+}

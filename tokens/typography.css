@@ -1,0 +1,37 @@
+/* Forge Design System — typography tokens
+   Title font: Barlow Condensed (600/700/800), always uppercase, slight tracking.
+   Body font: Inter (400–800). Loaded from Google Fonts (exact match — no substitution needed). */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-title: "Barlow Condensed", sans-serif;      /* headlines, logo, big numbers — always uppercase */
+  --font-body: "Inter", sans-serif;                   /* everything else */
+
+  /* Weight aliases (Android rule ported: never mix custom font + font-weight,
+     always select the exact weight-family). On web, weight numbers are fine. */
+  --weight-title-semi: 600;
+  --weight-title-bold: 700;
+  --weight-title-extra: 800;
+  --weight-body-regular: 400;
+  --weight-body-medium: 500;
+  --weight-body-semi: 600;
+  --weight-body-bold: 700;
+  --weight-body-extra: 800;
+
+  /* Type scale (px) — from FORGE_DESIGN_SYSTEM.md §3 */
+  --text-logo-lg: 40px;      /* login logo */
+  --text-screen-title: 34px; /* Barlow, screen title */
+  --text-panel-title: 22px;  /* Barlow, panel/header titles */
+  --text-card-title: 16px;
+  --text-input: 14.5px;
+  --text-list-item: 14px;
+  --text-body: 13.5px;
+  --text-body-sm: 13px;
+  --text-chip: 12.5px;
+  --text-label: 11.5px;      /* uppercase, letter-spacing 1px */
+  --text-mini-label: 10.5px;
+
+  --tracking-title: 0.5px;
+  --tracking-label: 1px;
+  --tracking-eyebrow: 2px;
+}

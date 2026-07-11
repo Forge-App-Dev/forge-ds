@@ -1,0 +1,96 @@
+<!-- @dsCard group="Components" viewport="700x900" name="Feedback" subtitle="Ring, MacroMeter, MetaBar, MiniChart, InlineAlert, EmptyState, Spinner, StatBadge — incl. variants" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--font-body)}
+h4{color:var(--forge-text-faint);font-size:10.5px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin:0 0 8px}
+section{margin-bottom:22px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Ring, MacroMeter, MetaBar, MiniChart, InlineAlert, EmptyState, Spinner, StatBadge } = window.ForgeDesignSystem_7731a5;
+
+function Demo() {
+  return (
+    <div>
+      <section>
+        <h4>Ring — progress / indeterminate / segments</h4>
+        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+          <Ring size={90} stroke={10} progress={0.62} color="#EF4444"><span style={{ color: "var(--forge-text)", fontFamily: "var(--font-title)", fontSize: 18 }}>62%</span></Ring>
+          <Ring size={70} stroke={7} indeterminate color="#EF4444" />
+          <Ring size={90} stroke={10} segments={[
+            { value: 0.25, color: "var(--forge-macro-protein)" },
+            { value: 0.35, color: "var(--forge-macro-carb)" },
+            { value: 0.15, color: "var(--forge-macro-fat)" },
+          ]}><span style={{ color: "var(--forge-text)", fontFamily: "var(--font-title)", fontSize: 16 }}>75%</span></Ring>
+        </div>
+      </section>
+
+      <section>
+        <h4>MacroMeter — default / compact</h4>
+        <div style={{ maxWidth: 340 }}>
+          <MacroMeter label="Proteína" color="var(--forge-macro-protein)" value={92} target={150} />
+          <div style={{ marginTop: 10 }}>
+            <MacroMeter compact color="var(--forge-macro-carb)" value={45} target={70} />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h4>MetaBar — single value / segmented</h4>
+        <div style={{ maxWidth: 340, display: "flex", flexDirection: "column", gap: 10 }}>
+          <MetaBar value={2100} target={2400} />
+          <MetaBar segments={[
+            { value: 420, color: "var(--forge-macro-protein)" },
+            { value: 780, color: "var(--forge-macro-carb)" },
+            { value: 480, color: "var(--forge-macro-fat)" },
+          ]} target={2400} />
+        </div>
+      </section>
+
+      <section>
+        <h4>MiniChart — line / bar / area</h4>
+        <div style={{ display: "flex", gap: 16, maxWidth: 620 }}>
+          <div style={{ flex: 1 }}><MiniChart values={[82, 81.5, 81.2, 80.8, 80.6, 80.1, 79.8]} color="#EF4444" /></div>
+          <div style={{ flex: 1 }}><MiniChart variant="bar" values={[420, 780, 610, 0, 390]} color="#10B981" /></div>
+          <div style={{ flex: 1 }}><MiniChart variant="area" values={[82, 81.5, 81, 80.6, 80.2]} color="#EF4444" /></div>
+        </div>
+      </section>
+
+      <section>
+        <h4>InlineAlert</h4>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxWidth: 500 }}>
+          <InlineAlert kind="warning" title="Lembrete do programa.">Rode por 8–10 semanas antes de reavaliar.</InlineAlert>
+          <InlineAlert kind="success" title="Meta batida!">Você completou todos os treinos da semana.</InlineAlert>
+        </div>
+      </section>
+
+      <section>
+        <h4>EmptyState</h4>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxWidth: 500 }}>
+          <EmptyState icon="moon" title="Descanso" subtitle="Recuperação também é treino." />
+        </div>
+      </section>
+
+      <section>
+        <h4>Spinner &amp; StatBadge</h4>
+        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+          <Spinner size={22} color="#EF4444" />
+          <StatBadge value={-1.2} unit="kg" goodDirection="down" />
+          <StatBadge value={5} unit=" reps" goodDirection="up" />
+        </div>
+      </section>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+</script>
+</body>
+</html>

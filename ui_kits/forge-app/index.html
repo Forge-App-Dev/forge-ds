@@ -1,0 +1,81 @@
+<!-- @dsCard group="Forge App" viewport="480x780" name="Forge App" subtitle="Login → módulos → Treino/Nutrição — interactive click-through" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Forge — UI Kit</title>
+<link rel="stylesheet" href="../../styles.css" />
+<script src="../../_ds_bundle.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  html, body { margin: 0; background: var(--forge-bg); }
+  #root { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--forge-bg); display: flex; flex-direction: column; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="LoginScreen.jsx"></script>
+<script type="text/babel" src="ModuleChooserScreen.jsx"></script>
+<script type="text/babel" src="TreinoHojeScreen.jsx"></script>
+<script type="text/babel" src="NutricaoHojeScreen.jsx"></script>
+<script type="text/babel" src="PerfilScreen.jsx"></script>
+<script type="text/babel" src="DayPlannerScreen.jsx"></script>
+<script type="text/babel" src="MealForm.jsx"></script>
+<script type="text/babel" src="WorkoutEditorScreen.jsx"></script>
+<script type="text/babel" src="ExerciseForm.jsx"></script>
+<script type="text/babel">
+const { AppHeader, ModuleTabBar } = window.ForgeDesignSystem_7731a5;
+
+function App() {
+  const [screen, setScreen] = React.useState("login"); // login | modules | treino | nutricao | perfil
+  const [treinoTab, setTreinoTab] = React.useState("hoje");
+  const [nutriTab, setNutriTab] = React.useState("hoje");
+
+  const [dayPlannerOpen, setDayPlannerOpen] = React.useState(false);
+  const [mealFormOpen, setMealFormOpen] = React.useState(false);
+  const [workoutEditorOpen, setWorkoutEditorOpen] = React.useState(false);
+  const [exerciseForm, setExerciseForm] = React.useState(null); // null closed, {} or exercise obj when open
+
+  if (screen === "login") {
+    return <LoginScreen onLogin={() => setScreen("modules")} />;
+  }
+
+  const inModule = screen === "treino" || screen === "nutricao" || screen === "perfil";
+  const accent = screen === "nutricao" ? "#10B981" : "#EF4444";
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+      <AppHeader markSrc="../../assets/forge-mark.png" inModule={inModule} onBackToModules={() => setScreen("modules")} onLogout={() => setScreen("login")} />
+      <div style={{ flex: 1, overflowY: "auto" }}>
+        {screen === "modules" ? <ModuleChooserScreen onChoose={(m) => setScreen(m)} /> : null}
+        {screen === "treino" ? <TreinoHojeScreen onContinueWorkout={() => setWorkoutEditorOpen(true)} onEditWorkout={() => setWorkoutEditorOpen(true)} /> : null}
+        {screen === "nutricao" ? <NutricaoHojeScreen onAdjust={() => setDayPlannerOpen(true)} onEditMeal={() => setMealFormOpen(true)} /> : null}
+        {screen === "perfil" ? <PerfilScreen onOpenTargets={() => setDayPlannerOpen(true)} /> : null}
+      </div>
+      {screen === "treino" || screen === "nutricao" ? (
+        <ModuleTabBar
+          tabs={
+            screen === "treino"
+              ? [{ id: "hoje", label: "Hoje", icon: "dumbbell" }, { id: "treinos", label: "Treinos", icon: "list" }, { id: "progresso", label: "Progresso", icon: "chart" }]
+              : [{ id: "hoje", label: "Hoje", icon: "flame" }, { id: "cardapio", label: "Cardápio", icon: "book" }, { id: "alimentos", label: "Alimentos", icon: "list" }]
+          }
+          active={screen === "treino" ? treinoTab : nutriTab}
+          onChange={screen === "treino" ? setTreinoTab : setNutriTab}
+          accent={accent}
+        />
+      ) : null}
+
+      <DayPlannerScreen visible={dayPlannerOpen} onClose={() => setDayPlannerOpen(false)} />
+      <MealForm visible={mealFormOpen} onClose={() => setMealFormOpen(false)} />
+      <WorkoutEditorScreen visible={workoutEditorOpen} onClose={() => setWorkoutEditorOpen(false)} onEditExercise={(ex) => setExerciseForm(ex || {})} />
+      <ExerciseForm visible={!!exerciseForm} onClose={() => setExerciseForm(null)} exercise={exerciseForm && exerciseForm.name ? exerciseForm : null} />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

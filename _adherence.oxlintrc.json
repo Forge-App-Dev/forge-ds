@@ -1,0 +1,464 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/feedback/**",
+              "components/feedback/loading-screen/**",
+              "components/feedback/macro-meter/**",
+              "components/feedback/meta-bar/**",
+              "components/feedback/mini-chart/**",
+              "components/feedback/ring/**",
+              "components/forms/**",
+              "components/icons/**",
+              "components/layout/screen-body/**",
+              "components/layout/screen/**",
+              "components/navigation/app-header/**",
+              "components/navigation/module-header/**",
+              "components/navigation/module-tab-bar/**",
+              "components/overlays/**",
+              "components/overlays/full-screen/**",
+              "components/overlays/panel/**",
+              "components/shared/**",
+              "components/typography/**",
+              "ui_kits/forge-app/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Barlow Condensed|Inter))/i]",
+        "message": "Font not provided by the design system. Available: Barlow Condensed, Inter."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AppHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:markSrc|inModule|onBackToModules|onLogout|key|ref|className|style|children)$/]",
+        "message": "<AppHeader> doesn't accept that prop. Declared props: markSrc, inModule, onBackToModules, onLogout."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|onClick|color|resolvedColor|disabled|small|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: title, onClick, color, resolvedColor, disabled, small, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|stripeColor|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: children, stripeColor, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ConfirmButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|confirmTitle|onConfirm|small|style|key|ref|className|style|children)$/]",
+        "message": "<ConfirmButton> doesn't accept that prop. Declared props: title, confirmTitle, onConfirm, small, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|title|subtitle|key|ref|className|style|children)$/]",
+        "message": "<EmptyState> doesn't accept that prop. Declared props: icon, title, subtitle."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FullScreen'] > JSXAttribute > JSXIdentifier[name!=/^(?:visible|onClose|title|right|children|footer|key|ref|className|style|children)$/]",
+        "message": "<FullScreen> doesn't accept that prop. Declared props: visible, onClose, title, right, children, footer."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='HeaderAction'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|onClick|key|ref|className|style|children)$/]",
+        "message": "<HeaderAction> doesn't accept that prop. Declared props: title, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|color|size|strokeWidth|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, color, size, strokeWidth."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InlineAlert'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|title|children|key|ref|className|style|children)$/]",
+        "message": "<InlineAlert> doesn't accept that prop. Declared props: kind, title, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InlineAlert'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:info|success|warning|danger)$/]",
+        "message": "<InlineAlert> kind must be one of 'info' | 'success' | 'warning' | 'danger'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Label'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|size|color|style|key|ref|className|style|children)$/]",
+        "message": "<Label> doesn't accept that prop. Declared props: children, size, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Label'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:label|miniLabel)$/]",
+        "message": "<Label> size must be one of 'label' | 'miniLabel'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LoadingScreen'] > JSXAttribute > JSXIdentifier[name!=/^(?:markSrc|message|key|ref|className|style|children)$/]",
+        "message": "<LoadingScreen> doesn't accept that prop. Declared props: markSrc, message."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MacroMeter'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|color|value|target|unit|compact|key|ref|className|style|children)$/]",
+        "message": "<MacroMeter> doesn't accept that prop. Declared props: label, color, value, target, unit, compact."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MetaBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|target|color|segments|key|ref|className|style|children)$/]",
+        "message": "<MetaBar> doesn't accept that prop. Declared props: value, target, color, segments."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MiniChart'] > JSXAttribute > JSXIdentifier[name!=/^(?:values|color|variant|key|ref|className|style|children)$/]",
+        "message": "<MiniChart> doesn't accept that prop. Declared props: values, color, variant."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MiniChart'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:line|bar|area)$/]",
+        "message": "<MiniChart> variant must be one of 'line' | 'bar' | 'area'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ModuleHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|right|key|ref|className|style|children)$/]",
+        "message": "<ModuleHeader> doesn't accept that prop. Declared props: eyebrow, title, right."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ModuleTabBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:tabs|active|onChange|accent|key|ref|className|style|children)$/]",
+        "message": "<ModuleTabBar> doesn't accept that prop. Declared props: tabs, active, onChange, accent."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Panel'] > JSXAttribute > JSXIdentifier[name!=/^(?:visible|onClose|title|children|footer|key|ref|className|style|children)$/]",
+        "message": "<Panel> doesn't accept that prop. Declared props: visible, onClose, title, children, footer."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pill'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|onClick|active|color|style|key|ref|className|style|children)$/]",
+        "message": "<Pill> doesn't accept that prop. Declared props: title, onClick, active, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='QtyInput'] > JSXAttribute > JSXIdentifier[name!=/^(?:qty|unit|units|onChange|key|ref|className|style|children)$/]",
+        "message": "<QtyInput> doesn't accept that prop. Declared props: qty, unit, units, onChange."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Ring'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|stroke|progress|color|track|children|indeterminate|segments|key|ref|className|style|children)$/]",
+        "message": "<Ring> doesn't accept that prop. Declared props: size, stroke, progress, color, track, children, indeterminate, segments."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Screen'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|scroll|style|key|ref|className|style|children)$/]",
+        "message": "<Screen> doesn't accept that prop. Declared props: children, scroll, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ScreenBody'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|scroll|style|key|ref|className|style|children)$/]",
+        "message": "<ScreenBody> doesn't accept that prop. Declared props: children, scroll, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionLabel'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<SectionLabel> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Spinner'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|stroke|color|key|ref|className|style|children)$/]",
+        "message": "<Spinner> doesn't accept that prop. Declared props: size, stroke, color."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|unit|goodDirection|key|ref|className|style|children)$/]",
+        "message": "<StatBadge> doesn't accept that prop. Declared props: value, unit, goodDirection."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatBadge'] > JSXAttribute[name.name='goodDirection'] > Literal[value!=/^(?:down|up)$/]",
+        "message": "<StatBadge> goodDirection must be one of 'down' | 'up'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TargetsCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:kcal|protein|carb|fat|onEdit|accent|key|ref|className|style|children)$/]",
+        "message": "<TargetsCard> doesn't accept that prop. Declared props: kcal, protein, carb, fat, onEdit, accent."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|value|onChange|placeholder|type|multiline|style|key|ref|className|style|children)$/]",
+        "message": "<TextField> doesn't accept that prop. Declared props: label, value, onChange, placeholder, type, multiline, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Title'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|size|color|style|key|ref|className|style|children)$/]",
+        "message": "<Title> doesn't accept that prop. Declared props: children, size, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Title'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:logoLg|screenTitle|panelTitle|cardTitle)$/]",
+        "message": "<Title> size must be one of 'logoLg' | 'screenTitle' | 'panelTitle' | 'cardTitle'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='VideoModal'] > JSXAttribute > JSXIdentifier[name!=/^(?:visible|onClose|title|children|key|ref|className|style|children)$/]",
+        "message": "<VideoModal> doesn't accept that prop. Declared props: visible, onClose, title, children."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "AppHeader": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "ConfirmButton": {
+        "replaces": []
+      },
+      "EmptyState": {
+        "replaces": []
+      },
+      "FullScreen": {
+        "replaces": []
+      },
+      "HeaderAction": {
+        "replaces": []
+      },
+      "Icon": {
+        "replaces": []
+      },
+      "InlineAlert": {
+        "replaces": []
+      },
+      "Label": {
+        "replaces": []
+      },
+      "LoadingScreen": {
+        "replaces": []
+      },
+      "MacroMeter": {
+        "replaces": []
+      },
+      "MetaBar": {
+        "replaces": []
+      },
+      "MiniChart": {
+        "replaces": []
+      },
+      "ModuleHeader": {
+        "replaces": []
+      },
+      "ModuleTabBar": {
+        "replaces": []
+      },
+      "Panel": {
+        "replaces": []
+      },
+      "Pill": {
+        "replaces": []
+      },
+      "QtyInput": {
+        "replaces": []
+      },
+      "Ring": {
+        "replaces": []
+      },
+      "Screen": {
+        "replaces": []
+      },
+      "ScreenBody": {
+        "replaces": []
+      },
+      "SectionLabel": {
+        "replaces": []
+      },
+      "Spinner": {
+        "replaces": []
+      },
+      "StatBadge": {
+        "replaces": []
+      },
+      "TargetsCard": {
+        "replaces": []
+      },
+      "TextField": {
+        "replaces": []
+      },
+      "Title": {
+        "replaces": []
+      },
+      "VideoModal": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--app-max-width",
+      "--border-card",
+      "--border-input",
+      "--font-body",
+      "--font-title",
+      "--forge-accent",
+      "--forge-bg",
+      "--forge-border",
+      "--forge-border-input",
+      "--forge-cat-1",
+      "--forge-cat-2",
+      "--forge-cat-3",
+      "--forge-cat-4",
+      "--forge-cat-5",
+      "--forge-cat-6",
+      "--forge-cat-ext-1",
+      "--forge-cat-ext-2",
+      "--forge-cat-ext-3",
+      "--forge-cat-ext-4",
+      "--forge-cat-ext-5",
+      "--forge-cat-ext-6",
+      "--forge-cat-ext-7",
+      "--forge-cat-ext-8",
+      "--forge-cat-ext-9",
+      "--forge-danger",
+      "--forge-divider",
+      "--forge-macro-carb",
+      "--forge-macro-fat",
+      "--forge-macro-protein",
+      "--forge-nutrition",
+      "--forge-on-accent",
+      "--forge-panel",
+      "--forge-success",
+      "--forge-surface",
+      "--forge-surface-raised",
+      "--forge-text",
+      "--forge-text-dim",
+      "--forge-text-dimmer",
+      "--forge-text-faint",
+      "--forge-text-muted",
+      "--forge-warning",
+      "--radius-button",
+      "--radius-card",
+      "--radius-chip",
+      "--radius-input",
+      "--radius-panel",
+      "--radius-pill",
+      "--space-card",
+      "--space-card-gap",
+      "--space-gap",
+      "--space-screen-h",
+      "--surface-bg",
+      "--surface-card",
+      "--surface-panel",
+      "--surface-raised",
+      "--tap-target-min",
+      "--text-body",
+      "--text-body-sm",
+      "--text-card-title",
+      "--text-chip",
+      "--text-input",
+      "--text-label",
+      "--text-list-item",
+      "--text-logo-lg",
+      "--text-mini-label",
+      "--text-panel-title",
+      "--text-screen-title",
+      "--text-secondary",
+      "--tracking-eyebrow",
+      "--tracking-label",
+      "--tracking-title",
+      "--weight-body-bold",
+      "--weight-body-extra",
+      "--weight-body-medium",
+      "--weight-body-regular",
+      "--weight-body-semi",
+      "--weight-title-bold",
+      "--weight-title-extra",
+      "--weight-title-semi"
+    ],
+    "tokenKinds": {
+      "--forge-bg": "color",
+      "--forge-surface": "color",
+      "--forge-surface-raised": "color",
+      "--forge-panel": "color",
+      "--forge-border": "color",
+      "--forge-border-input": "color",
+      "--forge-divider": "color",
+      "--forge-text": "font",
+      "--forge-text-muted": "font",
+      "--forge-text-dim": "font",
+      "--forge-text-faint": "font",
+      "--forge-text-dimmer": "font",
+      "--forge-accent": "color",
+      "--forge-on-accent": "color",
+      "--forge-success": "color",
+      "--forge-warning": "color",
+      "--forge-danger": "color",
+      "--forge-nutrition": "color",
+      "--forge-macro-protein": "color",
+      "--forge-macro-carb": "color",
+      "--forge-macro-fat": "color",
+      "--forge-cat-1": "color",
+      "--forge-cat-2": "color",
+      "--forge-cat-3": "color",
+      "--forge-cat-4": "color",
+      "--forge-cat-5": "color",
+      "--forge-cat-6": "color",
+      "--forge-cat-ext-1": "color",
+      "--forge-cat-ext-2": "color",
+      "--forge-cat-ext-3": "color",
+      "--forge-cat-ext-4": "color",
+      "--forge-cat-ext-5": "color",
+      "--forge-cat-ext-6": "color",
+      "--forge-cat-ext-7": "color",
+      "--forge-cat-ext-8": "color",
+      "--forge-cat-ext-9": "color",
+      "--surface-bg": "color",
+      "--surface-card": "color",
+      "--surface-raised": "color",
+      "--surface-panel": "color",
+      "--border-card": "color",
+      "--border-input": "color",
+      "--text-body": "font",
+      "--text-secondary": "font",
+      "--font-title": "font",
+      "--font-body": "font",
+      "--weight-title-semi": "font",
+      "--weight-title-bold": "font",
+      "--weight-title-extra": "font",
+      "--weight-body-regular": "font",
+      "--weight-body-medium": "font",
+      "--weight-body-semi": "font",
+      "--weight-body-bold": "font",
+      "--weight-body-extra": "font",
+      "--text-logo-lg": "font",
+      "--text-screen-title": "font",
+      "--text-panel-title": "font",
+      "--text-card-title": "font",
+      "--text-input": "font",
+      "--text-list-item": "font",
+      "--text-body-sm": "font",
+      "--text-chip": "font",
+      "--text-label": "font",
+      "--text-mini-label": "font",
+      "--tracking-title": "font",
+      "--tracking-label": "font",
+      "--tracking-eyebrow": "font",
+      "--radius-card": "radius",
+      "--radius-panel": "radius",
+      "--radius-input": "radius",
+      "--radius-button": "radius",
+      "--radius-chip": "radius",
+      "--radius-pill": "radius",
+      "--space-screen-h": "spacing",
+      "--space-card": "spacing",
+      "--space-gap": "spacing",
+      "--space-card-gap": "spacing",
+      "--app-max-width": "spacing",
+      "--tap-target-min": "spacing"
+    },
+    "fontFamilies": [
+      "Barlow Condensed",
+      "Inter"
+    ]
+  }
+}

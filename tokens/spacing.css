@@ -1,0 +1,20 @@
+/* Forge Design System — spacing, radius, layout tokens */
+:root {
+  /* Radius */
+  --radius-card: 14px;
+  --radius-panel: 18px;
+  --radius-input: 10px;
+  --radius-button: 11px;
+  --radius-chip: 8px;
+  --radius-pill: 999px;
+
+  /* Spacing */
+  --space-screen-h: 20px;  /* screen horizontal padding (18–22px range) */
+  --space-card: 16px;      /* card internal padding (16–18px range) */
+  --space-gap: 10px;       /* common list gap (8–12px range) */
+  --space-card-gap: 10px;  /* gap between cards (9–11px range) */
+
+  /* Layout */
+  --app-max-width: 480px;  /* mobile-first, centered */
+  --tap-target-min: 44px;
+}
