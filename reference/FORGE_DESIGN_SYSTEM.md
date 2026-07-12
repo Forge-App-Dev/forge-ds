@@ -46,9 +46,14 @@
 |---|---|---|
 | `text` | `#f0f0f2` | Texto principal |
 | `textMuted` | `#9a9aa2` | Texto secundário |
-| `textDim` | `#7a7a82` | Texto terciário / descrições |
-| `textFaint` | `#6a6a72` | Rótulos pequenos, hints |
-| `textDimmer` | `#5a5a62` | Texto muito apagado, placeholders de estado |
+| `textDim` | `#9898A0` | Texto terciário / descrições |
+| `textFaint` | `#8C8C94` | Rótulos pequenos, hints |
+| `textDimmer` | `#6C6C74` | Texto muito apagado, placeholders de estado |
+
+> **Nota (12/07/2026, DS-02):** valores de `textDim`/`textFaint`/`textDimmer`
+> foram elevados para atingir WCAG AA (4,5:1 para dim/faint, ~3:1 para dimmer
+> — uso não-textual) contra `surfaceRaised` (`#1B2536`), o pior caso entre as
+> superfícies escuras. Valores antigos: `#7a7a82` / `#6a6a72` / `#5a5a62`.
 
 ### Marca e semânticas
 | Token | Hex | Uso |
@@ -217,8 +222,8 @@ de variar, em ordem de preferência:
 ```
 FUNDO        #0B0F19      TEXTO         #f0f0f2
 CARTÃO       #161E2E      TEXTO MUTED   #9a9aa2
-ELEVADO      #1B2536      TEXTO DIM     #7a7a82
-BORDA        #2A3344      TEXTO FAINT   #6a6a72
+ELEVADO      #1B2536      TEXTO DIM     #9898A0
+BORDA        #2A3344      TEXTO FAINT   #8C8C94
 BORDA INPUT  #2E3A4D      
                           
 ACENTO       #EF4444      SUCESSO       #10B981

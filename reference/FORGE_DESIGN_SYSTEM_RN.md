@@ -41,8 +41,8 @@
 Superfícies: `bg #0B0F19` · `surface #161E2E` · `surfaceRaised #1B2536` ·
 `panel #121215` · `border #2A3344` · `borderInput #2E3A4D` · `divider #1B2536`.
 
-Texto: `text #f0f0f2` · `textMuted #9a9aa2` · `textDim #7a7a82` ·
-`textFaint #6a6a72` · `textDimmer #5a5a62`.
+Texto: `text #f0f0f2` · `textMuted #9a9aa2` · `textDim #9898A0` ·
+`textFaint #8C8C94` · `textDimmer #6C6C74`.
 
 Marca e semânticas: `accent #EF4444` (vermelho Forge) · `onAccent #FFFFFF` ·
 `success #10B981` · `warning #F59E0B` · `danger #e36a5a`.
