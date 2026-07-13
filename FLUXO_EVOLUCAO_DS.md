@@ -1,103 +1,102 @@
 # Fluxo de Evolução do Design System (Forge)
 
-> Como o `forge-design_system` é mantido vivo e sincronizado com o **Claude
-> Design**, e como novas necessidades de UI (que ainda não existem no DS) são
-> resolvidas durante o desenvolvimento do app, sem travar o trabalho.
->
-> Complementa: `readme.md` (conteúdo do DS), `reference/FORGE_DESIGN_SYSTEM.md`,
-> `reference/FORGE_DESIGN_SYSTEM_RN.md`, e (no projeto `forge-app`)
-> `FLUXO_PROTOTIPO_SNACK.md`.
+> Como o `forge-ds` nasce, evolui e é validado. **Este documento substitui
+> integralmente a versão anterior baseada em Claude Design.** A partir de
+> 2026-07-13, o Claude Design deixou de ser usado neste projeto — todo o
+> design nasce, é editado e é revisado diretamente aqui.
 
 ---
 
-## 1. Origem e natureza do repo
+## 1. Por que essa mudança
 
-Este repositório é uma **exportação do Claude Design** (`claude.ai/design`).
-Não há integração automática entre o Claude Design e este repo — toda
-sincronização é **manual, via zip exportado e push**.
+O modelo anterior (Claude Design → export zip → import → push) resolvia
+"preciso ver antes de aprovar" com um custo alto: 4 fontes de verdade
+sincronizadas na mão, componentes que só existiam visualmente e não
+tecnicamente (sem acessibilidade, sem tokens reais, sem lógica), e retrabalho
+sempre que um export novo sobrescrevia uma correção feita aqui.
 
-**Fonte de verdade prática:** este repo (`forge-design_system`), consultado via
-`raw.githubusercontent.com/mateusutz/forge-design_system/main/<arquivo>`.
+**Constatação:** "ver antes de aprovar" não exige uma ferramenta de design
+separada. Exige apenas que o resultado renderize em algum lugar visível.
+O forge-ds já produz HTML real (`.card.html`) — só faltava publicá-lo.
 
-**Fonte de verdade "oficial" de componentes reaproveitáveis:** o Claude Design —
-é onde o DS é desenhado e exportado de novo quando muda de forma significativa.
+## 2. Fonte de verdade única
 
----
+**O repositório `Forge-App-Dev/forge-ds`, no GitHub, é a única fonte de
+verdade do design system.** Não existe mais uma versão "oficial" em outro
+lugar. O que está no repo é o sistema.
 
-## 2. Dois tipos de mudança, dois caminhos
+## 3. Como uma mudança nasce
 
-### 2.1 Mudança visual/componente (nasce no Claude Design)
-Ex.: novo componente reaproveitável, alteração de cor/token, revisão de layout
-de um componente existente.
+Um único caminho, para qualquer tipo de mudança — visual, de token, de
+comportamento, de acessibilidade:
 
-1. Mateus edita/pede a criação no Claude Design.
-2. Exporta o zip novo.
-3. Sobe no chat (aqui, na sessão do projeto do app).
-4. Claude extrai, compara com o repo, faz push (commit descreve a mudança).
-5. Claude confirma o hash novo do commit.
+1. **Mateus descreve a necessidade** (aqui, no chat).
+2. **Claude implementa direto no repo** — componente, token, guideline, doc
+   — já seguindo os padrões definidos nesta auditoria (tokens antes de hex
+   cru, acessibilidade desde o nascimento, sem retrabalho por design).
+3. **Claude publica no GitHub Pages** (`https://forge-app-dev.github.io/forge-ds/`)
+   fazendo push para `main` — o Pages atualiza sozinho a cada push.
+4. **Mateus abre o link e vê o resultado renderizado de verdade** (não
+   mockup, não export) — pelo celular, sem precisar abrir editor.
+5. **Ajustes voltam por texto** ("aumenta o espaçamento", "esse vermelho tá
+   forte") — Claude edita e publica de novo. Sem exportação, sem zip, sem
+   segunda cópia do componente.
 
-### 2.2 Mudança textual/documentação (direto no repo)
-Ex.: corrigir um `.md`, ajustar uma nota, atualizar um token pequeno sem
-necessidade de redesenhar no Claude Design.
+Não existe mais "nasce no Claude Design" vs "nasce no código". **Tudo nasce
+no código, e o código é visível imediatamente.**
 
-- Claude edita direto no repo, sem passar pelo Claude Design.
-- Risco aceito: o registro dentro do Claude Design fica desatualizado nesse
-  ponto específico até uma próxima exportação geral.
+## 4. Regra de ouro contra retrabalho
 
----
+**Fundação antes de superfície.** Um componente só nasce depois que os
+tokens que ele vai consumir existem (cor, raio, espaçamento, motion,
+foco, tamanho). Isso evita o problema descrito por Mateus: criar algo e
+precisar reeditar depois porque a base mudou embaixo. A ordem de execução
+segue o roadmap da auditoria (`AUDITORIA_FORGE_DS_2026-07.md`, seção 12):
+tokens → higienização → APIs do núcleo → componentes novos.
 
-## 3. Necessidade nova durante o desenvolvimento do app (o caso comum)
+## 5. GitHub Pages — o que é e como usar
 
-Cenário: estamos evoluindo o `forge-app` (ou o PWA) e esbarramos numa
-necessidade de UI que **não existe ainda** no design system.
+- **URL:** `https://forge-app-dev.github.io/forge-ds/`
+- **Fonte:** branch `main`, raiz do repo (sem passo de build).
+- **Índice:** `index.html` na raiz — lista todos os cards de componentes e
+  guidelines, agrupados, mais o UI Kit clicável e os docs de referência.
+- **Atualizar o índice:** sempre que um `.card.html` novo for criado ou
+  removido, o `index.html` é regenerado (script interno) e re-publicado no
+  mesmo push.
+- **Não editar `index.html` na mão** — ele é gerado a partir dos metadados
+  (`@dsCard group=... name=... subtitle=...`) já presentes no topo de cada
+  card.
 
-**Não travamos o trabalho indo primeiro ao Claude Design.** Fluxo:
+## 6. Papel de cada parte
 
-1. **Claude cria o componente ali mesmo**, no código do app, seguindo os
-   tokens do DS (`forge-design_system`) à risca — nada fora do sistema
-   (cores, raios, espaçamento, tipografia).
-2. **Claude registra a pendência** de formalização (numa lista de "pendências
-   de sync DS", guardada na memória e/ou neste documento).
-3. **Quando fizer sentido** (algumas pendências acumuladas, ou a pedido do
-   Mateus), Claude escreve um **prompt pronto** pra colar no Claude Design,
-   descrevendo: nome do componente, propósito, tokens usados, variações,
-   exemplo de uso.
-4. Mateus cola o prompt no Claude Design, o componente é formalizado lá.
-5. Mateus exporta o zip novo e sobe no chat.
-6. Claude compara, faz push no repo — o componente "ad-hoc" vira componente
-   "oficial" do DS.
-
-### Divisão de responsabilidade
-
-| Onde nasce o componente | Quando usar |
+| Quem | Faz |
 |---|---|
-| Direto no código do app (Claude cria ali) | Urgência; o desenvolvimento não pode esperar |
-| Claude Design (via prompt que o Claude escreve) | Componente reaproveitável; vale formalizar no DS |
+| Mateus | Decide o quê construir, revisa visualmente no Pages, aprova/pede ajuste em texto |
+| Claude | Implementa (visual + tokens + acessibilidade + lógica) direto no repo, publica no Pages, mantém o índice atualizado |
 
-Mateus não precisa "pensar o que pedir" no Claude Design — Claude escreve o
-prompt certo; Mateus só cola.
+Não há mais um terceiro papel ("Claude Design formaliza depois"). A
+formalização acontece no mesmo commit que a criação.
 
----
+## 7. O que isso substitui
 
-## 4. Pendências de sync (lista viva)
+- ❌ Onboarding do Claude Design lendo o repo.
+- ❌ Export de zip do Claude Design.
+- ❌ Import/comparação de zip no chat.
+- ❌ "Pendências de sync DS" (lista de componentes ad-hoc aguardando
+  formalização) — não existe mais essa fila, porque não existe mais uma
+  segunda ferramenta para formalizar nela.
+- ❌ Qualquer menção a `claude.ai/design` neste projeto.
 
-> Atualizar esta seção conforme componentes ad-hoc forem criados no app e
-> ainda não formalizados no Claude Design. Remover a entrada quando o
-> componente for formalizado e o zip novo for importado.
+## 8. Checklist rápido
 
-- (nenhuma pendência registrada até o momento)
-
----
-
-## 5. Checklist rápido
-
-- Mudança visual/componente nova → nasce no Claude Design → export → push aqui.
-- Mudança textual pequena → direto no repo.
-- Necessidade urgente durante o dev → Claude cria no app com os tokens do DS →
-  registra pendência → formaliza depois via prompt.
-- Toda importação de zip novo → Claude compara e faz push, confirma hash.
+- Mudança de qualquer tipo → Claude edita o repo direto.
+- Token novo necessário → cria o token antes do componente que o usa.
+- Toda mudança visual → publicada no Pages no mesmo push.
+- Mateus revisa no link do Pages, não em zip nem em screenshot.
+- Ajuste → texto → novo push → Pages atualiza.
 
 ---
 
-*Criado ao definir o fluxo de manutenção do design system entre Claude Design
-e este repositório. Manter atualizado conforme o processo evoluir.*
+*Reescrito em 2026-07-13 para descartar o fluxo baseado em Claude Design e
+adotar GitHub Pages como superfície de revisão visual. Substitui a versão
+anterior deste documento por completo.*
