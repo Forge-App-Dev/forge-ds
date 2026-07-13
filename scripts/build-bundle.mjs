@@ -43,6 +43,7 @@ const COMPONENTS = [
 // Pill, FullScreen, AppHeader.
 const DEPS_FIRST = [
   ["onColor", "components/shared/color.js"],   // + resolveColor
+  ["useDialogA11y", "components/shared/useDialogA11y.js"],
   ["Icon", "components/icons/Icon.jsx"],        // + ICON_NAMES
   ["Ring", "components/feedback/ring/Ring.jsx"],
   ["Button", "components/core/Button.jsx"],
@@ -146,7 +147,7 @@ for (const rel of FILES) {
   const assign = exported.length ? `\nObject.assign(__ds_scope, { ${exported.join(", ")} });` : "";
   body += `\n// ${rel}\ntry { (() => {\n${code}${assign}\n})(); } catch (e) { ${NS === "" ? "" : ""}__ds_ns.__errors.push({ path: ${JSON.stringify(rel)}, error: String((e && e.message) || e) }); }\n`;
   for (const name of exported) {
-    if (rel === "components/shared/color.js") continue; // unexposed
+    if (rel.startsWith("components/shared/")) continue; // utils internos — não expostos
     manifestComponents.push({ name, sourcePath: rel });
   }
 }
@@ -164,6 +165,7 @@ const header = {
   unexposedExports: [
     { name: "onColor", sourcePath: "components/shared/color.js" },
     { name: "resolveColor", sourcePath: "components/shared/color.js" },
+    { name: "useDialogA11y", sourcePath: "components/shared/useDialogA11y.js" },
   ],
 };
 

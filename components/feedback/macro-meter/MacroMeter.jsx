@@ -9,8 +9,8 @@ export function MacroMeter({ label, color, value, target, unit = "g", compact = 
     return (
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <span style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: color, display: "inline-block", flexShrink: 0 }} />
-        <div style={{ flex: 1, height: 5, borderRadius: 2.5, backgroundColor: "var(--forge-surface-raised)", overflow: "hidden" }}>
-          <div style={{ height: 5, borderRadius: 2.5, width: pct * 100 + "%", backgroundColor: color, transition: "width 0.3s ease" }} />
+        <div role="progressbar" aria-label={label} aria-valuenow={Math.round(value)} aria-valuemin={0} aria-valuemax={Math.round(target)} style={{ flex: 1, height: 5, borderRadius: 2.5, backgroundColor: "var(--forge-surface-raised)", overflow: "hidden" }}>
+          <div style={{ height: 5, borderRadius: 2.5, width: pct * 100 + "%", backgroundColor: color, transition: "width var(--forge-duration-base) var(--forge-ease-standard)" }} />
         </div>
         <span style={{ color: "var(--forge-text-dim)", fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 11, flexShrink: 0 }}>
           {Math.round(value)}{unit}
@@ -29,8 +29,8 @@ export function MacroMeter({ label, color, value, target, unit = "g", compact = 
           {Math.round(value)} / {Math.round(target)} {unit}
         </span>
       </div>
-      <div style={{ height: 6, borderRadius: 3, backgroundColor: "var(--forge-surface-raised)", overflow: "hidden" }}>
-        <div style={{ height: 6, borderRadius: 3, width: pct * 100 + "%", backgroundColor: color, transition: "width 0.3s ease" }} />
+      <div role="progressbar" aria-label={label} aria-valuenow={Math.round(value)} aria-valuemin={0} aria-valuemax={Math.round(target)} style={{ height: 6, borderRadius: 3, backgroundColor: "var(--forge-surface-raised)", overflow: "hidden" }}>
+        <div style={{ height: 6, borderRadius: 3, width: pct * 100 + "%", backgroundColor: color, transition: "width var(--forge-duration-base) var(--forge-ease-standard)" }} />
       </div>
     </div>
   );

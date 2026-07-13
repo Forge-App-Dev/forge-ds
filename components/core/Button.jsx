@@ -14,6 +14,7 @@ export function Button({
   const textColor = onColor(resolvedColor || color);
   return (
     <button
+      className="forge-focusable"
       onClick={onClick}
       disabled={disabled}
       onMouseDown={() => setPressed(true)}

@@ -5,11 +5,13 @@ export function HeaderAction({ title, onClick }) {
   const [pressed, setPressed] = React.useState(false);
   return (
     <button
+      className="forge-focusable"
       onClick={onClick}
       onMouseDown={() => setPressed(true)}
       onMouseUp={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
       style={{
+        minHeight: "var(--forge-tap-target-min)",
         border: "var(--forge-border-w) solid var(--forge-border)",
         borderRadius: "var(--forge-radius-chip)",
         paddingBlock: 7,

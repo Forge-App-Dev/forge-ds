@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/icons/Icon.jsx":"417d14a55afb","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"d46585186ecc","components/core/Pill.jsx":"949efa55166b","components/overlays/full-screen/FullScreen.jsx":"55098659dcbe","components/navigation/app-header/AppHeader.jsx":"e110ef815d46","components/core/Card.jsx":"c2e5ddc70f30","components/core/ConfirmButton.jsx":"03c6f335459f","components/core/HeaderAction.jsx":"4fbe7933b192","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"a073b84e057d","components/feedback/meta-bar/MetaBar.jsx":"c7fe41596ef2","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"76399285db42","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"63658bcb876a","components/navigation/module-tab-bar/ModuleTabBar.jsx":"65585f77b41e","components/overlays/VideoModal.jsx":"72e46184f0e0","components/overlays/panel/Panel.jsx":"99fe47ae3485","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Title.jsx":"be757a55001a"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"417d14a55afb","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"5ee0a8dc0cf0","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"c2e5ddc70f30","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"a6c4954ccbb0","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"63658bcb876a","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Title.jsx":"be757a55001a"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -64,6 +64,64 @@ function onColor(input) {
 }
 Object.assign(__ds_scope, { resolveColor, onColor });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/shared/color.js", error: String((e && e.message) || e) }); }
+
+// components/shared/useDialogA11y.js
+try { (() => {
+// useDialogA11y — shared modal accessibility for Panel / FullScreen / VideoModal.
+// When active: locks body scroll, closes on Escape, and traps Tab focus inside
+// the dialog (moving focus into it on open and restoring it on close). Returns
+// a ref to attach to the dialog container.
+//
+// Usage:
+//   const ref = useDialogA11y(visible, onClose);
+//   <div ref={ref} role="dialog" aria-modal="true" ...>
+function useDialogA11y(active, onClose) {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    if (!active) return;
+    const node = ref.current;
+    const prevFocus = typeof document !== "undefined" ? document.activeElement : null;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const focusables = () => node ? Array.from(node.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => !el.disabled && el.offsetParent !== null) : [];
+
+    // move focus into the dialog
+    const first = focusables()[0];
+    if (first) first.focus();else if (node) node.focus();
+    const onKey = e => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        onClose && onClose();
+        return;
+      }
+      if (e.key === "Tab") {
+        const items = focusables();
+        if (items.length === 0) {
+          e.preventDefault();
+          return;
+        }
+        const firstEl = items[0];
+        const lastEl = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        } else if (!e.shiftKey && document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    };
+    document.addEventListener("keydown", onKey, true);
+    return () => {
+      document.removeEventListener("keydown", onKey, true);
+      document.body.style.overflow = prevOverflow;
+      if (prevFocus && prevFocus.focus) prevFocus.focus();
+    };
+  }, [active, onClose]);
+  return ref;
+}
+Object.assign(__ds_scope, { useDialogA11y });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/shared/useDialogA11y.js", error: String((e && e.message) || e) }); }
 
 // components/icons/Icon.jsx
 try { (() => {
@@ -538,6 +596,7 @@ function Button({
   const [pressed, setPressed] = React.useState(false);
   const textColor = __ds_scope.onColor(resolvedColor || color);
   return /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
     onClick: onClick,
     disabled: disabled,
     onMouseDown: () => setPressed(true),
@@ -576,6 +635,7 @@ function Pill({
   style
 }) {
   return /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
     onClick: onClick,
     style: {
       height: 40,
@@ -602,26 +662,42 @@ Object.assign(__ds_scope, { Pill });
 
 // components/overlays/full-screen/FullScreen.jsx
 try { (() => {
-// Full-screen flow (edit a plan, build a workout) — slide-in, own header
-// with close (X) + title + optional right action, scrollable body, and an
-// optional fixed footer for save/delete actions.
+// Full-screen flow (edit a plan, build a workout) — own header with close (X)
+// + title + optional right action, scrollable body, optional fixed footer for
+// save/delete. Accessible dialog: role="dialog" + aria-modal, labelled by
+// title, Escape to close, focus trapped, scroll locked. Footer respects the
+// bottom safe-area inset. Pass `onBeforeClose` to guard unsaved changes — if it
+// returns false, the close is cancelled (e.g. "descartar alterações?").
 function FullScreen({
   visible = true,
   onClose,
+  onBeforeClose,
   title,
   right,
   children,
   footer
 }) {
+  const requestClose = React.useCallback(() => {
+    if (onBeforeClose && onBeforeClose() === false) return;
+    onClose && onClose();
+  }, [onBeforeClose, onClose]);
+  const ref = __ds_scope.useDialogA11y(visible, requestClose);
+  const rid = React.useId ? React.useId() : "forge-fs";
+  const titleId = `${rid}-title`;
   if (!visible) return null;
   return /*#__PURE__*/React.createElement("div", {
+    ref: ref,
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-labelledby": title ? titleId : undefined,
+    tabIndex: -1,
     style: {
       position: "fixed",
       inset: 0,
       backgroundColor: "var(--forge-bg)",
       display: "flex",
       flexDirection: "column",
-      zIndex: 60
+      zIndex: "var(--forge-z-fullscreen)"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -629,20 +705,23 @@ function FullScreen({
       alignItems: "center",
       gap: 10,
       padding: "14px 18px",
-      borderBottom: "1px solid var(--forge-divider)"
+      paddingTop: "max(14px, env(safe-area-inset-top))",
+      borderBottom: "var(--forge-border-w) solid var(--forge-divider)"
     }
   }, /*#__PURE__*/React.createElement("button", {
-    onClick: onClose,
+    className: "forge-focusable forge-tap-min",
+    onClick: requestClose,
+    "aria-label": "Fechar",
     style: {
       background: "none",
       border: "none",
       color: "var(--forge-text-muted)",
       fontSize: 18,
       cursor: "pointer",
-      padding: 6,
       marginLeft: -6
     }
   }, "✕"), /*#__PURE__*/React.createElement("div", {
+    id: titleId,
     style: {
       flex: 1,
       fontFamily: "var(--forge-font-title)",
@@ -663,8 +742,9 @@ function FullScreen({
     }
   }, children), footer ? /*#__PURE__*/React.createElement("div", {
     style: {
-      borderTop: "1px solid var(--forge-divider)",
+      borderTop: "var(--forge-border-w) solid var(--forge-divider)",
       padding: "12px 18px 16px",
+      paddingBottom: "max(16px, env(safe-area-inset-bottom))",
       backgroundColor: "var(--forge-bg)"
     }
   }, footer) : null);
@@ -691,19 +771,59 @@ function AppHeader({
       borderBottom: "1px solid var(--forge-divider)",
       fontFamily: "var(--forge-font-body)"
     }
-  }, /*#__PURE__*/React.createElement("button", {
-    onClick: inModule ? onBackToModules : undefined,
-    disabled: !inModule,
+  }, inModule ? /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onBackToModules,
+    "aria-label": "Voltar aos módulos",
     style: {
       display: "flex",
       alignItems: "center",
       gap: 9,
       background: "none",
       border: "none",
-      cursor: inModule ? "pointer" : "default",
+      cursor: "pointer",
       padding: 0
     }
-  }, markSrc ? /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React.createElement(AppBrand, {
+    markSrc: markSrc
+  })) : /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 9
+    }
+  }, /*#__PURE__*/React.createElement(AppBrand, {
+    markSrc: markSrc
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 4
+    }
+  }, inModule ? /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onBackToModules,
+    style: iconBtnStyle,
+    "aria-label": "Voltar aos módulos"
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "grid",
+    color: "var(--forge-text-muted)",
+    size: 20
+  })) : null, /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onLogout,
+    style: iconBtnStyle,
+    "aria-label": "Sair da conta"
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "logout",
+    color: "var(--forge-text-faint)",
+    size: 19
+  }))));
+}
+function AppBrand({
+  markSrc
+}) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, markSrc ? /*#__PURE__*/React.createElement("img", {
     src: markSrc,
     alt: "",
     style: {
@@ -724,33 +844,11 @@ function AppHeader({
     style: {
       color: "var(--forge-accent)"
     }
-  }, "F"), "orge")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      alignItems: "center",
-      gap: 4
-    }
-  }, inModule ? /*#__PURE__*/React.createElement("button", {
-    onClick: onBackToModules,
-    style: iconBtnStyle,
-    "aria-label": "Voltar aos módulos"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "grid",
-    color: "var(--forge-text-muted)",
-    size: 20
-  })) : null, /*#__PURE__*/React.createElement("button", {
-    onClick: onLogout,
-    style: iconBtnStyle,
-    "aria-label": "Sair da conta"
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "logout",
-    color: "var(--forge-text-faint)",
-    size: 19
-  }))));
+  }, "F"), "orge"));
 }
 const iconBtnStyle = {
-  width: 38,
-  height: 38,
+  width: 44,
+  height: 44,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -798,7 +896,10 @@ Object.assign(__ds_scope, { Card });
 // components/core/ConfirmButton.jsx
 try { (() => {
 // Destructive action, confirmed in 2 taps — design-system rule: never
-// delete on a single tap. First tap arms a 2.5s confirm window.
+// delete on a single tap. First tap arms a 2.5s confirm window. The armed
+// state is announced to screen readers via an aria-live region, and the
+// button's accessible name updates to the confirm label. Min height is 44px
+// (a11y tap target) even in the compact form.
 function ConfirmButton({
   title = "Excluir",
   confirmTitle = "Confirmar?",
@@ -819,9 +920,12 @@ function ConfirmButton({
       onConfirm && onConfirm();
     }
   };
-  return /*#__PURE__*/React.createElement("button", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
     onClick: press,
+    "aria-label": arming ? confirmTitle : title,
     style: {
+      minHeight: "var(--forge-tap-target-min)",
       height: small ? 34 : 44,
       borderRadius: "var(--forge-radius-chip)",
       borderWidth: "var(--forge-border-w-strong)",
@@ -837,7 +941,11 @@ function ConfirmButton({
       transition: "background-color var(--forge-duration-fast) var(--forge-ease-standard), color var(--forge-duration-fast) var(--forge-ease-standard)",
       ...style
     }
-  }, arming ? confirmTitle : title);
+  }, arming ? confirmTitle : title), /*#__PURE__*/React.createElement("span", {
+    role: "status",
+    "aria-live": "polite",
+    className: "forge-sr-only"
+  }, arming ? "Toque de novo para confirmar a exclusão" : ""));
 }
 Object.assign(__ds_scope, { ConfirmButton });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/ConfirmButton.jsx", error: String((e && e.message) || e) }); }
@@ -851,11 +959,13 @@ function HeaderAction({
 }) {
   const [pressed, setPressed] = React.useState(false);
   return /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
     onClick: onClick,
     onMouseDown: () => setPressed(true),
     onMouseUp: () => setPressed(false),
     onMouseLeave: () => setPressed(false),
     style: {
+      minHeight: "var(--forge-tap-target-min)",
       border: "var(--forge-border-w) solid var(--forge-border)",
       borderRadius: "var(--forge-radius-chip)",
       paddingBlock: 7,
@@ -1331,6 +1441,11 @@ function MacroMeter({
         flexShrink: 0
       }
     }), /*#__PURE__*/React.createElement("div", {
+      role: "progressbar",
+      "aria-label": label,
+      "aria-valuenow": Math.round(value),
+      "aria-valuemin": 0,
+      "aria-valuemax": Math.round(target),
       style: {
         flex: 1,
         height: 5,
@@ -1344,7 +1459,7 @@ function MacroMeter({
         borderRadius: 2.5,
         width: pct * 100 + "%",
         backgroundColor: color,
-        transition: "width 0.3s ease"
+        transition: "width var(--forge-duration-base) var(--forge-ease-standard)"
       }
     })), /*#__PURE__*/React.createElement("span", {
       style: {
@@ -1396,6 +1511,11 @@ function MacroMeter({
       fontSize: 12
     }
   }, Math.round(value), " / ", Math.round(target), " ", unit)), /*#__PURE__*/React.createElement("div", {
+    role: "progressbar",
+    "aria-label": label,
+    "aria-valuenow": Math.round(value),
+    "aria-valuemin": 0,
+    "aria-valuemax": Math.round(target),
     style: {
       height: 6,
       borderRadius: 3,
@@ -1408,7 +1528,7 @@ function MacroMeter({
       borderRadius: 3,
       width: pct * 100 + "%",
       backgroundColor: color,
-      transition: "width 0.3s ease"
+      transition: "width var(--forge-duration-base) var(--forge-ease-standard)"
     }
   })));
 }
@@ -1430,6 +1550,8 @@ function MetaBar({
   if (segments && segments.length) {
     const total = target > 0 ? target : segments.reduce((s, seg) => s + seg.value, 0) || 1;
     return /*#__PURE__*/React.createElement("div", {
+      role: "img",
+      "aria-label": "Distribuição por refeição",
       style: {
         display: "flex",
         height: 6,
@@ -1442,14 +1564,18 @@ function MetaBar({
       style: {
         width: Math.max(0, Math.min(1, seg.value / total)) * 100 + "%",
         backgroundColor: seg.color,
-        transition: "width 0.3s ease",
-        borderRight: i < segments.length - 1 ? "1.5px solid var(--forge-surface-raised)" : "none"
+        transition: "width var(--forge-duration-base) var(--forge-ease-standard)",
+        borderRight: i < segments.length - 1 ? "var(--forge-border-w-strong) solid var(--forge-surface-raised)" : "none"
       }
     })));
   }
   const pct = target > 0 ? Math.min(1, value / target) : 0;
   const over = target > 0 && value > target;
   return /*#__PURE__*/React.createElement("div", {
+    role: "progressbar",
+    "aria-valuenow": Math.round(value),
+    "aria-valuemin": 0,
+    "aria-valuemax": Math.round(target),
     style: {
       height: 6,
       borderRadius: 3,
@@ -1462,7 +1588,7 @@ function MetaBar({
       borderRadius: 3,
       width: pct * 100 + "%",
       backgroundColor: over ? "var(--forge-warning)" : color,
-      transition: "width 0.3s ease, background-color 0.3s ease"
+      transition: "width var(--forge-duration-base) var(--forge-ease-standard), background-color var(--forge-duration-base) var(--forge-ease-standard)"
     }
   }));
 }
@@ -1678,6 +1804,12 @@ Object.assign(__ds_scope, { QtyInput });
 
 // components/forms/TextField.jsx
 try { (() => {
+// TextField — labelled text input (single or multiline).
+// The label is a real <label htmlFor>, associated to the field by a generated
+// id, so screen readers announce it. Pass `error` to show an inline error
+// message (role="alert"), set aria-invalid, and tie the message to the field
+// via aria-describedby; pass `helper` for non-error guidance. `required` and
+// `disabled` supported.
 function TextField({
   label,
   value,
@@ -1685,15 +1817,37 @@ function TextField({
   placeholder,
   type = "text",
   multiline = false,
+  error,
+  helper,
+  required = false,
+  disabled = false,
+  inputMode,
   style
 }) {
+  const rid = React.useId ? React.useId() : "forge-tf";
+  const fieldId = `${rid}-field`;
+  const msgId = `${rid}-msg`;
+  const describedBy = error || helper ? msgId : undefined;
+  const fieldStyle = {
+    width: "100%",
+    borderRadius: "var(--forge-radius-input)",
+    border: `var(--forge-border-w) solid ${error ? "var(--forge-danger)" : "var(--forge-border-input)"}`,
+    backgroundColor: "var(--forge-surface-raised)",
+    color: "var(--forge-text)",
+    fontFamily: "var(--forge-font-body)",
+    fontSize: "var(--forge-text-input)",
+    boxSizing: "border-box",
+    opacity: disabled ? "var(--forge-opacity-disabled)" : 1
+  };
   return /*#__PURE__*/React.createElement("div", {
     style: {
       marginBottom: 12,
       ...style
     }
-  }, label ? /*#__PURE__*/React.createElement("div", {
+  }, label ? /*#__PURE__*/React.createElement("label", {
+    htmlFor: fieldId,
     style: {
+      display: "block",
       fontFamily: "var(--forge-font-body)",
       fontWeight: 700,
       fontSize: "var(--forge-text-label)",
@@ -1702,41 +1856,62 @@ function TextField({
       letterSpacing: "var(--forge-tracking-label)",
       marginBottom: 6
     }
-  }, label) : null, multiline ? /*#__PURE__*/React.createElement("textarea", {
+  }, label, required ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: "var(--forge-danger)"
+    },
+    "aria-hidden": "true"
+  }, " *") : null) : null, multiline ? /*#__PURE__*/React.createElement("textarea", {
+    id: fieldId,
+    className: "forge-focusable",
     value: value,
     placeholder: placeholder,
+    disabled: disabled,
+    required: required,
+    "aria-invalid": error ? true : undefined,
+    "aria-describedby": describedBy,
     onChange: e => onChange && onChange(e.target.value),
     style: {
-      width: "100%",
+      ...fieldStyle,
       height: 84,
-      borderRadius: "var(--forge-radius-input)",
-      border: "1px solid var(--forge-border-input)",
-      backgroundColor: "var(--forge-surface-raised)",
-      color: "var(--forge-text)",
       padding: "10px 12px",
-      fontFamily: "var(--forge-font-body)",
-      fontSize: "var(--forge-text-input)",
-      resize: "none",
-      boxSizing: "border-box"
+      resize: "none"
     }
   }) : /*#__PURE__*/React.createElement("input", {
+    id: fieldId,
+    className: "forge-focusable",
     type: type,
+    inputMode: inputMode,
     value: value,
     placeholder: placeholder,
+    disabled: disabled,
+    required: required,
+    "aria-invalid": error ? true : undefined,
+    "aria-describedby": describedBy,
     onChange: e => onChange && onChange(e.target.value),
     style: {
-      width: "100%",
+      ...fieldStyle,
       height: 44,
-      borderRadius: "var(--forge-radius-input)",
-      border: "1px solid var(--forge-border-input)",
-      backgroundColor: "var(--forge-surface-raised)",
-      color: "var(--forge-text)",
-      paddingInline: 12,
-      fontFamily: "var(--forge-font-body)",
-      fontSize: "var(--forge-text-input)",
-      boxSizing: "border-box"
+      paddingInline: 12
     }
-  }));
+  }), error ? /*#__PURE__*/React.createElement("div", {
+    id: msgId,
+    role: "alert",
+    style: {
+      marginTop: 5,
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      color: "var(--forge-danger)"
+    }
+  }, error) : helper ? /*#__PURE__*/React.createElement("div", {
+    id: msgId,
+    style: {
+      marginTop: 5,
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      color: "var(--forge-text-dim)"
+    }
+  }, helper) : null);
 }
 Object.assign(__ds_scope, { TextField });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/TextField.jsx", error: String((e && e.message) || e) }); }
@@ -1868,12 +2043,13 @@ function ModuleTabBar({
   accent = "var(--forge-accent)"
 }) {
   return /*#__PURE__*/React.createElement("div", {
+    role: "tablist",
     style: {
       display: "flex",
       backgroundColor: "var(--forge-panel)",
       borderTop: "var(--forge-border-w) solid var(--forge-divider)",
       paddingTop: 8,
-      paddingBottom: 8,
+      paddingBottom: "max(8px, env(safe-area-inset-bottom))",
       paddingInline: 4
     }
   }, tabs.map(t => {
@@ -1881,6 +2057,10 @@ function ModuleTabBar({
     const color = on ? accent : "var(--forge-text-dim)";
     return /*#__PURE__*/React.createElement("button", {
       key: t.id,
+      className: "forge-focusable",
+      role: "tab",
+      "aria-selected": on,
+      "aria-label": t.label,
       onClick: () => onChange && onChange(t.id),
       style: {
         flex: 1,
@@ -1889,6 +2069,7 @@ function ModuleTabBar({
         alignItems: "center",
         justifyContent: "center",
         gap: 3,
+        minHeight: 44,
         paddingBlock: 2,
         background: "none",
         border: "none",
@@ -1914,15 +2095,19 @@ Object.assign(__ds_scope, { ModuleTabBar });
 // components/overlays/VideoModal.jsx
 try { (() => {
 // VideoModal — full-bleed video overlay for an exercise demo. Wraps a video
-// element (or any player) in a black scrim with a close button; tap outside
-// or the ✕ closes it. On native this wraps react-native-youtube-iframe
-// (raw WebView iframes fail on Android — see readme "known pitfalls").
+// element (or any player) in a heavy scrim with a close button; tap outside or
+// the ✕ closes it. On native this wraps react-native-youtube-iframe (raw
+// WebView iframes fail on Android — see readme "known pitfalls"). Accessible
+// dialog: role + aria-modal, Escape, focus trap, scroll lock.
 function VideoModal({
   visible,
   onClose,
   title,
   children
 }) {
+  const ref = __ds_scope.useDialogA11y(visible, onClose);
+  const rid = React.useId ? React.useId() : "forge-video";
+  const titleId = `${rid}-title`;
   if (!visible) return null;
   return /*#__PURE__*/React.createElement("div", {
     onClick: onClose,
@@ -1935,6 +2120,18 @@ function VideoModal({
       zIndex: "var(--forge-z-video)"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    ref: ref,
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-labelledby": title ? titleId : undefined,
+    tabIndex: -1,
+    onClick: e => e.stopPropagation(),
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -1942,15 +2139,18 @@ function VideoModal({
       padding: "14px 18px"
     }
   }, /*#__PURE__*/React.createElement("span", {
+    id: titleId,
     style: {
       color: "var(--forge-text)",
       fontFamily: "var(--forge-font-title)",
       fontSize: 18,
       textTransform: "uppercase",
-      letterSpacing: 0.5
+      letterSpacing: "var(--forge-tracking-title)"
     }
   }, title), /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable forge-tap-min",
     onClick: onClose,
+    "aria-label": "Fechar",
     style: {
       background: "none",
       border: "none",
@@ -1959,7 +2159,6 @@ function VideoModal({
       cursor: "pointer"
     }
   }, "✕")), /*#__PURE__*/React.createElement("div", {
-    onClick: e => e.stopPropagation(),
     style: {
       flex: 1,
       display: "flex",
@@ -1979,44 +2178,56 @@ function VideoModal({
       alignItems: "center",
       justifyContent: "center"
     }
-  }, children)));
+  }, children))));
 }
 Object.assign(__ds_scope, { VideoModal });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/overlays/VideoModal.jsx", error: String((e && e.message) || e) }); }
 
 // components/overlays/panel/Panel.jsx
 try { (() => {
-// Centered modal panel — dark scrim + panel (radius 18, maxWidth 440).
-// Used for small choices/confirmations (pick-a-workout, schedule editor).
+// Centered modal panel — dark scrim + panel. Used for small
+// choices/confirmations (pick-a-workout, schedule editor). Accessible dialog:
+// role="dialog" + aria-modal, labelled by its title, Escape to close, focus
+// trapped inside, body scroll locked, focus restored on close. Tap-outside
+// closes unless `dismissible={false}` (use for flows that must not be lost).
 function Panel({
   visible,
   onClose,
   title,
   children,
-  footer
+  footer,
+  dismissible = true
 }) {
+  const ref = __ds_scope.useDialogA11y(visible, dismissible ? onClose : undefined);
+  const rid = React.useId ? React.useId() : "forge-panel";
+  const titleId = `${rid}-title`;
   if (!visible) return null;
   return /*#__PURE__*/React.createElement("div", {
-    onClick: onClose,
+    onClick: dismissible ? onClose : undefined,
     style: {
       position: "fixed",
       inset: 0,
-      backgroundColor: "rgba(10,10,12,0.82)",
+      backgroundColor: "var(--forge-scrim)",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       padding: 14,
-      zIndex: 50
+      zIndex: "var(--forge-z-overlay)"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    ref: ref,
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-labelledby": title ? titleId : undefined,
+    tabIndex: -1,
     onClick: e => e.stopPropagation(),
     style: {
       backgroundColor: "var(--forge-panel)",
       borderRadius: "var(--forge-radius-panel)",
-      border: "1px solid var(--forge-border)",
+      border: "var(--forge-border-w) solid var(--forge-border)",
       width: "100%",
       maxWidth: 440,
-      maxHeight: "80vh",
+      maxHeight: "80dvh",
       display: "flex",
       flexDirection: "column"
     }
@@ -2028,24 +2239,26 @@ function Panel({
       padding: "16px 18px"
     }
   }, /*#__PURE__*/React.createElement("div", {
+    id: titleId,
     style: {
       flex: 1,
       fontFamily: "var(--forge-font-title)",
       fontWeight: 700,
-      fontSize: 20,
+      fontSize: "var(--forge-text-panel-title)",
       color: "var(--forge-text)",
       textTransform: "uppercase",
       letterSpacing: "var(--forge-tracking-title)"
     }
   }, title), /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable forge-tap-min",
     onClick: onClose,
+    "aria-label": "Fechar",
     style: {
       background: "none",
       border: "none",
       color: "var(--forge-text-muted)",
       fontSize: 18,
-      cursor: "pointer",
-      padding: 4
+      cursor: "pointer"
     }
   }, "✕")), /*#__PURE__*/React.createElement("div", {
     style: {

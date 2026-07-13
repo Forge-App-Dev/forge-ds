@@ -4,6 +4,7 @@ import { onColor } from "../shared/color.js";
 export function Pill({ title, onClick, active = false, color = "var(--forge-accent)", style }) {
   return (
     <button
+      className="forge-focusable"
       onClick={onClick}
       style={{
         height: 40,

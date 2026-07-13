@@ -1,0 +1,36 @@
+/* Forge Design System — base reset + utilitários de acessibilidade.
+   Importado por styles.css. Componentes usam inline style para tudo que é
+   visual; o que precisa de pseudo-seletor (:focus-visible) ou de estar fora do
+   fluxo (sr-only) vive aqui como classe utilitária. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Anel de foco visível apenas para navegação por teclado (não no clique de
+   mouse). Aplicar className="forge-focusable" em qualquer elemento interativo. */
+.forge-focusable:focus { outline: none; }
+.forge-focusable:focus-visible {
+  outline: var(--forge-focus-ring-w) solid var(--forge-focus-ring);
+  outline-offset: var(--forge-focus-ring-offset);
+  border-radius: inherit;
+}
+
+/* Conteúdo só para leitores de tela (rótulo de status, etc). */
+.forge-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Alvo de toque mínimo — expande a área tocável sem alterar o visual do filho.
+   Usar em icon buttons pequenos: className="forge-tap-min". */
+.forge-tap-min {
+  min-width: var(--forge-tap-target-min);
+  min-height: var(--forge-tap-target-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

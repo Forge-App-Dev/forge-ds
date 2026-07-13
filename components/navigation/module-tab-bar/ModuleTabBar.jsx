@@ -6,12 +6,13 @@ import { Icon } from "../../icons/Icon";
 export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-accent)" }) {
   return (
     <div
+      role="tablist"
       style={{
         display: "flex",
         backgroundColor: "var(--forge-panel)",
         borderTop: "var(--forge-border-w) solid var(--forge-divider)",
         paddingTop: 8,
-        paddingBottom: 8,
+        paddingBottom: "max(8px, env(safe-area-inset-bottom))",
         paddingInline: 4,
       }}
     >
@@ -21,6 +22,10 @@ export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-acc
         return (
           <button
             key={t.id}
+            className="forge-focusable"
+            role="tab"
+            aria-selected={on}
+            aria-label={t.label}
             onClick={() => onChange && onChange(t.id)}
             style={{
               flex: 1,
@@ -29,6 +34,7 @@ export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-acc
               alignItems: "center",
               justifyContent: "center",
               gap: 3,
+              minHeight: 44,
               paddingBlock: 2,
               background: "none",
               border: "none",

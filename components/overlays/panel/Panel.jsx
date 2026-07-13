@@ -1,43 +1,56 @@
 import React from "react";
+import { useDialogA11y } from "../../shared/useDialogA11y.js";
 
-// Centered modal panel — dark scrim + panel (radius 18, maxWidth 440).
-// Used for small choices/confirmations (pick-a-workout, schedule editor).
-export function Panel({ visible, onClose, title, children, footer }) {
+// Centered modal panel — dark scrim + panel. Used for small
+// choices/confirmations (pick-a-workout, schedule editor). Accessible dialog:
+// role="dialog" + aria-modal, labelled by its title, Escape to close, focus
+// trapped inside, body scroll locked, focus restored on close. Tap-outside
+// closes unless `dismissible={false}` (use for flows that must not be lost).
+export function Panel({ visible, onClose, title, children, footer, dismissible = true }) {
+  const ref = useDialogA11y(visible, dismissible ? onClose : undefined);
+  const rid = React.useId ? React.useId() : "forge-panel";
+  const titleId = `${rid}-title`;
   if (!visible) return null;
   return (
     <div
-      onClick={onClose}
+      onClick={dismissible ? onClose : undefined}
       style={{
         position: "fixed",
         inset: 0,
-        backgroundColor: "rgba(10,10,12,0.82)",
+        backgroundColor: "var(--forge-scrim)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: 14,
-        zIndex: 50,
+        zIndex: "var(--forge-z-overlay)",
       }}
     >
       <div
+        ref={ref}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={title ? titleId : undefined}
+        tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
         style={{
           backgroundColor: "var(--forge-panel)",
           borderRadius: "var(--forge-radius-panel)",
-          border: "1px solid var(--forge-border)",
+          border: "var(--forge-border-w) solid var(--forge-border)",
           width: "100%",
           maxWidth: 440,
-          maxHeight: "80vh",
+          maxHeight: "80dvh",
           display: "flex",
           flexDirection: "column",
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 18px" }}>
           <div
+            id={titleId}
             style={{
               flex: 1,
               fontFamily: "var(--forge-font-title)",
               fontWeight: 700,
-              fontSize: 20,
+              fontSize: "var(--forge-text-panel-title)",
               color: "var(--forge-text)",
               textTransform: "uppercase",
               letterSpacing: "var(--forge-tracking-title)",
@@ -46,8 +59,10 @@ export function Panel({ visible, onClose, title, children, footer }) {
             {title}
           </div>
           <button
+            className="forge-focusable forge-tap-min"
             onClick={onClose}
-            style={{ background: "none", border: "none", color: "var(--forge-text-muted)", fontSize: 18, cursor: "pointer", padding: 4 }}
+            aria-label="Fechar"
+            style={{ background: "none", border: "none", color: "var(--forge-text-muted)", fontSize: 18, cursor: "pointer" }}
           >
             ✕
           </button>

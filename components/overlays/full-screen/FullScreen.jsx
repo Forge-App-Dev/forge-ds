@@ -1,25 +1,51 @@
 import React from "react";
+import { useDialogA11y } from "../../shared/useDialogA11y.js";
 
-// Full-screen flow (edit a plan, build a workout) — slide-in, own header
-// with close (X) + title + optional right action, scrollable body, and an
-// optional fixed footer for save/delete actions.
-export function FullScreen({ visible = true, onClose, title, right, children, footer }) {
+// Full-screen flow (edit a plan, build a workout) — own header with close (X)
+// + title + optional right action, scrollable body, optional fixed footer for
+// save/delete. Accessible dialog: role="dialog" + aria-modal, labelled by
+// title, Escape to close, focus trapped, scroll locked. Footer respects the
+// bottom safe-area inset. Pass `onBeforeClose` to guard unsaved changes — if it
+// returns false, the close is cancelled (e.g. "descartar alterações?").
+export function FullScreen({ visible = true, onClose, onBeforeClose, title, right, children, footer }) {
+  const requestClose = React.useCallback(() => {
+    if (onBeforeClose && onBeforeClose() === false) return;
+    onClose && onClose();
+  }, [onBeforeClose, onClose]);
+
+  const ref = useDialogA11y(visible, requestClose);
+  const rid = React.useId ? React.useId() : "forge-fs";
+  const titleId = `${rid}-title`;
   if (!visible) return null;
   return (
-    <div style={{ position: "fixed", inset: 0, backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", zIndex: 60 }}>
+    <div
+      ref={ref}
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={title ? titleId : undefined}
+      tabIndex={-1}
+      style={{ position: "fixed", inset: 0, backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", zIndex: "var(--forge-z-fullscreen)" }}
+    >
       <div
         style={{
           display: "flex",
           alignItems: "center",
           gap: 10,
           padding: "14px 18px",
-          borderBottom: "1px solid var(--forge-divider)",
+          paddingTop: "max(14px, env(safe-area-inset-top))",
+          borderBottom: "var(--forge-border-w) solid var(--forge-divider)",
         }}
       >
-        <button onClick={onClose} style={{ background: "none", border: "none", color: "var(--forge-text-muted)", fontSize: 18, cursor: "pointer", padding: 6, marginLeft: -6 }}>
+        <button
+          className="forge-focusable forge-tap-min"
+          onClick={requestClose}
+          aria-label="Fechar"
+          style={{ background: "none", border: "none", color: "var(--forge-text-muted)", fontSize: 18, cursor: "pointer", marginLeft: -6 }}
+        >
           ✕
         </button>
         <div
+          id={titleId}
           style={{
             flex: 1,
             fontFamily: "var(--forge-font-title)",
@@ -39,7 +65,7 @@ export function FullScreen({ visible = true, onClose, title, right, children, fo
       </div>
       <div style={{ flex: 1, overflowY: "auto", padding: 18 }}>{children}</div>
       {footer ? (
-        <div style={{ borderTop: "1px solid var(--forge-divider)", padding: "12px 18px 16px", backgroundColor: "var(--forge-bg)" }}>{footer}</div>
+        <div style={{ borderTop: "var(--forge-border-w) solid var(--forge-divider)", padding: "12px 18px 16px", paddingBottom: "max(16px, env(safe-area-inset-bottom))", backgroundColor: "var(--forge-bg)" }}>{footer}</div>
       ) : null}
     </div>
   );
