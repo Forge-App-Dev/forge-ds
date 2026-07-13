@@ -6,11 +6,11 @@ export function SectionLabel({ children, style }) {
   return (
     <div
       style={{
-        fontFamily: "var(--font-body)",
+        fontFamily: "var(--forge-font-body)",
         fontWeight: 700,
-        fontSize: "var(--text-label)",
+        fontSize: "var(--forge-text-label)",
         textTransform: "uppercase",
-        letterSpacing: "var(--tracking-label)",
+        letterSpacing: "var(--forge-tracking-label)",
         color: "var(--forge-text-faint)",
         marginTop: 14,
         marginBottom: 8,

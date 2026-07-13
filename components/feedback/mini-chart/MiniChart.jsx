@@ -4,31 +4,41 @@ import React from "react";
 // variant="line" (default): 2.5px line + 3.5r dots.
 // variant="bar": simple column bars.
 // variant="area": line with a soft filled gradient beneath it.
-// viewBox 280x60, pad 6, all in the accent color.
-export function MiniChart({ values, color = "#EF4444", variant = "line" }) {
-  const max = Math.max(...values);
-  const min = Math.min(...values);
-  const range = max - min || 1;
+// viewBox 280x60, pad 6. Color applied via CSS (currentColor) so tokens
+// resolve. Guards against empty/single-point input (P-10). Gradient id is
+// unique per instance via React.useId so multiple charts on one page don't
+// bleed into each other (P-10).
+export function MiniChart({ values, color = "var(--forge-accent)", variant = "line", title }) {
+  const uid = React.useId ? React.useId() : "forge-mc";
+  const gradId = `forge-minichart-grad-${uid}`;
+  const data = Array.isArray(values) ? values.filter((v) => typeof v === "number" && !Number.isNaN(v)) : [];
   const W = 280, H = 60, pad = 6;
-  const gradId = "forge-minichart-grad";
+
+  if (data.length === 0) {
+    return <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={title || "Sem dados"} style={{ color }} />;
+  }
+
+  const max = Math.max(...data);
+  const min = Math.min(...data);
+  const range = max - min || 1;
 
   if (variant === "bar") {
-    const n = values.length;
+    const n = data.length;
     const bw = (W - 2 * pad) / n;
     return (
-      <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`}>
-        {values.map((v, i) => {
+      <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color }} role="img" aria-label={title || "Gráfico de barras"}>
+        {data.map((v, i) => {
           const h = ((v - min) / range) * (H - 2 * pad - 4) + 4;
           const x = pad + i * bw;
           const y = H - pad - h;
-          return <rect key={i} x={x + bw * 0.15} y={y} width={bw * 0.7} height={h} rx={2} fill={color} />;
+          return <rect key={i} x={x + bw * 0.15} y={y} width={bw * 0.7} height={h} rx={2} fill="currentColor" />;
         })}
       </svg>
     );
   }
 
-  const pts = values.map((v, i) => {
-    const x = pad + (i / Math.max(values.length - 1, 1)) * (W - 2 * pad);
+  const pts = data.map((v, i) => {
+    const x = pad + (i / Math.max(data.length - 1, 1)) * (W - 2 * pad);
     const y = H - pad - ((v - min) / range) * (H - 2 * pad);
     return [x, y];
   });
@@ -37,24 +47,24 @@ export function MiniChart({ values, color = "#EF4444", variant = "line" }) {
   if (variant === "area") {
     const areaD = d + ` L${pts[pts.length - 1][0].toFixed(1)},${H - pad} L${pts[0][0].toFixed(1)},${H - pad} Z`;
     return (
-      <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`}>
+      <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color }} role="img" aria-label={title || "Gráfico de área"}>
         <defs>
           <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor={color} stopOpacity="0.35" />
-            <stop offset="100%" stopColor={color} stopOpacity="0" />
+            <stop offset="0%" stopColor="currentColor" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
           </linearGradient>
         </defs>
         <path d={areaD} fill={`url(#${gradId})`} stroke="none" />
-        <path d={d} fill="none" stroke={color} strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" />
+        <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
 
   return (
-    <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`}>
-      <path d={d} fill="none" stroke={color} strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color }} role="img" aria-label={title || "Gráfico de linha"}>
+      <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" />
       {pts.map((p, i) => (
-        <circle key={i} cx={p[0]} cy={p[1]} r={3.5} fill={color} />
+        <circle key={i} cx={p[0]} cy={p[1]} r={3.5} fill="currentColor" />
       ))}
     </svg>
   );

@@ -22,12 +22,12 @@ export function FullScreen({ visible = true, onClose, title, right, children, fo
         <div
           style={{
             flex: 1,
-            fontFamily: "var(--font-title)",
+            fontFamily: "var(--forge-font-title)",
             fontWeight: 700,
-            fontSize: "var(--text-panel-title)",
+            fontSize: "var(--forge-text-panel-title)",
             color: "var(--forge-text)",
             textTransform: "uppercase",
-            letterSpacing: "var(--tracking-title)",
+            letterSpacing: "var(--forge-tracking-title)",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",

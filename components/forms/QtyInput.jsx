@@ -24,7 +24,7 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
           backgroundColor: "var(--forge-surface-raised)",
           color: "var(--forge-text)",
           textAlign: "center",
-          fontFamily: "var(--font-body)",
+          fontFamily: "var(--forge-font-body)",
           fontWeight: 600,
           fontSize: 13.5,
         }}
@@ -39,7 +39,7 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
             border: "1px solid var(--forge-border-input)",
             backgroundColor: "transparent",
             color: "var(--forge-text-muted)",
-            fontFamily: "var(--font-body)",
+            fontFamily: "var(--forge-font-body)",
             fontWeight: 700,
             fontSize: 12,
             paddingInline: 8,
@@ -49,7 +49,7 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
           {unit}
         </button>
       ) : (
-        <span style={{ color: "var(--forge-text-muted)", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 12, paddingInline: 8 }}>g</span>
+        <span style={{ color: "var(--forge-text-muted)", fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 12, paddingInline: 8 }}>g</span>
       )}
     </div>
   );

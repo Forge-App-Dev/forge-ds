@@ -8,10 +8,10 @@ export function Button({
   disabled = false,
   small = false,
   style,
-  resolvedColor, // pass a literal hex if you need exact onColor() contrast; else white text is used
+  resolvedColor, // deprecated (OP-006): onColor() now resolves tokens itself; kept for back-compat
 }) {
   const [pressed, setPressed] = React.useState(false);
-  const textColor = resolvedColor ? onColor(resolvedColor) : "var(--forge-on-accent)";
+  const textColor = onColor(resolvedColor || color);
   return (
     <button
       onClick={onClick}
@@ -20,18 +20,18 @@ export function Button({
       onMouseUp={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
       style={{
-        height: small ? 36 : 46,
-        borderRadius: small ? 9 : "var(--radius-button)",
+        height: small ? "var(--forge-size-control-sm)" : "var(--forge-size-control-lg)",
+        borderRadius: "var(--forge-radius-button)",
         border: "none",
         cursor: disabled ? "default" : "pointer",
         paddingInline: small ? 13 : 18,
         backgroundColor: color,
         color: textColor,
-        fontFamily: "var(--font-body)",
+        fontFamily: "var(--forge-font-body)",
         fontWeight: 800,
         fontSize: small ? 12.5 : 15,
-        opacity: disabled ? 0.5 : pressed ? 0.85 : 1,
-        transition: "opacity 0.1s ease",
+        opacity: disabled ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,
+        transition: "opacity var(--forge-duration-instant) var(--forge-ease-standard)",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",

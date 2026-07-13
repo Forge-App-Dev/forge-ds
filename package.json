@@ -1,0 +1,18 @@
+{
+  "name": "@forge/ds",
+  "version": "1.4.0",
+  "description": "Forge Design System — biblioteca de componentes, tokens e guidelines do app Forge.",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./styles.css": "./styles.css",
+    "./tokens/*": "./tokens/*"
+  },
+  "sideEffects": ["*.css"],
+  "scripts": {
+    "build:bundle": "node scripts/build-bundle.mjs",
+    "build:index": "node scripts/build-index.mjs"
+  }
+}

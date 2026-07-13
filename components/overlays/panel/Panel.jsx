@@ -22,7 +22,7 @@ export function Panel({ visible, onClose, title, children, footer }) {
         onClick={(e) => e.stopPropagation()}
         style={{
           backgroundColor: "var(--forge-panel)",
-          borderRadius: "var(--radius-panel)",
+          borderRadius: "var(--forge-radius-panel)",
           border: "1px solid var(--forge-border)",
           width: "100%",
           maxWidth: 440,
@@ -35,12 +35,12 @@ export function Panel({ visible, onClose, title, children, footer }) {
           <div
             style={{
               flex: 1,
-              fontFamily: "var(--font-title)",
+              fontFamily: "var(--forge-font-title)",
               fontWeight: 700,
               fontSize: 20,
               color: "var(--forge-text)",
               textTransform: "uppercase",
-              letterSpacing: "var(--tracking-title)",
+              letterSpacing: "var(--forge-tracking-title)",
             }}
           >
             {title}

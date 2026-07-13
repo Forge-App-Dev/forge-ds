@@ -140,12 +140,30 @@ const PATHS = {
   ),
 };
 
-export function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2 }) {
+export function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2, title }) {
   const render = PATHS[name];
   if (!render) return null;
   const filled = name === "play";
+  // Route color through CSS `color` + currentColor so design-system tokens
+  // (e.g. "var(--forge-text-muted)") resolve — a raw var() does NOT resolve as
+  // an SVG presentation attribute, but currentColor does. Mirrors the RN source
+  // (icons.jsx uses stroke="currentColor").
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill={filled ? color : "none"} stroke={color} strokeWidth={filled ? 1 : strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      style={{ color }}
+      fill={filled ? "currentColor" : "none"}
+      stroke="currentColor"
+      strokeWidth={filled ? 1 : strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      role={title ? "img" : undefined}
+      aria-hidden={title ? undefined : true}
+      aria-label={title || undefined}
+    >
+      {title ? <title>{title}</title> : null}
       {render()}
     </svg>
   );

@@ -7,21 +7,20 @@
 <link rel="stylesheet" href="styles.css">
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--forge-bg); font-family: var(--font-body); color: var(--forge-text); }
+  body { margin: 0; background: var(--forge-bg); font-family: var(--forge-font-body); color: var(--forge-text); }
   header { padding: 28px 20px 20px; border-bottom: 1px solid var(--forge-divider); max-width: 960px; margin: 0 auto; }
-  .logo { font-family: var(--font-title); font-size: 28px; text-transform: uppercase; letter-spacing: var(--tracking-title); }
+  .logo { font-family: var(--forge-font-title); font-size: 28px; text-transform: uppercase; letter-spacing: var(--forge-tracking-title); }
   .logo span { color: var(--forge-accent); }
   .tagline { color: var(--forge-text-dim); font-size: 13px; margin-top: 6px; }
   main { max-width: 960px; margin: 0 auto; padding: 20px; }
   .group { margin-bottom: 32px; }
-  .group h2 { font-family: var(--font-title); font-size: 13px; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--forge-text-faint); margin: 0 0 10px; }
+  .group h2 { font-family: var(--forge-font-title); font-size: 13px; letter-spacing: var(--forge-tracking-eyebrow); text-transform: uppercase; color: var(--forge-text-faint); margin: 0 0 10px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
-  a.card { display: block; background: var(--forge-surface); border: 1px solid var(--forge-border); border-radius: var(--radius-card); padding: 14px 16px; text-decoration: none; color: inherit; transition: border-color 0.15s ease; }
+  a.card { display: block; background: var(--forge-surface); border: 1px solid var(--forge-border); border-radius: var(--forge-radius-card); padding: 14px 16px; text-decoration: none; color: inherit; transition: border-color 0.15s ease; }
   a.card:hover { border-color: var(--forge-accent); }
   .card .name { font-weight: 700; font-size: 14px; color: var(--forge-text); }
   .card .sub { font-size: 12px; color: var(--forge-text-dim); margin-top: 4px; line-height: 16px; }
   footer { max-width: 960px; margin: 0 auto; padding: 20px; color: var(--forge-text-dimmer); font-size: 11px; border-top: 1px solid var(--forge-divider); }
-  footer a { color: var(--forge-text-faint); }
 </style>
 </head>
 <body>
@@ -42,20 +41,16 @@
     <a class="card" href="ui_kits/forge-app/index.html"><div class="name">Forge App — click-through</div><div class="sub">Login → Módulos → Treino / Nutrição / Perfil + fluxos FullScreen</div></a>
   </div>
 </div>
-
 <div class="group">
   <h2>Referência</h2>
   <div class="grid">
     <a class="card" href="readme.md"><div class="name">README</div><div class="sub">Visão geral do sistema</div></a>
     <a class="card" href="reference/FORGE_DESIGN_SYSTEM_RN.md"><div class="name">FORGE_DESIGN_SYSTEM_RN.md</div><div class="sub">Tradução RN — vence em conflito para o forge-app</div></a>
-    <a class="card" href="reference/FORGE_DESIGN_SYSTEM.md"><div class="name">FORGE_DESIGN_SYSTEM.md</div><div class="sub">Doc da família (PWA + apps irmãos)</div></a>
+    <a class="card" href="reference/FORGE_DESIGN_SYSTEM.md"><div class="name">FORGE_DESIGN_SYSTEM.md</div><div class="sub">Doc da família</div></a>
     <a class="card" href="FLUXO_EVOLUCAO_DS.md"><div class="name">FLUXO_EVOLUCAO_DS.md</div><div class="sub">Como este sistema evolui</div></a>
   </div>
 </div>
-
 </main>
-<footer>
-  Forge-App-Dev/forge-ds · gerado a partir dos arquivos do repo, sem passo de build. Atualizar este índice ao adicionar/remover um .card.html.
-</footer>
+<footer>Forge-App-Dev/forge-ds · gerado por scripts/build-index.mjs a partir dos @dsCard. Não editar à mão.</footer>
 </body>
 </html>

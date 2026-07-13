@@ -21,7 +21,7 @@ export function Screen({ children, scroll = true, style }) {
       }}
     >
       <Wrap {...wrapProps}>
-        <div style={{ maxWidth: "var(--app-max-width)", margin: "0 auto", width: "100%", boxSizing: "border-box", ...style }}>{children}</div>
+        <div style={{ maxWidth: "var(--forge-app-max-width)", margin: "0 auto", width: "100%", boxSizing: "border-box", ...style }}>{children}</div>
       </Wrap>
     </div>
   );

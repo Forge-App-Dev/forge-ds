@@ -10,17 +10,17 @@ export function HeaderAction({ title, onClick }) {
       onMouseUp={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
       style={{
-        border: "1px solid var(--forge-border)",
-        borderRadius: 8,
+        border: "var(--forge-border-w) solid var(--forge-border)",
+        borderRadius: "var(--forge-radius-chip)",
         paddingBlock: 7,
         paddingInline: 11,
         backgroundColor: "transparent",
-        color: "#b0b0b8",
-        fontFamily: "var(--font-body)",
+        color: "var(--forge-text-muted)",
+        fontFamily: "var(--forge-font-body)",
         fontWeight: 700,
         fontSize: 12.5,
         cursor: "pointer",
-        opacity: pressed ? 0.8 : 1,
+        opacity: pressed ? "var(--forge-opacity-press)" : 1,
       }}
     >
       {title}

@@ -12,7 +12,7 @@ export function AppHeader({ markSrc, inModule = false, onBackToModules, onLogout
         alignItems: "center",
         padding: "14px 18px",
         borderBottom: "1px solid var(--forge-divider)",
-        fontFamily: "var(--font-body)",
+        fontFamily: "var(--forge-font-body)",
       }}
     >
       <button
@@ -31,10 +31,10 @@ export function AppHeader({ markSrc, inModule = false, onBackToModules, onLogout
         {markSrc ? <img src={markSrc} alt="" style={{ width: 26, height: 26, objectFit: "contain" }} /> : null}
         <span
           style={{
-            fontFamily: "var(--font-title)",
+            fontFamily: "var(--forge-font-title)",
             fontWeight: 700,
             fontSize: 22,
-            letterSpacing: "var(--tracking-title)",
+            letterSpacing: "var(--forge-tracking-title)",
             textTransform: "uppercase",
             color: "var(--forge-text)",
           }}

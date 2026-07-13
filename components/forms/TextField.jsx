@@ -6,12 +6,12 @@ export function TextField({ label, value, onChange, placeholder, type = "text", 
       {label ? (
         <div
           style={{
-            fontFamily: "var(--font-body)",
+            fontFamily: "var(--forge-font-body)",
             fontWeight: 700,
-            fontSize: "var(--text-label)",
+            fontSize: "var(--forge-text-label)",
             color: "var(--forge-text-faint)",
             textTransform: "uppercase",
-            letterSpacing: "var(--tracking-label)",
+            letterSpacing: "var(--forge-tracking-label)",
             marginBottom: 6,
           }}
         >
@@ -26,13 +26,13 @@ export function TextField({ label, value, onChange, placeholder, type = "text", 
           style={{
             width: "100%",
             height: 84,
-            borderRadius: "var(--radius-input)",
+            borderRadius: "var(--forge-radius-input)",
             border: "1px solid var(--forge-border-input)",
             backgroundColor: "var(--forge-surface-raised)",
             color: "var(--forge-text)",
             padding: "10px 12px",
-            fontFamily: "var(--font-body)",
-            fontSize: "var(--text-input)",
+            fontFamily: "var(--forge-font-body)",
+            fontSize: "var(--forge-text-input)",
             resize: "none",
             boxSizing: "border-box",
           }}
@@ -46,13 +46,13 @@ export function TextField({ label, value, onChange, placeholder, type = "text", 
           style={{
             width: "100%",
             height: 44,
-            borderRadius: "var(--radius-input)",
+            borderRadius: "var(--forge-radius-input)",
             border: "1px solid var(--forge-border-input)",
             backgroundColor: "var(--forge-surface-raised)",
             color: "var(--forge-text)",
             paddingInline: 12,
-            fontFamily: "var(--font-body)",
-            fontSize: "var(--text-input)",
+            fontFamily: "var(--forge-font-body)",
+            fontSize: "var(--forge-text-input)",
             boxSizing: "border-box",
           }}
         />

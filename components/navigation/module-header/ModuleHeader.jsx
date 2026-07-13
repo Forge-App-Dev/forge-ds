@@ -9,10 +9,10 @@ export function ModuleHeader({ eyebrow, title, right }) {
         {eyebrow ? (
           <div
             style={{
-              fontFamily: "var(--font-body)",
+              fontFamily: "var(--forge-font-body)",
               fontWeight: 700,
               fontSize: 12,
-              letterSpacing: "var(--tracking-eyebrow)",
+              letterSpacing: "var(--forge-tracking-eyebrow)",
               textTransform: "uppercase",
               color: "var(--forge-text-faint)",
               marginBottom: 4,
@@ -23,7 +23,7 @@ export function ModuleHeader({ eyebrow, title, right }) {
         ) : null}
         <div
           style={{
-            fontFamily: "var(--font-title)",
+            fontFamily: "var(--forge-font-title)",
             fontWeight: 700,
             fontSize: 32,
             textTransform: "uppercase",

@@ -24,10 +24,10 @@ export function LoadingScreen({ markSrc, message = "carregando…" }) {
           {markSrc ? <img src={markSrc} alt="" style={{ width: 40, height: 40 }} /> : null}
         </div>
       </div>
-      <div style={{ fontFamily: "var(--font-title)", fontSize: 20, textTransform: "uppercase", color: "var(--forge-text)", letterSpacing: 0.5 }}>
+      <div style={{ fontFamily: "var(--forge-font-title)", fontSize: 20, textTransform: "uppercase", color: "var(--forge-text)", letterSpacing: 0.5 }}>
         <span style={{ color: "var(--forge-accent)" }}>F</span>orge
       </div>
-      <div style={{ color: "var(--forge-text-dimmer)", fontFamily: "var(--font-body)", fontSize: 12 }}>{message}</div>
+      <div style={{ color: "var(--forge-text-dimmer)", fontFamily: "var(--forge-font-body)", fontSize: 12 }}>{message}</div>
     </div>
   );
 }

@@ -6,11 +6,11 @@ export function Label({ children, size = "label", color = "var(--forge-text-fain
   return (
     <div
       style={{
-        fontFamily: "var(--font-body)",
+        fontFamily: "var(--forge-font-body)",
         fontWeight: 700,
-        fontSize: size === "miniLabel" ? "var(--text-mini-label)" : "var(--text-label)",
+        fontSize: size === "miniLabel" ? "var(--forge-text-mini-label)" : "var(--forge-text-label)",
         textTransform: "uppercase",
-        letterSpacing: "var(--tracking-label)",
+        letterSpacing: "var(--forge-tracking-label)",
         color,
         ...style,
       }}

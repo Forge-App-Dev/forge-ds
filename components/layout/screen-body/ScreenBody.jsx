@@ -5,7 +5,7 @@ import React from "react";
 // screen padding + max-width centering.
 export function ScreenBody({ children, scroll = true, style }) {
   const inner = (
-    <div style={{ padding: "8px var(--space-screen-h) 24px", maxWidth: "var(--app-max-width)", margin: "0 auto", boxSizing: "border-box", ...style }}>
+    <div style={{ padding: "8px var(--forge-space-screen-h) 24px", maxWidth: "var(--forge-app-max-width)", margin: "0 auto", boxSizing: "border-box", ...style }}>
       {children}
     </div>
   );
