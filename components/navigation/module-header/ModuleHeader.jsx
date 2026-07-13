@@ -1,7 +1,9 @@
 import React from "react";
+import { Title } from "../../typography/Title.jsx";
 
-// Screen-top header: small uppercase eyebrow + large Barlow title, with an
-// optional right-aligned slot (e.g. an "Ajustar" button).
+// Screen-top header: small uppercase eyebrow + large Barlow title (the single
+// screen-title style, via <Title size="screenTitle">, so there's one screen
+// title in the system — OP-013/P-12), plus an optional right-aligned slot.
 export function ModuleHeader({ eyebrow, title, right }) {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 18 }}>
@@ -21,18 +23,7 @@ export function ModuleHeader({ eyebrow, title, right }) {
             {eyebrow}
           </div>
         ) : null}
-        <div
-          style={{
-            fontFamily: "var(--forge-font-title)",
-            fontWeight: 700,
-            fontSize: 32,
-            textTransform: "uppercase",
-            color: "var(--forge-text)",
-            lineHeight: "34px",
-          }}
-        >
-          {title}
-        </div>
+        <Title size="screenTitle" as="h1">{title}</Title>
       </div>
       {right || null}
     </div>

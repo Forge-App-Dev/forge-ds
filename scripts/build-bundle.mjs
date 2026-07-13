@@ -36,6 +36,7 @@ const COMPONENTS = [
   ["Panel", "components/overlays/panel/Panel.jsx"],
   ["Label", "components/typography/Label.jsx"],
   ["SectionLabel", "components/typography/SectionLabel.jsx"],
+  ["Text", "components/typography/Text.jsx"],
   ["Title", "components/typography/Title.jsx"],
 ];
 // Estes precisam vir ANTES de quem os consome (referência via __ds_scope em init? não —

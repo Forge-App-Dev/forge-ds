@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"417d14a55afb","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"5ee0a8dc0cf0","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"c2e5ddc70f30","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"a6c4954ccbb0","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"63658bcb876a","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Title.jsx":"be757a55001a"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"417d14a55afb","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -584,43 +584,116 @@ Object.assign(__ds_scope, { Ring });
 
 // components/core/Button.jsx
 try { (() => {
+// Button — the system's action element, one vocabulary for every button-like
+// need (OP-006). Axes:
+//   variant: "primary" (filled accent) | "secondary" (outlined) | "ghost"
+//            (text only) | "danger" (filled danger)
+//   size:    "sm" (36) | "md" (44) | "lg" (46, default for primary CTAs)
+//   icon:    an ICON_NAMES glyph, placed before (default) or after the label
+//   loading: shows an inline spinner and disables the button, preserving width
+//   fullWidth: stretches to the container
+// `color` overrides the primary fill (e.g. a module accent); text color is
+// derived via onColor(). Back-compat: `small` still maps to size="sm".
+// This absorbs the old HeaderAction (use variant="secondary" size="sm").
+const SIZES = {
+  sm: {
+    height: "var(--forge-size-control-sm)",
+    paddingInline: 13,
+    fontSize: 12.5
+  },
+  md: {
+    height: "var(--forge-size-control-md)",
+    paddingInline: 16,
+    fontSize: 14
+  },
+  lg: {
+    height: "var(--forge-size-control-lg)",
+    paddingInline: 18,
+    fontSize: 15
+  }
+};
 function Button({
   title,
   onClick,
-  color = "var(--forge-accent)",
-  disabled = false,
+  variant = "primary",
+  size,
   small = false,
+  color,
+  icon,
+  iconPosition = "left",
+  loading = false,
+  fullWidth = false,
+  disabled = false,
+  type = "button",
   style,
-  resolvedColor // deprecated (OP-006): onColor() now resolves tokens itself; kept for back-compat
+  resolvedColor,
+  // deprecated (OP-006): onColor() resolves tokens itself
+  children
 }) {
   const [pressed, setPressed] = React.useState(false);
-  const textColor = __ds_scope.onColor(resolvedColor || color);
+  const sz = SIZES[size || (small ? "sm" : "lg")] || SIZES.lg;
+  const label = title != null ? title : children;
+  const isDisabled = disabled || loading;
+  const fill = color || "var(--forge-accent)";
+  let bg, fg, border;
+  if (variant === "secondary") {
+    bg = "transparent";
+    fg = "var(--forge-text-muted)";
+    border = "var(--forge-border-w) solid var(--forge-border-input)";
+  } else if (variant === "ghost") {
+    bg = "transparent";
+    fg = "var(--forge-text-muted)";
+    border = "none";
+  } else if (variant === "danger") {
+    bg = "var(--forge-danger)";
+    fg = __ds_scope.onColor("var(--forge-danger)");
+    border = "none";
+  } else {
+    bg = fill;
+    fg = __ds_scope.onColor(resolvedColor || fill);
+    border = "none";
+  }
+  const iconEl = icon ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: "currentColor",
+    size: 16
+  }) : null;
   return /*#__PURE__*/React.createElement("button", {
     className: "forge-focusable",
+    type: type,
     onClick: onClick,
-    disabled: disabled,
+    disabled: isDisabled,
+    "aria-busy": loading || undefined,
     onMouseDown: () => setPressed(true),
     onMouseUp: () => setPressed(false),
     onMouseLeave: () => setPressed(false),
+    onTouchStart: () => setPressed(true),
+    onTouchEnd: () => setPressed(false),
     style: {
-      height: small ? "var(--forge-size-control-sm)" : "var(--forge-size-control-lg)",
+      height: sz.height,
+      width: fullWidth ? "100%" : undefined,
       borderRadius: "var(--forge-radius-button)",
-      border: "none",
-      cursor: disabled ? "default" : "pointer",
-      paddingInline: small ? 13 : 18,
-      backgroundColor: color,
-      color: textColor,
+      border,
+      cursor: isDisabled ? "default" : "pointer",
+      paddingInline: sz.paddingInline,
+      backgroundColor: bg,
+      color: fg,
       fontFamily: "var(--forge-font-body)",
       fontWeight: 800,
-      fontSize: small ? 12.5 : 15,
-      opacity: disabled ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,
+      fontSize: sz.fontSize,
+      opacity: isDisabled && !loading ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,
       transition: "opacity var(--forge-duration-instant) var(--forge-ease-standard)",
       display: "inline-flex",
       alignItems: "center",
       justifyContent: "center",
+      gap: 7,
       ...style
     }
-  }, title);
+  }, loading ? /*#__PURE__*/React.createElement(__ds_scope.Spinner, {
+    size: 16,
+    color: "currentColor",
+    label: "Carregando"
+  }) : null, !loading && iconEl && iconPosition === "left" ? iconEl : null, label != null ? /*#__PURE__*/React.createElement("span", null, label) : null, !loading && iconEl && iconPosition === "right" ? iconEl : null);
 }
 Object.assign(__ds_scope, { Button });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Button.jsx", error: String((e && e.message) || e) }); }
@@ -861,22 +934,40 @@ Object.assign(__ds_scope, { AppHeader });
 
 // components/core/Card.jsx
 try { (() => {
+// Card — base surface container. Optional left accent stripe (stripeColor).
+// Pass `onClick` to make it a pressable card (keyboard-focusable, role=button,
+// press/selected states) — the pattern several screens reconstruct by hand.
+// `selected` draws an accent border (for choose-from-a-list contexts).
+// `header`/`footer` are optional slots rendered above/below the body inside the
+// content column. When a stripe is present the body padding is slightly larger
+// so text clears the stripe.
 function Card({
   children,
   stripeColor,
+  onClick,
+  selected = false,
+  header,
+  footer,
+  disabled = false,
   style
 }) {
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      backgroundColor: "var(--forge-surface)",
-      borderRadius: "var(--forge-radius-card)",
-      border: "var(--forge-border-w) solid var(--forge-border)",
-      overflow: "hidden",
-      marginBottom: "var(--forge-space-card-gap)",
-      ...style
-    }
-  }, stripeColor ? /*#__PURE__*/React.createElement("div", {
+  const pressable = typeof onClick === "function";
+  const [pressed, setPressed] = React.useState(false);
+  const base = {
+    display: "flex",
+    backgroundColor: "var(--forge-surface)",
+    borderRadius: "var(--forge-radius-card)",
+    border: `var(--forge-border-w) solid ${selected ? "var(--forge-accent)" : "var(--forge-border)"}`,
+    overflow: "hidden",
+    marginBottom: "var(--forge-space-card-gap)",
+    width: "100%",
+    textAlign: "left",
+    opacity: disabled ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,
+    transition: "opacity var(--forge-duration-instant) var(--forge-ease-standard), border-color var(--forge-duration-fast) var(--forge-ease-standard)",
+    cursor: pressable && !disabled ? "pointer" : "default",
+    ...style
+  };
+  const inner = /*#__PURE__*/React.createElement(React.Fragment, null, stripeColor ? /*#__PURE__*/React.createElement("div", {
     style: {
       width: 4,
       flexShrink: 0,
@@ -888,7 +979,36 @@ function Card({
       minWidth: 0,
       padding: stripeColor ? "var(--forge-space-12)" : "var(--forge-space-card)"
     }
-  }, children));
+  }, header ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "var(--forge-space-5)"
+    }
+  }, header) : null, children, footer ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "var(--forge-space-5)"
+    }
+  }, footer) : null));
+  if (pressable) {
+    return /*#__PURE__*/React.createElement("button", {
+      className: "forge-focusable",
+      onClick: disabled ? undefined : onClick,
+      disabled: disabled,
+      "aria-pressed": selected || undefined,
+      onMouseDown: () => setPressed(true),
+      onMouseUp: () => setPressed(false),
+      onMouseLeave: () => setPressed(false),
+      onTouchStart: () => setPressed(true),
+      onTouchEnd: () => setPressed(false),
+      style: {
+        ...base,
+        font: "inherit",
+        padding: 0
+      }
+    }, inner);
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    style: base
+  }, inner);
 }
 Object.assign(__ds_scope, { Card });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Card.jsx", error: String((e && e.message) || e) }); }
@@ -952,33 +1072,23 @@ Object.assign(__ds_scope, { ConfirmButton });
 
 // components/core/HeaderAction.jsx
 try { (() => {
-// Discreet outlined action for a full-screen header (e.g. "Replicar").
+// HeaderAction — discreet outlined action for a full-screen header (e.g.
+// "Replicar"). DEPRECATED as a distinct component (OP-006): this is now just
+// Button variant="secondary" size="sm". Kept as a thin alias so existing
+// call sites keep working; prefer <Button variant="secondary" size="sm" /> in
+// new code.
 function HeaderAction({
   title,
-  onClick
+  onClick,
+  ...rest
 }) {
-  const [pressed, setPressed] = React.useState(false);
-  return /*#__PURE__*/React.createElement("button", {
-    className: "forge-focusable",
+  return /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "secondary",
+    size: "sm",
+    title: title,
     onClick: onClick,
-    onMouseDown: () => setPressed(true),
-    onMouseUp: () => setPressed(false),
-    onMouseLeave: () => setPressed(false),
-    style: {
-      minHeight: "var(--forge-tap-target-min)",
-      border: "var(--forge-border-w) solid var(--forge-border)",
-      borderRadius: "var(--forge-radius-chip)",
-      paddingBlock: 7,
-      paddingInline: 11,
-      backgroundColor: "transparent",
-      color: "var(--forge-text-muted)",
-      fontFamily: "var(--forge-font-body)",
-      fontWeight: 700,
-      fontSize: 12.5,
-      cursor: "pointer",
-      opacity: pressed ? "var(--forge-opacity-press)" : 1
-    }
-  }, title);
+    ...rest
+  });
 }
 Object.assign(__ds_scope, { HeaderAction });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/HeaderAction.jsx", error: String((e && e.message) || e) }); }
@@ -1989,8 +2099,9 @@ Object.assign(__ds_scope, { Screen });
 
 // components/navigation/module-header/ModuleHeader.jsx
 try { (() => {
-// Screen-top header: small uppercase eyebrow + large Barlow title, with an
-// optional right-aligned slot (e.g. an "Ajustar" button).
+// Screen-top header: small uppercase eyebrow + large Barlow title (the single
+// screen-title style, via <Title size="screenTitle">, so there's one screen
+// title in the system — OP-013/P-12), plus an optional right-aligned slot.
 function ModuleHeader({
   eyebrow,
   title,
@@ -2018,15 +2129,9 @@ function ModuleHeader({
       color: "var(--forge-text-faint)",
       marginBottom: 4
     }
-  }, eyebrow) : null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: "var(--forge-font-title)",
-      fontWeight: 700,
-      fontSize: 32,
-      textTransform: "uppercase",
-      color: "var(--forge-text)",
-      lineHeight: "34px"
-    }
+  }, eyebrow) : null, /*#__PURE__*/React.createElement(__ds_scope.Title, {
+    size: "screenTitle",
+    as: "h1"
   }, title)), right || null);
 }
 Object.assign(__ds_scope, { ModuleHeader });
@@ -2324,26 +2429,85 @@ function SectionLabel({
 Object.assign(__ds_scope, { SectionLabel });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/typography/SectionLabel.jsx", error: String((e && e.message) || e) }); }
 
+// components/typography/Text.jsx
+try { (() => {
+// Text — body-copy primitive (Inter). This is the missing everyday-text
+// component: screens currently style raw <div>s by hand for body text. Sizes
+// map to the type scale; `weight` and `color` are props; `as` picks the
+// element (span/div/p/label). cardTitle lives here (not in Title) — it's Inter
+// bold, not a Barlow heading (OP-013/P-13).
+const SIZE = {
+  cardTitle: {
+    fontSize: "var(--forge-text-card-title)",
+    lineHeight: "var(--forge-lh-card-title)",
+    fontWeight: 700
+  },
+  listItem: {
+    fontSize: "var(--forge-text-list-item)",
+    lineHeight: "var(--forge-lh-list-item)"
+  },
+  body: {
+    fontSize: "var(--forge-text-body)",
+    lineHeight: "var(--forge-lh-body)"
+  },
+  bodySm: {
+    fontSize: "var(--forge-text-body-sm)",
+    lineHeight: "var(--forge-lh-body-sm)"
+  },
+  chip: {
+    fontSize: "var(--forge-text-chip)",
+    lineHeight: "var(--forge-lh-chip)"
+  }
+};
+function Text({
+  children,
+  size = "body",
+  weight,
+  color = "var(--forge-text)",
+  as = "span",
+  style
+}) {
+  const El = as;
+  const s = SIZE[size] || SIZE.body;
+  return /*#__PURE__*/React.createElement(El, {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      color,
+      ...s,
+      ...(weight ? {
+        fontWeight: weight
+      } : {}),
+      ...style
+    }
+  }, children);
+}
+Object.assign(__ds_scope, { Text });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/typography/Text.jsx", error: String((e && e.message) || e) }); }
+
 // components/typography/Title.jsx
 try { (() => {
-// Title — large Barlow Condensed heading. Size variants map to the type
-// scale's title tokens (screenTitle 34 / panelTitle 22 / cardTitle 16 / logoLg 40).
+// Title — large Barlow Condensed uppercase heading. Sizes map to the type
+// scale's title tokens (logoLg 40 / screenTitle 34 / panelTitle 22).
+// Pass `as` ("h1".."h3") for correct heading semantics (defaults to a div).
+// NOTE: cardTitle moved to <Text size="cardTitle"> — a card title is Inter
+// body-bold, not a Barlow heading; the alias below is kept for back-compat but
+// deprecated (OP-013/P-13).
 const SIZE = {
   logoLg: {
     fontSize: "var(--forge-text-logo-lg)",
-    lineHeight: "44px"
+    lineHeight: "var(--forge-lh-logo-lg)"
   },
   screenTitle: {
     fontSize: "var(--forge-text-screen-title)",
-    lineHeight: "34px"
+    lineHeight: "var(--forge-lh-screen-title)"
   },
   panelTitle: {
     fontSize: "var(--forge-text-panel-title)",
-    lineHeight: "24px"
+    lineHeight: "var(--forge-lh-panel-title)"
   },
   cardTitle: {
     fontSize: "var(--forge-text-card-title)",
-    lineHeight: "20px",
+    lineHeight: "var(--forge-lh-card-title)",
     textTransform: "none",
     letterSpacing: 0,
     fontFamily: "var(--forge-font-body)",
@@ -2354,10 +2518,13 @@ function Title({
   children,
   size = "screenTitle",
   color = "var(--forge-text)",
+  as = "div",
   style
 }) {
+  const El = as;
   const s = SIZE[size] || SIZE.screenTitle;
-  return /*#__PURE__*/React.createElement("div", {
+  const isCard = size === "cardTitle";
+  return /*#__PURE__*/React.createElement(El, {
     style: {
       fontFamily: "var(--forge-font-title)",
       fontWeight: 700,
@@ -2429,6 +2596,8 @@ __ds_ns.Panel = __ds_scope.Panel;
 __ds_ns.Label = __ds_scope.Label;
 
 __ds_ns.SectionLabel = __ds_scope.SectionLabel;
+
+__ds_ns.Text = __ds_scope.Text;
 
 __ds_ns.Title = __ds_scope.Title;
 

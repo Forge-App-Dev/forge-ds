@@ -10,6 +10,7 @@ export { HeaderAction } from "./components/core/HeaderAction.jsx";
 export { Pill } from "./components/core/Pill.jsx";
 // typography
 export { Title } from "./components/typography/Title.jsx";
+export { Text } from "./components/typography/Text.jsx";
 export { Label } from "./components/typography/Label.jsx";
 export { SectionLabel } from "./components/typography/SectionLabel.jsx";
 // layout

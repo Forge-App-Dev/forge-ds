@@ -118,6 +118,10 @@
    "sourcePath": "components/typography/SectionLabel.jsx"
   },
   {
+   "name": "Text",
+   "sourcePath": "components/typography/Text.jsx"
+  },
+  {
    "name": "Title",
    "sourcePath": "components/typography/Title.jsx"
   },

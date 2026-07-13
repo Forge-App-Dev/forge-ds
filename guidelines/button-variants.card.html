@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Button Variants" subtitle="primary / secondary / ghost / danger · size · icon · loading" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; padding:20px; background:var(--forge-bg); font-family:var(--forge-font-body); color:var(--forge-text); }
+  h3 { font-size:11px; text-transform:uppercase; letter-spacing:var(--forge-tracking-label); color:var(--forge-text-faint); margin:16px 0 8px; font-weight:700; }
+  h3:first-child{margin-top:0;}
+  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .btn { height:46px; padding-inline:18px; border-radius:var(--forge-radius-button); font-weight:800; font-family:var(--forge-font-body); font-size:15px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:7px; border:none; }
+  .primary { background:var(--forge-accent); color:var(--forge-on-accent); }
+  .secondary { background:transparent; border:var(--forge-border-w) solid var(--forge-border-input); color:var(--forge-text-muted); }
+  .ghost { background:transparent; color:var(--forge-text-muted); }
+  .danger { background:var(--forge-danger); color:#0B0F19; }
+  .sm { height:var(--forge-size-control-sm); font-size:12.5px; padding-inline:13px; }
+  .md { height:var(--forge-size-control-md); font-size:14px; padding-inline:16px; }
+  svg { width:16px; height:16px; }
+</style>
+</head>
+<body>
+  <h3>Variantes</h3>
+  <div class="row">
+    <button class="btn primary forge-focusable">Salvar</button>
+    <button class="btn secondary forge-focusable">Replicar</button>
+    <button class="btn ghost forge-focusable">Pular</button>
+    <button class="btn danger forge-focusable">Excluir</button>
+  </div>
+
+  <h3>Tamanhos (sm 36 · md 44 · lg 46)</h3>
+  <div class="row">
+    <button class="btn primary sm forge-focusable">Pequeno</button>
+    <button class="btn primary md forge-focusable">Médio</button>
+    <button class="btn primary forge-focusable">Grande</button>
+  </div>
+
+  <h3>Com ícone e loading</h3>
+  <div class="row">
+    <button class="btn primary forge-focusable"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Concluir</button>
+    <button class="btn primary forge-focusable" style="color:var(--forge-on-accent)"><svg class="forge-anim-spin" viewBox="0 0 20 20" style="color:currentColor"><circle cx="10" cy="10" r="8" style="stroke:currentColor" stroke-width="2.5" fill="none" stroke-dasharray="50" stroke-dashoffset="35" stroke-linecap="round" opacity="0.9"/></svg>Salvando</button>
+  </div>
+</body>
+</html>

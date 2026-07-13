@@ -1,31 +1,11 @@
 import React from "react";
+import { Button } from "./Button.jsx";
 
-// Discreet outlined action for a full-screen header (e.g. "Replicar").
-export function HeaderAction({ title, onClick }) {
-  const [pressed, setPressed] = React.useState(false);
-  return (
-    <button
-      className="forge-focusable"
-      onClick={onClick}
-      onMouseDown={() => setPressed(true)}
-      onMouseUp={() => setPressed(false)}
-      onMouseLeave={() => setPressed(false)}
-      style={{
-        minHeight: "var(--forge-tap-target-min)",
-        border: "var(--forge-border-w) solid var(--forge-border)",
-        borderRadius: "var(--forge-radius-chip)",
-        paddingBlock: 7,
-        paddingInline: 11,
-        backgroundColor: "transparent",
-        color: "var(--forge-text-muted)",
-        fontFamily: "var(--forge-font-body)",
-        fontWeight: 700,
-        fontSize: 12.5,
-        cursor: "pointer",
-        opacity: pressed ? "var(--forge-opacity-press)" : 1,
-      }}
-    >
-      {title}
-    </button>
-  );
+// HeaderAction — discreet outlined action for a full-screen header (e.g.
+// "Replicar"). DEPRECATED as a distinct component (OP-006): this is now just
+// Button variant="secondary" size="sm". Kept as a thin alias so existing
+// call sites keep working; prefer <Button variant="secondary" size="sm" /> in
+// new code.
+export function HeaderAction({ title, onClick, ...rest }) {
+  return <Button variant="secondary" size="sm" title={title} onClick={onClick} {...rest} />;
 }
