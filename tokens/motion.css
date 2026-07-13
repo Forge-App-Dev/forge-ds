@@ -1,0 +1,35 @@
+/* Forge Design System — motion tokens
+   Todo movimento do sistema sai daqui. Regra: nenhuma animação em loop em
+   conteúdo regular; só spin/pulse (loading), fade (overlays), width/opacity
+   (progresso e press). Sem bounce, sem spring, sem parallax.
+   Sempre pareado com `prefers-reduced-motion: reduce` (ver keyframes abaixo). */
+:root {
+  /* Durações */
+  --forge-duration-instant: 100ms; /* press feedback (opacity) */
+  --forge-duration-fast: 150ms;    /* cor/estado (chips, confirm) */
+  --forge-duration-base: 300ms;    /* barras de progresso, width */
+  --forge-duration-slow: 400ms;    /* anel de progresso, dash */
+  --forge-duration-loop-spin: 1s;  /* rotação contínua (loading ring/spinner) */
+  --forge-duration-loop-pulse: 1.4s; /* pulso da marca (loading) */
+
+  /* Easing */
+  --forge-ease-standard: ease;                       /* padrão do sistema */
+  --forge-ease-linear: linear;                       /* rotação constante */
+  --forge-ease-emphasized: cubic-bezier(0.2, 0, 0, 1); /* entrada de overlay */
+}
+
+/* Keyframes globais — declarados uma vez, não injetados por instância.
+   Componentes referenciam estas classes/animações em vez de emitir <style>. */
+@keyframes forge-spin { to { transform: rotate(360deg); } }
+@keyframes forge-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(0.86); opacity: 0.62; } }
+@keyframes forge-dots { 0% { content: "."; } 33% { content: ".."; } 66% { content: "..."; } }
+
+.forge-anim-spin { animation: forge-spin var(--forge-duration-loop-spin) var(--forge-ease-linear) infinite; transform-origin: center; }
+.forge-anim-pulse { animation: forge-pulse var(--forge-duration-loop-pulse) var(--forge-ease-standard) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .forge-anim-spin,
+  .forge-anim-pulse {
+    animation: none;
+  }
+}

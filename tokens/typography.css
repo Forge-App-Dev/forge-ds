@@ -34,4 +34,36 @@
   --tracking-title: 0.5px;
   --tracking-label: 1px;
   --tracking-eyebrow: 2px;
+
+  /* Line-heights pareados à escala — OP-083 (display ~1.05, corpo ~1.35) */
+  --forge-lh-logo-lg: 44px;      /* 40 */
+  --forge-lh-screen-title: 36px; /* 34 */
+  --forge-lh-panel-title: 24px;  /* 22 */
+  --forge-lh-card-title: 20px;   /* 16 */
+  --forge-lh-input: 20px;        /* 14.5 */
+  --forge-lh-list-item: 19px;    /* 14 */
+  --forge-lh-body: 19px;         /* 13.5 */
+  --forge-lh-body-sm: 18px;      /* 13 */
+  --forge-lh-chip: 16px;         /* 12.5 */
+  --forge-lh-label: 15px;        /* 11.5 */
+  --forge-lh-mini-label: 14px;   /* 10.5 */
+
+  /* Aliases --forge-* (namespace unificado — OP-096). Nomes curtos abaixo
+     permanecem válidos como alias reverso p/ compatibilidade. */
+  --forge-font-title: var(--font-title);
+  --forge-font-body: var(--font-body);
+  --forge-text-logo-lg: var(--text-logo-lg);
+  --forge-text-screen-title: var(--text-screen-title);
+  --forge-text-panel-title: var(--text-panel-title);
+  --forge-text-card-title: var(--text-card-title);
+  --forge-text-input: var(--text-input);
+  --forge-text-list-item: var(--text-list-item);
+  --forge-text-body: var(--text-body);
+  --forge-text-body-sm: var(--text-body-sm);
+  --forge-text-chip: var(--text-chip);
+  --forge-text-label: var(--text-label);
+  --forge-text-mini-label: var(--text-mini-label);
+  --forge-tracking-title: var(--tracking-title);
+  --forge-tracking-label: var(--tracking-label);
+  --forge-tracking-eyebrow: var(--tracking-eyebrow);
 }

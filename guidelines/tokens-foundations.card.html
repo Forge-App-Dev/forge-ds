@@ -1,0 +1,68 @@
+<!-- @dsCard group="Spacing" viewport="700x620" name="Token Foundations" subtitle="Escala de espaçamento, tamanhos, motion, z-index, foco, opacidade" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 18px; background: var(--forge-bg); font-family: var(--forge-font-body); color: var(--forge-text); }
+  h3 { font-family: var(--forge-font-body); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: var(--forge-tracking-label); color: var(--forge-text-faint); margin: 18px 0 8px; }
+  h3:first-child { margin-top: 0; }
+  .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .swatch { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .bar { background: var(--forge-accent); border-radius: 3px; height: 16px; }
+  .lbl { font-size: 10px; color: var(--forge-text-dim); font-family: var(--forge-font-body); }
+  .box { border: var(--forge-border-w) solid var(--forge-border); background: var(--forge-surface); display: flex; align-items: center; justify-content: center; color: var(--forge-text-muted); font-size: 10px; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--forge-accent); }
+</style>
+</head>
+<body>
+  <h3>Escala de espaçamento (--forge-space-*)</h3>
+  <div class="row">
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-2)"></div><span class="lbl">2</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-4)"></div><span class="lbl">4</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-6)"></div><span class="lbl">6</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-8)"></div><span class="lbl">8</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-10)"></div><span class="lbl">10</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-12)"></div><span class="lbl">12</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-16)"></div><span class="lbl">16</span></div>
+    <div class="swatch"><div class="bar" style="width:var(--forge-space-20)"></div><span class="lbl">20</span></div>
+  </div>
+
+  <h3>Tamanhos de controle (--forge-size-control-*)</h3>
+  <div class="row">
+    <div class="box" style="height:var(--forge-size-control-sm);width:80px;border-radius:var(--forge-radius-button)">sm 36</div>
+    <div class="box" style="height:var(--forge-size-control-md);width:80px;border-radius:var(--forge-radius-button)">md 44</div>
+    <div class="box" style="height:var(--forge-size-control-lg);width:80px;border-radius:var(--forge-radius-button)">lg 46</div>
+  </div>
+
+  <h3>Tamanhos de ícone (--forge-icon-*)</h3>
+  <div class="row">
+    <div class="swatch"><div class="dot" style="width:var(--forge-icon-sm);height:var(--forge-icon-sm)"></div><span class="lbl">16</span></div>
+    <div class="swatch"><div class="dot" style="width:var(--forge-icon-md);height:var(--forge-icon-md)"></div><span class="lbl">20</span></div>
+    <div class="swatch"><div class="dot" style="width:var(--forge-icon-lg);height:var(--forge-icon-lg)"></div><span class="lbl">24</span></div>
+    <div class="swatch"><div class="dot" style="width:var(--forge-icon-xl);height:var(--forge-icon-xl)"></div><span class="lbl">30</span></div>
+  </div>
+
+  <h3>Motion (durações — barras animam com a própria duração)</h3>
+  <div class="row">
+    <div class="forge-anim-spin" style="width:22px;height:22px;border:3px solid var(--forge-surface-raised);border-top-color:var(--forge-accent);border-radius:50%"></div>
+    <span class="lbl">spin 1s linear</span>
+    <div class="forge-anim-pulse" style="width:22px;height:22px;border-radius:50%;background:var(--forge-accent);margin-left:16px"></div>
+    <span class="lbl">pulse 1.4s</span>
+  </div>
+
+  <h3>Foco (--forge-focus-ring)</h3>
+  <div class="row">
+    <div class="box" style="height:40px;width:120px;border-radius:var(--forge-radius-button);outline:var(--forge-focus-ring-w) solid var(--forge-focus-ring);outline-offset:var(--forge-focus-ring-offset)">focus-visible</div>
+  </div>
+
+  <h3>Opacidade (press / disabled) · Scrim</h3>
+  <div class="row">
+    <div class="box" style="height:40px;width:90px;border-radius:var(--forge-radius-button);background:var(--forge-accent);color:var(--forge-on-accent)">1.0</div>
+    <div class="box" style="height:40px;width:90px;border-radius:var(--forge-radius-button);background:var(--forge-accent);color:var(--forge-on-accent);opacity:var(--forge-opacity-press)">press .85</div>
+    <div class="box" style="height:40px;width:90px;border-radius:var(--forge-radius-button);background:var(--forge-accent);color:var(--forge-on-accent);opacity:var(--forge-opacity-disabled)">disabled .5</div>
+    <div class="box" style="height:40px;width:90px;border-radius:var(--forge-radius-button);background:var(--forge-scrim);color:var(--forge-text)">scrim</div>
+  </div>
+</body>
+</html>

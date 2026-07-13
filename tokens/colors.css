@@ -60,6 +60,24 @@
   --border-input: var(--forge-border-input);
   --text-body: var(--forge-text);
   --text-secondary: var(--forge-text-muted);
+
+  /* Scrim (fundo de overlays) — OP-094; antes rgba solto por componente */
+  --forge-scrim: rgba(10, 10, 12, 0.82);        /* Panel / FullScreen */
+  --forge-scrim-heavy: rgba(0, 0, 0, 0.94);     /* VideoModal */
+
+  /* Foco — OP-086 (largura/offset em spacing.css) */
+  --forge-focus-ring: var(--forge-accent);
+
+  /* Feedback de tendência negativa — distinto de danger (destrutivo) — OP-129 */
+  --forge-negative: #e36a5a;
+
+  /* Superfície de marca terceira (botão Continuar com Google) — OP-020 */
+  --forge-on-brand-google-bg: #FFFFFF;
+  --forge-on-brand-google-text: #1a1a1a;
+
+  /* Contraste resolvido por onColor() — expostos como token p/ tema — OP-011 */
+  --forge-on-light: #0B0F19;
+  --forge-on-dark: #FFFFFF;
 }
 
 /* Light theme variant ("sibling app" pattern, e.g. a "Fuel" app) —
@@ -81,4 +99,10 @@
   --forge-text-dimmer: #87898F; /* was #B2B3B7 — lowered to ~3:1 vs surfaceRaised (decorative-only threshold) */
 
   --forge-accent: #10B981;
+
+  /* Overrides de tema claro — OP-011 */
+  --forge-scrim: rgba(20, 20, 24, 0.55);
+  --forge-scrim-heavy: rgba(0, 0, 0, 0.88);
+  --forge-focus-ring: var(--forge-accent);
+  --forge-negative: #c94b3b;
 }
