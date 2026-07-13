@@ -10,6 +10,10 @@
    "sourcePath": "components/icons/Icon.jsx"
   },
   {
+   "name": "ListItem",
+   "sourcePath": "components/forms/ListItem.jsx"
+  },
+  {
    "name": "Ring",
    "sourcePath": "components/feedback/ring/Ring.jsx"
   },
@@ -84,6 +88,22 @@
   {
    "name": "TextField",
    "sourcePath": "components/forms/TextField.jsx"
+  },
+  {
+   "name": "Switch",
+   "sourcePath": "components/forms/Switch.jsx"
+  },
+  {
+   "name": "Stepper",
+   "sourcePath": "components/forms/Stepper.jsx"
+  },
+  {
+   "name": "SearchField",
+   "sourcePath": "components/forms/SearchField.jsx"
+  },
+  {
+   "name": "Select",
+   "sourcePath": "components/forms/Select.jsx"
   },
   {
    "name": "ScreenBody",

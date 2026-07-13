@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"417d14a55afb","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -370,6 +370,119 @@ const PATHS = {
   down: () => /*#__PURE__*/React.createElement("polyline", {
     points: "6 9 12 15 18 9"
   }),
+  "chevron-right": () => /*#__PURE__*/React.createElement("polyline", {
+    points: "9 6 15 12 9 18"
+  }),
+  "chevron-left": () => /*#__PURE__*/React.createElement("polyline", {
+    points: "15 6 9 12 15 18"
+  }),
+  "chevron-down": () => /*#__PURE__*/React.createElement("polyline", {
+    points: "6 9 12 15 18 9"
+  }),
+  "chevron-up": () => /*#__PURE__*/React.createElement("polyline", {
+    points: "6 15 12 9 18 15"
+  }),
+  search: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("circle", {
+    cx: "11",
+    cy: "11",
+    r: "7"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "21",
+    y1: "21",
+    x2: "16.5",
+    y2: "16.5"
+  })),
+  minus: () => /*#__PURE__*/React.createElement("line", {
+    x1: "5",
+    y1: "12",
+    x2: "19",
+    y2: "12"
+  }),
+  trash: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("polyline", {
+    points: "3 6 5 6 21 6"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "10",
+    y1: "11",
+    x2: "10",
+    y2: "17"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "14",
+    y1: "11",
+    x2: "14",
+    y2: "17"
+  })),
+  settings: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("circle", {
+    cx: "12",
+    cy: "12",
+    r: "3"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+  })),
+  share: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("circle", {
+    cx: "18",
+    cy: "5",
+    r: "3"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "6",
+    cy: "12",
+    r: "3"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "18",
+    cy: "19",
+    r: "3"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "8.6",
+    y1: "13.5",
+    x2: "15.4",
+    y2: "17.5"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "15.4",
+    y1: "6.5",
+    x2: "8.6",
+    y2: "10.5"
+  })),
+  bell: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("path", {
+    d: "M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M13.7 21a2 2 0 0 1-3.4 0"
+  })),
+  clock: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("circle", {
+    cx: "12",
+    cy: "12",
+    r: "9"
+  }), /*#__PURE__*/React.createElement("polyline", {
+    points: "12 7 12 12 15 14"
+  })),
+  "more-horizontal": () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("circle", {
+    cx: "12",
+    cy: "12",
+    r: "1"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "19",
+    cy: "12",
+    r: "1"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "5",
+    cy: "12",
+    r: "1"
+  })),
+  eye: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("path", {
+    d: "M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "12",
+    cy: "12",
+    r: "3"
+  })),
+  "eye-off": () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("path", {
+    d: "M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "1",
+    y1: "1",
+    x2: "23",
+    y2: "23"
+  })),
   trophy: () => /*#__PURE__*/React.createElement("g", null, /*#__PURE__*/React.createElement("path", {
     d: "M6 9H4.5a2.5 2.5 0 0 1 0-5H6"
   }), /*#__PURE__*/React.createElement("path", {
@@ -418,6 +531,120 @@ function Icon({
 const ICON_NAMES = Object.keys(PATHS);
 Object.assign(__ds_scope, { Icon, ICON_NAMES });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/icons/Icon.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/ListItem.jsx
+try { (() => {
+// ListItem — a standard row: optional leading (icon/avatar/dot), title +
+// optional subtitle, and an optional trailing slot (value, chevron, Switch…).
+// The pattern every screen rebuilds by hand (the family doc calls it rowCard).
+// Pass `onClick` to make it a pressable row (role=button, focus, press,
+// chevron by default); omit for a static row. `leadingIcon` is a convenience
+// for the common icon-in-a-tile leading.
+function ListItem({
+  title,
+  subtitle,
+  leading,
+  leadingIcon,
+  trailing,
+  onClick,
+  showChevron,
+  disabled = false,
+  style
+}) {
+  const pressable = typeof onClick === "function";
+  const [pressed, setPressed] = React.useState(false);
+  const chevron = (showChevron ?? pressable) && !trailing;
+  const lead = leading || (leadingIcon ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 34,
+      height: 34,
+      borderRadius: "var(--forge-radius-chip)",
+      backgroundColor: "var(--forge-surface-raised)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: leadingIcon,
+    color: "var(--forge-text-muted)",
+    size: 18
+  })) : null);
+  const body = /*#__PURE__*/React.createElement(React.Fragment, null, lead, /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      minWidth: 0,
+      display: "flex",
+      flexDirection: "column",
+      gap: 2,
+      textAlign: "left"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 600,
+      fontSize: "var(--forge-text-list-item)",
+      color: "var(--forge-text)",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    }
+  }, title), subtitle ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-chip)",
+      color: "var(--forge-text-dim)",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    }
+  }, subtitle) : null), trailing ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      flexShrink: 0,
+      display: "inline-flex",
+      alignItems: "center"
+    }
+  }, trailing) : null, chevron ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "chevron-right",
+    color: "var(--forge-text-faint)",
+    size: 18
+  }) : null);
+  const base = {
+    display: "flex",
+    alignItems: "center",
+    gap: 12,
+    width: "100%",
+    minHeight: "var(--forge-tap-target-min)",
+    padding: "10px 2px",
+    background: "none",
+    border: "none",
+    opacity: disabled ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,
+    transition: "opacity var(--forge-duration-instant) var(--forge-ease-standard)",
+    cursor: pressable && !disabled ? "pointer" : "default",
+    ...style
+  };
+  if (pressable) {
+    return /*#__PURE__*/React.createElement("button", {
+      className: "forge-focusable",
+      onClick: disabled ? undefined : onClick,
+      disabled: disabled,
+      onMouseDown: () => setPressed(true),
+      onMouseUp: () => setPressed(false),
+      onMouseLeave: () => setPressed(false),
+      onTouchStart: () => setPressed(true),
+      onTouchEnd: () => setPressed(false),
+      style: {
+        ...base,
+        font: "inherit"
+      }
+    }, body);
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    style: base
+  }, body);
+}
+Object.assign(__ds_scope, { ListItem });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/ListItem.jsx", error: String((e && e.message) || e) }); }
 
 // components/feedback/ring/Ring.jsx
 try { (() => {
@@ -2026,6 +2253,335 @@ function TextField({
 Object.assign(__ds_scope, { TextField });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/TextField.jsx", error: String((e && e.message) || e) }); }
 
+// components/forms/Switch.jsx
+try { (() => {
+// Switch — on/off toggle (e.g. kg/lb preference, enable a meal). Accessible:
+// role="switch" + aria-checked, keyboard-focusable, labelled. Pass `label` to
+// render a tappable row with the switch on the right (the common form layout),
+// or omit it for a bare switch. Disabled supported.
+function Switch({
+  checked = false,
+  onChange,
+  label,
+  disabled = false,
+  id,
+  style
+}) {
+  const rid = React.useId ? React.useId() : id || "forge-switch";
+  const toggle = () => {
+    if (!disabled && onChange) onChange(!checked);
+  };
+  const knob = /*#__PURE__*/React.createElement("span", {
+    className: "forge-focusable",
+    role: "switch",
+    "aria-checked": checked,
+    "aria-labelledby": label ? `${rid}-label` : undefined,
+    "aria-disabled": disabled || undefined,
+    tabIndex: disabled ? -1 : 0,
+    onClick: toggle,
+    onKeyDown: e => {
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        toggle();
+      }
+    },
+    style: {
+      width: 44,
+      height: 26,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: checked ? "var(--forge-accent)" : "var(--forge-surface-raised)",
+      border: `var(--forge-border-w) solid ${checked ? "var(--forge-accent)" : "var(--forge-border-input)"}`,
+      display: "inline-flex",
+      alignItems: "center",
+      padding: 2,
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1,
+      transition: "background-color var(--forge-duration-fast) var(--forge-ease-standard)",
+      flexShrink: 0,
+      boxSizing: "border-box"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 20,
+      height: 20,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: checked ? "var(--forge-on-accent)" : "var(--forge-text-faint)",
+      transform: checked ? "translateX(18px)" : "translateX(0)",
+      transition: "transform var(--forge-duration-fast) var(--forge-ease-standard)"
+    }
+  }));
+  if (!label) return knob;
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: toggle,
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: 12,
+      minHeight: "var(--forge-tap-target-min)",
+      cursor: disabled ? "default" : "pointer",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    id: `${rid}-label`,
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-list-item)",
+      color: "var(--forge-text)"
+    }
+  }, label), knob);
+}
+Object.assign(__ds_scope, { Switch });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Switch.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/Stepper.jsx
+try { (() => {
+// Stepper — numeric +/- control (sets, reps, quantity). The most-touched
+// control in a training app. Accessibility follows the hard-won TalkBack rule
+// from the app: do NOT wrap the pair in role="adjustable"/spinbutton (that
+// hides the inner buttons); instead expose two real buttons with clear labels
+// and a live region announcing the value. Respects min/max/step and disables
+// the relevant button at the bounds.
+function Stepper({
+  value = 0,
+  onChange,
+  min = -Infinity,
+  max = Infinity,
+  step = 1,
+  unit = "",
+  label,
+  disabled = false,
+  style
+}) {
+  const rid = React.useId ? React.useId() : "forge-stepper";
+  const set = v => {
+    const c = Math.min(max, Math.max(min, v));
+    if (onChange && c !== value) onChange(c);
+  };
+  const canDec = !disabled && value - step >= min;
+  const canInc = !disabled && value + step <= max;
+  const btn = (dir, enabled, onClick, glyph) => /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onClick,
+    disabled: !enabled,
+    "aria-label": dir === "dec" ? `Diminuir ${label || ""}`.trim() : `Aumentar ${label || ""}`.trim(),
+    style: {
+      width: 40,
+      height: 40,
+      borderRadius: "var(--forge-radius-input)",
+      border: "var(--forge-border-w) solid var(--forge-border-input)",
+      backgroundColor: "var(--forge-surface-raised)",
+      color: "var(--forge-text)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: enabled ? "pointer" : "default",
+      opacity: enabled ? 1 : "var(--forge-opacity-disabled)",
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: glyph,
+    color: "currentColor",
+    size: 18
+  }));
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 10,
+      ...style
+    }
+  }, btn("dec", canDec, () => set(value - step), "minus"), /*#__PURE__*/React.createElement("span", {
+    role: "status",
+    "aria-live": "polite",
+    "aria-label": label ? `${label}: ${value}${unit}` : undefined,
+    style: {
+      minWidth: 48,
+      textAlign: "center",
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: 20,
+      color: "var(--forge-text)",
+      fontVariantNumeric: "tabular-nums"
+    }
+  }, value, unit ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 13,
+      color: "var(--forge-text-dim)"
+    }
+  }, unit) : null), btn("inc", canInc, () => set(value + step), "plus"));
+}
+Object.assign(__ds_scope, { Stepper });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Stepper.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/SearchField.jsx
+try { (() => {
+// SearchField — text input with a leading search glyph and a clear (✕) button
+// when non-empty. For food/exercise lookup. type="search", labelled for screen
+// readers; the clear button has an aria-label. Focus ring on the wrapper.
+function SearchField({
+  value = "",
+  onChange,
+  placeholder = "Buscar",
+  onSubmit,
+  autoFocus = false,
+  style
+}) {
+  const rid = React.useId ? React.useId() : "forge-search";
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 8,
+      height: 44,
+      paddingInline: 12,
+      borderRadius: "var(--forge-radius-input)",
+      border: "var(--forge-border-w) solid var(--forge-border-input)",
+      backgroundColor: "var(--forge-surface-raised)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "search",
+    color: "var(--forge-text-dim)",
+    size: 18
+  }), /*#__PURE__*/React.createElement("input", {
+    id: rid,
+    className: "forge-focusable",
+    type: "search",
+    value: value,
+    placeholder: placeholder,
+    autoFocus: autoFocus,
+    "aria-label": placeholder,
+    enterKeyHint: "search",
+    onChange: e => onChange && onChange(e.target.value),
+    onKeyDown: e => {
+      if (e.key === "Enter" && onSubmit) onSubmit(value);
+    },
+    style: {
+      flex: 1,
+      minWidth: 0,
+      height: "100%",
+      background: "none",
+      border: "none",
+      outline: "none",
+      color: "var(--forge-text)",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-input)"
+    }
+  }), value ? /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: () => onChange && onChange(""),
+    "aria-label": "Limpar busca",
+    style: {
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      display: "inline-flex",
+      padding: 2
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "x",
+    color: "var(--forge-text-dim)",
+    size: 16
+  })) : null);
+}
+Object.assign(__ds_scope, { SearchField });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/SearchField.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/Select.jsx
+try { (() => {
+// Select — choose one option from a list. Instead of a floating dropdown
+// (which the system avoids), the trigger opens a Panel of options — the
+// canonical Forge choose-from-a-list pattern. Options: array of
+// { value, label, subtitle? }. The trigger looks like a field; the current
+// label (or placeholder) shows with a chevron. Fully keyboard/AT accessible via
+// Panel's dialog semantics and ListItem rows.
+function Select({
+  value,
+  options = [],
+  onChange,
+  label,
+  placeholder = "Selecionar",
+  title,
+  disabled = false,
+  style
+}) {
+  const [open, setOpen] = React.useState(false);
+  const rid = React.useId ? React.useId() : "forge-select";
+  const current = options.find(o => o.value === value);
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: 12,
+      ...style
+    }
+  }, label ? /*#__PURE__*/React.createElement("label", {
+    id: `${rid}-label`,
+    style: {
+      display: "block",
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 700,
+      fontSize: "var(--forge-text-label)",
+      color: "var(--forge-text-faint)",
+      textTransform: "uppercase",
+      letterSpacing: "var(--forge-tracking-label)",
+      marginBottom: 6
+    }
+  }, label) : null, /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: () => !disabled && setOpen(true),
+    disabled: disabled,
+    "aria-haspopup": "dialog",
+    "aria-expanded": open,
+    "aria-labelledby": label ? `${rid}-label` : undefined,
+    style: {
+      width: "100%",
+      height: 44,
+      paddingInline: 12,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: 8,
+      borderRadius: "var(--forge-radius-input)",
+      border: "var(--forge-border-w) solid var(--forge-border-input)",
+      backgroundColor: "var(--forge-surface-raised)",
+      color: current ? "var(--forge-text)" : "var(--forge-text-dim)",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-input)",
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    }
+  }, current ? current.label : placeholder), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "chevron-down",
+    color: "var(--forge-text-dim)",
+    size: 18
+  })), /*#__PURE__*/React.createElement(__ds_scope.Panel, {
+    visible: open,
+    onClose: () => setOpen(false),
+    title: title || label || placeholder
+  }, options.map(o => /*#__PURE__*/React.createElement(__ds_scope.ListItem, {
+    key: String(o.value),
+    title: o.label,
+    subtitle: o.subtitle,
+    trailing: o.value === value ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: "check",
+      color: "var(--forge-accent)",
+      size: 18
+    }) : null,
+    onClick: () => {
+      onChange && onChange(o.value);
+      setOpen(false);
+    }
+  }))));
+}
+Object.assign(__ds_scope, { Select });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Select.jsx", error: String((e && e.message) || e) }); }
+
 // components/layout/screen-body/ScreenBody.jsx
 try { (() => {
 // ScreenBody — body of a screen INSIDE a module; the module shell (AppHeader
@@ -2543,6 +3099,8 @@ __ds_ns.Icon = __ds_scope.Icon;
 
 __ds_ns.ICON_NAMES = __ds_scope.ICON_NAMES;
 
+__ds_ns.ListItem = __ds_scope.ListItem;
+
 __ds_ns.Ring = __ds_scope.Ring;
 
 __ds_ns.Button = __ds_scope.Button;
@@ -2580,6 +3138,14 @@ __ds_ns.MiniChart = __ds_scope.MiniChart;
 __ds_ns.QtyInput = __ds_scope.QtyInput;
 
 __ds_ns.TextField = __ds_scope.TextField;
+
+__ds_ns.Switch = __ds_scope.Switch;
+
+__ds_ns.Stepper = __ds_scope.Stepper;
+
+__ds_ns.SearchField = __ds_scope.SearchField;
+
+__ds_ns.Select = __ds_scope.Select;
 
 __ds_ns.ScreenBody = __ds_scope.ScreenBody;
 

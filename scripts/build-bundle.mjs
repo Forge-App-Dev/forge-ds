@@ -28,6 +28,10 @@ const COMPONENTS = [
   ["MiniChart", "components/feedback/mini-chart/MiniChart.jsx"],
   ["QtyInput", "components/forms/QtyInput.jsx"],
   ["TextField", "components/forms/TextField.jsx"],
+  ["Switch", "components/forms/Switch.jsx"],
+  ["Stepper", "components/forms/Stepper.jsx"],
+  ["SearchField", "components/forms/SearchField.jsx"],
+  ["Select", "components/forms/Select.jsx"],
   ["ScreenBody", "components/layout/screen-body/ScreenBody.jsx"],
   ["Screen", "components/layout/screen/Screen.jsx"],
   ["ModuleHeader", "components/navigation/module-header/ModuleHeader.jsx"],
@@ -46,6 +50,7 @@ const DEPS_FIRST = [
   ["onColor", "components/shared/color.js"],   // + resolveColor
   ["useDialogA11y", "components/shared/useDialogA11y.js"],
   ["Icon", "components/icons/Icon.jsx"],        // + ICON_NAMES
+  ["ListItem", "components/forms/ListItem.jsx"],
   ["Ring", "components/feedback/ring/Ring.jsx"],
   ["Button", "components/core/Button.jsx"],
   ["Pill", "components/core/Pill.jsx"],
