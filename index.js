@@ -39,6 +39,8 @@ export { MetaBar } from "./components/feedback/meta-bar/MetaBar.jsx";
 export { MiniChart } from "./components/feedback/mini-chart/MiniChart.jsx";
 export { InlineAlert } from "./components/feedback/InlineAlert.jsx";
 export { EmptyState } from "./components/feedback/EmptyState.jsx";
+export { ErrorState } from "./components/feedback/ErrorState.jsx";
+export { Skeleton, SkeletonText } from "./components/feedback/Skeleton.jsx";
 export { Spinner } from "./components/feedback/Spinner.jsx";
 export { StatBadge } from "./components/feedback/StatBadge.jsx";
 export { LoadingScreen } from "./components/feedback/loading-screen/LoadingScreen.jsx";

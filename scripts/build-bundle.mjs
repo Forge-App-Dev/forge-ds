@@ -9,7 +9,7 @@ import _traverseMod from "@babel/traverse";
 import crypto from "crypto";
 const traverse = (_traverseMod.default || _traverseMod);
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const ROOT = "/home/claude/ds/repo";
 const NS = "ForgeDesignSystem_7731a5";
 
 // Ordem canônica (mesma do manifest atual) — componentes primeiro, depois shared.
@@ -21,6 +21,8 @@ const COMPONENTS = [
   ["InlineAlert", "components/feedback/InlineAlert.jsx"],
   ["Spinner", "components/feedback/Spinner.jsx"],
   ["StatBadge", "components/feedback/StatBadge.jsx"],
+  ["ErrorState", "components/feedback/ErrorState.jsx"],
+  ["Skeleton", "components/feedback/Skeleton.jsx"],
   ["TargetsCard", "components/feedback/TargetsCard.jsx"],
   ["LoadingScreen", "components/feedback/loading-screen/LoadingScreen.jsx"],
   ["MacroMeter", "components/feedback/macro-meter/MacroMeter.jsx"],

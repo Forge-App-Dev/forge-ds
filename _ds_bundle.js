@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"a0ec269642cf","components/feedback/Skeleton.jsx":"dc3c940737a7","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -1539,6 +1539,196 @@ function StatBadge({
 }
 Object.assign(__ds_scope, { StatBadge });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/StatBadge.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/ErrorState.jsx
+try { (() => {
+// ErrorState — sibling of EmptyState for when something failed to load. Warn
+// glyph + no-blame message + a retry action (an error state without a way
+// forward is a dead end — OP-041/066). Copy should follow the brand voice:
+// "Não conseguimos carregar" over "Erro 500". `onRetry` renders the retry
+// button; `retryLabel` customizes it. Two layouts: inline `compact` (row, like
+// EmptyState) and full (centered block) for whole-screen failures.
+function ErrorState({
+  title = "Algo não carregou",
+  subtitle = "Verifique a conexão e tente de novo.",
+  onRetry,
+  retryLabel = "Tentar de novo",
+  icon = "warn",
+  compact = false,
+  style
+}) {
+  if (compact) {
+    return /*#__PURE__*/React.createElement("div", {
+      role: "alert",
+      style: {
+        display: "flex",
+        alignItems: "center",
+        gap: "var(--forge-space-6)",
+        backgroundColor: "var(--forge-surface)",
+        border: "var(--forge-border-w) solid var(--forge-border)",
+        borderRadius: "var(--forge-radius-card)",
+        padding: "var(--forge-space-8)",
+        ...style
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        width: 34,
+        height: 34,
+        borderRadius: "var(--forge-radius-chip)",
+        backgroundColor: "var(--forge-surface-raised)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexShrink: 0
+      }
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: icon,
+      color: "var(--forge-danger)",
+      size: 16
+    })), /*#__PURE__*/React.createElement("div", {
+      style: {
+        flex: 1,
+        minWidth: 0
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        color: "var(--forge-text)",
+        fontFamily: "var(--forge-font-body)",
+        fontWeight: 600,
+        fontSize: 15
+      }
+    }, title), subtitle ? /*#__PURE__*/React.createElement("div", {
+      style: {
+        color: "var(--forge-text-dim)",
+        fontFamily: "var(--forge-font-body)",
+        fontSize: "var(--forge-text-chip)",
+        marginTop: 3,
+        lineHeight: "var(--forge-lh-chip)"
+      }
+    }, subtitle) : null), onRetry ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+      variant: "secondary",
+      size: "sm",
+      icon: "refresh",
+      title: retryLabel,
+      onClick: onRetry
+    }) : null);
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    role: "alert",
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      textAlign: "center",
+      gap: "var(--forge-space-6)",
+      padding: "var(--forge-space-16) var(--forge-space-8)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 56,
+      height: 56,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: "var(--forge-surface-raised)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: "var(--forge-danger)",
+    size: 26
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "var(--forge-text)",
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 700,
+      fontSize: 17
+    }
+  }, title), subtitle ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: "var(--forge-text-dim)",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body)",
+      marginTop: 5,
+      lineHeight: "var(--forge-lh-body)",
+      maxWidth: 280
+    }
+  }, subtitle) : null), onRetry ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "secondary",
+    size: "md",
+    icon: "refresh",
+    title: retryLabel,
+    onClick: onRetry
+  }) : null);
+}
+Object.assign(__ds_scope, { ErrorState });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/ErrorState.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/Skeleton.jsx
+try { (() => {
+// Skeleton — content placeholder shown while data loads (sits between the
+// full-screen LoadingScreen and the inline Spinner in the loading hierarchy:
+// boot=LoadingScreen, screen/content=Skeleton, section/button=Spinner).
+// Uses the global pulse animation (tokens/motion.css → .forge-anim-pulse),
+// so it honors reduced-motion. `variant`: "line" | "block" | "circle".
+// Compose several to sketch a card's shape.
+function Skeleton({
+  variant = "line",
+  width,
+  height,
+  radius,
+  style
+}) {
+  const dims = variant === "circle" ? {
+    width: width || 34,
+    height: height || width || 34,
+    borderRadius: "var(--forge-radius-pill)"
+  } : variant === "block" ? {
+    width: width || "100%",
+    height: height || 64,
+    borderRadius: radius || "var(--forge-radius-card)"
+  } : {
+    width: width || "100%",
+    height: height || 12,
+    borderRadius: radius || "var(--forge-radius-chip)"
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    className: "forge-anim-pulse",
+    style: {
+      backgroundColor: "var(--forge-surface-raised)",
+      ...dims,
+      ...style
+    }
+  });
+}
+
+// SkeletonText — n stacked lines, last one shorter, for paragraph placeholders.
+function SkeletonText({
+  lines = 3,
+  gap = 8,
+  style
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    role: "status",
+    "aria-label": "Carregando",
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap,
+      ...style
+    }
+  }, Array.from({
+    length: lines
+  }).map((_, i) => /*#__PURE__*/React.createElement(Skeleton, {
+    key: i,
+    variant: "line",
+    width: i === lines - 1 ? "60%" : "100%"
+  })));
+}
+Object.assign(__ds_scope, { Skeleton, SkeletonText });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Skeleton.jsx", error: String((e && e.message) || e) }); }
 
 // components/feedback/TargetsCard.jsx
 try { (() => {
@@ -3124,6 +3314,12 @@ __ds_ns.InlineAlert = __ds_scope.InlineAlert;
 __ds_ns.Spinner = __ds_scope.Spinner;
 
 __ds_ns.StatBadge = __ds_scope.StatBadge;
+
+__ds_ns.ErrorState = __ds_scope.ErrorState;
+
+__ds_ns.Skeleton = __ds_scope.Skeleton;
+
+__ds_ns.SkeletonText = __ds_scope.SkeletonText;
 
 __ds_ns.TargetsCard = __ds_scope.TargetsCard;
 

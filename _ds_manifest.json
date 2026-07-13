@@ -62,6 +62,18 @@
    "sourcePath": "components/feedback/StatBadge.jsx"
   },
   {
+   "name": "ErrorState",
+   "sourcePath": "components/feedback/ErrorState.jsx"
+  },
+  {
+   "name": "Skeleton",
+   "sourcePath": "components/feedback/Skeleton.jsx"
+  },
+  {
+   "name": "SkeletonText",
+   "sourcePath": "components/feedback/Skeleton.jsx"
+  },
+  {
    "name": "TargetsCard",
    "sourcePath": "components/feedback/TargetsCard.jsx"
   },
