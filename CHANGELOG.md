@@ -15,13 +15,40 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ## [Unreleased]
 
 ### Added
-- Camada de governança e ciclo de vida (auditoria seção 8.8/8.9): `CHANGELOG.md`,
-  `ROADMAP_DS.md`, `docs/` (PR_CHECKLIST, OWNERSHIP, COMMIT_CONVENTION, DS_ARTIFACTS,
-  ARCHITECTURE, GLOSSARY, MIGRATION), ADR-0070 (ciclo de vida) e ADR-0071
-  (versionamento + deprecação), e o card `guidelines/anti-patterns.card.html`.
-
-### Deprecated
 - _(nada)_
+
+## [1.5.0] — 2026-07-14
+Execução do roadmap completo da auditoria (fecha a maioria das 191 oportunidades).
+
+### Added
+- **Fonte única de tokens (OP-001):** `tokens/tokens.json` (W3C DTCG, 3 camadas
+  primitive→semantic→component) + gerador próprio `scripts/build-tokens.mjs` +
+  `tokens.d.ts`. Os `tokens/*.css` passam a ser gerados (byte-fiéis).
+- **Governança e decisões:** 44 ADRs em `decisions/` (proibições, "não-ter",
+  plataforma iOS/Android/tablet/RTL, a11y/conteúdo, lifecycle, semver, ownership);
+  `CHANGELOG`, `ROADMAP_DS`, e docs em `docs/` (patterns, platform, SCALABILITY,
+  a11y-advanced, content-guide, white-label, glossary, migration, etc.).
+- **CI (OP-169/014):** GitHub Actions + `check-drift` + `check-adherence` +
+  `render-test`.
+- **Componentes novos:** `Checkbox`, `SegmentedControl`, `PasswordField`, `Slider`,
+  `FilterChip`, `Divider`, `ProgressBar`, `Badge`, `Avatar`, `MacroRing`, `Timeline`,
+  `Tabs`, `Accordion`, `WeekStrip`, `StreakIndicator`, `CoachNote`, `OfflineBanner`,
+  `Chart` (OP-053), `ImagePicker` (OP-050).
+- **White-label / i18n:** `components/shared/content.js` (strings externalizadas) +
+  tema claro completo (`app Fuel`) + `docs/white-label.md`.
+- Trio `.jsx` + `.d.ts` + `.prompt.md` em 100% dos componentes.
+
+### Changed
+- **`onColor()` (OP-015):** contraste WCAG real + brand-lock (ADR-0050) — texto
+  sobre verde/danger/warning passa a ser escuro (correção de contraste).
+- **`TargetsCard` → `components/product/`** (OP-009/131), com strings externalizadas.
+- **`MacroMeter`/`MetaBar`** passam a compor `ProgressBar` (OP-124).
+- Cards do catálogo convertidos para HTML estático (sem CDN) — corrige cards vazios.
+- Higienização token-first concluída no UI kit (0 hex cru).
+
+### Fixed
+- `content.js` incluído no `_ds_bundle.js` (componentes que o consomem renderizam
+  do bundle); colisão de nome `content` no `Pager` resolvida.
 
 ## [1.4.0] — 2026-07-14
 Lote de camadas de produto e superfície (backlog PF-01/PF-02 + assinatura).
