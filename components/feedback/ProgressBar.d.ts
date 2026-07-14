@@ -18,6 +18,14 @@ export interface ProgressBarProps {
   segments?: { value: number; color: string }[];
   /** Accessible name (aria-label). */
   label?: string;
+  /** Override aria-valuenow with a domain value (e.g. kcal). Defaults to the 0–100 percentage. */
+  valueNow?: number;
+  /** Override aria-valuemin (defaults to 0). */
+  valueMin?: number;
+  /** Override aria-valuemax with a domain target (e.g. daily kcal). Defaults to 100. */
+  valueMax?: number;
+  /** Draw hairline dividers between segments (the striped meter look). */
+  separators?: boolean;
   style?: CSSProperties;
 }
 
