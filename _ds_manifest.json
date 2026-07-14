@@ -166,6 +166,14 @@
    "sourcePath": "components/dashboard/QuickAction.jsx"
   },
   {
+   "name": "PageDots",
+   "sourcePath": "components/onboarding/PageDots.jsx"
+  },
+  {
+   "name": "Pager",
+   "sourcePath": "components/onboarding/Pager.jsx"
+  },
+  {
    "name": "ICON_NAMES",
    "sourcePath": "components/icons/Icon.jsx"
   }

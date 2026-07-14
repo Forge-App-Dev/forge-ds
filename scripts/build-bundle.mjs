@@ -48,6 +48,8 @@ const COMPONENTS = [
   ["Title", "components/typography/Title.jsx"],
   ["StatCard", "components/dashboard/StatCard.jsx"],
   ["QuickAction", "components/dashboard/QuickAction.jsx"],
+  ["PageDots", "components/onboarding/PageDots.jsx"],
+  ["Pager", "components/onboarding/Pager.jsx"],
 ];
 // Estes precisam vir ANTES de quem os consome (referência via __ds_scope em init? não —
 // só em render; mas mantemos deps cedo por segurança): shared/color, Icon, Ring, Button,

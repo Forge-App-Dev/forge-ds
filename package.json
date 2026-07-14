@@ -14,5 +14,11 @@
   "scripts": {
     "build:bundle": "node scripts/build-bundle.mjs",
     "build:index": "node scripts/build-index.mjs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/parser": "^7.24.0",
+    "@babel/preset-react": "^7.24.0",
+    "@babel/traverse": "^7.24.0"
   }
 }

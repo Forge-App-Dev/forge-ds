@@ -48,6 +48,9 @@ export { TargetsCard } from "./components/feedback/TargetsCard.jsx";
 // dashboard
 export { StatCard } from "./components/dashboard/StatCard.jsx";
 export { QuickAction } from "./components/dashboard/QuickAction.jsx";
+// onboarding
+export { Pager } from "./components/onboarding/Pager.jsx";
+export { PageDots } from "./components/onboarding/PageDots.jsx";
 // icons
 export { Icon, ICON_NAMES } from "./components/icons/Icon.jsx";
 // utils
