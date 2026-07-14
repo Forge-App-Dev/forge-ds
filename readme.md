@@ -1,5 +1,7 @@
 # Forge Design System
 
+[![CI](https://github.com/Forge-App-Dev/forge-ds/actions/workflows/ci.yml/badge.svg)](https://github.com/Forge-App-Dev/forge-ds/actions/workflows/ci.yml)
+
 **Forge** is a strength-training + nutrition mobile app family, built with React Native / Expo. This design system is reverse-engineered from the real app codebase and its written design-system spec, so agents can prototype and extend the Forge product line with the correct look, feel, and component vocabulary.
 
 ## Sources
