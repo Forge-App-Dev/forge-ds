@@ -32,21 +32,51 @@ export function resolveColor(c) {
   return c;
 }
 
-// onColor(input) — picks readable text (#0B0F19 dark / #FFFFFF white) over a fill.
-// Uses the brand's perceived-luma heuristic (cut at 0.62): this deliberately
-// keeps WHITE text on the accent red (#EF4444), which is a Forge brand rule
-// (onAccent = #FFFFFF), not a raw-contrast outcome. Accepts a hex OR a
-// design-system token reference (resolved via resolveColor).
-// NOTE (OP-015): a pure WCAG max-contrast choice would flip white-on-accent to
-// dark-on-accent, breaking the brand. Any future change here must preserve the
-// white-on-accent rule; treat that pair as a brand constant, not a computation.
-export function onColor(input) {
+// Luminância relativa WCAG (sRGB → linear) e razão de contraste.
+function _lin(ch) {
+  const c = ch / 255;
+  return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+}
+function _relLum(hex) {
+  const h = hex.replace("#", "");
+  return 0.2126 * _lin(parseInt(h.slice(0, 2), 16)) + 0.7152 * _lin(parseInt(h.slice(2, 4), 16)) + 0.0722 * _lin(parseInt(h.slice(4, 6), 16));
+}
+function _contrast(a, b) {
+  const la = _relLum(a), lb = _relLum(b);
+  return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+
+const ON_DARK = "#0B0F19";   // --forge-on-light (texto escuro)
+const ON_LIGHT = "#FFFFFF";  // --forge-on-dark (texto branco)
+const BRAND_RED = "#EF4444"; // lock de marca: branco sobre o vermelho Forge
+
+// onColor(input, { size }) — escolhe o texto legível sobre um preenchimento,
+// por CONTRASTE WCAG real (não mais heurística de luma), com UM brand-lock
+// explícito (ADR-0050 / OP-015):
+//   1. resolve token → hex (resolveColor);
+//   2. se for o vermelho de marca #EF4444 → branco, sem calcular (par de marca,
+//      válido a 3:1 em texto grande/negrito — Button/Pill usam peso 800);
+//   3. senão devolve o de MAIOR contraste entre branco e escuro;
+//   4. piso: size="large" (default) → 3:1; size="body" → 4.5:1; abaixo do piso
+//      devolve o vencedor e emite console.warn em dev.
+// Assinatura retrocompatível (2º arg opcional; default "large" = comportamento
+// dos consumidores atuais Button/Pill). Correção real vs a heurística antiga:
+// branco sobre o verde #10B981 saía a 2.54:1 (reprovado) e agora vira texto
+// escuro (7.55:1); idem danger/warning. Limitação conhecida: TOKEN_HEX é o mapa
+// do tema dark — o par por-tema no tema claro é resolvido pelo token CSS
+// --forge-on-accent (theme-aware); gerar TOKEN_HEX de tokens.json é follow-up (OP-001).
+export function onColor(input, { size = "large" } = {}) {
   const hex = resolveColor(input);
   const h = String(hex).replace("#", "");
-  if (h.length < 6) return "#FFFFFF"; // unresolved token — default safe
-  const r = parseInt(h.slice(0, 2), 16);
-  const g = parseInt(h.slice(2, 4), 16);
-  const b = parseInt(h.slice(4, 6), 16);
-  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  return lum > 0.62 ? "#0B0F19" : "#FFFFFF";
+  if (h.length < 6) return ON_LIGHT; // token não resolvido — default seguro
+  const norm = "#" + h.slice(0, 6);
+  if (norm.toUpperCase() === BRAND_RED) return ON_LIGHT;
+  const cWhite = _contrast(norm, ON_LIGHT);
+  const cDark = _contrast(norm, ON_DARK);
+  const winner = cWhite >= cDark ? ON_LIGHT : ON_DARK;
+  const floor = size === "body" ? 4.5 : 3;
+  if (Math.max(cWhite, cDark) < floor && typeof console !== "undefined") {
+    console.warn(`onColor: melhor contraste ${Math.max(cWhite, cDark).toFixed(2)}:1 < ${floor}:1 sobre ${norm}; usando ${winner}.`);
+  }
+  return winner;
 }
