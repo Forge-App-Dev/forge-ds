@@ -83,4 +83,9 @@ export const content = {
     distribution: "Distribuição por refeição",
     value: "Progresso",
   },
+
+  moduleTabBar: {
+    // navigation/module-tab-bar/ModuleTabBar.jsx — rótulo da navegação principal.
+    nav: "Navegação principal",
+  },
 };

@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"2bd97297a3f4","components/shared/content.js":"4f1446869173","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"b227c76a10c3","components/forms/ListItem.jsx":"349fa0c44a3b","components/feedback/ring/Ring.jsx":"2bcea3c4991d","components/core/Button.jsx":"e3c4b73fc0f1","components/core/Pill.jsx":"f29ce36e76b3","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"0a437938c86e","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"056a5590e474","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"cd7f859e9a49","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"e6ac25c25ace","components/feedback/Skeleton.jsx":"dc3c940737a7","components/product/TargetsCard.jsx":"108570f92c20","components/feedback/loading-screen/LoadingScreen.jsx":"9c490da4ba1b","components/feedback/macro-meter/MacroMeter.jsx":"210098d8b5fd","components/feedback/meta-bar/MetaBar.jsx":"0adefe217ae2","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"e805ebc8a412","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"d630d187fcea","components/forms/Select.jsx":"0e2158529d83","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"7fa2264a2712","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"57f9c2e68f5c","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"cba47a9d02cb","components/forms/SegmentedControl.jsx":"9ca70b0313e2","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"d0be075c63bd","components/feedback/ProgressBar.jsx":"7e3ac117e4bd","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"b371bae57cf3","components/navigation/Accordion.jsx":"793384ceefbd","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"d465741f117a","components/feedback/Chart.jsx":"edc0643cddf8","components/media/ImagePicker.jsx":"4ea1d6501899"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"2bd97297a3f4","components/shared/content.js":"e35e23a5b07d","components/shared/useDialogA11y.js":"f50460d75a36","components/icons/Icon.jsx":"b227c76a10c3","components/forms/ListItem.jsx":"349fa0c44a3b","components/feedback/ring/Ring.jsx":"2bcea3c4991d","components/core/Button.jsx":"e3c4b73fc0f1","components/core/Pill.jsx":"f29ce36e76b3","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"0a437938c86e","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"056a5590e474","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"cd7f859e9a49","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"e6ac25c25ace","components/feedback/Skeleton.jsx":"dc3c940737a7","components/product/TargetsCard.jsx":"108570f92c20","components/feedback/loading-screen/LoadingScreen.jsx":"9c490da4ba1b","components/feedback/macro-meter/MacroMeter.jsx":"210098d8b5fd","components/feedback/meta-bar/MetaBar.jsx":"0adefe217ae2","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"e805ebc8a412","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"c80e0136ea30","components/forms/Select.jsx":"0e2158529d83","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"fec2d45f59d4","components/overlays/VideoModal.jsx":"9a3b91b4be58","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"7fa2264a2712","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"57f9c2e68f5c","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"059d7717cf45","components/forms/SegmentedControl.jsx":"9ca70b0313e2","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"d0be075c63bd","components/feedback/ProgressBar.jsx":"7e3ac117e4bd","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"b371bae57cf3","components/navigation/Accordion.jsx":"793384ceefbd","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"d465741f117a","components/feedback/Chart.jsx":"edc0643cddf8","components/media/ImagePicker.jsx":"4ea1d6501899"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -174,6 +174,10 @@ const content = {
     // feedback/meta-bar/MetaBar.jsx — nomes acessíveis da barra de progresso.
     distribution: "Distribuição por refeição",
     value: "Progresso"
+  },
+  moduleTabBar: {
+    // navigation/module-tab-bar/ModuleTabBar.jsx — rótulo da navegação principal.
+    nav: "Navegação principal"
   }
 };
 Object.assign(__ds_scope, { content });
@@ -181,31 +185,42 @@ Object.assign(__ds_scope, { content });
 
 // components/shared/useDialogA11y.js
 try { (() => {
-// useDialogA11y — shared modal accessibility for Panel / FullScreen / VideoModal.
-// When active: locks body scroll, closes on Escape, and traps Tab focus inside
-// the dialog (moving focus into it on open and restoring it on close). Returns
-// a ref to attach to the dialog container.
+// useDialogA11y — a11y de modal compartilhada por Panel / FullScreen / VideoModal.
+// Quando ativo: trava o scroll do body, fecha no Escape, e prende o Tab dentro
+// do diálogo (move o foco pra dentro ao abrir, restaura ao fechar).
 //
-// Usage:
 //   const ref = useDialogA11y(visible, onClose);
 //   <div ref={ref} role="dialog" aria-modal="true" ...>
+//
+// T-37 — dois consertos:
+//   1. onClose vive num REF: o efeito só depende de `active`, então um onClose
+//      recriado a cada render do pai (Panel/VideoModal passam handler não
+//      memoizado) NÃO reexecuta o efeito — acabou o roubo de foco / re-trava de
+//      scroll a cada render do pai.
+//   2. o keydown é escutado no NÓ do diálogo (não em document, capture): como o
+//      foco fica preso dentro, diálogos EMPILHADOS — cada um escuta o próprio nó
+//      — só respondem quando são o topo (onde o foco está); Escape fecha o de
+//      cima, não o de baixo.
 function useDialogA11y(active, onClose) {
   const ref = React.useRef(null);
+  const onCloseRef = React.useRef(onClose);
   React.useEffect(() => {
-    if (!active) return;
+    onCloseRef.current = onClose;
+  }, [onClose]);
+  React.useEffect(() => {
+    if (!active || typeof document === "undefined") return;
     const node = ref.current;
-    const prevFocus = typeof document !== "undefined" ? document.activeElement : null;
+    const prevFocus = document.activeElement;
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const focusables = () => node ? Array.from(node.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => !el.disabled && el.offsetParent !== null) : [];
-
-    // move focus into the dialog
     const first = focusables()[0];
     if (first) first.focus();else if (node) node.focus();
     const onKey = e => {
       if (e.key === "Escape") {
         e.stopPropagation();
-        onClose && onClose();
+        const cb = onCloseRef.current;
+        if (cb) cb();
         return;
       }
       if (e.key === "Tab") {
@@ -225,13 +240,14 @@ function useDialogA11y(active, onClose) {
         }
       }
     };
-    document.addEventListener("keydown", onKey, true);
+    const target = node || document;
+    target.addEventListener("keydown", onKey);
     return () => {
-      document.removeEventListener("keydown", onKey, true);
+      target.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
       if (prevFocus && prevFocus.focus) prevFocus.focus();
     };
-  }, [active, onClose]);
+  }, [active]);
   return ref;
 }
 Object.assign(__ds_scope, { useDialogA11y });
@@ -2840,15 +2856,14 @@ function SearchField({
       fontSize: "var(--forge-text-input)"
     }
   }), value ? /*#__PURE__*/React.createElement("button", {
-    className: "forge-focusable",
+    className: "forge-focusable forge-tap-min",
     onClick: () => onChange && onChange(""),
     "aria-label": "Limpar busca",
     style: {
       background: "none",
       border: "none",
       cursor: "pointer",
-      display: "inline-flex",
-      padding: 2
+      marginRight: -10
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "x",
@@ -3098,21 +3113,27 @@ Object.assign(__ds_scope, { ModuleHeader });
 
 // components/navigation/module-tab-bar/ModuleTabBar.jsx
 try { (() => {
-// Module bottom tab bar — controlled by index; active tab tinted with the
-// module's accent color, inactive tabs in textDim.
+// Module bottom navigation bar — app-level navigation BETWEEN modules. É
+// navegação, não um tablist (T-30 / ADR): usa role="navigation" + aria-current
+// ="page" no item ativo (não role="tab"/aria-selected, que exigiria roving
+// tabindex, setas e um tabpanel — ver Tabs para o padrão de abas in-screen).
+// O ativo tem um INDICADOR DE FORMA (barra de accent no topo) + peso maior,
+// além da cor — para não depender só de cor (WCAG 1.4.1). Tinta = accent do
+// módulo (ou o accent do DS por padrão).
 function ModuleTabBar({
   tabs,
   active,
   onChange,
-  accent = "var(--forge-accent)"
+  accent = "var(--forge-accent)",
+  ariaLabel = __ds_scope.content.moduleTabBar.nav
 }) {
-  return /*#__PURE__*/React.createElement("div", {
-    role: "tablist",
+  return /*#__PURE__*/React.createElement("nav", {
+    role: "navigation",
+    "aria-label": ariaLabel,
     style: {
       display: "flex",
       backgroundColor: "var(--forge-panel)",
       borderTop: "var(--forge-border-w) solid var(--forge-divider)",
-      paddingTop: 8,
       paddingBottom: "max(8px, env(safe-area-inset-bottom))",
       paddingInline: 4
     }
@@ -3122,8 +3143,7 @@ function ModuleTabBar({
     return /*#__PURE__*/React.createElement("button", {
       key: t.id,
       className: "forge-focusable",
-      role: "tab",
-      "aria-selected": on,
+      "aria-current": on ? "page" : undefined,
       "aria-label": t.label,
       onClick: () => onChange && onChange(t.id),
       style: {
@@ -3133,20 +3153,29 @@ function ModuleTabBar({
         alignItems: "center",
         justifyContent: "center",
         gap: 3,
-        minHeight: 44,
-        paddingBlock: 2,
+        minHeight: 48,
+        paddingBottom: 6,
         background: "none",
         border: "none",
         cursor: "pointer"
       }
-    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    }, /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        height: 3,
+        width: 22,
+        borderRadius: "0 0 3px 3px",
+        backgroundColor: on ? accent : "transparent",
+        marginBottom: 5
+      }
+    }), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
       name: t.icon,
       color: color,
       size: 22
     }), /*#__PURE__*/React.createElement("span", {
       style: {
         fontFamily: "var(--forge-font-body)",
-        fontWeight: 700,
+        fontWeight: on ? 700 : 600,
         fontSize: 11,
         color
       }
@@ -3200,7 +3229,8 @@ function VideoModal({
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: "14px 18px"
+      padding: "14px 18px",
+      paddingTop: "max(14px, env(safe-area-inset-top))"
     }
   }, /*#__PURE__*/React.createElement("span", {
     id: titleId,
@@ -4360,8 +4390,8 @@ function Checkbox({
       }
     },
     style: {
-      width: 22,
-      height: 22,
+      width: 24,
+      height: 24,
       borderRadius: "var(--forge-radius-chip)",
       backgroundColor: filled ? "var(--forge-accent)" : "var(--forge-surface-raised)",
       border: `var(--forge-border-w-strong) solid ${filled ? "var(--forge-accent)" : "var(--forge-border-input)"}`,

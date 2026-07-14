@@ -37,10 +37,10 @@ export function SearchField({ value = "", onChange, placeholder = "Buscar", onSu
       />
       {value ? (
         <button
-          className="forge-focusable"
+          className="forge-focusable forge-tap-min"
           onClick={() => onChange && onChange("")}
           aria-label="Limpar busca"
-          style={{ background: "none", border: "none", cursor: "pointer", display: "inline-flex", padding: 2 }}
+          style={{ background: "none", border: "none", cursor: "pointer", marginRight: -10 }}
         >
           <Icon name="x" color="var(--forge-text-dim)" size={16} />
         </button>
