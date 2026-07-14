@@ -8,7 +8,7 @@ import React from "react";
 // Keyboard follows the WAI-ARIA tabs pattern: Arrow Left/Right (and Home/End)
 // move selection with automatic activation, using a roving tabindex. Render the
 // panel content as `children`; it gets role="tabpanel" wired to the active tab.
-export function Tabs({ tabs, active, onChange, accent = "var(--forge-accent)", idBase = "forge-tabs", children, style }) {
+export const Tabs = React.forwardRef(function Tabs({ tabs, active, onChange, accent = "var(--forge-accent)", idBase = "forge-tabs", children, className, style }, ref) {
   const refs = React.useRef([]);
   const idx = tabs.findIndex((t) => t.id === active);
 
@@ -27,7 +27,7 @@ export function Tabs({ tabs, active, onChange, accent = "var(--forge-accent)", i
   };
 
   return (
-    <div style={style}>
+    <div ref={ref} className={className} style={style}>
       <div role="tablist" style={{ display: "flex", borderBottom: "var(--forge-border-w) solid var(--forge-divider)" }}>
         {tabs.map((t, i) => {
           const on = t.id === active;
@@ -77,4 +77,4 @@ export function Tabs({ tabs, active, onChange, accent = "var(--forge-accent)", i
       ) : null}
     </div>
   );
-}
+});

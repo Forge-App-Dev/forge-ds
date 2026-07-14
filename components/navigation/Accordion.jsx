@@ -8,7 +8,7 @@ import React from "react";
 // animation is dropped under prefers-reduced-motion (ADR / readme §Motion).
 //
 // Compose several in a column for an FAQ-style list; each owns its own border.
-export function Accordion({ title, children, open: openProp, defaultOpen = false, onToggle, idBase = "forge-accordion", style }) {
+export const Accordion = React.forwardRef(function Accordion({ title, children, open: openProp, defaultOpen = false, onToggle, idBase = "forge-accordion", className, style }, ref) {
   const controlled = openProp != null;
   const [openState, setOpenState] = React.useState(defaultOpen);
   const open = controlled ? openProp : openState;
@@ -37,7 +37,7 @@ export function Accordion({ title, children, open: openProp, defaultOpen = false
   const headerId = `${idBase}-header`;
 
   return (
-    <div style={{ borderBottom: "var(--forge-border-w) solid var(--forge-divider)", ...style }}>
+    <div ref={ref} className={className} style={{ borderBottom: "var(--forge-border-w) solid var(--forge-divider)", ...style }}>
       <button
         className="forge-focusable"
         id={headerId}
@@ -93,4 +93,4 @@ export function Accordion({ title, children, open: openProp, defaultOpen = false
       </div>
     </div>
   );
-}
+});

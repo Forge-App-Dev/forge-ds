@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Content placeholder shown while data loads — the middle of the loading
@@ -15,10 +15,13 @@ export interface SkeletonProps {
   height?: number | string;
   /** Border radius override (line/block variants). */
   radius?: number | string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Skeleton(props: SkeletonProps): JSX.Element;
+export const Skeleton: React.ForwardRefExoticComponent<
+  SkeletonProps & React.RefAttributes<HTMLDivElement>
+>;
 
 /**
  * N stacked skeleton lines (last one shorter) for paragraph placeholders.
@@ -29,7 +32,10 @@ export interface SkeletonTextProps {
   lines?: number;
   /** Gap between lines in px. Default `8`. */
   gap?: number;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function SkeletonText(props: SkeletonTextProps): JSX.Element;
+export const SkeletonText: React.ForwardRefExoticComponent<
+  SkeletonTextProps & React.RefAttributes<HTMLDivElement>
+>;

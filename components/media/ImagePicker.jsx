@@ -38,7 +38,7 @@ const CameraGlyph = ({ size }) => (
   </svg>
 );
 
-export function ImagePicker({
+export const ImagePicker = React.forwardRef(function ImagePicker({
   src,
   onPick,
   onRemove,
@@ -47,8 +47,9 @@ export function ImagePicker({
   loading = false,
   label = content.imagePicker.add,
   alt,
+  className,
   style,
-}) {
+}, ref) {
   const radius = shape === "circle" ? "var(--forge-radius-pill)" : "var(--forge-radius-card)";
   const box = {
     width: size,
@@ -63,7 +64,7 @@ export function ImagePicker({
   // Loading — pulse placeholder at the target size/shape.
   if (loading) {
     return (
-      <div role="status" aria-label={content.imagePicker.loading} style={{ position: "relative", ...box, ...style }}>
+      <div ref={ref} role="status" aria-label={content.imagePicker.loading} className={className} style={{ position: "relative", ...box, ...style }}>
         <Skeleton
           variant="block"
           width={size}
@@ -78,7 +79,7 @@ export function ImagePicker({
   // Filled — thumbnail + remove control.
   if (src) {
     return (
-      <div style={{ position: "relative", ...box, ...style }}>
+      <div ref={ref} className={className} style={{ position: "relative", ...box, ...style }}>
         <img
           src={src}
           alt={alt || content.imagePicker.selectedAlt}
@@ -135,8 +136,9 @@ export function ImagePicker({
   // Empty — pressable "add photo" placeholder.
   return (
     <button
+      ref={ref}
       type="button"
-      className="forge-focusable"
+      className={className ? `forge-focusable ${className}` : "forge-focusable"}
       onClick={onPick}
       aria-label={label}
       style={{
@@ -168,4 +170,4 @@ export function ImagePicker({
       </span>
     </button>
   );
-}
+});

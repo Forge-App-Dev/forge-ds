@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -23,7 +24,10 @@ export interface StepperProps {
   label?: string;
   /** Disables both buttons. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Stepper(props: StepperProps): JSX.Element;
+export const Stepper: React.ForwardRefExoticComponent<
+  StepperProps & React.RefAttributes<HTMLElement>
+>;

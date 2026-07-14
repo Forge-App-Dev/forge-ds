@@ -6,13 +6,15 @@ import { useDialogA11y } from "../../shared/useDialogA11y.js";
 // role="dialog" + aria-modal, labelled by its title, Escape to close, focus
 // trapped inside, body scroll locked, focus restored on close. Tap-outside
 // closes unless `dismissible={false}` (use for flows that must not be lost).
-export function Panel({ visible, onClose, title, children, footer, dismissible = true }) {
-  const ref = useDialogA11y(visible, dismissible ? onClose : undefined);
+export const Panel = React.forwardRef(function Panel({ visible, onClose, title, children, footer, dismissible = true, className, style }, ref) {
+  const dialogRef = useDialogA11y(visible, dismissible ? onClose : undefined);
   const rid = React.useId ? React.useId() : "forge-panel";
   const titleId = `${rid}-title`;
   if (!visible) return null;
   return (
     <div
+      ref={ref}
+      className={className}
       onClick={dismissible ? onClose : undefined}
       style={{
         position: "fixed",
@@ -23,10 +25,11 @@ export function Panel({ visible, onClose, title, children, footer, dismissible =
         justifyContent: "center",
         padding: 14,
         zIndex: "var(--forge-z-overlay)",
+        ...style,
       }}
     >
       <div
-        ref={ref}
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? titleId : undefined}
@@ -72,4 +75,4 @@ export function Panel({ visible, onClose, title, children, footer, dismissible =
       </div>
     </div>
   );
-}
+});

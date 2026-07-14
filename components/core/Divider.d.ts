@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 
 /**
  * 1px hairline separator — horizontal or vertical — drawn with
@@ -10,7 +10,10 @@ export interface DividerProps {
   /** Optional spacing along the flow axis — px number or a CSS length string. */
   margin?: number | string;
   color?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Divider(props: DividerProps): JSX.Element;
+export declare const Divider: React.ForwardRefExoticComponent<
+  DividerProps & React.RefAttributes<HTMLDivElement>
+>;

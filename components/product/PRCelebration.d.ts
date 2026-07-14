@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * The personal-record moment — a PRODUCT component (knows the training domain
@@ -23,7 +23,10 @@ export interface PRCelebrationProps {
   continueLabel?: string;
   /** Accent for the ring/trophy (sibling apps / module color). */
   accent?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function PRCelebration(props: PRCelebrationProps): JSX.Element;
+export const PRCelebration: React.ForwardRefExoticComponent<
+  PRCelebrationProps & React.RefAttributes<HTMLDivElement>
+>;

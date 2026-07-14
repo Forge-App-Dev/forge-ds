@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -16,7 +17,10 @@ export interface SearchFieldProps {
   onSubmit?: (value: string) => void;
   /** Autofocus on mount. Default `false`. */
   autoFocus?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function SearchField(props: SearchFieldProps): JSX.Element;
+export const SearchField: React.ForwardRefExoticComponent<
+  SearchFieldProps & React.RefAttributes<HTMLElement>
+>;

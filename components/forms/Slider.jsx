@@ -6,7 +6,7 @@ import React from "react";
 // 10×; Home/End jump to min/max. Pointer: click or drag anywhere on the track.
 // Visual: a track, an accent (or module `color`) fill, and a thumb. Respects
 // min/max/step; `unit` is appended to the shown value and to aria-valuetext.
-export function Slider({ value = 0, onChange, min = 0, max = 100, step = 1, unit = "", label, color = "var(--forge-accent)", disabled = false, style }) {
+export const Slider = React.forwardRef(function Slider({ value = 0, onChange, min = 0, max = 100, step = 1, unit = "", label, color = "var(--forge-accent)", disabled = false, className, style }, ref) {
   const rid = React.useId ? React.useId() : "forge-slider";
   const trackRef = React.useRef(null);
   const clamp = (v) => Math.min(max, Math.max(min, v));
@@ -50,7 +50,7 @@ export function Slider({ value = 0, onChange, min = 0, max = 100, step = 1, unit
   };
 
   return (
-    <div style={{ ...style }}>
+    <div ref={ref} className={className} style={{ ...style }}>
       {label ? (
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 6 }}>
           <span id={`${rid}-label`} style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-label)", color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: "var(--forge-tracking-label)" }}>
@@ -91,4 +91,4 @@ export function Slider({ value = 0, onChange, min = 0, max = 100, step = 1, unit
       </div>
     </div>
   );
-}
+});

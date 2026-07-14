@@ -9,11 +9,14 @@ import { content } from "../../shared/content.js";
 //
 // Domain wrapper over ProgressBar (OP-124): it owns the value-vs-target math and
 // the over-target warning color; ProgressBar renders the bar itself.
-export function MetaBar({ value, target, color = "var(--forge-nutrition)", segments, label }) {
+export const MetaBar = React.forwardRef(function MetaBar({ value, target, color = "var(--forge-nutrition)", segments, label, className, style }, ref) {
   if (segments && segments.length) {
     const total = target > 0 ? target : segments.reduce((s, seg) => s + seg.value, 0) || 1;
     return (
       <ProgressBar
+        ref={ref}
+        className={className}
+        style={style}
         height={6}
         separators
         label={label || content.metaBar.distribution}
@@ -25,6 +28,9 @@ export function MetaBar({ value, target, color = "var(--forge-nutrition)", segme
   const over = target > 0 && value > target;
   return (
     <ProgressBar
+      ref={ref}
+      className={className}
+      style={style}
       value={pct}
       height={6}
       color={over ? "var(--forge-warning)" : color}
@@ -33,4 +39,4 @@ export function MetaBar({ value, target, color = "var(--forge-nutrition)", segme
       label={label || content.metaBar.value}
     />
   );
-}
+});

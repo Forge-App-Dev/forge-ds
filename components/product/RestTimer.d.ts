@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Rest countdown between sets — a PRODUCT component composing the signature
@@ -20,7 +20,10 @@ export interface RestTimerProps {
   accent?: string;
   /** Ring diameter in px. Default `132`. */
   size?: number;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function RestTimer(props: RestTimerProps): JSX.Element;
+export const RestTimer: React.ForwardRefExoticComponent<
+  RestTimerProps & React.RefAttributes<HTMLDivElement>
+>;

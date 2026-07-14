@@ -20,7 +20,7 @@ const SIZES = {
   lg: { height: "var(--forge-size-control-lg)", paddingInline: 18, fontSize: 15 },
 };
 
-export function Button({
+export const Button = React.forwardRef(function Button({
   title,
   onClick,
   variant = "primary",
@@ -33,10 +33,11 @@ export function Button({
   fullWidth = false,
   disabled = false,
   type = "button",
+  className,
   style,
   resolvedColor, // deprecated (OP-006): onColor() resolves tokens itself
   children,
-}) {
+}, ref) {
   const [pressed, setPressed] = React.useState(false);
   const sz = SIZES[size || (small ? "sm" : "lg")] || SIZES.lg;
   const label = title != null ? title : children;
@@ -58,7 +59,8 @@ export function Button({
 
   return (
     <button
-      className="forge-focusable"
+      ref={ref}
+      className={["forge-focusable", className].filter(Boolean).join(" ")}
       type={type}
       onClick={onClick}
       disabled={isDisabled}
@@ -95,4 +97,4 @@ export function Button({
       {!loading && iconEl && iconPosition === "right" ? iconEl : null}
     </button>
   );
-}
+});

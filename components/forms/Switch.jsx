@@ -4,7 +4,7 @@ import React from "react";
 // role="switch" + aria-checked, keyboard-focusable, labelled. Pass `label` to
 // render a tappable row with the switch on the right (the common form layout),
 // or omit it for a bare switch. Disabled supported.
-export function Switch({ checked = false, onChange, label, disabled = false, id, style }) {
+export const Switch = React.forwardRef(function Switch({ checked = false, onChange, label, disabled = false, id, className, style }, ref) {
   const rid = React.useId ? React.useId() : id || "forge-switch";
   const toggle = () => { if (!disabled && onChange) onChange(!checked); };
 
@@ -51,6 +51,8 @@ export function Switch({ checked = false, onChange, label, disabled = false, id,
 
   return (
     <div
+      ref={ref}
+      className={className}
       onClick={toggle}
       style={{
         display: "flex",
@@ -68,4 +70,4 @@ export function Switch({ checked = false, onChange, label, disabled = false, id,
       {knob}
     </div>
   );
-}
+});

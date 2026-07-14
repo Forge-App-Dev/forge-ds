@@ -17,7 +17,7 @@ function fmt(s) {
   return `${m}:${sec}`;
 }
 
-export function RestTimer({ duration = 90, running: initialRunning = true, onComplete, onSkip, accent, size = 132, style }) {
+export const RestTimer = React.forwardRef(function RestTimer({ duration = 90, running: initialRunning = true, onComplete, onSkip, accent, size = 132, className, style }, ref) {
   const [left, setLeft] = React.useState(duration);
   const [running, setRunning] = React.useState(initialRunning);
   const done = left <= 0;
@@ -53,7 +53,7 @@ export function RestTimer({ duration = 90, running: initialRunning = true, onCom
   );
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-8)", ...style }}>
+    <div ref={ref} className={className} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-8)", ...style }}>
       <Ring size={size} stroke={10} progress={progress} color={tint} label={content.restTimer.ringLabel(fmt(left))}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 30, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
@@ -73,4 +73,4 @@ export function RestTimer({ duration = 90, running: initialRunning = true, onCom
       </div>
     </div>
   );
-}
+});

@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 
 /**
  * Small uppercase tracked label — used for form field labels, eyebrows, and
@@ -12,7 +12,10 @@ export interface LabelProps {
   as?: keyof JSX.IntrinsicElements;
   /** Id of the associated control — only applied when `as="label"`. */
   htmlFor?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Label(props: LabelProps): JSX.Element;
+export declare const Label: React.ForwardRefExoticComponent<
+  LabelProps & React.RefAttributes<HTMLElement>
+>;

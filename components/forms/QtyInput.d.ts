@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -12,6 +13,10 @@ export interface QtyInputProps {
   /** All available units for this food, e.g. ["g", "fatia", "unidade"]. */
   units?: string[];
   onChange?: (value: { qty: string; unit: string }) => void;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function QtyInput(props: QtyInputProps): JSX.Element;
+export const QtyInput: React.ForwardRefExoticComponent<
+  QtyInputProps & React.RefAttributes<HTMLElement>
+>;

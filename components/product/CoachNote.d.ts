@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import * as React from "react";
 
 /**
  * The coach's voice as a component — a tinted icon plus a contextual,
@@ -8,12 +8,15 @@ import { CSSProperties, ReactNode } from "react";
  */
 export interface CoachNoteProps {
   /** The encouraging line (on-voice pt-BR, sentence case, no emoji). */
-  children?: ReactNode;
+  children?: React.ReactNode;
   /** Feather glyph shown in the chip. Default `"flame"`. */
   icon?: string;
   /** Accent for the icon + tint (module color / sibling app). */
   accent?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function CoachNote(props: CoachNoteProps): JSX.Element;
+export const CoachNote: React.ForwardRefExoticComponent<
+  CoachNoteProps & React.RefAttributes<HTMLDivElement>
+>;

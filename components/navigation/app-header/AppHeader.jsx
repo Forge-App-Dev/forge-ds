@@ -6,11 +6,13 @@ import { Icon } from "../../icons/Icon";
 // mark image (default name "Forge") so sibling apps in the family swap only
 // their brand (OP-120); `markSrc` is kept as a legacy shorthand. The brand is
 // its own element (AppBrand). markSrc should point at assets/forge-mark.svg.
-export function AppHeader({ brand, markSrc, inModule = false, onBackToModules, onLogout }) {
+export const AppHeader = React.forwardRef(function AppHeader({ brand, markSrc, inModule = false, onBackToModules, onLogout, className, style }, ref) {
   const name = (brand && brand.name) || "Forge";
   const mark = (brand && brand.markSrc) || markSrc;
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -18,6 +20,7 @@ export function AppHeader({ brand, markSrc, inModule = false, onBackToModules, o
         padding: "14px 18px",
         borderBottom: "1px solid var(--forge-divider)",
         fontFamily: "var(--forge-font-body)",
+        ...style,
       }}
     >
       {inModule ? (
@@ -54,7 +57,7 @@ export function AppHeader({ brand, markSrc, inModule = false, onBackToModules, o
       </div>
     </div>
   );
-}
+});
 
 function AppBrand({ name = "Forge", markSrc }) {
   const first = name.slice(0, 1);

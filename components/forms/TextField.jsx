@@ -9,7 +9,7 @@ import React from "react";
 // `enterKeyHint`) are passed straight through to the field (OP-115). `trailing`
 // renders an adornment inside the single-line field (e.g. the eye toggle of
 // PasswordField); it is omitted by default so the render is unchanged.
-export function TextField({
+export const TextField = React.forwardRef(function TextField({
   label,
   value,
   onChange,
@@ -24,8 +24,9 @@ export function TextField({
   autoComplete,
   enterKeyHint,
   trailing,
+  className,
   style,
-}) {
+}, ref) {
   const rid = React.useId ? React.useId() : "forge-tf";
   const fieldId = `${rid}-field`;
   const msgId = `${rid}-msg`;
@@ -44,7 +45,7 @@ export function TextField({
   };
 
   return (
-    <div style={{ marginBottom: 12, ...style }}>
+    <div ref={ref} className={className} style={{ marginBottom: 12, ...style }}>
       {label ? (
         <label
           htmlFor={fieldId}
@@ -114,4 +115,4 @@ export function TextField({
       ) : null}
     </div>
   );
-}
+});

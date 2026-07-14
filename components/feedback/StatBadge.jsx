@@ -8,16 +8,16 @@ import { Icon } from "../icons/Icon";
 // strength/reps = good), so color stays meaningful either way. A "bad" trend
 // uses --forge-negative, kept distinct from --forge-danger (destructive) so a
 // worsening metric never looks like a delete action (OP-129).
-export function StatBadge({ value, unit = "", goodDirection = "down", threshold = 0.05 }) {
+export const StatBadge = React.forwardRef(function StatBadge({ value, unit = "", goodDirection = "down", threshold = 0.05, className, style }, ref) {
   const flat = Math.abs(value) < threshold;
   const dir = flat ? "flat" : value > 0 ? "up" : "down";
   const isGood = flat ? null : dir === goodDirection;
   const color = flat ? "var(--forge-text-dim)" : isGood ? "var(--forge-success)" : "var(--forge-negative)";
   const iconName = flat ? null : dir === "up" ? "up" : "down";
   return (
-    <div style={{ display: "inline-flex", alignItems: "center", gap: 3, color, fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-chip)" }}>
+    <div ref={ref} className={className} style={{ display: "inline-flex", alignItems: "center", gap: 3, color, fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-chip)", ...style }}>
       {iconName ? <Icon name={iconName} color={color} size={13} /> : null}
       <span>{flat ? "\u2014" : `${value > 0 ? "+" : ""}${value}${unit}`}</span>
     </div>
   );
-}
+});

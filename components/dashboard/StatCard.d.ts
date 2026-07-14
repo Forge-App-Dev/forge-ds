@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 import { StatBadgeProps } from "../feedback/StatBadge";
 import { MiniChartProps } from "../feedback/mini-chart/MiniChart";
 
@@ -27,7 +27,10 @@ export interface StatCardProps {
   caption?: string;
   /** Makes the whole cell a pressable navigable tile. */
   onClick?: () => void;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function StatCard(props: StatCardProps): JSX.Element;
+export const StatCard: React.ForwardRefExoticComponent<
+  StatCardProps & React.RefAttributes<HTMLElement>
+>;

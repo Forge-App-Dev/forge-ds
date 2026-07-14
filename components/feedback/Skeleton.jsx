@@ -6,7 +6,7 @@ import React from "react";
 // Uses the global pulse animation (tokens/motion.css → .forge-anim-pulse),
 // so it honors reduced-motion. `variant`: "line" | "block" | "circle".
 // Compose several to sketch a card's shape.
-export function Skeleton({ variant = "line", width, height, radius, style }) {
+export const Skeleton = React.forwardRef(function Skeleton({ variant = "line", width, height, radius, className, style }, ref) {
   const dims =
     variant === "circle"
       ? { width: width || 34, height: height || width || 34, borderRadius: "var(--forge-radius-pill)" }
@@ -16,20 +16,21 @@ export function Skeleton({ variant = "line", width, height, radius, style }) {
 
   return (
     <div
+      ref={ref}
       aria-hidden="true"
-      className="forge-anim-pulse"
+      className={["forge-anim-pulse", className].filter(Boolean).join(" ")}
       style={{ backgroundColor: "var(--forge-surface-raised)", ...dims, ...style }}
     />
   );
-}
+});
 
 // SkeletonText — n stacked lines, last one shorter, for paragraph placeholders.
-export function SkeletonText({ lines = 3, gap = 8, style }) {
+export const SkeletonText = React.forwardRef(function SkeletonText({ lines = 3, gap = 8, className, style }, ref) {
   return (
-    <div role="status" aria-label="Carregando" style={{ display: "flex", flexDirection: "column", gap, ...style }}>
+    <div ref={ref} className={className} role="status" aria-label="Carregando" style={{ display: "flex", flexDirection: "column", gap, ...style }}>
       {Array.from({ length: lines }).map((_, i) => (
         <Skeleton key={i} variant="line" width={i === lines - 1 ? "60%" : "100%"} />
       ))}
     </div>
   );
-}
+});

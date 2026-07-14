@@ -1,3 +1,5 @@
+import * as React from "react";
+
 /**
  * Feather-style inline SVG icon glyph — ~2px stroke, rounded caps. This is
  * an **intentional addition**: the source app defines ~25 individual icon
@@ -12,7 +14,13 @@ export interface IconProps {
   color?: string;
   size?: number;
   strokeWidth?: number;
+  /** Accessible name; when set the svg becomes `role="img"`, else aria-hidden. */
+  title?: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Icon(props: IconProps): JSX.Element;
+export const Icon: React.ForwardRefExoticComponent<
+  IconProps & React.RefAttributes<SVGSVGElement>
+>;
 export const ICON_NAMES: string[];

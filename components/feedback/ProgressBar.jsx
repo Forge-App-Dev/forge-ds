@@ -10,7 +10,7 @@ import React from "react";
 // top. For domain aria in real units (e.g. "1940 of 2000 kcal"), pass
 // `valueNow`/`valueMin`/`valueMax` — they override the default 0–100 percentage.
 // `separators` draws hairline dividers between segments (the striped meter look).
-export function ProgressBar({
+export const ProgressBar = React.forwardRef(function ProgressBar({
   value = 0,
   color = "var(--forge-accent)",
   track = "var(--forge-surface-raised)",
@@ -21,14 +21,17 @@ export function ProgressBar({
   valueMin,
   valueMax,
   separators = false,
+  className,
   style,
-}) {
+}, ref) {
   const radius = height / 2;
   const fillTransition = "width var(--forge-duration-base) var(--forge-ease-standard), background-color var(--forge-duration-base) var(--forge-ease-standard)";
 
   if (segments && segments.length) {
     return (
       <div
+        ref={ref}
+        className={className}
         role="img"
         aria-label={label || "Progresso"}
         style={{ display: "flex", height, borderRadius: radius, backgroundColor: track, overflow: "hidden", ...style }}
@@ -51,6 +54,8 @@ export function ProgressBar({
   const pct = Math.max(0, Math.min(1, value));
   return (
     <div
+      ref={ref}
+      className={className}
       role="progressbar"
       aria-label={label}
       aria-valuenow={valueNow != null ? valueNow : Math.round(pct * 100)}
@@ -69,4 +74,4 @@ export function ProgressBar({
       />
     </div>
   );
-}
+});

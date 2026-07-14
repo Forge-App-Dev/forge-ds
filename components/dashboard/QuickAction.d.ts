@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import * as React from "react";
 
 /**
  * Icon+label shortcut for a dashboard grid: a rounded icon chip over a short
@@ -15,10 +15,13 @@ export interface QuickActionProps {
   /** Tints the icon chip (e.g. a module color); omit for neutral. */
   accent?: string;
   /** Optional count shown as a small badge dot (e.g. pending items). */
-  badge?: ReactNode;
+  badge?: React.ReactNode;
   /** Dims and disables the action. Default `false`. */
   disabled?: boolean;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function QuickAction(props: QuickActionProps): JSX.Element;
+export const QuickAction: React.ForwardRefExoticComponent<
+  QuickActionProps & React.RefAttributes<HTMLButtonElement>
+>;

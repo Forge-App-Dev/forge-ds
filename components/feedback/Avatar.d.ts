@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Circular user image with initials fallback (Barlow). Sizes sm/md/lg; always
@@ -13,7 +13,10 @@ export interface AvatarProps {
   /** Accessible name / alt text. Defaults to `name`; pass "" for decorative. */
   alt?: string;
   size?: "sm" | "md" | "lg";
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Avatar(props: AvatarProps): JSX.Element;
+export const Avatar: React.ForwardRefExoticComponent<
+  AvatarProps & React.RefAttributes<HTMLDivElement>
+>;

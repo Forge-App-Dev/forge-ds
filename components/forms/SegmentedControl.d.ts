@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 export interface SegmentedOption {
@@ -20,11 +21,14 @@ export interface SegmentedControlProps {
   onChange?: (value: string) => void;
   /** Optional uppercase label above the control. */
   label?: string;
-  /** Fill color of the active segment (token ref or hex). Default `var(--forge-accent)`. */
+  /** Fill color of the active segment (token ref or hex). Default `var(--forge-accent-fill)`. */
   color?: string;
   /** Disables the whole group and dims it. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function SegmentedControl(props: SegmentedControlProps): JSX.Element;
+export const SegmentedControl: React.ForwardRefExoticComponent<
+  SegmentedControlProps & React.RefAttributes<HTMLElement>
+>;

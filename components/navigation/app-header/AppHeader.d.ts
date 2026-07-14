@@ -1,3 +1,5 @@
+import { CSSProperties, ForwardRefExoticComponent, RefAttributes } from "react";
+
 /**
  * Global app header — brand mark + wordmark (accent "F") on the left;
  * back-to-modules and logout icon buttons on the right.
@@ -12,6 +14,8 @@ export interface AppHeaderProps {
   inModule?: boolean;
   onBackToModules?: () => void;
   onLogout?: () => void;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function AppHeader(props: AppHeaderProps): JSX.Element;
+export const AppHeader: ForwardRefExoticComponent<AppHeaderProps & RefAttributes<HTMLDivElement>>;

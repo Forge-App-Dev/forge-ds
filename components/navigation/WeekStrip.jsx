@@ -21,7 +21,7 @@ const DEFAULT_DAYS = [
   { label: "dom" },
 ];
 
-export function WeekStrip({ days = DEFAULT_DAYS, selected, today, onSelect, accent, label = "Dias da semana", style }) {
+export const WeekStrip = React.forwardRef(function WeekStrip({ days = DEFAULT_DAYS, selected, today, onSelect, accent, label = "Dias da semana", className, style }, ref) {
   const list = Array.isArray(days) && days.length ? days : DEFAULT_DAYS;
   const tint = accent || "var(--forge-accent)";
   const refs = React.useRef([]);
@@ -42,7 +42,7 @@ export function WeekStrip({ days = DEFAULT_DAYS, selected, today, onSelect, acce
   };
 
   return (
-    <div role="group" aria-label={label} style={{ display: "flex", gap: "var(--forge-space-3)", ...style }}>
+    <div ref={ref} role="group" aria-label={label} className={className} style={{ display: "flex", gap: "var(--forge-space-3)", ...style }}>
       {list.map((d, i) => {
         const on = i === selected;
         const isToday = i === today;
@@ -125,4 +125,4 @@ export function WeekStrip({ days = DEFAULT_DAYS, selected, today, onSelect, acce
       })}
     </div>
   );
-}
+});

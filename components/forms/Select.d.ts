@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /** One option in a Select's list. */
@@ -28,7 +29,10 @@ export interface SelectProps {
   title?: string;
   /** Disables the trigger. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Select(props: SelectProps): JSX.Element;
+export const Select: React.ForwardRefExoticComponent<
+  SelectProps & React.RefAttributes<HTMLElement>
+>;

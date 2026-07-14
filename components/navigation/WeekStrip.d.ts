@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, ForwardRefExoticComponent, RefAttributes } from "react";
 
 export interface WeekDay {
   /** Weekday label (e.g. "seg"). */
@@ -28,7 +28,8 @@ export interface WeekStripProps {
   accent?: string;
   /** Accessible group label. Default `"Dias da semana"`. */
   label?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function WeekStrip(props: WeekStripProps): JSX.Element;
+export const WeekStrip: ForwardRefExoticComponent<WeekStripProps & RefAttributes<HTMLDivElement>>;

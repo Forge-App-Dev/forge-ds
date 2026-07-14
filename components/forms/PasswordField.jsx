@@ -8,7 +8,7 @@ import { TextField } from "./TextField.jsx";
 // "text" and swaps the eye/eye-off glyph. `autoComplete` defaults to
 // "current-password" (use "new-password" on signup/reset forms). The toggle is a
 // real button with aria-pressed + a state-describing aria-label.
-export function PasswordField({
+export const PasswordField = React.forwardRef(function PasswordField({
   label = "Senha",
   value,
   onChange,
@@ -18,12 +18,15 @@ export function PasswordField({
   helper,
   required = false,
   disabled = false,
+  className,
   style,
-}) {
+}, ref) {
   const [show, setShow] = React.useState(false);
 
   return (
     <TextField
+      ref={ref}
+      className={className}
       label={label}
       type={show ? "text" : "password"}
       value={value}
@@ -60,4 +63,4 @@ export function PasswordField({
       }
     />
   );
-}
+});

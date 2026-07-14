@@ -8,7 +8,7 @@ import React from "react";
 // only when the avatar is purely decorative next to a visible name.
 const AV_SIZE = { sm: 32, md: 44, lg: 64 };
 
-export function Avatar({ src, name = "", alt, size = "md", style }) {
+export const Avatar = React.forwardRef(function Avatar({ src, name = "", alt, size = "md", className, style }, ref) {
   const px = AV_SIZE[size] || AV_SIZE.md;
   const [failed, setFailed] = React.useState(false);
   const accName = alt != null ? alt : name;
@@ -24,6 +24,8 @@ export function Avatar({ src, name = "", alt, size = "md", style }) {
 
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         width: px,
         height: px,
@@ -63,4 +65,4 @@ export function Avatar({ src, name = "", alt, size = "md", style }) {
       )}
     </div>
   );
-}
+});

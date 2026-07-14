@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, ForwardRefExoticComponent, RefAttributes } from "react";
 
 /**
  * Single expandable disclosure item — header button with ▾ chevron over a
@@ -18,7 +18,8 @@ export interface AccordionProps {
   onToggle?: (open: boolean) => void;
   /** Prefix for the generated header/panel ids (make unique per instance). */
   idBase?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Accordion(props: AccordionProps): JSX.Element;
+export const Accordion: ForwardRefExoticComponent<AccordionProps & RefAttributes<HTMLDivElement>>;

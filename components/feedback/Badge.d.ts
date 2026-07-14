@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Small count/dot indicator for tabs, icons and rows. Numeric pill (`count`)
@@ -13,7 +13,10 @@ export interface BadgeProps {
   variant?: "accent" | "neutral";
   /** Accessible name — required for a `dot` that is the only signal; overrides the count's name. */
   label?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Badge(props: BadgeProps): JSX.Element;
+export const Badge: React.ForwardRefExoticComponent<
+  BadgeProps & React.RefAttributes<HTMLSpanElement>
+>;

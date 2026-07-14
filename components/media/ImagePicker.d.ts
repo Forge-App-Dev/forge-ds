@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Visual layer of a photo picker (OP-050): the empty "add photo" placeholder,
@@ -25,7 +25,10 @@ export interface ImagePickerProps {
   label?: string;
   /** Alt text for the selected image. Default "Foto selecionada". */
   alt?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function ImagePicker(props: ImagePickerProps): JSX.Element;
+export const ImagePicker: React.ForwardRefExoticComponent<
+  ImagePickerProps & React.RefAttributes<HTMLElement>
+>;

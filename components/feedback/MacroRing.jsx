@@ -19,7 +19,7 @@ const MACROS = [
   { key: "fat", label: "Gordura", color: "var(--forge-macro-fat)" },
 ];
 
-export function MacroRing({
+export const MacroRing = React.forwardRef(function MacroRing({
   protein = 0,
   carb = 0,
   fat = 0,
@@ -29,8 +29,9 @@ export function MacroRing({
   center,
   legend = true,
   label,
+  className,
   style,
-}) {
+}, ref) {
   const vals = { protein, carb, fat };
   const total = Math.max(0, protein) + Math.max(0, carb) + Math.max(0, fat);
   const segments = MACROS.map((m) => ({
@@ -43,7 +44,7 @@ export function MacroRing({
     `Macros: ${MACROS.map((m) => `${m.label.toLowerCase()} ${Math.round(vals[m.key])} ${unit}`).join(", ")}`;
 
   return (
-    <div style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-10)", ...style }}>
+    <div ref={ref} className={className} style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-10)", ...style }}>
       <Ring size={size} stroke={stroke} segments={segments} label={aria}>
         {center}
       </Ring>
@@ -68,4 +69,4 @@ export function MacroRing({
       ) : null}
     </div>
   );
-}
+});

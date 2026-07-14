@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Sibling of EmptyState for when something failed to load: warn glyph +
@@ -19,7 +19,10 @@ export interface ErrorStateProps {
   icon?: string;
   /** Inline row layout instead of the full centered block. Default `false`. */
   compact?: boolean;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function ErrorState(props: ErrorStateProps): JSX.Element;
+export const ErrorState: React.ForwardRefExoticComponent<
+  ErrorStateProps & React.RefAttributes<HTMLDivElement>
+>;

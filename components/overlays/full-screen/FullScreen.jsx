@@ -7,24 +7,30 @@ import { useDialogA11y } from "../../shared/useDialogA11y.js";
 // title, Escape to close, focus trapped, scroll locked. Footer respects the
 // bottom safe-area inset. Pass `onBeforeClose` to guard unsaved changes — if it
 // returns false, the close is cancelled (e.g. "descartar alterações?").
-export function FullScreen({ visible = true, onClose, onBeforeClose, title, right, children, footer }) {
+export const FullScreen = React.forwardRef(function FullScreen({ visible = true, onClose, onBeforeClose, title, right, children, footer, className, style }, ref) {
   const requestClose = React.useCallback(() => {
     if (onBeforeClose && onBeforeClose() === false) return;
     onClose && onClose();
   }, [onBeforeClose, onClose]);
 
-  const ref = useDialogA11y(visible, requestClose);
+  const hookRef = useDialogA11y(visible, requestClose);
+  const setRefs = (node) => {
+    hookRef.current = node;
+    if (typeof ref === "function") ref(node);
+    else if (ref) ref.current = node;
+  };
   const rid = React.useId ? React.useId() : "forge-fs";
   const titleId = `${rid}-title`;
   if (!visible) return null;
   return (
     <div
-      ref={ref}
+      ref={setRefs}
       role="dialog"
       aria-modal="true"
       aria-labelledby={title ? titleId : undefined}
       tabIndex={-1}
-      style={{ position: "fixed", inset: 0, backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", zIndex: "var(--forge-z-fullscreen)" }}
+      className={className}
+      style={{ position: "fixed", inset: 0, backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", zIndex: "var(--forge-z-fullscreen)", ...style }}
     >
       <div
         style={{
@@ -69,4 +75,4 @@ export function FullScreen({ visible = true, onClose, onBeforeClose, title, righ
       ) : null}
     </div>
   );
-}
+});

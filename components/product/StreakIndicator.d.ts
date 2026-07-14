@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Training streak — a week of dots (completed day = accent, empty = dimmer)
@@ -14,7 +14,10 @@ export interface StreakIndicatorProps {
   accent?: string;
   /** Override the computed accessible label. */
   label?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function StreakIndicator(props: StreakIndicatorProps): JSX.Element;
+export const StreakIndicator: React.ForwardRefExoticComponent<
+  StreakIndicatorProps & React.RefAttributes<HTMLDivElement>
+>;

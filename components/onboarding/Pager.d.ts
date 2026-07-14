@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import * as React from "react";
 
 /**
  * Onboarding carousel (one slide at a time) with the onboarding rules baked in:
@@ -9,7 +9,7 @@ import { CSSProperties, ReactNode } from "react";
  */
 export interface PagerProps {
   /** Slide contents, one node per slide (max 3). Default `[]`. */
-  pages?: ReactNode[];
+  pages?: React.ReactNode[];
   /** Starting slide index. Default `0`. */
   initialPage?: number;
   /** Called with the new index when the slide changes. */
@@ -26,7 +26,10 @@ export interface PagerProps {
   doneLabel?: string;
   /** Accent for the dots + CTA (e.g. a sibling-app color). */
   accent?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Pager(props: PagerProps): JSX.Element;
+export const Pager: React.ForwardRefExoticComponent<
+  PagerProps & React.RefAttributes<HTMLElement>
+>;

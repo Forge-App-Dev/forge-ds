@@ -4,10 +4,12 @@ import { Icon } from "../icons/Icon";
 // SearchField — text input with a leading search glyph and a clear (✕) button
 // when non-empty. For food/exercise lookup. type="search", labelled for screen
 // readers; the clear button has an aria-label. Focus ring on the wrapper.
-export function SearchField({ value = "", onChange, placeholder = "Buscar", onSubmit, autoFocus = false, style }) {
+export const SearchField = React.forwardRef(function SearchField({ value = "", onChange, placeholder = "Buscar", onSubmit, autoFocus = false, className, style }, ref) {
   const rid = React.useId ? React.useId() : "forge-search";
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         display: "flex", alignItems: "center", gap: 8,
         height: 44, paddingInline: 12,
@@ -47,4 +49,4 @@ export function SearchField({ value = "", onChange, placeholder = "Buscar", onSu
       ) : null}
     </div>
   );
-}
+});

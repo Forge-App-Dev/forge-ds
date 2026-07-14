@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * A single set-logging row: weight × reps × check — the most-touched control in
@@ -29,7 +29,10 @@ export interface SetLoggerProps {
   repsStep?: number;
   /** Accent for the checked state. */
   accent?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function SetLogger(props: SetLoggerProps): JSX.Element;
+export const SetLogger: React.ForwardRefExoticComponent<
+  SetLoggerProps & React.RefAttributes<HTMLDivElement>
+>;

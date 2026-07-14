@@ -8,7 +8,7 @@ import { Icon } from "../icons/Icon";
 // `indeterminate` (a parent of a partially-selected group → aria-checked="mixed"
 // with a dash glyph). NOT for choosing one of several options (ADR-0008) nor for
 // an immediate on/off preference (that is Switch).
-export function Checkbox({ checked = false, indeterminate = false, onChange, label, disabled = false, id, style }) {
+export const Checkbox = React.forwardRef(function Checkbox({ checked = false, indeterminate = false, onChange, label, disabled = false, id, className, style }, ref) {
   const rid = React.useId ? React.useId() : id || "forge-checkbox";
   const toggle = () => { if (!disabled && onChange) onChange(!checked); };
   const filled = checked || indeterminate;
@@ -51,6 +51,8 @@ export function Checkbox({ checked = false, indeterminate = false, onChange, lab
 
   return (
     <div
+      ref={ref}
+      className={className}
       onClick={toggle}
       style={{
         display: "flex",
@@ -67,4 +69,4 @@ export function Checkbox({ checked = false, indeterminate = false, onChange, lab
       </span>
     </div>
   );
-}
+});

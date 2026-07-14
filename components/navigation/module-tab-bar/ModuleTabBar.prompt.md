@@ -5,7 +5,7 @@ Bottom tab bar for a module, tinted with that module's accent color.
   tabs={[{ id: "hoje", label: "Hoje", icon: "dumbbell" }, { id: "treinos", label: "Treinos", icon: "list" }]}
   active="hoje"
   onChange={setTab}
-  accent="#EF4444"
+  accent="var(--forge-accent)"
 />
 ```
 
@@ -27,9 +27,9 @@ Bottom tab bar for a module, tinted with that module's accent color.
 
 Ver "Navegação" do checklist.
 
-- **Papel / leitor de tela:** contêiner `role="tablist"`; cada item `role="tab"` — anuncia "guia, selecionada, 1 de N".
+- **Papel / leitor de tela:** contêiner `<nav>` com `role="navigation"` (é navegação entre módulos, não um tablist — T-30/ADR); cada item é um `button`.
 - **Nome acessível:** cada aba tem `aria-label` = `label` em pt-BR; o ícone é decorativo junto do texto.
-- **Valor / estado:** a aba ativa expõe `aria-selected`.
-- **Contraste:** aba ativa no acento do módulo, inativas em `--forge-text-dim` — ≥3:1; a seleção não é só cor (posição + `aria-selected` + rótulo).
+- **Valor / estado:** a aba ativa expõe `aria-current="page"`.
+- **Contraste:** aba ativa no acento do módulo, inativas em `--forge-text-dim` — ≥3:1; a seleção não é só cor (indicador de forma no topo + peso + `aria-current` + rótulo).
 - **Foco / alvo:** cada aba é `forge-focusable`, `minHeight:44` + `safe-area-inset-bottom` (OP-121).
 - **Observações:** rótulo sempre visível junto do ícone — nunca só ícone.

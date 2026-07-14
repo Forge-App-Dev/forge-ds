@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -16,7 +17,10 @@ export interface SwitchProps {
   disabled?: boolean;
   /** Fallback id used when `React.useId` is unavailable. */
   id?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Switch(props: SwitchProps): JSX.Element;
+export const Switch: React.ForwardRefExoticComponent<
+  SwitchProps & React.RefAttributes<HTMLElement>
+>;

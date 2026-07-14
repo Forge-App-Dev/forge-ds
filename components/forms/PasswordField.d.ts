@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -19,7 +20,10 @@ export interface PasswordFieldProps {
   helper?: string;
   required?: boolean;
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function PasswordField(props: PasswordFieldProps): JSX.Element;
+export const PasswordField: React.ForwardRefExoticComponent<
+  PasswordFieldProps & React.RefAttributes<HTMLElement>
+>;

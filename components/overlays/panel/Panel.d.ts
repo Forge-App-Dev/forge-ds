@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, ForwardRefExoticComponent, RefAttributes } from "react";
 
 /**
  * Centered modal panel with a dark scrim — the system's default for small
@@ -11,6 +11,10 @@ export interface PanelProps {
   title: string;
   children?: ReactNode;
   footer?: ReactNode;
+  /** When false, tapping the scrim does not close the panel. Default `true`. */
+  dismissible?: boolean;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function Panel(props: PanelProps): JSX.Element;
+export const Panel: ForwardRefExoticComponent<PanelProps & RefAttributes<HTMLDivElement>>;

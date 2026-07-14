@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 
 /**
  * Rounded filter/choice chip — outlined when inactive, filled with its color
@@ -7,9 +7,9 @@ import { CSSProperties } from "react";
  */
 export interface PillProps {
   title: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   active?: boolean;
-  /** Literal hex or token ref — used both as fill (when active) and to compute text contrast. */
+  /** Fill color when active — also used to compute readable text contrast. */
   color?: string;
   /** Size preset — `md` (40px, default) preserves the original height; `sm` is 34px. */
   size?: "sm" | "md";
@@ -17,7 +17,10 @@ export interface PillProps {
   icon?: string;
   /** Disables interaction and dims the pill. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Pill(props: PillProps): JSX.Element;
+export declare const Pill: React.ForwardRefExoticComponent<
+  PillProps & React.RefAttributes<HTMLButtonElement>
+>;

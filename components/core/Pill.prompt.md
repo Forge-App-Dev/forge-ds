@@ -1,7 +1,7 @@
 Rounded filter/choice chip — outlined when inactive, filled with its color when active. Exposes `aria-pressed` (it is a selectable toggle, not navigation).
 
 ```jsx
-<Pill title="Peito" active={filter === "peito"} color="#EF4444" onClick={() => setFilter("peito")} />
+<Pill title="Peito" active={filter === "peito"} color="var(--forge-accent)" onClick={() => setFilter("peito")} />
 <Pill title="Favoritos" icon="trophy" size="sm" active={onlyFav} onClick={() => setOnlyFav(v => !v)} />
 <Pill title="Indisponível" disabled />
 ```

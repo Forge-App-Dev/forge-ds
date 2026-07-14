@@ -7,7 +7,7 @@ import { Icon } from "../icons/Icon";
 // hides the inner buttons); instead expose two real buttons with clear labels
 // and a live region announcing the value. Respects min/max/step and disables
 // the relevant button at the bounds.
-export function Stepper({ value = 0, onChange, min = -Infinity, max = Infinity, step = 1, unit = "", label, disabled = false, style }) {
+export const Stepper = React.forwardRef(function Stepper({ value = 0, onChange, min = -Infinity, max = Infinity, step = 1, unit = "", label, disabled = false, className, style }, ref) {
   const rid = React.useId ? React.useId() : "forge-stepper";
   const set = (v) => { const c = Math.min(max, Math.max(min, v)); if (onChange && c !== value) onChange(c); };
   const canDec = !disabled && value - step >= min;
@@ -36,7 +36,7 @@ export function Stepper({ value = 0, onChange, min = -Infinity, max = Infinity, 
   );
 
   return (
-    <div style={{ display: "inline-flex", alignItems: "center", gap: 10, ...style }}>
+    <div ref={ref} className={className} style={{ display: "inline-flex", alignItems: "center", gap: 10, ...style }}>
       {btn("dec", canDec, () => set(value - step), "minus")}
       <span
         role="status"
@@ -49,4 +49,4 @@ export function Stepper({ value = 0, onChange, min = -Infinity, max = Infinity, 
       {btn("inc", canInc, () => set(value + step), "plus")}
     </div>
   );
-}
+});

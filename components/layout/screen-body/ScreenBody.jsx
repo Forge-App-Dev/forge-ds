@@ -7,9 +7,9 @@ import React from "react";
 // Pass `footer` for an optional pinned action bar at the bottom of the screen
 // (OP-114): the body scrolls, the footer stays put with a hairline top border
 // and safe-area-aware bottom padding (matches the FullScreen footer pattern).
-export function ScreenBody({ children, footer, scroll = true, style }) {
+export const ScreenBody = React.forwardRef(function ScreenBody({ children, footer, scroll = true, className, style }, ref) {
   const inner = (
-    <div style={{ padding: "8px var(--forge-space-screen-h) 24px", maxWidth: "var(--forge-app-max-width)", margin: "0 auto", boxSizing: "border-box", ...style }}>
+    <div ref={ref} className={className} style={{ padding: "8px var(--forge-space-screen-h) 24px", maxWidth: "var(--forge-app-max-width)", margin: "0 auto", boxSizing: "border-box", ...style }}>
       {children}
     </div>
   );
@@ -32,4 +32,4 @@ export function ScreenBody({ children, footer, scroll = true, style }) {
       </div>
     </div>
   );
-}
+});

@@ -1,3 +1,5 @@
+import * as React from "react";
+
 /**
  * Labeled progress bar for a single macronutrient — colored dot + label +
  * "value / target" readout above a track/fill bar.
@@ -5,13 +7,17 @@
  */
 export interface MacroMeterProps {
   label: string;
-  /** Use the fixed macro colors: protein #E5645E, carb #E0A23B, fat #4C9BD6. */
+  /** Use the fixed macro colors: var(--forge-macro-protein), var(--forge-macro-carb), var(--forge-macro-fat). */
   color: string;
   value: number;
   target: number;
   unit?: string;
   /** Drops the label row — dot + thin bar + short value readout only, for dense rows (e.g. inside a food-item line). */
   compact?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function MacroMeter(props: MacroMeterProps): JSX.Element;
+export const MacroMeter: React.ForwardRefExoticComponent<
+  MacroMeterProps & React.RefAttributes<HTMLDivElement>
+>;

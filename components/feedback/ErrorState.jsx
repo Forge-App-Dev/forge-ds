@@ -9,18 +9,19 @@ import { content } from "../shared/content.js";
 // "Não conseguimos carregar" over "Erro 500". `onRetry` renders the retry
 // button; `retryLabel` customizes it. Two layouts: inline `compact` (row, like
 // EmptyState) and full (centered block) for whole-screen failures.
-export function ErrorState({
+export const ErrorState = React.forwardRef(function ErrorState({
   title = content.errorState.title,
   subtitle = content.errorState.subtitle,
   onRetry,
   retryLabel = content.errorState.retryLabel,
   icon = "warn",
   compact = false,
+  className,
   style,
-}) {
+}, ref) {
   if (compact) {
     return (
-      <div role="alert" style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-6)", backgroundColor: "var(--forge-surface)", border: "var(--forge-border-w) solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: "var(--forge-space-8)", ...style }}>
+      <div ref={ref} className={className} role="alert" style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-6)", backgroundColor: "var(--forge-surface)", border: "var(--forge-border-w) solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: "var(--forge-space-8)", ...style }}>
         <div style={{ width: 34, height: 34, borderRadius: "var(--forge-radius-chip)", backgroundColor: "var(--forge-surface-raised)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
           <Icon name={icon} color="var(--forge-danger)" size={16} />
         </div>
@@ -34,7 +35,7 @@ export function ErrorState({
   }
 
   return (
-    <div role="alert" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "var(--forge-space-6)", padding: "var(--forge-space-16) var(--forge-space-8)", ...style }}>
+    <div ref={ref} className={className} role="alert" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "var(--forge-space-6)", padding: "var(--forge-space-16) var(--forge-space-8)", ...style }}>
       <div style={{ width: 56, height: 56, borderRadius: "var(--forge-radius-pill)", backgroundColor: "var(--forge-surface-raised)", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Icon name={icon} color="var(--forge-danger)" size={26} />
       </div>
@@ -45,4 +46,4 @@ export function ErrorState({
       {onRetry ? <Button variant="secondary" size="md" icon="refresh" title={retryLabel} onClick={onRetry} /> : null}
     </div>
   );
-}
+});

@@ -3,7 +3,7 @@ import React from "react";
 // Screen — isolated screen with its own safe-area padding, used OUTSIDE the
 // module shell (e.g. boot/login screens that aren't wrapped by ModuleShell).
 // Scrollable by default; centers content at maxWidth 480.
-export function Screen({ children, scroll = true, style }) {
+export const Screen = React.forwardRef(function Screen({ children, scroll = true, className, style }, ref) {
   const Wrap = scroll ? "div" : React.Fragment;
   const wrapProps = scroll
     ? { style: { flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch" } }
@@ -13,6 +13,8 @@ export function Screen({ children, scroll = true, style }) {
   const dvhSupported = typeof CSS !== "undefined" && CSS.supports && CSS.supports("min-height", "100dvh");
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         minHeight: dvhSupported ? "100dvh" : "100vh",
         backgroundColor: "var(--forge-bg)",
@@ -29,4 +31,4 @@ export function Screen({ children, scroll = true, style }) {
       </Wrap>
     </div>
   );
-}
+});

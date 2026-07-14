@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import * as React from "react";
 
 /**
  * Inline banner for persistent, context-relevant notices — the treatment
@@ -9,7 +9,11 @@ export interface InlineAlertProps {
   kind?: "info" | "success" | "warning" | "danger";
   /** Bold lead-in inside the body text, colored to match `kind` (e.g. "Lembrete do programa."). */
   title?: string;
-  children?: ReactNode;
+  children?: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function InlineAlert(props: InlineAlertProps): JSX.Element;
+export const InlineAlert: React.ForwardRefExoticComponent<
+  InlineAlertProps & React.RefAttributes<HTMLDivElement>
+>;

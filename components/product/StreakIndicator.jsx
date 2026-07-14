@@ -12,7 +12,7 @@ import { content } from "../shared/content.js";
 // the true streak length in days; if omitted it falls back to the number of
 // completed days shown. The whole block is a single labeled image for screen
 // readers — the dots are decorative, the aria-label carries the meaning.
-export function StreakIndicator({ days = [], count, accent, label, style }) {
+export const StreakIndicator = React.forwardRef(function StreakIndicator({ days = [], count, accent, label, className, style }, ref) {
   const week = Array.isArray(days) ? days : [];
   const doneThisWeek = week.filter(Boolean).length;
   const total = count != null ? count : doneThisWeek;
@@ -21,8 +21,10 @@ export function StreakIndicator({ days = [], count, accent, label, style }) {
 
   return (
     <div
+      ref={ref}
       role="img"
       aria-label={aria}
+      className={className}
       style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-6)", ...style }}
     >
       <div
@@ -87,4 +89,4 @@ export function StreakIndicator({ days = [], count, accent, label, style }) {
       </div>
     </div>
   );
-}
+});

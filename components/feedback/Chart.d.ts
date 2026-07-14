@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /** A named data series for a multi-line/-bar chart. */
 export interface ChartSeries {
@@ -43,6 +43,10 @@ export interface ChartProps {
   showValues?: boolean;
   /** SVG viewBox height in user units. Default `200`. */
   height?: number;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Chart(props: ChartProps): JSX.Element;
+export const Chart: React.ForwardRefExoticComponent<
+  ChartProps & React.RefAttributes<HTMLDivElement>
+>;

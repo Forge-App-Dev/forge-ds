@@ -8,14 +8,14 @@ import React from "react";
 // resolve. Guards against empty/single-point input (P-10). Gradient id is
 // unique per instance via React.useId so multiple charts on one page don't
 // bleed into each other (P-10).
-export function MiniChart({ values, color = "var(--forge-accent)", variant = "line", title }) {
+export const MiniChart = React.forwardRef(function MiniChart({ values, color = "var(--forge-accent)", variant = "line", title, className, style }, ref) {
   const uid = React.useId ? React.useId() : "forge-mc";
   const gradId = `forge-minichart-grad-${uid}`;
   const data = Array.isArray(values) ? values.filter((v) => typeof v === "number" && !Number.isNaN(v)) : [];
   const W = 280, H = 60, pad = 6;
 
   if (data.length === 0) {
-    return <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={title || "Sem dados"} style={{ color }} />;
+    return <svg ref={ref} className={className} width="100%" height={60} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={title || "Sem dados"} style={{ color, ...style }} />;
   }
 
   const max = Math.max(...data);
@@ -26,7 +26,7 @@ export function MiniChart({ values, color = "var(--forge-accent)", variant = "li
     const n = data.length;
     const bw = (W - 2 * pad) / n;
     return (
-      <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color }} role="img" aria-label={title || "Gráfico de barras"}>
+      <svg ref={ref} className={className} width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color, ...style }} role="img" aria-label={title || "Gráfico de barras"}>
         {data.map((v, i) => {
           const h = ((v - min) / range) * (H - 2 * pad - 4) + 4;
           const x = pad + i * bw;
@@ -47,7 +47,7 @@ export function MiniChart({ values, color = "var(--forge-accent)", variant = "li
   if (variant === "area") {
     const areaD = d + ` L${pts[pts.length - 1][0].toFixed(1)},${H - pad} L${pts[0][0].toFixed(1)},${H - pad} Z`;
     return (
-      <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color }} role="img" aria-label={title || "Gráfico de área"}>
+      <svg ref={ref} className={className} width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color, ...style }} role="img" aria-label={title || "Gráfico de área"}>
         <defs>
           <linearGradient id={gradId} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="currentColor" stopOpacity="0.35" />
@@ -61,11 +61,11 @@ export function MiniChart({ values, color = "var(--forge-accent)", variant = "li
   }
 
   return (
-    <svg width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color }} role="img" aria-label={title || "Gráfico de linha"}>
+    <svg ref={ref} className={className} width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color, ...style }} role="img" aria-label={title || "Gráfico de linha"}>
       <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" />
       {pts.map((p, i) => (
         <circle key={i} cx={p[0]} cy={p[1]} r={3.5} fill="currentColor" />
       ))}
     </svg>
   );
-}
+});
