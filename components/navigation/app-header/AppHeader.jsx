@@ -5,7 +5,7 @@ import { Icon } from "../../icons/Icon";
 // logout icon buttons right. `brand={{ name, markSrc }}` sets the wordmark and
 // mark image (default name "Forge") so sibling apps in the family swap only
 // their brand (OP-120); `markSrc` is kept as a legacy shorthand. The brand is
-// its own element (AppBrand). markSrc should point at assets/forge-mark.png.
+// its own element (AppBrand). markSrc should point at assets/forge-mark.svg.
 export function AppHeader({ brand, markSrc, inModule = false, onBackToModules, onLogout }) {
   const name = (brand && brand.name) || "Forge";
   const mark = (brand && brand.markSrc) || markSrc;

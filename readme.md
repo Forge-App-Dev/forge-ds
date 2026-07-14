@@ -60,7 +60,7 @@ The design system explicitly supports a **family of sibling apps**: new apps reu
 - **Style:** Feather-style inline SVG — ~2px stroke, rounded caps/joins, no fills (except the solid Play triangle). Consistent 24×24 viewBox, sized 16–30px depending on context.
 - **No icon font, no PNG icon set, no emoji, no unicode glyphs as icons** (aside from a plain "✕"/"▾"/"▴" text character used for close/expand affordances in a couple of legacy spots).
 - All icons are consolidated here into a single `Icon` component (`components/icons/Icon.jsx`) that renders-by-name — see the "Intentional additions" note below for why.
-- The brand mark (`assets/forge-mark.png`) — a red anvil + hammer — is the only bitmap asset in the system; it appears at 26px (header), 40px (login), and 56px (loading, inside the spinning ring).
+- The brand mark — a red anvil + hammer — ships as `assets/forge-mark.svg` (vector, primary) with `assets/forge-mark.png` kept as a raster fallback; it appears at 26px (header), 40px (login), and 56px (loading, inside the spinning ring).
 
 ### Intentional additions
 
@@ -99,7 +99,7 @@ Specimen cards under `guidelines/`, grouped as **Colors** (surfaces, text, brand
 - `styles.css` — root stylesheet, imports everything under `tokens/`
 - `reference/FORGE_DESIGN_SYSTEM_RN.md` — the RN-specific translation of the spec (modal decision rule, RN pitfalls)
 - `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`, `tokens/motion.css`, `tokens/base.css` — design tokens (CSS custom properties) + reset/a11y utilities
-- `assets/forge-mark.png` — the only brand asset provided by the source (anvil + hammer, red)
+- `assets/forge-mark.svg` — brand mark (anvil + hammer, red), vector; `assets/forge-mark.png` — raster fallback
 - `components/` — 45 components across 11 groups (see above); primitives + a `product/` layer
 - `guidelines/` — 25 specimen & review cards (foundations + component review surfaces)
 - `ui_kits/forge-app/` — the click-through product recreation
@@ -117,5 +117,5 @@ Carried over from the RN doc's own "armadilhas conhecidas" — worth knowing eve
 ## Caveats
 
 - **Fonts:** Barlow Condensed and Inter are loaded from Google Fonts (`tokens/typography.css`) — these are the exact fonts specified by the source, not substitutes, so no font files needed copying.
-- **No production logo file beyond the app icon mark** was found in the repo — `forge-mark.png` (anvil + hammer) is used everywhere a "logo" appears, matching the source app exactly.
+- **No production logo file beyond the app icon mark** was found in the repo — the anvil + hammer mark (`forge-mark.svg`, with `.png` fallback) is used everywhere a "logo" appears, matching the source app exactly.
 - The source app itself is mid-development (see its own README phase checklist) — several screens referenced in code (session logging, full nutrition tabs, progress charts, profile) exist in the repo but were not all rebuilt pixel-for-pixel here; the UI kit covers the home flow and each module's primary "Hoje" (Today) screen as the representative sample.

@@ -9,7 +9,7 @@ function LoginScreen({ onLogin }) {
     <div style={{ minHeight: "100%", background: "var(--forge-bg)", display: "flex", alignItems: "center", justifyContent: "center", padding: "40px 26px", boxSizing: "border-box" }}>
       <div style={{ width: "100%", maxWidth: 360 }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 11, marginBottom: 6 }}>
-          <img src="../../assets/forge-mark.png" style={{ width: 40, height: 40 }} alt="" />
+          <img src="../../assets/forge-mark.svg" style={{ width: 40, height: 40 }} alt="" />
           <span style={{ fontFamily: "var(--font-title)", fontSize: 40, letterSpacing: 0.5, textTransform: "uppercase", color: "var(--forge-text)", lineHeight: "44px" }}>
             <span style={{ color: "var(--forge-accent)" }}>F</span>orge
           </span>

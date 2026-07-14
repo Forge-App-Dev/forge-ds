@@ -3,7 +3,7 @@ import { content } from "../../shared/content.js";
 
 // LoadingScreen — the signature boot/loading treatment: spinning Ring arc +
 // pulsing brand mark + wordmark + status caption. markSrc should point at
-// assets/forge-mark.png. Default caption comes from shared/content.js (i18n seam).
+// assets/forge-mark.svg. Default caption comes from shared/content.js (i18n seam).
 export function LoadingScreen({ markSrc, message = content.loadingScreen.message }) {
   return (
     <div role="status" aria-live="polite" style={{ minHeight: "100dvh", backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14 }}>

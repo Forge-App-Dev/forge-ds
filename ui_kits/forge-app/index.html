@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-      <AppHeader markSrc="../../assets/forge-mark.png" inModule={inModule} onBackToModules={() => setScreen("modules")} onLogout={() => setScreen("login")} />
+      <AppHeader markSrc="../../assets/forge-mark.svg" inModule={inModule} onBackToModules={() => setScreen("modules")} onLogout={() => setScreen("login")} />
       <div style={{ flex: 1, overflowY: "auto" }}>
         {screen === "modules" ? <ModuleChooserScreen onChoose={(m) => setScreen(m)} /> : null}
         {screen === "treino" ? <TreinoHojeScreen onContinueWorkout={() => setWorkoutEditorOpen(true)} onEditWorkout={() => setWorkoutEditorOpen(true)} /> : null}

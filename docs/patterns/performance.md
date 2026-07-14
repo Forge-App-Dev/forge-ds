@@ -24,7 +24,7 @@ Fecha **OP-154, OP-155, OP-157, OP-158**. Disciplinas de performance que já viv
 ## OP-158 — SVG do mark
 
 - Ícones são **SVG inline** via o único componente `Icon` (`components/icons/Icon.jsx`), render-by-name — sem icon font, sem PNG, sem emoji (`readme.md` §Iconography).
-- O único bitmap do sistema é o **mark** (`assets/forge-mark.png`, âncora+martelo), usado em 26/40/56px. Onde couber, prefira servi-lo em resolução adequada ao maior uso e evitar re-decodificar; não multiplicar variantes.
+- O único bitmap do sistema é o **mark** (`assets/forge-mark.svg`, âncora+martelo), usado em 26/40/56px. Onde couber, prefira servi-lo em resolução adequada ao maior uso e evitar re-decodificar; não multiplicar variantes.
 - Icons herdam cor por prop (`currentColor`) — sempre set explícito de `color` no pressável pai (pitfall do `readme.md`), nunca confie em herança.
 
 ## Checklist de review

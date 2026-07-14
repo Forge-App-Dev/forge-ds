@@ -2,7 +2,7 @@
 **Status:** Accepted · **Data:** 2026-07-14 · **Decisor:** Mobile Platform & Adaptive Specialist (persona) · **OP:** OP-150, OP-091
 
 ## Contexto
-O único asset de marca é `assets/forge-mark.png` — um PNG único (~18KB). Ele aparece
+O único asset de marca é `assets/forge-mark.svg` — um PNG único (~18KB). Ele aparece
 a 26px (header), 40px (login) e 56px (loading/splash), em telas de densidade
 variada (Android mdpi→xxxhdpi, iOS @1x→@3x). PNG único escala mal em telas densas e
 na splash (OP-150/OP-091).
