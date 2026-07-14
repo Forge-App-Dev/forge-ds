@@ -51,6 +51,10 @@ export { QuickAction } from "./components/dashboard/QuickAction.jsx";
 // onboarding
 export { Pager } from "./components/onboarding/Pager.jsx";
 export { PageDots } from "./components/onboarding/PageDots.jsx";
+// product (composições específicas do domínio Forge — compõem primitivos)
+export { PRCelebration } from "./components/product/PRCelebration.jsx";
+export { RestTimer } from "./components/product/RestTimer.jsx";
+export { SetLogger } from "./components/product/SetLogger.jsx";
 // icons
 export { Icon, ICON_NAMES } from "./components/icons/Icon.jsx";
 // utils
