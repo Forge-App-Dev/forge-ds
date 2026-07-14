@@ -66,18 +66,23 @@ The design system explicitly supports a **family of sibling apps**: new apps reu
 
 ## Components
 
-Grouped by concern, each a self-contained `.jsx` + `.d.ts` + `.prompt.md` in `components/<group>/`:
+Grouped by concern in `components/<group>/` (each a self-contained `.jsx`; the original primitives also ship `.d.ts` + `.prompt.md`):
 
 - **core/** — `Button`, `Pill`, `ConfirmButton`, `Card`, `HeaderAction`
-- **typography/** — `Title`, `Label`, `SectionLabel`
+- **typography/** — `Title`, `Text`, `Label`, `SectionLabel`
 - **layout/** — `Screen`, `ScreenBody`
-- **forms/** — `TextField`, `QtyInput`
+- **forms/** — `TextField`, `QtyInput`, `Switch`, `Stepper`, `ListItem`, `SearchField`, `Select`
 - **overlays/** — `Panel`, `FullScreen`, `VideoModal`
-- **navigation/** — `AppHeader`, `ModuleTabBar`, `ModuleHeader`
-- **feedback/** — `Ring` (+ indeterminate/segments variants), `MacroMeter` (+ compact variant), `MetaBar` (+ segmented variant), `MiniChart` (+ bar/area variants), `InlineAlert`, `EmptyState`, `Spinner`, `StatBadge`, `LoadingScreen`, `TargetsCard`, `TargetsCard`, `LoadingScreen`
+- **navigation/** — `AppHeader`, `ModuleHeader`, `ModuleTabBar`
+- **feedback/** — `Ring` (+ indeterminate/segments variants), `MacroMeter` (+ compact variant), `MetaBar` (+ segmented variant), `MiniChart` (+ bar/area variants), `InlineAlert`, `EmptyState`, `ErrorState`, `Skeleton`/`SkeletonText`, `Spinner`, `StatBadge`, `LoadingScreen`, `TargetsCard`
+- **dashboard/** — `StatCard`, `QuickAction`
+- **onboarding/** — `Pager`, `PageDots`
+- **product/** — `PRCelebration`, `RestTimer`, `SetLogger`
 - **icons/** — `Icon`
 
-All 16 map directly to primitives defined in the source codebase (`src/components/ui.jsx`, `Ring.jsx`, `AppHeader.jsx`, `ModuleTabBar.jsx`, `meters.jsx`, `MiniChart.jsx`, `QtyInput.jsx`, `icons.jsx`) — nothing here was invented beyond the one consolidation noted above. `Title`/`Label`/`SectionLabel` are the RN doc's `Title`/`Label`/`SectionLabel` text primitives (§3), and `components/shared/color.js` exports the shared `onColor()` contrast helper both `Button` and `Pill` import — no more duplicated inline copies.
+The primitives (core/typography/layout/forms/overlays/navigation/feedback) map to the source codebase (`src/components/ui.jsx`, `Ring.jsx`, `AppHeader.jsx`, `ModuleTabBar.jsx`, `meters.jsx`, `MiniChart.jsx`, `QtyInput.jsx`, `icons.jsx`) or to the primitives the audit flagged as missing (forms, states) — built here on the token + accessibility foundation, not invented visually. `Title`/`Label`/`SectionLabel` are the RN doc's text primitives (§3), and `components/shared/color.js` exports the shared `onColor()` contrast helper both `Button` and `Pill` import.
+
+The **product/** layer is deliberately separate: those components know the Forge domain (a personal record, a rest between sets, a logged set) and carry copy, so they **compose** primitives rather than living among them — primitives stay domain-free and white-label-safe. `dashboard/` and `onboarding/` are still neutral primitives (a stat cell, a carousel), just grouped by where the product needs them (PF-02 / PF-01).
 
 ## UI kit
 
@@ -85,16 +90,16 @@ All 16 map directly to primitives defined in the source codebase (`src/component
 
 ## Foundations (Design System tab)
 
-Specimen cards under `guidelines/`, grouped as **Colors** (surfaces, text, brand/semantic, category palette, macro colors, light-theme variant), **Type** (display/title, body), **Spacing** (radius scale, spacing-in-use), and **Brand** (mark at all sizes, loading motif).
+Specimen cards under `guidelines/`, grouped as **Colors** (surfaces, text, brand/semantic, category palette, macro colors, light-theme variant), **Type** (display/title, body), **Spacing** (radius scale, spacing-in-use), and **Brand** (mark at all sizes, loading motif). The same folder also holds **Components** review cards (form controls, loading/error states, dashboard tiles, onboarding pager, product/training) — the surface Mateus reviews on GitHub Pages.
 
 ## Index
 
 - `styles.css` — root stylesheet, imports everything under `tokens/`
 - `reference/FORGE_DESIGN_SYSTEM_RN.md` — the RN-specific translation of the spec (modal decision rule, RN pitfalls)
-- `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css` — design tokens as CSS custom properties
+- `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`, `tokens/motion.css`, `tokens/base.css` — design tokens (CSS custom properties) + reset/a11y utilities
 - `assets/forge-mark.png` — the only brand asset provided by the source (anvil + hammer, red)
-- `components/` — 16 reusable primitives (see above)
-- `guidelines/` — 14 foundation specimen cards
+- `components/` — 45 components across 11 groups (see above); primitives + a `product/` layer
+- `guidelines/` — 25 specimen & review cards (foundations + component review surfaces)
 - `ui_kits/forge-app/` — the click-through product recreation
 - `reference/FORGE_DESIGN_SYSTEM.md` — mirrored copy of the team's own spec doc
 - `SKILL.md` — portable skill file for use in Claude Code
