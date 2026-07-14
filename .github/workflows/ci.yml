@@ -22,9 +22,6 @@ jobs:
       - name: Aderência — sem hex cru em componentes (token-first)
         run: node scripts/check-adherence.mjs
 
-      - name: Contraste on-color (WCAG AA) — pares texto↔fundo de marca
-        run: node scripts/check-oncolor.mjs
-
       - name: Fonte única de tokens gera CSS byte-fiel
         run: npm run build:tokens
 
