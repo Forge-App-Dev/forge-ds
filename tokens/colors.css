@@ -69,6 +69,8 @@
   --forge-text-faint: #696B71;
   --forge-text-dimmer: #87898F;
   --forge-accent: #10B981;
+  --forge-on-accent: #0B0F19;
+  --forge-danger: #c94b3b;
   --forge-scrim: rgba(20, 20, 24, 0.55);
   --forge-scrim-heavy: rgba(0, 0, 0, 0.88);
   --forge-focus-ring: var(--forge-accent);

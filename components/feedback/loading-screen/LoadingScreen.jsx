@@ -1,9 +1,10 @@
 import React from "react";
+import { content } from "../../shared/content.js";
 
 // LoadingScreen — the signature boot/loading treatment: spinning Ring arc +
 // pulsing brand mark + wordmark + status caption. markSrc should point at
-// assets/forge-mark.png.
-export function LoadingScreen({ markSrc, message = "carregando…" }) {
+// assets/forge-mark.png. Default caption comes from shared/content.js (i18n seam).
+export function LoadingScreen({ markSrc, message = content.loadingScreen.message }) {
   return (
     <div style={{ minHeight: "100dvh", backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14 }}>
       <style>{`

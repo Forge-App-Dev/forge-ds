@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "../icons/Icon";
+import { content } from "../shared/content.js";
 
 // OfflineBanner — persistent inline banner for the offline/sync state (OP-060).
 // The system has no toast/snackbar (ADR-0002): a system state like being
@@ -12,7 +13,7 @@ import { Icon } from "../icons/Icon";
 // changes aren't lost). An optional action ("Tentar de novo") lets the screen
 // offer a manual retry. A PRODUCT component: it carries the app's offline copy.
 export function OfflineBanner({
-  message = "Você está offline. Suas alterações ficam salvas e sincronizam quando a conexão voltar.",
+  message = content.offlineBanner.message,
   actionLabel,
   onAction,
   children,

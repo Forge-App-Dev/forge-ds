@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../icons/Icon";
 import { Button } from "../core/Button.jsx";
+import { content } from "../shared/content.js";
 
 // ErrorState — sibling of EmptyState for when something failed to load. Warn
 // glyph + no-blame message + a retry action (an error state without a way
@@ -9,10 +10,10 @@ import { Button } from "../core/Button.jsx";
 // button; `retryLabel` customizes it. Two layouts: inline `compact` (row, like
 // EmptyState) and full (centered block) for whole-screen failures.
 export function ErrorState({
-  title = "Algo não carregou",
-  subtitle = "Verifique a conexão e tente de novo.",
+  title = content.errorState.title,
+  subtitle = content.errorState.subtitle,
   onRetry,
-  retryLabel = "Tentar de novo",
+  retryLabel = content.errorState.retryLabel,
   icon = "warn",
   compact = false,
   style,

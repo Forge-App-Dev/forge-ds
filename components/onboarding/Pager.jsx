@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../core/Button.jsx";
 import { PageDots } from "./PageDots.jsx";
+import { content } from "../shared/content.js";
 
 // Pager — the onboarding carousel (PF-01, OP-022 + pattern OP-062). One slide
 // at a time, with the onboarding rules baked in so screens don't reinvent them:
@@ -21,9 +22,9 @@ export function Pager({
   onPageChange,
   onSkip,
   onDone,
-  skipLabel = "Pular",
-  nextLabel = "Próximo",
-  doneLabel = "Começar",
+  skipLabel = content.pager.skipLabel,
+  nextLabel = content.pager.nextLabel,
+  doneLabel = content.pager.doneLabel,
   accent,
   style,
 }) {

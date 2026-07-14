@@ -344,16 +344,22 @@ export declare const tokensLight: Partial<ForgeTokens>; // só o que o tema ligh
 function declSet(css) {
   return (css.match(/--[a-z0-9-]+:[^;]+;/g) || []);
 }
+// Reporta (NÃO aborta) mudanças de declaração vs o CSS atual. Foi guarda da
+// migração inicial (§6.2.4); com a fonte já migrada, mudanças de valor são
+// legítimas (ex.: novos overrides de tema). O guarda de staleness real é o
+// check-drift (regenera → git tem de ficar limpo). Aqui só damos visibilidade
+// no log a QUAIS valores mudaram, para revisão do diff.
 function snapshotCheck(file, generated) {
   const abs = path.join(TOKENS, file);
   if (!fs.existsSync(abs)) return;
   const before = declSet(fs.readFileSync(abs, "utf8"));
   const after = declSet(generated);
   const n = Math.max(before.length, after.length);
+  const diffs = [];
   for (let i = 0; i < n; i++) {
-    if (before[i] !== after[i])
-      fail(`snapshot divergiu em ${file} #${i + 1}:\n  antes: ${before[i]}\n  depois: ${after[i]}`);
+    if (before[i] !== after[i]) diffs.push(`  ${file} #${i + 1}: ${before[i] || "(—)"} → ${after[i] || "(—)"}`);
   }
+  if (diffs.length) console.warn(`build-tokens: NOTA — ${diffs.length} declaração(ões) mudaram em ${file} (revise o git diff):\n${diffs.join("\n")}`);
 }
 
 // ---------------------------------------------------------------------------
