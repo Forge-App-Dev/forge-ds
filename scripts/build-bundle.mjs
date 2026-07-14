@@ -178,7 +178,7 @@ let body = "";
 
 for (const rel of FILES) {
   const abs = path.join(ROOT, rel);
-  const src = fs.readFileSync(abs, "utf8");
+  const src = fs.readFileSync(abs, "utf8").replace(/\r\n/g, "\n"); // LF: saída determinística em qualquer OS (evita drift Windows↔Linux)
   sourceHashes[rel] = crypto.createHash("sha256").update(src).digest("hex").slice(0, 12);
   const { imported, exported } = analyze(src);
   const code = transformFile(src, imported);

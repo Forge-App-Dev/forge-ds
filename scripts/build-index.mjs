@@ -23,7 +23,7 @@ for (const f of walk(ROOT)) {
   const g = /group="([^"]*)"/.exec(first)?.[1] || "Other";
   const n = /name="([^"]*)"/.exec(first)?.[1] || path.basename(f);
   const s = /subtitle="([^"]*)"/.exec(first)?.[1] || "";
-  cards.push({ path: path.relative(ROOT, f), group: g, name: n, subtitle: s });
+  cards.push({ path: path.relative(ROOT, f).split(path.sep).join("/"), group: g, name: n, subtitle: s });
 }
 cards.sort((a, b) => (order.indexOf(a.group) - order.indexOf(b.group)) || a.name.localeCompare(b.name));
 
