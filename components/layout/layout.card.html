@@ -1,37 +1,33 @@
 <!-- @dsCard group="Components" viewport="700x260" name="Layout" subtitle="Screen, ScreenBody" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="../../_ds_bundle.js"></script>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<style>body{margin:0;background:var(--forge-bg)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  .split{display:flex;gap:1px;height:240px;}
+  .frame{flex:1;border:1px dashed var(--forge-border);overflow:hidden;display:flex;flex-direction:column;}
+  .screen{flex:1;background:var(--forge-bg);display:flex;flex-direction:column;padding:16px;box-sizing:border-box;}
+  .screen-body{flex:1;overflow:hidden;padding:8px var(--forge-space-screen-h) 24px;box-sizing:border-box;}
+  .label{font-family:var(--forge-font-body);font-weight:700;font-size:var(--forge-text-label);text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);}
+  .title{font-family:var(--forge-font-title);font-weight:700;text-transform:uppercase;letter-spacing:var(--forge-tracking-title);color:var(--forge-text);font-size:var(--forge-text-panel-title);line-height:var(--forge-lh-panel-title);margin-top:6px;}
+</style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const { Screen, ScreenBody, Title, Label } = window.ForgeDesignSystem_7731a5;
-function Demo() {
-  return (
-    <div style={{ display: "flex", gap: 1, height: 240 }}>
-      <div style={{ flex: 1, border: "1px dashed var(--forge-border)", overflow: "hidden" }}>
-        <Screen style={{ padding: 16 }}>
-          <Label>Screen (fora do módulo)</Label>
-          <Title size="panelTitle" style={{ marginTop: 6 }}>Boot</Title>
-        </Screen>
-      </div>
-      <div style={{ flex: 1, border: "1px dashed var(--forge-border)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-        <ScreenBody>
-          <Label>ScreenBody (dentro do módulo)</Label>
-          <Title size="panelTitle" style={{ marginTop: 6 }}>Hoje</Title>
-        </ScreenBody>
-      </div>
+<div class="split">
+  <div class="frame">
+    <div class="screen">
+      <div class="label">Screen (fora do módulo)</div>
+      <div class="title">Boot</div>
     </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+  </div>
+  <div class="frame">
+    <div class="screen-body">
+      <div class="label">ScreenBody (dentro do módulo)</div>
+      <div class="title">Hoje</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

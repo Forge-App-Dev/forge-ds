@@ -3,6 +3,10 @@ import React from "react";
 // Quantity + unit selector for a food item — the unit selector only appears
 // when the food has portion presets; tapping it cycles through units ("g"
 // plus any portions). Grams stays the source of truth for calculation.
+// OP-116: numeric decimal keyboard (inputMode="decimal"), a proper accessible
+// name (the field has no visible label), and comma→dot normalization so a
+// pt-BR "1,5" becomes "1.5" (ADR-0056). The unit is a separate control, not
+// merged into the number's accessible name.
 export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
   const cycleUnit = () => {
     const i = units.indexOf(unit);
@@ -10,11 +14,16 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
     onChange && onChange({ qty, unit: next });
   };
 
+  // Keep only digits and separators, then normalize the decimal comma to a dot.
+  const normalizeQty = (raw) => raw.replace(/[^\d,.]/g, "").replace(/,/g, ".");
+
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
       <input
         value={qty ?? ""}
-        onChange={(e) => onChange && onChange({ qty: e.target.value.replace(/[^\d,.]/g, ""), unit })}
+        inputMode="decimal"
+        aria-label="Quantidade"
+        onChange={(e) => onChange && onChange({ qty: normalizeQty(e.target.value), unit })}
         placeholder="0"
         style={{
           width: 64,
@@ -32,6 +41,8 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
       {units.length > 1 ? (
         <button
           onClick={cycleUnit}
+          className="forge-focusable"
+          aria-label={`Unidade: ${unit}. Toque para trocar`}
           style={{
             height: 36,
             minWidth: 44,

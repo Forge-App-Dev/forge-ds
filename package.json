@@ -13,12 +13,18 @@
   "sideEffects": ["*.css"],
   "scripts": {
     "build:bundle": "node scripts/build-bundle.mjs",
-    "build:index": "node scripts/build-index.mjs"
+    "build:index": "node scripts/build-index.mjs",
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "build": "npm run build:tokens && npm run build:index && npm run build:bundle",
+    "check:drift": "node scripts/check-drift.mjs",
+    "check:adherence": "node scripts/check-adherence.mjs",
+    "test:render": "node scripts/render-test.mjs"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@babel/parser": "^7.24.0",
     "@babel/preset-react": "^7.24.0",
-    "@babel/traverse": "^7.24.0"
+    "@babel/traverse": "^7.24.0",
+    "react": "^19.0.0"
   }
 }

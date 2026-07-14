@@ -20,7 +20,7 @@ function LoginScreen({ onLogin }) {
 
         <button
           onClick={onLogin}
-          style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, backgroundColor: "#fff", border: "none", borderRadius: 12, padding: "14px 0", cursor: "pointer" }}
+          style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 10, backgroundColor: "var(--forge-on-brand-google-bg)", border: "none", borderRadius: 12, padding: "14px 0", cursor: "pointer" }}
         >
           <svg width="18" height="18" viewBox="0 0 18 18">
             <path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z" />
@@ -28,7 +28,7 @@ function LoginScreen({ onLogin }) {
             <path fill="#FBBC05" d="M3.98 10.72a5.4 5.4 0 0 1 0-3.44V4.94H.96a9 9 0 0 0 0 8.12l3.02-2.34z" />
             <path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58C13.46.9 11.42 0 9 0A9 9 0 0 0 .96 4.94l3.02 2.34C4.68 5.16 6.66 3.58 9 3.58z" />
           </svg>
-          <span style={{ color: "#1a1a1a", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 15 }}>Continuar com Google</span>
+          <span style={{ color: "var(--forge-on-brand-google-text)", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 15 }}>Continuar com Google</span>
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "20px 0" }}>

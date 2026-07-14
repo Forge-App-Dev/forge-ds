@@ -1,23 +1,10 @@
 import React from "react";
+import { Label } from "./Label.jsx";
 
 // SectionLabel — a Label pre-set with the section-heading margin used above
-// grouped list content (e.g. "Sua semana", "Café da manhã").
+// grouped list content (e.g. "Sua semana", "Café da manhã"). Composes Label
+// internally (OP-112) so the base label styling lives in one place; only the
+// section margins are added here. Visual is unchanged.
 export function SectionLabel({ children, style }) {
-  return (
-    <div
-      style={{
-        fontFamily: "var(--forge-font-body)",
-        fontWeight: 700,
-        fontSize: "var(--forge-text-label)",
-        textTransform: "uppercase",
-        letterSpacing: "var(--forge-tracking-label)",
-        color: "var(--forge-text-faint)",
-        marginTop: 14,
-        marginBottom: 8,
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <Label style={{ marginTop: 14, marginBottom: 8, ...style }}>{children}</Label>;
 }

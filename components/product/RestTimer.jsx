@@ -1,6 +1,7 @@
 import React from "react";
 import { Ring } from "../feedback/ring/Ring.jsx";
 import { Icon } from "../icons/Icon";
+import { content } from "../shared/content.js";
 
 // RestTimer — rest countdown between sets (OP-055). A PRODUCT component (it's a
 // training concept), composing the signature Ring: the arc drains from full to
@@ -48,22 +49,22 @@ export function RestTimer({ duration = 90, running: initialRunning = true, onCom
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-8)", ...style }}>
-      <Ring size={size} stroke={10} progress={progress} color={tint} label={`Descanso: ${fmt(left)} restantes`}>
+      <Ring size={size} stroke={10} progress={progress} color={tint} label={content.restTimer.ringLabel(fmt(left))}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 30, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
             {fmt(left)}
           </span>
           <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700, marginTop: "var(--forge-space-2)" }}>
-            {done ? "Pronto" : "Descanso"}
+            {done ? content.restTimer.statusDone : content.restTimer.statusResting}
           </span>
         </div>
       </Ring>
       <div style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-6)" }}>
-        {ctrl("Adicionar 15 segundos", "plus", () => setLeft((v) => v + 15))}
+        {ctrl(content.restTimer.addTime, "plus", () => setLeft((v) => v + 15))}
         {done
-          ? ctrl("Reiniciar descanso", "refresh", () => { setLeft(duration); setRunning(true); })
-          : ctrl(running ? "Pausar" : "Retomar", running ? "pause" : "play", () => setRunning((r) => !r))}
-        {ctrl("Pular descanso", "x", () => { setRunning(false); setLeft(0); if (onSkip) onSkip(); })}
+          ? ctrl(content.restTimer.restart, "refresh", () => { setLeft(duration); setRunning(true); })
+          : ctrl(running ? content.restTimer.pause : content.restTimer.resume, running ? "pause" : "play", () => setRunning((r) => !r))}
+        {ctrl(content.restTimer.skip, "x", () => { setRunning(false); setLeft(0); if (onSkip) onSkip(); })}
       </div>
     </div>
   );

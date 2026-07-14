@@ -1,40 +1,48 @@
 <!-- @dsCard group="Components" viewport="700x460" name="Buttons" subtitle="Button, Pill, ConfirmButton, HeaderAction" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .col{display:flex;flex-direction:column;gap:16px;}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .row.pills{gap:8px;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:none;border-radius:var(--forge-radius-button);font-family:var(--forge-font-body);font-weight:800;cursor:pointer;box-sizing:border-box;}
+  .btn.lg{height:var(--forge-size-control-lg);padding-inline:18px;font-size:15px;}
+  .btn.sm{height:var(--forge-size-control-sm);padding-inline:13px;font-size:12.5px;}
+  .btn.primary{background:var(--forge-accent);color:var(--forge-on-accent);}
+  .btn.success{background:var(--forge-success);color:var(--forge-on-light);}
+  .btn.disabled{background:var(--forge-accent);color:var(--forge-on-accent);opacity:var(--forge-opacity-disabled);cursor:default;}
+  .btn.secondary{background:transparent;color:var(--forge-text-muted);border:var(--forge-border-w) solid var(--forge-border-input);}
+
+  .pill{display:inline-flex;align-items:center;justify-content:center;height:40px;padding-inline:16px;border-radius:var(--forge-radius-pill);border-width:var(--forge-border-w-strong);border-style:solid;font-family:var(--forge-font-body);font-weight:700;font-size:var(--forge-text-chip);cursor:pointer;box-sizing:border-box;}
+  .pill.active{border-color:var(--forge-accent);background:var(--forge-accent);color:var(--forge-on-accent);}
+  .pill.inactive{border-color:var(--forge-border-input);background:transparent;color:var(--forge-text-muted);}
+
+  .confirm{display:inline-flex;align-items:center;justify-content:center;min-height:var(--forge-tap-target-min);height:34px;padding-inline:12px;border-radius:var(--forge-radius-chip);border-width:var(--forge-border-w-strong);border-style:solid;border-color:var(--forge-danger);background:transparent;color:var(--forge-danger);font-family:var(--forge-font-body);font-weight:700;font-size:12px;cursor:pointer;box-sizing:border-box;}
+
+  svg{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const { Button, Pill, ConfirmButton, HeaderAction } = window.ForgeDesignSystem_7731a5;
-function Demo() {
-  const [active, setActive] = React.useState("peito");
-  return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-        <Button title="Começar treino  →" color="#EF4444" resolvedColor="#EF4444" />
-        <Button title="Ajustar" color="#10B981" resolvedColor="#10B981" small />
-        <Button title="Indisponível" disabled />
-      </div>
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-        <Pill title="Peito" active={active === "peito"} color="#EF4444" onClick={() => setActive("peito")} />
-        <Pill title="Costas" active={active === "costas"} color="#EF4444" onClick={() => setActive("costas")} />
-        <Pill title="Pernas" active={active === "pernas"} color="#EF4444" onClick={() => setActive("pernas")} />
-      </div>
-      <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-        <ConfirmButton title="Excluir" confirmTitle="Confirmar?" onConfirm={() => {}} />
-        <HeaderAction title="Replicar" onClick={() => {}} />
-      </div>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+<div class="col">
+  <div class="row">
+    <button class="btn lg primary"><span>Começar treino</span><svg width="16" height="16" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><path d="M13 6l6 6-6 6"/></svg></button>
+    <button class="btn sm success"><span>Ajustar</span></button>
+    <button class="btn lg disabled"><span>Indisponível</span></button>
+  </div>
+  <div class="row pills">
+    <button class="pill active">Peito</button>
+    <button class="pill inactive">Costas</button>
+    <button class="pill inactive">Pernas</button>
+  </div>
+  <div class="row">
+    <button class="confirm">Excluir</button>
+    <button class="btn sm secondary"><span>Replicar</span></button>
+  </div>
+</div>
 </body>
 </html>

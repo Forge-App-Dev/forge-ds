@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ds-integrity:
+    name: Integridade do Design System
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm install --no-audit --no-fund
+
+      - name: Aderência — sem hex cru em componentes (token-first)
+        run: node scripts/check-adherence.mjs
+
+      - name: Fonte única de tokens gera CSS byte-fiel
+        run: npm run build:tokens
+
+      - name: Drift — artefatos gerados em dia com as fontes
+        run: node scripts/check-drift.mjs
+
+      - name: Render smoke-test do bundle
+        run: node scripts/render-test.mjs

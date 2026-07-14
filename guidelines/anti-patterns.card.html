@@ -1,0 +1,131 @@
+<!-- @dsCard group="Components" viewport="760x680" name="Anti-patterns (Don'ts)" subtitle="O que o sistema proíbe — e o que fazer no lugar" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--forge-bg); font-family: var(--forge-font-body); color: var(--forge-text); }
+  .intro { font-size: 12px; color: var(--forge-text-dim); line-height: 17px; margin-bottom: 18px; max-width: 640px; }
+  .intro code { color: var(--forge-text); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; align-items: stretch; }
+  .cell { border: var(--forge-border-w-strong) solid var(--forge-border); border-radius: var(--forge-radius-card); padding: 14px; background: var(--forge-surface); position: relative; }
+  .cell.bad { border-color: var(--forge-danger); }
+  .cell.good { border-color: var(--forge-success); }
+  .tag { font-family: var(--forge-font-title); font-size: 11px; letter-spacing: var(--forge-tracking-label); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+  .bad .tag { color: var(--forge-danger); }
+  .good .tag { color: var(--forge-success); }
+  .what { font-size: var(--forge-text-body-sm); color: var(--forge-text-dim); line-height: 16px; margin-bottom: 10px; }
+  .demo { min-height: 58px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  /* demo primitives */
+  .mock-card { background: var(--forge-surface-raised); border-radius: var(--forge-radius-card); padding: 10px 12px; font-size: 12px; color: var(--forge-text); }
+  .mock-card.flat { border: var(--forge-border-w) solid var(--forge-border); }
+  .mock-card.shadowed { box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+  .mock-card.gradient { background: linear-gradient(135deg, #7a1620, #EF4444); }
+  .mock-card.solid { background: var(--forge-surface-raised); border-left: 4px solid var(--forge-accent); }
+  .toast { background: #222; color: #fff; border-radius: 6px; padding: 8px 12px; font-size: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); }
+  .inline-alert { display:flex; gap:8px; align-items:center; width:100%; border:var(--forge-border-w) solid var(--forge-warning); border-radius: var(--forge-radius-input); padding: 8px 10px; font-size: 12px; color: var(--forge-text); }
+  .inline-alert::before { content:"!"; display:grid; place-items:center; width:18px; height:18px; border-radius:50%; background: var(--forge-warning); color:#000; font-weight:800; font-size:12px; }
+  .sheet-wrap { width:100%; height:56px; border:var(--forge-border-w) dashed var(--forge-border-input); border-radius:8px; position:relative; overflow:hidden; }
+  .sheet { position:absolute; left:0; right:0; bottom:0; height:26px; background: var(--forge-panel); border-top-left-radius:12px; border-top-right-radius:12px; border-top:var(--forge-border-w) solid var(--forge-border); }
+  .panel { margin:auto; margin-top:8px; width:70%; height:40px; background: var(--forge-panel); border:var(--forge-border-w) solid var(--forge-border); border-radius: var(--forge-radius-panel); }
+  .type-inter-up { font-family: var(--forge-font-body); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; font-size: 15px; }
+  .type-barlow-up { font-family: var(--forge-font-title); text-transform: uppercase; letter-spacing: var(--forge-tracking-title); font-weight: 700; font-size: 20px; }
+  .type-inter-body { font-family: var(--forge-font-body); font-size: 14px; color: var(--forge-text); }
+  code.snippet { display:block; font-family: ui-monospace, monospace; font-size: 12px; background: var(--forge-surface-raised); border-radius: var(--forge-radius-input); padding: 8px 10px; color: var(--forge-text-dim); width:100%; box-sizing:border-box; }
+  code.snippet b { color: var(--forge-danger); font-weight:700; }
+  .good code.snippet b { color: var(--forge-success); }
+  h2 { font-family: var(--forge-font-title); font-size: 13px; letter-spacing: var(--forge-tracking-eyebrow); text-transform: uppercase; color: var(--forge-text-faint); margin: 0 0 12px; }
+</style>
+</head>
+<body>
+  <h2>Anti-patterns — não faça</h2>
+  <div class="intro">
+    Proibições do sistema (ADR-0001, ADR-0002; regras impostas por <code>_adherence.oxlintrc.json</code>).
+    Coluna <b>✗</b> é o que quem lê o código não deve aprender; coluna <b>✓</b> é o padrão correto.
+  </div>
+
+  <!-- 1. Sombra -->
+  <div class="row">
+    <div class="cell bad">
+      <div class="tag">✗ Card com sombra / elevation</div>
+      <div class="what">Sobre grafite quase-preto a sombra some e vira ruído.</div>
+      <div class="demo"><div class="mock-card shadowed">Treino de peito</div></div>
+    </div>
+    <div class="cell good">
+      <div class="tag">✓ Plano: cor sólida + hairline</div>
+      <div class="what">Profundidade por contraste de superfície + borda 1px. Stripe marca "pertence a".</div>
+      <div class="demo"><div class="mock-card flat solid">Treino de peito</div></div>
+    </div>
+  </div>
+
+  <!-- 2. Gradiente -->
+  <div class="row">
+    <div class="cell bad">
+      <div class="tag">✗ Gradiente de fundo</div>
+      <div class="what">Compete com o único accent e com o motivo Ring.</div>
+      <div class="demo"><div class="mock-card gradient">Card</div></div>
+    </div>
+    <div class="cell good">
+      <div class="tag">✓ Fundo sólido</div>
+      <div class="what">Sempre cor sólida — sem gradiente, foto, textura ou grão.</div>
+      <div class="demo"><div class="mock-card solid">Card</div></div>
+    </div>
+  </div>
+
+  <!-- 3. Toast -->
+  <div class="row">
+    <div class="cell bad">
+      <div class="tag">✗ Toast / Snackbar</div>
+      <div class="what">Some antes de ser lido, hostil a leitor de tela, colide com a tab bar.</div>
+      <div class="demo"><div class="toast">Salvo com sucesso</div></div>
+    </div>
+    <div class="cell good">
+      <div class="tag">✓ Feedback inline persistente</div>
+      <div class="what">InlineAlert ancorado à ação, ou transição de estado no gatilho.</div>
+      <div class="demo"><div class="inline-alert">Sem conexão — salvo localmente</div></div>
+    </div>
+  </div>
+
+  <!-- 4. Bottom sheet -->
+  <div class="row">
+    <div class="cell bad">
+      <div class="tag">✗ Bottom sheet</div>
+      <div class="what">Não existe no sistema desde v1.2.0 (Sheet → Panel).</div>
+      <div class="demo"><div class="sheet-wrap"><div class="sheet"></div></div></div>
+    </div>
+    <div class="cell good">
+      <div class="tag">✓ Panel central com scrim</div>
+      <div class="what">Escolha default para escolhas/confirmações curtas. Fluxo longo = FullScreen.</div>
+      <div class="demo"><div class="sheet-wrap"><div class="panel"></div></div></div>
+    </div>
+  </div>
+
+  <!-- 5. Uppercase em Inter -->
+  <div class="row">
+    <div class="cell bad">
+      <div class="tag">✗ UPPERCASE em Inter</div>
+      <div class="what">Caixa alta é reservada ao display Barlow Condensed.</div>
+      <div class="demo"><span class="type-inter-up">CONTINUAR TREINO</span></div>
+    </div>
+    <div class="cell good">
+      <div class="tag">✓ Caixa alta só no Barlow</div>
+      <div class="what">Inter em sentence case; UPPERCASE só em títulos/labels Barlow.</div>
+      <div class="demo"><span class="type-barlow-up">Continuar</span> <span class="type-inter-body">continuar treino</span></div>
+    </div>
+  </div>
+
+  <!-- 6. Hex cru -->
+  <div class="row">
+    <div class="cell bad">
+      <div class="tag">✗ Hex / px cru</div>
+      <div class="what">Bloqueado pelo lint de aderência. Quebra tema e white-label.</div>
+      <div class="demo"><code class="snippet">color: <b>#EF4444</b>;<br>padding: <b>16px</b>;</code></div>
+    </div>
+    <div class="cell good">
+      <div class="tag">✓ Token via var()</div>
+      <div class="what">Toda cor/medida/fonte vem de um token <code>--forge-*</code>.</div>
+      <div class="demo"><code class="snippet">color: <b>var(--forge-accent)</b>;<br>padding: <b>var(--space-card)</b>;</code></div>
+    </div>
+  </div>
+</body>
+</html>

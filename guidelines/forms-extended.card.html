@@ -1,0 +1,86 @@
+<!-- @dsCard group="Components" viewport="720x640" name="Forms Extended" subtitle="Checkbox, SegmentedControl, PasswordField, Slider, FilterChip" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;padding:20px;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  h3{font-size:11px;text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);margin:18px 0 8px;font-weight:700;}
+  h3:first-child{margin-top:0;}
+  .box{max-width:340px;}
+  .row{display:flex;align-items:center;gap:12px;min-height:44px;}
+
+  /* Checkbox */
+  .cb{width:22px;height:22px;border-radius:var(--forge-radius-chip);background:var(--forge-surface-raised);border:1.5px solid var(--forge-border-input);display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;flex-shrink:0;}
+  .cb.on{background:var(--forge-accent);border-color:var(--forge-accent);}
+  .cb svg{stroke:var(--forge-on-accent);}
+  .cblabel{font-size:var(--forge-text-list-item);color:var(--forge-text);}
+
+  /* SegmentedControl */
+  .seg{display:inline-flex;padding:3px;gap:3px;border-radius:var(--forge-radius-pill);background:var(--forge-surface-raised);border:1px solid var(--forge-border-input);box-sizing:border-box;}
+  .seg button{height:34px;padding-inline:16px;border-radius:var(--forge-radius-pill);border:none;background:transparent;color:var(--forge-text-muted);font-family:var(--forge-font-body);font-weight:700;font-size:var(--forge-text-chip);cursor:pointer;}
+  .seg button.on{background:var(--forge-accent);color:var(--forge-on-accent);}
+
+  /* PasswordField */
+  .lbl{display:block;font-weight:700;font-size:var(--forge-text-label);color:var(--forge-text-faint);text-transform:uppercase;letter-spacing:var(--forge-tracking-label);margin-bottom:6px;}
+  .pf{position:relative;}
+  .pf input{width:100%;height:44px;padding-left:12px;padding-right:44px;box-sizing:border-box;border-radius:var(--forge-radius-input);border:1px solid var(--forge-border-input);background:var(--forge-surface-raised);color:var(--forge-text);font-family:var(--forge-font-body);font-size:var(--forge-text-input);}
+  .pf .eye{position:absolute;right:6px;top:0;height:44px;display:inline-flex;align-items:center;padding:6px;background:none;border:none;cursor:pointer;}
+
+  /* Slider */
+  .slhead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;}
+  .slval{font-family:var(--forge-font-title);font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;}
+  .slval span{font-size:12px;color:var(--forge-text-dim);}
+  .track{position:relative;height:24px;display:flex;align-items:center;}
+  .track .rail{position:absolute;left:0;right:0;height:6px;border-radius:999px;background:var(--forge-surface-raised);border:1px solid var(--forge-border-input);box-sizing:border-box;}
+  .track .fill{position:absolute;left:0;width:58%;height:6px;border-radius:999px;background:var(--forge-accent);}
+  .track .thumb{position:absolute;left:58%;transform:translateX(-50%);width:20px;height:20px;border-radius:999px;background:var(--forge-accent);border:1.5px solid var(--forge-on-accent);box-sizing:border-box;}
+
+  /* FilterChip row */
+  .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;}
+  .chip{height:34px;flex-shrink:0;border-radius:999px;border:1.5px solid var(--forge-border-input);background:transparent;color:var(--forge-text-muted);font-family:var(--forge-font-body);font-weight:700;font-size:var(--forge-text-chip);padding-inline:14px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer;}
+  .chip.on{border-color:var(--forge-accent);background:var(--forge-accent);color:var(--forge-on-accent);}
+  .badge{font-variant-numeric:tabular-nums;font-size:var(--forge-text-mini-label);font-weight:700;color:var(--forge-text-dim);background:var(--forge-surface-raised);border-radius:999px;min-width:18px;height:18px;padding-inline:5px;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;}
+  .chip.on .badge{color:currentColor;background:color-mix(in srgb, var(--forge-on-accent) 22%, transparent);}
+
+  svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .muted{color:var(--forge-text-dim);}
+</style>
+</head>
+<body>
+  <div class="box">
+    <h3>Checkbox (role=checkbox)</h3>
+    <div class="row"><span class="cb on"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><span class="cblabel">Aceito os termos</span></div>
+    <div class="row"><span class="cb on"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span class="cblabel">Selecionar todos <span class="muted">(parcial · aria-checked=mixed)</span></span></div>
+    <div class="row"><span class="cb"></span><span class="cblabel">Lembrar de mim</span></div>
+
+    <h3>SegmentedControl (radiogroup)</h3>
+    <div class="seg" role="radiogroup" aria-label="Unidade">
+      <button class="on" role="radio" aria-checked="true">kg</button>
+      <button role="radio" aria-checked="false">lb</button>
+    </div>
+
+    <h3>PasswordField (TextField + toggle)</h3>
+    <span class="lbl">Senha</span>
+    <div class="pf">
+      <input type="text" value="••••••••" />
+      <button class="eye" aria-label="Ocultar senha" aria-pressed="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" class="muted"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+      </button>
+    </div>
+
+    <h3>Slider (role=slider)</h3>
+    <div class="slhead"><span class="lbl" style="margin:0">Peso alvo</span><span class="slval">72,5<span>kg</span></span></div>
+    <div class="track"><span class="rail"></span><span class="fill"></span><span class="thumb"></span></div>
+
+    <h3>FilterChip (fileira rolável · aria-pressed)</h3>
+    <div class="chips">
+      <span class="chip on">Todos</span>
+      <span class="chip">Peito<span class="badge">12</span></span>
+      <span class="chip">Costas<span class="badge">8</span></span>
+      <span class="chip">Pernas<span class="badge">15</span></span>
+      <span class="chip">Ombros<span class="badge">6</span></span>
+    </div>
+  </div>
+</body>
+</html>

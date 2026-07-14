@@ -2,7 +2,7 @@
 // (abbreviated: today's workout card, week row, reminder banner).
 function TreinoHojeScreen({ onContinueWorkout, onEditWorkout }) {
   const { Icon, Button } = window.ForgeDesignSystem_7731a5;
-  const ACCENT = "#EF4444";
+  const ACCENT = "var(--forge-accent)";
   const workout = { name: "Peito & Tríceps", tag: "A", items: 6, accent: ACCENT };
   const setsDone = 3, setsTotal = 18;
   const pct = setsDone / setsTotal;
@@ -34,7 +34,7 @@ function TreinoHojeScreen({ onContinueWorkout, onEditWorkout }) {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
             <div style={{ flex: 1, minWidth: 0, paddingRight: 10 }}>
               <div style={{ display: "inline-block", backgroundColor: workout.accent, borderRadius: 6, padding: "3px 11px" }}>
-                <span style={{ color: "#fff", fontFamily: "var(--font-body)", fontWeight: 800, fontSize: 13, letterSpacing: 1 }}>{workout.tag}</span>
+                <span style={{ color: "var(--forge-on-accent)", fontFamily: "var(--font-body)", fontWeight: 800, fontSize: 13, letterSpacing: 1 }}>{workout.tag}</span>
               </div>
               <div style={{ fontFamily: "var(--font-title)", fontSize: 34, lineHeight: "36px", marginTop: 12, textTransform: "uppercase", color: "var(--forge-text)" }}>{workout.name}</div>
               <div style={{ color: "#8a8a92", fontSize: 14, marginTop: 6, fontFamily: "var(--font-body)" }}>{workout.items} exercícios · {setsDone}/{setsTotal} séries</div>
@@ -67,7 +67,7 @@ function TreinoHojeScreen({ onContinueWorkout, onEditWorkout }) {
             {w.tag ? (
               <>
                 <div style={{ width: 34, height: 34, borderRadius: 8, backgroundColor: workout.accent, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ color: "#fff", fontFamily: "var(--font-body)", fontWeight: 800, fontSize: 13 }}>{w.tag}</span>
+                  <span style={{ color: "var(--forge-on-accent)", fontFamily: "var(--font-body)", fontWeight: 800, fontSize: 13 }}>{w.tag}</span>
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ color: "var(--forge-text)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 15 }}>{w.name}</div>

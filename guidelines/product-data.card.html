@@ -1,0 +1,152 @@
+<!-- @dsCard group="Components" viewport="860x640" name="Product & Data" subtitle="StreakIndicator, MacroRing, CoachNote, OfflineBanner, WeekStrip, Timeline" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;padding:20px;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  h3{font-size:11px;text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);margin:0 0 12px;font-weight:700;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px;align-items:start;}
+  .col{display:flex;flex-direction:column;}
+  svg{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* StreakIndicator */
+  .streak{display:inline-flex;align-items:center;gap:12px;}
+  .schip{width:34px;height:34px;border-radius:var(--forge-radius-chip);background:color-mix(in srgb,var(--forge-accent) 14%,var(--forge-surface));display:flex;align-items:center;justify-content:center;}
+  .scount{font-family:var(--forge-font-title);font-weight:800;font-size:var(--forge-text-panel-title);line-height:1;letter-spacing:var(--forge-tracking-title);font-variant-numeric:tabular-nums;}
+  .slbl{font-size:var(--forge-text-label);letter-spacing:var(--forge-tracking-label);text-transform:uppercase;color:var(--forge-text-faint);font-weight:700;margin-left:4px;}
+  .sdots{display:inline-flex;gap:6px;margin-top:6px;}
+  .sdot{width:8px;height:8px;border-radius:999px;background:var(--forge-accent);}
+  .sdot.off{background:var(--forge-text-dimmer);}
+
+  /* MacroRing */
+  .macro{display:inline-flex;align-items:center;gap:20px;}
+  .mctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .mkcal{font-family:var(--forge-font-title);font-weight:700;font-size:20px;line-height:1;color:var(--forge-text);font-variant-numeric:tabular-nums;}
+  .mku{font-size:var(--forge-text-mini-label);letter-spacing:var(--forge-tracking-label);text-transform:uppercase;color:var(--forge-text-faint);font-weight:700;}
+  .leg{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;min-width:150px;}
+  .leg li{display:flex;align-items:center;gap:8px;}
+  .sw{width:10px;height:10px;border-radius:999px;flex-shrink:0;}
+  .lname{font-size:var(--forge-text-body-sm);color:var(--forge-text-muted);font-weight:600;}
+  .lval{margin-left:auto;font-size:var(--forge-text-body-sm);color:var(--forge-text-dim);font-weight:700;font-variant-numeric:tabular-nums;}
+
+  /* CoachNote */
+  .coach{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:var(--forge-radius-card);background:color-mix(in srgb,var(--forge-accent) 10%,var(--forge-surface));border:1px solid color-mix(in srgb,var(--forge-accent) 26%,var(--forge-border));}
+  .cchip{width:30px;height:30px;flex-shrink:0;border-radius:999px;background:color-mix(in srgb,var(--forge-accent) 18%,var(--forge-surface));display:flex;align-items:center;justify-content:center;}
+  .coach p{margin:0;font-size:var(--forge-text-body-sm);line-height:var(--forge-lh-body);color:var(--forge-text);font-weight:500;}
+
+  /* OfflineBanner */
+  .off{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--forge-radius-card);background:color-mix(in srgb,var(--forge-warning) 12%,var(--forge-surface));border:1px solid color-mix(in srgb,var(--forge-warning) 40%,var(--forge-border));}
+  .off span.txt{flex:1;font-size:var(--forge-text-body-sm);line-height:var(--forge-lh-body);color:var(--forge-text);}
+  .off button{flex-shrink:0;border:none;background:none;padding:4px 6px;border-radius:var(--forge-radius-chip);font-family:var(--forge-font-body);font-size:var(--forge-text-body-sm);font-weight:700;color:var(--forge-warning);}
+
+  /* WeekStrip */
+  .week{display:flex;gap:6px;max-width:360px;}
+  .wd{flex:1;min-height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:6px 4px;border-radius:var(--forge-radius-input);border:1px solid var(--forge-border);background:var(--forge-surface);}
+  .wd.on{background:var(--forge-accent);border-color:var(--forge-accent);}
+  .wl{font-size:var(--forge-text-mini-label);letter-spacing:var(--forge-tracking-label);text-transform:uppercase;font-weight:700;color:var(--forge-text-faint);}
+  .wn{font-family:var(--forge-font-title);font-weight:700;font-size:var(--forge-text-card-title);line-height:1;font-variant-numeric:tabular-nums;color:var(--forge-text);}
+  .wd.on .wl,.wd.on .wn{color:var(--forge-on-accent);}
+  .wdot{width:5px;height:5px;border-radius:999px;background:transparent;}
+  .wdot.done{background:var(--forge-accent);}
+  .wd.on .wdot.done{background:var(--forge-on-accent);}
+  .wdot.today{background:var(--forge-text-faint);}
+
+  /* Timeline */
+  .tl{list-style:none;margin:0;padding:0;}
+  .tl li{display:flex;gap:12px;}
+  .rail{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:28px;}
+  .mk{width:28px;height:28px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--forge-accent) 16%,var(--forge-surface));color:var(--forge-accent);}
+  .line{flex:1;width:1.5px;min-height:18px;margin-top:4px;background:var(--forge-divider);}
+  .tc{min-width:0;padding-bottom:16px;}
+  .tt{font-size:var(--forge-text-body);font-weight:700;color:var(--forge-text);}
+  .ttime{font-size:var(--forge-text-chip);color:var(--forge-text-faint);margin-left:10px;font-variant-numeric:tabular-nums;}
+  .tdesc{font-size:var(--forge-text-body-sm);color:var(--forge-text-dim);line-height:var(--forge-lh-body-sm);margin-top:2px;}
+</style>
+</head>
+<body>
+<div class="grid">
+
+  <div class="col">
+    <h3>StreakIndicator — sequência de dias</h3>
+    <div class="streak">
+      <span class="schip"><svg width="18" height="18" viewBox="0 0 24 24" style="color:var(--forge-accent)"><path d="M12 2C12 2 6 8 6 14a6 6 0 0 0 12 0c0-2-1-3.5-2-5 0 1.5-1 2.5-2 2.5 0-3-2-6.5-2-9.5z"/></svg></span>
+      <div>
+        <div><span class="scount">12</span><span class="slbl">dias</span></div>
+        <div class="sdots"><span class="sdot"></span><span class="sdot"></span><span class="sdot"></span><span class="sdot off"></span><span class="sdot"></span><span class="sdot"></span><span class="sdot off"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>MacroRing — distribuição de macros</h3>
+    <div class="macro">
+      <div style="position:relative;width:100px;height:100px;">
+        <svg width="100" height="100" style="transform:rotate(-90deg)">
+          <circle cx="50" cy="50" r="44" style="stroke:var(--forge-surface-raised)" stroke-width="12" fill="none"/>
+          <circle cx="50" cy="50" r="44" style="stroke:var(--forge-macro-protein);transform:rotate(0deg);transform-origin:center" stroke-width="12" fill="none" stroke-dasharray="87.3 189.2"/>
+          <circle cx="50" cy="50" r="44" style="stroke:var(--forge-macro-carb);transform:rotate(113.7deg);transform-origin:center" stroke-width="12" fill="none" stroke-dasharray="145.5 131"/>
+          <circle cx="50" cy="50" r="44" style="stroke:var(--forge-macro-fat);transform:rotate(303.2deg);transform-origin:center" stroke-width="12" fill="none" stroke-dasharray="43.6 232.9"/>
+        </svg>
+        <div class="mctr"><span class="mkcal">1.850</span><span class="mku">kcal</span></div>
+      </div>
+      <ul class="leg">
+        <li><span class="sw" style="background:var(--forge-macro-protein)"></span><span class="lname">Proteína</span><span class="lval">120 g</span></li>
+        <li><span class="sw" style="background:var(--forge-macro-carb)"></span><span class="lname">Carboidrato</span><span class="lval">200 g</span></li>
+        <li><span class="sw" style="background:var(--forge-macro-fat)"></span><span class="lname">Gordura</span><span class="lval">60 g</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>CoachNote — voz do coach</h3>
+    <div class="coach">
+      <span class="cchip"><svg width="16" height="16" viewBox="0 0 24 24" style="color:var(--forge-accent)"><path d="M12 2C12 2 6 8 6 14a6 6 0 0 0 12 0c0-2-1-3.5-2-5 0 1.5-1 2.5-2 2.5 0-3-2-6.5-2-9.5z"/></svg></span>
+      <p>Bom ritmo esta semana. Mantém a constância que o resto vem.</p>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>OfflineBanner — estado offline persistente</h3>
+    <div class="off">
+      <svg width="16" height="16" viewBox="0 0 24 24" style="color:var(--forge-warning)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span class="txt">Você está offline. Suas alterações ficam salvas e sincronizam quando a conexão voltar.</span>
+      <button>Tentar de novo</button>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>WeekStrip — seletor de dias (seg–dom)</h3>
+    <div class="week">
+      <div class="wd"><span class="wl">seg</span><span class="wn">8</span><span class="wdot done"></span></div>
+      <div class="wd"><span class="wl">ter</span><span class="wn">9</span><span class="wdot done"></span></div>
+      <div class="wd on"><span class="wl">qua</span><span class="wn">10</span><span class="wdot"></span></div>
+      <div class="wd"><span class="wl">qui</span><span class="wn">11</span><span class="wdot"></span></div>
+      <div class="wd"><span class="wl">sex</span><span class="wn">12</span><span class="wdot"></span></div>
+      <div class="wd"><span class="wl">sáb</span><span class="wn">13</span><span class="wdot"></span></div>
+      <div class="wd"><span class="wl">dom</span><span class="wn">14</span><span class="wdot"></span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>Timeline — histórico vertical</h3>
+    <ol class="tl">
+      <li>
+        <div class="rail"><span class="mk"><svg width="14" height="14" viewBox="0 0 24 24"><line x1="4" y1="9" x2="4" y2="15"/><line x1="7" y1="7" x2="7" y2="17"/><line x1="17" y1="7" x2="17" y2="17"/><line x1="20" y1="9" x2="20" y2="15"/><line x1="7" y1="12" x2="17" y2="12"/></svg></span><span class="line"></span></div>
+        <div class="tc"><div><span class="tt">Treino de peito</span><span class="ttime">hoje</span></div><div class="tdesc">6 exercícios · 45 min</div></div>
+      </li>
+      <li>
+        <div class="rail"><span class="mk"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2C12 2 6 8 6 14a6 6 0 0 0 12 0c0-2-1-3.5-2-5 0 1.5-1 2.5-2 2.5 0-3-2-6.5-2-9.5z"/></svg></span><span class="line"></span></div>
+        <div class="tc"><div><span class="tt">Corrida leve</span><span class="ttime">ontem</span></div><div class="tdesc">5 km</div></div>
+      </li>
+      <li>
+        <div class="rail"><span class="mk"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></div>
+        <div class="tc" style="padding-bottom:0"><div><span class="tt">Descanso</span><span class="ttime">seg 13/07</span></div><div class="tdesc">Recuperação também é treino.</div></div>
+      </li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>

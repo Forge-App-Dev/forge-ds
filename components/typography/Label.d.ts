@@ -8,6 +8,10 @@ export interface LabelProps {
   children?: ReactNode;
   size?: "label" | "miniLabel";
   color?: string;
+  /** Element to render (default "div"). Use "label" to associate a form field. */
+  as?: keyof JSX.IntrinsicElements;
+  /** Id of the associated control — only applied when `as="label"`. */
+  htmlFor?: string;
   style?: CSSProperties;
 }
 

@@ -8,16 +8,20 @@ export function Screen({ children, scroll = true, style }) {
   const wrapProps = scroll
     ? { style: { flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch" } }
     : {};
+  // dvh is the correct dynamic-viewport unit; fall back to vh on browsers that
+  // don't support it, so the screen still fills the viewport (OP-113).
+  const dvhSupported = typeof CSS !== "undefined" && CSS.supports && CSS.supports("min-height", "100dvh");
   return (
     <div
       style={{
-        minHeight: "100dvh",
+        minHeight: dvhSupported ? "100dvh" : "100vh",
         backgroundColor: "var(--forge-bg)",
         display: "flex",
         flexDirection: "column",
         paddingTop: "env(safe-area-inset-top)",
         paddingLeft: "env(safe-area-inset-left)",
         paddingRight: "env(safe-area-inset-right)",
+        paddingBottom: "env(safe-area-inset-bottom)",
       }}
     >
       <Wrap {...wrapProps}>

@@ -17,6 +17,10 @@ export interface RingProps {
   indeterminate?: boolean;
   /** Multiple stacked segments on one ring (e.g. protein+carb+fat at once) instead of a single progress arc — each `{ value: 0..1, color }`. */
   segments?: { value: number; color: string }[];
+  /** Accessible name for the ring (progressbar/img aria-label). */
+  label?: string;
+  /** Optional message announced to screen readers (polite live region) only when a determinate `progress` reaches 100% — e.g. "Série concluída". Additive; no effect on the visual or default behavior. */
+  announce?: string;
 }
 
 export function Ring(props: RingProps): JSX.Element;

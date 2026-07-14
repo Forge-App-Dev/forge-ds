@@ -8,6 +8,7 @@ export { Card } from "./components/core/Card.jsx";
 export { ConfirmButton } from "./components/core/ConfirmButton.jsx";
 export { HeaderAction } from "./components/core/HeaderAction.jsx";
 export { Pill } from "./components/core/Pill.jsx";
+export { Divider } from "./components/core/Divider.jsx";
 // typography
 export { Title } from "./components/typography/Title.jsx";
 export { Text } from "./components/typography/Text.jsx";
@@ -24,6 +25,11 @@ export { Stepper } from "./components/forms/Stepper.jsx";
 export { ListItem } from "./components/forms/ListItem.jsx";
 export { SearchField } from "./components/forms/SearchField.jsx";
 export { Select } from "./components/forms/Select.jsx";
+export { Checkbox } from "./components/forms/Checkbox.jsx";
+export { SegmentedControl } from "./components/forms/SegmentedControl.jsx";
+export { PasswordField } from "./components/forms/PasswordField.jsx";
+export { Slider } from "./components/forms/Slider.jsx";
+export { FilterChip } from "./components/forms/FilterChip.jsx";
 // overlays
 export { Panel } from "./components/overlays/panel/Panel.jsx";
 export { FullScreen } from "./components/overlays/full-screen/FullScreen.jsx";
@@ -32,6 +38,9 @@ export { VideoModal } from "./components/overlays/VideoModal.jsx";
 export { AppHeader } from "./components/navigation/app-header/AppHeader.jsx";
 export { ModuleHeader } from "./components/navigation/module-header/ModuleHeader.jsx";
 export { ModuleTabBar } from "./components/navigation/module-tab-bar/ModuleTabBar.jsx";
+export { Tabs } from "./components/navigation/Tabs.jsx";
+export { Accordion } from "./components/navigation/Accordion.jsx";
+export { WeekStrip } from "./components/navigation/WeekStrip.jsx";
 // feedback
 export { Ring } from "./components/feedback/ring/Ring.jsx";
 export { MacroMeter } from "./components/feedback/macro-meter/MacroMeter.jsx";
@@ -45,6 +54,11 @@ export { Spinner } from "./components/feedback/Spinner.jsx";
 export { StatBadge } from "./components/feedback/StatBadge.jsx";
 export { LoadingScreen } from "./components/feedback/loading-screen/LoadingScreen.jsx";
 export { TargetsCard } from "./components/feedback/TargetsCard.jsx";
+export { ProgressBar } from "./components/feedback/ProgressBar.jsx";
+export { Badge } from "./components/feedback/Badge.jsx";
+export { Avatar } from "./components/feedback/Avatar.jsx";
+export { MacroRing } from "./components/feedback/MacroRing.jsx";
+export { Timeline } from "./components/feedback/Timeline.jsx";
 // dashboard
 export { StatCard } from "./components/dashboard/StatCard.jsx";
 export { QuickAction } from "./components/dashboard/QuickAction.jsx";
@@ -55,6 +69,9 @@ export { PageDots } from "./components/onboarding/PageDots.jsx";
 export { PRCelebration } from "./components/product/PRCelebration.jsx";
 export { RestTimer } from "./components/product/RestTimer.jsx";
 export { SetLogger } from "./components/product/SetLogger.jsx";
+export { StreakIndicator } from "./components/product/StreakIndicator.jsx";
+export { CoachNote } from "./components/product/CoachNote.jsx";
+export { OfflineBanner } from "./components/product/OfflineBanner.jsx";
 // icons
 export { Icon, ICON_NAMES } from "./components/icons/Icon.jsx";
 // utils

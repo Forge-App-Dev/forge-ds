@@ -11,8 +11,8 @@ function ModuleChooserScreen({ onChoose }) {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-        <ModuleCard color="#EF4444" iconName="dumbbell" name="Treino" desc="Treinos, cargas e progresso." onClick={() => onChoose("treino")} Icon={Icon} />
-        <ModuleCard color="#10B981" iconName="flame" name="Nutrição" desc="Alimentação, calorias e macros." onClick={() => onChoose("nutricao")} Icon={Icon} />
+        <ModuleCard color="var(--forge-accent)" iconName="dumbbell" name="Treino" desc="Treinos, cargas e progresso." onClick={() => onChoose("treino")} Icon={Icon} />
+        <ModuleCard color="var(--forge-nutrition)" iconName="flame" name="Nutrição" desc="Alimentação, calorias e macros." onClick={() => onChoose("nutricao")} Icon={Icon} />
       </div>
 
       <div
@@ -40,7 +40,7 @@ function ModuleCard({ color, iconName, name, desc, onClick, Icon }) {
     >
       <div style={{ width: 4, backgroundColor: color, flexShrink: 0 }} />
       <div style={{ flex: 1, display: "flex", alignItems: "center", gap: 18, padding: 22, minWidth: 0 }}>
-        <div style={{ width: 60, height: 60, borderRadius: 16, backgroundColor: color + "22", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+        <div style={{ width: 60, height: 60, borderRadius: 16, backgroundColor: `color-mix(in srgb, ${color} 13.333%, transparent)`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
           <Icon name={iconName} color={color} size={30} />
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>

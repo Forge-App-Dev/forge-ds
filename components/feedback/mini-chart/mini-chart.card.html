@@ -1,25 +1,55 @@
 <!-- @dsCard group="Components" viewport="700x180" name="MiniChart" subtitle="Small history chart — line, bar, area" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .row{display:flex;gap:16px;}
+  .col{flex:1;}
+</style>
 </head>
 <body>
-<div id="root" style="display:flex;gap:16px"></div>
-<script type="text/babel">
-const { MiniChart } = window.ForgeDesignSystem_7731a5;
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.Fragment>
-    <div style={{ flex: 1 }}><MiniChart values={[82, 81.5, 81.2, 80.8, 80.6, 80.1, 79.8]} color="#EF4444" /></div>
-    <div style={{ flex: 1 }}><MiniChart variant="bar" values={[420, 780, 610, 0, 390]} color="#10B981" /></div>
-    <div style={{ flex: 1 }}><MiniChart variant="area" values={[82, 81.5, 81, 80.6, 80.2]} color="#EF4444" /></div>
-  </React.Fragment>
-);
-</script>
+<div class="row">
+  <!-- line -->
+  <div class="col">
+    <svg width="100%" height="60" viewBox="0 0 280 60" style="color:var(--forge-accent)" role="img" aria-label="Gráfico de linha">
+      <path d="M6.0,6.0 L50.7,16.9 L95.3,23.5 L140.0,32.2 L184.7,36.5 L229.3,47.5 L274.0,54.0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6.0" cy="6.0" r="3.5" fill="currentColor"/>
+      <circle cx="50.7" cy="16.9" r="3.5" fill="currentColor"/>
+      <circle cx="95.3" cy="23.5" r="3.5" fill="currentColor"/>
+      <circle cx="140.0" cy="32.2" r="3.5" fill="currentColor"/>
+      <circle cx="184.7" cy="36.5" r="3.5" fill="currentColor"/>
+      <circle cx="229.3" cy="47.5" r="3.5" fill="currentColor"/>
+      <circle cx="274.0" cy="54.0" r="3.5" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- bar -->
+  <div class="col">
+    <svg width="100%" height="60" viewBox="0 0 280 60" style="color:var(--forge-success)" role="img" aria-label="Gráfico de barras">
+      <rect x="14.0" y="26.3" width="37.5" height="27.7" rx="2" fill="currentColor"/>
+      <rect x="67.6" y="6.0" width="37.5" height="48.0" rx="2" fill="currentColor"/>
+      <rect x="121.2" y="15.6" width="37.5" height="38.4" rx="2" fill="currentColor"/>
+      <rect x="174.8" y="50.0" width="37.5" height="4.0" rx="2" fill="currentColor"/>
+      <rect x="228.4" y="28.0" width="37.5" height="26.0" rx="2" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- area -->
+  <div class="col">
+    <svg width="100%" height="60" viewBox="0 0 280 60" style="color:var(--forge-accent)" role="img" aria-label="Gráfico de área">
+      <defs>
+        <linearGradient id="mc-area" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="currentColor" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M6.0,6.0 L73.0,19.3 L140.0,32.7 L207.0,43.3 L274.0,54.0 L274.0,54 L6.0,54 Z" fill="url(#mc-area)" stroke="none"/>
+      <path d="M6.0,6.0 L73.0,19.3 L140.0,32.7 L207.0,43.3 L274.0,54.0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div>
 </body>
 </html>

@@ -37,7 +37,7 @@ function ExerciseForm({ visible, onClose, exercise }) {
       </div>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
         {groups.map((g) => (
-          <Pill key={g} title={g[0].toUpperCase() + g.slice(1)} active={muscle === g} color="#EF4444" onClick={() => setMuscle(g)} />
+          <Pill key={g} title={g[0].toUpperCase() + g.slice(1)} active={muscle === g} color="var(--forge-accent)" onClick={() => setMuscle(g)} />
         ))}
       </div>
       <div style={{ display: "flex", gap: 10, marginTop: 10 }}>

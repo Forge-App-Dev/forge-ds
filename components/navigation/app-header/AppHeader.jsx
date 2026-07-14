@@ -1,9 +1,14 @@
 import React from "react";
 import { Icon } from "../../icons/Icon";
 
-// Global app header — Forge mark + wordmark left; back-to-modules (grid) +
-// logout icon buttons right. `markSrc` should point at assets/forge-mark.png.
-export function AppHeader({ markSrc, inModule = false, onBackToModules, onLogout }) {
+// Global app header — brand mark + wordmark left; back-to-modules (grid) +
+// logout icon buttons right. `brand={{ name, markSrc }}` sets the wordmark and
+// mark image (default name "Forge") so sibling apps in the family swap only
+// their brand (OP-120); `markSrc` is kept as a legacy shorthand. The brand is
+// its own element (AppBrand). markSrc should point at assets/forge-mark.png.
+export function AppHeader({ brand, markSrc, inModule = false, onBackToModules, onLogout }) {
+  const name = (brand && brand.name) || "Forge";
+  const mark = (brand && brand.markSrc) || markSrc;
   return (
     <div
       style={{
@@ -30,11 +35,11 @@ export function AppHeader({ markSrc, inModule = false, onBackToModules, onLogout
           padding: 0,
         }}
       >
-        <AppBrand markSrc={markSrc} />
+        <AppBrand name={name} markSrc={mark} />
       </button>
       ) : (
       <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
-        <AppBrand markSrc={markSrc} />
+        <AppBrand name={name} markSrc={mark} />
       </div>
       )}
       <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
@@ -51,7 +56,9 @@ export function AppHeader({ markSrc, inModule = false, onBackToModules, onLogout
   );
 }
 
-function AppBrand({ markSrc }) {
+function AppBrand({ name = "Forge", markSrc }) {
+  const first = name.slice(0, 1);
+  const rest = name.slice(1);
   return (
     <>
       {markSrc ? <img src={markSrc} alt="" style={{ width: 26, height: 26, objectFit: "contain" }} /> : null}
@@ -65,7 +72,7 @@ function AppBrand({ markSrc }) {
           color: "var(--forge-text)",
         }}
       >
-        <span style={{ color: "var(--forge-accent)" }}>F</span>orge
+        <span style={{ color: "var(--forge-accent)" }}>{first}</span>{rest}
       </span>
     </>
   );
