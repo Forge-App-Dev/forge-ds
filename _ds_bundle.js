@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"a0ec269642cf","components/feedback/Skeleton.jsx":"dc3c940737a7","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"a0ec269642cf","components/feedback/Skeleton.jsx":"dc3c940737a7","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"150f8f9648fc","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"b9d596cf31f3","components/product/SetLogger.jsx":"80a52f1a558e"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -1020,7 +1020,7 @@ function FullScreen({
       cursor: "pointer",
       marginLeft: -6
     }
-  }, "✕"), /*#__PURE__*/React.createElement("div", {
+  }, "\u2715"), /*#__PURE__*/React.createElement("div", {
     id: titleId,
     style: {
       flex: 1,
@@ -1074,7 +1074,7 @@ function AppHeader({
   }, inModule ? /*#__PURE__*/React.createElement("button", {
     className: "forge-focusable",
     onClick: onBackToModules,
-    "aria-label": "Voltar aos módulos",
+    "aria-label": "Voltar aos m\xF3dulos",
     style: {
       display: "flex",
       alignItems: "center",
@@ -1104,7 +1104,7 @@ function AppHeader({
     className: "forge-focusable",
     onClick: onBackToModules,
     style: iconBtnStyle,
-    "aria-label": "Voltar aos módulos"
+    "aria-label": "Voltar aos m\xF3dulos"
   }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "grid",
     color: "var(--forge-text-muted)",
@@ -1299,6 +1299,15 @@ Object.assign(__ds_scope, { ConfirmButton });
 
 // components/core/HeaderAction.jsx
 try { (() => {
+function _extends() {
+  return _extends = Object.assign ? Object.assign.bind() : function (n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, _extends.apply(null, arguments);
+}
 // HeaderAction — discreet outlined action for a full-screen header (e.g.
 // "Replicar"). DEPRECATED as a distinct component (OP-006): this is now just
 // Button variant="secondary" size="sm". Kept as a thin alias so existing
@@ -1309,13 +1318,12 @@ function HeaderAction({
   onClick,
   ...rest
 }) {
-  return /*#__PURE__*/React.createElement(__ds_scope.Button, {
+  return /*#__PURE__*/React.createElement(__ds_scope.Button, _extends({
     variant: "secondary",
     size: "sm",
     title: title,
-    onClick: onClick,
-    ...rest
-  });
+    onClick: onClick
+  }, rest));
 }
 Object.assign(__ds_scope, { HeaderAction });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/HeaderAction.jsx", error: String((e && e.message) || e) }); }
@@ -1765,7 +1773,7 @@ function TargetsCard({
       letterSpacing: 1,
       color: "var(--forge-text-faint)"
     }
-  }, "Suas metas diárias"), onEdit ? /*#__PURE__*/React.createElement("button", {
+  }, "Suas metas di\xE1rias"), onEdit ? /*#__PURE__*/React.createElement("button", {
     onClick: onEdit,
     style: {
       background: "none",
@@ -1787,7 +1795,7 @@ function TargetsCard({
     value: kcal,
     color: "var(--forge-text)"
   }), /*#__PURE__*/React.createElement(Stat, {
-    label: "Proteína",
+    label: "Prote\xEDna",
     value: protein,
     unit: "g",
     color: "var(--forge-macro-protein)"
@@ -2078,7 +2086,7 @@ function MetaBar({
     const total = target > 0 ? target : segments.reduce((s, seg) => s + seg.value, 0) || 1;
     return /*#__PURE__*/React.createElement("div", {
       role: "img",
-      "aria-label": "Distribuição por refeição",
+      "aria-label": "Distribui\xE7\xE3o por refei\xE7\xE3o",
       style: {
         display: "flex",
         height: 6,
@@ -3009,7 +3017,7 @@ function VideoModal({
       fontSize: 20,
       cursor: "pointer"
     }
-  }, "✕")), /*#__PURE__*/React.createElement("div", {
+  }, "\u2715")), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       display: "flex",
@@ -3111,7 +3119,7 @@ function Panel({
       fontSize: 18,
       cursor: "pointer"
     }
-  }, "✕")), /*#__PURE__*/React.createElement("div", {
+  }, "\u2715")), /*#__PURE__*/React.createElement("div", {
     style: {
       overflowY: "auto",
       padding: `0 18px ${footer ? 4 : 18}px`
@@ -3285,6 +3293,781 @@ function Title({
 Object.assign(__ds_scope, { Title });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/typography/Title.jsx", error: String((e && e.message) || e) }); }
 
+// components/dashboard/StatCard.jsx
+try { (() => {
+// StatCard — a dashboard metric cell (PF-02, OP-023). The "DashboardTile" the
+// screens would otherwise remount by hand: an eyebrow label, a big Barlow value
+// (tabular numerals so figures don't jitter), an optional leading icon, an
+// optional trend (StatBadge) and an optional sparkline (MiniChart). Composes
+// primitives — it holds no product copy, so it works for a workout stat, a
+// nutrition total, or a sibling app.
+//
+// Pass `onClick` to make the whole cell a pressable tile (Card handles the
+// role=button + focus + press state) — this is the navigable "tile" sense.
+// `accent` tints the left stripe and the icon (e.g. a module color); when
+// omitted the cell is neutral. `chart` takes MiniChart props ({ values,
+// variant, color }); `trend` takes StatBadge props ({ value, unit,
+// goodDirection }).
+function StatCard({
+  label,
+  value,
+  unit,
+  icon,
+  accent,
+  trend,
+  chart,
+  caption,
+  onClick,
+  style
+}) {
+  const head = /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "var(--forge-space-6)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "var(--forge-space-4)",
+      minWidth: 0
+    }
+  }, icon ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 26,
+      height: 26,
+      borderRadius: "var(--forge-radius-chip)",
+      backgroundColor: "var(--forge-surface-raised)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: accent || "var(--forge-text-faint)",
+    size: 15
+  })) : null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-label)",
+      letterSpacing: "var(--forge-tracking-label)",
+      textTransform: "uppercase",
+      color: "var(--forge-text-faint)",
+      fontWeight: 700,
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    }
+  }, label)), trend ? /*#__PURE__*/React.createElement(__ds_scope.StatBadge, trend) : null);
+  return /*#__PURE__*/React.createElement(__ds_scope.Card, {
+    stripeColor: accent,
+    onClick: onClick,
+    style: {
+      marginBottom: 0,
+      ...style
+    }
+  }, head, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "baseline",
+      gap: "var(--forge-space-2)",
+      marginTop: "var(--forge-space-5)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: 30,
+      lineHeight: 1,
+      color: "var(--forge-text)",
+      fontVariantNumeric: "tabular-nums",
+      letterSpacing: "var(--forge-tracking-title)"
+    }
+  }, value), unit ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body)",
+      color: "var(--forge-text-dim)",
+      fontWeight: 600
+    }
+  }, unit) : null), caption ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-chip)",
+      color: "var(--forge-text-dim)",
+      marginTop: "var(--forge-space-2)",
+      lineHeight: "var(--forge-lh-chip)"
+    }
+  }, caption) : null, chart ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "var(--forge-space-6)"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.MiniChart, chart)) : null);
+}
+Object.assign(__ds_scope, { StatCard });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/dashboard/StatCard.jsx", error: String((e && e.message) || e) }); }
+
+// components/dashboard/QuickAction.jsx
+try { (() => {
+// QuickAction — an icon+label shortcut for a dashboard grid (PF-02, OP-024).
+// One cell: a rounded icon chip over a short label, the whole thing a real
+// button (keyboard-focusable, press state, ≥44px target). Lay several out in a
+// CSS grid on the consumer side — QuickAction fills its cell (width 100%).
+//
+// `accent` tints the icon chip (e.g. a module color); omit for neutral.
+// `badge` shows a small count dot (e.g. pending items). No product copy lives
+// here — `icon`/`label` are supplied by the screen.
+function QuickAction({
+  icon,
+  label,
+  onClick,
+  accent,
+  badge,
+  disabled = false,
+  style
+}) {
+  const [pressed, setPressed] = React.useState(false);
+  const tint = accent || "var(--forge-accent)";
+  return /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: disabled ? undefined : onClick,
+    disabled: disabled,
+    onMouseDown: () => setPressed(true),
+    onMouseUp: () => setPressed(false),
+    onMouseLeave: () => setPressed(false),
+    onTouchStart: () => setPressed(true),
+    onTouchEnd: () => setPressed(false),
+    style: {
+      width: "100%",
+      minHeight: "var(--forge-tap-target-min)",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "var(--forge-space-5)",
+      padding: "var(--forge-space-8) var(--forge-space-6)",
+      backgroundColor: "var(--forge-surface)",
+      border: "var(--forge-border-w) solid var(--forge-border)",
+      borderRadius: "var(--forge-radius-card)",
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,
+      transition: "opacity var(--forge-duration-instant) var(--forge-ease-standard)",
+      font: "inherit",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: "relative",
+      width: 44,
+      height: 44,
+      borderRadius: "var(--forge-radius-input)",
+      backgroundColor: "var(--forge-surface-raised)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: tint,
+    size: 22
+  }), badge != null ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: "absolute",
+      top: -4,
+      right: -4,
+      minWidth: 18,
+      height: 18,
+      paddingInline: 4,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: "var(--forge-accent)",
+      color: "var(--forge-on-accent)",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-mini-label)",
+      fontWeight: 700,
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxSizing: "border-box"
+    }
+  }, badge) : null), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-chip)",
+      fontWeight: 600,
+      color: "var(--forge-text)",
+      textAlign: "center",
+      lineHeight: "var(--forge-lh-chip)"
+    }
+  }, label));
+}
+Object.assign(__ds_scope, { QuickAction });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/dashboard/QuickAction.jsx", error: String((e && e.message) || e) }); }
+
+// components/onboarding/PageDots.jsx
+try { (() => {
+// PageDots — position indicator for a Pager/carousel (PF-01, OP-022). The
+// active dot grows into an accent pill; the rest stay small and dimmer, per the
+// token rule (accent ativo, dimmer inativo). Presentational only: it's marked
+// aria-hidden because the Pager owns the spoken "página X de N" announcement —
+// duplicating it here would make a screen reader say the position twice.
+function PageDots({
+  count = 0,
+  active = 0,
+  accent,
+  style
+}) {
+  const on = accent || "var(--forge-accent)";
+  return /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "var(--forge-space-3)",
+      ...style
+    }
+  }, Array.from({
+    length: count
+  }, (_, i) => {
+    const isActive = i === active;
+    return /*#__PURE__*/React.createElement("span", {
+      key: i,
+      style: {
+        width: isActive ? 18 : 6,
+        height: 6,
+        borderRadius: "var(--forge-radius-pill)",
+        backgroundColor: isActive ? on : "var(--forge-text-dimmer)",
+        transition: "width var(--forge-duration-base) var(--forge-ease-standard), background-color var(--forge-duration-base) var(--forge-ease-standard)"
+      }
+    });
+  }));
+}
+Object.assign(__ds_scope, { PageDots });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/onboarding/PageDots.jsx", error: String((e && e.message) || e) }); }
+
+// components/onboarding/Pager.jsx
+try { (() => {
+// Pager — the onboarding carousel (PF-01, OP-022 + pattern OP-062). One slide
+// at a time, with the onboarding rules baked in so screens don't reinvent them:
+//   - at most 3 slides (a warning fires in dev if you pass more);
+//   - "Pular" is always visible (until the last slide, where the single CTA IS
+//     the exit) — never trap the user;
+//   - the last slide shows ONE primary CTA (doneLabel), replacing "Próximo".
+//
+// Self-contained/uncontrolled: it tracks the current slide internally (start at
+// `initialPage`) and reports movement via `onPageChange`. `onSkip` fires from
+// "Pular"; `onDone` fires from the final CTA. Keyboard: ←/→ move between
+// slides. Accessible: a live region announces "Slide X de N" on change and
+// inactive slides are aria-hidden, so a screen reader reads only the current
+// one. `accent` themes the dots + CTA (e.g. a sibling-app color).
+function Pager({
+  pages = [],
+  initialPage = 0,
+  onPageChange,
+  onSkip,
+  onDone,
+  skipLabel = "Pular",
+  nextLabel = "Próximo",
+  doneLabel = "Começar",
+  accent,
+  style
+}) {
+  const count = pages.length;
+  if (count > 3 && typeof console !== "undefined") {
+    console.warn(`Pager: onboarding deve ter no máximo 3 telas (recebeu ${count}) — ver OP-062.`);
+  }
+  const [page, setPage] = React.useState(Math.min(Math.max(initialPage, 0), Math.max(count - 1, 0)));
+  const isLast = page >= count - 1;
+  const go = next => {
+    const clamped = Math.min(Math.max(next, 0), count - 1);
+    if (clamped !== page) {
+      setPage(clamped);
+      if (onPageChange) onPageChange(clamped);
+    }
+  };
+  return /*#__PURE__*/React.createElement("section", {
+    "aria-roledescription": "carrossel",
+    "aria-label": "Introdu\xE7\xE3o",
+    tabIndex: 0,
+    className: "forge-focusable",
+    onKeyDown: e => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        go(page + 1);
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        go(page - 1);
+      }
+    },
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      height: "100%",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "forge-sr-only",
+    role: "status",
+    "aria-live": "polite"
+  }, `Slide ${page + 1} de ${count}`), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minHeight: 0,
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, pages.map((content, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    "aria-hidden": i === page ? undefined : "true",
+    style: {
+      display: i === page ? "flex" : "none",
+      flex: 1,
+      minHeight: 0,
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      padding: "var(--forge-space-10)"
+    }
+  }, content))), /*#__PURE__*/React.createElement("footer", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "var(--forge-space-8)",
+      padding: "var(--forge-space-8) var(--forge-space-10)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 64
+    }
+  }, !isLast ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "ghost",
+    size: "md",
+    title: skipLabel,
+    onClick: onSkip
+  }) : null), /*#__PURE__*/React.createElement(__ds_scope.PageDots, {
+    count: count,
+    active: page,
+    accent: accent
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      minWidth: 64,
+      display: "flex",
+      justifyContent: "flex-end"
+    }
+  }, isLast ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "primary",
+    size: "md",
+    color: accent,
+    title: doneLabel,
+    onClick: onDone
+  }) : /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "primary",
+    size: "md",
+    color: accent,
+    title: nextLabel,
+    icon: "chevron-right",
+    iconPosition: "right",
+    onClick: () => go(page + 1)
+  }))));
+}
+Object.assign(__ds_scope, { Pager });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/onboarding/Pager.jsx", error: String((e && e.message) || e) }); }
+
+// components/product/PRCelebration.jsx
+try { (() => {
+// PRCelebration — the personal-record moment (OP-054). This is a PRODUCT
+// component: it knows the training domain (a "recorde") and carries brand copy,
+// so it lives in components/product/, composing primitives (Icon, Button) — it
+// is not a neutral primitive (OP-009).
+//
+// It is also the system's ONE sanctioned "emotional" motion: the trophy scales
+// and fades in once via .forge-anim-celebrate (tokens/motion.css), which is
+// disabled under prefers-reduced-motion in that same file. No other emotional
+// motion is allowed anywhere in the system — this is the exception, formalized.
+//
+// `exercise` + `value`/`unit` name the record; `previous` optionally shows the
+// mark it beat. role="status" + aria-live announces it to screen readers.
+// `accent` themes the ring/trophy (sibling apps / module color).
+function PRCelebration({
+  title = "Novo recorde!",
+  exercise,
+  value,
+  unit,
+  previous,
+  onContinue,
+  continueLabel = "Continuar",
+  accent,
+  style
+}) {
+  const tint = accent || "var(--forge-accent)";
+  return /*#__PURE__*/React.createElement("div", {
+    role: "status",
+    "aria-live": "polite",
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      textAlign: "center",
+      gap: "var(--forge-space-8)",
+      padding: "var(--forge-space-16) var(--forge-space-10)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "forge-anim-celebrate",
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "var(--forge-space-8)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative",
+      width: 96,
+      height: 96,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      inset: 0,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: tint,
+      opacity: 0.14
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      inset: 12,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: tint,
+      opacity: 0.22
+    }
+  }), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "trophy",
+    color: tint,
+    size: 40
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 800,
+      textTransform: "uppercase",
+      letterSpacing: "var(--forge-tracking-title)",
+      fontSize: "var(--forge-text-panel-title)",
+      lineHeight: "var(--forge-lh-panel-title)",
+      color: tint
+    }
+  }, title)), exercise || value != null ? /*#__PURE__*/React.createElement("div", null, exercise ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body)",
+      color: "var(--forge-text-dim)",
+      marginBottom: "var(--forge-space-2)"
+    }
+  }, exercise) : null, value != null ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "baseline",
+      justifyContent: "center",
+      gap: "var(--forge-space-2)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: 34,
+      lineHeight: 1,
+      color: "var(--forge-text)",
+      fontVariantNumeric: "tabular-nums",
+      letterSpacing: "var(--forge-tracking-title)"
+    }
+  }, value), unit ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-card-title)",
+      color: "var(--forge-text-dim)",
+      fontWeight: 600
+    }
+  }, unit) : null) : null, previous ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-chip)",
+      color: "var(--forge-text-faint)",
+      marginTop: "var(--forge-space-3)"
+    }
+  }, `anterior: ${previous}`) : null) : null, onContinue ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "primary",
+    size: "lg",
+    color: accent,
+    title: continueLabel,
+    onClick: onContinue
+  }) : null);
+}
+Object.assign(__ds_scope, { PRCelebration });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/PRCelebration.jsx", error: String((e && e.message) || e) }); }
+
+// components/product/RestTimer.jsx
+try { (() => {
+// RestTimer — rest countdown between sets (OP-055). A PRODUCT component (it's a
+// training concept), composing the signature Ring: the arc drains from full to
+// empty as the rest runs down, with the remaining time (mm:ss, Barlow tabular)
+// in the center. The piece a generic DS never has.
+//
+// Self-running by default: it counts down from `duration` seconds once mounted
+// and `running`, calling `onComplete` at zero. The screen can pause/resume,
+// add 15s, or skip. `accent` themes the arc (module color / sibling app).
+function fmt(s) {
+  const m = Math.floor(s / 60);
+  const sec = String(Math.max(0, s) % 60).padStart(2, "0");
+  return `${m}:${sec}`;
+}
+function RestTimer({
+  duration = 90,
+  running: initialRunning = true,
+  onComplete,
+  onSkip,
+  accent,
+  size = 132,
+  style
+}) {
+  const [left, setLeft] = React.useState(duration);
+  const [running, setRunning] = React.useState(initialRunning);
+  const done = left <= 0;
+  React.useEffect(() => {
+    if (!running || done || typeof window === "undefined") return;
+    const id = window.setInterval(() => {
+      setLeft(v => {
+        if (v <= 1) {
+          window.clearInterval(id);
+          if (onComplete) onComplete();
+          return 0;
+        }
+        return v - 1;
+      });
+    }, 1000);
+    return () => window.clearInterval(id);
+  }, [running, done, onComplete]);
+  const tint = done ? "var(--forge-success)" : accent || "var(--forge-accent)";
+  const progress = duration > 0 ? left / duration : 0;
+  const ctrl = (label, glyph, onClick) => /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onClick,
+    "aria-label": label,
+    style: {
+      width: "var(--forge-size-control-md)",
+      height: "var(--forge-size-control-md)",
+      borderRadius: "var(--forge-radius-pill)",
+      border: "var(--forge-border-w) solid var(--forge-border-input)",
+      backgroundColor: "var(--forge-surface-raised)",
+      color: "var(--forge-text)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: glyph,
+    color: "currentColor",
+    size: 20
+  }));
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "var(--forge-space-8)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Ring, {
+    size: size,
+    stroke: 10,
+    progress: progress,
+    color: tint,
+    label: `Descanso: ${fmt(left)} restantes`
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: 30,
+      lineHeight: 1,
+      color: "var(--forge-text)",
+      fontVariantNumeric: "tabular-nums",
+      letterSpacing: "var(--forge-tracking-title)"
+    }
+  }, fmt(left)), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-label)",
+      letterSpacing: "var(--forge-tracking-label)",
+      textTransform: "uppercase",
+      color: "var(--forge-text-faint)",
+      fontWeight: 700,
+      marginTop: "var(--forge-space-2)"
+    }
+  }, done ? "Pronto" : "Descanso"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "var(--forge-space-6)"
+    }
+  }, ctrl("Adicionar 15 segundos", "plus", () => setLeft(v => v + 15)), done ? ctrl("Reiniciar descanso", "refresh", () => {
+    setLeft(duration);
+    setRunning(true);
+  }) : ctrl(running ? "Pausar" : "Retomar", running ? "pause" : "play", () => setRunning(r => !r)), ctrl("Pular descanso", "x", () => {
+    setRunning(false);
+    setLeft(0);
+    if (onSkip) onSkip();
+  })));
+}
+Object.assign(__ds_scope, { RestTimer });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/RestTimer.jsx", error: String((e && e.message) || e) }); }
+
+// components/product/SetLogger.jsx
+try { (() => {
+// SetLogger — a single set-logging row: weight × reps × check (OP-056). The
+// most-touched control in a training app, so it's a formalized PRODUCT
+// primitive instead of being remounted per screen. Composes Stepper (weight +
+// reps) with the hard-won TalkBack rule already inside it, plus a check toggle
+// that marks the set done.
+//
+// `set` is the set number (leading badge). `weight`/`reps` are controlled;
+// report edits via `onWeightChange`/`onRepsChange`. `done`/`onToggleDone` mark
+// completion (the row dims + the check fills). `weightStep` defaults to 2.5kg,
+// `repsStep` to 1. `accent` themes the checked state.
+function SetLogger({
+  set,
+  weight = 0,
+  reps = 0,
+  unit = "kg",
+  onWeightChange,
+  onRepsChange,
+  done = false,
+  onToggleDone,
+  weightStep = 2.5,
+  repsStep = 1,
+  accent,
+  style
+}) {
+  const tint = accent || "var(--forge-accent)";
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "var(--forge-space-6)",
+      padding: "var(--forge-space-5) var(--forge-space-6)",
+      backgroundColor: "var(--forge-surface)",
+      border: `var(--forge-border-w) solid ${done ? tint : "var(--forge-border)"}`,
+      borderRadius: "var(--forge-radius-card)",
+      opacity: done ? "var(--forge-opacity-press)" : 1,
+      transition: "opacity var(--forge-duration-fast) var(--forge-ease-standard), border-color var(--forge-duration-fast) var(--forge-ease-standard)",
+      ...style
+    }
+  }, set != null ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 24,
+      height: 24,
+      flexShrink: 0,
+      borderRadius: "var(--forge-radius-chip)",
+      backgroundColor: "var(--forge-surface-raised)",
+      color: "var(--forge-text-dim)",
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: 13,
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontVariantNumeric: "tabular-nums"
+    }
+  }, set) : null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "var(--forge-space-1)"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Stepper, {
+    value: weight,
+    onChange: onWeightChange,
+    min: 0,
+    step: weightStep,
+    unit: unit,
+    label: "peso",
+    disabled: done
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-mini-label)",
+      letterSpacing: "var(--forge-tracking-label)",
+      textTransform: "uppercase",
+      color: "var(--forge-text-faint)",
+      fontWeight: 700
+    }
+  }, "peso")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "var(--forge-space-1)"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Stepper, {
+    value: reps,
+    onChange: onRepsChange,
+    min: 0,
+    step: repsStep,
+    label: "reps",
+    disabled: done
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-mini-label)",
+      letterSpacing: "var(--forge-tracking-label)",
+      textTransform: "uppercase",
+      color: "var(--forge-text-faint)",
+      fontWeight: 700
+    }
+  }, "reps")), /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onToggleDone,
+    role: "checkbox",
+    "aria-checked": done,
+    "aria-label": `Concluir série ${set != null ? set : ""}`.trim(),
+    style: {
+      marginLeft: "auto",
+      width: "var(--forge-size-control-md)",
+      height: "var(--forge-size-control-md)",
+      flexShrink: 0,
+      borderRadius: "var(--forge-radius-input)",
+      border: `var(--forge-border-w) solid ${done ? tint : "var(--forge-border-input)"}`,
+      backgroundColor: done ? tint : "transparent",
+      color: done ? "var(--forge-on-accent)" : "var(--forge-text-faint)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer",
+      transition: "background-color var(--forge-duration-fast) var(--forge-ease-standard), border-color var(--forge-duration-fast) var(--forge-ease-standard)"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "check",
+    color: "currentColor",
+    size: 20
+  })));
+}
+Object.assign(__ds_scope, { SetLogger });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/SetLogger.jsx", error: String((e && e.message) || e) }); }
+
 __ds_ns.Icon = __ds_scope.Icon;
 
 __ds_ns.ICON_NAMES = __ds_scope.ICON_NAMES;
@@ -3362,5 +4145,19 @@ __ds_ns.SectionLabel = __ds_scope.SectionLabel;
 __ds_ns.Text = __ds_scope.Text;
 
 __ds_ns.Title = __ds_scope.Title;
+
+__ds_ns.StatCard = __ds_scope.StatCard;
+
+__ds_ns.QuickAction = __ds_scope.QuickAction;
+
+__ds_ns.PageDots = __ds_scope.PageDots;
+
+__ds_ns.Pager = __ds_scope.Pager;
+
+__ds_ns.PRCelebration = __ds_scope.PRCelebration;
+
+__ds_ns.RestTimer = __ds_scope.RestTimer;
+
+__ds_ns.SetLogger = __ds_scope.SetLogger;
 
 })();

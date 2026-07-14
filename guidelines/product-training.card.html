@@ -1,0 +1,103 @@
+<!-- @dsCard group="Components" viewport="760x560" name="Product — Treino" subtitle="PRCelebration, RestTimer e SetLogger (camada de produto)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;padding:20px;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  h3{font-size:11px;text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);margin:0 0 12px;font-weight:700;}
+  .row{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;}
+  .col{display:flex;flex-direction:column;}
+
+  /* PRCelebration */
+  .pr{width:260px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:32px 20px;border:1px solid var(--forge-border);border-radius:var(--forge-radius-panel);background:var(--forge-surface);}
+  .halo{position:relative;width:96px;height:96px;display:flex;align-items:center;justify-content:center;}
+  .halo .r1{position:absolute;inset:0;border-radius:999px;background:var(--forge-accent);opacity:.14;}
+  .halo .r2{position:absolute;inset:12px;border-radius:999px;background:var(--forge-accent);opacity:.22;}
+  .prttl{font-family:var(--forge-font-title);font-weight:800;text-transform:uppercase;letter-spacing:var(--forge-tracking-title);font-size:22px;color:var(--forge-accent);}
+  .prex{font-size:var(--forge-text-body);color:var(--forge-text-dim);margin-bottom:2px;}
+  .prval{font-family:var(--forge-font-title);font-weight:700;font-size:34px;line-height:1;letter-spacing:var(--forge-tracking-title);font-variant-numeric:tabular-nums;}
+  .prunit{font-size:var(--forge-text-card-title);color:var(--forge-text-dim);font-weight:600;}
+  .prprev{font-size:var(--forge-text-chip);color:var(--forge-text-faint);margin-top:6px;}
+  .btn{height:46px;padding-inline:18px;border-radius:var(--forge-radius-button);border:none;background:var(--forge-accent);color:var(--forge-on-accent);font-family:var(--forge-font-body);font-weight:800;font-size:15px;}
+
+  /* RestTimer */
+  .rt{display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .ringwrap{position:relative;width:132px;height:132px;}
+  .ctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .time{font-family:var(--forge-font-title);font-weight:700;font-size:30px;line-height:1;letter-spacing:var(--forge-tracking-title);font-variant-numeric:tabular-nums;}
+  .sub{font-size:var(--forge-text-label);letter-spacing:var(--forge-tracking-label);text-transform:uppercase;color:var(--forge-text-faint);font-weight:700;margin-top:2px;}
+  .ctrls{display:inline-flex;gap:12px;}
+  .cbtn{width:44px;height:44px;border-radius:999px;border:1px solid var(--forge-border-input);background:var(--forge-surface-raised);color:var(--forge-text);display:inline-flex;align-items:center;justify-content:center;}
+
+  /* SetLogger */
+  .setwrap{width:340px;display:flex;flex-direction:column;gap:8px;}
+  .set{display:flex;align-items:center;gap:12px;padding:10px 12px;background:var(--forge-surface);border:1px solid var(--forge-border);border-radius:var(--forge-radius-card);}
+  .set.done{border-color:var(--forge-accent);opacity:.85;}
+  .snum{width:24px;height:24px;border-radius:var(--forge-radius-chip);background:var(--forge-surface-raised);color:var(--forge-text-dim);font-family:var(--forge-font-title);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;}
+  .stk{display:flex;flex-direction:column;align-items:center;gap:2px;}
+  .stprow{display:inline-flex;align-items:center;gap:8px;}
+  .sbtn{width:34px;height:34px;border-radius:var(--forge-radius-input);border:1px solid var(--forge-border-input);background:var(--forge-surface-raised);color:var(--forge-text);display:inline-flex;align-items:center;justify-content:center;}
+  .sval{min-width:42px;text-align:center;font-family:var(--forge-font-title);font-weight:700;font-size:18px;font-variant-numeric:tabular-nums;}
+  .sval small{font-size:12px;color:var(--forge-text-dim);}
+  .stlbl{font-size:var(--forge-text-mini-label);letter-spacing:var(--forge-tracking-label);text-transform:uppercase;color:var(--forge-text-faint);font-weight:700;}
+  .chk{margin-left:auto;width:44px;height:44px;border-radius:var(--forge-radius-input);border:1px solid var(--forge-border-input);background:transparent;color:var(--forge-text-faint);display:inline-flex;align-items:center;justify-content:center;}
+  .chk.on{background:var(--forge-accent);border-color:var(--forge-accent);color:var(--forge-on-accent);}
+  svg{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col">
+    <h3>PRCelebration — único motion emocional</h3>
+    <div class="pr">
+      <div class="halo"><span class="r1"></span><span class="r2"></span>
+        <svg width="40" height="40" viewBox="0 0 24 24" style="color:var(--forge-accent)"><path d="M7 4h10v3a5 5 0 0 1-10 0z"/><path d="M12 9v4M9 17h6M5 4H3v2a3 3 0 0 0 3 3M19 4h2v2a3 3 0 0 1-3 3"/></svg>
+      </div>
+      <div class="prttl">Novo recorde!</div>
+      <div>
+        <div class="prex">Supino reto</div>
+        <div><span class="prval">82,5</span> <span class="prunit">kg</span></div>
+        <div class="prprev">anterior: 80 kg</div>
+      </div>
+      <button class="btn">Continuar</button>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>RestTimer — Ring de contagem</h3>
+    <div class="rt">
+      <div class="ringwrap">
+        <svg width="132" height="132" style="transform:rotate(-90deg)">
+          <circle cx="66" cy="66" r="61" style="stroke:var(--forge-surface-raised)" stroke-width="10" fill="none"/>
+          <circle cx="66" cy="66" r="61" style="stroke:var(--forge-accent)" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="383.3" stroke-dashoffset="115"/>
+        </svg>
+        <div class="ctr"><span class="time">1:04</span><span class="sub">Descanso</span></div>
+      </div>
+      <div class="ctrls">
+        <button class="cbtn" aria-label="Adicionar 15s"><svg width="20" height="20" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        <button class="cbtn" aria-label="Pausar"><svg width="20" height="20" viewBox="0 0 24 24"><line x1="9" y1="5" x2="9" y2="19"/><line x1="15" y1="5" x2="15" y2="19"/></svg></button>
+        <button class="cbtn" aria-label="Pular"><svg width="20" height="20" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 style="margin-top:28px;">SetLogger — peso × reps × check</h3>
+<div class="setwrap">
+  <div class="set done">
+    <span class="snum">1</span>
+    <div class="stk"><div class="stprow"><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span class="sval">60<small>kg</small></span><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><span class="stlbl">peso</span></div>
+    <div class="stk"><div class="stprow"><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span class="sval">10</span><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><span class="stlbl">reps</span></div>
+    <button class="chk on" aria-label="Série 1 concluída"><svg width="20" height="20" viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></button>
+  </div>
+  <div class="set">
+    <span class="snum">2</span>
+    <div class="stk"><div class="stprow"><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span class="sval">62,5<small>kg</small></span><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><span class="stlbl">peso</span></div>
+    <div class="stk"><div class="stprow"><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg></span><span class="sval">8</span><span class="sbtn"><svg width="16" height="16" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></div><span class="stlbl">reps</span></div>
+    <button class="chk" aria-label="Concluir série 2"><svg width="20" height="20" viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></button>
+  </div>
+</div>
+</body>
+</html>

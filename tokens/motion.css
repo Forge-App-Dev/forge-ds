@@ -23,13 +23,19 @@
 @keyframes forge-spin { to { transform: rotate(360deg); } }
 @keyframes forge-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(0.86); opacity: 0.62; } }
 @keyframes forge-dots { 0% { content: "."; } 33% { content: ".."; } 66% { content: "..."; } }
+/* Entrada de celebração (PRCelebration) — o ÚNICO momento de motion
+   "emocional" do sistema (OP-054). Scale+fade digno, sem bounce/spring; roda
+   uma vez, na montagem. Qualquer outro uso emocional de motion é proibido. */
+@keyframes forge-celebrate { from { transform: scale(0.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 .forge-anim-spin { animation: forge-spin var(--forge-duration-loop-spin) var(--forge-ease-linear) infinite; transform-origin: center; }
 .forge-anim-pulse { animation: forge-pulse var(--forge-duration-loop-pulse) var(--forge-ease-standard) infinite; }
+.forge-anim-celebrate { animation: forge-celebrate var(--forge-duration-slow) var(--forge-ease-emphasized); }
 
 @media (prefers-reduced-motion: reduce) {
   .forge-anim-spin,
-  .forge-anim-pulse {
+  .forge-anim-pulse,
+  .forge-anim-celebrate {
     animation: none;
   }
 }

@@ -45,6 +45,16 @@ export { Spinner } from "./components/feedback/Spinner.jsx";
 export { StatBadge } from "./components/feedback/StatBadge.jsx";
 export { LoadingScreen } from "./components/feedback/loading-screen/LoadingScreen.jsx";
 export { TargetsCard } from "./components/feedback/TargetsCard.jsx";
+// dashboard
+export { StatCard } from "./components/dashboard/StatCard.jsx";
+export { QuickAction } from "./components/dashboard/QuickAction.jsx";
+// onboarding
+export { Pager } from "./components/onboarding/Pager.jsx";
+export { PageDots } from "./components/onboarding/PageDots.jsx";
+// product (composições específicas do domínio Forge — compõem primitivos)
+export { PRCelebration } from "./components/product/PRCelebration.jsx";
+export { RestTimer } from "./components/product/RestTimer.jsx";
+export { SetLogger } from "./components/product/SetLogger.jsx";
 // icons
 export { Icon, ICON_NAMES } from "./components/icons/Icon.jsx";
 // utils

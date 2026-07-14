@@ -9,7 +9,9 @@ import _traverseMod from "@babel/traverse";
 import crypto from "crypto";
 const traverse = (_traverseMod.default || _traverseMod);
 
-const ROOT = "/home/claude/ds/repo";
+// Raiz do repo, resolvida a partir da localização do script (portável entre
+// máquinas — antes era um caminho absoluto fixo do ambiente de origem).
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const NS = "ForgeDesignSystem_7731a5";
 
 // Ordem canônica (mesma do manifest atual) — componentes primeiro, depois shared.
@@ -44,6 +46,13 @@ const COMPONENTS = [
   ["SectionLabel", "components/typography/SectionLabel.jsx"],
   ["Text", "components/typography/Text.jsx"],
   ["Title", "components/typography/Title.jsx"],
+  ["StatCard", "components/dashboard/StatCard.jsx"],
+  ["QuickAction", "components/dashboard/QuickAction.jsx"],
+  ["PageDots", "components/onboarding/PageDots.jsx"],
+  ["Pager", "components/onboarding/Pager.jsx"],
+  ["PRCelebration", "components/product/PRCelebration.jsx"],
+  ["RestTimer", "components/product/RestTimer.jsx"],
+  ["SetLogger", "components/product/SetLogger.jsx"],
 ];
 // Estes precisam vir ANTES de quem os consome (referência via __ds_scope em init? não —
 // só em render; mas mantemos deps cedo por segurança): shared/color, Icon, Ring, Button,

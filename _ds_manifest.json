@@ -158,6 +158,34 @@
    "sourcePath": "components/typography/Title.jsx"
   },
   {
+   "name": "StatCard",
+   "sourcePath": "components/dashboard/StatCard.jsx"
+  },
+  {
+   "name": "QuickAction",
+   "sourcePath": "components/dashboard/QuickAction.jsx"
+  },
+  {
+   "name": "PageDots",
+   "sourcePath": "components/onboarding/PageDots.jsx"
+  },
+  {
+   "name": "Pager",
+   "sourcePath": "components/onboarding/Pager.jsx"
+  },
+  {
+   "name": "PRCelebration",
+   "sourcePath": "components/product/PRCelebration.jsx"
+  },
+  {
+   "name": "RestTimer",
+   "sourcePath": "components/product/RestTimer.jsx"
+  },
+  {
+   "name": "SetLogger",
+   "sourcePath": "components/product/SetLogger.jsx"
+  },
+  {
    "name": "ICON_NAMES",
    "sourcePath": "components/icons/Icon.jsx"
   }
