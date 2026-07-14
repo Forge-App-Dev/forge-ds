@@ -1,0 +1,92 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Dashboard Tiles" subtitle="StatCard (métrica + tendência + sparkline) e QuickAction (grade de atalhos)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;padding:20px;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  h3{font-size:11px;text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);margin:20px 0 10px;font-weight:700;}
+  h3:first-child{margin-top:0;}
+  .wrap{max-width:420px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+
+  /* StatCard */
+  .stat{display:flex;background:var(--forge-surface);border:1px solid var(--forge-border);border-radius:var(--forge-radius-card);overflow:hidden;}
+  .stripe{width:4px;flex-shrink:0;}
+  .stat .body{flex:1;min-width:0;padding:12px;}
+  .stat .head{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .lbl{display:flex;align-items:center;gap:8px;min-width:0;}
+  .chip{width:26px;height:26px;border-radius:var(--forge-radius-chip);background:var(--forge-surface-raised);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .eyebrow{font-size:var(--forge-text-label);letter-spacing:var(--forge-tracking-label);text-transform:uppercase;color:var(--forge-text-faint);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .val{display:flex;align-items:baseline;gap:4px;margin-top:10px;}
+  .num{font-family:var(--forge-font-title);font-weight:700;font-size:30px;line-height:1;letter-spacing:var(--forge-tracking-title);font-variant-numeric:tabular-nums;}
+  .unit{font-size:var(--forge-text-body);color:var(--forge-text-dim);font-weight:600;}
+  .cap{font-size:var(--forge-text-chip);color:var(--forge-text-dim);margin-top:4px;}
+  .trend{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:var(--forge-text-chip);}
+  .up{color:var(--forge-success);}
+  .down{color:var(--forge-negative);}
+  .spark{margin-top:12px;}
+
+  /* QuickAction */
+  .qa{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px 12px;background:var(--forge-surface);border:1px solid var(--forge-border);border-radius:var(--forge-radius-card);box-sizing:border-box;}
+  .qa .ico{position:relative;width:44px;height:44px;border-radius:var(--forge-radius-input);background:var(--forge-surface-raised);display:inline-flex;align-items:center;justify-content:center;}
+  .qa .txt{font-size:var(--forge-text-chip);font-weight:600;text-align:center;line-height:var(--forge-lh-chip);}
+  .badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:var(--forge-accent);color:var(--forge-on-accent);font-size:var(--forge-text-mini-label);font-weight:700;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;}
+  svg{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h3>StatCard — métrica + tendência + sparkline</h3>
+  <div class="grid2">
+    <div class="stat">
+      <div class="stripe" style="background:var(--forge-accent);"></div>
+      <div class="body">
+        <div class="head">
+          <div class="lbl"><span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" style="color:var(--forge-accent)"><path d="M6.5 6.5h11v11h-11z"/><path d="M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span><span class="eyebrow">Volume</span></div>
+          <span class="trend up"><svg width="13" height="13" viewBox="0 0 24 24"><polyline points="6 15 12 9 18 15"/></svg>+8%</span>
+        </div>
+        <div class="val"><span class="num">4.280</span><span class="unit">kg</span></div>
+        <div class="cap">esta semana</div>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="stripe" style="background:var(--forge-nutrition);"></div>
+      <div class="body">
+        <div class="head">
+          <div class="lbl"><span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" style="color:var(--forge-nutrition)"><path d="M12 2s5 4 5 9a5 5 0 0 1-10 0c0-2 1-4 2-5"/></svg></span><span class="eyebrow">Calorias</span></div>
+          <span class="trend down"><svg width="13" height="13" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>-3%</span>
+        </div>
+        <div class="val"><span class="num">1.940</span><span class="unit">kcal</span></div>
+        <div class="cap">média diária</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>StatCard com sparkline (MiniChart)</h3>
+  <div class="stat" style="max-width:200px;">
+    <div class="stripe" style="background:var(--forge-accent);"></div>
+    <div class="body">
+      <div class="head"><div class="lbl"><span class="eyebrow">Peso corporal</span></div><span class="trend up" style="color:var(--forge-success)"><svg width="13" height="13" viewBox="0 0 24 24"><polyline points="6 15 12 9 18 15"/></svg>-0,4kg</span></div>
+      <div class="val"><span class="num">78,6</span><span class="unit">kg</span></div>
+      <div class="spark">
+        <svg width="100%" height="40" viewBox="0 0 280 60" style="color:var(--forge-accent)" preserveAspectRatio="none">
+          <path d="M6,40 L52,34 L98,44 L144,28 L190,32 L236,20 L274,24" stroke-width="2.5"/>
+          <circle cx="274" cy="24" r="3.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <h3>QuickAction — grade de atalhos</h3>
+  <div class="grid4">
+    <button class="qa"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" style="color:var(--forge-accent)"><path d="M6.5 6.5h11v11h-11z"/><path d="M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span><span class="txt">Treinar</span></button>
+    <button class="qa"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" style="color:var(--forge-nutrition)"><path d="M12 2s5 4 5 9a5 5 0 0 1-10 0c0-2 1-4 2-5"/></svg></span><span class="txt">Refeição</span></button>
+    <button class="qa"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" style="color:var(--forge-accent)"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span><span class="txt">Progresso</span></button>
+    <button class="qa"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" style="color:var(--forge-accent)"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg><span class="badge">3</span></span><span class="txt">Descanso</span></button>
+  </div>
+</div>
+</body>
+</html>

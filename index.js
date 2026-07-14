@@ -45,6 +45,9 @@ export { Spinner } from "./components/feedback/Spinner.jsx";
 export { StatBadge } from "./components/feedback/StatBadge.jsx";
 export { LoadingScreen } from "./components/feedback/loading-screen/LoadingScreen.jsx";
 export { TargetsCard } from "./components/feedback/TargetsCard.jsx";
+// dashboard
+export { StatCard } from "./components/dashboard/StatCard.jsx";
+export { QuickAction } from "./components/dashboard/QuickAction.jsx";
 // icons
 export { Icon, ICON_NAMES } from "./components/icons/Icon.jsx";
 // utils

@@ -158,6 +158,14 @@
    "sourcePath": "components/typography/Title.jsx"
   },
   {
+   "name": "StatCard",
+   "sourcePath": "components/dashboard/StatCard.jsx"
+  },
+  {
+   "name": "QuickAction",
+   "sourcePath": "components/dashboard/QuickAction.jsx"
+  },
+  {
    "name": "ICON_NAMES",
    "sourcePath": "components/icons/Icon.jsx"
   }
