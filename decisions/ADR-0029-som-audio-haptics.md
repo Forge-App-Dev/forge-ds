@@ -15,7 +15,8 @@ feedback não-visual é **haptics**, cujo mapa evento→feedback é definido no
 descanso** — é o único momento em que a tela pode estar apagada / o telefone no
 bolso e o haptic sozinho não basta. Deve ser: opcional (toggle nas preferências),
 curto, e nunca tocar com o app em foreground silencioso se o usuário desligou.
-**Recomendado, pendente de ratificação do owner.**
+**Ratificado (default): permitir o alerta sonoro opcional do `RestTimer` nas
+condições acima.** Delegado pelo owner em 2026-07-14; pode ser revisitado.
 
 ## Consequências
 - App silencioso por padrão — coerente com "sem toasts, minimalista".

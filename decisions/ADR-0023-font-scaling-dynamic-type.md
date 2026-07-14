@@ -20,8 +20,9 @@ Política **única para as duas plataformas**:
 
 ## Consequências
 - Corpo acessível; títulos preservam a assinatura "stamped metal" sem estourar.
-- Um teto explícito (1.3) é escolha de acessibilidade **vs** layout — **recomendação
-  técnica; pendente de ratificação do owner** se um valor mais alto for exigido por
+- Um teto explícito (1.3) é escolha de acessibilidade **vs** layout.
+  **Ratificado (default): teto 1.3× no display Barlow Condensed.** Delegado pelo
+  owner em 2026-07-14; pode ser revisitado se um valor mais alto for exigido por
   acessibilidade.
 - Vira item de checklist de QA de plataforma (guias iOS/Android).
 

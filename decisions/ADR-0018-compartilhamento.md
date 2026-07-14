@@ -18,5 +18,5 @@ Compartilhamento é a **exportação de uma imagem gerada** (não screenshot da 
 - **Compartilhar screenshot da tela:** rejeitado — inconsistente, com UI de navegação e dados demais.
 - **Link para web:** fora de escopo enquanto não há superfície pública.
 
-## Pendente de ratificação do owner
-Quais conquistas são compartilháveis, formatos exatos e dados exibidos são **escolha de produto/growth** — recomendo começar por PR e streak no formato acima, sujeito à ratificação do owner (Mateus).
+## Ratificação
+Quais conquistas são compartilháveis, formatos exatos e dados exibidos são **escolha de produto/growth**. **Ratificado (default): começar por PR e streak no formato acima (imagem gerada 1080×1080 / 1080×1920, fundo grafite, ForgeMark, número em Barlow, Ring quando fizer sentido; sem dados sensíveis por padrão).** Delegado pelo owner (Mateus) em 2026-07-14; pode ser revisitado.

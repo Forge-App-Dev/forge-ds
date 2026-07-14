@@ -6,7 +6,7 @@
 
 ## Sources
 
-- `mateusutz/forge-app` — GitHub repo, the current native (Expo/React Native) rewrite of the app. Explore it directly for the fullest, most current picture: https://github.com/mateusutz/forge-app
+- `Forge-App-Dev/forge-app` — GitHub repo, the current native (Expo/React Native) rewrite of the app. Explore it directly for the fullest, most current picture: https://github.com/Forge-App-Dev/forge-app
   - `src/theme/tokens.js` — color/type/spacing tokens (ported into `tokens/` here)
   - `src/components/` — UI primitives (`ui.jsx`, `icons.jsx`, `Ring.jsx`, `AppHeader.jsx`, `ModuleTabBar.jsx`, `meters.jsx`, `LoginScreen.jsx`, `LoadingScreen.jsx`, `QtyInput.jsx`, `TargetsCard.jsx`, `MiniChart.jsx`)
   - `src/screens/` — the Treino (workout) and Nutrição (nutrition) module screens

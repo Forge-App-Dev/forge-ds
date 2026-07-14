@@ -18,5 +18,5 @@ Notificações são alavanca de retenção, mas mal calibradas viram desinstala�
 - **Diálogo do SO no primeiro boot:** rejeitado — queima a permissão.
 - **Notificações genéricas do sistema:** rejeitado — perdem a voz e a marca.
 
-## Pendente de ratificação do owner
-Horários exatos, cadência por categoria e copy final são **escolha de produto** — recomendo fortemente o padrão acima (1–2/dia, opt-in por priming, sem madrugada) como default até o owner (Mateus) ratificar ou ajustar.
+## Ratificação
+Horários exatos, cadência por categoria e copy final são **escolha de produto**. **Ratificado (default): padrão acima — 1–2/dia, opt-in por priming, sem madrugada, categorias desativáveis.** Delegado pelo owner (Mateus) em 2026-07-14; pode ser revisitado quando houver dados de produto/growth.

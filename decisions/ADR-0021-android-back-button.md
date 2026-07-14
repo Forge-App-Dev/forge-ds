@@ -22,8 +22,10 @@ não espalhado por tela. O mesmo guard atende o edge-swipe do iOS (ADR-0020).
 ## Consequências
 - Back é previsível: um back = um nível de reversão; nunca destrói sem guard.
 - Regra reaproveitada no iOS (gesto de borda), reduzindo divergência de plataforma.
-- "Toque de novo para sair" fica de fora — **recomendação; pendente de ratificação
-  do owner** (padrão de mercado é dividido; manter simples por ora).
+- "Toque de novo para sair" fica de fora. **Ratificado (default): não adotar
+  "toque de novo para sair"; back na raiz sai do app (padrão do SO).** Padrão de
+  mercado é dividido; mantém-se simples por ora. Delegado pelo owner em
+  2026-07-14; pode ser revisitado.
 
 ## Alternativas consideradas
 - **Deixar o padrão do React Navigation cru:** rejeitado — não cobre modais com

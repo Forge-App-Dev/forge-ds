@@ -14,11 +14,14 @@ espelhamento agora. Registrar o inventário do que quebraria:
 - **Alinhamento de texto** e paddings assimétricos.
 - **✕** no header (esquerda) e slot `right` do header → trocar lados.
 
-**Recomendação de baixo custo (mitigação preventiva):** ao escrever componentes
-novos, preferir propriedades lógicas (`start`/`end`, `marginStart`) em vez de
-`left`/`right` onde não custa nada — reduz o custo futuro sem entregar RTL agora.
-Marcada como recomendação, **pendente de ratificação do owner** quanto a exigir
-isso já no lint/review.
+**Mitigação preventiva de baixo custo:** ao escrever componentes novos, preferir
+propriedades lógicas (`start`/`end`, `marginStart`) em vez de `left`/`right` onde
+não custa nada — reduz o custo futuro sem entregar RTL agora.
+**Ratificado (default): adotar como recomendação/guideline de autoria; não exigir
+via lint/review agora.** Escolha conservadora — captura o ganho barato sem impor
+gate de CI para um cenário sem usuário. Delegado pelo owner em 2026-07-14; pode
+ser revisitado (ex.: promover a regra de lint quando um idioma RTL entrar no
+roadmap).
 
 ## Consequências
 - Zero custo agora; caminho de saída conhecido e barato quando um idioma RTL entrar.

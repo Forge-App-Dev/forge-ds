@@ -1,5 +1,5 @@
 # ADR-0070: Ciclo de vida de componente — experimental → stable → deprecated
-**Status:** Proposed (pendente de ratificação do owner) · **Data:** 2026-07-14 · **Decisor:** Principal Design System Governance & Lifecycle Specialist (persona) · **OP:** OP-166 (respondendo OP-189)
+**Status:** Accepted · **Data:** 2026-07-14 · **Decisor:** Principal Design System Governance & Lifecycle Specialist (persona) · **OP:** OP-166 (respondendo OP-189)
 
 ## Contexto
 O DS tem 45 componentes num único nível de maturidade implícito. Não há como um agente (ou o Mateus) saber se um componente é seguro para depender ("stable"), ainda em prova ("experimental") ou a caminho da remoção ("deprecated"). Sem esse eixo, versionamento (ADR-0071) e checklist de PR (`docs/PR_CHECKLIST.md`) não têm âncora: um componente novo e um consolidado entram pela mesma porta.
@@ -28,7 +28,8 @@ Adotar **três estados de ciclo de vida** por componente, mais um estado termina
 - **deprecated → removed:** **só em major**, após ≥ 1 minor deprecado. Entrada `Removed` + seção de migração.
 - Sem pular etapas: nada vai de `stable` direto a `removed`.
 
-### Classificação inicial (recomendada, pendente de ratificação)
+### Classificação inicial
+**Ratificado (default):** a classificação abaixo. Delegado pelo owner em 2026-07-14; pode ser revisitada.
 - **`stable`:** os primitivos que espelham o app real — core, typography, layout, forms, overlays, navigation, feedback (mapeiam `ui.jsx`, `Ring.jsx`, `meters.jsx`, etc.).
 - **`experimental`:** as camadas adicionadas no lote 1.4.0 sem consumo no app ainda — `product/` (PRCelebration, RestTimer, SetLogger), `onboarding/` (Pager, PageDots), `dashboard/` (StatCard, QuickAction).
 

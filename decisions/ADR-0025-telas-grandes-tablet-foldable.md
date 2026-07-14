@@ -20,8 +20,9 @@ só `phone` (480) é ativo. Detalhes em `docs/platform/ADAPTIVE_SCREENS.md`.
   parágrafo.
 - Em tablets, muito espaço de bg vazio — aceito enquanto o produto é phone-first.
 - **Regra futura registrada (não implementada):** em ≥840dp um `FullScreen` pode
-  virar `Panel` largo. Gatilho de reabertura: alvo de tablet no roadmap **ou** ≥15%
-  dos dispositivos ≥600dp — **pendente de ratificação do owner** quanto ao gatilho.
+  virar `Panel` largo. **Ratificado (default): gatilho de reabertura = alvo de
+  tablet no roadmap OU ≥15% dos dispositivos ≥600dp.** Delegado pelo owner em
+  2026-07-14; pode ser revisitado.
 
 ## Alternativas consideradas
 - **Sistema adaptativo Material 3 (rail + dual-pane em 600/840):** rejeitado agora —

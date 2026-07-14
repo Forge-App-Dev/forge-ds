@@ -24,8 +24,10 @@ Detalhes operacionais em `docs/platform/PLATFORM_IOS.md`.
 ## Consequências
 - Um único código RN serve as duas plataformas sem fork visual.
 - Usuário iOS não terá swipe-to-dismiss em fluxos de edição (troca aceita por
-  segurança de dados). `Panel` poderá ganhar swipe-down no futuro — **pendente de
-  ratificação do owner**.
+  segurança de dados). Sobre `Panel` ganhar swipe-down no futuro:
+  **Ratificado (default): não adotar swipe-down agora; permanece possibilidade
+  futura.** Escolha conservadora e coerente com a decisão de priorizar segurança
+  de dados sobre gesto HIG. Delegado pelo owner em 2026-07-14; pode ser revisitado.
 - Exige mark em densidade Retina/SVG (ADR-0031) e splash alinhado (ADR-0030).
 
 ## Alternativas consideradas
