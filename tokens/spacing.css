@@ -1,9 +1,6 @@
 /* Forge Design System — spacing, radius, sizing, layout, z-index, opacity tokens
-   Namespace canônico: --forge-*. Os nomes curtos antigos (--radius-*, --space-*)
-   permanecem como ALIAS no fim do arquivo para não quebrar cards/componentes
-   já existentes — migrar consumidores para --forge-* ao longo do tempo. */
+   GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens). */
 :root {
-  /* ---- Escala de espaçamento (base 2) — OP-081 ---- */
   --forge-space-0: 0px;
   --forge-space-1: 2px;
   --forge-space-2: 4px;
@@ -16,63 +13,40 @@
   --forge-space-12: 24px;
   --forge-space-16: 32px;
   --forge-space-20: 40px;
-
-  /* Espaçamentos contextuais (agora derivados da escala) */
-  --forge-space-screen-h: var(--forge-space-10); /* 20 — padding horizontal de tela */
-  --forge-space-card: var(--forge-space-8);      /* 16 — padding interno de card */
-  --forge-space-gap: var(--forge-space-5);       /* 10 — gap de lista */
-  --forge-space-card-gap: var(--forge-space-5);  /* 10 — gap entre cards */
-
-  /* ---- Raios ---- */
+  --forge-space-screen-h: var(--forge-space-10);
+  --forge-space-card: var(--forge-space-8);
+  --forge-space-gap: var(--forge-space-5);
+  --forge-space-card-gap: var(--forge-space-5);
   --forge-radius-card: 14px;
   --forge-radius-panel: 18px;
   --forge-radius-input: 10px;
   --forge-radius-button: 11px;
   --forge-radius-chip: 8px;
   --forge-radius-pill: 999px;
-  --forge-radius-video: 12px; /* moldura de vídeo — antes hardcoded */
-
-  /* ---- Tamanhos de controle (alturas) — OP-082 ---- */
-  --forge-size-control-sm: 36px; /* inline compacto */
-  --forge-size-control-md: 44px; /* padrão / alvo mínimo de toque */
-  --forge-size-control-lg: 46px; /* botão primário */
-
-  /* ---- Tamanhos de ícone — OP-008 ---- */
+  --forge-radius-video: 12px;
+  --forge-size-control-sm: 36px;
+  --forge-size-control-md: 44px;
+  --forge-size-control-lg: 46px;
   --forge-icon-sm: 16px;
   --forge-icon-md: 20px;
   --forge-icon-lg: 24px;
   --forge-icon-xl: 30px;
-
-  /* ---- Larguras de borda — OP-008 ---- */
   --forge-border-w: 1px;
   --forge-border-w-strong: 1.5px;
-
-  /* ---- Foco — OP-086 ---- */
   --forge-focus-ring-w: 2px;
   --forge-focus-ring-offset: 2px;
-  /* cor do foco definida em colors.css (--forge-focus-ring) */
-
-  /* ---- Opacidade — OP-008 ---- */
   --forge-opacity-press: 0.85;
   --forge-opacity-disabled: 0.5;
-
-  /* ---- z-index — OP-008/019 ---- */
   --forge-z-nav: 10;
   --forge-z-overlay: 50;
   --forge-z-fullscreen: 60;
   --forge-z-video: 70;
   --forge-z-top: 100;
-
-  /* ---- Layout ---- */
-  --forge-app-max-width: 480px; /* mobile-first, centralizado */
+  --forge-app-max-width: 480px;
   --forge-tap-target-min: 44px;
-
-  /* ---- Breakpoints (documentais — OP-019/088) ---- */
   --forge-bp-phone: 480px;
-  --forge-bp-large: 600px;  /* limiar tablet pequeno */
-  --forge-bp-xlarge: 840px; /* limiar tablet/foldable aberto */
-
-  /* ================= ALIASES LEGADOS (não usar em código novo) ============= */
+  --forge-bp-large: 600px;
+  --forge-bp-xlarge: 840px;
   --radius-card: var(--forge-radius-card);
   --radius-panel: var(--forge-radius-panel);
   --radius-input: var(--forge-radius-input);

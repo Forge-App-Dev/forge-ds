@@ -13,7 +13,8 @@
   "sideEffects": ["*.css"],
   "scripts": {
     "build:bundle": "node scripts/build-bundle.mjs",
-    "build:index": "node scripts/build-index.mjs"
+    "build:index": "node scripts/build-index.mjs",
+    "build:tokens": "node scripts/build-tokens.mjs"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",

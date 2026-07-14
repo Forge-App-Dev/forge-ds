@@ -1,14 +1,12 @@
 /* Forge Design System — typography tokens
+   GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens).
    Title font: Barlow Condensed (600/700/800), always uppercase, slight tracking.
    Body font: Inter (400–800). Loaded from Google Fonts (exact match — no substitution needed). */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --font-title: "Barlow Condensed", sans-serif;      /* headlines, logo, big numbers — always uppercase */
-  --font-body: "Inter", sans-serif;                   /* everything else */
-
-  /* Weight aliases (Android rule ported: never mix custom font + font-weight,
-     always select the exact weight-family). On web, weight numbers are fine. */
+  --font-title: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
   --weight-title-semi: 600;
   --weight-title-bold: 700;
   --weight-title-extra: 800;
@@ -17,39 +15,31 @@
   --weight-body-semi: 600;
   --weight-body-bold: 700;
   --weight-body-extra: 800;
-
-  /* Type scale (px) — from FORGE_DESIGN_SYSTEM.md §3 */
-  --text-logo-lg: 40px;      /* login logo */
-  --text-screen-title: 34px; /* Barlow, screen title */
-  --text-panel-title: 22px;  /* Barlow, panel/header titles */
+  --text-logo-lg: 40px;
+  --text-screen-title: 34px;
+  --text-panel-title: 22px;
   --text-card-title: 16px;
   --text-input: 14.5px;
   --text-list-item: 14px;
   --text-body: 13.5px;
   --text-body-sm: 13px;
   --text-chip: 12.5px;
-  --text-label: 11.5px;      /* uppercase, letter-spacing 1px */
+  --text-label: 11.5px;
   --text-mini-label: 10.5px;
-
   --tracking-title: 0.5px;
   --tracking-label: 1px;
   --tracking-eyebrow: 2px;
-
-  /* Line-heights pareados à escala — OP-083 (display ~1.05, corpo ~1.35) */
-  --forge-lh-logo-lg: 44px;      /* 40 */
-  --forge-lh-screen-title: 36px; /* 34 */
-  --forge-lh-panel-title: 24px;  /* 22 */
-  --forge-lh-card-title: 20px;   /* 16 */
-  --forge-lh-input: 20px;        /* 14.5 */
-  --forge-lh-list-item: 19px;    /* 14 */
-  --forge-lh-body: 19px;         /* 13.5 */
-  --forge-lh-body-sm: 18px;      /* 13 */
-  --forge-lh-chip: 16px;         /* 12.5 */
-  --forge-lh-label: 15px;        /* 11.5 */
-  --forge-lh-mini-label: 14px;   /* 10.5 */
-
-  /* Aliases --forge-* (namespace unificado — OP-096). Nomes curtos abaixo
-     permanecem válidos como alias reverso p/ compatibilidade. */
+  --forge-lh-logo-lg: 44px;
+  --forge-lh-screen-title: 36px;
+  --forge-lh-panel-title: 24px;
+  --forge-lh-card-title: 20px;
+  --forge-lh-input: 20px;
+  --forge-lh-list-item: 19px;
+  --forge-lh-body: 19px;
+  --forge-lh-body-sm: 18px;
+  --forge-lh-chip: 16px;
+  --forge-lh-label: 15px;
+  --forge-lh-mini-label: 14px;
   --forge-font-title: var(--font-title);
   --forge-font-body: var(--font-body);
   --forge-text-logo-lg: var(--text-logo-lg);
