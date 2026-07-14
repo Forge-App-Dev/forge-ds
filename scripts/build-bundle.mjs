@@ -25,7 +25,7 @@ const COMPONENTS = [
   ["StatBadge", "components/feedback/StatBadge.jsx"],
   ["ErrorState", "components/feedback/ErrorState.jsx"],
   ["Skeleton", "components/feedback/Skeleton.jsx"],
-  ["TargetsCard", "components/feedback/TargetsCard.jsx"],
+  ["TargetsCard", "components/product/TargetsCard.jsx"],
   ["LoadingScreen", "components/feedback/loading-screen/LoadingScreen.jsx"],
   ["MacroMeter", "components/feedback/macro-meter/MacroMeter.jsx"],
   ["MetaBar", "components/feedback/meta-bar/MetaBar.jsx"],
@@ -71,12 +71,15 @@ const COMPONENTS = [
   ["StreakIndicator", "components/product/StreakIndicator.jsx"],
   ["CoachNote", "components/product/CoachNote.jsx"],
   ["OfflineBanner", "components/product/OfflineBanner.jsx"],
+  ["Chart", "components/feedback/Chart.jsx"],
+  ["ImagePicker", "components/media/ImagePicker.jsx"],
 ];
 // Estes precisam vir ANTES de quem os consome (referência via __ds_scope em init? não —
 // só em render; mas mantemos deps cedo por segurança): shared/color, Icon, Ring, Button,
 // Pill, FullScreen, AppHeader.
 const DEPS_FIRST = [
   ["onColor", "components/shared/color.js"],   // + resolveColor
+  ["content", "components/shared/content.js"], // strings default (i18n seam) — consumido por vários componentes
   ["useDialogA11y", "components/shared/useDialogA11y.js"],
   ["Icon", "components/icons/Icon.jsx"],        // + ICON_NAMES
   ["ListItem", "components/forms/ListItem.jsx"],

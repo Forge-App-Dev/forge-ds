@@ -54,6 +54,16 @@ export const content = {
       "Você está offline. Suas alterações ficam salvas e sincronizam quando a conexão voltar.",
   },
 
+  targetsCard: {
+    // product/TargetsCard.jsx — daily kcal + macro targets summary.
+    title: "Suas metas diárias",
+    editLabel: "Ajustar",
+    kcal: "Kcal",
+    protein: "Proteína",
+    carb: "Carbo",
+    fat: "Gordura",
+  },
+
   restTimer: {
     // product/RestTimer.jsx — rest-countdown labels (all copy is inline here,
     // the component has no string prop defaults).

@@ -53,8 +53,8 @@ export { Skeleton, SkeletonText } from "./components/feedback/Skeleton.jsx";
 export { Spinner } from "./components/feedback/Spinner.jsx";
 export { StatBadge } from "./components/feedback/StatBadge.jsx";
 export { LoadingScreen } from "./components/feedback/loading-screen/LoadingScreen.jsx";
-export { TargetsCard } from "./components/feedback/TargetsCard.jsx";
 export { ProgressBar } from "./components/feedback/ProgressBar.jsx";
+export { Chart } from "./components/feedback/Chart.jsx";
 export { Badge } from "./components/feedback/Badge.jsx";
 export { Avatar } from "./components/feedback/Avatar.jsx";
 export { MacroRing } from "./components/feedback/MacroRing.jsx";
@@ -69,9 +69,12 @@ export { PageDots } from "./components/onboarding/PageDots.jsx";
 export { PRCelebration } from "./components/product/PRCelebration.jsx";
 export { RestTimer } from "./components/product/RestTimer.jsx";
 export { SetLogger } from "./components/product/SetLogger.jsx";
+export { TargetsCard } from "./components/product/TargetsCard.jsx";
 export { StreakIndicator } from "./components/product/StreakIndicator.jsx";
 export { CoachNote } from "./components/product/CoachNote.jsx";
 export { OfflineBanner } from "./components/product/OfflineBanner.jsx";
+// media
+export { ImagePicker } from "./components/media/ImagePicker.jsx";
 // icons
 export { Icon, ICON_NAMES } from "./components/icons/Icon.jsx";
 // utils

@@ -55,13 +55,13 @@ export function Pager({
       <span className="forge-sr-only" role="status" aria-live="polite">{`Slide ${page + 1} de ${count}`}</span>
 
       <div style={{ flex: 1, minHeight: 0, display: "flex", flexDirection: "column" }}>
-        {pages.map((content, i) => (
+        {pages.map((slide, i) => (
           <div
             key={i}
             aria-hidden={i === page ? undefined : "true"}
             style={{ display: i === page ? "flex" : "none", flex: 1, minHeight: 0, flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "var(--forge-space-10)" }}
           >
-            {content}
+            {slide}
           </div>
         ))}
       </div>

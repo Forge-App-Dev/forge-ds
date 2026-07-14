@@ -1,0 +1,228 @@
+<!-- @dsCard group="Components" viewport="760x620" name="Data viz & media" subtitle="Chart (line, bar, area) e ImagePicker (vazio, com imagem, carregando)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body{margin:0;padding:20px;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  h3{font-size:11px;text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);margin:22px 0 10px;font-weight:700;}
+  h3:first-child{margin-top:0;}
+  .wrap{max-width:720px;}
+  .charts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .panel{background:var(--forge-surface);border:var(--forge-border-w) solid var(--forge-border);border-radius:var(--forge-radius-card);padding:12px;overflow-x:auto;}
+  .ptitle{font-size:var(--forge-text-chip);font-weight:600;color:var(--forge-text-dim);margin-bottom:6px;}
+  .grid-line{stroke:var(--forge-border);stroke-width:1;}
+  .axis{fill:var(--forge-text-faint);font-size:9px;font-family:var(--forge-font-body);}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;font-size:var(--forge-text-chip);color:var(--forge-text-dim);}
+  .sw{width:10px;height:10px;border-radius:var(--forge-radius-chip);flex-shrink:0;}
+
+  /* ImagePicker */
+  .pickers{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;}
+  .pk-item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .pk-cap{font-size:var(--forge-text-chip);color:var(--forge-text-dim);}
+  .empty{width:96px;height:96px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--forge-surface);border:var(--forge-border-w) dashed var(--forge-border-input);border-radius:var(--forge-radius-card);color:var(--forge-text-faint);cursor:pointer;}
+  .empty .lbl{font-size:var(--forge-text-chip);font-weight:600;line-height:var(--forge-lh-chip);}
+  .thumb{position:relative;width:96px;height:96px;}
+  .thumb .img{width:100%;height:100%;border-radius:var(--forge-radius-card);overflow:hidden;background:var(--forge-surface-raised);}
+  .thumb.circle .img{border-radius:var(--forge-radius-pill);}
+  .remove{position:absolute;top:-10px;right:-10px;width:44px;height:44px;padding:0;border:none;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+  .remove .badge{width:26px;height:26px;border-radius:var(--forge-radius-pill);background:var(--forge-surface-raised);border:var(--forge-border-w) solid var(--forge-border);display:flex;align-items:center;justify-content:center;}
+  .pulse{width:96px;height:96px;border-radius:var(--forge-radius-card);background:var(--forge-surface-raised);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h3>Chart — eixos rotulados, grade sutil, pontos</h3>
+  <div class="charts">
+
+    <!-- LINE -->
+    <div class="panel">
+      <div class="ptitle">Peso · linha</div>
+      <svg width="100%" height="200" viewBox="0 0 320 200" role="img" aria-label="Peso: de 80 a 78,6 kg em 5 semanas">
+        <title>Peso</title>
+        <desc>Peso: de 80 a 78,6 kg em 5 semanas.</desc>
+        <!-- grid + y labels -->
+        <line class="grid-line" x1="42" y1="12" x2="308" y2="12"/><text class="axis" x="36" y="12" text-anchor="end" dominant-baseline="middle">80</text>
+        <line class="grid-line" x1="42" y1="54.5" x2="308" y2="54.5"/><text class="axis" x="36" y="54.5" text-anchor="end" dominant-baseline="middle">79,7</text>
+        <line class="grid-line" x1="42" y1="97" x2="308" y2="97"/><text class="axis" x="36" y="97" text-anchor="end" dominant-baseline="middle">79,3</text>
+        <line class="grid-line" x1="42" y1="139.5" x2="308" y2="139.5"/><text class="axis" x="36" y="139.5" text-anchor="end" dominant-baseline="middle">79</text>
+        <line class="grid-line" x1="42" y1="170" x2="308" y2="170"/><text class="axis" x="36" y="170" text-anchor="end" dominant-baseline="middle">78,6</text>
+        <!-- x labels -->
+        <text class="axis" x="42" y="184" text-anchor="middle">S1</text>
+        <text class="axis" x="108.5" y="184" text-anchor="middle">S2</text>
+        <text class="axis" x="175" y="184" text-anchor="middle">S3</text>
+        <text class="axis" x="241.5" y="184" text-anchor="middle">S4</text>
+        <text class="axis" x="308" y="184" text-anchor="middle">S5</text>
+        <!-- series -->
+        <g style="color:var(--forge-accent)">
+          <path d="M42,12 L108.5,79.7 L175,124.9 L241.5,147.4 L308,170" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="42" cy="12" r="3" fill="currentColor"/>
+          <circle cx="108.5" cy="79.7" r="3" fill="currentColor"/>
+          <circle cx="175" cy="124.9" r="3" fill="currentColor"/>
+          <circle cx="241.5" cy="147.4" r="3" fill="currentColor"/>
+          <circle cx="308" cy="170" r="3" fill="currentColor"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- BAR -->
+    <div class="panel">
+      <div class="ptitle">Volume · barra</div>
+      <svg width="100%" height="200" viewBox="0 0 320 200" role="img" aria-label="Volume: de 420 a 390 kg em 5 dias">
+        <title>Volume</title>
+        <desc>Volume diário em 5 dias.</desc>
+        <line class="grid-line" x1="42" y1="12" x2="308" y2="12"/><text class="axis" x="36" y="12" text-anchor="end" dominant-baseline="middle">780</text>
+        <line class="grid-line" x1="42" y1="51.5" x2="308" y2="51.5"/><text class="axis" x="36" y="51.5" text-anchor="end" dominant-baseline="middle">585</text>
+        <line class="grid-line" x1="42" y1="91" x2="308" y2="91"/><text class="axis" x="36" y="91" text-anchor="end" dominant-baseline="middle">390</text>
+        <line class="grid-line" x1="42" y1="130.5" x2="308" y2="130.5"/><text class="axis" x="36" y="130.5" text-anchor="end" dominant-baseline="middle">195</text>
+        <line class="grid-line" x1="42" y1="170" x2="308" y2="170"/><text class="axis" x="36" y="170" text-anchor="end" dominant-baseline="middle">0</text>
+        <text class="axis" x="67.6" y="184" text-anchor="middle">Seg</text>
+        <text class="axis" x="120.8" y="184" text-anchor="middle">Ter</text>
+        <text class="axis" x="174" y="184" text-anchor="middle">Qua</text>
+        <text class="axis" x="227.2" y="184" text-anchor="middle">Qui</text>
+        <text class="axis" x="280.4" y="184" text-anchor="middle">Sex</text>
+        <g style="color:var(--forge-success)">
+          <rect x="50.5" y="84.9" width="34.7" height="85.1" rx="2" fill="currentColor"/>
+          <rect x="103.7" y="12" width="34.7" height="158" rx="2" fill="currentColor"/>
+          <rect x="156.9" y="46.4" width="34.7" height="123.6" rx="2" fill="currentColor"/>
+          <rect x="210.1" y="145.7" width="34.7" height="24.3" rx="2" fill="currentColor"/>
+          <rect x="263.3" y="91" width="34.7" height="79" rx="2" fill="currentColor"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- AREA -->
+    <div class="panel">
+      <div class="ptitle">Tonelagem · área</div>
+      <svg width="100%" height="200" viewBox="0 0 320 200" role="img" aria-label="Tonelagem: de 3,8 a 4,28 t em 5 semanas">
+        <title>Tonelagem</title>
+        <desc>Tonelagem: de 3,8 a 4,28 t em 5 semanas.</desc>
+        <defs>
+          <linearGradient id="dvm-area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="currentColor" stop-opacity="0.32"/>
+            <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line class="grid-line" x1="42" y1="12" x2="308" y2="12"/><text class="axis" x="36" y="12" text-anchor="end" dominant-baseline="middle">4,3</text>
+        <line class="grid-line" x1="42" y1="51.5" x2="308" y2="51.5"/><text class="axis" x="36" y="51.5" text-anchor="end" dominant-baseline="middle">4,2</text>
+        <line class="grid-line" x1="42" y1="91" x2="308" y2="91"/><text class="axis" x="36" y="91" text-anchor="end" dominant-baseline="middle">4</text>
+        <line class="grid-line" x1="42" y1="130.5" x2="308" y2="130.5"/><text class="axis" x="36" y="130.5" text-anchor="end" dominant-baseline="middle">3,9</text>
+        <line class="grid-line" x1="42" y1="170" x2="308" y2="170"/><text class="axis" x="36" y="170" text-anchor="end" dominant-baseline="middle">3,8</text>
+        <text class="axis" x="42" y="184" text-anchor="middle">S1</text>
+        <text class="axis" x="108.5" y="184" text-anchor="middle">S2</text>
+        <text class="axis" x="175" y="184" text-anchor="middle">S3</text>
+        <text class="axis" x="241.5" y="184" text-anchor="middle">S4</text>
+        <text class="axis" x="308" y="184" text-anchor="middle">S5</text>
+        <g style="color:var(--forge-accent)">
+          <path d="M42,170 L108.5,104.2 L175,120.6 L241.5,54.8 L308,12 L308,170 L42,170 Z" fill="url(#dvm-area)" stroke="none"/>
+          <path d="M42,170 L108.5,104.2 L175,120.6 L241.5,54.8 L308,12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="42" cy="170" r="3" fill="currentColor"/>
+          <circle cx="108.5" cy="104.2" r="3" fill="currentColor"/>
+          <circle cx="175" cy="120.6" r="3" fill="currentColor"/>
+          <circle cx="241.5" cy="54.8" r="3" fill="currentColor"/>
+          <circle cx="308" cy="12" r="3" fill="currentColor"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <h3>Chart multi-série — legenda (nunca só cor)</h3>
+  <div class="panel" style="max-width:360px;">
+    <svg width="100%" height="200" viewBox="0 0 320 200" role="img" aria-label="Comparativo: 2 séries (Este mês, Mês passado) em 4 semanas">
+      <title>Comparativo</title>
+      <desc>Comparativo: 2 séries em 4 semanas.</desc>
+      <line class="grid-line" x1="42" y1="12" x2="308" y2="12"/>
+      <line class="grid-line" x1="42" y1="51.5" x2="308" y2="51.5"/>
+      <line class="grid-line" x1="42" y1="91" x2="308" y2="91"/>
+      <line class="grid-line" x1="42" y1="130.5" x2="308" y2="130.5"/>
+      <line class="grid-line" x1="42" y1="170" x2="308" y2="170"/>
+      <text class="axis" x="36" y="12" text-anchor="end" dominant-baseline="middle">18</text>
+      <text class="axis" x="36" y="91" text-anchor="end" dominant-baseline="middle">14</text>
+      <text class="axis" x="36" y="170" text-anchor="end" dominant-baseline="middle">10</text>
+      <text class="axis" x="42" y="184" text-anchor="middle">Sem 1</text>
+      <text class="axis" x="130.7" y="184" text-anchor="middle">Sem 2</text>
+      <text class="axis" x="219.3" y="184" text-anchor="middle">Sem 3</text>
+      <text class="axis" x="308" y="184" text-anchor="middle">Sem 4</text>
+      <g style="color:var(--forge-cat-1)">
+        <path d="M42,130.5 L130.7,71.25 L219.3,91 L308,12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="130.5" r="3" fill="currentColor"/><circle cx="130.7" cy="71.25" r="3" fill="currentColor"/><circle cx="219.3" cy="91" r="3" fill="currentColor"/><circle cx="308" cy="12" r="3" fill="currentColor"/>
+      </g>
+      <g style="color:var(--forge-cat-2)">
+        <path d="M42,170 L130.7,150.25 L219.3,111 L308,130.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="170" r="3" fill="currentColor"/><circle cx="130.7" cy="150.25" r="3" fill="currentColor"/><circle cx="219.3" cy="111" r="3" fill="currentColor"/><circle cx="308" cy="130.5" r="3" fill="currentColor"/>
+      </g>
+    </svg>
+    <div class="legend">
+      <span><span class="sw" style="background:var(--forge-cat-1)"></span>Este mês</span>
+      <span><span class="sw" style="background:var(--forge-cat-2)"></span>Mês passado</span>
+    </div>
+  </div>
+
+  <h3>ImagePicker — camada visual (captura é nativa/Expo)</h3>
+  <div class="pickers">
+    <!-- empty -->
+    <div class="pk-item">
+      <button class="empty forge-focusable" type="button" aria-label="Adicionar foto">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+        <span class="lbl">Adicionar foto</span>
+      </button>
+      <span class="pk-cap">vazio</span>
+    </div>
+
+    <!-- filled square -->
+    <div class="pk-item">
+      <div class="thumb">
+        <div class="img">
+          <svg width="96" height="96" viewBox="0 0 96 96" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect x="0" y="0" width="96" height="96" fill="var(--forge-surface-raised)"/>
+            <circle cx="70" cy="26" r="12" fill="var(--forge-warning)"/>
+            <path d="M0,72 L30,44 L52,66 L74,40 L96,64 L96,96 L0,96 Z" fill="var(--forge-success)"/>
+            <path d="M0,84 L26,66 L50,82 L72,60 L96,80 L96,96 L0,96 Z" fill="var(--forge-accent)" opacity="0.55"/>
+          </svg>
+        </div>
+        <button class="remove forge-focusable" type="button" aria-label="Remover foto">
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--forge-text)" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <span class="pk-cap">com imagem (quadrado)</span>
+    </div>
+
+    <!-- filled circle -->
+    <div class="pk-item">
+      <div class="thumb circle">
+        <div class="img">
+          <svg width="96" height="96" viewBox="0 0 96 96" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect x="0" y="0" width="96" height="96" fill="var(--forge-surface-raised)"/>
+            <circle cx="48" cy="40" r="16" fill="var(--forge-accent)"/>
+            <path d="M20 92a28 28 0 0 1 56 0 Z" fill="var(--forge-accent)"/>
+          </svg>
+        </div>
+        <button class="remove forge-focusable" type="button" aria-label="Remover foto">
+          <span class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--forge-text)" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <span class="pk-cap">com imagem (círculo)</span>
+    </div>
+
+    <!-- loading -->
+    <div class="pk-item">
+      <div class="pulse forge-anim-pulse"></div>
+      <span class="pk-cap">carregando</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

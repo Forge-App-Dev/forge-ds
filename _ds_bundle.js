@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"}],"sourceHashes":{"components/shared/color.js":"3bd7db390b1b","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"2bcea3c4991d","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"655751762e34","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1e53d90f5c0a","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"972bbd516191","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"e6ac25c25ace","components/feedback/Skeleton.jsx":"dc3c940737a7","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"41ed82a4b6cf","components/feedback/macro-meter/MacroMeter.jsx":"210098d8b5fd","components/feedback/meta-bar/MetaBar.jsx":"add70e4351e1","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"222c3bb04953","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"bb70b6c87aa0","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"680a34503d72","components/forms/SegmentedControl.jsx":"063e4c23b23e","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"b050f25387e5","components/feedback/ProgressBar.jsx":"7e3ac117e4bd","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"f1e01b11da7e","components/navigation/Accordion.jsx":"435227c4e5fb","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"d465741f117a"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"3bd7db390b1b","components/shared/content.js":"8b0fd93fe3dc","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"2bcea3c4991d","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"655751762e34","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1e53d90f5c0a","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"972bbd516191","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"e6ac25c25ace","components/feedback/Skeleton.jsx":"dc3c940737a7","components/product/TargetsCard.jsx":"108570f92c20","components/feedback/loading-screen/LoadingScreen.jsx":"41ed82a4b6cf","components/feedback/macro-meter/MacroMeter.jsx":"210098d8b5fd","components/feedback/meta-bar/MetaBar.jsx":"add70e4351e1","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"7fa2264a2712","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"bb70b6c87aa0","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"680a34503d72","components/forms/SegmentedControl.jsx":"063e4c23b23e","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"b050f25387e5","components/feedback/ProgressBar.jsx":"7e3ac117e4bd","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"f1e01b11da7e","components/navigation/Accordion.jsx":"435227c4e5fb","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"d465741f117a","components/feedback/Chart.jsx":"edc0643cddf8","components/media/ImagePicker.jsx":"4ea1d6501899"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -96,6 +96,84 @@ function onColor(input, {
 }
 Object.assign(__ds_scope, { resolveColor, onColor });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/shared/color.js", error: String((e && e.message) || e) }); }
+
+// components/shared/content.js
+try { (() => {
+// Forge Design System — default system copy (i18n / white-label seam).
+//
+// THIS IS THE SINGLE POINT OF INTERNATIONALIZATION (OP-010/188).
+// Every pt-BR string that a component ships as a *default* (prop default or
+// inline system label) lives here — nowhere else. Components import their
+// default from this object instead of hard-coding the literal, so that:
+//   • a white-label / sibling app (e.g. "Fuel") can swap the whole copy layer
+//     by providing its own `content` object, without forking components;
+//   • a future i18n runtime can select a locale bundle here, once, instead of
+//     hunting literals across the tree;
+//   • props still override per call site — this only relocates the DEFAULT.
+//
+// INVARIANT: the strings below must stay BYTE-IDENTICAL to the literals they
+// replaced. This module changes WHERE the default lives, never WHAT renders.
+// Adding a locale later means adding sibling bundles + a selector — not editing
+// these values. Brand names (wordmarks, mark images) are NOT copy: they travel
+// through component props (AppHeader `brand`, LoadingScreen `markSrc`) — see
+// docs/white-label.md.
+//
+// Keys are grouped by component. Values are strings, or functions where the
+// original literal was a template (so the interpolation stays identical).
+
+const content = {
+  loadingScreen: {
+    // feedback/loading-screen/LoadingScreen.jsx — status caption under the mark.
+    message: "carregando…"
+  },
+  errorState: {
+    // feedback/ErrorState.jsx — no-blame failure copy + retry action label.
+    title: "Algo não carregou",
+    subtitle: "Verifique a conexão e tente de novo.",
+    retryLabel: "Tentar de novo"
+  },
+  confirmButton: {
+    // core/ConfirmButton.jsx — 2-tap destructive action.
+    title: "Excluir",
+    confirmTitle: "Confirmar?",
+    // sr-only aria-live announcement while the confirm window is armed.
+    armedHint: "Toque de novo para confirmar a exclusão"
+  },
+  pager: {
+    // onboarding/Pager.jsx — carousel navigation labels.
+    skipLabel: "Pular",
+    nextLabel: "Próximo",
+    doneLabel: "Começar"
+  },
+  offlineBanner: {
+    // product/OfflineBanner.jsx — persistent offline/sync copy (on-voice, "você").
+    message: "Você está offline. Suas alterações ficam salvas e sincronizam quando a conexão voltar."
+  },
+  targetsCard: {
+    // product/TargetsCard.jsx — daily kcal + macro targets summary.
+    title: "Suas metas diárias",
+    editLabel: "Ajustar",
+    kcal: "Kcal",
+    protein: "Proteína",
+    carb: "Carbo",
+    fat: "Gordura"
+  },
+  restTimer: {
+    // product/RestTimer.jsx — rest-countdown labels (all copy is inline here,
+    // the component has no string prop defaults).
+    statusResting: "Descanso",
+    statusDone: "Pronto",
+    addTime: "Adicionar 15 segundos",
+    restart: "Reiniciar descanso",
+    pause: "Pausar",
+    resume: "Retomar",
+    skip: "Pular descanso",
+    // Ring accessible label — template kept identical (mm:ss injected).
+    ringLabel: time => `Descanso: ${time} restantes`
+  }
+};
+Object.assign(__ds_scope, { content });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/shared/content.js", error: String((e && e.message) || e) }); }
 
 // components/shared/useDialogA11y.js
 try { (() => {
@@ -1820,18 +1898,33 @@ function SkeletonText({
 Object.assign(__ds_scope, { Skeleton, SkeletonText });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Skeleton.jsx", error: String((e && e.message) || e) }); }
 
-// components/feedback/TargetsCard.jsx
+// components/product/TargetsCard.jsx
 try { (() => {
 // TargetsCard — daily kcal + macro targets summary, with an edit affordance.
 // Used atop the Nutrição "Hoje" screen and in the targets-setup flow.
+//
+// PRODUCT component (OP-009/131): it knows the nutrition domain (kcal, macros)
+// and carries copy, so it lives in components/product/ and composes primitives.
+// Default labels come from the central content module (i18n/white-label seam);
+// `title`, `editLabel` and `labels` let a call site or sibling app override them.
 function TargetsCard({
   kcal,
   protein,
   carb,
   fat,
   onEdit,
-  accent = "var(--forge-nutrition)"
+  accent = "var(--forge-nutrition)",
+  title = __ds_scope.content.targetsCard.title,
+  editLabel = __ds_scope.content.targetsCard.editLabel,
+  labels
 }) {
+  const t = {
+    kcal: __ds_scope.content.targetsCard.kcal,
+    protein: __ds_scope.content.targetsCard.protein,
+    carb: __ds_scope.content.targetsCard.carb,
+    fat: __ds_scope.content.targetsCard.fat,
+    ...labels
+  };
   return /*#__PURE__*/React.createElement("div", {
     style: {
       backgroundColor: "var(--forge-surface)",
@@ -1855,7 +1948,7 @@ function TargetsCard({
       letterSpacing: 1,
       color: "var(--forge-text-faint)"
     }
-  }, "Suas metas di\xE1rias"), onEdit ? /*#__PURE__*/React.createElement("button", {
+  }, title), onEdit ? /*#__PURE__*/React.createElement("button", {
     onClick: onEdit,
     style: {
       background: "none",
@@ -1867,27 +1960,27 @@ function TargetsCard({
       cursor: "pointer",
       padding: 0
     }
-  }, "Ajustar") : null), /*#__PURE__*/React.createElement("div", {
+  }, editLabel) : null), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between"
     }
   }, /*#__PURE__*/React.createElement(Stat, {
-    label: "Kcal",
+    label: t.kcal,
     value: kcal,
     color: "var(--forge-text)"
   }), /*#__PURE__*/React.createElement(Stat, {
-    label: "Prote\xEDna",
+    label: t.protein,
     value: protein,
     unit: "g",
     color: "var(--forge-macro-protein)"
   }), /*#__PURE__*/React.createElement(Stat, {
-    label: "Carbo",
+    label: t.carb,
     value: carb,
     unit: "g",
     color: "var(--forge-macro-carb)"
   }), /*#__PURE__*/React.createElement(Stat, {
-    label: "Gordura",
+    label: t.fat,
     value: fat,
     unit: "g",
     color: "var(--forge-macro-fat)"
@@ -1923,7 +2016,7 @@ function Stat({
   }, label));
 }
 Object.assign(__ds_scope, { TargetsCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/TargetsCard.jsx", error: String((e && e.message) || e) }); }
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/TargetsCard.jsx", error: String((e && e.message) || e) }); }
 
 // components/feedback/loading-screen/LoadingScreen.jsx
 try { (() => {
@@ -3723,7 +3816,7 @@ function Pager({
       display: "flex",
       flexDirection: "column"
     }
-  }, pages.map((content, i) => /*#__PURE__*/React.createElement("div", {
+  }, pages.map((slide, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     "aria-hidden": i === page ? undefined : "true",
     style: {
@@ -3736,7 +3829,7 @@ function Pager({
       textAlign: "center",
       padding: "var(--forge-space-10)"
     }
-  }, __ds_scope.content))), /*#__PURE__*/React.createElement("footer", {
+  }, slide))), /*#__PURE__*/React.createElement("footer", {
     style: {
       display: "flex",
       alignItems: "center",
@@ -5638,6 +5731,466 @@ function OfflineBanner({
 Object.assign(__ds_scope, { OfflineBanner });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/OfflineBanner.jsx", error: String((e && e.message) || e) }); }
 
+// components/feedback/Chart.jsx
+try { (() => {
+// Chart — the rich sibling of MiniChart (OP-053). Where MiniChart draws a
+// compact, axis-less trend, Chart is the full read: labelled x/y axes, a
+// subtle grid, plotted points/values, and one OR several `series`.
+// variant="line" (default) | "bar" | "area". Colors come from tokens
+// (`color`, or per-series `color`, defaulting to the categorical palette
+// var(--forge-cat-*)); SVG is inline and responsive (viewBox + width 100%).
+//
+// Data shapes accepted by `series`:
+//   - number[]                          → a single unnamed series
+//   - { name, values:number[], color }[] → one or many named series
+// `values` is a convenience alias for a single number[] series.
+//
+// A11y (OP-053, checklist "Gráficos"): the SVG is role="img" with a
+// descriptive aria-label summarizing the data (e.g. "Peso: de 80 a 78,6 kg em
+// 5 semanas") plus <title>/<desc>. Series carry a legend (never color-only),
+// and the plot is wrapped in an overflow-x:auto container so it never makes
+// the body scroll (ADR-0053). Guards against empty / single-point input like
+// MiniChart (P-10); gradient ids are unique per instance via React.useId.
+const PALETTE = ["var(--forge-cat-1)", "var(--forge-cat-2)", "var(--forge-cat-3)", "var(--forge-cat-4)", "var(--forge-cat-5)", "var(--forge-cat-6)"];
+function normalizeSeries(series, values, color) {
+  const clean = arr => (Array.isArray(arr) ? arr : []).filter(v => typeof v === "number" && !Number.isNaN(v));
+  if (Array.isArray(series) && series.length && typeof series[0] === "object") {
+    return series.map((s, i) => ({
+      name: s && s.name,
+      color: s && s.color || PALETTE[i % PALETTE.length],
+      values: clean(s && s.values)
+    })).filter(s => s.values.length > 0);
+  }
+  const raw = clean(Array.isArray(series) ? series : values);
+  return raw.length ? [{
+    name: undefined,
+    color: color || "var(--forge-accent)",
+    values: raw
+  }] : [];
+}
+const fmt = v => typeof v === "number" ? v.toLocaleString("pt-BR") : v;
+function Chart({
+  series,
+  values,
+  variant = "line",
+  xLabels,
+  yTicks = 4,
+  title,
+  unit,
+  xUnit = "pontos",
+  color,
+  ariaLabel,
+  showValues = false,
+  height = 200
+}) {
+  const uid = React.useId ? React.useId() : "forge-chart";
+  const S = normalizeSeries(series, values, color);
+  const W = 320;
+  const H = height;
+  const multi = S.length > 1;
+
+  // Empty guard (P-10) — mirror MiniChart: render an empty, still-labelled SVG.
+  if (S.length === 0) {
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        overflowX: "auto"
+      }
+    }, /*#__PURE__*/React.createElement("svg", {
+      width: "100%",
+      height: H,
+      viewBox: `0 0 ${W} ${H}`,
+      role: "img",
+      "aria-label": ariaLabel || title || "Sem dados"
+    }, title ? /*#__PURE__*/React.createElement("title", null, title) : null, /*#__PURE__*/React.createElement("desc", null, "Sem dados para exibir.")));
+  }
+  const n = Math.max(...S.map(s => s.values.length));
+  const all = S.flatMap(s => s.values);
+  const dataMin = Math.min(...all);
+  const dataMax = Math.max(...all);
+  const baseZero = variant === "bar";
+  const yMin = baseZero ? Math.min(0, dataMin) : dataMin;
+  let yMax = dataMax;
+  if (yMax === yMin) yMax = yMin + 1; // single-point / flat guard (P-10)
+  const range = yMax - yMin;
+  const mL = 42;
+  const mR = 12;
+  const mT = 12;
+  const mB = xLabels && xLabels.length ? 30 : 14;
+  const plotW = W - mL - mR;
+  const plotH = H - mT - mB;
+  const x0 = mL;
+  const y0 = mT;
+  const baselineY = y0 + plotH;
+  const xFor = (i, len) => x0 + (len <= 1 ? plotW / 2 : i / (len - 1) * plotW);
+  const yFor = v => y0 + plotH - (v - yMin) / range * plotH;
+  const ticks = [];
+  for (let i = 0; i <= yTicks; i++) ticks.push(yMin + range * i / yTicks);
+
+  // Descriptive accessible name summarizing the data.
+  const count = xLabels && xLabels.length ? xLabels.length : n;
+  let autoLabel;
+  if (!multi) {
+    const v = S[0].values;
+    const first = v[0];
+    const last = v[v.length - 1];
+    const span = v.length > 1 ? `de ${fmt(first)} a ${fmt(last)}` : `${fmt(first)}`;
+    autoLabel = `${title ? title + ": " : "Gráfico: "}${span}${unit ? " " + unit : ""}${count > 1 ? ` em ${count} ${xUnit}` : ""}`;
+  } else {
+    const names = S.map(s => s.name).filter(Boolean).join(", ");
+    autoLabel = `${title ? title + ": " : "Gráfico: "}${S.length} séries${names ? " (" + names + ")" : ""}${count > 1 ? ` em ${count} ${xUnit}` : ""}`;
+  }
+  const label = ariaLabel || autoLabel;
+  const axisText = {
+    fill: "var(--forge-text-faint)"
+  };
+  const gridStroke = {
+    stroke: "var(--forge-border)"
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      overflowX: "auto"
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: "100%",
+    height: H,
+    viewBox: `0 0 ${W} ${H}`,
+    role: "img",
+    "aria-label": label,
+    style: {
+      display: "block",
+      fontFamily: "var(--forge-font-body)"
+    }
+  }, title ? /*#__PURE__*/React.createElement("title", null, title) : null, /*#__PURE__*/React.createElement("desc", null, autoLabel), ticks.map((t, i) => {
+    const y = yFor(t);
+    return /*#__PURE__*/React.createElement("g", {
+      key: `t${i}`
+    }, /*#__PURE__*/React.createElement("line", {
+      x1: x0,
+      y1: y,
+      x2: x0 + plotW,
+      y2: y,
+      style: gridStroke,
+      strokeWidth: 1
+    }), /*#__PURE__*/React.createElement("text", {
+      x: x0 - 6,
+      y: y,
+      textAnchor: "end",
+      dominantBaseline: "middle",
+      fontSize: 9,
+      style: axisText
+    }, fmt(Math.round(t * 10) / 10)));
+  }), xLabels && xLabels.length ? xLabels.map((lbl, i) => /*#__PURE__*/React.createElement("text", {
+    key: `x${i}`,
+    x: xFor(i, xLabels.length),
+    y: baselineY + 14,
+    textAnchor: "middle",
+    fontSize: 9,
+    style: axisText
+  }, lbl)) : null, S.map((s, si) => {
+    const len = s.values.length;
+    const pts = s.values.map((v, i) => [xFor(i, len), yFor(v)]);
+    if (variant === "bar") {
+      const slot = plotW / n;
+      const groupPad = 0.16;
+      const inner = slot * (1 - 2 * groupPad);
+      const bw = inner / S.length;
+      return /*#__PURE__*/React.createElement("g", {
+        key: `s${si}`,
+        style: {
+          color: s.color
+        }
+      }, s.values.map((v, i) => {
+        const yTop = yFor(v);
+        const x = x0 + i * slot + slot * groupPad + si * bw;
+        const h = baselineY - yTop;
+        return /*#__PURE__*/React.createElement("rect", {
+          key: i,
+          x: x,
+          y: yTop,
+          width: Math.max(bw - 1.5, 1),
+          height: Math.max(h, 0),
+          rx: 2,
+          fill: "currentColor"
+        });
+      }));
+    }
+    const d = pts.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+    if (variant === "area") {
+      const gradId = `forge-chart-grad-${uid}-${si}`;
+      const areaD = len > 1 ? d + ` L${pts[len - 1][0].toFixed(1)},${baselineY} L${pts[0][0].toFixed(1)},${baselineY} Z` : "";
+      return /*#__PURE__*/React.createElement("g", {
+        key: `s${si}`,
+        style: {
+          color: s.color
+        }
+      }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+        id: gradId,
+        x1: "0",
+        y1: "0",
+        x2: "0",
+        y2: "1"
+      }, /*#__PURE__*/React.createElement("stop", {
+        offset: "0%",
+        stopColor: "currentColor",
+        stopOpacity: "0.32"
+      }), /*#__PURE__*/React.createElement("stop", {
+        offset: "100%",
+        stopColor: "currentColor",
+        stopOpacity: "0"
+      }))), areaD ? /*#__PURE__*/React.createElement("path", {
+        d: areaD,
+        fill: `url(#${gradId})`,
+        stroke: "none"
+      }) : null, /*#__PURE__*/React.createElement("path", {
+        d: d,
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: 2.5,
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }), pts.map((p, i) => /*#__PURE__*/React.createElement("circle", {
+        key: i,
+        cx: p[0],
+        cy: p[1],
+        r: 3,
+        fill: "currentColor"
+      })));
+    }
+
+    // line (default)
+    return /*#__PURE__*/React.createElement("g", {
+      key: `s${si}`,
+      style: {
+        color: s.color
+      }
+    }, /*#__PURE__*/React.createElement("path", {
+      d: d,
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: 2.5,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), pts.map((p, i) => /*#__PURE__*/React.createElement("circle", {
+      key: i,
+      cx: p[0],
+      cy: p[1],
+      r: 3,
+      fill: "currentColor"
+    })), showValues ? pts.map((p, i) => /*#__PURE__*/React.createElement("text", {
+      key: `v${i}`,
+      x: p[0],
+      y: p[1] - 7,
+      textAnchor: "middle",
+      fontSize: 9,
+      style: {
+        fill: "var(--forge-text-dim)"
+      }
+    }, fmt(s.values[i]))) : null);
+  })), multi ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "var(--forge-space-4)",
+      marginTop: "var(--forge-space-3)"
+    }
+  }, S.map((s, si) => /*#__PURE__*/React.createElement("span", {
+    key: si,
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "var(--forge-space-2)",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-chip)",
+      color: "var(--forge-text-dim)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      width: 10,
+      height: 10,
+      borderRadius: "var(--forge-radius-chip)",
+      backgroundColor: s.color,
+      flexShrink: 0
+    }
+  }), s.name || `Série ${si + 1}`))) : null);
+}
+Object.assign(__ds_scope, { Chart });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Chart.jsx", error: String((e && e.message) || e) }); }
+
+// components/media/ImagePicker.jsx
+try { (() => {
+// ImagePicker — the VISUAL layer of a photo picker (OP-050): the empty
+// "add photo" placeholder, the selected thumbnail with a remove control, and
+// the uploading/loading state. It does NOT capture or pick the image itself —
+// the native capture/selection + permissions live in the app (Expo
+// `expo-image-picker`). Wire the platform picker to `onPick`, and set `src`
+// once you have a URI. This component only renders the reusable chrome around
+// that platform flow.
+//
+// States:
+//   - empty (no src, not loading): pressable placeholder (role button via a
+//     native <button>) with a camera glyph + `label` ("Adicionar foto").
+//   - loading: Skeleton pulse at the same size/shape (honors reduced-motion),
+//     wrapped in a polite status region.
+//   - filled: the image as a circular/square thumbnail + a remove button.
+//
+// A11y: the empty placeholder is a real button with an accessible name and a
+// ≥44px target (--forge-tap-target-min); the remove button has a 44px hit area
+// and the name "Remover foto"; the thumbnail image has a meaningful `alt`.
+const CameraGlyph = ({
+  size
+}) => /*#__PURE__*/React.createElement("svg", {
+  width: size,
+  height: size,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: 2,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  "aria-hidden": "true"
+}, /*#__PURE__*/React.createElement("path", {
+  d: "M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "13",
+  r: "4"
+}));
+function ImagePicker({
+  src,
+  onPick,
+  onRemove,
+  shape = "square",
+  size = 96,
+  loading = false,
+  label = "Adicionar foto",
+  alt,
+  style
+}) {
+  const radius = shape === "circle" ? "var(--forge-radius-pill)" : "var(--forge-radius-card)";
+  const box = {
+    width: size,
+    height: size,
+    minWidth: "var(--forge-tap-target-min)",
+    minHeight: "var(--forge-tap-target-min)",
+    borderRadius: radius,
+    flexShrink: 0,
+    boxSizing: "border-box"
+  };
+
+  // Loading — pulse placeholder at the target size/shape.
+  if (loading) {
+    return /*#__PURE__*/React.createElement("div", {
+      role: "status",
+      "aria-label": "Carregando foto",
+      style: {
+        position: "relative",
+        ...box,
+        ...style
+      }
+    }, /*#__PURE__*/React.createElement(__ds_scope.Skeleton, {
+      variant: "block",
+      width: size,
+      height: size,
+      radius: radius,
+      style: {
+        width: "100%",
+        height: "100%"
+      }
+    }));
+  }
+
+  // Filled — thumbnail + remove control.
+  if (src) {
+    return /*#__PURE__*/React.createElement("div", {
+      style: {
+        position: "relative",
+        ...box,
+        ...style
+      }
+    }, /*#__PURE__*/React.createElement("img", {
+      src: src,
+      alt: alt || "Foto selecionada",
+      style: {
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
+        borderRadius: radius,
+        backgroundColor: "var(--forge-surface-raised)"
+      }
+    }), onRemove ? /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "forge-focusable",
+      onClick: onRemove,
+      "aria-label": "Remover foto",
+      style: {
+        position: "absolute",
+        top: -10,
+        right: -10,
+        width: "var(--forge-tap-target-min)",
+        height: "var(--forge-tap-target-min)",
+        padding: 0,
+        border: "none",
+        background: "transparent",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        width: 26,
+        height: 26,
+        borderRadius: "var(--forge-radius-pill)",
+        backgroundColor: "var(--forge-surface-raised)",
+        border: "var(--forge-border-w) solid var(--forge-border)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: "x",
+      size: 14,
+      color: "var(--forge-text)"
+    }))) : null);
+  }
+
+  // Empty — pressable "add photo" placeholder.
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "forge-focusable",
+    onClick: onPick,
+    "aria-label": label,
+    style: {
+      ...box,
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "var(--forge-space-2)",
+      padding: "var(--forge-space-3)",
+      backgroundColor: "var(--forge-surface)",
+      border: "var(--forge-border-w) dashed var(--forge-border-input)",
+      color: "var(--forge-text-faint)",
+      cursor: "pointer",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement(CameraGlyph, {
+    size: Math.max(Math.round(size * 0.26), 18)
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-chip)",
+      fontWeight: 600,
+      lineHeight: "var(--forge-lh-chip)",
+      textAlign: "center"
+    }
+  }, label));
+}
+Object.assign(__ds_scope, { ImagePicker });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/media/ImagePicker.jsx", error: String((e && e.message) || e) }); }
+
 __ds_ns.Icon = __ds_scope.Icon;
 
 __ds_ns.ICON_NAMES = __ds_scope.ICON_NAMES;
@@ -5763,5 +6316,9 @@ __ds_ns.StreakIndicator = __ds_scope.StreakIndicator;
 __ds_ns.CoachNote = __ds_scope.CoachNote;
 
 __ds_ns.OfflineBanner = __ds_scope.OfflineBanner;
+
+__ds_ns.Chart = __ds_scope.Chart;
+
+__ds_ns.ImagePicker = __ds_scope.ImagePicker;
 
 })();

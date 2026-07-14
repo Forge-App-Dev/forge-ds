@@ -75,7 +75,7 @@
   },
   {
    "name": "TargetsCard",
-   "sourcePath": "components/feedback/TargetsCard.jsx"
+   "sourcePath": "components/product/TargetsCard.jsx"
   },
   {
    "name": "LoadingScreen",
@@ -252,6 +252,14 @@
   {
    "name": "OfflineBanner",
    "sourcePath": "components/product/OfflineBanner.jsx"
+  },
+  {
+   "name": "Chart",
+   "sourcePath": "components/feedback/Chart.jsx"
+  },
+  {
+   "name": "ImagePicker",
+   "sourcePath": "components/media/ImagePicker.jsx"
   },
   {
    "name": "ICON_NAMES",
