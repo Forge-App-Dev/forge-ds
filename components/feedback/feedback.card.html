@@ -1,96 +1,179 @@
 <!-- @dsCard group="Components" viewport="700x900" name="Feedback" subtitle="Ring, MacroMeter, MetaBar, MiniChart, InlineAlert, EmptyState, Spinner, StatBadge — incl. variants" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--font-body)}
-h4{color:var(--forge-text-faint);font-size:10.5px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin:0 0 8px}
-section{margin-bottom:22px}
+<style>
+  body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  h4{color:var(--forge-text-faint);font-size:10.5px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin:0 0 8px;}
+  section{margin-bottom:22px;}
+  svg.icon{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  circle.ring{fill:none;}
+
+  /* Ring */
+  .rings{display:flex;gap:24px;align-items:center;}
+  .ring{position:relative;display:flex;align-items:center;justify-content:center;}
+  .ring svg{position:absolute;}
+  .ring .ctr{font-family:var(--forge-font-title);color:var(--forge-text);}
+
+  /* MacroMeter */
+  .mm{margin-bottom:10px;}
+  .mm .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+  .mm .lbl{display:flex;align-items:center;gap:6px;}
+  .dot{width:8px;height:8px;border-radius:4px;display:inline-block;flex-shrink:0;}
+  .name{color:var(--forge-text-muted);font-weight:600;font-size:12.5px;}
+  .amt{color:var(--forge-text-dim);font-weight:600;font-size:12px;}
+  .track{height:6px;border-radius:3px;background:var(--forge-surface-raised);overflow:hidden;}
+  .fill{height:6px;border-radius:3px;}
+  .compact{display:flex;align-items:center;gap:8px;margin-top:10px;}
+  .ctrack{flex:1;height:5px;border-radius:2.5px;background:var(--forge-surface-raised);overflow:hidden;}
+  .cfill{height:5px;border-radius:2.5px;}
+  .cval{color:var(--forge-text-dim);font-weight:600;font-size:11px;flex-shrink:0;}
+
+  /* MetaBar */
+  .metas{max-width:340px;display:flex;flex-direction:column;gap:10px;}
+  .seg-track{display:flex;height:6px;border-radius:3px;background:var(--forge-surface-raised);overflow:hidden;}
+
+  /* MiniChart */
+  .charts{display:flex;gap:16px;max-width:620px;}
+  .charts .col{flex:1;}
+
+  /* InlineAlert */
+  .alerts{display:flex;flex-direction:column;gap:8px;max-width:500px;}
+  .alert{display:flex;gap:10px;align-items:flex-start;padding:16px;border-radius:var(--forge-radius-card);border:var(--forge-border-w) solid;}
+  .alert .msg{flex:1;font-size:var(--forge-text-body-sm);color:var(--forge-text);line-height:var(--forge-lh-body);}
+  .alert.warning{background:color-mix(in srgb, var(--forge-warning) 12%, var(--forge-surface));border-color:color-mix(in srgb, var(--forge-warning) 40%, var(--forge-border));}
+  .alert.success{background:color-mix(in srgb, var(--forge-success) 12%, var(--forge-surface));border-color:color-mix(in srgb, var(--forge-success) 40%, var(--forge-border));}
+  .alert.warning .t{color:var(--forge-warning);font-weight:700;}
+  .alert.success .t{color:var(--forge-success);font-weight:700;}
+
+  /* EmptyState */
+  .empty{display:flex;align-items:center;gap:12px;background:var(--forge-surface);border:var(--forge-border-w) solid var(--forge-border);border-radius:var(--forge-radius-card);padding:16px;max-width:500px;}
+  .empty .chip{width:34px;height:34px;border-radius:var(--forge-radius-chip);background:var(--forge-surface-raised);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .empty .et{color:var(--forge-text-faint);font-weight:600;font-size:15px;}
+  .empty .es{color:var(--forge-text-dim);font-size:var(--forge-text-chip);margin-top:3px;line-height:var(--forge-lh-chip);}
+
+  /* Spinner + StatBadge */
+  .misc{display:flex;gap:24px;align-items:center;}
+  .statbadge{display:inline-flex;align-items:center;gap:3px;font-weight:700;font-size:var(--forge-text-chip);color:var(--forge-success);}
 </style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const { Ring, MacroMeter, MetaBar, MiniChart, InlineAlert, EmptyState, Spinner, StatBadge } = window.ForgeDesignSystem_7731a5;
-
-function Demo() {
-  return (
-    <div>
-      <section>
-        <h4>Ring — progress / indeterminate / segments</h4>
-        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
-          <Ring size={90} stroke={10} progress={0.62} color="#EF4444"><span style={{ color: "var(--forge-text)", fontFamily: "var(--font-title)", fontSize: 18 }}>62%</span></Ring>
-          <Ring size={70} stroke={7} indeterminate color="#EF4444" />
-          <Ring size={90} stroke={10} segments={[
-            { value: 0.25, color: "var(--forge-macro-protein)" },
-            { value: 0.35, color: "var(--forge-macro-carb)" },
-            { value: 0.15, color: "var(--forge-macro-fat)" },
-          ]}><span style={{ color: "var(--forge-text)", fontFamily: "var(--font-title)", fontSize: 16 }}>75%</span></Ring>
-        </div>
-      </section>
-
-      <section>
-        <h4>MacroMeter — default / compact</h4>
-        <div style={{ maxWidth: 340 }}>
-          <MacroMeter label="Proteína" color="var(--forge-macro-protein)" value={92} target={150} />
-          <div style={{ marginTop: 10 }}>
-            <MacroMeter compact color="var(--forge-macro-carb)" value={45} target={70} />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h4>MetaBar — single value / segmented</h4>
-        <div style={{ maxWidth: 340, display: "flex", flexDirection: "column", gap: 10 }}>
-          <MetaBar value={2100} target={2400} />
-          <MetaBar segments={[
-            { value: 420, color: "var(--forge-macro-protein)" },
-            { value: 780, color: "var(--forge-macro-carb)" },
-            { value: 480, color: "var(--forge-macro-fat)" },
-          ]} target={2400} />
-        </div>
-      </section>
-
-      <section>
-        <h4>MiniChart — line / bar / area</h4>
-        <div style={{ display: "flex", gap: 16, maxWidth: 620 }}>
-          <div style={{ flex: 1 }}><MiniChart values={[82, 81.5, 81.2, 80.8, 80.6, 80.1, 79.8]} color="#EF4444" /></div>
-          <div style={{ flex: 1 }}><MiniChart variant="bar" values={[420, 780, 610, 0, 390]} color="#10B981" /></div>
-          <div style={{ flex: 1 }}><MiniChart variant="area" values={[82, 81.5, 81, 80.6, 80.2]} color="#EF4444" /></div>
-        </div>
-      </section>
-
-      <section>
-        <h4>InlineAlert</h4>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxWidth: 500 }}>
-          <InlineAlert kind="warning" title="Lembrete do programa.">Rode por 8–10 semanas antes de reavaliar.</InlineAlert>
-          <InlineAlert kind="success" title="Meta batida!">Você completou todos os treinos da semana.</InlineAlert>
-        </div>
-      </section>
-
-      <section>
-        <h4>EmptyState</h4>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, maxWidth: 500 }}>
-          <EmptyState icon="moon" title="Descanso" subtitle="Recuperação também é treino." />
-        </div>
-      </section>
-
-      <section>
-        <h4>Spinner &amp; StatBadge</h4>
-        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
-          <Spinner size={22} color="#EF4444" />
-          <StatBadge value={-1.2} unit="kg" goodDirection="down" />
-          <StatBadge value={5} unit=" reps" goodDirection="up" />
-        </div>
-      </section>
+<section>
+  <h4>Ring — progress / indeterminate / segments</h4>
+  <div class="rings">
+    <div class="ring" style="width:90px;height:90px;">
+      <svg width="90" height="90" style="transform:rotate(-90deg)">
+        <circle class="ring" cx="45" cy="45" r="40" style="stroke:var(--forge-surface-raised)" stroke-width="10"/>
+        <circle class="ring" cx="45" cy="45" r="40" style="stroke:var(--forge-accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="251.33" stroke-dashoffset="95.5"/>
+      </svg>
+      <span class="ctr" style="font-size:18px">62%</span>
     </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+    <div class="ring" style="width:70px;height:70px;">
+      <svg width="70" height="70"><circle class="ring" cx="35" cy="35" r="31.5" style="stroke:var(--forge-surface-raised)" stroke-width="7"/></svg>
+      <svg width="70" height="70" class="forge-anim-spin"><circle class="ring" cx="35" cy="35" r="31.5" style="stroke:var(--forge-accent)" stroke-width="7" stroke-linecap="round" stroke-dasharray="197.92" stroke-dashoffset="142.5"/></svg>
+    </div>
+    <div class="ring" style="width:90px;height:90px;">
+      <svg width="90" height="90" style="transform:rotate(-90deg)">
+        <circle class="ring" cx="45" cy="45" r="40" style="stroke:var(--forge-surface-raised)" stroke-width="10"/>
+        <circle class="ring" cx="45" cy="45" r="40" style="stroke:var(--forge-macro-protein);transform:rotate(0deg);transform-origin:center" stroke-width="10" stroke-linecap="butt" stroke-dasharray="62.83 188.5"/>
+        <circle class="ring" cx="45" cy="45" r="40" style="stroke:var(--forge-macro-carb);transform:rotate(90deg);transform-origin:center" stroke-width="10" stroke-linecap="butt" stroke-dasharray="87.96 163.37"/>
+        <circle class="ring" cx="45" cy="45" r="40" style="stroke:var(--forge-macro-fat);transform:rotate(216deg);transform-origin:center" stroke-width="10" stroke-linecap="butt" stroke-dasharray="37.70 213.63"/>
+      </svg>
+      <span class="ctr" style="font-size:16px">75%</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>MacroMeter — default / compact</h4>
+  <div style="max-width:340px;">
+    <div class="mm">
+      <div class="head">
+        <div class="lbl"><span class="dot" style="background:var(--forge-macro-protein)"></span><span class="name">Proteína</span></div>
+        <span class="amt">92 / 150 g</span>
+      </div>
+      <div class="track"><div class="fill" style="width:61.3%;background:var(--forge-macro-protein)"></div></div>
+    </div>
+    <div class="compact">
+      <span class="dot" style="background:var(--forge-macro-carb)"></span>
+      <div class="ctrack"><div class="cfill" style="width:64.3%;background:var(--forge-macro-carb)"></div></div>
+      <span class="cval">45g</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>MetaBar — single value / segmented</h4>
+  <div class="metas">
+    <div class="track"><div class="fill" style="width:87.5%;background:var(--forge-nutrition)"></div></div>
+    <div class="seg-track">
+      <div style="width:17.5%;background:var(--forge-macro-protein);border-right:var(--forge-border-w-strong) solid var(--forge-surface-raised)"></div>
+      <div style="width:32.5%;background:var(--forge-macro-carb);border-right:var(--forge-border-w-strong) solid var(--forge-surface-raised)"></div>
+      <div style="width:20%;background:var(--forge-macro-fat)"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>MiniChart — line / bar / area</h4>
+  <div class="charts">
+    <div class="col">
+      <svg width="100%" height="60" viewBox="0 0 280 60" style="color:var(--forge-accent)" role="img" aria-label="Gráfico de linha">
+        <path d="M6.0,6.0 L50.7,16.9 L95.3,23.5 L140.0,32.2 L184.7,36.5 L229.3,47.5 L274.0,54.0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="6.0" cy="6.0" r="3.5" fill="currentColor"/><circle cx="50.7" cy="16.9" r="3.5" fill="currentColor"/><circle cx="95.3" cy="23.5" r="3.5" fill="currentColor"/><circle cx="140.0" cy="32.2" r="3.5" fill="currentColor"/><circle cx="184.7" cy="36.5" r="3.5" fill="currentColor"/><circle cx="229.3" cy="47.5" r="3.5" fill="currentColor"/><circle cx="274.0" cy="54.0" r="3.5" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="col">
+      <svg width="100%" height="60" viewBox="0 0 280 60" style="color:var(--forge-success)" role="img" aria-label="Gráfico de barras">
+        <rect x="14.0" y="26.3" width="37.5" height="27.7" rx="2" fill="currentColor"/><rect x="67.6" y="6.0" width="37.5" height="48.0" rx="2" fill="currentColor"/><rect x="121.2" y="15.6" width="37.5" height="38.4" rx="2" fill="currentColor"/><rect x="174.8" y="50.0" width="37.5" height="4.0" rx="2" fill="currentColor"/><rect x="228.4" y="28.0" width="37.5" height="26.0" rx="2" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="col">
+      <svg width="100%" height="60" viewBox="0 0 280 60" style="color:var(--forge-accent)" role="img" aria-label="Gráfico de área">
+        <defs><linearGradient id="fb-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="currentColor" stop-opacity="0.35"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+        <path d="M6.0,6.0 L73.0,19.3 L140.0,32.7 L207.0,43.3 L274.0,54.0 L274.0,54 L6.0,54 Z" fill="url(#fb-area)" stroke="none"/>
+        <path d="M6.0,6.0 L73.0,19.3 L140.0,32.7 L207.0,43.3 L274.0,54.0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>InlineAlert</h4>
+  <div class="alerts">
+    <div class="alert warning" role="status">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="color:var(--forge-warning)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div class="msg"><span class="t">Lembrete do programa. </span>Rode por 8–10 semanas antes de reavaliar.</div>
+    </div>
+    <div class="alert success" role="status">
+      <svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="color:var(--forge-success)"><path d="M20 6L9 17l-5-5"/></svg>
+      <div class="msg"><span class="t">Meta batida! </span>Você completou todos os treinos da semana.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>EmptyState</h4>
+  <div class="empty">
+    <span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" style="color:var(--forge-text-faint)"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+    <div style="flex:1;min-width:0;">
+      <div class="et">Descanso</div>
+      <div class="es">Recuperação também é treino.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Spinner &amp; StatBadge</h4>
+  <div class="misc">
+    <svg width="22" height="22" viewBox="0 0 22 22" class="forge-anim-spin" style="color:var(--forge-accent)" role="status" aria-label="Carregando">
+      <circle cx="11" cy="11" r="9.46" style="stroke:currentColor" stroke-width="3.08" fill="none" stroke-dasharray="59.44" stroke-dashoffset="41.6" stroke-linecap="round" opacity="0.9"/>
+    </svg>
+    <span class="statbadge"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>-1.2kg</span>
+    <span class="statbadge"><svg class="icon" width="13" height="13" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>+5 reps</span>
+  </div>
+</section>
 </body>
 </html>

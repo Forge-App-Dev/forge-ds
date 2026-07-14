@@ -1,33 +1,30 @@
 <!-- @dsCard group="Components" viewport="700x260" name="Forms" subtitle="TextField, QtyInput" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .box{display:flex;flex-direction:column;gap:12px;max-width:320px;}
+  .lbl{color:var(--forge-text-faint);font-size:var(--forge-text-label);text-transform:uppercase;letter-spacing:var(--forge-tracking-label);font-weight:700;margin-bottom:6px;}
+  .field{height:44px;display:flex;align-items:center;padding-inline:12px;border-radius:var(--forge-radius-input);border:1px solid var(--forge-border-input);background:var(--forge-surface-raised);font-size:var(--forge-text-input);}
+  .field.ml{height:auto;min-height:64px;align-items:flex-start;padding:12px;}
+  .ph{color:var(--forge-text-dim);}
+  .qty{display:inline-flex;align-items:center;gap:8px;}
+  .qval{height:44px;min-width:64px;display:flex;align-items:center;justify-content:center;border-radius:var(--forge-radius-input);border:1px solid var(--forge-border-input);background:var(--forge-surface-raised);font-family:var(--forge-font-title);font-weight:700;font-size:20px;font-variant-numeric:tabular-nums;}
+  .unit{height:44px;padding-inline:14px;display:inline-flex;align-items:center;border-radius:var(--forge-radius-input);border:1px solid var(--forge-accent);background:var(--forge-accent);color:var(--forge-on-accent);font-weight:700;font-size:var(--forge-text-chip);}
+  .unit.off{background:var(--forge-surface-raised);border-color:var(--forge-border-input);color:var(--forge-text-dim);}
+</style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const { TextField, QtyInput } = window.ForgeDesignSystem_7731a5;
-function Demo() {
-  const [email, setEmail] = React.useState("voce@email.com");
-  const [qty, setQty] = React.useState({ qty: "150", unit: "g" });
-  return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 10, maxWidth: 320 }}>
-      <TextField label="Email" value={email} onChange={setEmail} placeholder="voce@email.com" />
-      <TextField label="Notas" multiline placeholder="Observações do treino..." />
-      <div style={{ marginTop: 6 }}>
-        <div style={{ color: "var(--forge-text-faint)", fontSize: 11.5, textTransform: "uppercase", letterSpacing: 1, marginBottom: 6, fontWeight: 700 }}>Quantidade</div>
-        <QtyInput qty={qty.qty} unit={qty.unit} units={["g", "fatia"]} onChange={setQty} />
-      </div>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+<div class="box">
+  <div><div class="lbl">Email</div><div class="field">voce@email.com</div></div>
+  <div><div class="lbl">Notas</div><div class="field ml"><span class="ph">Observações do treino…</span></div></div>
+  <div>
+    <div class="lbl">Quantidade</div>
+    <div class="qty"><span class="qval">150</span><span class="unit">g</span><span class="unit off">fatia</span></div>
+  </div>
+</div>
 </body>
 </html>

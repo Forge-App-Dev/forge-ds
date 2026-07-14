@@ -1,30 +1,28 @@
 <!-- @dsCard group="Components" viewport="700x260" name="Typography" subtitle="Title, Label, SectionLabel" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles.css">
-<script src="../../_ds_bundle.js"></script>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:20px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .col{display:flex;flex-direction:column;gap:4px;}
+  .title{font-family:var(--forge-font-title);font-weight:700;text-transform:uppercase;letter-spacing:var(--forge-tracking-title);color:var(--forge-text);}
+  .screen-title{font-size:var(--forge-text-screen-title);line-height:var(--forge-lh-screen-title);}
+  .panel-title{font-size:var(--forge-text-panel-title);line-height:var(--forge-lh-panel-title);margin-top:8px;}
+  .card-title{font-family:var(--forge-font-body);font-weight:700;text-transform:none;letter-spacing:0;font-size:var(--forge-text-card-title);line-height:var(--forge-lh-card-title);color:var(--forge-text);margin-top:8px;}
+  .label{font-family:var(--forge-font-body);font-weight:700;font-size:var(--forge-text-label);text-transform:uppercase;letter-spacing:var(--forge-tracking-label);color:var(--forge-text-faint);}
+  .label.email{margin-top:12px;}
+  .section-label{margin-top:14px;margin-bottom:8px;}
+</style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const { Title, Label, SectionLabel } = window.ForgeDesignSystem_7731a5;
-function Demo() {
-  return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-      <Title size="screenTitle">Hoje</Title>
-      <Title size="panelTitle" style={{ marginTop: 8 }}>Editar plano</Title>
-      <Title size="cardTitle" style={{ marginTop: 8 }}>Supino Reto</Title>
-      <Label style={{ marginTop: 12 }}>Email</Label>
-      <SectionLabel>Sua semana</SectionLabel>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+<div class="col">
+  <div class="title screen-title">Hoje</div>
+  <div class="title panel-title">Editar plano</div>
+  <div class="card-title">Supino Reto</div>
+  <div class="label email">Email</div>
+  <div class="label section-label">Sua semana</div>
+</div>
 </body>
 </html>

@@ -1,26 +1,23 @@
 <!-- @dsCard group="Components" viewport="700x260" name="Screen" subtitle="Standalone screen wrapper (outside module shell)" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);}
+  .root{height:240px;border:1px dashed var(--forge-border);overflow:hidden;display:flex;}
+  .screen{flex:1;background:var(--forge-bg);display:flex;flex-direction:column;padding:16px;box-sizing:border-box;}
+  .label{color:var(--forge-text-faint);font-size:11px;text-transform:uppercase;letter-spacing:1px;font-family:var(--forge-font-body);font-weight:700;}
+  .title{font-family:var(--forge-font-title);font-size:22px;text-transform:uppercase;letter-spacing:var(--forge-tracking-title);color:var(--forge-text);margin-top:6px;}
+</style>
 </head>
 <body>
-<div id="root" style="height:240px;border:1px dashed var(--forge-border);overflow:hidden;display:flex"></div>
-<script type="text/babel">
-const { Screen } = window.ForgeDesignSystem_7731a5;
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <div style={{ flex: 1, display: "flex" }}>
-    <Screen style={{ padding: 16 }}>
-      <div style={{ color: "var(--forge-text-faint)", fontSize: 11, textTransform: "uppercase", letterSpacing: 1, fontFamily: "var(--font-body)", fontWeight: 700 }}>Screen (fora do módulo)</div>
-      <div style={{ fontFamily: "var(--font-title)", fontSize: 22, textTransform: "uppercase", color: "var(--forge-text)", marginTop: 6 }}>Boot</div>
-    </Screen>
+<div class="root">
+  <div class="screen">
+    <div class="label">Screen (fora do módulo)</div>
+    <div class="title">Boot</div>
   </div>
-);
-</script>
+</div>
 </body>
 </html>

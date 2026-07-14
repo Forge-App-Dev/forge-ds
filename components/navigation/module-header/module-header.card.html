@@ -1,21 +1,25 @@
 <!-- @dsCard group="Components" viewport="700x150" name="ModuleHeader" subtitle="Screen title with eyebrow + right action slot" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .mh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:18px;}
+  .mh .left{min-width:0;flex:1;}
+  .eyebrow{font-family:var(--forge-font-body);font-weight:700;font-size:12px;letter-spacing:var(--forge-tracking-eyebrow);text-transform:uppercase;color:var(--forge-text-faint);margin-bottom:4px;}
+  .title{font-family:var(--forge-font-title);font-weight:700;text-transform:uppercase;letter-spacing:var(--forge-tracking-title);color:var(--forge-text);font-size:var(--forge-text-screen-title);line-height:var(--forge-lh-screen-title);margin:0;}
+  .btn-sm{height:var(--forge-size-control-sm);padding-inline:13px;border-radius:var(--forge-radius-button);border:none;background:var(--forge-success);color:var(--forge-on-light);font-family:var(--forge-font-body);font-weight:800;font-size:12.5px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;}
+</style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const { ModuleHeader, Button } = window.ForgeDesignSystem_7731a5;
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <ModuleHeader eyebrow="Terça · 11/07/2026" title="Hoje" right={<Button small title="Ajustar" color="#10B981" resolvedColor="#10B981" />} />
-);
-</script>
+<div class="mh">
+  <div class="left">
+    <div class="eyebrow">Terça · 11/07/2026</div>
+    <h1 class="title">Hoje</h1>
+  </div>
+  <button class="btn-sm">Ajustar</button>
+</div>
 </body>
 </html>

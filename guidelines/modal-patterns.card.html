@@ -1,51 +1,33 @@
 <!-- @dsCard group="Brand" viewport="700x460" name="Modal Patterns" subtitle="Panel vs FullScreen — decision rule by flow size" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../styles.css">
-<script src="../_ds_bundle.js"></script>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<style>body{margin:0;background:var(--forge-bg);font-family:var(--font-body);padding:16px}
-.rule{display:flex;gap:16px}
-.col{flex:1;min-width:0}
-.h{color:var(--forge-text-faint);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
-.u{color:var(--forge-text-dim);font-size:11.5px;line-height:16px;margin-top:8px}
+<style>
+  body{margin:0;background:var(--forge-bg);font-family:var(--forge-font-body);color:var(--forge-text);padding:16px;}
+  .rule{display:flex;gap:16px;}
+  .col{flex:1;min-width:0;}
+  .h{color:var(--forge-text-faint);font-size:var(--forge-text-mini-label);font-weight:700;text-transform:uppercase;letter-spacing:var(--forge-tracking-label);margin-bottom:6px;}
+  .u{color:var(--forge-text-dim);font-size:var(--forge-text-label);line-height:16px;margin-top:8px;}
+  .stage{position:relative;height:340px;margin-top:14px;border-radius:var(--forge-radius-panel);overflow:hidden;background:var(--forge-scrim);display:flex;align-items:center;justify-content:center;}
+  .panel{width:88%;max-width:440px;background:var(--forge-panel);border:1px solid var(--forge-border);border-radius:var(--forge-radius-panel);padding:18px;}
+  .pt{font-family:var(--forge-font-title);font-weight:700;text-transform:uppercase;letter-spacing:var(--forge-tracking-title);font-size:var(--forge-text-panel-title);}
+  .pb{color:var(--forge-text-dim);font-size:13px;margin:10px 0 16px;}
+  .btn{height:var(--forge-size-control-lg);padding-inline:18px;border-radius:var(--forge-radius-button);background:var(--forge-accent);color:var(--forge-on-accent);font-weight:800;font-size:15px;display:inline-flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;}
 </style>
 </head>
 <body>
-<div id="root"></div>
-<script type="text/babel">
-const NS = window.ForgeDesignSystem_7731a5;
-const { Panel, FullScreen, Button, HeaderAction } = NS;
-function Demo() {
-  const [panel, setPanel] = React.useState(true);
-  const [full, setFull] = React.useState(false);
-  return (
-    <div>
-      <div className="rule">
-        <div className="col">
-          <div className="h">Panel — escolha / seletor / confirmação</div>
-          <div className="u">Toque fora fecha. maxWidth 440, maxHeight 80%. Padrão mais leve — use na dúvida.</div>
-        </div>
-        <div className="col">
-          <div className="h">FullScreen — formulário longo / montagem</div>
-          <div className="u">Header fixo com ✕ + título + ação opcional. Footer fixo para ação primária.</div>
-        </div>
-      </div>
-      <div style={{ position: "relative", height: 340, marginTop: 14 }}>
-        <Panel visible={panel} onClose={() => setPanel(false)} title="Cardápio ou criar agora?" footer={<Button title="Selecionar" onClick={() => setPanel(false)} />}>
-          <div style={{ color: "var(--forge-text-dim)", fontSize: 13, paddingBottom: 10 }}>Escolha um item do cardápio, ou crie um alimento agora.</div>
-        </Panel>
-        <FullScreen visible={full} onClose={() => setFull(false)} title="Montar treino" right={<HeaderAction title="Replicar" onClick={() => {}} />} footer={<Button title="Salvar treino" onClick={() => setFull(false)} />}>
-          <div style={{ color: "var(--forge-text-dim)", fontSize: 13 }}>Fluxo de várias seções (exercícios, séries, notas) — tela cheia.</div>
-        </FullScreen>
-      </div>
-    </div>
-  );
-}
-ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
-</script>
+<div class="rule">
+  <div class="col"><div class="h">Panel — escolha / seletor / confirmação</div><div class="u">Toque fora fecha. maxWidth 440, maxHeight 80%. Padrão mais leve — use na dúvida.</div></div>
+  <div class="col"><div class="h">FullScreen — formulário longo / montagem</div><div class="u">Header fixo com ✕ + título + ação opcional. Footer fixo para ação primária.</div></div>
+</div>
+<div class="stage">
+  <div class="panel">
+    <div class="pt">Cardápio ou criar agora?</div>
+    <div class="pb">Escolha um item do cardápio, ou crie um alimento agora.</div>
+    <div class="btn">Selecionar</div>
+  </div>
+</div>
 </body>
 </html>

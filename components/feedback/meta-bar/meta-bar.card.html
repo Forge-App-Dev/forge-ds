@@ -1,28 +1,29 @@
 <!-- @dsCard group="Components" viewport="700x140" name="MetaBar" subtitle="Compact progress bar — single value + segmented" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .wrap{max-width:340px;display:flex;flex-direction:column;gap:10px;}
+  .track{height:6px;border-radius:3px;background:var(--forge-surface-raised);overflow:hidden;}
+  .fill{height:6px;border-radius:3px;}
+  .seg-track{display:flex;height:6px;border-radius:3px;background:var(--forge-surface-raised);overflow:hidden;}
+</style>
 </head>
 <body>
-<div id="root" style="max-width:340px;display:flex;flex-direction:column;gap:10px"></div>
-<script type="text/babel">
-const { MetaBar } = window.ForgeDesignSystem_7731a5;
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.Fragment>
-    <MetaBar value={2100} target={2400} />
-    <MetaBar segments={[
-      { value: 420, color: "var(--forge-macro-protein)" },
-      { value: 780, color: "var(--forge-macro-carb)" },
-      { value: 480, color: "var(--forge-macro-fat)" },
-    ]} target={2400} />
-  </React.Fragment>
-);
-</script>
+<div class="wrap">
+  <!-- single value 2100 / 2400 -->
+  <div class="track" role="progressbar" aria-valuenow="2100" aria-valuemin="0" aria-valuemax="2400">
+    <div class="fill" style="width:87.5%;background:var(--forge-nutrition)"></div>
+  </div>
+  <!-- segmented -->
+  <div class="seg-track" role="img" aria-label="Distribuição por refeição">
+    <div style="width:17.5%;background:var(--forge-macro-protein);border-right:var(--forge-border-w-strong) solid var(--forge-surface-raised)"></div>
+    <div style="width:32.5%;background:var(--forge-macro-carb);border-right:var(--forge-border-w-strong) solid var(--forge-surface-raised)"></div>
+    <div style="width:20%;background:var(--forge-macro-fat)"></div>
+  </div>
+</div>
 </body>
 </html>

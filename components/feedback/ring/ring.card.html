@@ -1,29 +1,49 @@
 <!-- @dsCard group="Components" viewport="700x220" name="Ring" subtitle="Progress ring — value, indeterminate, segments" -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../../styles.css">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="../../../_ds_bundle.js"></script>
-<style>body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--font-body)}</style>
+<style>
+  body{margin:0;background:var(--forge-bg);padding:18px;font-family:var(--forge-font-body);color:var(--forge-text);}
+  .row{display:flex;gap:24px;align-items:center;}
+  .ring{position:relative;display:flex;align-items:center;justify-content:center;}
+  .ring svg{position:absolute;}
+  .ctr{font-family:var(--forge-font-title);color:var(--forge-text);}
+  circle{fill:none;}
+</style>
 </head>
 <body>
-<div id="root" style="display:flex;gap:24px;align-items:center"></div>
-<script type="text/babel">
-const { Ring } = window.ForgeDesignSystem_7731a5;
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.Fragment>
-    <Ring size={90} stroke={10} progress={0.62} color="#EF4444"><span style={{ color: "var(--forge-text)", fontFamily: "var(--font-title)", fontSize: 18 }}>62%</span></Ring>
-    <Ring size={70} stroke={7} indeterminate color="#EF4444" />
-    <Ring size={90} stroke={10} segments={[
-      { value: 0.25, color: "var(--forge-macro-protein)" },
-      { value: 0.35, color: "var(--forge-macro-carb)" },
-      { value: 0.15, color: "var(--forge-macro-fat)" },
-    ]}><span style={{ color: "var(--forge-text)", fontFamily: "var(--font-title)", fontSize: 16 }}>75%</span></Ring>
-  </React.Fragment>
-);
-</script>
+<div class="row">
+  <!-- progress 62% -->
+  <div class="ring" style="width:90px;height:90px;">
+    <svg width="90" height="90" style="transform:rotate(-90deg)">
+      <circle cx="45" cy="45" r="40" style="stroke:var(--forge-surface-raised)" stroke-width="10"/>
+      <circle cx="45" cy="45" r="40" style="stroke:var(--forge-accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="251.33" stroke-dashoffset="95.5"/>
+    </svg>
+    <span class="ctr" style="font-size:18px">62%</span>
+  </div>
+
+  <!-- indeterminate -->
+  <div class="ring" style="width:70px;height:70px;">
+    <svg width="70" height="70">
+      <circle cx="35" cy="35" r="31.5" style="stroke:var(--forge-surface-raised)" stroke-width="7"/>
+    </svg>
+    <svg width="70" height="70" class="forge-anim-spin">
+      <circle cx="35" cy="35" r="31.5" style="stroke:var(--forge-accent)" stroke-width="7" stroke-linecap="round" stroke-dasharray="197.92" stroke-dashoffset="142.5"/>
+    </svg>
+  </div>
+
+  <!-- segments 75% -->
+  <div class="ring" style="width:90px;height:90px;">
+    <svg width="90" height="90" style="transform:rotate(-90deg)">
+      <circle cx="45" cy="45" r="40" style="stroke:var(--forge-surface-raised)" stroke-width="10"/>
+      <circle cx="45" cy="45" r="40" style="stroke:var(--forge-macro-protein);transform:rotate(0deg);transform-origin:center" stroke-width="10" stroke-linecap="butt" stroke-dasharray="62.83 188.5"/>
+      <circle cx="45" cy="45" r="40" style="stroke:var(--forge-macro-carb);transform:rotate(90deg);transform-origin:center" stroke-width="10" stroke-linecap="butt" stroke-dasharray="87.96 163.37"/>
+      <circle cx="45" cy="45" r="40" style="stroke:var(--forge-macro-fat);transform:rotate(216deg);transform-origin:center" stroke-width="10" stroke-linecap="butt" stroke-dasharray="37.70 213.63"/>
+    </svg>
+    <span class="ctr" style="font-size:16px">75%</span>
+  </div>
+</div>
 </body>
 </html>
