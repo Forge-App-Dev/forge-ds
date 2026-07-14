@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/Forge-App-Dev/forge-ds/actions/workflows/ci.yml/badge.svg)](https://github.com/Forge-App-Dev/forge-ds/actions/workflows/ci.yml)
 
+> **📋 Plano tático de prontidão (readiness):** parecer + backlog de correções em [`docs/plan/`](docs/plan/README.md). Fonte única de estado: [`docs/plan/plan.json`](docs/plan/plan.json); dashboard navegável gerado em `docs/plan/index.html`. **Continuando o trabalho? Leia [`docs/plan/README.md`](docs/plan/README.md) primeiro.**
+
 **Forge** is a strength-training + nutrition mobile app family, built with React Native / Expo. This design system is reverse-engineered from the real app codebase and its written design-system spec, so agents can prototype and extend the Forge product line with the correct look, feel, and component vocabulary.
 
 ## Sources
@@ -18,13 +20,13 @@ If you have access, explore the GitHub repo further (especially `src/screens/tre
 
 ## Product context
 
-Forge is **mobile-first** (max 480px width, centered, bottom nav, generous tap targets) and **dark-theme by default** (graphite/near-black). The app is organized into modules chosen from a home screen:
+Forge is **mobile-first** (max 480px width, centered, bottom nav, generous tap targets) and **dark-theme only** (graphite/near-black). The app is organized into modules chosen from a home screen:
 
 - **Treino** (Workout) — accent red `#EF4444`. Scheduled workouts, exercise library, session logging, progress charts.
 - **Nutrição** (Nutrition) — accent green `#10B981`. Daily meal plan, calorie/macro targets, food database (Brazilian TACO table).
 - **Perfil** (Profile) — account, body data, goals.
 
-The design system explicitly supports a **family of sibling apps**: new apps reuse the exact same components, radii, type and spacing, changing only the brand mark and (optionally) the accent color and a light/dark surface flip. See the "Light Theme Variant" foundation card and `.forge-theme-light` in `tokens/colors.css`.
+The design system explicitly supports a **family of sibling apps**: new apps reuse the exact same components, radii, type and spacing, changing only the brand mark, the accent color, and the copy (system strings via `content.js`). Forge is **dark-only** — white-labeling swaps accent + brand + copy over the single dark theme; there is no light/dark surface flip. See `docs/white-label.md`.
 
 ## Content fundamentals
 
@@ -93,7 +95,7 @@ The **product/** layer is deliberately separate: those components know the Forge
 
 ## Foundations (Design System tab)
 
-Specimen cards under `guidelines/`, grouped as **Colors** (surfaces, text, brand/semantic, category palette, macro colors, light-theme variant), **Type** (display/title, body), **Spacing** (radius scale, spacing-in-use), and **Brand** (mark at all sizes, loading motif). The same folder also holds **Components** review cards (form controls, loading/error states, dashboard tiles, onboarding pager, product/training) — the surface Mateus reviews on GitHub Pages.
+Specimen cards under `guidelines/`, grouped as **Colors** (surfaces, text, brand/semantic, category palette, macro colors), **Type** (display/title, body), **Spacing** (radius scale, spacing-in-use), and **Brand** (mark at all sizes, loading motif). The same folder also holds **Components** review cards (form controls, loading/error states, dashboard tiles, onboarding pager, product/training) — the surface Mateus reviews on GitHub Pages.
 
 ## Index
 

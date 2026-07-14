@@ -27,8 +27,9 @@ viram artefatos gerados).
    `aliases` explícito no JSON, nunca à mão.
 4. **Formato W3C DTCG** (OP-101): todo token é `{ "$value", "$type", "$description" }`. Grupos
    carregam `$type` herdado. Referências entre tokens usam a sintaxe de chaves `{grupo.token}`.
-5. **Tema = troca da camada semântica, nunca da primitiva.** Primitivos são absolutos e
-   theme-agnostic. `.forge-theme-light` só reaponta referências semânticas (OP-098).
+5. **A camada semântica isola o white-label.** Primitivos são absolutos e theme-agnostic; o
+   white-label reaponta **apenas o accent** na camada semântica, nunca a primitiva (OP-098). Forge
+   é **dark-only** — não há troca de tema claro/escuro.
 6. **px = dp = pt** (OP-095). Toda dimensão é um número único; a unidade é decisão de *plataforma*
    no gerador (web→`px`, Android→`dp`, iOS→`pt`). Não há modo "compacto"; uma densidade só.
 
@@ -40,16 +41,16 @@ viram artefatos gerados).
 tokens/tokens.json
 ├─ primitive/           camada 1 — valores absolutos, sem intenção, sem tema
 │   ├─ color            famílias brand (red, blue, violet, emerald, amber, …)
-│   ├─ graphite         neutro FRIO (grafite azulado) — superfícies/bordas do tema dark
-│   ├─ stone            neutro QUENTE — superfícies/bordas do tema light (sibling)
-│   ├─ gray             neutro quase-puro — TEXTO dos dois temas
+│   ├─ graphite         neutro FRIO (grafite azulado) — superfícies/bordas (tema dark único)
+│   ├─ stone            neutro QUENTE — LEGADO do tema claro (removido); sem consumidor hoje
+│   ├─ gray             neutro quase-puro — TEXTO
 │   ├─ overlay          pretos com alpha (scrims)
 │   ├─ dimension        escala de espaço, raios, tamanhos, larguras, ícones
 │   ├─ fontFamily / fontWeight / fontSize / lineHeight / letterSpacing
 │   ├─ duration / cubicBezier
 │   └─ number           opacidades, z-index, breakpoints
 │
-├─ semantic/            camada 2 — intenção, com tema (base=dark, +light override)
+├─ semantic/            camada 2 — intenção (tema dark; só o accent é white-label-swappable)
 │   ├─ surface  text  border  action  feedback  scrim  focus
 │   ├─ category (paleta atribuível)  ·  macro (identidade fixa)
 │   └─ elevation (nível 0/1/2 por cor, ver OP-089)
@@ -69,9 +70,10 @@ Nunca `primitive/` direto. Primitivo é matéria-prima do sistema de tokens, nã
 
 ### 3.1 Neutros — a decisão-chave (OP-084)
 
-Forge tem **três** famílias neutras distintas, e isso é intencional (padrão Radix: `gray`+`slate`+`sage`
-coexistem). Forçar um único ramp quebraria a fidelidade (as superfícies dark são azuladas; o texto é
-quase-puro; o tema light é quente). Portanto:
+Forge tem famílias neutras distintas, e isso é intencional (padrão Radix: `gray`+`slate`+`sage`
+coexistem). Forçar um único ramp quebraria a fidelidade: as superfícies dark são azuladas e o texto
+é quase-puro (dois matizes reais). O ramp quente `stone` existia para o tema claro (removido —
+dark-only) e ficou sem consumidor. Portanto:
 
 #### `graphite` — neutro frio (hue ≈ 222°): superfícies e bordas do tema **dark**
 
@@ -98,30 +100,18 @@ Ancorado exatamente nos grafites embarcados (700–950 + `panel`); 50–600 inte
 > completude futura. `graphite.panel` fica *entre* 900 e 950 em luminância mas com matiz quase-neutra
 > (não azulada) — por isso recebe nome próprio em vez de `graphite.925`.
 
-#### `stone` — neutro quente: superfícies e bordas do tema **light** (sibling "Fuel")
+#### `stone` — neutro quente: **removido** (era do tema claro)
 
-Ancorado exatamente nas superfícies claras embarcadas (0–300); 400–900 interpolados.
+O ramp `stone` (neutro quente) existia **apenas** para o tema claro. Com Forge dark-only (decisão do
+owner, 2026-07-14), o tema claro foi removido e `stone` ficou **sem consumidor** — ver CHANGELOG
+1.6.0. Os steps não são mais documentados aqui; a limpeza do ramp em `tokens.json` cabe ao dono do
+código.
 
-| step | hex | origem | uso semântico (light) |
-|------|-----|--------|----------------------|
-| `stone.0`   | `#FFFFFF` | **shipped** | `surface.default`, `surface.panel` |
-| `stone.50`  | `#F7F6F4` | **shipped** | `surface.canvas` (bg) |
-| `stone.100` | `#F0EFEC` | **shipped** | `surface.raised` |
-| `stone.150` | `#EAE8E3` | **shipped** | `border.divider` |
-| `stone.200` | `#E4E2DD` | **shipped** | `border.default` |
-| `stone.300` | `#DAD7D0` | **shipped** | `border.input` |
-| `stone.400` | `#B8B4AB` | interpolado | — |
-| `stone.500` | `#948F84` | interpolado | — |
-| `stone.600` | `#6F6A5F` | interpolado | — |
-| `stone.700` | `#514D45` | interpolado | — |
-| `stone.800` | `#34322C` | interpolado | — |
-| `stone.900` | `#1F1E1A` | interpolado | — |
+#### `gray` — neutro quase-puro (faint cool): **texto do tema dark**
 
-#### `gray` — neutro quase-puro (faint cool): **texto dos dois temas**
-
-Elegância do modelo: o tema **dark lê o extremo claro** do ramp (texto claro sobre fundo escuro);
-o tema **light lê o extremo escuro** (texto escuro sobre fundo claro). É o mesmo ramp, ancorado em
-ambos os conjuntos de valores embarcados. Todos os anchors verificados monotônicos por luminância.
+O tema dark lê o **extremo claro** do ramp (texto claro sobre fundo escuro), ancorado nos valores
+embarcados. Os steps escuros do ramp eram lidos pelo tema claro (removido); hoje só os steps claros
+têm consumidor. Todos os anchors verificados monotônicos por luminância.
 
 | step | hex | origem | uso semântico |
 |------|-----|--------|---------------|
@@ -132,18 +122,19 @@ ambos os conjuntos de valores embarcados. Todos os anchors verificados monotôni
 | `gray.400` | `#9A9AA2` | **shipped** | dark `text.secondary` |
 | `gray.450` | `#9898A0` | **shipped** | dark `text.tertiary` |
 | `gray.500` | `#8C8C94` | **shipped** | dark `text.quaternary` |
-| `gray.550` | `#87898F` | **shipped** | light `text.disabled` (decorativo, ~3:1) |
+| `gray.550` | `#87898F` | shipped | — (era light `text.disabled`; removido) |
 | `gray.600` | `#6C6C74` | **shipped** | dark `text.disabled` (decorativo, ~3:1) |
-| `gray.650` | `#696B71` | **shipped** | light `text.quaternary` |
-| `gray.700` | `#5F6167` | **shipped** | light `text.tertiary` |
-| `gray.750` | `#5C5E66` | **shipped** | light `text.secondary` |
+| `gray.650` | `#696B71` | shipped | — (era light; removido) |
+| `gray.700` | `#5F6167` | shipped | — (era light; removido) |
+| `gray.750` | `#5C5E66` | shipped | — (era light; removido) |
 | `gray.800` | `#3A3B40` | interpolado | — |
-| `gray.900` | `#1B1D22` | **shipped** | light `text.primary` |
+| `gray.900` | `#1B1D22` | shipped | — (era light `text.primary`; removido) |
 | `gray.950` | `#0E0F12` | interpolado | — |
 
-> Os half-steps (450/550/650/750) existem porque o dark e o light empilham cinco níveis de texto
-> cada, e alguns caem muito próximos em luminância (ex.: 56.5 vs 54.5). Preferimos fidelidade a
-> snapar para uma grade de 100 em 100 (que mudaria a cor do texto embarcado). Documentado, aceito.
+> Os half-steps 450/550/650/750 existem por fidelidade aos valores embarcados (alguns caem muito
+> próximos em luminância, ex.: 56.5 vs 54.5) — preferimos não snapar para uma grade de 100 em 100.
+> Hoje só o 450 tem consumidor (dark `text.tertiary`); 550/650/750 serviam o tema claro (removido).
+> Documentado, aceito.
 
 ### 3.2 Cores brand / categoria / macro
 
@@ -152,11 +143,11 @@ significado; só os steps em uso são definidos agora (o ramp completo por famí
 
 ```jsonc
 "color": {
-  "red":     { "500": { "$value": "#EF4444", "$type": "color", "$description": "Vermelho de marca Forge. Base do accent do tema dark e da categoria 1." } },
-  "coral":   { "400": { "$value": "#e36a5a", "$type": "color", "$description": "Coral quente. Base de feedback.danger e da tendência negativa no dark." },
-               "600": { "$value": "#c94b3b", "$type": "color", "$description": "Coral escuro. Tendência negativa no tema light (maior contraste sobre fundo claro)." } },
+  "red":     { "500": { "$value": "#EF4444", "$type": "color", "$description": "Vermelho de marca Forge. Base do accent (Treino) e da categoria 1." } },
+  "coral":   { "400": { "$value": "#e36a5a", "$type": "color", "$description": "Coral quente. Base de feedback.danger e da tendência negativa." },
+               "600": { "$value": "#c94b3b", "$type": "color", "$description": "Coral escuro. LEGADO — era a tendência negativa no tema claro (removido); sem consumidor hoje." } },
   "emerald": { "400": { "$value": "#34D399", "$type": "color" },
-               "500": { "$value": "#10B981", "$type": "color", "$description": "Verde Forge. success, nutrition (Fuel) e accent do tema light." } },
+               "500": { "$value": "#10B981", "$type": "color", "$description": "Verde Forge. success, nutrition (Fuel) e accent do módulo Nutrição." } },
   "amber":   { "400": { "$value": "#FBBF24", "$type": "color" },
                "500": { "$value": "#F59E0B", "$type": "color", "$description": "Âmbar. feedback.warning e categoria 5." } },
   "blue":    { "600": { "$value": "#2563EB", "$type": "color" } },
@@ -186,10 +177,9 @@ Cores macro (identidade fixa da família, **nunca** mudam nem por tema — OP-10
 
 ```jsonc
 "overlay": {
-  "scrim-dark":  { "$value": "rgba(10, 10, 12, 0.82)", "$type": "color", "$description": "Scrim padrão do tema dark (Panel/FullScreen)." },
-  "scrim-heavy-dark": { "$value": "rgba(0, 0, 0, 0.94)", "$type": "color", "$description": "Scrim pesado do dark (VideoModal)." },
-  "scrim-light": { "$value": "rgba(20, 20, 24, 0.55)", "$type": "color" },
-  "scrim-heavy-light": { "$value": "rgba(0, 0, 0, 0.88)", "$type": "color" }
+  "scrim-dark":  { "$value": "rgba(10, 10, 12, 0.82)", "$type": "color", "$description": "Scrim padrão (Panel/FullScreen)." },
+  "scrim-heavy-dark": { "$value": "rgba(0, 0, 0, 0.94)", "$type": "color", "$description": "Scrim pesado (VideoModal)." }
+  /* scrim-light / scrim-heavy-light removidos com o tema claro (dark-only) */
 }
 ```
 
@@ -290,61 +280,56 @@ razão fixa; é uma **escala funcional/óptica de duas faixas**:
 
 ---
 
-## 4. Camada 2 — Semânticos (com tema)
+## 4. Camada 2 — Semânticos
 
-### 4.1 Modelo DTCG de tema (base + light override)
+### 4.1 Modelo DTCG (dark-only + accent white-label)
 
-DTCG ainda não padroniza "modes". Adotamos o padrão mais simples e sem-dependência: cada token
-semântico **temável** tem `$value` = valor do tema **base (dark)** e um bloco
-`$extensions["com.forge.theme"].light` com a referência do tema **light**. Tokens **não-temáveis**
-têm só `$value`.
+Forge é **dark-only**: cada token semântico tem `$value` = valor do tema **dark**. A única exceção
+white-label-swappable é o **accent**, que um app irmão reaponta por um bloco
+`$extensions["com.forge.theme"].<nome>` (o mecanismo DTCG sem-dependência que usamos para o accent
+de cada marca). Todos os demais tokens têm só `$value` — são o tema dark fixo.
 
 ```jsonc
 "semantic": {
   "surface": {
     "canvas":  { "$value": "{graphite.950}", "$type": "color",
-                 "$description": "Fundo raiz do app (bg). USE: background da tela. NÃO: cards.",
-                 "$extensions": { "com.forge.theme": { "light": "{stone.50}" } } },
+                 "$description": "Fundo raiz do app (bg). USE: background da tela. NÃO: cards." },
     "default": { "$value": "{graphite.900}", "$type": "color",
-                 "$description": "Superfície de card padrão.",
-                 "$extensions": { "com.forge.theme": { "light": "{stone.0}" } } },
-    "raised":  { "$value": "{graphite.850}", "$type": "color",
-                 "$extensions": { "com.forge.theme": { "light": "{stone.100}" } } },
-    "panel":   { "$value": "{graphite.panel}", "$type": "color",
-                 "$extensions": { "com.forge.theme": { "light": "{stone.0}" } } }
+                 "$description": "Superfície de card padrão." },
+    "raised":  { "$value": "{graphite.850}", "$type": "color" },
+    "panel":   { "$value": "{graphite.panel}", "$type": "color" }
   },
   "text": {
-    "primary":    { "$value": "{gray.50}",  "$extensions": { "com.forge.theme": { "light": "{gray.900}" } } },
-    "secondary":  { "$value": "{gray.400}", "$extensions": { "com.forge.theme": { "light": "{gray.750}" } } },
-    "tertiary":   { "$value": "{gray.450}", "$extensions": { "com.forge.theme": { "light": "{gray.700}" } } },
-    "quaternary": { "$value": "{gray.500}", "$extensions": { "com.forge.theme": { "light": "{gray.650}" } } },
-    "disabled":   { "$value": "{gray.600}", "$extensions": { "com.forge.theme": { "light": "{gray.550}" } },
+    "primary":    { "$value": "{gray.50}"  },
+    "secondary":  { "$value": "{gray.400}" },
+    "tertiary":   { "$value": "{gray.450}" },
+    "quaternary": { "$value": "{gray.500}" },
+    "disabled":   { "$value": "{gray.600}",
                     "$description": "Decorativo / desabilitado (~3:1). NÃO usar em texto informativo." }
   },
   "border": {
-    "default": { "$value": "{graphite.800}", "$extensions": { "com.forge.theme": { "light": "{stone.200}" } } },
-    "input":   { "$value": "{graphite.700}", "$extensions": { "com.forge.theme": { "light": "{stone.300}" } } },
-    "divider": { "$value": "{graphite.850}", "$extensions": { "com.forge.theme": { "light": "{stone.150}" } } },
-    "focus":   { "$value": "{semantic.action.accent}" }  /* alias vivo → segue o accent do tema */
+    "default": { "$value": "{graphite.800}" },
+    "input":   { "$value": "{graphite.700}" },
+    "divider": { "$value": "{graphite.850}" },
+    "focus":   { "$value": "{semantic.action.accent}" }  /* alias vivo → segue o accent */
   },
   "action": {
     "accent":       { "$value": "{color.red.500}", "$type": "color",
-                      "$description": "Cor de ação/marca primária. É O QUE O TEMA TROCA.",
-                      "$extensions": { "com.forge.theme": { "light": "{color.emerald.500}" } } },
-    "on-accent":    { "$value": "{color.white}" },       /* fixo nos dois temas */
-    "on-light":     { "$value": "{graphite.950}" },      /* saída de onColor() — OP-011/015 */
+                      "$description": "Cor de ação/marca primária. É O QUE O WHITE-LABEL TROCA.",
+                      "$extensions": { "com.forge.theme": { "fuel": "{color.emerald.500}" } } },
+    "on-accent":    { "$value": "{color.white}" },       /* decidido por onColor() ao trocar o accent */
+    "on-light":     { "$value": "{graphite.950}" },      /* saída escura de onColor() (texto sobre fundo claro) — OP-015 */
     "on-dark":      { "$value": "{color.white}" }
   },
   "feedback": {
-    "success":  { "$value": "{color.emerald.500}" },     /* NÃO temável hoje (mesmo valor nos 2) */
+    "success":  { "$value": "{color.emerald.500}" },
     "warning":  { "$value": "{color.amber.500}" },
     "danger":   { "$value": "{color.coral.400}", "$description": "Destrutivo. Distinto de 'negative'." },
-    "negative": { "$value": "{color.coral.400}", "$description": "Tendência negativa (não destrutiva) — OP-129.",
-                  "$extensions": { "com.forge.theme": { "light": "{color.coral.600}" } } }
+    "negative": { "$value": "{color.coral.400}", "$description": "Tendência negativa (não destrutiva) — OP-129." }
   },
   "scrim": {
-    "default": { "$value": "{overlay.scrim-dark}",  "$extensions": { "com.forge.theme": { "light": "{overlay.scrim-light}" } } },
-    "heavy":   { "$value": "{overlay.scrim-heavy-dark}", "$extensions": { "com.forge.theme": { "light": "{overlay.scrim-heavy-light}" } } }
+    "default": { "$value": "{overlay.scrim-dark}" },
+    "heavy":   { "$value": "{overlay.scrim-heavy-dark}" }
   },
   "category": {  /* paleta atribuível, ordem canônica — NÃO temável, NÃO fixa por macro */
     "1":{"$value":"{color.red.500}"},"2":{"$value":"{color.blue.600}"},"3":{"$value":"{color.violet.500}"},
@@ -366,38 +351,38 @@ têm só `$value`.
 
 ### 4.2 Mapa completo: token semântico → primitivo (verificação de output)
 
-Esta tabela é o oráculo do teste do gerador: emitir `:root` e `.forge-theme-light` deve reproduzir
-byte-a-byte os valores atuais de `tokens/colors.css`.
+Esta tabela é o oráculo do teste do gerador: emitir `:root` deve reproduzir byte-a-byte os valores
+atuais de `tokens/colors.css`.
 
-| CSS var (`--forge-*`) | Semântico | Primitivo (dark/base) | Primitivo (light) |
-|---|---|---|---|
-| `--forge-bg` | surface.canvas | graphite.950 `#0B0F19` | stone.50 `#F7F6F4` |
-| `--forge-surface` | surface.default | graphite.900 `#161E2E` | stone.0 `#FFFFFF` |
-| `--forge-surface-raised` | surface.raised | graphite.850 `#1B2536` | stone.100 `#F0EFEC` |
-| `--forge-panel` | surface.panel | graphite.panel `#121215` | stone.0 `#FFFFFF` |
-| `--forge-border` | border.default | graphite.800 `#2A3344` | stone.200 `#E4E2DD` |
-| `--forge-border-input` | border.input | graphite.700 `#2E3A4D` | stone.300 `#DAD7D0` |
-| `--forge-divider` | border.divider | graphite.850 `#1B2536` | stone.150 `#EAE8E3` |
-| `--forge-text` | text.primary | gray.50 `#F0F0F2` | gray.900 `#1B1D22` |
-| `--forge-text-muted` | text.secondary | gray.400 `#9A9AA2` | gray.750 `#5C5E66` |
-| `--forge-text-dim` | text.tertiary | gray.450 `#9898A0` | gray.700 `#5F6167` |
-| `--forge-text-faint` | text.quaternary | gray.500 `#8C8C94` | gray.650 `#696B71` |
-| `--forge-text-dimmer` | text.disabled | gray.600 `#6C6C74` | gray.550 `#87898F` |
-| `--forge-accent` | action.accent | color.red.500 `#EF4444` | color.emerald.500 `#10B981` |
-| `--forge-on-accent` | action.on-accent | color.white `#FFFFFF` | (idem) |
-| `--forge-on-light` | action.on-light | graphite.950 `#0B0F19` | (idem) |
-| `--forge-on-dark` | action.on-dark | color.white `#FFFFFF` | (idem) |
-| `--forge-success` | feedback.success | color.emerald.500 `#10B981` | (idem) |
-| `--forge-warning` | feedback.warning | color.amber.500 `#F59E0B` | (idem) |
-| `--forge-danger` | feedback.danger | color.coral.400 `#e36a5a` | (idem) |
-| `--forge-negative` | feedback.negative | color.coral.400 `#e36a5a` | color.coral.600 `#c94b3b` |
-| `--forge-nutrition` | feedback.success (alias) | color.emerald.500 `#10B981` | (idem) |
-| `--forge-scrim` | scrim.default | overlay.scrim-dark | overlay.scrim-light |
-| `--forge-scrim-heavy` | scrim.heavy | overlay.scrim-heavy-dark | overlay.scrim-heavy-light |
-| `--forge-focus-ring` | border.focus → action.accent | `var(--forge-accent)` | `var(--forge-accent)` |
-| `--forge-macro-protein/carb/fat` | macro.* | fixos | (idem) |
-| `--forge-cat-*`, `--forge-cat-ext-*` | category.* | fixos | (idem) |
-| `--forge-on-brand-google-bg/text` | brand-google.* | fixos | (idem) |
+| CSS var (`--forge-*`) | Semântico | Primitivo (dark — único tema) |
+|---|---|---|
+| `--forge-bg` | surface.canvas | graphite.950 `#0B0F19` |
+| `--forge-surface` | surface.default | graphite.900 `#161E2E` |
+| `--forge-surface-raised` | surface.raised | graphite.850 `#1B2536` |
+| `--forge-panel` | surface.panel | graphite.panel `#121215` |
+| `--forge-border` | border.default | graphite.800 `#2A3344` |
+| `--forge-border-input` | border.input | graphite.700 `#2E3A4D` |
+| `--forge-divider` | border.divider | graphite.850 `#1B2536` |
+| `--forge-text` | text.primary | gray.50 `#F0F0F2` |
+| `--forge-text-muted` | text.secondary | gray.400 `#9A9AA2` |
+| `--forge-text-dim` | text.tertiary | gray.450 `#9898A0` |
+| `--forge-text-faint` | text.quaternary | gray.500 `#8C8C94` |
+| `--forge-text-dimmer` | text.disabled | gray.600 `#6C6C74` |
+| `--forge-accent` | action.accent | color.red.500 `#EF4444` (white-label reaponta) |
+| `--forge-on-accent` | action.on-accent | color.white `#FFFFFF` |
+| `--forge-on-light` | action.on-light | graphite.950 `#0B0F19` |
+| `--forge-on-dark` | action.on-dark | color.white `#FFFFFF` |
+| `--forge-success` | feedback.success | color.emerald.500 `#10B981` |
+| `--forge-warning` | feedback.warning | color.amber.500 `#F59E0B` |
+| `--forge-danger` | feedback.danger | color.coral.400 `#e36a5a` |
+| `--forge-negative` | feedback.negative | color.coral.400 `#e36a5a` |
+| `--forge-nutrition` | feedback.success (alias) | color.emerald.500 `#10B981` |
+| `--forge-scrim` | scrim.default | overlay.scrim-dark |
+| `--forge-scrim-heavy` | scrim.heavy | overlay.scrim-heavy-dark |
+| `--forge-focus-ring` | border.focus → action.accent | `var(--forge-accent)` |
+| `--forge-macro-protein/carb/fat` | macro.* | fixos |
+| `--forge-cat-*`, `--forge-cat-ext-*` | category.* | fixos |
+| `--forge-on-brand-google-bg/text` | brand-google.* | fixos |
 
 ### 4.3 Elevation (OP-089)
 
@@ -445,48 +430,47 @@ Só onde ≥2 consumidores divergem hoje. Exemplos concretos que já têm identi
 
 ### 6.1 O contrato (lista fechada)
 
-**PODE trocar por tema** (namespaces temáveis):
-`semantic.surface.*`, `semantic.text.*`, `semantic.border.*`, `semantic.action.accent`,
-`semantic.scrim.*`, `semantic.feedback.negative`. (`action.on-*`, `feedback.success/warning/danger`
-são semânticos mas fixos hoje — permitido, mas não *exigido*, ter override.)
+Forge é **dark-only**. A única coisa que um app irmão (white-label) troca é o **accent**.
 
-**NUNCA troca** (imutável entre temas):
-`primitive.*` inteiro, `semantic.macro.*`, `semantic.category.*`, `semantic.brand-google.*`,
-`dimension.*`, `radius`, `fontSize/lineHeight/fontFamily/fontWeight/letterSpacing`, `duration`,
-`cubicBezier`, `number.*` (z-index, opacidade, breakpoints).
+**PODE trocar (white-label):** `semantic.action.accent` (+ o par `semantic.action.on-accent`,
+decidido por `onColor()`).
+
+**NUNCA troca** (imutável — é o tema dark da família):
+`semantic.surface.*`, `semantic.text.*`, `semantic.border.*`, `semantic.scrim.*`,
+`semantic.feedback.*`, `primitive.*` inteiro, `semantic.macro.*`, `semantic.category.*`,
+`semantic.brand-google.*`, `dimension.*`, `radius`,
+`fontSize/lineHeight/fontFamily/fontWeight/letterSpacing`, `duration`, `cubicBezier`,
+`number.*` (z-index, opacidade, breakpoints).
 
 ### 6.2 Validação (o build falha se violado)
 
 `scripts/build-tokens.mjs` roda estas asserções **antes** de emitir; qualquer falha aborta com exit≠0
 (pluga em CI — OP-169):
 
-1. **Cobertura de tema.** Todo token em namespace **temável** tem `$value` (base) resolvível **e** o
-   gerador consegue produzir seu valor no tema light — seja por `$extensions.com.forge.theme.light`,
-   seja porque é alias vivo de outro token que já muda. Faltou o par light de um `surface.*`/`text.*`/
-   `border.*` → **erro** "token X sem valor no tema light".
-2. **Pureza do override.** Nenhum token em namespace **imutável** declara `com.forge.theme.light`.
-   Se alguém puser um override de tema num raio/tamanho/tipo → **erro** "token imutável X não pode ser
-   temável".
+1. **Pureza do tema dark.** Nenhum token de superfície/texto/borda/scrim/feedback declara override
+   de tema — eles são o tema dark fixo. O único token com override de white-label permitido é
+   `action.accent` (+ o par `on-accent`).
+2. **Imutáveis não trocam.** Nenhum token em namespace **imutável** (primitivos, dimensão, tipo,
+   motion, macro, categoria, brand-google) declara `com.forge.theme.*`. Se alguém puser um override
+   num raio/tamanho/tipo → **erro** "token imutável X não pode ser temável".
 3. **Referências resolvem.** Toda `{ref}` aponta para um token existente; sem ciclos.
 4. **Fidelidade (snapshot).** O CSS emitido é comparado com um snapshot dos `tokens/*.css` atuais
    (fixtures committadas na 1ª entrega). Divergência de valor → **erro** "output divergiu do baseline
    em --forge-X". Este é o guarda-corpo que garante "não quebrei nada".
 5. **Contraste (OP-102/015).** Para cada par (text.* sobre surface.*) e macro/category sobre surface,
    calcular razão WCAG; texto informativo exige ≥4.5:1, decorativo ≥3:1. Abaixo do piso → warning
-   (não bloqueia, mas reporta) nos dois temas.
+   (não bloqueia, mas reporta).
 
-Pseudo-código da asserção 1–2:
+Pseudo-código da asserção 1–2 (Forge é dark-only: só o accent é white-label-swappable):
 
 ```js
-const THEMEABLE = ["surface","text","border","scrim"];         // + action.accent, feedback.negative
+const THEMEABLE = ["action.accent", "action.on-accent"];       // única troca de white-label
 const IMMUTABLE_ROOTS = ["primitive","dimension","duration","cubicBezier","number"];
-const IMMUTABLE_SEMANTIC = ["macro","category","brand-google"];
+const IMMUTABLE_SEMANTIC = ["surface","text","border","scrim","feedback","macro","category","brand-google"];
 
 for (const t of allTokens) {
-  const light = t.$extensions?.["com.forge.theme"]?.light;
-  if (isThemeable(t) && !light && !isLiveAlias(t))
-    fail(`${t.path}: token temável sem par no tema light`);
-  if (isImmutable(t) && light)
+  const override = t.$extensions?.["com.forge.theme"];
+  if (isImmutable(t) && override)
     fail(`${t.path}: token imutável não pode declarar override de tema`);
 }
 ```
@@ -502,7 +486,7 @@ Roda via `npm run build:tokens`. Entrada: `tokens/tokens.json`. Saídas:
 
 | Saída | Conteúdo | Observação |
 |---|---|---|
-| `tokens/colors.css` | `:root{}` + `.forge-theme-light{}` de todos os tokens de cor + aliases | header "GENERATED — do not edit" |
+| `tokens/colors.css` | `:root{}` de todos os tokens de cor + aliases (+ classe de accent por app irmão declarado) | header "GENERATED — do not edit" |
 | `tokens/typography.css` | `@import` da fonte (static header) + `:root{}` de type | o `@import` Google Fonts é template estático |
 | `tokens/spacing.css` | `:root{}` de dimension/number + aliases legados | |
 | `tokens/motion.css` | `:root{}` de duration/easing (static footer: keyframes + classes + media query) | keyframes/classes NÃO são tokens → preservados como bloco estático |
@@ -521,9 +505,9 @@ Roda via `npm run build:tokens`. Entrada: `tokens/tokens.json`. Saídas:
 ```
 1. parse tokens.json
 2. validar (§6.2)  ── falha aborta
-3. resolver referências {a.b} → valor final (2 passes: base e light)
+3. resolver referências {a.b} → valor final (o accent gera as classes de white-label declaradas)
 4. aplicar platform transforms (§7.3) por alvo
-5. serializar cada grupo → bloco :root / .forge-theme-light
+5. serializar cada grupo → bloco :root (+ classe de accent por app irmão declarado)
 6. concatenar com templates estáticos
 7. escrever arquivos + tokens.d.ts
 8. rodar snapshot diff vs baseline; reportar
@@ -566,8 +550,7 @@ export interface ForgeTokens {
   duration: Record<"instant"|"fast"|"base"|"slow"|"loopSpin"|"loopPulse", number>;
   /* … */
 }
-export declare const tokens: ForgeTokens;           // valores do tema base (dark)
-export declare const tokensLight: Partial<ForgeTokens>; // só o que o tema light troca
+export declare const tokens: ForgeTokens;           // valores do tema dark (único)
 ```
 
 O `src/theme/tokens.js` do forge-app passa a ser **gerado** deste mesmo pipeline (OP-001): o gerador

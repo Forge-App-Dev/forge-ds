@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"3bd7db390b1b","components/shared/content.js":"8b0fd93fe3dc","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"2bcea3c4991d","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"655751762e34","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"0a437938c86e","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"972bbd516191","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"e6ac25c25ace","components/feedback/Skeleton.jsx":"dc3c940737a7","components/product/TargetsCard.jsx":"108570f92c20","components/feedback/loading-screen/LoadingScreen.jsx":"9c490da4ba1b","components/feedback/macro-meter/MacroMeter.jsx":"210098d8b5fd","components/feedback/meta-bar/MetaBar.jsx":"add70e4351e1","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"7fa2264a2712","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"bb70b6c87aa0","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"680a34503d72","components/forms/SegmentedControl.jsx":"063e4c23b23e","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"b050f25387e5","components/feedback/ProgressBar.jsx":"7e3ac117e4bd","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"f1e01b11da7e","components/navigation/Accordion.jsx":"435227c4e5fb","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"d465741f117a","components/feedback/Chart.jsx":"edc0643cddf8","components/media/ImagePicker.jsx":"4ea1d6501899"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"2bd97297a3f4","components/shared/content.js":"4f1446869173","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"b227c76a10c3","components/forms/ListItem.jsx":"349fa0c44a3b","components/feedback/ring/Ring.jsx":"2bcea3c4991d","components/core/Button.jsx":"e3c4b73fc0f1","components/core/Pill.jsx":"f29ce36e76b3","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"0a437938c86e","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"056a5590e474","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"cd7f859e9a49","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"e6ac25c25ace","components/feedback/Skeleton.jsx":"dc3c940737a7","components/product/TargetsCard.jsx":"108570f92c20","components/feedback/loading-screen/LoadingScreen.jsx":"9c490da4ba1b","components/feedback/macro-meter/MacroMeter.jsx":"210098d8b5fd","components/feedback/meta-bar/MetaBar.jsx":"0adefe217ae2","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"e805ebc8a412","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"d630d187fcea","components/forms/Select.jsx":"0e2158529d83","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"7fa2264a2712","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"57f9c2e68f5c","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"cba47a9d02cb","components/forms/SegmentedControl.jsx":"9ca70b0313e2","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"d0be075c63bd","components/feedback/ProgressBar.jsx":"7e3ac117e4bd","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"b371bae57cf3","components/navigation/Accordion.jsx":"793384ceefbd","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"d465741f117a","components/feedback/Chart.jsx":"edc0643cddf8","components/media/ImagePicker.jsx":"4ea1d6501899"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -20,6 +20,8 @@ try { (() => {
 // until then, keep in sync with tokens/colors.css by hand.
 const TOKEN_HEX = {
   "--forge-accent": "#EF4444",
+  "--forge-accent-fill": "#DC2626",
+  "--forge-danger-fill": "#c94b3b",
   "--forge-nutrition": "#10B981",
   "--forge-success": "#10B981",
   "--forge-warning": "#F59E0B",
@@ -60,37 +62,34 @@ function _contrast(a, b) {
 }
 const ON_DARK = "#0B0F19"; // --forge-on-light (texto escuro)
 const ON_LIGHT = "#FFFFFF"; // --forge-on-dark (texto branco)
-const BRAND_RED = "#EF4444"; // lock de marca: branco sobre o vermelho Forge
-
-// onColor(input, { size }) — escolhe o texto legível sobre um preenchimento,
-// por CONTRASTE WCAG real (não mais heurística de luma), com UM brand-lock
-// explícito (ADR-0050 / OP-015):
+// onColor(input, { size }) — escolhe o texto legível sobre um preenchimento por
+// CONTRASTE WCAG real. SEM brand-lock (ADR-0081): os controles preenchidos com
+// texto usam tokens de FILL já escurecidos (--forge-accent-fill #DC2626,
+// --forge-danger-fill #c94b3b), sobre os quais o BRANCO passa 4,5:1 — então o
+// vencedor de contraste é o branco, escolhido honestamente. Forge é DARK-ONLY.
 //   1. resolve token → hex (resolveColor);
-//   2. se for o vermelho de marca #EF4444 → branco, sem calcular (par de marca,
-//      válido a 3:1 em texto grande/negrito — Button/Pill usam peso 800);
-//   3. senão devolve o de MAIOR contraste entre branco e escuro;
-//   4. piso: size="large" (default) → 3:1; size="body" → 4.5:1; abaixo do piso
-//      devolve o vencedor e emite console.warn em dev.
-// Assinatura retrocompatível (2º arg opcional; default "large" = comportamento
-// dos consumidores atuais Button/Pill). Correção real vs a heurística antiga:
-// branco sobre o verde #10B981 saía a 2.54:1 (reprovado) e agora vira texto
-// escuro (7.55:1); idem danger/warning. Limitação conhecida: TOKEN_HEX é o mapa
-// do tema dark — o par por-tema no tema claro é resolvido pelo token CSS
-// --forge-on-accent (theme-aware); gerar TOKEN_HEX de tokens.json é follow-up (OP-001).
+//   2. devolve o de MAIOR contraste entre branco e escuro;
+//   3. piso: size="large" (≥18,7px bold) → 3:1; padrão (texto normal) → 4,5:1;
+//      abaixo do piso devolve o vencedor e emite console.warn em dev.
+// Tokens fora do mapa TOKEN_HEX (ex.: cat-ext-*) não têm hex conhecido: avisa em
+// dev e devolve texto claro (default seguro). TOKEN_HEX é mantido à mão — gerar
+// de tokens.json é follow-up (T-03).
 function onColor(input, {
-  size = "large"
+  size = "normal"
 } = {}) {
   const hex = resolveColor(input);
-  const h = String(hex).replace("#", "");
-  if (h.length < 6) return ON_LIGHT; // token não resolvido — default seguro
-  const norm = "#" + h.slice(0, 6);
-  if (norm.toUpperCase() === BRAND_RED) return ON_LIGHT;
-  const cWhite = _contrast(norm, ON_LIGHT);
-  const cDark = _contrast(norm, ON_DARK);
+  const norm = String(hex).trim().replace(/^#/, "");
+  if (!/^[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$/.test(norm)) {
+    if (typeof console !== "undefined") console.warn(`onColor: não resolvi "${input}" para um hex #rrggbb (TOKEN_HEX incompleto?); usando texto claro.`);
+    return ON_LIGHT;
+  }
+  const hx = "#" + norm.slice(0, 6);
+  const cWhite = _contrast(hx, ON_LIGHT);
+  const cDark = _contrast(hx, ON_DARK);
   const winner = cWhite >= cDark ? ON_LIGHT : ON_DARK;
-  const floor = size === "body" ? 4.5 : 3;
+  const floor = size === "large" ? 3 : 4.5;
   if (Math.max(cWhite, cDark) < floor && typeof console !== "undefined") {
-    console.warn(`onColor: melhor contraste ${Math.max(cWhite, cDark).toFixed(2)}:1 < ${floor}:1 sobre ${norm}; usando ${winner}.`);
+    console.warn(`onColor: melhor contraste ${Math.max(cWhite, cDark).toFixed(2)}:1 < ${floor}:1 sobre ${hx}; usando ${winner}.`);
   }
   return winner;
 }
@@ -170,6 +169,11 @@ const content = {
     skip: "Pular descanso",
     // Ring accessible label — template kept identical (mm:ss injected).
     ringLabel: time => `Descanso: ${time} restantes`
+  },
+  metaBar: {
+    // feedback/meta-bar/MetaBar.jsx — nomes acessíveis da barra de progresso.
+    distribution: "Distribuição por refeição",
+    value: "Progresso"
   }
 };
 Object.assign(__ds_scope, { content });
@@ -615,7 +619,10 @@ function Icon({
   title
 }) {
   const render = PATHS[name];
-  if (!render) return null;
+  if (!render) {
+    if (typeof console !== "undefined") console.warn(`Icon: glifo desconhecido "${name}" — nada renderizado (ver ICON_NAMES).`);
+    return null;
+  }
   const filled = name === "play";
   // Route color through CSS `color` + currentColor so design-system tokens
   // (e.g. "var(--forge-text-muted)") resolve — a raw var() does NOT resolve as
@@ -658,6 +665,7 @@ function ListItem({
   trailing,
   onClick,
   showChevron,
+  selected = false,
   disabled = false,
   style
 }) {
@@ -738,6 +746,7 @@ function ListItem({
       className: "forge-focusable",
       onClick: disabled ? undefined : onClick,
       disabled: disabled,
+      "aria-current": selected ? "true" : undefined,
       onMouseDown: () => setPressed(true),
       onMouseUp: () => setPressed(false),
       onMouseLeave: () => setPressed(false),
@@ -981,7 +990,7 @@ function Button({
   const sz = SIZES[size || (small ? "sm" : "lg")] || SIZES.lg;
   const label = title != null ? title : children;
   const isDisabled = disabled || loading;
-  const fill = color || "var(--forge-accent)";
+  const fill = color || "var(--forge-accent-fill)";
   let bg, fg, border;
   if (variant === "secondary") {
     bg = "transparent";
@@ -992,8 +1001,8 @@ function Button({
     fg = "var(--forge-text-muted)";
     border = "none";
   } else if (variant === "danger") {
-    bg = "var(--forge-danger)";
-    fg = __ds_scope.onColor("var(--forge-danger)");
+    bg = "var(--forge-danger-fill)";
+    fg = __ds_scope.onColor("var(--forge-danger-fill)");
     border = "none";
   } else {
     bg = fill;
@@ -1068,7 +1077,7 @@ function Pill({
   title,
   onClick,
   active = false,
-  color = "var(--forge-accent)",
+  color = "var(--forge-accent-fill)",
   size = "md",
   icon,
   disabled = false,
@@ -1438,7 +1447,7 @@ function ConfirmButton({
       borderWidth: "var(--forge-border-w-strong)",
       borderStyle: "solid",
       borderColor: "var(--forge-danger)",
-      backgroundColor: arming ? "var(--forge-danger)" : "transparent",
+      backgroundColor: arming ? "var(--forge-danger-fill)" : "transparent",
       color: arming ? "var(--forge-on-dark)" : "var(--forge-danger)",
       fontFamily: "var(--forge-font-body)",
       fontWeight: 700,
@@ -1559,8 +1568,8 @@ try { (() => {
 // notices live inline, in the flow of the screen.
 //
 // Fill/border are derived from the semantic accent via color-mix over the
-// current surface, so the component adapts to light theme automatically
-// (OP-011) instead of relying on dark-only hex.
+// current surface token, so they track the surface instead of relying on a
+// fixed hex (Forge é dark-only — tema único).
 const KIND = {
   info: {
     accent: "var(--forge-macro-fat)",
@@ -2228,14 +2237,15 @@ function MetaBar({
   value,
   target,
   color = "var(--forge-nutrition)",
-  segments
+  segments,
+  label
 }) {
   if (segments && segments.length) {
     const total = target > 0 ? target : segments.reduce((s, seg) => s + seg.value, 0) || 1;
     return /*#__PURE__*/React.createElement(__ds_scope.ProgressBar, {
       height: 6,
       separators: true,
-      label: "Distribui\xE7\xE3o por refei\xE7\xE3o",
+      label: label || __ds_scope.content.metaBar.distribution,
       segments: segments.map(seg => ({
         value: seg.value / total,
         color: seg.color
@@ -2249,7 +2259,8 @@ function MetaBar({
     height: 6,
     color: over ? "var(--forge-warning)" : color,
     valueNow: Math.round(value),
-    valueMax: Math.round(target)
+    valueMax: Math.round(target),
+    label: label || __ds_scope.content.metaBar.value
   });
 }
 Object.assign(__ds_scope, { MetaBar });
@@ -2636,7 +2647,10 @@ function Switch({
     "aria-labelledby": label ? `${rid}-label` : undefined,
     "aria-disabled": disabled || undefined,
     tabIndex: disabled ? -1 : 0,
-    onClick: toggle,
+    onClick: e => {
+      e.stopPropagation();
+      toggle();
+    },
     onKeyDown: e => {
       if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
@@ -2821,7 +2835,6 @@ function SearchField({
       height: "100%",
       background: "none",
       border: "none",
-      outline: "none",
       color: "var(--forge-text)",
       fontFamily: "var(--forge-font-body)",
       fontSize: "var(--forge-text-input)"
@@ -2926,6 +2939,7 @@ function Select({
     key: String(o.value),
     title: o.label,
     subtitle: o.subtitle,
+    selected: o.value === value,
     trailing: o.value === value ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
       name: "check",
       color: "var(--forge-accent)",
@@ -4033,20 +4047,28 @@ function RestTimer({
   const [left, setLeft] = React.useState(duration);
   const [running, setRunning] = React.useState(initialRunning);
   const done = left <= 0;
+
+  // onComplete num ref: o intervalo não deve reiniciar quando o pai passa um
+  // callback inline novo a cada render (T-23) — senão o countdown treme/reseta.
+  const onCompleteRef = React.useRef(onComplete);
+  React.useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
   React.useEffect(() => {
     if (!running || done || typeof window === "undefined") return;
     const id = window.setInterval(() => {
       setLeft(v => {
         if (v <= 1) {
           window.clearInterval(id);
-          if (onComplete) onComplete();
+          const cb = onCompleteRef.current;
+          if (cb) cb();
           return 0;
         }
         return v - 1;
       });
     }, 1000);
     return () => window.clearInterval(id);
-  }, [running, done, onComplete]);
+  }, [running, done]);
   const tint = done ? "var(--forge-success)" : accent || "var(--forge-accent)";
   const progress = duration > 0 ? left / duration : 0;
   const ctrl = (label, glyph, onClick) => /*#__PURE__*/React.createElement("button", {
@@ -4327,7 +4349,10 @@ function Checkbox({
     "aria-labelledby": label ? `${rid}-label` : undefined,
     "aria-disabled": disabled || undefined,
     tabIndex: disabled ? -1 : 0,
-    onClick: toggle,
+    onClick: e => {
+      e.stopPropagation();
+      toggle();
+    },
     onKeyDown: e => {
       if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
@@ -4395,7 +4420,7 @@ function SegmentedControl({
   value,
   onChange,
   label,
-  color = "var(--forge-accent)",
+  color = "var(--forge-accent-fill)",
   disabled = false,
   style
 }) {
@@ -4715,7 +4740,7 @@ function FilterChip({
   active = false,
   onClick,
   count,
-  color = "var(--forge-accent)",
+  color = "var(--forge-accent-fill)",
   icon,
   disabled = false,
   style
@@ -5248,7 +5273,7 @@ function Tabs({
       role: "tab",
       id: `${idBase}-tab-${t.id}`,
       "aria-selected": on,
-      "aria-controls": children != null ? `${idBase}-panel-${t.id}` : undefined,
+      "aria-controls": on && children != null ? `${idBase}-panel-${t.id}` : undefined,
       tabIndex: on ? 0 : -1,
       onClick: () => onChange && onChange(t.id),
       onKeyDown: onKeyDown,
@@ -5362,6 +5387,8 @@ function Accordion({
     id: panelId,
     role: "region",
     "aria-labelledby": headerId,
+    inert: !open || undefined,
+    "aria-hidden": !open || undefined,
     style: {
       overflow: "hidden",
       maxHeight: open ? 2000 : 0,

@@ -11,11 +11,12 @@ const run = (cmd) => execSync(cmd, { cwd: ROOT, stdio: "pipe" }).toString();
 
 const GENERATED = [
   "tokens/colors.css", "tokens/typography.css", "tokens/spacing.css", "tokens/motion.css",
-  "tokens.d.ts", "index.html", "_ds_bundle.js", "_ds_manifest.json",
+  "tokens.d.ts", "tokens/tokens.rn.js", "index.html", "_ds_bundle.js", "_ds_manifest.json",
+  "docs/plan/index.html",
 ];
 
 console.log("check-drift: regenerando artefatos…");
-for (const script of ["build:tokens", "build:index", "build:bundle"]) {
+for (const script of ["build:tokens", "build:index", "build:bundle", "build:plan"]) {
   run(`npm run --silent ${script}`);
 }
 

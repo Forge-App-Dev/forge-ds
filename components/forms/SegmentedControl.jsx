@@ -8,7 +8,7 @@ import { onColor } from "../shared/color.js";
 // AND select (roving tabindex), Home/End jump to the ends. Reuses the pill/track
 // look — a rounded track with the active segment filled with the accent (or a
 // module `color`), text color from onColor().
-export function SegmentedControl({ options = [], value, onChange, label, color = "var(--forge-accent)", disabled = false, style }) {
+export function SegmentedControl({ options = [], value, onChange, label, color = "var(--forge-accent-fill)", disabled = false, style }) {
   const rid = React.useId ? React.useId() : "forge-seg";
   const opts = options.map((o) => (typeof o === "string" ? { value: o, label: o } : o));
   const idx = opts.findIndex((o) => o.value === value);

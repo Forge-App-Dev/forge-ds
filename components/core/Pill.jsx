@@ -12,7 +12,7 @@ const SIZES = {
   md: { height: 40, paddingInline: 16, icon: 16 },
 };
 
-export function Pill({ title, onClick, active = false, color = "var(--forge-accent)", size = "md", icon, disabled = false, style }) {
+export function Pill({ title, onClick, active = false, color = "var(--forge-accent-fill)", size = "md", icon, disabled = false, style }) {
   const sz = SIZES[size] || SIZES.md;
   return (
     <button

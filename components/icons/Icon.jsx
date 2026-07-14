@@ -207,7 +207,10 @@ const PATHS = {
 
 export function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2, title }) {
   const render = PATHS[name];
-  if (!render) return null;
+  if (!render) {
+    if (typeof console !== "undefined") console.warn(`Icon: glifo desconhecido "${name}" — nada renderizado (ver ICON_NAMES).`);
+    return null;
+  }
   const filled = name === "play";
   // Route color through CSS `color` + currentColor so design-system tokens
   // (e.g. "var(--forge-text-muted)") resolve — a raw var() does NOT resolve as

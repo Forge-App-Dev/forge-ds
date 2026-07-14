@@ -35,7 +35,7 @@ export function ConfirmButton({ title = content.confirmButton.title, confirmTitl
           borderWidth: "var(--forge-border-w-strong)",
           borderStyle: "solid",
           borderColor: "var(--forge-danger)",
-          backgroundColor: arming ? "var(--forge-danger)" : "transparent",
+          backgroundColor: arming ? "var(--forge-danger-fill)" : "transparent",
           color: arming ? "var(--forge-on-dark)" : "var(--forge-danger)",
           fontFamily: "var(--forge-font-body)",
           fontWeight: 700,

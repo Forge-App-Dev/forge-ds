@@ -23,9 +23,9 @@
   480px centralizada, navegação inferior, áreas de toque generosas.
 - **Sem etapa de build.** React via CDN + Babel no navegador, estilos inline em
   objetos JS (sem framework de CSS). Os "tokens" são constantes JS.
-- **Tema escuro como base.** O Forge usa tema escuro grafite. Um app irmão pode
-  inverter para tema claro (ver "Variações de tema"), mas mantendo a mesma
-  estrutura de componentes.
+- **Tema escuro, único (dark-only).** O Forge usa tema escuro grafite — é o
+  **único** tema. Um app irmão troca só o símbolo da marca e, opcionalmente, a cor
+  de acento (ver "Variações entre apps irmãos"); **não** inverte para tema claro.
 ---
 
 ## 2. Cores (tokens)
@@ -185,22 +185,18 @@ da família define o seu `BrandMark` — é o principal ponto de diferenciação
 
 ---
 
-## 8. Variações de tema entre apps irmãos
+## 8. Variações entre apps irmãos
 
-A família admite personalidades distintas mantendo o mesmo sistema. Duas formas
-de variar, em ordem de preferência:
+A família admite personalidades distintas mantendo o mesmo sistema. Forge é
+**dark-only** — o tema escuro grafite é fixo. O que um app irmão varia:
 
-1. **Só o símbolo + acento (recomendado).** Mantém o tema escuro Forge e troca
-   apenas o `BrandMark` e, se quiser, a cor `accent`. Máxima unidade visual.
-2. **Inverter para tema claro (ex.: um app "Fuel").** Mantém os mesmos
-   componentes, raios, tipografia e espaçamento, mas troca o conjunto de
-   superfícies/texto para claro. Para isso, redefina os tokens de superfície e
-   texto (fundo off-white, cards brancos, texto grafite) e ajuste o `accent`
-   (ex.: verde). **Não** mude raios, fontes, componentes nem animações — só as
-   cores. Assim os apps continuam reconhecíveis como família.
+1. **Símbolo + acento.** Mantém o tema escuro Forge e troca apenas o `BrandMark`
+   e, opcionalmente, a cor `accent` (ex.: o app "Fuel" de nutrição usa o verde).
+   **Não** mude raios, fontes, componentes, superfícies nem animações — só marca
+   e acento. Assim os apps continuam reconhecíveis como família.
 > Regra de ouro: o usuário deve bater o olho em dois apps da família e saber, na
-> hora, que são do mesmo ecossistema. Estrutura e componentes são imutáveis;
-> símbolo e (opcionalmente) tema/acento são os graus de liberdade.
+> hora, que são do mesmo ecossistema. Estrutura, superfícies e componentes são
+> imutáveis; símbolo e (opcionalmente) acento são os graus de liberdade.
 
 ---
 
@@ -211,8 +207,8 @@ de variar, em ordem de preferência:
 2. Defina o `BrandMark` do novo app (seu símbolo PNG/SVG) e a tagline.
 3. Use os estilos (`card`, `primaryBtn(accent)`, `textInput`, etc.) em todas as
    telas — não crie estilos avulsos fora do sistema.
-4. Para um app de tema claro, redefina apenas os tokens de superfície/texto e o
-   `accent`, conforme a seção 8.
+4. Para variar a identidade de um app irmão, troque o `BrandMark` e, se quiser, o
+   `accent`, conforme a seção 8 — o tema escuro é fixo (dark-only).
 5. Mantenha os padrões: navegação inferior, confirmação destrutiva em 2 toques,
    ícones Feather, anel como assinatura, animações com `prefers-reduced-motion`.
 ---

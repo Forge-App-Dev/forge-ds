@@ -178,7 +178,7 @@ let body = "";
 
 for (const rel of FILES) {
   const abs = path.join(ROOT, rel);
-  const src = fs.readFileSync(abs, "utf8");
+  const src = fs.readFileSync(abs, "utf8").replace(/\r\n/g, "\n"); // LF: saída determinística em qualquer OS (evita drift Windows↔Linux)
   sourceHashes[rel] = crypto.createHash("sha256").update(src).digest("hex").slice(0, 12);
   const { imported, exported } = analyze(src);
   const code = transformFile(src, imported);
@@ -222,7 +222,7 @@ fs.writeFileSync(path.join(ROOT, "_ds_bundle.js"), bundle);
 // manifest (mantém startingPoints do existente se houver)
 let startingPoints = [];
 try { startingPoints = JSON.parse(fs.readFileSync(path.join(ROOT, "_ds_manifest.json"), "utf8")).startingPoints || []; } catch {}
-const manifest = { namespace: NS, components: manifestComponents.concat([{ name: "ICON_NAMES", sourcePath: "components/icons/Icon.jsx" }]), startingPoints };
+const manifest = { namespace: NS, components: manifestComponents, startingPoints };
 fs.writeFileSync(path.join(ROOT, "_ds_manifest.json"), JSON.stringify(manifest, null, 1));
 
 console.log("bundle gerado:", manifestComponents.length, "exports");

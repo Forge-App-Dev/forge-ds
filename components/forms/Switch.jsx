@@ -16,7 +16,7 @@ export function Switch({ checked = false, onChange, label, disabled = false, id,
       aria-labelledby={label ? `${rid}-label` : undefined}
       aria-disabled={disabled || undefined}
       tabIndex={disabled ? -1 : 0}
-      onClick={toggle}
+      onClick={(e) => { e.stopPropagation(); toggle(); }}
       onKeyDown={(e) => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); } }}
       style={{
         width: 44,

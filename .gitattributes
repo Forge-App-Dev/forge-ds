@@ -1,0 +1,14 @@
+# Normaliza fim de linha para LF nos artefatos GERADOS, para o check-drift
+# (regenera → git tem de ficar limpo) não gerar falso-positivo em Windows com
+# core.autocrlf=true. Ver T-04 / docs/plan.
+tokens/colors.css        text eol=lf
+tokens/typography.css    text eol=lf
+tokens/spacing.css       text eol=lf
+tokens/motion.css        text eol=lf
+tokens/tokens.rn.js      text eol=lf
+tokens.d.ts              text eol=lf
+_ds_bundle.js            text eol=lf linguist-generated=true
+_ds_manifest.json        text eol=lf linguist-generated=true
+index.html               text eol=lf linguist-generated=true
+docs/plan/index.html     text eol=lf linguist-generated=true
+scripts/plan.fonts.css   text eol=lf linguist-generated=true

@@ -9,7 +9,7 @@ import { Icon } from "../icons/Icon";
 // `color` when active (text via onColor). It is `flex-shrink: 0` and never
 // wraps — the CONSUMER provides the horizontally-scrolling container (a flex row
 // with overflow-x: auto), keeping every active filter visible.
-export function FilterChip({ label, active = false, onClick, count, color = "var(--forge-accent)", icon, disabled = false, style }) {
+export function FilterChip({ label, active = false, onClick, count, color = "var(--forge-accent-fill)", icon, disabled = false, style }) {
   return (
     <button
       className="forge-focusable"

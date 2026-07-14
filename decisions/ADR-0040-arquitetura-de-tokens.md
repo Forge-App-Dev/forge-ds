@@ -10,10 +10,15 @@ drift silencioso DS↔produção, custo de N edições por mudança, e impossibi
 contra tokens reais, diff de tema, doc gerada, autocomplete tipado).
 
 Os tokens atuais (`colors/typography/spacing/motion/base.css`) são a **verdade a preservar**: já
-passaram por trabalho de acessibilidade (contraste ajustado, textos elevados a 4.5:1), namespace
-`--forge-*` (OP-096) e um tema light "sibling" (`.forge-theme-light`). Qualquer arquitetura nova
-precisa **emitir exatamente esses CSS** (mesmos nomes e valores) — a mudança é de origem, não de
-produto.
+passaram por trabalho de acessibilidade (contraste ajustado, textos elevados a 4.5:1) e namespace
+`--forge-*` (OP-096). Qualquer arquitetura nova precisa **emitir exatamente esses CSS** (mesmos
+nomes e valores) — a mudança é de origem, não de produto.
+
+> **Nota (2026-07-14):** este ADR foi escrito quando o DS embarcava um tema claro "sibling"
+> (`.forge-theme-light`). O owner decidiu que **Forge é dark-only** e o tema claro foi removido.
+> A arquitetura de tokens (fonte única DTCG, 3 camadas, gerador próprio) continua válida; o que
+> muda é que o white-label reaponta só o **accent** sobre o tema dark, sem par claro/escuro. Ver
+> CHANGELOG 1.6.0.
 
 Restrições do repo: ESM puro, sem framework de build pesado, um único dono, horizonte de 5 anos.
 
@@ -27,15 +32,16 @@ Arquitetura de **3 camadas** (OP-004): **primitive → semantic → component**,
 (nasce da divergência real, não da simetria).
 
 Decisões concretas embutidas:
-- **OP-084 — três famílias neutras** (não uma): `graphite` (frio, superfícies/bordas dark),
-  `stone` (quente, tema light), `gray` (quase-puro, texto dos dois temas). Ramps 50–950 ancorados
-  **nos valores já embarcados** (fidelidade > grade teórica). Cinza dark lê o topo do ramp `gray`;
-  cinza light lê a base do mesmo ramp — demonstração limpa da separação primitivo/semântico.
-- **OP-098 — contrato de tema como validação de build**: lista fechada do que um tema PODE trocar
-  (surface/text/border/accent/scrim/negative) e do que NUNCA troca (primitivos, raios, tipo,
-  espaço, motion, macros, categoria). O build falha se um token temável não tiver par no tema light
-  ou se um token imutável declarar override. Tema light = override da camada semântica via
-  `$extensions.com.forge.theme.light`, nunca da primitiva.
+- **OP-084 — famílias neutras separadas:** `graphite` (frio, superfícies/bordas do tema dark) e
+  `gray` (quase-puro, texto). Ramps 50–950 ancorados **nos valores já embarcados** (fidelidade >
+  grade teórica); o texto lê o extremo claro do ramp `gray` sobre o grafite escuro — separação
+  limpa primitivo/semântico. (O ramp `stone`, neutro quente, nasceu para o tema claro; com Forge
+  dark-only ficou **sem consumidor** — ver CHANGELOG 1.6.0.)
+- **OP-098 — contrato de tema como validação de build**: lista fechada do que um tema (de accent)
+  PODE trocar (`action.accent` + o par `on-accent`) e do que NUNCA troca (todo o resto: primitivos,
+  superfícies, texto, bordas, scrim, raios, tipo, espaço, motion, macros, categoria). O build falha
+  se um token imutável declarar um override de tema. A troca é override da camada semântica via
+  `$extensions.com.forge.theme.<nome>`, nunca da primitiva.
 - **OP-099 — platform tokens + `tokens.d.ts`**: `px = dp = pt` (número único, unidade por
   plataforma); saída tipada para autocomplete no app; o `tokens.js` do forge-app passa a ser gerado.
 - **OP-101** — `$description` com uso/anti-uso em cada token; vira doc gerada.
@@ -48,8 +54,8 @@ gerador): `docs/tokens-architecture.md`.
 ## Consequências
 
 **Positivas:** elimina a classe inteira de bugs de drift; uma edição em vez de quatro; habilita
-lint/CI contra tokens reais, doc gerada e autocomplete tipado; theming real (light/multi-brand = trocar
-camada semântica); vocabulário de intenção ("por que este cinza?") legível. Escala para centenas de
+lint/CI contra tokens reais, doc gerada e autocomplete tipado; white-label real (accent/multi-brand =
+trocar a camada semântica); vocabulário de intenção ("por que este cinza?") legível. Escala para centenas de
 componentes sem inflar o vocabulário (camada 3 sob demanda).
 
 **Negativas / custos:** adiciona um passo de build ao fluxo (`npm run build:tokens` antes do commit);
@@ -74,7 +80,8 @@ arredondados por transform de plataforma no RN — a fonte não muda, o alvo dec
 4. **3 camadas plenas estilo Carbon já (component tokens exaustivos).** É o norte de 5 anos, mas
    infla o vocabulário agora sem consumidores que justifiquem. **Escolhido:** 2 camadas plenas +
    camada 3 mínima sob demanda (OP-004 rec. b).
-5. **Um único ramp neutro** para superfícies e texto nos dois temas. Rejeitado: quebraria a
-   fidelidade (dark é azulado, texto é neutro, light é quente — três matizes reais). Três famílias
-   neutras é o que o produto já é.
+5. **Um único ramp neutro** para superfícies e texto. Rejeitado: quebraria a fidelidade — as
+   superfícies dark são azuladas e o texto é quase-neutro (dois matizes reais distintos). Famílias
+   neutras separadas é o que o produto já é. (O ramp quente `stone` existia para o tema claro, hoje
+   removido — dark-only.)
 </content>

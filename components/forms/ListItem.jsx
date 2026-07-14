@@ -7,7 +7,7 @@ import { Icon } from "../icons/Icon";
 // Pass `onClick` to make it a pressable row (role=button, focus, press,
 // chevron by default); omit for a static row. `leadingIcon` is a convenience
 // for the common icon-in-a-tile leading.
-export function ListItem({ title, subtitle, leading, leadingIcon, trailing, onClick, showChevron, disabled = false, style }) {
+export function ListItem({ title, subtitle, leading, leadingIcon, trailing, onClick, showChevron, selected = false, disabled = false, style }) {
   const pressable = typeof onClick === "function";
   const [pressed, setPressed] = React.useState(false);
   const chevron = (showChevron ?? pressable) && !trailing;
@@ -47,6 +47,7 @@ export function ListItem({ title, subtitle, leading, leadingIcon, trailing, onCl
         className="forge-focusable"
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
+        aria-current={selected ? "true" : undefined}
         onMouseDown={() => setPressed(true)}
         onMouseUp={() => setPressed(false)}
         onMouseLeave={() => setPressed(false)}

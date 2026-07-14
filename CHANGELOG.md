@@ -17,6 +17,34 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.6.0] — 2026-07-14
+Tema claro removido (Forge é dark-only) + reconciliações de honestidade da documentação
+(apontadas na revisão de prontidão).
+
+### Removed
+- **Tema claro removido — Forge é dark-only.** O tema claro era um experimento abandonado; foi
+  retirado de toda a documentação. White-label passa a significar troca de **accent** (+ marca via
+  props + cópia via `content.js`) sobre o **único tema dark**, não troca de tema claro/escuro.
+  Docs afetados: `readme.md`, `docs/white-label.md`, `docs/tokens-architecture.md`,
+  `docs/SCALABILITY.md`, `reference/FORGE_DESIGN_SYSTEM.md`, ADR-0040/0050/0051. O ramp primitivo
+  `stone`, os scrims `*-light` e os overrides `com.forge.theme.light` ficam **sem consumidor** — a
+  limpeza dos artefatos de código/tokens cabe ao dono do código.
+
+### Changed
+- **Contagem de componentes corrigida para 63** onde os docs divergiam (constavam 64/66) — `ROADMAP_DS.md`.
+- **White-label reportado com honestidade:** caminho decidido, mas a prova de ponta a ponta "app
+  Fuel" **não existe** — marcado como planejado / não-provado (antes constava "concluído" /
+  "provado") em `ROADMAP_DS.md` e `docs/SCALABILITY.md`. (Corrige a menção da entrada [1.5.0] que
+  dava o "tema claro completo (app Fuel)" como concluído.)
+- **`docs/ARCHITECTURE.md` — aderência real:** o gate de CI (`scripts/check-adherence.mjs`) bloqueia
+  **só hex de cor cru** em `.jsx` de `components/`/`ui_kits`; verificação de px, props e fontes
+  **ainda não implementada** (planejada). Removida a alegação de que px/props/fontes já eram bloqueados.
+- **`check-drift` descrito corretamente (ADR-0072):** regenera os artefatos locais e falha se o
+  working tree ficar sujo — **não** compara DS↔forge-app via `sourceHash`. Corrigido em
+  `docs/ARCHITECTURE.md` e `docs/GLOSSARY.md`.
+- **ADR-0050 / ADR-0051:** removidas as linhas/análises de contraste do tema claro (mantidos só os
+  valores do dark). Seguem `Accepted` — a decisão é sobre `onColor()` / macro colors no tema dark.
+
 ## [1.5.0] — 2026-07-14
 Execução do roadmap completo da auditoria (fecha a maioria das 191 oportunidades).
 

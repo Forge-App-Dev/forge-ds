@@ -6,9 +6,12 @@ OP-180. Termos que confundem por terem história ou parecerem sinônimos. Ordem 
   vermelho `--forge-accent` (`#EF4444`); cada módulo pode ter o seu (Nutrição = verde
   `--forge-nutrition`). **Não confundir com `danger`** (ver abaixo).
 
-- **Aderência (lint de)** — regras em `_adherence.oxlintrc.json` que impõem tokens-only,
-  fontes permitidas e contrato de props. "Violar a aderência" = usar hex/px cru, fonte
-  proibida ou prop inexistente.
+- **Aderência (lint de)** — a intenção está documentada em `_adherence.oxlintrc.json`
+  (tokens-only, fontes permitidas, contrato de props), mas o gate de CI que **de fato roda**
+  é `scripts/check-adherence.mjs`, e ele impõe **uma única regra**: nenhum **hex de cor cru**
+  em `.jsx` (`components/` + `ui_kits/forge-app/`) — cor sai de token `var(--forge-*)`. Px cru,
+  fontes e contrato de props ainda são convenção, não bloqueio. "Violar a aderência" hoje =
+  usar hex de cor cru.
 
 - **Anti-pattern** — prática proibida no sistema (sombra, gradiente, toast, bottom sheet,
   uppercase em Inter, hex cru). Ver `guidelines/anti-patterns.card.html` e ADR-0001/0002.
@@ -28,8 +31,11 @@ OP-180. Termos que confundem por terem história ou parecerem sinônimos. Ordem 
 - **Deprecated** — estado formal de "marcado para remoção, use o substituto". Sobrevive
   ≥ 1 minor com aviso; some só em major. ADR-0071.
 
-- **Drift** — divergência entre o DS (espelho) e o `forge-app` (origem). Detectado pelos
-  `sourceHash` do bundle (OP-014). Ver `docs/ARCHITECTURE.md`.
+- **Drift** — divergência entre o DS (espelho) e o `forge-app` (origem). **O `check-drift`
+  (OP-014 → ADR-0072) NÃO detecta essa divergência:** ele regenera os artefatos locais
+  (tokens/index/bundle/manifest/`.d.ts`) e falha se o working tree ficar sujo — é frescor de
+  artefato, não diff DS↔app. A vigilância DS↔app fica como trabalho futuro. Ver
+  `docs/ARCHITECTURE.md`.
 
 - **FullScreen** — overlay de tela cheia (header próprio, corpo rolável, footer fixo) para
   **fluxos longos / multi-seção**. Contraste com **Panel**.

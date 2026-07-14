@@ -7,8 +7,8 @@ import { Icon } from "../icons/Icon";
 // notices live inline, in the flow of the screen.
 //
 // Fill/border are derived from the semantic accent via color-mix over the
-// current surface, so the component adapts to light theme automatically
-// (OP-011) instead of relying on dark-only hex.
+// current surface token, so they track the surface instead of relying on a
+// fixed hex (Forge é dark-only — tema único).
 const KIND = {
   info: { accent: "var(--forge-macro-fat)", icon: "info", role: "status" },
   success: { accent: "var(--forge-success)", icon: "check", role: "status" },

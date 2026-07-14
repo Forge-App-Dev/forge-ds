@@ -1,5 +1,6 @@
 /* Forge Design System — color tokens
-   GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens). */
+   GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens).
+   Forge é dark-only: tema único, sem bloco .forge-theme-light. */
 :root {
   --forge-bg: #0B0F19;
   --forge-surface: #161E2E;
@@ -14,10 +15,12 @@
   --forge-text-faint: #8C8C94;
   --forge-text-dimmer: #6C6C74;
   --forge-accent: #EF4444;
+  --forge-accent-fill: #DC2626;
   --forge-on-accent: #FFFFFF;
   --forge-success: #10B981;
   --forge-warning: #F59E0B;
   --forge-danger: #e36a5a;
+  --forge-danger-fill: #c94b3b;
   --forge-nutrition: #10B981;
   --forge-macro-protein: #E5645E;
   --forge-macro-carb: #E0A23B;
@@ -43,8 +46,6 @@
   --surface-panel: var(--forge-panel);
   --border-card: var(--forge-border);
   --border-input: var(--forge-border-input);
-  --text-body: var(--forge-text);
-  --text-secondary: var(--forge-text-muted);
   --forge-scrim: rgba(10, 10, 12, 0.82);
   --forge-scrim-heavy: rgba(0, 0, 0, 0.94);
   --forge-focus-ring: var(--forge-accent);
@@ -53,26 +54,4 @@
   --forge-on-brand-google-text: #1a1a1a;
   --forge-on-light: #0B0F19;
   --forge-on-dark: #FFFFFF;
-}
-
-.forge-theme-light {
-  --forge-bg: #F7F6F4;
-  --forge-surface: #FFFFFF;
-  --forge-surface-raised: #F0EFEC;
-  --forge-panel: #FFFFFF;
-  --forge-border: #E4E2DD;
-  --forge-border-input: #DAD7D0;
-  --forge-divider: #EAE8E3;
-  --forge-text: #1B1D22;
-  --forge-text-muted: #5C5E66;
-  --forge-text-dim: #5F6167;
-  --forge-text-faint: #696B71;
-  --forge-text-dimmer: #87898F;
-  --forge-accent: #10B981;
-  --forge-on-accent: #0B0F19;
-  --forge-danger: #c94b3b;
-  --forge-scrim: rgba(20, 20, 24, 0.55);
-  --forge-scrim-heavy: rgba(0, 0, 0, 0.88);
-  --forge-focus-ring: var(--forge-accent);
-  --forge-negative: #c94b3b;
 }

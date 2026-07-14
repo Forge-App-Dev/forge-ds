@@ -13,10 +13,12 @@ export type ForgeCssVar =
   | "--forge-text-faint"
   | "--forge-text-dimmer"
   | "--forge-accent"
+  | "--forge-accent-fill"
   | "--forge-on-accent"
   | "--forge-success"
   | "--forge-warning"
   | "--forge-danger"
+  | "--forge-danger-fill"
   | "--forge-nutrition"
   | "--forge-macro-protein"
   | "--forge-macro-carb"
@@ -42,8 +44,6 @@ export type ForgeCssVar =
   | "--surface-panel"
   | "--border-card"
   | "--border-input"
-  | "--text-body"
-  | "--text-secondary"
   | "--forge-scrim"
   | "--forge-scrim-heavy"
   | "--forge-focus-ring"
@@ -68,6 +68,7 @@ export type ForgeCssVar =
   | "--text-card-title"
   | "--text-input"
   | "--text-list-item"
+  | "--text-body"
   | "--text-body-sm"
   | "--text-chip"
   | "--text-label"
@@ -181,5 +182,4 @@ export interface ForgeTokens {
   duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;
 }
 
-export declare const tokens: ForgeTokens;            // valores do tema base (dark)
-export declare const tokensLight: Partial<ForgeTokens>; // só o que o tema light troca
+export declare const tokens: ForgeTokens;            // valores do tema dark (único)

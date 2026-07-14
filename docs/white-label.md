@@ -2,9 +2,10 @@
 
 **Status:** Guia de implementação · **Data:** 2026-07-14
 **Decisão-mãe:** `decisions/ADR-0040-arquitetura-de-tokens.md` (fonte única DTCG)
-**Regra de tema:** `docs/tokens-architecture.md` §6.1 (contrato de tema) e princípio 5
-("tema = troca da camada semântica, nunca da primitiva").
-**OP:** OP-010/188 (content.js), OP-011 (tema claro), OP-120 (brand no AppHeader), OP-186 (prova Fuel).
+**Regra de accent:** `docs/tokens-architecture.md` §6.1 (contrato de tema) e princípio 5
+("o accent é re-associação da camada semântica, nunca da primitiva").
+**OP:** OP-010/188 (content.js), OP-120 (brand no AppHeader), OP-186 (white-label). Forge é
+**dark-only** — OP-011 (tema claro) foi encerrada (tema claro removido, 2026-07-14).
 
 Um **app irmão** ("sibling") — ex.: **Fuel**, o app de nutrição — reusa 100% dos componentes,
 macros, categoria, dimensões e tipografia do Forge, trocando só **três** camadas: **marca**,
@@ -18,7 +19,7 @@ a lista fechada do que é **imutável**.
 | Camada | Como se troca | Onde vive |
 |---|---|---|
 | **Marca** (wordmark + mark image) | via **props** de componente | `AppHeader`, `LoadingScreen` |
-| **Accent** (cor de ação primária) | via **tema** (classe CSS que reaponta o semântico) | `.forge-theme-light` ou tema próprio |
+| **Accent** (cor de ação primária) | via **tema de accent** (classe CSS que reaponta `--forge-accent`) | tema próprio no `tokens.json` |
 | **Cópia** (strings default do sistema) | via **`content.js`** (ponto único de i18n) | `components/shared/content.js` |
 
 Tudo o mais — macros, paleta de categoria, escalas de dimensão/tipo/motion — é **identidade fixa
@@ -47,40 +48,27 @@ não expõe a prop de marca de que você precisa, isso é um gap do DS a resolve
 
 ---
 
-## 2. Accent — trocar por tema (troca a camada semântica, nunca a primitiva)
+## 2. Accent — trocar por tema de accent (reaponta o semântico, nunca a primitiva)
 
-A regra-mãe (ADR-0040 / tokens-architecture §6.1, princípio 5): **tema é uma re-associação da
-camada semântica; primitivos nunca mudam.** Um tema é uma classe CSS que redefine as CSS vars
-semânticas (`--forge-accent`, `--forge-surface`, `--forge-text`, …) apontando para outros
-primitivos.
+A regra-mãe (ADR-0040 / tokens-architecture §6.1, princípio 5): **um tema de accent é uma
+re-associação da camada semântica; primitivos e superfícies nunca mudam.** Forge é **dark-only**:
+o tema escuro grafite é fixo. O que um app irmão troca é a **cor de ação** — a var semântica
+`--forge-accent` (e seu par `--forge-on-accent`) — apontando para outro primitivo de cor.
+Superfícies, texto e bordas continuam os do tema dark.
 
-O DS já embarca um tema irmão pronto — o **tema claro**, usado pelo Fuel:
+> **Não existe tema claro.** O tema claro era um experimento abandonado e foi removido (decisão do
+> owner, 2026-07-14). White-label **não** é troca de tema claro/escuro — é troca de **accent**
+> (+ marca + cópia) sobre o único tema dark.
 
-```html
-<body class="forge-theme-light"> … </body>
-```
+O accent já varia dentro do próprio Forge por módulo: Treino usa o vermelho de marca `#EF4444`;
+Nutrição usa o verde `#10B981` (o app irmão "Fuel" adota esse accent verde). Um app irmão declara
+o **seu** accent do mesmo jeito.
 
-`.forge-theme-light` (gerado em `tokens/colors.css` a partir de `tokens.json`) reaponta:
+### Declarar o accent de um app irmão
 
-- **accent** → verde de marca `#10B981` (`{color.emerald.500}`) no lugar do vermelho `#EF4444`;
-- **on-accent** → **texto ESCURO** `#0B0F19` (`{graphite.950}`), porque branco sobre o verde
-  reprova o contraste (2.54:1 — ADR-0050). Isto é o override que corrige a incoerência escalada
-  no ADR-0050: o dark continua branco sobre o vermelho de marca; só o light inverte;
-- **superfícies/bordas** → família **stone** (neutro quente) no lugar de **graphite** (neutro frio);
-- **texto** → extremo escuro do ramp **gray** no lugar do extremo claro;
-- **danger** → coral mais escuro `#c94b3b` (`{color.coral.600}`) para contraste de texto de erro
-  sobre superfície clara.
-
-**Prova de ponta a ponta:** `guidelines/light-theme-fuel.card.html` renderiza Button, Card,
-TextField, Pill, InlineAlert e StatCard dentro de um `class="forge-theme-light"` — todos usando só
-tokens, nenhum componente forkado, nenhuma cor hardcoded.
-
-### Um tema próprio (accent diferente do verde do Fuel)
-
-Se o app irmão quer um accent que não é o do tema claro embarcado, o caminho **não** é hardcodear
-cor no app — é declarar um **tema próprio** no `tokens.json` (novo bloco
-`$extensions.com.forge.theme.<nome>`) e regenerar via `npm run build:tokens`, ou, para um piloto,
-uma classe local que reaponta **apenas** as vars semânticas temáveis:
+O caminho **não** é hardcodear cor no app — é declarar um **tema de accent** no `tokens.json`
+(bloco `$extensions.com.forge.theme.<nome>`) e regenerar via `npm run build:tokens`, ou, para um
+piloto, uma classe local que reaponta **apenas** a var de accent:
 
 ```css
 .app-sib-theme {
@@ -89,14 +77,13 @@ uma classe local que reaponta **apenas** as vars semânticas temáveis:
 }
 ```
 
-Só as vars da **lista temável** podem ser reapontadas (§6.1): `surface.*`, `text.*`, `border.*`,
-`action.accent`, `scrim.*`, `feedback.negative` (+ os opcionais `on-accent`,
-`feedback.success/warning/danger`). O gerador **falha o build** se um tema tentar tocar um token
-imutável (validação §6.2.2) ou se deixar um token temável sem par (§6.2.1).
+A única var que o white-label reaponta é `action.accent` (+ o par `on-accent`). Superfícies, texto,
+bordas, scrim, macros, categoria e as escalas de dimensão/tipo/motion são **imutáveis** — o gerador
+**falha o build** se um tema tentar tocá-los (validação §6.2.2).
 
 > **on-accent não é automático.** Ao trocar o accent, decida o on-accent com
 > `components/shared/color.js` → `onColor(accent)` (ADR-0050): branco sobre fundo claro reprova.
-> O tema claro já faz isso (on-accent escuro sobre o verde).
+> Ex.: sobre o verde de Nutrição, o on-accent é escuro (`#0B0F19`).
 
 ---
 
@@ -153,9 +140,12 @@ inegociável — só marca, accent e cópia são do app.
 ## Checklist — novo app irmão
 
 1. **Marca:** passe `brand={{ name, markSrc }}` ao `AppHeader` e `markSrc` ao `LoadingScreen`.
-2. **Accent:** use `.forge-theme-light` (se o accent verde serve) ou declare um tema próprio em
-   `tokens.json` + `npm run build:tokens`; nunca hardcode cor. Decida `on-accent` com `onColor()`.
+2. **Accent:** declare o accent do app irmão como tema no `tokens.json` + `npm run build:tokens`
+   (ou uma classe local reapontando `--forge-accent`); nunca hardcode cor. Decida `on-accent` com
+   `onColor()`.
 3. **Cópia:** sobrescreva via props no call-site; para trocar a camada inteira, forneça um objeto
    `content` alternativo — não forke componentes.
 4. **NÃO toque:** macros, categoria, dimensão, tipo, motion — são imutáveis (o build recusa).
-5. **Prove:** replique o padrão de `guidelines/light-theme-fuel.card.html` para o seu tema.
+5. **Prove:** renderize os componentes-chave (Button, Card, TextField, Pill, InlineAlert, StatCard)
+   com o accent do app irmão sobre o tema dark, usando só tokens — nenhum componente forkado,
+   nenhuma cor hardcoded.

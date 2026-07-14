@@ -42,14 +42,14 @@ export function Button({
   const label = title != null ? title : children;
   const isDisabled = disabled || loading;
 
-  const fill = color || "var(--forge-accent)";
+  const fill = color || "var(--forge-accent-fill)";
   let bg, fg, border;
   if (variant === "secondary") {
     bg = "transparent"; fg = "var(--forge-text-muted)"; border = "var(--forge-border-w) solid var(--forge-border-input)";
   } else if (variant === "ghost") {
     bg = "transparent"; fg = "var(--forge-text-muted)"; border = "none";
   } else if (variant === "danger") {
-    bg = "var(--forge-danger)"; fg = onColor("var(--forge-danger)"); border = "none";
+    bg = "var(--forge-danger-fill)"; fg = onColor("var(--forge-danger-fill)"); border = "none";
   } else {
     bg = fill; fg = onColor(resolvedColor || fill); border = "none";
   }

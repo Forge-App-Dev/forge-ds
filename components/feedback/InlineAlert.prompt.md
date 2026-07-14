@@ -31,6 +31,6 @@ Ver "Progresso e feedback" do checklist.
 - **Papel / leitor de tela:** `role="status"` (educado) para info/success/warning; `role="alert"` (imediato) para `danger`, conforme a urgência.
 - **Nome acessível:** o `title` + o conteúdo em pt-BR carregam a mensagem.
 - **Valor / estado:** o `kind` define acento + ícone (info/success/warning/danger).
-- **Contraste:** fill/borda derivados via `color-mix` sobre a superfície (adapta ao tema claro, OP-011); texto do corpo em `--forge-text` ≥4.5:1.
+- **Contraste:** fill/borda derivados via `color-mix` sobre a superfície do tema dark único; texto do corpo em `--forge-text` ≥4.5:1.
 - **Foco / alvo:** não interativo (a menos que haja um filho acionável).
 - **Observações:** o significado vem do texto + ícone, não só da cor do acento (SC 1.4.1).
