@@ -186,6 +186,74 @@
    "sourcePath": "components/product/SetLogger.jsx"
   },
   {
+   "name": "Divider",
+   "sourcePath": "components/core/Divider.jsx"
+  },
+  {
+   "name": "Checkbox",
+   "sourcePath": "components/forms/Checkbox.jsx"
+  },
+  {
+   "name": "SegmentedControl",
+   "sourcePath": "components/forms/SegmentedControl.jsx"
+  },
+  {
+   "name": "PasswordField",
+   "sourcePath": "components/forms/PasswordField.jsx"
+  },
+  {
+   "name": "Slider",
+   "sourcePath": "components/forms/Slider.jsx"
+  },
+  {
+   "name": "FilterChip",
+   "sourcePath": "components/forms/FilterChip.jsx"
+  },
+  {
+   "name": "ProgressBar",
+   "sourcePath": "components/feedback/ProgressBar.jsx"
+  },
+  {
+   "name": "Badge",
+   "sourcePath": "components/feedback/Badge.jsx"
+  },
+  {
+   "name": "Avatar",
+   "sourcePath": "components/feedback/Avatar.jsx"
+  },
+  {
+   "name": "MacroRing",
+   "sourcePath": "components/feedback/MacroRing.jsx"
+  },
+  {
+   "name": "Timeline",
+   "sourcePath": "components/feedback/Timeline.jsx"
+  },
+  {
+   "name": "Tabs",
+   "sourcePath": "components/navigation/Tabs.jsx"
+  },
+  {
+   "name": "Accordion",
+   "sourcePath": "components/navigation/Accordion.jsx"
+  },
+  {
+   "name": "WeekStrip",
+   "sourcePath": "components/navigation/WeekStrip.jsx"
+  },
+  {
+   "name": "StreakIndicator",
+   "sourcePath": "components/product/StreakIndicator.jsx"
+  },
+  {
+   "name": "CoachNote",
+   "sourcePath": "components/product/CoachNote.jsx"
+  },
+  {
+   "name": "OfflineBanner",
+   "sourcePath": "components/product/OfflineBanner.jsx"
+  },
+  {
    "name": "ICON_NAMES",
    "sourcePath": "components/icons/Icon.jsx"
   }

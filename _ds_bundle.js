@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"56cd66d63996","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1f64ca692f41","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"a0ec269642cf","components/feedback/Skeleton.jsx":"dc3c940737a7","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"469699e2996d","components/forms/TextField.jsx":"833401ce32fd","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"f863fda3f12a","components/layout/screen/Screen.jsx":"4f5841ceb52e","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"ee61d9f59c71","components/typography/SectionLabel.jsx":"01f8bc05581d","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"150f8f9648fc","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"b9d596cf31f3","components/product/SetLogger.jsx":"80a52f1a558e"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/feedback/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"}],"sourceHashes":{"components/shared/color.js":"5512119e76ff","components/shared/useDialogA11y.js":"8b5f788c604f","components/icons/Icon.jsx":"039b7e49bc28","components/forms/ListItem.jsx":"37c11943aaee","components/feedback/ring/Ring.jsx":"a8a4df3a4b50","components/core/Button.jsx":"a4b1af3bac6c","components/core/Pill.jsx":"655751762e34","components/overlays/full-screen/FullScreen.jsx":"801e51729185","components/navigation/app-header/AppHeader.jsx":"1e53d90f5c0a","components/core/Card.jsx":"91f1cb5a1da3","components/core/ConfirmButton.jsx":"96eecbd838a0","components/core/HeaderAction.jsx":"1961ef324d72","components/feedback/EmptyState.jsx":"0789cf88df3e","components/feedback/InlineAlert.jsx":"6c2e3b8d74a4","components/feedback/Spinner.jsx":"aa65a5c23cdb","components/feedback/StatBadge.jsx":"66fa461f9337","components/feedback/ErrorState.jsx":"a0ec269642cf","components/feedback/Skeleton.jsx":"dc3c940737a7","components/feedback/TargetsCard.jsx":"f9baa7de4018","components/feedback/loading-screen/LoadingScreen.jsx":"7cb0b9bdbf57","components/feedback/macro-meter/MacroMeter.jsx":"c687297c9510","components/feedback/meta-bar/MetaBar.jsx":"1ba70539ec74","components/feedback/mini-chart/MiniChart.jsx":"d60d8d6d8b05","components/forms/QtyInput.jsx":"a090da4f6201","components/forms/TextField.jsx":"4318268b8fb4","components/forms/Switch.jsx":"44b245d7f2b7","components/forms/Stepper.jsx":"c1158a4bd0b0","components/forms/SearchField.jsx":"11330adffcee","components/forms/Select.jsx":"2ee127ce0dc0","components/layout/screen-body/ScreenBody.jsx":"06115ba2dac5","components/layout/screen/Screen.jsx":"3483a9eaa1b7","components/navigation/module-header/ModuleHeader.jsx":"65ff473cba3c","components/navigation/module-tab-bar/ModuleTabBar.jsx":"2d5c041ea6c1","components/overlays/VideoModal.jsx":"0ea775930666","components/overlays/panel/Panel.jsx":"7ecffd34027d","components/typography/Label.jsx":"7e0e039f2486","components/typography/SectionLabel.jsx":"759dc07c92ed","components/typography/Text.jsx":"aa960d14104d","components/typography/Title.jsx":"0efb463641b9","components/dashboard/StatCard.jsx":"fd17eabb7ea5","components/dashboard/QuickAction.jsx":"6a15a25833ea","components/onboarding/PageDots.jsx":"a7c0d9341b35","components/onboarding/Pager.jsx":"150f8f9648fc","components/product/PRCelebration.jsx":"5136be266bab","components/product/RestTimer.jsx":"b9d596cf31f3","components/product/SetLogger.jsx":"80a52f1a558e","components/core/Divider.jsx":"1a9ca0b41c86","components/forms/Checkbox.jsx":"680a34503d72","components/forms/SegmentedControl.jsx":"063e4c23b23e","components/forms/PasswordField.jsx":"4444cce9f7ab","components/forms/Slider.jsx":"c6b11d0fb0d3","components/forms/FilterChip.jsx":"b050f25387e5","components/feedback/ProgressBar.jsx":"330be1dbe273","components/feedback/Badge.jsx":"f147e0ea3061","components/feedback/Avatar.jsx":"f62a54f32a97","components/feedback/MacroRing.jsx":"978ba6729250","components/feedback/Timeline.jsx":"2b78fbcfe6c5","components/navigation/Tabs.jsx":"f1e01b11da7e","components/navigation/Accordion.jsx":"435227c4e5fb","components/navigation/WeekStrip.jsx":"7ae53d8c32f7","components/product/StreakIndicator.jsx":"0322860c2977","components/product/CoachNote.jsx":"1c8b7e9dcb30","components/product/OfflineBanner.jsx":"6139cd20cb45"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -927,18 +927,41 @@ Object.assign(__ds_scope, { Button });
 
 // components/core/Pill.jsx
 try { (() => {
+// Pill — rounded filter/choice chip: outlined when inactive, filled with its
+// `color` when active (text via onColor). `active` is a selection boolean, so it
+// exposes aria-pressed for screen readers (OP-105). Additive (OP-105): optional
+// leading `icon`, a `size` (sm/md — md preserves the original 40px height), and
+// `disabled`. Signature is unchanged for existing callers.
+const SIZES = {
+  sm: {
+    height: 34,
+    paddingInline: 12,
+    icon: 15
+  },
+  md: {
+    height: 40,
+    paddingInline: 16,
+    icon: 16
+  }
+};
 function Pill({
   title,
   onClick,
   active = false,
   color = "var(--forge-accent)",
+  size = "md",
+  icon,
+  disabled = false,
   style
 }) {
+  const sz = SIZES[size] || SIZES.md;
   return /*#__PURE__*/React.createElement("button", {
     className: "forge-focusable",
-    onClick: onClick,
+    onClick: disabled ? undefined : onClick,
+    disabled: disabled,
+    "aria-pressed": active,
     style: {
-      height: 40,
+      height: sz.height,
       borderRadius: "var(--forge-radius-pill)",
       borderWidth: "var(--forge-border-w-strong)",
       borderStyle: "solid",
@@ -948,14 +971,20 @@ function Pill({
       fontFamily: "var(--forge-font-body)",
       fontWeight: 700,
       fontSize: "var(--forge-text-chip)",
-      paddingInline: 16,
-      cursor: "pointer",
+      paddingInline: sz.paddingInline,
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1,
       display: "inline-flex",
       alignItems: "center",
       justifyContent: "center",
+      gap: icon ? 6 : 0,
       ...style
     }
-  }, title);
+  }, icon ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: "currentColor",
+    size: sz.icon
+  }) : null, title);
 }
 Object.assign(__ds_scope, { Pill });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Pill.jsx", error: String((e && e.message) || e) }); }
@@ -1054,14 +1083,20 @@ Object.assign(__ds_scope, { FullScreen });
 
 // components/navigation/app-header/AppHeader.jsx
 try { (() => {
-// Global app header — Forge mark + wordmark left; back-to-modules (grid) +
-// logout icon buttons right. `markSrc` should point at assets/forge-mark.png.
+// Global app header — brand mark + wordmark left; back-to-modules (grid) +
+// logout icon buttons right. `brand={{ name, markSrc }}` sets the wordmark and
+// mark image (default name "Forge") so sibling apps in the family swap only
+// their brand (OP-120); `markSrc` is kept as a legacy shorthand. The brand is
+// its own element (AppBrand). markSrc should point at assets/forge-mark.png.
 function AppHeader({
+  brand,
   markSrc,
   inModule = false,
   onBackToModules,
   onLogout
 }) {
+  const name = brand && brand.name || "Forge";
+  const mark = brand && brand.markSrc || markSrc;
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -1085,7 +1120,8 @@ function AppHeader({
       padding: 0
     }
   }, /*#__PURE__*/React.createElement(AppBrand, {
-    markSrc: markSrc
+    name: name,
+    markSrc: mark
   })) : /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -1093,7 +1129,8 @@ function AppHeader({
       gap: 9
     }
   }, /*#__PURE__*/React.createElement(AppBrand, {
-    markSrc: markSrc
+    name: name,
+    markSrc: mark
   })), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -1121,8 +1158,11 @@ function AppHeader({
   }))));
 }
 function AppBrand({
+  name = "Forge",
   markSrc
 }) {
+  const first = name.slice(0, 1);
+  const rest = name.slice(1);
   return /*#__PURE__*/React.createElement(React.Fragment, null, markSrc ? /*#__PURE__*/React.createElement("img", {
     src: markSrc,
     alt: "",
@@ -1144,7 +1184,7 @@ function AppBrand({
     style: {
       color: "var(--forge-accent)"
     }
-  }, "F"), "orge"));
+  }, first), rest));
 }
 const iconBtnStyle = {
   width: 44,
@@ -2270,6 +2310,10 @@ try { (() => {
 // Quantity + unit selector for a food item — the unit selector only appears
 // when the food has portion presets; tapping it cycles through units ("g"
 // plus any portions). Grams stays the source of truth for calculation.
+// OP-116: numeric decimal keyboard (inputMode="decimal"), a proper accessible
+// name (the field has no visible label), and comma→dot normalization so a
+// pt-BR "1,5" becomes "1.5" (ADR-0056). The unit is a separate control, not
+// merged into the number's accessible name.
 function QtyInput({
   qty,
   unit = "g",
@@ -2284,6 +2328,9 @@ function QtyInput({
       unit: next
     });
   };
+
+  // Keep only digits and separators, then normalize the decimal comma to a dot.
+  const normalizeQty = raw => raw.replace(/[^\d,.]/g, "").replace(/,/g, ".");
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -2292,8 +2339,10 @@ function QtyInput({
     }
   }, /*#__PURE__*/React.createElement("input", {
     value: qty ?? "",
+    inputMode: "decimal",
+    "aria-label": "Quantidade",
     onChange: e => onChange && onChange({
-      qty: e.target.value.replace(/[^\d,.]/g, ""),
+      qty: normalizeQty(e.target.value),
       unit
     }),
     placeholder: "0",
@@ -2311,6 +2360,8 @@ function QtyInput({
     }
   }), units.length > 1 ? /*#__PURE__*/React.createElement("button", {
     onClick: cycleUnit,
+    className: "forge-focusable",
+    "aria-label": `Unidade: ${unit}. Toque para trocar`,
     style: {
       height: 36,
       minWidth: 44,
@@ -2344,7 +2395,10 @@ try { (() => {
 // id, so screen readers announce it. Pass `error` to show an inline error
 // message (role="alert"), set aria-invalid, and tie the message to the field
 // via aria-describedby; pass `helper` for non-error guidance. `required` and
-// `disabled` supported.
+// `disabled` supported. Mobile keyboard hints (`inputMode`, `autoComplete`,
+// `enterKeyHint`) are passed straight through to the field (OP-115). `trailing`
+// renders an adornment inside the single-line field (e.g. the eye toggle of
+// PasswordField); it is omitted by default so the render is unchanged.
 function TextField({
   label,
   value,
@@ -2357,6 +2411,9 @@ function TextField({
   required = false,
   disabled = false,
   inputMode,
+  autoComplete,
+  enterKeyHint,
+  trailing,
   style
 }) {
   const rid = React.useId ? React.useId() : "forge-tf";
@@ -2403,6 +2460,8 @@ function TextField({
     placeholder: placeholder,
     disabled: disabled,
     required: required,
+    autoComplete: autoComplete,
+    enterKeyHint: enterKeyHint,
     "aria-invalid": error ? true : undefined,
     "aria-describedby": describedBy,
     onChange: e => onChange && onChange(e.target.value),
@@ -2412,11 +2471,17 @@ function TextField({
       padding: "10px 12px",
       resize: "none"
     }
-  }) : /*#__PURE__*/React.createElement("input", {
+  }) : /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "relative"
+    }
+  }, /*#__PURE__*/React.createElement("input", {
     id: fieldId,
     className: "forge-focusable",
     type: type,
     inputMode: inputMode,
+    autoComplete: autoComplete,
+    enterKeyHint: enterKeyHint,
     value: value,
     placeholder: placeholder,
     disabled: disabled,
@@ -2427,9 +2492,19 @@ function TextField({
     style: {
       ...fieldStyle,
       height: 44,
-      paddingInline: 12
+      paddingLeft: 12,
+      paddingRight: trailing ? 44 : 12
     }
-  }), error ? /*#__PURE__*/React.createElement("div", {
+  }), trailing ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: "absolute",
+      right: 6,
+      top: 0,
+      height: 44,
+      display: "inline-flex",
+      alignItems: "center"
+    }
+  }, trailing) : null), error ? /*#__PURE__*/React.createElement("div", {
     id: msgId,
     role: "alert",
     style: {
@@ -2785,8 +2860,13 @@ try { (() => {
 // ScreenBody — body of a screen INSIDE a module; the module shell (AppHeader
 // + ModuleTabBar) already owns the safe area, so this just handles scroll +
 // screen padding + max-width centering.
+//
+// Pass `footer` for an optional pinned action bar at the bottom of the screen
+// (OP-114): the body scrolls, the footer stays put with a hairline top border
+// and safe-area-aware bottom padding (matches the FullScreen footer pattern).
 function ScreenBody({
   children,
+  footer,
   scroll = true,
   style
 }) {
@@ -2799,13 +2879,35 @@ function ScreenBody({
       ...style
     }
   }, children);
-  return scroll ? /*#__PURE__*/React.createElement("div", {
+  const body = scroll ? /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       overflowY: "auto",
       WebkitOverflowScrolling: "touch"
     }
   }, inner) : inner;
+  if (!footer) return body;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minHeight: 0,
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, body, /*#__PURE__*/React.createElement("div", {
+    style: {
+      borderTop: "var(--forge-border-w) solid var(--forge-divider)",
+      padding: "var(--forge-space-12) var(--forge-space-screen-h)",
+      paddingBottom: "max(var(--forge-space-16), env(safe-area-inset-bottom))",
+      backgroundColor: "var(--forge-bg)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: "var(--forge-app-max-width)",
+      margin: "0 auto",
+      boxSizing: "border-box"
+    }
+  }, footer)));
 }
 Object.assign(__ds_scope, { ScreenBody });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/layout/screen-body/ScreenBody.jsx", error: String((e && e.message) || e) }); }
@@ -2828,15 +2930,19 @@ function Screen({
       WebkitOverflowScrolling: "touch"
     }
   } : {};
+  // dvh is the correct dynamic-viewport unit; fall back to vh on browsers that
+  // don't support it, so the screen still fills the viewport (OP-113).
+  const dvhSupported = typeof CSS !== "undefined" && CSS.supports && CSS.supports("min-height", "100dvh");
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      minHeight: "100dvh",
+      minHeight: dvhSupported ? "100dvh" : "100vh",
       backgroundColor: "var(--forge-bg)",
       display: "flex",
       flexDirection: "column",
       paddingTop: "env(safe-area-inset-top)",
       paddingLeft: "env(safe-area-inset-left)",
-      paddingRight: "env(safe-area-inset-right)"
+      paddingRight: "env(safe-area-inset-right)",
+      paddingBottom: "env(safe-area-inset-bottom)"
     }
   }, /*#__PURE__*/React.createElement(Wrap, wrapProps, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -3137,13 +3243,19 @@ Object.assign(__ds_scope, { Panel });
 try { (() => {
 // Label — small uppercase tracked text. Two sizes: label (11.5) and
 // miniLabel (10.5). Used for field labels, eyebrows, tiny captions.
+// Pass `as="label"` + `htmlFor` to associate it with a form control (OP-111);
+// `htmlFor` is only applied when the element is a real <label>.
 function Label({
   children,
   size = "label",
   color = "var(--forge-text-faint)",
+  as = "div",
+  htmlFor,
   style
 }) {
-  return /*#__PURE__*/React.createElement("div", {
+  const El = as;
+  return /*#__PURE__*/React.createElement(El, {
+    htmlFor: as === "label" ? htmlFor : undefined,
     style: {
       fontFamily: "var(--forge-font-body)",
       fontWeight: 700,
@@ -3161,19 +3273,15 @@ Object.assign(__ds_scope, { Label });
 // components/typography/SectionLabel.jsx
 try { (() => {
 // SectionLabel — a Label pre-set with the section-heading margin used above
-// grouped list content (e.g. "Sua semana", "Café da manhã").
+// grouped list content (e.g. "Sua semana", "Café da manhã"). Composes Label
+// internally (OP-112) so the base label styling lives in one place; only the
+// section margins are added here. Visual is unchanged.
 function SectionLabel({
   children,
   style
 }) {
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement(__ds_scope.Label, {
     style: {
-      fontFamily: "var(--forge-font-body)",
-      fontWeight: 700,
-      fontSize: "var(--forge-text-label)",
-      textTransform: "uppercase",
-      letterSpacing: "var(--forge-tracking-label)",
-      color: "var(--forge-text-faint)",
       marginTop: 14,
       marginBottom: 8,
       ...style
@@ -4068,6 +4176,1462 @@ function SetLogger({
 Object.assign(__ds_scope, { SetLogger });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/SetLogger.jsx", error: String((e && e.message) || e) }); }
 
+// components/core/Divider.jsx
+try { (() => {
+// Divider — 1px hairline separator (OP-038), horizontal (default) or vertical.
+// Draws with `var(--forge-divider)`; pass `margin` (number px or CSS string)
+// for optional spacing along the flow axis. Depth in Forge is by color/border,
+// never shadow (ADR-0028) — this is the border-hairline separator primitive.
+function Divider({
+  orientation = "horizontal",
+  margin,
+  color = "var(--forge-divider)",
+  style
+}) {
+  const vertical = orientation === "vertical";
+  const m = margin == null ? undefined : typeof margin === "number" ? margin + "px" : margin;
+  return /*#__PURE__*/React.createElement("div", {
+    role: "separator",
+    "aria-orientation": orientation,
+    style: {
+      flexShrink: 0,
+      backgroundColor: color,
+      ...(vertical ? {
+        width: "var(--forge-border-w)",
+        alignSelf: "stretch",
+        margin: m ? `0 ${m}` : undefined
+      } : {
+        height: "var(--forge-border-w)",
+        width: "100%",
+        margin: m ? `${m} 0` : undefined
+      }),
+      ...style
+    }
+  });
+}
+Object.assign(__ds_scope, { Divider });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/core/Divider.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/Checkbox.jsx
+try { (() => {
+// Checkbox — accessible independent boolean (accept terms, opt-in, multi-select
+// rows). Renders role="checkbox" + aria-checked, keyboard-focusable and toggled
+// by Space/Enter. Pass `label` to render a tappable row (box left, label right,
+// ≥44px target); omit it for a bare box. Supports `disabled` and
+// `indeterminate` (a parent of a partially-selected group → aria-checked="mixed"
+// with a dash glyph). NOT for choosing one of several options (ADR-0008) nor for
+// an immediate on/off preference (that is Switch).
+function Checkbox({
+  checked = false,
+  indeterminate = false,
+  onChange,
+  label,
+  disabled = false,
+  id,
+  style
+}) {
+  const rid = React.useId ? React.useId() : id || "forge-checkbox";
+  const toggle = () => {
+    if (!disabled && onChange) onChange(!checked);
+  };
+  const filled = checked || indeterminate;
+  const box = /*#__PURE__*/React.createElement("span", {
+    className: "forge-focusable",
+    role: "checkbox",
+    "aria-checked": indeterminate ? "mixed" : checked,
+    "aria-labelledby": label ? `${rid}-label` : undefined,
+    "aria-disabled": disabled || undefined,
+    tabIndex: disabled ? -1 : 0,
+    onClick: toggle,
+    onKeyDown: e => {
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        toggle();
+      }
+    },
+    style: {
+      width: 22,
+      height: 22,
+      borderRadius: "var(--forge-radius-chip)",
+      backgroundColor: filled ? "var(--forge-accent)" : "var(--forge-surface-raised)",
+      border: `var(--forge-border-w-strong) solid ${filled ? "var(--forge-accent)" : "var(--forge-border-input)"}`,
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1,
+      transition: "background-color var(--forge-duration-fast) var(--forge-ease-standard)",
+      flexShrink: 0,
+      boxSizing: "border-box"
+    }
+  }, indeterminate ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "minus",
+    color: "var(--forge-on-accent)",
+    size: 16
+  }) : checked ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "check",
+    color: "var(--forge-on-accent)",
+    size: 16
+  }) : null);
+  if (!label) return box;
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: toggle,
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 12,
+      minHeight: "var(--forge-tap-target-min)",
+      cursor: disabled ? "default" : "pointer",
+      ...style
+    }
+  }, box, /*#__PURE__*/React.createElement("span", {
+    id: `${rid}-label`,
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-list-item)",
+      color: "var(--forge-text)"
+    }
+  }, label));
+}
+Object.assign(__ds_scope, { Checkbox });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Checkbox.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/SegmentedControl.jsx
+try { (() => {
+// SegmentedControl — single choice among 2–3 mutually-exclusive options
+// (e.g. kg / lb, semana / mês). The Forge answer to a radio group (ADR-0008):
+// it carries real group semantics — role="radiogroup" wrapping options with
+// role="radio", exactly one aria-checked. Keyboard: Left/Up and Right/Down move
+// AND select (roving tabindex), Home/End jump to the ends. Reuses the pill/track
+// look — a rounded track with the active segment filled with the accent (or a
+// module `color`), text color from onColor().
+function SegmentedControl({
+  options = [],
+  value,
+  onChange,
+  label,
+  color = "var(--forge-accent)",
+  disabled = false,
+  style
+}) {
+  const rid = React.useId ? React.useId() : "forge-seg";
+  const opts = options.map(o => typeof o === "string" ? {
+    value: o,
+    label: o
+  } : o);
+  const idx = opts.findIndex(o => o.value === value);
+  const refs = React.useRef([]);
+  const select = i => {
+    if (disabled) return;
+    const o = opts[i];
+    if (!o) return;
+    if (onChange && o.value !== value) onChange(o.value);
+    const el = refs.current[i];
+    if (el) el.focus();
+  };
+  const onKeyDown = (e, i) => {
+    let next = null;
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") next = (i + 1) % opts.length;else if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = (i - 1 + opts.length) % opts.length;else if (e.key === "Home") next = 0;else if (e.key === "End") next = opts.length - 1;
+    if (next != null) {
+      e.preventDefault();
+      select(next);
+    }
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      ...style
+    }
+  }, label ? /*#__PURE__*/React.createElement("label", {
+    id: `${rid}-label`,
+    style: {
+      display: "block",
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 700,
+      fontSize: "var(--forge-text-label)",
+      color: "var(--forge-text-faint)",
+      textTransform: "uppercase",
+      letterSpacing: "var(--forge-tracking-label)",
+      marginBottom: 6
+    }
+  }, label) : null, /*#__PURE__*/React.createElement("div", {
+    role: "radiogroup",
+    "aria-labelledby": label ? `${rid}-label` : undefined,
+    style: {
+      display: "flex",
+      padding: 3,
+      gap: 3,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: "var(--forge-surface-raised)",
+      border: "var(--forge-border-w) solid var(--forge-border-input)",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1,
+      boxSizing: "border-box"
+    }
+  }, opts.map((o, i) => {
+    const active = o.value === value;
+    return /*#__PURE__*/React.createElement("button", {
+      key: String(o.value),
+      ref: el => {
+        refs.current[i] = el;
+      },
+      className: "forge-focusable",
+      role: "radio",
+      "aria-checked": active,
+      tabIndex: disabled ? -1 : active || idx === -1 && i === 0 ? 0 : -1,
+      disabled: disabled,
+      onClick: () => select(i),
+      onKeyDown: e => onKeyDown(e, i),
+      style: {
+        flex: 1,
+        minWidth: 44,
+        height: 34,
+        paddingInline: 14,
+        borderRadius: "var(--forge-radius-pill)",
+        border: "none",
+        backgroundColor: active ? color : "transparent",
+        color: active ? __ds_scope.onColor(color) : "var(--forge-text-muted)",
+        fontFamily: "var(--forge-font-body)",
+        fontWeight: 700,
+        fontSize: "var(--forge-text-chip)",
+        cursor: disabled ? "default" : "pointer",
+        transition: "background-color var(--forge-duration-fast) var(--forge-ease-standard)"
+      }
+    }, o.label);
+  })));
+}
+Object.assign(__ds_scope, { SegmentedControl });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/SegmentedControl.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/PasswordField.jsx
+try { (() => {
+// PasswordField — a TextField for secure entry with a show/hide toggle. Composes
+// TextField (same label/error/helper/required semantics) and drops an eye button
+// into its `trailing` slot: toggling flips the input between type="password" and
+// "text" and swaps the eye/eye-off glyph. `autoComplete` defaults to
+// "current-password" (use "new-password" on signup/reset forms). The toggle is a
+// real button with aria-pressed + a state-describing aria-label.
+function PasswordField({
+  label = "Senha",
+  value,
+  onChange,
+  placeholder,
+  autoComplete = "current-password",
+  error,
+  helper,
+  required = false,
+  disabled = false,
+  style
+}) {
+  const [show, setShow] = React.useState(false);
+  return /*#__PURE__*/React.createElement(__ds_scope.TextField, {
+    label: label,
+    type: show ? "text" : "password",
+    value: value,
+    onChange: onChange,
+    placeholder: placeholder,
+    autoComplete: autoComplete,
+    enterKeyHint: "done",
+    error: error,
+    helper: helper,
+    required: required,
+    disabled: disabled,
+    style: style,
+    trailing: /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      className: "forge-focusable",
+      onClick: () => !disabled && setShow(s => !s),
+      disabled: disabled,
+      "aria-pressed": show,
+      "aria-label": show ? "Ocultar senha" : "Mostrar senha",
+      style: {
+        background: "none",
+        border: "none",
+        cursor: disabled ? "default" : "pointer",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 6,
+        borderRadius: "var(--forge-radius-input)"
+      }
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: show ? "eye-off" : "eye",
+      color: "var(--forge-text-dim)",
+      size: 18
+    }))
+  });
+}
+Object.assign(__ds_scope, { PasswordField });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/PasswordField.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/Slider.jsx
+try { (() => {
+// Slider — accessible single-value range (e.g. peso alvo, intensidade, volume).
+// Exposes role="slider" + aria-valuemin/max/now (+ aria-valuetext with the unit).
+// Keyboard: Left/Down decrement, Right/Up increment by `step`; PageUp/PageDown by
+// 10×; Home/End jump to min/max. Pointer: click or drag anywhere on the track.
+// Visual: a track, an accent (or module `color`) fill, and a thumb. Respects
+// min/max/step; `unit` is appended to the shown value and to aria-valuetext.
+function Slider({
+  value = 0,
+  onChange,
+  min = 0,
+  max = 100,
+  step = 1,
+  unit = "",
+  label,
+  color = "var(--forge-accent)",
+  disabled = false,
+  style
+}) {
+  const rid = React.useId ? React.useId() : "forge-slider";
+  const trackRef = React.useRef(null);
+  const clamp = v => Math.min(max, Math.max(min, v));
+  const snap = v => {
+    const stepped = Math.round((v - min) / step) * step + min;
+    return clamp(Number(stepped.toFixed(6)));
+  };
+  const set = v => {
+    const c = snap(v);
+    if (onChange && c !== value) onChange(c);
+  };
+  const pct = max > min ? (clamp(value) - min) / (max - min) * 100 : 0;
+  const onKeyDown = e => {
+    if (disabled) return;
+    let v = null;
+    if (e.key === "ArrowRight" || e.key === "ArrowUp") v = value + step;else if (e.key === "ArrowLeft" || e.key === "ArrowDown") v = value - step;else if (e.key === "PageUp") v = value + step * 10;else if (e.key === "PageDown") v = value - step * 10;else if (e.key === "Home") v = min;else if (e.key === "End") v = max;
+    if (v != null) {
+      e.preventDefault();
+      set(v);
+    }
+  };
+  const fromClientX = clientX => {
+    const el = trackRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    if (!rect.width) return;
+    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    set(min + ratio * (max - min));
+  };
+  const onPointerDown = e => {
+    if (disabled) return;
+    e.currentTarget.setPointerCapture && e.currentTarget.setPointerCapture(e.pointerId);
+    trackRef.current && trackRef.current.focus();
+    fromClientX(e.clientX);
+  };
+  const onPointerMove = e => {
+    if (disabled || e.buttons !== 1) return;
+    fromClientX(e.clientX);
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      ...style
+    }
+  }, label ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "baseline",
+      justifyContent: "space-between",
+      marginBottom: 6
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    id: `${rid}-label`,
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 700,
+      fontSize: "var(--forge-text-label)",
+      color: "var(--forge-text-faint)",
+      textTransform: "uppercase",
+      letterSpacing: "var(--forge-tracking-label)"
+    }
+  }, label), /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: 18,
+      color: "var(--forge-text)",
+      fontVariantNumeric: "tabular-nums"
+    }
+  }, value, unit ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 12,
+      color: "var(--forge-text-dim)"
+    }
+  }, unit) : null)) : null, /*#__PURE__*/React.createElement("div", {
+    ref: trackRef,
+    className: "forge-focusable",
+    role: "slider",
+    tabIndex: disabled ? -1 : 0,
+    "aria-valuemin": min,
+    "aria-valuemax": max,
+    "aria-valuenow": value,
+    "aria-valuetext": unit ? `${value}${unit}` : undefined,
+    "aria-labelledby": label ? `${rid}-label` : undefined,
+    "aria-disabled": disabled || undefined,
+    onKeyDown: onKeyDown,
+    onPointerDown: onPointerDown,
+    onPointerMove: onPointerMove,
+    style: {
+      position: "relative",
+      height: 24,
+      display: "flex",
+      alignItems: "center",
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1,
+      touchAction: "none"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      left: 0,
+      right: 0,
+      height: 6,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: "var(--forge-surface-raised)",
+      border: "var(--forge-border-w) solid var(--forge-border-input)",
+      boxSizing: "border-box"
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      left: 0,
+      width: `${pct}%`,
+      height: 6,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: color
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: "absolute",
+      left: `${pct}%`,
+      transform: "translateX(-50%)",
+      width: 20,
+      height: 20,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: color,
+      border: "var(--forge-border-w-strong) solid var(--forge-on-accent)",
+      boxSizing: "border-box"
+    }
+  })));
+}
+Object.assign(__ds_scope, { Slider });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/Slider.jsx", error: String((e && e.message) || e) }); }
+
+// components/forms/FilterChip.jsx
+try { (() => {
+// FilterChip — a selectable filter chip for the scrollable filter row that sits
+// under a SearchField / list header (ADR-0015). Toggles on/off and exposes its
+// state via aria-pressed (it is a toggle, not an action). Optional `count` shows
+// how many results the filter matches. Outlined when inactive, filled with its
+// `color` when active (text via onColor). It is `flex-shrink: 0` and never
+// wraps — the CONSUMER provides the horizontally-scrolling container (a flex row
+// with overflow-x: auto), keeping every active filter visible.
+function FilterChip({
+  label,
+  active = false,
+  onClick,
+  count,
+  color = "var(--forge-accent)",
+  icon,
+  disabled = false,
+  style
+}) {
+  return /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: disabled ? undefined : onClick,
+    disabled: disabled,
+    "aria-pressed": active,
+    style: {
+      height: 34,
+      flexShrink: 0,
+      borderRadius: "var(--forge-radius-pill)",
+      borderWidth: "var(--forge-border-w-strong)",
+      borderStyle: "solid",
+      borderColor: active ? color : "var(--forge-border-input)",
+      backgroundColor: active ? color : "transparent",
+      color: active ? __ds_scope.onColor(color) : "var(--forge-text-muted)",
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 700,
+      fontSize: "var(--forge-text-chip)",
+      paddingInline: 14,
+      cursor: disabled ? "default" : "pointer",
+      opacity: disabled ? "var(--forge-opacity-disabled)" : 1,
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 6,
+      whiteSpace: "nowrap",
+      ...style
+    }
+  }, icon ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: "currentColor",
+    size: 15
+  }) : null, label, count != null ? /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      fontVariantNumeric: "tabular-nums",
+      fontSize: "var(--forge-text-mini-label)",
+      fontWeight: 700,
+      color: active ? "currentColor" : "var(--forge-text-dim)",
+      backgroundColor: active ? "color-mix(in srgb, var(--forge-on-accent) 22%, transparent)" : "var(--forge-surface-raised)",
+      borderRadius: "var(--forge-radius-pill)",
+      minWidth: 18,
+      height: 18,
+      paddingInline: 5,
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxSizing: "border-box"
+    }
+  }, count) : null);
+}
+Object.assign(__ds_scope, { FilterChip });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/forms/FilterChip.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/ProgressBar.jsx
+try { (() => {
+// ProgressBar — generic linear progress primitive (OP-034). A single fill
+// (`value` 0..1) over a `track`, or a stacked `segments` variant (array of
+// {value, color}, each value a 0..1 fraction of the full bar) for showing
+// several contributors on one bar. `color`/`track`/`height` are props.
+//
+// This is the BASE primitive: MacroMeter/MetaBar are domain wrappers that may
+// derive from it later. Reach for MacroMeter for a labeled macro, MetaBar for a
+// value-vs-target meter, and ProgressBar for a plain percentage/segmented bar.
+function ProgressBar({
+  value = 0,
+  color = "var(--forge-accent)",
+  track = "var(--forge-surface-raised)",
+  height = 6,
+  segments,
+  label,
+  style
+}) {
+  const radius = height / 2;
+  if (segments && segments.length) {
+    return /*#__PURE__*/React.createElement("div", {
+      role: "img",
+      "aria-label": label || "Progresso",
+      style: {
+        display: "flex",
+        height,
+        borderRadius: radius,
+        backgroundColor: track,
+        overflow: "hidden",
+        ...style
+      }
+    }, segments.map((seg, i) => /*#__PURE__*/React.createElement("div", {
+      key: i,
+      style: {
+        width: Math.max(0, Math.min(1, seg.value)) * 100 + "%",
+        backgroundColor: seg.color,
+        transition: "width var(--forge-duration-base) var(--forge-ease-standard)"
+      }
+    })));
+  }
+  const pct = Math.max(0, Math.min(1, value));
+  return /*#__PURE__*/React.createElement("div", {
+    role: "progressbar",
+    "aria-label": label,
+    "aria-valuenow": Math.round(pct * 100),
+    "aria-valuemin": 0,
+    "aria-valuemax": 100,
+    style: {
+      height,
+      borderRadius: radius,
+      backgroundColor: track,
+      overflow: "hidden",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height,
+      borderRadius: radius,
+      width: pct * 100 + "%",
+      backgroundColor: color,
+      transition: "width var(--forge-duration-base) var(--forge-ease-standard)"
+    }
+  }));
+}
+Object.assign(__ds_scope, { ProgressBar });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/ProgressBar.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/Badge.jsx
+try { (() => {
+// Badge — small count/dot indicator (OP-036) for tabs, icons and list rows.
+// Two shapes: a numeric pill (`count`) or a bare `dot`. Variants: `accent`
+// (brand fill, on-accent text) and `neutral` (raised surface). Position it
+// yourself (usually absolutely, over the thing it annotates).
+//
+// A dot carries no text, so give it a `label` when it's the only signal (else
+// it's treated as decorative). A count is visible text; `label` overrides its
+// accessible name (e.g. "3 alertas não lidos" instead of just "3").
+function Badge({
+  count,
+  dot = false,
+  variant = "accent",
+  label,
+  style
+}) {
+  const neutral = variant === "neutral";
+  const bg = neutral ? "var(--forge-surface-raised)" : "var(--forge-accent)";
+  const fg = neutral ? "var(--forge-text)" : "var(--forge-on-accent)";
+  if (dot) {
+    return /*#__PURE__*/React.createElement("span", {
+      "aria-label": label,
+      "aria-hidden": label ? undefined : true,
+      style: {
+        display: "inline-block",
+        width: 8,
+        height: 8,
+        borderRadius: "var(--forge-radius-pill)",
+        backgroundColor: bg,
+        ...style
+      }
+    });
+  }
+  return /*#__PURE__*/React.createElement("span", {
+    "aria-label": label,
+    style: {
+      minWidth: 18,
+      height: 18,
+      paddingInline: "var(--forge-space-4)",
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: bg,
+      color: fg,
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-mini-label)",
+      fontWeight: 700,
+      lineHeight: 1,
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxSizing: "border-box",
+      ...style
+    }
+  }, count);
+}
+Object.assign(__ds_scope, { Badge });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Badge.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/Avatar.jsx
+try { (() => {
+// Avatar — circular user image with initials fallback (OP-037). Shows `src`
+// when it loads; on missing/broken src falls back to up-to-two initials from
+// `name`, set in the Barlow title face. Sizes sm/md/lg. Always a circle.
+//
+// The accessible name comes from `alt` (falls back to `name`). Pass alt=""
+// only when the avatar is purely decorative next to a visible name.
+const AV_SIZE = {
+  sm: 32,
+  md: 44,
+  lg: 64
+};
+function Avatar({
+  src,
+  name = "",
+  alt,
+  size = "md",
+  style
+}) {
+  const px = AV_SIZE[size] || AV_SIZE.md;
+  const [failed, setFailed] = React.useState(false);
+  const accName = alt != null ? alt : name;
+  const initials = name.trim().split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+  const showImg = src && !failed;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: px,
+      height: px,
+      borderRadius: "var(--forge-radius-pill)",
+      overflow: "hidden",
+      backgroundColor: "var(--forge-surface-raised)",
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexShrink: 0,
+      ...style
+    }
+  }, showImg ? /*#__PURE__*/React.createElement("img", {
+    src: src,
+    alt: accName,
+    onError: () => setFailed(true),
+    style: {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      display: "block"
+    }
+  }) : /*#__PURE__*/React.createElement("span", {
+    role: "img",
+    "aria-label": accName || undefined,
+    "aria-hidden": accName ? undefined : true,
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 700,
+      fontSize: Math.round(px * 0.4),
+      letterSpacing: "var(--forge-tracking-title)",
+      color: "var(--forge-text)",
+      userSelect: "none"
+    }
+  }, initials));
+}
+Object.assign(__ds_scope, { Avatar });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Avatar.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/MacroRing.jsx
+try { (() => {
+// MacroRing — the macro-distribution ring: a composed pattern over the signature
+// Ring that stacks protein/carb/fat segments (fixed macro colors, canonical
+// order protein→carb→fat per ADR-0052) on one track, with a ready-made legend
+// beneath. This is NOT a copy-domain product piece — it carries no coach voice,
+// only the macro naming and colors — so it lives in feedback/ next to Ring and
+// MacroMeter.
+//
+// `protein`/`carb`/`fat` are amounts (grams by default); the segments fill the
+// ring in proportion to their share of the total. `center` renders inside the
+// ring (e.g. total kcal). The legend keeps color + label + value together so
+// meaning never rides on color alone (ADR-0052); pass `legend={false}` to drop
+// it in dense contexts where the values live elsewhere.
+const MACROS = [{
+  key: "protein",
+  label: "Proteína",
+  color: "var(--forge-macro-protein)"
+}, {
+  key: "carb",
+  label: "Carboidrato",
+  color: "var(--forge-macro-carb)"
+}, {
+  key: "fat",
+  label: "Gordura",
+  color: "var(--forge-macro-fat)"
+}];
+function MacroRing({
+  protein = 0,
+  carb = 0,
+  fat = 0,
+  unit = "g",
+  size = 120,
+  stroke = 12,
+  center,
+  legend = true,
+  label,
+  style
+}) {
+  const vals = {
+    protein,
+    carb,
+    fat
+  };
+  const total = Math.max(0, protein) + Math.max(0, carb) + Math.max(0, fat);
+  const segments = MACROS.map(m => ({
+    value: total > 0 ? Math.max(0, vals[m.key]) / total : 0,
+    color: m.color
+  }));
+  const aria = label || `Macros: ${MACROS.map(m => `${m.label.toLowerCase()} ${Math.round(vals[m.key])} ${unit}`).join(", ")}`;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "var(--forge-space-10)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Ring, {
+    size: size,
+    stroke: stroke,
+    segments: segments,
+    label: aria
+  }, center), legend ? /*#__PURE__*/React.createElement("ul", {
+    style: {
+      listStyle: "none",
+      margin: 0,
+      padding: 0,
+      display: "flex",
+      flexDirection: "column",
+      gap: "var(--forge-space-4)"
+    }
+  }, MACROS.map(m => /*#__PURE__*/React.createElement("li", {
+    key: m.key,
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "var(--forge-space-4)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      width: 10,
+      height: 10,
+      flexShrink: 0,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: m.color,
+      display: "inline-block"
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      color: "var(--forge-text-muted)",
+      fontWeight: 600
+    }
+  }, m.label), /*#__PURE__*/React.createElement("span", {
+    style: {
+      marginLeft: "auto",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      color: "var(--forge-text-dim)",
+      fontWeight: 700,
+      fontVariantNumeric: "tabular-nums",
+      paddingLeft: "var(--forge-space-6)"
+    }
+  }, Math.round(vals[m.key]), " ", unit)))) : null);
+}
+Object.assign(__ds_scope, { MacroRing });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/MacroRing.jsx", error: String((e && e.message) || e) }); }
+
+// components/feedback/Timeline.jsx
+try { (() => {
+// Timeline — a vertical history of events/sessions (OP-047): a marker + a
+// connecting line + content per item. The pattern for a workout history, a
+// weigh-in log, or an activity feed. Semantic by construction: it renders an
+// ordered list (<ol>/<li>) so a screen reader announces "lista, N itens" and
+// each entry as a list item — the marker line is decorative only.
+//
+// `items` is an array of `{ title, time, description, icon, color, done }`.
+// `icon` renders a glyph chip instead of a plain dot; `color` tints the marker
+// (falls back to `accent`). The connecting line is drawn between markers and
+// omitted after the last item.
+function Timeline({
+  items = [],
+  accent,
+  style
+}) {
+  const tint = accent || "var(--forge-accent)";
+  const list = Array.isArray(items) ? items : [];
+  return /*#__PURE__*/React.createElement("ol", {
+    style: {
+      listStyle: "none",
+      margin: 0,
+      padding: 0,
+      ...style
+    }
+  }, list.map((item, i) => {
+    const last = i === list.length - 1;
+    const color = item.color || tint;
+    return /*#__PURE__*/React.createElement("li", {
+      key: i,
+      style: {
+        display: "flex",
+        gap: "var(--forge-space-6)"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        flexShrink: 0,
+        width: 28
+      }
+    }, item.icon ? /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        width: 28,
+        height: 28,
+        borderRadius: "var(--forge-radius-pill)",
+        backgroundColor: `color-mix(in srgb, ${color} 16%, var(--forge-surface))`,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: item.icon,
+      color: color,
+      size: 14
+    })) : /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        width: 12,
+        height: 12,
+        marginTop: 3,
+        borderRadius: "var(--forge-radius-pill)",
+        backgroundColor: item.done === false ? "var(--forge-surface)" : color,
+        border: `var(--forge-border-w-strong) solid ${color}`
+      }
+    }), !last ? /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        flex: 1,
+        width: "var(--forge-border-w-strong)",
+        minHeight: 16,
+        marginTop: "var(--forge-space-2)",
+        backgroundColor: "var(--forge-divider)"
+      }
+    }) : null), /*#__PURE__*/React.createElement("div", {
+      style: {
+        minWidth: 0,
+        paddingBottom: last ? 0 : "var(--forge-space-8)"
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        display: "flex",
+        alignItems: "baseline",
+        gap: "var(--forge-space-5)",
+        flexWrap: "wrap"
+      }
+    }, item.title ? /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: "var(--forge-font-body)",
+        fontSize: "var(--forge-text-body)",
+        fontWeight: 700,
+        color: "var(--forge-text)"
+      }
+    }, item.title) : null, item.time ? /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: "var(--forge-font-body)",
+        fontSize: "var(--forge-text-chip)",
+        color: "var(--forge-text-faint)",
+        fontVariantNumeric: "tabular-nums"
+      }
+    }, item.time) : null), item.description ? /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: "var(--forge-font-body)",
+        fontSize: "var(--forge-text-body-sm)",
+        color: "var(--forge-text-dim)",
+        lineHeight: "var(--forge-lh-body-sm)",
+        marginTop: "var(--forge-space-1)"
+      }
+    }, item.description) : null));
+  }));
+}
+Object.assign(__ds_scope, { Timeline });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/feedback/Timeline.jsx", error: String((e && e.message) || e) }); }
+
+// components/navigation/Tabs.jsx
+try { (() => {
+// Tabs — in-screen tabs (OP-039), for switching a view within a screen (e.g.
+// "Semana" / "Mês"). Different from ModuleTabBar, which is the app-level bottom
+// navigation between modules. Controlled: pass `tabs` ({id,label}[]), the
+// `active` id and `onChange`. The selected tab shows an accent underline.
+//
+// Keyboard follows the WAI-ARIA tabs pattern: Arrow Left/Right (and Home/End)
+// move selection with automatic activation, using a roving tabindex. Render the
+// panel content as `children`; it gets role="tabpanel" wired to the active tab.
+function Tabs({
+  tabs,
+  active,
+  onChange,
+  accent = "var(--forge-accent)",
+  idBase = "forge-tabs",
+  children,
+  style
+}) {
+  const refs = React.useRef([]);
+  const idx = tabs.findIndex(t => t.id === active);
+  const onKeyDown = e => {
+    let next = null;
+    if (e.key === "ArrowRight") next = (idx + 1) % tabs.length;else if (e.key === "ArrowLeft") next = (idx - 1 + tabs.length) % tabs.length;else if (e.key === "Home") next = 0;else if (e.key === "End") next = tabs.length - 1;
+    if (next != null) {
+      e.preventDefault();
+      onChange && onChange(tabs[next].id);
+      const el = refs.current[next];
+      if (el) el.focus();
+    }
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    style: style
+  }, /*#__PURE__*/React.createElement("div", {
+    role: "tablist",
+    style: {
+      display: "flex",
+      borderBottom: "var(--forge-border-w) solid var(--forge-divider)"
+    }
+  }, tabs.map((t, i) => {
+    const on = t.id === active;
+    return /*#__PURE__*/React.createElement("button", {
+      key: t.id,
+      ref: el => refs.current[i] = el,
+      className: "forge-focusable",
+      role: "tab",
+      id: `${idBase}-tab-${t.id}`,
+      "aria-selected": on,
+      "aria-controls": children != null ? `${idBase}-panel-${t.id}` : undefined,
+      tabIndex: on ? 0 : -1,
+      onClick: () => onChange && onChange(t.id),
+      onKeyDown: onKeyDown,
+      style: {
+        flex: 1,
+        minHeight: 44,
+        padding: "var(--forge-space-3) var(--forge-space-4)",
+        background: "none",
+        border: "none",
+        borderBottom: `var(--forge-border-w-strong) solid ${on ? accent : "transparent"}`,
+        marginBottom: "calc(-1 * var(--forge-border-w))",
+        color: on ? "var(--forge-text)" : "var(--forge-text-dim)",
+        fontFamily: "var(--forge-font-body)",
+        fontWeight: 700,
+        fontSize: "var(--forge-text-body-sm)",
+        cursor: "pointer",
+        transition: "color var(--forge-duration-fast) var(--forge-ease-standard), border-color var(--forge-duration-fast) var(--forge-ease-standard)"
+      }
+    }, t.label);
+  })), children != null ? /*#__PURE__*/React.createElement("div", {
+    role: "tabpanel",
+    id: `${idBase}-panel-${active}`,
+    "aria-labelledby": `${idBase}-tab-${active}`,
+    tabIndex: 0,
+    style: {
+      paddingTop: "var(--forge-space-12)"
+    }
+  }, children) : null);
+}
+Object.assign(__ds_scope, { Tabs });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/navigation/Tabs.jsx", error: String((e && e.message) || e) }); }
+
+// components/navigation/Accordion.jsx
+try { (() => {
+// Accordion — a single expandable disclosure item (OP-040): a header button
+// with a ▾ chevron over a collapsible region. Uncontrolled by default
+// (`defaultOpen`); pass `open` + `onToggle` to control it. Exposes
+// `aria-expanded` on the header and `aria-controls`/`aria-labelledby` wiring to
+// the region. Height + chevron animate over a duration token, and the whole
+// animation is dropped under prefers-reduced-motion (ADR / readme §Motion).
+//
+// Compose several in a column for an FAQ-style list; each owns its own border.
+function Accordion({
+  title,
+  children,
+  open: openProp,
+  defaultOpen = false,
+  onToggle,
+  idBase = "forge-accordion",
+  style
+}) {
+  const controlled = openProp != null;
+  const [openState, setOpenState] = React.useState(defaultOpen);
+  const open = controlled ? openProp : openState;
+  const [reduce, setReduce] = React.useState(false);
+  React.useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const sync = () => setReduce(mq.matches);
+    sync();
+    if (mq.addEventListener) mq.addEventListener("change", sync);else mq.addListener(sync);
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener("change", sync);else mq.removeListener(sync);
+    };
+  }, []);
+  const toggle = () => {
+    const next = !open;
+    if (!controlled) setOpenState(next);
+    if (onToggle) onToggle(next);
+  };
+  const panelId = `${idBase}-panel`;
+  const headerId = `${idBase}-header`;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      borderBottom: "var(--forge-border-w) solid var(--forge-divider)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    id: headerId,
+    "aria-expanded": open,
+    "aria-controls": panelId,
+    onClick: toggle,
+    style: {
+      width: "100%",
+      minHeight: 44,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "var(--forge-space-4)",
+      padding: "var(--forge-space-3) 0",
+      background: "none",
+      border: "none",
+      cursor: "pointer",
+      textAlign: "left",
+      color: "var(--forge-text)",
+      fontFamily: "var(--forge-font-body)",
+      fontWeight: 700,
+      fontSize: "var(--forge-text-body)"
+    }
+  }, /*#__PURE__*/React.createElement("span", null, title), /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      flexShrink: 0,
+      color: "var(--forge-text-dim)",
+      fontSize: "var(--forge-text-body-sm)",
+      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+      transition: reduce ? "none" : "transform var(--forge-duration-base) var(--forge-ease-standard)"
+    }
+  }, "\u25BE")), /*#__PURE__*/React.createElement("div", {
+    id: panelId,
+    role: "region",
+    "aria-labelledby": headerId,
+    style: {
+      overflow: "hidden",
+      maxHeight: open ? 2000 : 0,
+      opacity: open ? 1 : 0,
+      transition: reduce ? "none" : "max-height var(--forge-duration-base) var(--forge-ease-standard), opacity var(--forge-duration-fast) var(--forge-ease-standard)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      paddingBottom: "var(--forge-space-6)"
+    }
+  }, children)));
+}
+Object.assign(__ds_scope, { Accordion });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/navigation/Accordion.jsx", error: String((e && e.message) || e) }); }
+
+// components/navigation/WeekStrip.jsx
+try { (() => {
+// WeekStrip — a selectable strip of week days (seg→dom): the minimum date
+// picker the app already hand-draws in TreinoHoje (OP-030). The active day is
+// the accent, "today" is marked, and each day can carry a completion dot. It is
+// NOT a full calendar — just the current week as a horizontal selector.
+//
+// `days` is up to 7 entries `{ label, sub, done }` (label = weekday, sub = day
+// number, done = training logged). `selected` is the active index, `today` the
+// index to mark. Semantics: role="group" of buttons (not a radiogroup — ADR-
+// 0008), roving tabindex with ArrowLeft/Right/Home/End moving focus, Enter/Space
+// (native button) selecting. Selection is exposed via aria-pressed; today via
+// aria-current and echoed in the accessible name (never color-only).
+const DEFAULT_DAYS = [{
+  label: "seg"
+}, {
+  label: "ter"
+}, {
+  label: "qua"
+}, {
+  label: "qui"
+}, {
+  label: "sex"
+}, {
+  label: "sáb"
+}, {
+  label: "dom"
+}];
+function WeekStrip({
+  days = DEFAULT_DAYS,
+  selected,
+  today,
+  onSelect,
+  accent,
+  label = "Dias da semana",
+  style
+}) {
+  const list = Array.isArray(days) && days.length ? days : DEFAULT_DAYS;
+  const tint = accent || "var(--forge-accent)";
+  const refs = React.useRef([]);
+  const [focusIdx, setFocusIdx] = React.useState(selected != null ? selected : 0);
+  const move = (e, i) => {
+    let next = null;
+    if (e.key === "ArrowRight") next = Math.min(i + 1, list.length - 1);else if (e.key === "ArrowLeft") next = Math.max(i - 1, 0);else if (e.key === "Home") next = 0;else if (e.key === "End") next = list.length - 1;
+    if (next != null) {
+      e.preventDefault();
+      setFocusIdx(next);
+      const el = refs.current[next];
+      if (el) el.focus();
+    }
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    role: "group",
+    "aria-label": label,
+    style: {
+      display: "flex",
+      gap: "var(--forge-space-3)",
+      ...style
+    }
+  }, list.map((d, i) => {
+    const on = i === selected;
+    const isToday = i === today;
+    const name = `${d.label}${d.sub != null ? `, dia ${d.sub}` : ""}` + (isToday ? ", hoje" : "") + (d.done ? ", concluído" : "");
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      ref: el => refs.current[i] = el,
+      className: "forge-focusable",
+      "aria-pressed": on,
+      "aria-current": isToday ? "date" : undefined,
+      "aria-label": name,
+      tabIndex: i === focusIdx ? 0 : -1,
+      onKeyDown: e => move(e, i),
+      onFocus: () => setFocusIdx(i),
+      onClick: () => onSelect && onSelect(i),
+      style: {
+        flex: 1,
+        minWidth: 40,
+        minHeight: "var(--forge-size-control-md)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "var(--forge-space-1)",
+        padding: "var(--forge-space-3) var(--forge-space-2)",
+        cursor: "pointer",
+        borderRadius: "var(--forge-radius-input)",
+        border: `var(--forge-border-w) solid ${on ? tint : "var(--forge-border)"}`,
+        backgroundColor: on ? tint : "var(--forge-surface)",
+        transition: "background-color var(--forge-duration-fast) var(--forge-ease-standard), border-color var(--forge-duration-fast) var(--forge-ease-standard)"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: "var(--forge-font-body)",
+        fontSize: "var(--forge-text-mini-label)",
+        letterSpacing: "var(--forge-tracking-label)",
+        textTransform: "uppercase",
+        fontWeight: 700,
+        color: on ? "var(--forge-on-accent)" : "var(--forge-text-faint)"
+      }
+    }, d.label), d.sub != null ? /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: "var(--forge-font-title)",
+        fontWeight: 700,
+        fontSize: "var(--forge-text-card-title)",
+        lineHeight: 1,
+        fontVariantNumeric: "tabular-nums",
+        color: on ? "var(--forge-on-accent)" : "var(--forge-text)"
+      }
+    }, d.sub) : null, /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        width: 5,
+        height: 5,
+        borderRadius: "var(--forge-radius-pill)",
+        backgroundColor: d.done ? on ? "var(--forge-on-accent)" : tint : isToday && !on ? "var(--forge-text-faint)" : "transparent"
+      }
+    }));
+  }));
+}
+Object.assign(__ds_scope, { WeekStrip });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/navigation/WeekStrip.jsx", error: String((e && e.message) || e) }); }
+
+// components/product/StreakIndicator.jsx
+try { (() => {
+// StreakIndicator — a training streak: a week of dots (a completed day is the
+// accent, an empty day the dimmer token, mirroring the accent-active/dimmer-
+// inactive rule) plus the running count ("X dias"). A PRODUCT component: it
+// knows the training-habit concept and is meant to sit next to (or share the
+// grid of) the WeekStrip.
+//
+// `days` is this week's completion (booleans, ideally 7, seg→dom). `count` is
+// the true streak length in days; if omitted it falls back to the number of
+// completed days shown. The whole block is a single labeled image for screen
+// readers — the dots are decorative, the aria-label carries the meaning.
+function diasLabel(n) {
+  return `${n} ${n === 1 ? "dia" : "dias"}`;
+}
+function StreakIndicator({
+  days = [],
+  count,
+  accent,
+  label,
+  style
+}) {
+  const week = Array.isArray(days) ? days : [];
+  const doneThisWeek = week.filter(Boolean).length;
+  const total = count != null ? count : doneThisWeek;
+  const tint = accent || "var(--forge-accent)";
+  const aria = label || `Sequência de ${diasLabel(total)}` + (week.length ? `. ${doneThisWeek} de ${diasLabel(week.length)} nesta semana` : "");
+  return /*#__PURE__*/React.createElement("div", {
+    role: "img",
+    "aria-label": aria,
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "var(--forge-space-6)",
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 34,
+      height: 34,
+      flexShrink: 0,
+      borderRadius: "var(--forge-radius-chip)",
+      backgroundColor: `color-mix(in srgb, ${tint} 14%, var(--forge-surface))`,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "flame",
+    color: tint,
+    size: 18
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "var(--forge-space-2)"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "baseline",
+      gap: "var(--forge-space-2)"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-title)",
+      fontWeight: 800,
+      fontSize: "var(--forge-text-panel-title)",
+      lineHeight: 1,
+      letterSpacing: "var(--forge-tracking-title)",
+      color: "var(--forge-text)",
+      fontVariantNumeric: "tabular-nums"
+    }
+  }, total), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-label)",
+      letterSpacing: "var(--forge-tracking-label)",
+      textTransform: "uppercase",
+      color: "var(--forge-text-faint)",
+      fontWeight: 700
+    }
+  }, total === 1 ? "dia" : "dias")), week.length ? /*#__PURE__*/React.createElement("div", {
+    "aria-hidden": "true",
+    style: {
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "var(--forge-space-3)"
+    }
+  }, week.map((done, i) => /*#__PURE__*/React.createElement("span", {
+    key: i,
+    style: {
+      width: 8,
+      height: 8,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: done ? tint : "var(--forge-text-dimmer)"
+    }
+  }))) : null));
+}
+Object.assign(__ds_scope, { StreakIndicator });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/StreakIndicator.jsx", error: String((e && e.message) || e) }); }
+
+// components/product/CoachNote.jsx
+try { (() => {
+// CoachNote — the coach's voice as a component (OP-059). The system's voice
+// guideline (warm, second-person "você", encouraging, never clinical — see
+// docs/content-guide.md) turned into a reusable block: a small tinted icon plus
+// a contextual encouraging line. A PRODUCT component because it embodies the
+// brand's coach persona.
+//
+// It is deliberately NOT an InlineAlert: this is not a status, warning or error
+// (no role="alert"/"status", no live region) — it's ambient encouragement in
+// the flow of the screen. Keep the copy on-voice: sentence case, "você", no
+// emoji (the Feather icon is the only iconography).
+function CoachNote({
+  children,
+  icon = "flame",
+  accent,
+  style
+}) {
+  const tint = accent || "var(--forge-accent)";
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "var(--forge-space-6)",
+      padding: "var(--forge-space-6) var(--forge-space-8)",
+      borderRadius: "var(--forge-radius-card)",
+      backgroundColor: `color-mix(in srgb, ${tint} 10%, var(--forge-surface))`,
+      border: `var(--forge-border-w) solid color-mix(in srgb, ${tint} 26%, var(--forge-border))`,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: 30,
+      height: 30,
+      flexShrink: 0,
+      borderRadius: "var(--forge-radius-pill)",
+      backgroundColor: `color-mix(in srgb, ${tint} 18%, var(--forge-surface))`,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    color: tint,
+    size: 16
+  })), /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: 0,
+      flex: 1,
+      minWidth: 0,
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      lineHeight: "var(--forge-lh-body)",
+      color: "var(--forge-text)",
+      fontWeight: 500
+    }
+  }, children));
+}
+Object.assign(__ds_scope, { CoachNote });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/CoachNote.jsx", error: String((e && e.message) || e) }); }
+
+// components/product/OfflineBanner.jsx
+try { (() => {
+// OfflineBanner — persistent inline banner for the offline/sync state (OP-060).
+// The system has no toast/snackbar (ADR-0002): a system state like being
+// offline must NOT flash and disappear — it stays in the flow of the screen
+// until the condition clears. So this is a persistent banner, not a transient
+// notice.
+//
+// role="status" (a polite live region, not "alert") announces the state change
+// without hijacking focus. Default copy is on-voice (pt-BR, "você", reassuring —
+// changes aren't lost). An optional action ("Tentar de novo") lets the screen
+// offer a manual retry. A PRODUCT component: it carries the app's offline copy.
+function OfflineBanner({
+  message = "Você está offline. Suas alterações ficam salvas e sincronizam quando a conexão voltar.",
+  actionLabel,
+  onAction,
+  children,
+  style
+}) {
+  const accent = "var(--forge-warning)";
+  return /*#__PURE__*/React.createElement("div", {
+    role: "status",
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "var(--forge-space-5)",
+      padding: "var(--forge-space-6) var(--forge-space-8)",
+      borderRadius: "var(--forge-radius-card)",
+      border: `var(--forge-border-w) solid color-mix(in srgb, ${accent} 40%, var(--forge-border))`,
+      backgroundColor: `color-mix(in srgb, ${accent} 12%, var(--forge-surface))`,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "warn",
+    color: accent,
+    size: 16
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      flex: 1,
+      minWidth: 0,
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      lineHeight: "var(--forge-lh-body)",
+      color: "var(--forge-text)"
+    }
+  }, children || message), actionLabel && onAction ? /*#__PURE__*/React.createElement("button", {
+    className: "forge-focusable",
+    onClick: onAction,
+    style: {
+      flexShrink: 0,
+      border: "none",
+      background: "none",
+      padding: "var(--forge-space-2) var(--forge-space-3)",
+      borderRadius: "var(--forge-radius-chip)",
+      cursor: "pointer",
+      fontFamily: "var(--forge-font-body)",
+      fontSize: "var(--forge-text-body-sm)",
+      fontWeight: 700,
+      color: accent
+    }
+  }, actionLabel) : null);
+}
+Object.assign(__ds_scope, { OfflineBanner });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/product/OfflineBanner.jsx", error: String((e && e.message) || e) }); }
+
 __ds_ns.Icon = __ds_scope.Icon;
 
 __ds_ns.ICON_NAMES = __ds_scope.ICON_NAMES;
@@ -4159,5 +5723,39 @@ __ds_ns.PRCelebration = __ds_scope.PRCelebration;
 __ds_ns.RestTimer = __ds_scope.RestTimer;
 
 __ds_ns.SetLogger = __ds_scope.SetLogger;
+
+__ds_ns.Divider = __ds_scope.Divider;
+
+__ds_ns.Checkbox = __ds_scope.Checkbox;
+
+__ds_ns.SegmentedControl = __ds_scope.SegmentedControl;
+
+__ds_ns.PasswordField = __ds_scope.PasswordField;
+
+__ds_ns.Slider = __ds_scope.Slider;
+
+__ds_ns.FilterChip = __ds_scope.FilterChip;
+
+__ds_ns.ProgressBar = __ds_scope.ProgressBar;
+
+__ds_ns.Badge = __ds_scope.Badge;
+
+__ds_ns.Avatar = __ds_scope.Avatar;
+
+__ds_ns.MacroRing = __ds_scope.MacroRing;
+
+__ds_ns.Timeline = __ds_scope.Timeline;
+
+__ds_ns.Tabs = __ds_scope.Tabs;
+
+__ds_ns.Accordion = __ds_scope.Accordion;
+
+__ds_ns.WeekStrip = __ds_scope.WeekStrip;
+
+__ds_ns.StreakIndicator = __ds_scope.StreakIndicator;
+
+__ds_ns.CoachNote = __ds_scope.CoachNote;
+
+__ds_ns.OfflineBanner = __ds_scope.OfflineBanner;
 
 })();

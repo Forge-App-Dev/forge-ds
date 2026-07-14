@@ -2,7 +2,9 @@ import { CSSProperties } from "react";
 
 /**
  * Quantity input with a tappable, cycling unit selector (g / portion presets)
- * for logging food quantities in the Nutrição module.
+ * for logging food quantities in the Nutrição module. Uses
+ * `inputMode="decimal"`, an `aria-label` on the field (no visible label), and
+ * normalizes a decimal comma to a dot (OP-116, ADR-0056).
  */
 export interface QtyInputProps {
   qty?: string | number;

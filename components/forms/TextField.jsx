@@ -5,7 +5,10 @@ import React from "react";
 // id, so screen readers announce it. Pass `error` to show an inline error
 // message (role="alert"), set aria-invalid, and tie the message to the field
 // via aria-describedby; pass `helper` for non-error guidance. `required` and
-// `disabled` supported.
+// `disabled` supported. Mobile keyboard hints (`inputMode`, `autoComplete`,
+// `enterKeyHint`) are passed straight through to the field (OP-115). `trailing`
+// renders an adornment inside the single-line field (e.g. the eye toggle of
+// PasswordField); it is omitted by default so the render is unchanged.
 export function TextField({
   label,
   value,
@@ -18,6 +21,9 @@ export function TextField({
   required = false,
   disabled = false,
   inputMode,
+  autoComplete,
+  enterKeyHint,
+  trailing,
   style,
 }) {
   const rid = React.useId ? React.useId() : "forge-tf";
@@ -65,26 +71,37 @@ export function TextField({
           placeholder={placeholder}
           disabled={disabled}
           required={required}
+          autoComplete={autoComplete}
+          enterKeyHint={enterKeyHint}
           aria-invalid={error ? true : undefined}
           aria-describedby={describedBy}
           onChange={(e) => onChange && onChange(e.target.value)}
           style={{ ...fieldStyle, height: 84, padding: "10px 12px", resize: "none" }}
         />
       ) : (
-        <input
-          id={fieldId}
-          className="forge-focusable"
-          type={type}
-          inputMode={inputMode}
-          value={value}
-          placeholder={placeholder}
-          disabled={disabled}
-          required={required}
-          aria-invalid={error ? true : undefined}
-          aria-describedby={describedBy}
-          onChange={(e) => onChange && onChange(e.target.value)}
-          style={{ ...fieldStyle, height: 44, paddingInline: 12 }}
-        />
+        <div style={{ position: "relative" }}>
+          <input
+            id={fieldId}
+            className="forge-focusable"
+            type={type}
+            inputMode={inputMode}
+            autoComplete={autoComplete}
+            enterKeyHint={enterKeyHint}
+            value={value}
+            placeholder={placeholder}
+            disabled={disabled}
+            required={required}
+            aria-invalid={error ? true : undefined}
+            aria-describedby={describedBy}
+            onChange={(e) => onChange && onChange(e.target.value)}
+            style={{ ...fieldStyle, height: 44, paddingLeft: 12, paddingRight: trailing ? 44 : 12 }}
+          />
+          {trailing ? (
+            <span style={{ position: "absolute", right: 6, top: 0, height: 44, display: "inline-flex", alignItems: "center" }}>
+              {trailing}
+            </span>
+          ) : null}
+        </div>
       )}
       {error ? (
         <div id={msgId} role="alert" style={{ marginTop: 5, fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body-sm)", color: "var(--forge-danger)" }}>

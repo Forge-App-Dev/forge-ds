@@ -1,0 +1,229 @@
+<!-- @dsCard group="Components" viewport="760x640" name="Layout & Display" subtitle="ProgressBar, Divider, Badge, Avatar, Tabs, Accordion" -->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../styles.css">
+<script src="../_ds_bundle.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  body { margin: 0; padding: 20px; background: var(--forge-bg); font-family: var(--forge-font-body); color: var(--forge-text); }
+  h3 { font-size: 11px; text-transform: uppercase; letter-spacing: var(--forge-tracking-label); color: var(--forge-text-faint); margin: 20px 0 8px; font-weight: 700; }
+  h3:first-child { margin-top: 0; }
+  .note { font-size: 12px; color: var(--forge-text-dim); line-height: 17px; margin-bottom: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 28px; }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Card, Text, Title, Label } = window.ForgeDesignSystem_7731a5;
+const { useState, useRef, useEffect } = React;
+
+// --- Lote B primitives (mirrors of components/**; bundled build is generated
+// separately, so they're inlined here for a self-contained card preview) ---
+
+function ProgressBar({ value = 0, color = "var(--forge-accent)", track = "var(--forge-surface-raised)", height = 6, segments, label, style }) {
+  const radius = height / 2;
+  if (segments && segments.length) {
+    return (
+      <div role="img" aria-label={label || "Progresso"} style={{ display: "flex", height, borderRadius: radius, backgroundColor: track, overflow: "hidden", ...style }}>
+        {segments.map((seg, i) => (
+          <div key={i} style={{ width: Math.max(0, Math.min(1, seg.value)) * 100 + "%", backgroundColor: seg.color }} />
+        ))}
+      </div>
+    );
+  }
+  const pct = Math.max(0, Math.min(1, value));
+  return (
+    <div role="progressbar" aria-label={label} aria-valuenow={Math.round(pct * 100)} aria-valuemin={0} aria-valuemax={100} style={{ height, borderRadius: radius, backgroundColor: track, overflow: "hidden", ...style }}>
+      <div style={{ height, borderRadius: radius, width: pct * 100 + "%", backgroundColor: color }} />
+    </div>
+  );
+}
+
+function Divider({ orientation = "horizontal", margin, color = "var(--forge-divider)", style }) {
+  const vertical = orientation === "vertical";
+  const m = margin == null ? undefined : typeof margin === "number" ? margin + "px" : margin;
+  return (
+    <div role="separator" aria-orientation={orientation} style={{
+      flexShrink: 0, backgroundColor: color,
+      ...(vertical ? { width: "var(--forge-border-w)", alignSelf: "stretch", margin: m ? `0 ${m}` : undefined } : { height: "var(--forge-border-w)", width: "100%", margin: m ? `${m} 0` : undefined }),
+      ...style,
+    }} />
+  );
+}
+
+function Badge({ count, dot = false, variant = "accent", label, style }) {
+  const neutral = variant === "neutral";
+  const bg = neutral ? "var(--forge-surface-raised)" : "var(--forge-accent)";
+  const fg = neutral ? "var(--forge-text)" : "var(--forge-on-accent)";
+  if (dot) return <span aria-label={label} aria-hidden={label ? undefined : true} style={{ display: "inline-block", width: 8, height: 8, borderRadius: "var(--forge-radius-pill)", backgroundColor: bg, ...style }} />;
+  return <span aria-label={label} style={{ minWidth: 18, height: 18, paddingInline: "var(--forge-space-4)", borderRadius: "var(--forge-radius-pill)", backgroundColor: bg, color: fg, fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", fontWeight: 700, lineHeight: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", boxSizing: "border-box", ...style }}>{count}</span>;
+}
+
+const AV_SIZE = { sm: 32, md: 44, lg: 64 };
+function Avatar({ src, name = "", alt, size = "md", style }) {
+  const px = AV_SIZE[size] || AV_SIZE.md;
+  const [failed, setFailed] = useState(false);
+  const accName = alt != null ? alt : name;
+  const initials = name.trim().split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+  const showImg = src && !failed;
+  return (
+    <div style={{ width: px, height: px, borderRadius: "var(--forge-radius-pill)", overflow: "hidden", backgroundColor: "var(--forge-surface-raised)", display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, ...style }}>
+      {showImg ? (
+        <img src={src} alt={accName} onError={() => setFailed(true)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+      ) : (
+        <span role="img" aria-label={accName || undefined} style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: Math.round(px * 0.4), letterSpacing: "var(--forge-tracking-title)", color: "var(--forge-text)" }}>{initials}</span>
+      )}
+    </div>
+  );
+}
+
+function Tabs({ tabs, active, onChange, accent = "var(--forge-accent)", idBase = "forge-tabs", children, style }) {
+  const refs = useRef([]);
+  const idx = tabs.findIndex((t) => t.id === active);
+  const onKeyDown = (e) => {
+    let next = null;
+    if (e.key === "ArrowRight") next = (idx + 1) % tabs.length;
+    else if (e.key === "ArrowLeft") next = (idx - 1 + tabs.length) % tabs.length;
+    else if (e.key === "Home") next = 0;
+    else if (e.key === "End") next = tabs.length - 1;
+    if (next != null) { e.preventDefault(); onChange && onChange(tabs[next].id); const el = refs.current[next]; if (el) el.focus(); }
+  };
+  return (
+    <div style={style}>
+      <div role="tablist" style={{ display: "flex", borderBottom: "var(--forge-border-w) solid var(--forge-divider)" }}>
+        {tabs.map((t, i) => {
+          const on = t.id === active;
+          return (
+            <button key={t.id} ref={(el) => (refs.current[i] = el)} className="forge-focusable" role="tab" id={`${idBase}-tab-${t.id}`} aria-selected={on} aria-controls={children != null ? `${idBase}-panel-${t.id}` : undefined} tabIndex={on ? 0 : -1} onClick={() => onChange && onChange(t.id)} onKeyDown={onKeyDown}
+              style={{ flex: 1, minHeight: 44, padding: "var(--forge-space-3) var(--forge-space-4)", background: "none", border: "none", borderBottom: `var(--forge-border-w-strong) solid ${on ? accent : "transparent"}`, marginBottom: "calc(-1 * var(--forge-border-w))", color: on ? "var(--forge-text)" : "var(--forge-text-dim)", fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-body-sm)", cursor: "pointer" }}>
+              {t.label}
+            </button>
+          );
+        })}
+      </div>
+      {children != null ? (
+        <div role="tabpanel" id={`${idBase}-panel-${active}`} aria-labelledby={`${idBase}-tab-${active}`} tabIndex={0} style={{ paddingTop: "var(--forge-space-12)" }}>{children}</div>
+      ) : null}
+    </div>
+  );
+}
+
+function Accordion({ title, children, defaultOpen = false, idBase = "forge-accordion", style }) {
+  const [open, setOpen] = useState(defaultOpen);
+  const [reduce, setReduce] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const sync = () => setReduce(mq.matches); sync();
+    mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync);
+    return () => { mq.removeEventListener ? mq.removeEventListener("change", sync) : mq.removeListener(sync); };
+  }, []);
+  const panelId = `${idBase}-panel`, headerId = `${idBase}-header`;
+  return (
+    <div style={{ borderBottom: "var(--forge-border-w) solid var(--forge-divider)", ...style }}>
+      <button className="forge-focusable" id={headerId} aria-expanded={open} aria-controls={panelId} onClick={() => setOpen((o) => !o)}
+        style={{ width: "100%", minHeight: 44, display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--forge-space-4)", padding: "var(--forge-space-3) 0", background: "none", border: "none", cursor: "pointer", textAlign: "left", color: "var(--forge-text)", fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-body)" }}>
+        <span>{title}</span>
+        <span aria-hidden="true" style={{ flexShrink: 0, color: "var(--forge-text-dim)", fontSize: "var(--forge-text-body-sm)", transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: reduce ? "none" : "transform var(--forge-duration-base) var(--forge-ease-standard)" }}>▾</span>
+      </button>
+      <div id={panelId} role="region" aria-labelledby={headerId} style={{ overflow: "hidden", maxHeight: open ? 2000 : 0, opacity: open ? 1 : 0, transition: reduce ? "none" : "max-height var(--forge-duration-base) var(--forge-ease-standard), opacity var(--forge-duration-fast) var(--forge-ease-standard)" }}>
+        <div style={{ paddingBottom: "var(--forge-space-6)" }}>{children}</div>
+      </div>
+    </div>
+  );
+}
+
+function Demo() {
+  const [tab, setTab] = useState("semana");
+  return (
+    <div className="grid">
+      <div>
+        <h3>ProgressBar</h3>
+        <div className="note">Barra de progresso genérica — valor único ou segmentos empilhados.</div>
+        <Card>
+          <Label>Conclusão</Label>
+          <div style={{ marginTop: 8 }}><ProgressBar value={0.62} label="Progresso do treino" /></div>
+          <div style={{ marginTop: 12 }}><ProgressBar value={0.4} height={8} color="var(--forge-success)" label="Meta" /></div>
+          <div style={{ marginTop: 12 }}>
+            <ProgressBar label="Distribuição de macros" height={8} segments={[
+              { value: 0.3, color: "var(--forge-macro-protein)" },
+              { value: 0.4, color: "var(--forge-macro-carb)" },
+              { value: 0.15, color: "var(--forge-macro-fat)" },
+            ]} />
+          </div>
+        </Card>
+      </div>
+
+      <div>
+        <h3>Divider</h3>
+        <div className="note">Separador hairline 1px, horizontal ou vertical.</div>
+        <Card>
+          <Text>Séries</Text>
+          <Divider margin={12} />
+          <Text>Descanso</Text>
+          <Divider margin={12} />
+          <div className="row">
+            <Text size="bodySm" color="var(--forge-text-dim)">3 séries</Text>
+            <Divider orientation="vertical" margin={10} style={{ height: 16 }} />
+            <Text size="bodySm" color="var(--forge-text-dim)">8 reps</Text>
+          </div>
+        </Card>
+      </div>
+
+      <div>
+        <h3>Badge</h3>
+        <div className="note">Contador ou ponto pequeno — accent ou neutro.</div>
+        <Card>
+          <div className="row">
+            <Badge count={3} label="3 não lidos" />
+            <Badge count={12} variant="neutral" />
+            <span className="row" style={{ gap: 6 }}><Badge dot label="Novidade" /> <Text size="bodySm" color="var(--forge-text-dim)">Novidade</Text></span>
+          </div>
+        </Card>
+      </div>
+
+      <div>
+        <h3>Avatar</h3>
+        <div className="note">Foto com fallback de iniciais em Barlow — sm / md / lg.</div>
+        <Card>
+          <div className="row">
+            <Avatar name="Mateus Utz" size="sm" />
+            <Avatar name="Ana Paula" size="md" />
+            <Avatar name="João Silva" size="lg" />
+          </div>
+        </Card>
+      </div>
+
+      <div>
+        <h3>Tabs</h3>
+        <div className="note">Abas dentro da tela (não é o ModuleTabBar) — setas do teclado, indicador accent.</div>
+        <Card>
+          <Tabs active={tab} onChange={setTab} idBase="demo-tabs" tabs={[{ id: "semana", label: "Semana" }, { id: "mes", label: "Mês" }]}>
+            <Text size="bodySm" color="var(--forge-text-dim)">{tab === "semana" ? "Progresso da semana." : "Progresso do mês."}</Text>
+          </Tabs>
+        </Card>
+      </div>
+
+      <div>
+        <h3>Accordion</h3>
+        <div className="note">Item expansível com chevron ▾ — aria-expanded, animação por token, reduced-motion.</div>
+        <Card>
+          <Accordion title="Como registrar uma série?" idBase="faq-1" defaultOpen>
+            <Text as="p" size="bodySm" color="var(--forge-text-dim)">Toque em registrar e informe carga e repetições.</Text>
+          </Accordion>
+          <Accordion title="Posso replicar o dia?" idBase="faq-2">
+            <Text as="p" size="bodySm" color="var(--forge-text-dim)">Sim — use a ação replicar no header.</Text>
+          </Accordion>
+        </Card>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+</script>
+</body>
+</html>
