@@ -1,6 +1,6 @@
 {
   "name": "@forge/ds",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Forge Design System — biblioteca de componentes, tokens e guidelines do app Forge.",
   "private": true,
   "type": "module",
