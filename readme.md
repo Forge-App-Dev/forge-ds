@@ -70,16 +70,17 @@ The design system explicitly supports a **family of sibling apps**: new apps reu
 
 Grouped by concern in `components/<group>/` (each a self-contained `.jsx`; the original primitives also ship `.d.ts` + `.prompt.md`):
 
-- **core/** — `Button`, `Pill`, `ConfirmButton`, `Card`, `HeaderAction`
+- **core/** — `Button`, `Pill`, `ConfirmButton`, `Card`, `HeaderAction`, `Divider`
 - **typography/** — `Title`, `Text`, `Label`, `SectionLabel`
 - **layout/** — `Screen`, `ScreenBody`
-- **forms/** — `TextField`, `QtyInput`, `Switch`, `Stepper`, `ListItem`, `SearchField`, `Select`
+- **forms/** — `TextField`, `QtyInput`, `Switch`, `Stepper`, `ListItem`, `SearchField`, `Select`, `Checkbox`, `PasswordField`, `SegmentedControl`, `Slider`, `FilterChip`
 - **overlays/** — `Panel`, `FullScreen`, `VideoModal`
-- **navigation/** — `AppHeader`, `ModuleHeader`, `ModuleTabBar`
-- **feedback/** — `Ring` (+ indeterminate/segments variants), `MacroMeter` (+ compact variant), `MetaBar` (+ segmented variant), `MiniChart` (+ bar/area variants), `InlineAlert`, `EmptyState`, `ErrorState`, `Skeleton`/`SkeletonText`, `Spinner`, `StatBadge`, `LoadingScreen`, `TargetsCard`
+- **navigation/** — `AppHeader`, `ModuleHeader`, `ModuleTabBar`, `Tabs`, `Accordion`, `WeekStrip`
+- **feedback/** — `Ring` (+ indeterminate/segments variants), `MacroMeter` (+ compact variant), `MetaBar` (+ segmented variant), `MiniChart` (+ bar/area variants), `Chart`, `ProgressBar` (generic base), `MacroRing`, `InlineAlert`, `EmptyState`, `ErrorState`, `Skeleton`/`SkeletonText`, `Spinner`, `StatBadge`, `Badge`, `Avatar`, `Timeline`, `LoadingScreen`
 - **dashboard/** — `StatCard`, `QuickAction`
 - **onboarding/** — `Pager`, `PageDots`
-- **product/** — `PRCelebration`, `RestTimer`, `SetLogger`
+- **product/** — `PRCelebration`, `RestTimer`, `SetLogger`, `TargetsCard`, `CoachNote`, `OfflineBanner`, `StreakIndicator`
+- **media/** — `ImagePicker`
 - **icons/** — `Icon`
 
 The primitives (core/typography/layout/forms/overlays/navigation/feedback) map to the source codebase (`src/components/ui.jsx`, `Ring.jsx`, `AppHeader.jsx`, `ModuleTabBar.jsx`, `meters.jsx`, `MiniChart.jsx`, `QtyInput.jsx`, `icons.jsx`) or to the primitives the audit flagged as missing (forms, states) — built here on the token + accessibility foundation, not invented visually. `Title`/`Label`/`SectionLabel` are the RN doc's text primitives (§3), and `components/shared/color.js` exports the shared `onColor()` contrast helper both `Button` and `Pill` import.
@@ -98,10 +99,11 @@ Specimen cards under `guidelines/`, grouped as **Colors** (surfaces, text, brand
 
 - `styles.css` — root stylesheet, imports everything under `tokens/`
 - `reference/FORGE_DESIGN_SYSTEM_RN.md` — the RN-specific translation of the spec (modal decision rule, RN pitfalls)
-- `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`, `tokens/motion.css`, `tokens/base.css` — design tokens (CSS custom properties) + reset/a11y utilities
+- `tokens/tokens.json` — **single source of truth** for tokens (W3C DTCG format); the CSS below is generated from it
+- `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`, `tokens/motion.css`, `tokens/base.css` — design tokens (CSS custom properties, generated from `tokens.json`) + reset/a11y utilities
 - `assets/forge-mark.svg` — brand mark (anvil + hammer, red), vector; `assets/forge-mark.png` — raster fallback
-- `components/` — 45 components across 11 groups (see above); primitives + a `product/` layer
-- `guidelines/` — 25 specimen & review cards (foundations + component review surfaces)
+- `components/` — 64 components across 12 groups (see above); primitives + a `product/` layer
+- `guidelines/` — 31 specimen & review cards (foundations + component review surfaces)
 - `ui_kits/forge-app/` — the click-through product recreation
 - `reference/FORGE_DESIGN_SYSTEM.md` — mirrored copy of the team's own spec doc
 - `SKILL.md` — portable skill file for use in Claude Code
