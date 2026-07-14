@@ -25,6 +25,7 @@
     "@babel/parser": "^7.24.0",
     "@babel/preset-react": "^7.24.0",
     "@babel/traverse": "^7.24.0",
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
