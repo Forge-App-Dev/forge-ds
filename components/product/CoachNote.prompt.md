@@ -29,6 +29,6 @@ Ver "Regras transversais" + "Ícones" do checklist.
 
 - **Papel / leitor de tela:** conteúdo de texto comum (`<p>`), sem live region — é ambiente, não deve interromper nem ser anunciado como status.
 - **Nome acessível:** a própria frase; o ícone é decorativo (`aria-hidden`), não é a única fonte de significado.
-- **Contraste:** texto em `--forge-text` sobre o fundo `color-mix` tenue; fundo/borda derivam do accent para adaptar ao tema claro (OP-011).
+- **Contraste:** texto em `--forge-text` sobre o fundo `color-mix` tenue; fundo/borda derivam do accent via `color-mix` sobre a superfície do tema dark.
 - **Foco / alvo:** não é interativo (sem foco/alvo).
 - **Observações:** manter a copy on-voice; nunca usar como canal de erro/aviso (aí é `InlineAlert`).

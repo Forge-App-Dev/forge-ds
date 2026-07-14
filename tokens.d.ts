@@ -181,5 +181,4 @@ export interface ForgeTokens {
   duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;
 }
 
-export declare const tokens: ForgeTokens;            // valores do tema base (dark)
-export declare const tokensLight: Partial<ForgeTokens>; // só o que o tema light troca
+export declare const tokens: ForgeTokens;            // valores do tema dark (único)

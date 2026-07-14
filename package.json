@@ -14,8 +14,9 @@
   "scripts": {
     "build:bundle": "node scripts/build-bundle.mjs",
     "build:index": "node scripts/build-index.mjs",
+    "build:plan": "node scripts/build-plan.mjs",
     "build:tokens": "node scripts/build-tokens.mjs",
-    "build": "npm run build:tokens && npm run build:index && npm run build:bundle",
+    "build": "npm run build:tokens && npm run build:index && npm run build:bundle && npm run build:plan",
     "check:drift": "node scripts/check-drift.mjs",
     "check:adherence": "node scripts/check-adherence.mjs",
     "test:render": "node scripts/render-test.mjs"

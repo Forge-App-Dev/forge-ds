@@ -9,8 +9,10 @@ fundação antes de superfície (regra de ouro do `FLUXO_EVOLUCAO_DS.md`).
 > **Estado (2026-07-14, v1.5.0):** o programa de 7 fases fechou as Fases 0–4 por
 > inteiro e a maior parte da Fase 5. `tokens/tokens.json` é a fonte única (CSS
 > gerado), o CI está ativo (drift/adherence/render-test), o backlog de componentes
-> foi entregue (64 componentes / 12 grupos), o tema claro + white-label estão
-> provados ("app Fuel") e as tags `v1.0.0..v1.5.0` foram criadas (release v1.5.0).
+> foi entregue (63 componentes / 12 grupos), Forge é **dark-only** (o tema claro
+> foi removido — decisão do owner), o white-label (accent + marca + cópia sobre o
+> tema dark) tem caminho decidido mas **ainda não provado de ponta a ponta**, e as
+> tags `v1.0.0..v1.5.0` foram criadas (release v1.5.0).
 > Resta apenas o horizonte estrutural/opcional marcado abaixo.
 
 ---
@@ -40,15 +42,17 @@ _Auditoria §10, itens 5–6._
 - ✅ Backlog do §6 entregue: pager, dashboard tiles, Switch, Select, Stepper, ListItem,
   SearchField, WeekStrip, PasswordField, Checkbox, SegmentedControl, Slider, FilterChip,
   Divider, ProgressBar, Badge, Avatar, MacroRing, Timeline, Tabs, Accordion,
-  StreakIndicator, CoachNote, OfflineBanner (OP-022–060) — 64 componentes / 12 grupos.
+  StreakIndicator, CoachNote, OfflineBanner (OP-022–060) — 63 componentes / 12 grupos.
 - ✅ Separação formal **primitives × product** (OP-009/131): `TargetsCard` movido para
   `product/`; grupo `media/` criado com `ImagePicker` (OP-050); `Chart` em feedback (OP-053).
 - ✅ Ampliar set de ícones + convenção de nomes (OP-018) + guia de ícones (OP-090).
 
-## Fase 3 — Multi-brand, tema claro e i18n (semanas) · Prioridade MÉDIA — ✅ CONCLUÍDA
+## Fase 3 — Multi-brand (white-label) e i18n (semanas) · Prioridade MÉDIA — ◐ PARCIAL
 _Auditoria §10, item 7._
-- ✅ Strings externalizadas (`content.js`) + tema claro completo + prova de ponta a ponta
-  "app Fuel" (OP-010/011) — valida a promessa white-label (P-07/P-08); `onColor()` WCAG (OP-015).
+- ✅ Strings externalizadas (`content.js`) + `onColor()` WCAG (OP-015).
+- ◐ White-label (accent + marca + cópia sobre o **tema dark**): caminho decidido (P-07/P-08),
+  mas a prova de ponta a ponta "app Fuel" **não foi feita** — segue planejada, não concluída.
+- ✅ Tema claro **removido**: Forge é dark-only (decisão do owner, 2026-07-14) — OP-011 encerrada.
 - ✅ Estrutura de i18n pronta (strings fora dos componentes). ◐ RTL fica como horizonte
   (estrutura não bloqueia; ativar quando houver 2º idioma) (OP-010/151).
 
@@ -56,9 +60,11 @@ _Auditoria §10, item 7._
 _Auditoria §10, itens 8–10._
 - ✅ CI ativo (`.github/workflows/ci.yml`): check-adherence + build de tokens +
   check-drift + render-test a cada push (OP-169).
-- ✅ `scripts/check-drift.mjs` DS ↔ forge-app via sourceHashes (OP-014 → ADR-0072).
+- ✅ `scripts/check-drift.mjs`: regenera os artefatos locais (tokens/index/bundle) e
+  **falha se o working tree ficar sujo** — garante frescor de artefato; **não** compara
+  contra o forge-app (OP-014 → ADR-0072).
   ◐ A verificação viva DS↔app (rodar contra o forge-app real a cada sessão) fica como
-  hábito de horizonte.
+  hábito de horizonte (check separado, se um dia for desejado).
 - ✅ Catálogo publicado e navegável no Pages (OP-021) + padrões de formulário/erro/
   loading/busca/auth (OP-061–080).
 
@@ -85,7 +91,7 @@ Perguntas obrigatórias e onde vivem no roadmap:
 |---|---|---|
 | Android / iOS | Sim / estrutural | Fase 5 (pacote plataforma) |
 | Tablets/foldables | Decisão documentada (ADR, phone-first) | ✅ Fase 0 |
-| White-label / dark-light | Provado ("app Fuel"), tema claro completo | ✅ Fase 3 |
+| White-label (accent/marca/cópia) | Caminho decidido; **não provado de ponta a ponta** (Forge é dark-only) | ◐ Fase 3 |
 | Centenas de componentes | Estrutura aguenta | Ciclo de vida (ADR-0070) já entregue |
 | Milhares de telas | Tokens únicos + CI ativos | ✅ Fases 1 e 4 |
 | Dezenas de equipes | Governança de 1 pessoa | `docs/OWNERSHIP.md` §Multi-equipe (OP-191) |

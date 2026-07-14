@@ -15,7 +15,7 @@ Contraste WCAG real (luminância relativa, `(L1+0.05)/(L2+0.05)`) dos pares que 
 | cat-2 blue `#2563EB` | 5.17 | 3.71 | 0.376 | branco | branco |
 
 Dois problemas reais:
-1. **A heurística devolve branco sobre o verde `#10B981` a 2.54:1** — reprova até o piso de 3:1 (texto grande/UI). Como `#10B981` é o accent do módulo Nutrição **e** o accent do tema claro, a heurística produz hoje um par reprovado no tema padrão.
+1. **A heurística devolve branco sobre o verde `#10B981` a 2.54:1** — reprova até o piso de 3:1 (texto grande/UI). Como `#10B981` é o accent do módulo Nutrição, a heurística produz hoje um par reprovado.
 2. Um "WCAG puro pega o maior contraste" jogaria **tudo** para texto escuro, quebrando o único par que a marca protege: branco sobre o vermelho de marca.
 
 Nota sobre o vermelho: `#EF4444` a 3.76:1 com branco **reprova** para texto normal (piso 4.5:1) mas **passa** o piso de 3:1 que vale para *texto grande/negrito* e para componentes de UI (SC 1.4.3 / 1.4.11). Botão e Pill Forge usam peso 800 em tamanho de botão → qualificam como texto grande → 3:1 aplica → o par é conforme para o uso real.
@@ -33,9 +33,9 @@ Algoritmo-alvo de `onColor(input, { size = "large" } = {})`:
 Verificação: script de mesa (`scripts/check-oncolor.mjs`, follow-up) roda os ~20 hexes das paletas e falha o build se algum par reprovar o piso sem estar no brand-lock.
 
 ## Consequências
-- **Correções visíveis desejadas:** on-color do verde `#10B981` (Nutrição / tema claro), do `danger` e do `warning` passa a ser **texto escuro** — todos sobem para 5.9–8.9:1. O bug de branco-a-2.54:1 sobre verde desaparece.
+- **Correções visíveis desejadas:** on-color do verde `#10B981` (Nutrição), do `danger` e do `warning` passa a ser **texto escuro** — todos sobem para 5.9–8.9:1. O bug de branco-a-2.54:1 sobre verde desaparece.
 - O vermelho de marca preserva branco. Nenhuma regressão de marca.
-- `--forge-on-accent: #FFFFFF` (token global em `colors.css`) fica **incoerente com o accent verde** do tema claro/Nutrição. Escalação abaixo.
+- `--forge-on-accent: #FFFFFF` (token global em `colors.css`) fica **incoerente com o accent verde** do módulo Nutrição (e de um app irmão que adote accent verde). Escalação abaixo.
 - Consumidores que quiserem contraste de texto de corpo passam `size:"body"`.
 
 ## Alternativas consideradas
@@ -44,4 +44,4 @@ Verificação: script de mesa (`scripts/check-oncolor.mjs`, follow-up) roda os ~
 - **Brand-lock amplo "branco sobre qualquer accent":** rejeitada — o accent verde reprovaria (2.54:1).
 
 ## Escalação
-`--forge-on-accent` é hard-coded `#FFFFFF` no `:root` e não é sobrescrito em `.forge-theme-light` (onde accent = verde). Recomenda-se: tema claro/Nutrição define `--forge-on-accent: #0B0F19` (dark), OU o token passa a ser derivado por `onColor(var(--forge-accent))` no build. Decisão de produto para Mateus.
+`--forge-on-accent` é hard-coded `#FFFFFF` no `:root` — coerente com o vermelho de marca, mas incoerente quando o accent é o verde (Nutrição, ou um app irmão de accent verde). Recomenda-se: um tema de accent verde define `--forge-on-accent: #0B0F19` (escuro), OU o token passa a ser derivado por `onColor(var(--forge-accent))` no build. Decisão de produto para Mateus.

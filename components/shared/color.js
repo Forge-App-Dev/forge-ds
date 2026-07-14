@@ -60,23 +60,27 @@ const BRAND_RED = "#EF4444"; // lock de marca: branco sobre o vermelho Forge
 //   4. piso: size="large" (default) → 3:1; size="body" → 4.5:1; abaixo do piso
 //      devolve o vencedor e emite console.warn em dev.
 // Assinatura retrocompatível (2º arg opcional; default "large" = comportamento
-// dos consumidores atuais Button/Pill). Correção real vs a heurística antiga:
-// branco sobre o verde #10B981 saía a 2.54:1 (reprovado) e agora vira texto
-// escuro (7.55:1); idem danger/warning. Limitação conhecida: TOKEN_HEX é o mapa
-// do tema dark — o par por-tema no tema claro é resolvido pelo token CSS
-// --forge-on-accent (theme-aware); gerar TOKEN_HEX de tokens.json é follow-up (OP-001).
+// dos consumidores atuais Button/Pill). Forge é DARK-ONLY: não há par de texto
+// por-tema. Limitação conhecida: TOKEN_HEX é mantido à mão — gerar de
+// tokens.json é follow-up (OP-001 / T-03). Tokens fora do mapa (ex.: cat-ext-*)
+// não têm hex conhecido: onColor avisa em dev e devolve texto claro (default
+// seguro) em vez de calcular contraste sobre um valor inválido.
 export function onColor(input, { size = "large" } = {}) {
   const hex = resolveColor(input);
-  const h = String(hex).replace("#", "");
-  if (h.length < 6) return ON_LIGHT; // token não resolvido — default seguro
-  const norm = "#" + h.slice(0, 6);
-  if (norm.toUpperCase() === BRAND_RED) return ON_LIGHT;
-  const cWhite = _contrast(norm, ON_LIGHT);
-  const cDark = _contrast(norm, ON_DARK);
+  const norm = String(hex).trim().replace(/^#/, "");
+  if (!/^[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$/.test(norm)) {
+    if (typeof console !== "undefined")
+      console.warn(`onColor: não resolvi "${input}" para um hex #rrggbb (TOKEN_HEX incompleto?); usando texto claro.`);
+    return ON_LIGHT;
+  }
+  const hx = "#" + norm.slice(0, 6);
+  if (hx.toUpperCase() === BRAND_RED) return ON_LIGHT;
+  const cWhite = _contrast(hx, ON_LIGHT);
+  const cDark = _contrast(hx, ON_DARK);
   const winner = cWhite >= cDark ? ON_LIGHT : ON_DARK;
   const floor = size === "body" ? 4.5 : 3;
   if (Math.max(cWhite, cDark) < floor && typeof console !== "undefined") {
-    console.warn(`onColor: melhor contraste ${Math.max(cWhite, cDark).toFixed(2)}:1 < ${floor}:1 sobre ${norm}; usando ${winner}.`);
+    console.warn(`onColor: melhor contraste ${Math.max(cWhite, cDark).toFixed(2)}:1 < ${floor}:1 sobre ${hx}; usando ${winner}.`);
   }
   return winner;
 }

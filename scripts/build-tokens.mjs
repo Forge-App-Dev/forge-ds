@@ -37,7 +37,6 @@ function walk(node, pathParts, inheritedType) {
       value: node.$value,
       type,
       cssVar: ext["com.forge.cssVar"] || null,
-      light: ext["com.forge.theme"] ? ext["com.forge.theme"].light : undefined,
       description: node.$description || "",
       group: pathParts[0],
     };
@@ -169,7 +168,6 @@ function emitCss(token, theme, seen = new Set()) {
   if (seen.has(token.path + "@" + theme)) fail(`ciclo de referência em ${token.path}`);
   seen.add(token.path + "@" + theme);
   let raw = token.value;
-  if (theme === "light" && token.light !== undefined) raw = token.light;
   if (isRef(raw)) {
     const target = lookup(raw);
     if (!target) fail(`referência não resolve: ${raw} (em ${token.path})`);
@@ -179,53 +177,14 @@ function emitCss(token, theme, seen = new Set()) {
   return serializeScalar(raw, token.type);
 }
 
-// Um token "muda entre temas"? (tem override, ou é alias vivo que aponta
-// para um token que muda). Usado p/ montar o bloco .forge-theme-light.
-function changesInTheme(token, seen = new Set()) {
-  if (seen.has(token.path)) return false;
-  seen.add(token.path);
-  if (token.light !== undefined) return true;
-  if (isRef(token.value)) {
-    const target = lookup(token.value);
-    if (target) return changesInTheme(target, seen);
-  }
-  return false;
-}
-
 // ---------------------------------------------------------------------------
 // 2b. validações (§6.2). Falha aborta antes de escrever.
+// Forge é dark-only (tema único; overlays de tema removidos em 2026-07-14):
+// resta validar que as referências {a.b} resolvem sem ciclos.
 // ---------------------------------------------------------------------------
-function isThemeable(p) {
-  return p.startsWith("semantic.surface.") || p.startsWith("semantic.text.") ||
-    p.startsWith("semantic.border.") || p === "semantic.action.accent" ||
-    p.startsWith("semantic.scrim.") || p === "semantic.feedback.negative";
-}
-function isImmutable(p) {
-  return p.startsWith("primitive.") || p.startsWith("component.") ||
-    p.startsWith("semantic.macro.") || p.startsWith("semantic.category.") ||
-    p.startsWith("semantic.brand-google.") || p.startsWith("semantic.elevation.") ||
-    p.startsWith("aliases.");
-}
-
 function validate() {
-  // §6.2.3 — referências resolvem, sem ciclos (percorre base e light de todos).
-  for (const t of all) {
-    emitCss(t, "base");
-    emitCss(t, "light");
-    if (t.light !== undefined && isRef(t.light) && !lookup(t.light))
-      fail(`override de tema não resolve: ${t.light} (em ${t.path})`);
-  }
-  // §6.2.1 — cobertura de tema: todo token temável produz valor no tema light.
-  for (const t of all) {
-    if (isThemeable(t.path) && !changesInTheme(t))
-      fail(`${t.path}: token temável sem par no tema light (nem alias vivo)`);
-  }
-  // §6.2.2 — pureza do override: nenhum token imutável declara override de tema.
-  for (const t of all) {
-    if (isImmutable(t.path) && t.light !== undefined)
-      fail(`${t.path}: token imutável não pode declarar override de tema`);
-  }
-  console.log(`build-tokens: validações §6.2.1-3 OK (${all.length} tokens; ${emitted.size} emitidos).`);
+  for (const t of all) emitCss(t, "base");
+  console.log(`build-tokens: validações OK (${all.length} tokens; ${emitted.size} emitidos).`);
 }
 
 // §6.2.5 — contraste (warning, não bloqueia).
@@ -248,7 +207,7 @@ function ratio(a, b) {
 function contrastReport() {
   const surfaceRaised = byPath.get("semantic.surface.raised");
   const texts = ["primary", "secondary", "tertiary", "quaternary", "disabled"].map((k) => byPath.get("semantic.text." + k));
-  for (const theme of ["base", "light"]) {
+  for (const theme of ["base"]) {
     const bg = emitCss(surfaceRaised, theme);
     for (const t of texts) {
       const fg = emitCss(t, theme);
@@ -279,14 +238,9 @@ function rootBlock(paths, theme = "base") {
 
 function buildColors() {
   const banner = "/* Forge Design System — color tokens\n" +
-    "   GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens). */\n";
-  const root = rootBlock(plan.colors, "base");
-  const lightPaths = plan.colors.filter((p) => {
-    const t = byPath.get(p);
-    return t.group !== "aliases" && changesInTheme(t);
-  });
-  const light = `\n.forge-theme-light {\n${decls(lightPaths, "light")}\n}\n`;
-  return banner + root + light;
+    "   GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens).\n" +
+    "   Forge é dark-only: tema único, sem bloco .forge-theme-light. */\n";
+  return banner + rootBlock(plan.colors, "base");
 }
 function buildTypography() {
   const header = fs.readFileSync(path.join(TPL, "typography.header.css"), "utf8");
@@ -333,8 +287,7 @@ export interface ForgeTokens {
   duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;
 }
 
-export declare const tokens: ForgeTokens;            // valores do tema base (dark)
-export declare const tokensLight: Partial<ForgeTokens>; // só o que o tema light troca
+export declare const tokens: ForgeTokens;            // valores do tema dark (único)
 `;
 }
 
@@ -363,6 +316,59 @@ function snapshotCheck(file, generated) {
 }
 
 // ---------------------------------------------------------------------------
+// 7.5 — tokens.rn.js: tokens resolvidos para consumo em React Native pelo
+// forge-app (valores literais dp/ms/número/cor/família; sem CSS vars nem a
+// camada de alias). É a fonte única do tema (dark) chegando ao app. Ver OP-002.
+// ---------------------------------------------------------------------------
+function resolveLiteral(token, seen = new Set()) {
+  if (seen.has(token.path)) fail(`ciclo de referência em ${token.path}`);
+  seen.add(token.path);
+  const raw = token.value;
+  if (isRef(raw)) {
+    const target = lookup(raw);
+    if (!target) fail(`referência não resolve: ${raw} (em ${token.path})`);
+    return resolveLiteral(target, seen);
+  }
+  return serializeScalar(raw, token.type);
+}
+function camelVar(cssVar) {
+  return cssVar.replace(/^--(forge-)?/, "").replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase());
+}
+function rnValue(token) {
+  const raw = isRef(token.value) ? lookup(token.value).value : token.value;
+  if (token.type === "fontFamily") {
+    const arr = Array.isArray(raw) ? raw : [raw];
+    return arr.find((f) => !GENERIC_FONTS.has(f)) || String(arr[0]);
+  }
+  if (token.type === "cubicBezier") return Array.isArray(raw) ? raw : String(raw);
+  const lit = resolveLiteral(token);
+  if (token.type === "dimension" || token.type === "number") return parseFloat(lit);
+  if (token.type === "duration") {
+    const m = /^([\d.]+)(ms|s)$/.exec(lit);
+    return m ? (m[2] === "s" ? parseFloat(m[1]) * 1000 : parseFloat(m[1])) : parseFloat(lit);
+  }
+  return lit; // color, keywords (ease/linear), etc.
+}
+function buildTokensRn() {
+  const seen = new Set();
+  const lines = [];
+  for (const f of ["colors", "typography", "spacing", "motion"]) {
+    for (const p of plan[f]) {
+      const t = byPath.get(p);
+      if (t.group === "aliases") continue; // RN não usa a camada de alias CSS
+      const key = camelVar(t.cssVar);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      lines.push(`  ${JSON.stringify(key)}: ${JSON.stringify(rnValue(t))}`);
+    }
+  }
+  return "// GENERATED — do not edit. Fonte: tokens/tokens.json (npm run build:tokens).\n" +
+    "// Tokens do Forge DS resolvidos para React Native (dp/ms/número/cor). Tema dark único.\n" +
+    "// Uso no forge-app: import { tokens } from \"@forge/ds/tokens/tokens.rn.js\";\n" +
+    "export const tokens = {\n" + lines.join(",\n") + "\n};\nexport default tokens;\n";
+}
+
+// ---------------------------------------------------------------------------
 // run
 // ---------------------------------------------------------------------------
 validate();
@@ -377,5 +383,6 @@ const outputs = {
 for (const [file, css] of Object.entries(outputs)) snapshotCheck(file, css);
 for (const [file, css] of Object.entries(outputs)) fs.writeFileSync(path.join(TOKENS, file), css);
 fs.writeFileSync(path.join(ROOT, "tokens.d.ts"), buildDts());
+fs.writeFileSync(path.join(TOKENS, "tokens.rn.js"), buildTokensRn());
 
-console.log("build-tokens: escrito tokens/{colors,typography,spacing,motion}.css + tokens.d.ts");
+console.log("build-tokens: escrito tokens/{colors,typography,spacing,motion}.css + tokens.d.ts + tokens/tokens.rn.js");

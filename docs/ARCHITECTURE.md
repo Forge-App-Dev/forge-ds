@@ -26,9 +26,12 @@ flowchart LR
 ```
 
 - **Claude Design → forge-ds:** só o export inicial (1.0.0). Relação encerrada.
-- **forge-app ↔ forge-ds:** o DS é **espelho** dos primitivos do app hoje. O check-drift
-  (OP-014) usa os `sourceHash` do bundle para detectar divergência. Direção futura
-  (OP §11.2): inverter parcialmente — tokens/specs do DS viram fonte consumida pelo app.
+- **forge-app ↔ forge-ds:** o DS é **espelho** dos primitivos do app hoje. O `check-drift`
+  (OP-014 → ADR-0072) **não** compara o DS contra o forge-app: ele regenera os artefatos
+  locais (`tokens/*.css`, `index.html`, `_ds_bundle.js`, `_ds_manifest.json`, `tokens.d.ts`)
+  e falha se o working tree ficar sujo — garante apenas o **frescor dos artefatos gerados**.
+  Direção futura (OP §11.2): inverter parcialmente — tokens/specs do DS viram fonte consumida
+  pelo app; a vigilância viva DS↔app, se um dia desejada, nasce como check separado.
 - **forge-ds → Pages:** cada push publica; Mateus revisa renderizado.
 - **forge-ds ↔ forge-docs:** a auditoria mora em forge-docs e pauta o `ROADMAP_DS.md`.
 
@@ -65,8 +68,12 @@ flowchart TD
   nunca o contrário.
 - **Import só pelo barrel `index.js`** — o lint (`_adherence`) proíbe importar internals
   de componente. Ver `docs/DS_ARTIFACTS.md`.
-- **Aderência forçada:** hex/px crus e fontes fora de Barlow/Inter são bloqueados; props
-  fora do contrato de cada componente são bloqueadas.
+- **Aderência forçada (o que o CI realmente bloqueia):** o gate `scripts/check-adherence.mjs`
+  bloqueia **hex de cor cru** em `.jsx` de `components/` e `ui_kits/forge-app/` — cor sai sempre
+  de token `var(--forge-*)` (o UI kit tem um allowlist explícito para hexes de terceiros/legados).
+  A verificação de **px cru**, de **fontes** fora de Barlow/Inter e de **props fora do contrato**
+  de cada componente **ainda não está implementada** — hoje são convenção documentada, não
+  bloqueio de build (planejadas).
 
 ## Camadas (do mais estável ao mais volátil)
 `tokens` → `shared` → `primitivos` → `produto` → `ui_kit` / `guidelines`.
