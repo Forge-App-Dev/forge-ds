@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"238de64fbaf3","components/shared/content.js":"57cf29277a4e","components/shared/useDialogA11y.js":"100d4ad58c74","components/icons/Icon.jsx":"6680bd004eb2","components/forms/ListItem.jsx":"5b5bcfe9e288","components/feedback/ring/Ring.jsx":"1ee35e3bff6a","components/core/Button.jsx":"977c74319de9","components/core/Pill.jsx":"b4e5826cf330","components/overlays/full-screen/FullScreen.jsx":"10b3363b1ea2","components/navigation/app-header/AppHeader.jsx":"eeeceb79a7e7","components/core/Card.jsx":"aedbf2ed5047","components/core/ConfirmButton.jsx":"2c76aad76329","components/core/HeaderAction.jsx":"0ca0e1a1f27b","components/feedback/EmptyState.jsx":"8ad2d81b4b17","components/feedback/InlineAlert.jsx":"cbc3294bdd6f","components/feedback/Spinner.jsx":"11faf607399a","components/feedback/StatBadge.jsx":"583b113db746","components/feedback/ErrorState.jsx":"3b1636242bb1","components/feedback/Skeleton.jsx":"e233d83b0487","components/product/TargetsCard.jsx":"9a75a1dfb3b6","components/feedback/loading-screen/LoadingScreen.jsx":"f0aeb5998e6b","components/feedback/macro-meter/MacroMeter.jsx":"db59e5805b16","components/feedback/meta-bar/MetaBar.jsx":"8cf0f3707896","components/feedback/mini-chart/MiniChart.jsx":"3c3de8414156","components/forms/QtyInput.jsx":"f29854957937","components/forms/TextField.jsx":"ff9a0006d63a","components/forms/Switch.jsx":"d6cc9b38df22","components/forms/Stepper.jsx":"51983e79fc5c","components/forms/SearchField.jsx":"c91bb77096a6","components/forms/Select.jsx":"57cee3ef5931","components/layout/screen-body/ScreenBody.jsx":"5be8aaa9b0a7","components/layout/screen/Screen.jsx":"7e3cfb4ed289","components/navigation/module-header/ModuleHeader.jsx":"29320c674b70","components/navigation/module-tab-bar/ModuleTabBar.jsx":"c1a87c78c8d3","components/overlays/VideoModal.jsx":"a51d041051e8","components/overlays/panel/Panel.jsx":"c77533ee4e9c","components/typography/Label.jsx":"3b940f352a95","components/typography/SectionLabel.jsx":"f2df5267e0e9","components/typography/Text.jsx":"33a8af3d8144","components/typography/Title.jsx":"c080ffe76b08","components/dashboard/StatCard.jsx":"62d4f7384fe4","components/dashboard/QuickAction.jsx":"07f6204bc13b","components/onboarding/PageDots.jsx":"ac69324298fd","components/onboarding/Pager.jsx":"d62a8695e858","components/product/PRCelebration.jsx":"d08dc1ffe3ed","components/product/RestTimer.jsx":"4d271347fb43","components/product/SetLogger.jsx":"52c3678b5248","components/core/Divider.jsx":"c82ff978624f","components/forms/Checkbox.jsx":"fb84a0f4a176","components/forms/SegmentedControl.jsx":"827b6f8a4129","components/forms/PasswordField.jsx":"9b3b8b74a8f7","components/forms/Slider.jsx":"9a08fc3293a2","components/forms/FilterChip.jsx":"aceaa6e6197e","components/feedback/ProgressBar.jsx":"d60c3b1864ae","components/feedback/Badge.jsx":"3e034e0ba56b","components/feedback/Avatar.jsx":"0ec309ce008c","components/feedback/MacroRing.jsx":"0a947061b7d9","components/feedback/Timeline.jsx":"b009cb5e7eee","components/navigation/Tabs.jsx":"9a0575237eb0","components/navigation/Accordion.jsx":"180a1f3d4760","components/navigation/WeekStrip.jsx":"03b28be4ecbc","components/product/StreakIndicator.jsx":"6ed03807d56f","components/product/CoachNote.jsx":"4642aa4b9cd1","components/product/OfflineBanner.jsx":"8a135a00ef77","components/feedback/Chart.jsx":"a98077c4a1ce","components/media/ImagePicker.jsx":"13dfd94f26d3"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Pill","sourcePath":"components/core/Pill.jsx"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx"},{"name":"Label","sourcePath":"components/typography/Label.jsx"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx"},{"name":"Text","sourcePath":"components/typography/Text.jsx"},{"name":"Title","sourcePath":"components/typography/Title.jsx"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx"},{"name":"Divider","sourcePath":"components/core/Divider.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx"}],"sourceHashes":{"components/shared/color.js":"0080eb2ac49c","components/shared/content.js":"57cf29277a4e","components/shared/useDialogA11y.js":"100d4ad58c74","components/icons/Icon.jsx":"6680bd004eb2","components/forms/ListItem.jsx":"5b5bcfe9e288","components/feedback/ring/Ring.jsx":"1ee35e3bff6a","components/core/Button.jsx":"942142c2a726","components/core/Pill.jsx":"4d3329a03df8","components/overlays/full-screen/FullScreen.jsx":"10b3363b1ea2","components/navigation/app-header/AppHeader.jsx":"eeeceb79a7e7","components/core/Card.jsx":"aedbf2ed5047","components/core/ConfirmButton.jsx":"02d3eb276d98","components/core/HeaderAction.jsx":"0ca0e1a1f27b","components/feedback/EmptyState.jsx":"8ad2d81b4b17","components/feedback/InlineAlert.jsx":"cbc3294bdd6f","components/feedback/Spinner.jsx":"11faf607399a","components/feedback/StatBadge.jsx":"583b113db746","components/feedback/ErrorState.jsx":"3b1636242bb1","components/feedback/Skeleton.jsx":"e233d83b0487","components/product/TargetsCard.jsx":"9a75a1dfb3b6","components/feedback/loading-screen/LoadingScreen.jsx":"f0aeb5998e6b","components/feedback/macro-meter/MacroMeter.jsx":"db59e5805b16","components/feedback/meta-bar/MetaBar.jsx":"8cf0f3707896","components/feedback/mini-chart/MiniChart.jsx":"3c3de8414156","components/forms/QtyInput.jsx":"f29854957937","components/forms/TextField.jsx":"ff9a0006d63a","components/forms/Switch.jsx":"d6cc9b38df22","components/forms/Stepper.jsx":"51983e79fc5c","components/forms/SearchField.jsx":"c91bb77096a6","components/forms/Select.jsx":"57cee3ef5931","components/layout/screen-body/ScreenBody.jsx":"5be8aaa9b0a7","components/layout/screen/Screen.jsx":"7e3cfb4ed289","components/navigation/module-header/ModuleHeader.jsx":"29320c674b70","components/navigation/module-tab-bar/ModuleTabBar.jsx":"c1a87c78c8d3","components/overlays/VideoModal.jsx":"a51d041051e8","components/overlays/panel/Panel.jsx":"c77533ee4e9c","components/typography/Label.jsx":"3b940f352a95","components/typography/SectionLabel.jsx":"f2df5267e0e9","components/typography/Text.jsx":"33a8af3d8144","components/typography/Title.jsx":"c080ffe76b08","components/dashboard/StatCard.jsx":"62d4f7384fe4","components/dashboard/QuickAction.jsx":"07f6204bc13b","components/onboarding/PageDots.jsx":"ac69324298fd","components/onboarding/Pager.jsx":"d62a8695e858","components/product/PRCelebration.jsx":"d08dc1ffe3ed","components/product/RestTimer.jsx":"4d271347fb43","components/product/SetLogger.jsx":"52c3678b5248","components/core/Divider.jsx":"c82ff978624f","components/forms/Checkbox.jsx":"fb84a0f4a176","components/forms/SegmentedControl.jsx":"ea32f1f070f5","components/forms/PasswordField.jsx":"9b3b8b74a8f7","components/forms/Slider.jsx":"9a08fc3293a2","components/forms/FilterChip.jsx":"44001ed5449c","components/feedback/ProgressBar.jsx":"d60c3b1864ae","components/feedback/Badge.jsx":"3e034e0ba56b","components/feedback/Avatar.jsx":"0ec309ce008c","components/feedback/MacroRing.jsx":"0a947061b7d9","components/feedback/Timeline.jsx":"b009cb5e7eee","components/navigation/Tabs.jsx":"9a0575237eb0","components/navigation/Accordion.jsx":"180a1f3d4760","components/navigation/WeekStrip.jsx":"03b28be4ecbc","components/product/StreakIndicator.jsx":"6ed03807d56f","components/product/CoachNote.jsx":"4642aa4b9cd1","components/product/OfflineBanner.jsx":"8a135a00ef77","components/feedback/Chart.jsx":"a98077c4a1ce","components/media/ImagePicker.jsx":"13dfd94f26d3"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -20,6 +20,8 @@ try { (() => {
 // until then, keep in sync with tokens/colors.css by hand.
 const TOKEN_HEX = {
   "--forge-accent": "#EF4444",
+  "--forge-accent-fill": "#DC2626",
+  "--forge-danger-fill": "#c94b3b",
   "--forge-nutrition": "#10B981",
   "--forge-success": "#10B981",
   "--forge-warning": "#F59E0B",
@@ -60,25 +62,20 @@ function _contrast(a, b) {
 }
 const ON_DARK = "#0B0F19"; // --forge-on-light (texto escuro)
 const ON_LIGHT = "#FFFFFF"; // --forge-on-dark (texto branco)
-const BRAND_RED = "#EF4444"; // lock de marca: branco sobre o vermelho Forge
-
-// onColor(input, { size }) — escolhe o texto legível sobre um preenchimento,
-// por CONTRASTE WCAG real (não mais heurística de luma), com UM brand-lock
-// explícito (ADR-0050 / OP-015):
+// onColor(input, { size }) — escolhe o texto legível sobre um preenchimento por
+// CONTRASTE WCAG real. SEM brand-lock (ADR-0081): os controles preenchidos com
+// texto usam tokens de FILL já escurecidos (--forge-accent-fill #DC2626,
+// --forge-danger-fill #c94b3b), sobre os quais o BRANCO passa 4,5:1 — então o
+// vencedor de contraste é o branco, escolhido honestamente. Forge é DARK-ONLY.
 //   1. resolve token → hex (resolveColor);
-//   2. se for o vermelho de marca #EF4444 → branco, sem calcular (par de marca,
-//      válido a 3:1 em texto grande/negrito — Button/Pill usam peso 800);
-//   3. senão devolve o de MAIOR contraste entre branco e escuro;
-//   4. piso: size="large" (default) → 3:1; size="body" → 4.5:1; abaixo do piso
-//      devolve o vencedor e emite console.warn em dev.
-// Assinatura retrocompatível (2º arg opcional; default "large" = comportamento
-// dos consumidores atuais Button/Pill). Forge é DARK-ONLY: não há par de texto
-// por-tema. Limitação conhecida: TOKEN_HEX é mantido à mão — gerar de
-// tokens.json é follow-up (OP-001 / T-03). Tokens fora do mapa (ex.: cat-ext-*)
-// não têm hex conhecido: onColor avisa em dev e devolve texto claro (default
-// seguro) em vez de calcular contraste sobre um valor inválido.
+//   2. devolve o de MAIOR contraste entre branco e escuro;
+//   3. piso: size="large" (≥18,7px bold) → 3:1; padrão (texto normal) → 4,5:1;
+//      abaixo do piso devolve o vencedor e emite console.warn em dev.
+// Tokens fora do mapa TOKEN_HEX (ex.: cat-ext-*) não têm hex conhecido: avisa em
+// dev e devolve texto claro (default seguro). TOKEN_HEX é mantido à mão — gerar
+// de tokens.json é follow-up (T-03).
 function onColor(input, {
-  size = "large"
+  size = "normal"
 } = {}) {
   const hex = resolveColor(input);
   const norm = String(hex).trim().replace(/^#/, "");
@@ -87,11 +84,10 @@ function onColor(input, {
     return ON_LIGHT;
   }
   const hx = "#" + norm.slice(0, 6);
-  if (hx.toUpperCase() === BRAND_RED) return ON_LIGHT;
   const cWhite = _contrast(hx, ON_LIGHT);
   const cDark = _contrast(hx, ON_DARK);
   const winner = cWhite >= cDark ? ON_LIGHT : ON_DARK;
-  const floor = size === "body" ? 4.5 : 3;
+  const floor = size === "large" ? 3 : 4.5;
   if (Math.max(cWhite, cDark) < floor && typeof console !== "undefined") {
     console.warn(`onColor: melhor contraste ${Math.max(cWhite, cDark).toFixed(2)}:1 < ${floor}:1 sobre ${hx}; usando ${winner}.`);
   }
@@ -984,7 +980,7 @@ function Button({
   const sz = SIZES[size || (small ? "sm" : "lg")] || SIZES.lg;
   const label = title != null ? title : children;
   const isDisabled = disabled || loading;
-  const fill = color || "var(--forge-accent)";
+  const fill = color || "var(--forge-accent-fill)";
   let bg, fg, border;
   if (variant === "secondary") {
     bg = "transparent";
@@ -995,8 +991,8 @@ function Button({
     fg = "var(--forge-text-muted)";
     border = "none";
   } else if (variant === "danger") {
-    bg = "var(--forge-danger)";
-    fg = __ds_scope.onColor("var(--forge-danger)");
+    bg = "var(--forge-danger-fill)";
+    fg = __ds_scope.onColor("var(--forge-danger-fill)");
     border = "none";
   } else {
     bg = fill;
@@ -1071,7 +1067,7 @@ function Pill({
   title,
   onClick,
   active = false,
-  color = "var(--forge-accent)",
+  color = "var(--forge-accent-fill)",
   size = "md",
   icon,
   disabled = false,
@@ -1441,7 +1437,7 @@ function ConfirmButton({
       borderWidth: "var(--forge-border-w-strong)",
       borderStyle: "solid",
       borderColor: "var(--forge-danger)",
-      backgroundColor: arming ? "var(--forge-danger)" : "transparent",
+      backgroundColor: arming ? "var(--forge-danger-fill)" : "transparent",
       color: arming ? "var(--forge-on-dark)" : "var(--forge-danger)",
       fontFamily: "var(--forge-font-body)",
       fontWeight: 700,
@@ -4398,7 +4394,7 @@ function SegmentedControl({
   value,
   onChange,
   label,
-  color = "var(--forge-accent)",
+  color = "var(--forge-accent-fill)",
   disabled = false,
   style
 }) {
@@ -4718,7 +4714,7 @@ function FilterChip({
   active = false,
   onClick,
   count,
-  color = "var(--forge-accent)",
+  color = "var(--forge-accent-fill)",
   icon,
   disabled = false,
   style

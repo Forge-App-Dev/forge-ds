@@ -4,7 +4,7 @@
     "commit": "88fc717",
     "version": "v1.6.0",
     "components": 63,
-    "adrs": 44,
+    "adrs": 45,
     "updatedAt": "2026-07-14",
     "route": "A — faseado: tokens já → componentes RN + react-native-web depois",
     "verdict": "parcialmente-pronto",
@@ -39,7 +39,7 @@
     { "id": "T-22", "phase": "F2", "sev": "def", "status": "todo", "effort": "B", "title": "SearchField: restaurar o anel de foco", "ev": "SearchField.jsx:34 — outline:none inline vence .forge-focusable", "action": "Remover outline inline; :focus-within no wrapper (WCAG 2.4.7).", "note": "" },
     { "id": "T-23", "phase": "F2", "sev": "def", "status": "todo", "effort": "B", "title": "RestTimer: onComplete em ref (fora das deps do effect)", "ev": "RestTimer.jsx:34", "action": "useRef p/ o callback; effect só depende de running/done.", "note": "" },
     { "id": "T-24", "phase": "F2", "sev": "def", "status": "todo", "effort": "B", "title": "Dedup de ICON_NAMES no manifest", "ev": "build-bundle.mjs:225 empurra duas vezes", "action": "Não empurrar ICON_NAMES duas vezes no gerador.", "note": "" },
-    { "id": "T-25", "phase": "F2", "sev": "def", "status": "doing", "effort": "M", "title": "onColor(): piso 4.5:1; revisar o brand-lock", "ev": "color.js — piso 3:1 + brand-lock branco/#EF4444 (3,77:1)", "action": "Piso 4.5 p/ texto normal; decidir brand-lock (texto escuro sobre #EF4444 passa a 4,98:1).", "note": "Parte theme-blind resolvida por dark-only (T-05) + guard endurecido (T-27). Piso/brand-lock é decisão de design do Mateus (muda o visual do botão primário)." },
+    { "id": "T-25", "phase": "F2", "sev": "def", "status": "done", "effort": "M", "title": "onColor(): piso 4.5:1 + tokens de fill de marca (ADR-0081)", "ev": "color.js + tokens.json (accent-fill/danger-fill)", "action": "Fill tokens escurecidos (#DC2626/#c94b3b) p/ o branco passar AA; brand-lock removido; piso padrão 4,5:1.", "note": "Lote 1.1: decisão do conselho = manter branco + fill token (ADR-0081). Branco passa 4,8:1 (accent) / 4,6:1 (danger). Marca #EF4444 preservada p/ texto/anel/marca." },
     { "id": "T-26", "phase": "F2", "sev": "opo", "status": "todo", "effort": "M", "title": "Implementar check-oncolor.mjs como gate de CI", "ev": "ADR-0050 promete o script; não existe", "action": "Falhar o build se qualquer par on-color reprovar o piso.", "note": "" },
     { "id": "T-27", "phase": "F2", "sev": "inc", "status": "done", "effort": "B", "title": "onColor: tratar tokens não mapeados (NaN → warning)", "ev": "color.js — cat-ext-* caíam em NaN e devolviam escuro sem aviso", "action": "Endurecer o guard de hex; avisar em dev; default seguro.", "note": "Lote 1: guard reescrito (regex hex + warning)." },
     { "id": "T-28", "phase": "F2", "sev": "def", "status": "todo", "effort": "B", "title": "reduced-motion: reset global de transition", "ev": "motion.css:29 cobre só 3 classes de keyframe", "action": "@media reduced-motion { *{transition:none} } global.", "note": "" },
@@ -92,6 +92,7 @@
     "Guias de conteúdo e de plataforma (back-button, edge-to-edge, haptics)"
   ],
   "deliveries": [
-    { "date": "2026-07-14", "title": "Lote 1 — base do plano, dark-only e fundação de consumo", "summary": "Plano auto-suficiente no repo (plan.json + build-plan.mjs + README de handoff para IA); fonte Forge (Inter + Barlow Condensed) embutida no dashboard; tema claro removido do código, tokens, artefatos e registros (build+adherence+render OK); tokens.rn.js gerado para consumo em React Native; ADR-0080 de posicionamento; .gitattributes; guard do onColor endurecido; reconciliações de documentação.", "tasks": ["T-00", "T-05", "T-01", "T-02", "T-04", "T-27", "T-13", "T-14", "T-15", "T-16"] }
+    { "date": "2026-07-14", "title": "Lote 1 — base do plano, dark-only e fundação de consumo", "summary": "Plano auto-suficiente no repo (plan.json + build-plan.mjs + README de handoff para IA); fonte Forge (Inter + Barlow Condensed) embutida no dashboard; tema claro removido do código, tokens, artefatos e registros (build+adherence+render OK); tokens.rn.js gerado para consumo em React Native; ADR-0080 de posicionamento; .gitattributes; guard do onColor endurecido; reconciliações de documentação.", "tasks": ["T-00", "T-05", "T-01", "T-02", "T-04", "T-27", "T-13", "T-14", "T-15", "T-16"] },
+    { "date": "2026-07-14", "title": "Lote 1.1 — contraste de marca (fill tokens, WCAG AA)", "summary": "Decisão do conselho sobre o par de cor de marca: manter o branco icônico e o vermelho #EF4444, introduzindo tokens de fill escurecidos (--forge-accent-fill #DC2626, --forge-danger-fill #c94b3b) p/ superfícies preenchidas com texto — branco passa 4,8:1/4,6:1. Brand-lock removido do onColor; piso padrão sobe p/ 4,5:1. ADR-0081. 5 componentes migrados (Button, Pill, FilterChip, SegmentedControl, ConfirmButton).", "tasks": ["T-25"] }
   ]
 }

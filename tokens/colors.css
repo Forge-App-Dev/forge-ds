@@ -15,10 +15,12 @@
   --forge-text-faint: #8C8C94;
   --forge-text-dimmer: #6C6C74;
   --forge-accent: #EF4444;
+  --forge-accent-fill: #DC2626;
   --forge-on-accent: #FFFFFF;
   --forge-success: #10B981;
   --forge-warning: #F59E0B;
   --forge-danger: #e36a5a;
+  --forge-danger-fill: #c94b3b;
   --forge-nutrition: #10B981;
   --forge-macro-protein: #E5645E;
   --forge-macro-carb: #E0A23B;
