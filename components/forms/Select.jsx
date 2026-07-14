@@ -9,13 +9,13 @@ import { ListItem } from "./ListItem.jsx";
 // { value, label, subtitle? }. The trigger looks like a field; the current
 // label (or placeholder) shows with a chevron. Fully keyboard/AT accessible via
 // Panel's dialog semantics and ListItem rows.
-export function Select({ value, options = [], onChange, label, placeholder = "Selecionar", title, disabled = false, style }) {
+export const Select = React.forwardRef(function Select({ value, options = [], onChange, label, placeholder = "Selecionar", title, disabled = false, className, style }, ref) {
   const [open, setOpen] = React.useState(false);
   const rid = React.useId ? React.useId() : "forge-select";
   const current = options.find((o) => o.value === value);
 
   return (
-    <div style={{ marginBottom: 12, ...style }}>
+    <div ref={ref} className={className} style={{ marginBottom: 12, ...style }}>
       {label ? (
         <label
           id={`${rid}-label`}
@@ -61,4 +61,4 @@ export function Select({ value, options = [], onChange, label, placeholder = "Se
       </Panel>
     </div>
   );
-}
+});

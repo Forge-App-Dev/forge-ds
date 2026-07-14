@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Position indicator for a Pager/carousel: the active dot grows into an accent
@@ -12,7 +12,10 @@ export interface PageDotsProps {
   active?: number;
   /** Accent color for the active dot (e.g. a module color). */
   accent?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function PageDots(props: PageDotsProps): JSX.Element;
+export const PageDots: React.ForwardRefExoticComponent<
+  PageDotsProps & React.RefAttributes<HTMLDivElement>
+>;

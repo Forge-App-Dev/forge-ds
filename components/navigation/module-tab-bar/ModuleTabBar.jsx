@@ -9,17 +9,20 @@ import { content } from "../../shared/content.js";
 // O ativo tem um INDICADOR DE FORMA (barra de accent no topo) + peso maior,
 // além da cor — para não depender só de cor (WCAG 1.4.1). Tinta = accent do
 // módulo (ou o accent do DS por padrão).
-export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-accent)", ariaLabel = content.moduleTabBar.nav }) {
+export const ModuleTabBar = React.forwardRef(function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-accent)", ariaLabel = content.moduleTabBar.nav, className, style }, ref) {
   return (
     <nav
+      ref={ref}
       role="navigation"
       aria-label={ariaLabel}
+      className={className}
       style={{
         display: "flex",
         backgroundColor: "var(--forge-panel)",
         borderTop: "var(--forge-border-w) solid var(--forge-divider)",
         paddingBottom: "max(8px, env(safe-area-inset-bottom))",
         paddingInline: 4,
+        ...style,
       }}
     >
       {tabs.map((t) => {
@@ -57,4 +60,4 @@ export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-acc
       })}
     </nav>
   );
-}
+});

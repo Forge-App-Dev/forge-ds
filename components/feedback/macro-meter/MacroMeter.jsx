@@ -7,7 +7,7 @@ import { ProgressBar } from "../ProgressBar.jsx";
 //
 // Domain wrapper over ProgressBar (OP-124): the bar is a ProgressBar; MacroMeter
 // adds the macro dot, label and value/target readout around it.
-export function MacroMeter({ label, color, value, target, unit = "g", compact = false }) {
+export const MacroMeter = React.forwardRef(function MacroMeter({ label, color, value, target, unit = "g", compact = false, className, style }, ref) {
   const pct = target > 0 ? Math.min(1, value / target) : 0;
   const bar = (
     <ProgressBar
@@ -22,7 +22,7 @@ export function MacroMeter({ label, color, value, target, unit = "g", compact = 
 
   if (compact) {
     return (
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <div ref={ref} className={className} style={{ display: "flex", alignItems: "center", gap: 8, ...style }}>
         <span style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: color, display: "inline-block", flexShrink: 0 }} />
         <div style={{ flex: 1 }}>{bar}</div>
         <span style={{ color: "var(--forge-text-dim)", fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 11, flexShrink: 0 }}>
@@ -32,7 +32,7 @@ export function MacroMeter({ label, color, value, target, unit = "g", compact = 
     );
   }
   return (
-    <div style={{ marginBottom: 10 }}>
+    <div ref={ref} className={className} style={{ marginBottom: 10, ...style }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
           <span style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: color, display: "inline-block" }} />
@@ -45,4 +45,4 @@ export function MacroMeter({ label, color, value, target, unit = "g", compact = 
       {bar}
     </div>
   );
-}
+});

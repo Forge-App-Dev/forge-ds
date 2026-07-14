@@ -6,6 +6,6 @@ import { Button } from "./Button.jsx";
 // Button variant="secondary" size="sm". Kept as a thin alias so existing
 // call sites keep working; prefer <Button variant="secondary" size="sm" /> in
 // new code.
-export function HeaderAction({ title, onClick, ...rest }) {
-  return <Button variant="secondary" size="sm" title={title} onClick={onClick} {...rest} />;
-}
+export const HeaderAction = React.forwardRef(function HeaderAction({ title, onClick, ...rest }, ref) {
+  return <Button ref={ref} variant="secondary" size="sm" title={title} onClick={onClick} {...rest} />;
+});

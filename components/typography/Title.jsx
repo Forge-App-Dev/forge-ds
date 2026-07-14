@@ -13,12 +13,14 @@ const SIZE = {
   cardTitle: { fontSize: "var(--forge-text-card-title)", lineHeight: "var(--forge-lh-card-title)", textTransform: "none", letterSpacing: 0, fontFamily: "var(--forge-font-body)", fontWeight: 700 },
 };
 
-export function Title({ children, size = "screenTitle", color = "var(--forge-text)", as = "div", style }) {
+export const Title = React.forwardRef(function Title({ children, size = "screenTitle", color = "var(--forge-text)", as = "div", className, style }, ref) {
   const El = as;
   const s = SIZE[size] || SIZE.screenTitle;
   const isCard = size === "cardTitle";
   return (
     <El
+      ref={ref}
+      className={className}
       style={{
         fontFamily: "var(--forge-font-title)",
         fontWeight: 700,
@@ -32,4 +34,4 @@ export function Title({ children, size = "screenTitle", color = "var(--forge-tex
       {children}
     </El>
   );
-}
+});

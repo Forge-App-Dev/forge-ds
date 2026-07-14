@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode, ForwardRefExoticComponent, RefAttributes } from "react";
 
 /**
  * Full-bleed video overlay (near-black scrim) for an exercise demo — pass a
@@ -11,6 +11,8 @@ export interface VideoModalProps {
   onClose: () => void;
   title: string;
   children?: ReactNode;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function VideoModal(props: VideoModalProps): JSX.Element;
+export const VideoModal: ForwardRefExoticComponent<VideoModalProps & RefAttributes<HTMLDivElement>>;

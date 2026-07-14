@@ -16,7 +16,7 @@ import { content } from "../shared/content.js";
 // `exercise` + `value`/`unit` name the record; `previous` optionally shows the
 // mark it beat. role="status" + aria-live announces it to screen readers.
 // `accent` themes the ring/trophy (sibling apps / module color).
-export function PRCelebration({
+export const PRCelebration = React.forwardRef(function PRCelebration({
   title = content.prCelebration.title,
   exercise,
   value,
@@ -25,13 +25,16 @@ export function PRCelebration({
   onContinue,
   continueLabel = content.prCelebration.continueLabel,
   accent,
+  className,
   style,
-}) {
+}, ref) {
   const tint = accent || "var(--forge-accent)";
   return (
     <div
+      ref={ref}
       role="status"
       aria-live="polite"
+      className={className}
       style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "var(--forge-space-8)", padding: "var(--forge-space-16) var(--forge-space-10)", ...style }}
     >
       <div className="forge-anim-celebrate" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-8)" }}>
@@ -61,4 +64,4 @@ export function PRCelebration({
       {onContinue ? <Button variant="primary" size="lg" color={accent} title={continueLabel} onClick={onContinue} /> : null}
     </div>
   );
-}
+});

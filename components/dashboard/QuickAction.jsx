@@ -9,13 +9,14 @@ import { Icon } from "../icons/Icon";
 // `accent` tints the icon chip (e.g. a module color); omit for neutral.
 // `badge` shows a small count dot (e.g. pending items). No product copy lives
 // here — `icon`/`label` are supplied by the screen.
-export function QuickAction({ icon, label, onClick, accent, badge, disabled = false, style }) {
+export const QuickAction = React.forwardRef(function QuickAction({ icon, label, onClick, accent, badge, disabled = false, className, style }, ref) {
   const [pressed, setPressed] = React.useState(false);
   const tint = accent || "var(--forge-accent)";
 
   return (
     <button
-      className="forge-focusable"
+      ref={ref}
+      className={className ? `forge-focusable ${className}` : "forge-focusable"}
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
       onMouseDown={() => setPressed(true)}
@@ -55,4 +56,4 @@ export function QuickAction({ icon, label, onClick, accent, badge, disabled = fa
       </span>
     </button>
   );
-}
+});

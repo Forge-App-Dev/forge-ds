@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -20,7 +21,10 @@ export interface CheckboxProps {
   disabled?: boolean;
   /** Fallback id used when `React.useId` is unavailable. */
   id?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Checkbox(props: CheckboxProps): JSX.Element;
+export const Checkbox: React.ForwardRefExoticComponent<
+  CheckboxProps & React.RefAttributes<HTMLElement>
+>;

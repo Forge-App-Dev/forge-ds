@@ -7,7 +7,7 @@ import React from "react";
 // name (the field has no visible label), and comma→dot normalization so a
 // pt-BR "1,5" becomes "1.5" (ADR-0056). The unit is a separate control, not
 // merged into the number's accessible name.
-export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
+export const QtyInput = React.forwardRef(function QtyInput({ qty, unit = "g", units = ["g"], onChange, className, style }, ref) {
   const cycleUnit = () => {
     const i = units.indexOf(unit);
     const next = units[(i + 1) % units.length];
@@ -18,7 +18,7 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
   const normalizeQty = (raw) => raw.replace(/[^\d,.]/g, "").replace(/,/g, ".");
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+    <div ref={ref} className={className} style={{ display: "flex", alignItems: "center", gap: 6, ...style }}>
       <input
         value={qty ?? ""}
         inputMode="decimal"
@@ -64,4 +64,4 @@ export function QtyInput({ qty, unit = "g", units = ["g"], onChange }) {
       )}
     </div>
   );
-}
+});

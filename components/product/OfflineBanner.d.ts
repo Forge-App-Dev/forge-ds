@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import * as React from "react";
 
 /**
  * Persistent inline banner for the offline/sync state. The system has no
@@ -15,8 +15,11 @@ export interface OfflineBannerProps {
   /** Handler for the optional action button. */
   onAction?: () => void;
   /** Custom body content, replacing `message`. */
-  children?: ReactNode;
-  style?: CSSProperties;
+  children?: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function OfflineBanner(props: OfflineBannerProps): JSX.Element;
+export const OfflineBanner: React.ForwardRefExoticComponent<
+  OfflineBannerProps & React.RefAttributes<HTMLDivElement>
+>;

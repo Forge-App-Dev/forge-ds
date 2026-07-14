@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -16,13 +17,16 @@ export interface FilterChipProps {
   onClick?: () => void;
   /** Optional result count shown as a small badge. */
   count?: number;
-  /** Fill/border color when active (token ref or hex). Default `var(--forge-accent)`. */
+  /** Fill/border color when active (token ref or hex). Default `var(--forge-accent-fill)`. */
   color?: string;
   /** Optional leading icon (an `ICON_NAMES` glyph). */
   icon?: string;
   /** Disables interaction and dims the chip. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function FilterChip(props: FilterChipProps): JSX.Element;
+export const FilterChip: React.ForwardRefExoticComponent<
+  FilterChipProps & React.RefAttributes<HTMLElement>
+>;

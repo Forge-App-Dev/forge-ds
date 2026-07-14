@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 /**
  * Generic linear progress primitive — a single fill over a track, or a stacked
@@ -26,7 +26,10 @@ export interface ProgressBarProps {
   valueMax?: number;
   /** Draw hairline dividers between segments (the striped meter look). */
   separators?: boolean;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function ProgressBar(props: ProgressBarProps): JSX.Element;
+export const ProgressBar: React.ForwardRefExoticComponent<
+  ProgressBarProps & React.RefAttributes<HTMLDivElement>
+>;

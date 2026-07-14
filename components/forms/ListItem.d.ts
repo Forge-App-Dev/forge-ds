@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties, ReactNode } from "react";
 
 /**
@@ -19,9 +20,14 @@ export interface ListItemProps {
   onClick?: () => void;
   /** Force the trailing chevron on/off. Defaults to `true` when pressable and no `trailing`. */
   showChevron?: boolean;
+  /** Marks the row as the current selection (`aria-current`); used by Select. Default `false`. */
+  selected?: boolean;
   /** Dims the row and blocks interaction. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function ListItem(props: ListItemProps): JSX.Element;
+export const ListItem: React.ForwardRefExoticComponent<
+  ListItemProps & React.RefAttributes<HTMLElement>
+>;

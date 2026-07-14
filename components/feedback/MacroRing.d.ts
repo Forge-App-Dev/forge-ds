@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import * as React from "react";
 
 /**
  * Macro-distribution ring — a composed pattern over Ring that stacks
@@ -20,12 +20,15 @@ export interface MacroRingProps {
   /** Ring stroke width in px. Default `12`. */
   stroke?: number;
   /** Content rendered inside the ring (e.g. total kcal). */
-  center?: ReactNode;
+  center?: React.ReactNode;
   /** Show the color+label+value legend. Default `true`. */
   legend?: boolean;
   /** Override the computed accessible label on the ring. */
   label?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function MacroRing(props: MacroRingProps): JSX.Element;
+export const MacroRing: React.ForwardRefExoticComponent<
+  MacroRingProps & React.RefAttributes<HTMLDivElement>
+>;

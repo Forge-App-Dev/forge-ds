@@ -15,14 +15,14 @@ import React from "react";
 // polite live region ONLY when a determinate progress reaches 100% (e.g. "Série
 // concluída"). Additive — with no `announce` prop nothing changes; it never
 // affects the visual or the default aria-* behavior.
-export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--forge-accent)", track = "var(--forge-surface-raised)", children, indeterminate = false, segments, label, announce }) {
+export const Ring = React.forwardRef(function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--forge-accent)", track = "var(--forge-surface-raised)", children, indeterminate = false, segments, label, announce, className, style }, ref) {
   const r = (size - stroke) / 2;
   const circ = 2 * Math.PI * r;
   const wrap = { position: "relative", width: size, height: size, display: "flex", alignItems: "center", justifyContent: "center" };
 
   if (indeterminate) {
     return (
-      <div style={wrap} role="progressbar" aria-label={label || "Carregando"}>
+      <div ref={ref} className={className} style={{ ...wrap, ...style }} role="progressbar" aria-label={label || "Carregando"}>
         <svg width={size} height={size} style={{ position: "absolute" }}>
           <circle cx={size / 2} cy={size / 2} r={r} style={{ stroke: track }} strokeWidth={stroke} fill="none" />
         </svg>
@@ -37,7 +37,7 @@ export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--for
   if (segments && segments.length) {
     let acc = 0;
     return (
-      <div style={wrap} role="img" aria-label={label || "Progresso segmentado"}>
+      <div ref={ref} className={className} style={{ ...wrap, ...style }} role="img" aria-label={label || "Progresso segmentado"}>
         <svg width={size} height={size} style={{ position: "absolute", transform: "rotate(-90deg)" }}>
           <circle cx={size / 2} cy={size / 2} r={r} style={{ stroke: track }} strokeWidth={stroke} fill="none" />
           {segments.map((seg, i) => {
@@ -69,7 +69,7 @@ export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--for
   const clamped = Math.max(0, Math.min(1, progress));
   const offset = circ * (1 - clamped);
   return (
-    <div style={wrap} role="progressbar" aria-valuenow={Math.round(clamped * 100)} aria-valuemin={0} aria-valuemax={100} aria-label={label}>
+    <div ref={ref} className={className} style={{ ...wrap, ...style }} role="progressbar" aria-valuenow={Math.round(clamped * 100)} aria-valuemin={0} aria-valuemax={100} aria-label={label}>
       <svg width={size} height={size} style={{ position: "absolute", transform: "rotate(-90deg)" }}>
         <circle cx={size / 2} cy={size / 2} r={r} style={{ stroke: track }} strokeWidth={stroke} fill="none" />
         <circle
@@ -90,4 +90,4 @@ export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--for
       ) : null}
     </div>
   );
-}
+});

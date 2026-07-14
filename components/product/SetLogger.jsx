@@ -13,7 +13,7 @@ import { content } from "../shared/content.js";
 // report edits via `onWeightChange`/`onRepsChange`. `done`/`onToggleDone` mark
 // completion (the row dims + the check fills). `weightStep` defaults to 2.5kg,
 // `repsStep` to 1. `accent` themes the checked state.
-export function SetLogger({
+export const SetLogger = React.forwardRef(function SetLogger({
   set,
   weight = 0,
   reps = 0,
@@ -25,11 +25,14 @@ export function SetLogger({
   weightStep = 2.5,
   repsStep = 1,
   accent,
+  className,
   style,
-}) {
+}, ref) {
   const tint = accent || "var(--forge-accent)";
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         display: "flex",
         alignItems: "center",
@@ -85,4 +88,4 @@ export function SetLogger({
       </button>
     </div>
   );
-}
+});

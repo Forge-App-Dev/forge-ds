@@ -11,12 +11,12 @@ import { Icon } from "../icons/Icon";
 // `icon` renders a glyph chip instead of a plain dot; `color` tints the marker
 // (falls back to `accent`). The connecting line is drawn between markers and
 // omitted after the last item.
-export function Timeline({ items = [], accent, style }) {
+export const Timeline = React.forwardRef(function Timeline({ items = [], accent, className, style }, ref) {
   const tint = accent || "var(--forge-accent)";
   const list = Array.isArray(items) ? items : [];
 
   return (
-    <ol style={{ listStyle: "none", margin: 0, padding: 0, ...style }}>
+    <ol ref={ref} className={className} style={{ listStyle: "none", margin: 0, padding: 0, ...style }}>
       {list.map((item, i) => {
         const last = i === list.length - 1;
         const color = item.color || tint;
@@ -83,4 +83,4 @@ export function Timeline({ items = [], accent, style }) {
       })}
     </ol>
   );
-}
+});

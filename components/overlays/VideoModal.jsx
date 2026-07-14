@@ -6,18 +6,20 @@ import { useDialogA11y } from "../shared/useDialogA11y.js";
 // the ✕ closes it. On native this wraps react-native-youtube-iframe (raw
 // WebView iframes fail on Android — see readme "known pitfalls"). Accessible
 // dialog: role + aria-modal, Escape, focus trap, scroll lock.
-export function VideoModal({ visible, onClose, title, children }) {
-  const ref = useDialogA11y(visible, onClose);
+export const VideoModal = React.forwardRef(function VideoModal({ visible, onClose, title, children, className, style }, ref) {
+  const dialogRef = useDialogA11y(visible, onClose);
   const rid = React.useId ? React.useId() : "forge-video";
   const titleId = `${rid}-title`;
   if (!visible) return null;
   return (
     <div
+      ref={ref}
+      className={className}
       onClick={onClose}
-      style={{ position: "fixed", inset: 0, backgroundColor: "var(--forge-scrim-heavy)", display: "flex", flexDirection: "column", zIndex: "var(--forge-z-video)" }}
+      style={{ position: "fixed", inset: 0, backgroundColor: "var(--forge-scrim-heavy)", display: "flex", flexDirection: "column", zIndex: "var(--forge-z-video)", ...style }}
     >
       <div
-        ref={ref}
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? titleId : undefined}
@@ -44,4 +46,4 @@ export function VideoModal({ visible, onClose, title, children }) {
       </div>
     </div>
   );
-}
+});

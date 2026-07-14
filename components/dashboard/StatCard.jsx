@@ -17,7 +17,7 @@ import { MiniChart } from "../feedback/mini-chart/MiniChart.jsx";
 // omitted the cell is neutral. `chart` takes MiniChart props ({ values,
 // variant, color }); `trend` takes StatBadge props ({ value, unit,
 // goodDirection }).
-export function StatCard({
+export const StatCard = React.forwardRef(function StatCard({
   label,
   value,
   unit,
@@ -27,8 +27,9 @@ export function StatCard({
   chart,
   caption,
   onClick,
+  className,
   style,
-}) {
+}, ref) {
   const head = (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--forge-space-6)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-4)", minWidth: 0 }}>
@@ -46,7 +47,7 @@ export function StatCard({
   );
 
   return (
-    <Card stripeColor={accent} onClick={onClick} style={{ marginBottom: 0, ...style }}>
+    <Card ref={ref} stripeColor={accent} onClick={onClick} className={className} style={{ marginBottom: 0, ...style }}>
       {head}
       <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-2)", marginTop: "var(--forge-space-5)" }}>
         <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 30, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
@@ -58,4 +59,4 @@ export function StatCard({
       {chart ? <div style={{ marginTop: "var(--forge-space-6)" }}><MiniChart {...chart} /></div> : null}
     </Card>
   );
-}
+});

@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from "react";
 
 /**
  * Body-copy primitive (Inter) — the everyday-text component so screens stop
@@ -16,7 +16,10 @@ export interface TextProps {
   color?: string;
   /** Rendered element. Default `"span"`. */
   as?: "span" | "div" | "p" | "label";
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Text(props: TextProps): JSX.Element;
+export declare const Text: React.ForwardRefExoticComponent<
+  TextProps & React.RefAttributes<HTMLElement>
+>;

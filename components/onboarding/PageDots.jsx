@@ -5,10 +5,10 @@ import React from "react";
 // token rule (accent ativo, dimmer inativo). Presentational only: it's marked
 // aria-hidden because the Pager owns the spoken "página X de N" announcement —
 // duplicating it here would make a screen reader say the position twice.
-export function PageDots({ count = 0, active = 0, accent, style }) {
+export const PageDots = React.forwardRef(function PageDots({ count = 0, active = 0, accent, className, style }, ref) {
   const on = accent || "var(--forge-accent)";
   return (
-    <div aria-hidden="true" style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-3)", ...style }}>
+    <div ref={ref} aria-hidden="true" className={className} style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-3)", ...style }}>
       {Array.from({ length: count }, (_, i) => {
         const isActive = i === active;
         return (
@@ -26,4 +26,4 @@ export function PageDots({ count = 0, active = 0, accent, style }) {
       })}
     </div>
   );
-}
+});

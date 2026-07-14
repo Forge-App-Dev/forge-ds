@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
@@ -25,7 +26,10 @@ export interface SliderProps {
   color?: string;
   /** Disables interaction and dims the control. Default `false`. */
   disabled?: boolean;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Slider(props: SliderProps): JSX.Element;
+export const Slider: React.ForwardRefExoticComponent<
+  SliderProps & React.RefAttributes<HTMLElement>
+>;

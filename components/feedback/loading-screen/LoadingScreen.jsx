@@ -4,9 +4,9 @@ import { content } from "../../shared/content.js";
 // LoadingScreen — the signature boot/loading treatment: spinning Ring arc +
 // pulsing brand mark + wordmark + status caption. markSrc should point at
 // assets/forge-mark.svg. Default caption comes from shared/content.js (i18n seam).
-export function LoadingScreen({ markSrc, message = content.loadingScreen.message }) {
+export const LoadingScreen = React.forwardRef(function LoadingScreen({ markSrc, message = content.loadingScreen.message, className, style }, ref) {
   return (
-    <div role="status" aria-live="polite" style={{ minHeight: "100dvh", backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14 }}>
+    <div ref={ref} className={className} role="status" aria-live="polite" style={{ minHeight: "100dvh", backgroundColor: "var(--forge-bg)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, ...style }}>
       <div style={{ position: "relative", width: 72, height: 72 }}>
         <svg width="72" height="72" style={{ position: "absolute", inset: 0 }}>
           <circle cx="36" cy="36" r="31" fill="none" stroke="var(--forge-border)" strokeWidth="5" />
@@ -24,4 +24,4 @@ export function LoadingScreen({ markSrc, message = content.loadingScreen.message
       <div style={{ color: "var(--forge-text-dimmer)", fontFamily: "var(--forge-font-body)", fontSize: 12 }}>{message}</div>
     </div>
   );
-}
+});

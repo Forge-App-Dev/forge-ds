@@ -6,7 +6,7 @@ import { content } from "../shared/content.js";
 // state is announced to screen readers via an aria-live region, and the
 // button's accessible name updates to the confirm label. Min height is 44px
 // (a11y tap target) even in the compact form.
-export function ConfirmButton({ title = content.confirmButton.title, confirmTitle = content.confirmButton.confirmTitle, onConfirm, small = true, style }) {
+export const ConfirmButton = React.forwardRef(function ConfirmButton({ title = content.confirmButton.title, confirmTitle = content.confirmButton.confirmTitle, onConfirm, small = true, className, style }, ref) {
   const [arming, setArming] = React.useState(false);
   const timer = React.useRef(null);
   React.useEffect(() => () => clearTimeout(timer.current), []);
@@ -25,7 +25,8 @@ export function ConfirmButton({ title = content.confirmButton.title, confirmTitl
   return (
     <>
       <button
-        className="forge-focusable"
+        ref={ref}
+        className={["forge-focusable", className].filter(Boolean).join(" ")}
         onClick={press}
         aria-label={arming ? confirmTitle : title}
         style={{
@@ -53,4 +54,4 @@ export function ConfirmButton({ title = content.confirmButton.title, confirmTitl
       </span>
     </>
   );
-}
+});

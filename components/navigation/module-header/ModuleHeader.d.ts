@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode, ForwardRefExoticComponent, RefAttributes } from "react";
 
 /**
  * Screen-top header — small uppercase eyebrow line + large Barlow Condensed
@@ -9,6 +9,8 @@ export interface ModuleHeaderProps {
   eyebrow?: string;
   title: string;
   right?: ReactNode;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function ModuleHeader(props: ModuleHeaderProps): JSX.Element;
+export const ModuleHeader: ForwardRefExoticComponent<ModuleHeaderProps & RefAttributes<HTMLDivElement>>;

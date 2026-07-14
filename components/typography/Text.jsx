@@ -13,11 +13,13 @@ const SIZE = {
   chip: { fontSize: "var(--forge-text-chip)", lineHeight: "var(--forge-lh-chip)" },
 };
 
-export function Text({ children, size = "body", weight, color = "var(--forge-text)", as = "span", style }) {
+export const Text = React.forwardRef(function Text({ children, size = "body", weight, color = "var(--forge-text)", as = "span", className, style }, ref) {
   const El = as;
   const s = SIZE[size] || SIZE.body;
   return (
     <El
+      ref={ref}
+      className={className}
       style={{
         fontFamily: "var(--forge-font-body)",
         color,
@@ -29,4 +31,4 @@ export function Text({ children, size = "body", weight, color = "var(--forge-tex
       {children}
     </El>
   );
-}
+});

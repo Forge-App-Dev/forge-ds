@@ -11,10 +11,12 @@ import { Icon } from "../icons/Icon";
 // (no role="alert"/"status", no live region) — it's ambient encouragement in
 // the flow of the screen. Keep the copy on-voice: sentence case, "você", no
 // emoji (the Feather icon is the only iconography).
-export function CoachNote({ children, icon = "flame", accent, style }) {
+export const CoachNote = React.forwardRef(function CoachNote({ children, icon = "flame", accent, className, style }, ref) {
   const tint = accent || "var(--forge-accent)";
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         display: "flex",
         alignItems: "center",
@@ -56,4 +58,4 @@ export function CoachNote({ children, icon = "flame", accent, style }) {
       </p>
     </div>
   );
-}
+});

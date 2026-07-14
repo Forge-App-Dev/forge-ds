@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode, ForwardRefExoticComponent, RefAttributes } from "react";
 
 /**
  * Full-screen slide-in flow with its own header (close ✕, uppercase title,
@@ -9,10 +9,14 @@ import { ReactNode } from "react";
 export interface FullScreenProps {
   visible?: boolean;
   onClose: () => void;
+  /** Guard run before close — return `false` to cancel (e.g. discard-changes prompt). */
+  onBeforeClose?: () => boolean | void;
   title: string;
   right?: ReactNode;
   children?: ReactNode;
   footer?: ReactNode;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function FullScreen(props: FullScreenProps): JSX.Element;
+export const FullScreen: ForwardRefExoticComponent<FullScreenProps & RefAttributes<HTMLDivElement>>;

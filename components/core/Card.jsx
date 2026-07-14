@@ -7,7 +7,7 @@ import React from "react";
 // `header`/`footer` are optional slots rendered above/below the body inside the
 // content column. When a stripe is present the body padding is slightly larger
 // so text clears the stripe.
-export function Card({ children, stripeColor, onClick, selected = false, header, footer, disabled = false, style }) {
+export const Card = React.forwardRef(function Card({ children, stripeColor, onClick, selected = false, header, footer, disabled = false, className, style }, ref) {
   const pressable = typeof onClick === "function";
   const [pressed, setPressed] = React.useState(false);
 
@@ -40,7 +40,8 @@ export function Card({ children, stripeColor, onClick, selected = false, header,
   if (pressable) {
     return (
       <button
-        className="forge-focusable"
+        ref={ref}
+        className={["forge-focusable", className].filter(Boolean).join(" ")}
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
         aria-pressed={selected || undefined}
@@ -56,5 +57,5 @@ export function Card({ children, stripeColor, onClick, selected = false, header,
     );
   }
 
-  return <div style={base}>{inner}</div>;
-}
+  return <div ref={ref} className={className} style={base}>{inner}</div>;
+});

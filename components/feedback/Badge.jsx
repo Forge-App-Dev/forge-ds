@@ -8,7 +8,7 @@ import React from "react";
 // A dot carries no text, so give it a `label` when it's the only signal (else
 // it's treated as decorative). A count is visible text; `label` overrides its
 // accessible name (e.g. "3 alertas não lidos" instead of just "3").
-export function Badge({ count, dot = false, variant = "accent", label, style }) {
+export const Badge = React.forwardRef(function Badge({ count, dot = false, variant = "accent", label, className, style }, ref) {
   const neutral = variant === "neutral";
   const bg = neutral ? "var(--forge-surface-raised)" : "var(--forge-accent)";
   const fg = neutral ? "var(--forge-text)" : "var(--forge-on-accent)";
@@ -16,6 +16,8 @@ export function Badge({ count, dot = false, variant = "accent", label, style }) 
   if (dot) {
     return (
       <span
+        ref={ref}
+        className={className}
         aria-label={label}
         aria-hidden={label ? undefined : true}
         style={{ display: "inline-block", width: 8, height: 8, borderRadius: "var(--forge-radius-pill)", backgroundColor: bg, ...style }}
@@ -25,6 +27,8 @@ export function Badge({ count, dot = false, variant = "accent", label, style }) 
 
   return (
     <span
+      ref={ref}
+      className={className}
       aria-label={label}
       style={{
         minWidth: 18,
@@ -47,4 +51,4 @@ export function Badge({ count, dot = false, variant = "accent", label, style }) 
       {count}
     </span>
   );
-}
+});

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import * as React from "react";
 
 /**
  * Ring — the system's signature progress element (background track + accent
@@ -12,7 +12,7 @@ export interface RingProps {
   progress?: number;
   color?: string;
   track?: string;
-  children?: ReactNode;
+  children?: React.ReactNode;
   /** Continuously-spinning loading variant — ignores `progress`/`segments`. */
   indeterminate?: boolean;
   /** Multiple stacked segments on one ring (e.g. protein+carb+fat at once) instead of a single progress arc — each `{ value: 0..1, color }`. */
@@ -21,6 +21,10 @@ export interface RingProps {
   label?: string;
   /** Optional message announced to screen readers (polite live region) only when a determinate `progress` reaches 100% — e.g. "Série concluída". Additive; no effect on the visual or default behavior. */
   announce?: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Ring(props: RingProps): JSX.Element;
+export const Ring: React.ForwardRefExoticComponent<
+  RingProps & React.RefAttributes<HTMLDivElement>
+>;

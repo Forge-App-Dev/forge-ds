@@ -6,9 +6,9 @@ import { Icon } from "../icons/Icon";
 // "no items yet" lists. Pass `action` (e.g. a <Button small />) to offer the
 // natural next step ("criar o primeiro X") — an empty state without a way
 // forward is a dead end (OP-127).
-export function EmptyState({ icon = "moon", title, subtitle, action }) {
+export const EmptyState = React.forwardRef(function EmptyState({ icon = "moon", title, subtitle, action, className, style }, ref) {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-6)", backgroundColor: "var(--forge-surface)", border: "var(--forge-border-w) solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: "var(--forge-space-8)" }}>
+    <div ref={ref} className={className} style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-6)", backgroundColor: "var(--forge-surface)", border: "var(--forge-border-w) solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: "var(--forge-space-8)", ...style }}>
       <div style={{ width: 34, height: 34, borderRadius: "var(--forge-radius-chip)", backgroundColor: "var(--forge-surface-raised)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
         <Icon name={icon} color="var(--forge-text-faint)" size={16} />
       </div>
@@ -19,4 +19,4 @@ export function EmptyState({ icon = "moon", title, subtitle, action }) {
       {action || null}
     </div>
   );
-}
+});

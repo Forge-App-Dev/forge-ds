@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, ForwardRefExoticComponent, RefAttributes } from "react";
 
 /**
  * In-screen tabs for switching a view within a screen (e.g. Semana/Mês).
@@ -17,7 +17,8 @@ export interface TabsProps {
   idBase?: string;
   /** Panel content for the active tab — wired as role="tabpanel". */
   children?: ReactNode;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function Tabs(props: TabsProps): JSX.Element;
+export const Tabs: ForwardRefExoticComponent<TabsProps & RefAttributes<HTMLDivElement>>;

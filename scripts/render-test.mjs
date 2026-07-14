@@ -49,7 +49,8 @@ const cases = [
 let mounted = 0;
 for (const [name, props] of cases) {
   const C = ns[name];
-  if (typeof C !== "function") { console.error(`render-test: componente ausente no bundle: ${name}`); process.exit(1); }
+  // Componentes forwardRef/memo são OBJETOS exóticos (têm $$typeof), não funções.
+  if (!C || (typeof C !== "function" && !C.$$typeof)) { console.error(`render-test: componente ausente no bundle: ${name}`); process.exit(1); }
   try {
     const html = ReactDOMServer.renderToStaticMarkup(P(C, props));
     if (!html) throw new Error("render vazio");

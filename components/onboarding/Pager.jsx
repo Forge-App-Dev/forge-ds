@@ -16,7 +16,7 @@ import { content } from "../shared/content.js";
 // slides. Accessible: a live region announces "Slide X de N" on change and
 // inactive slides are aria-hidden, so a screen reader reads only the current
 // one. `accent` themes the dots + CTA (e.g. a sibling-app color).
-export function Pager({
+export const Pager = React.forwardRef(function Pager({
   pages = [],
   initialPage = 0,
   onPageChange,
@@ -26,8 +26,9 @@ export function Pager({
   nextLabel = content.pager.nextLabel,
   doneLabel = content.pager.doneLabel,
   accent,
+  className,
   style,
-}) {
+}, ref) {
   const count = pages.length;
   if (count > 3 && typeof console !== "undefined") {
     console.warn(`Pager: onboarding deve ter no máximo 3 telas (recebeu ${count}) — ver OP-062.`);
@@ -42,10 +43,11 @@ export function Pager({
 
   return (
     <section
+      ref={ref}
       aria-roledescription="carrossel"
       aria-label="Introdução"
       tabIndex={0}
-      className="forge-focusable"
+      className={className ? `forge-focusable ${className}` : "forge-focusable"}
       onKeyDown={(e) => {
         if (e.key === "ArrowRight") { e.preventDefault(); go(page + 1); }
         else if (e.key === "ArrowLeft") { e.preventDefault(); go(page - 1); }
@@ -79,4 +81,4 @@ export function Pager({
       </footer>
     </section>
   );
-}
+});

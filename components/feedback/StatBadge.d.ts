@@ -1,3 +1,5 @@
+import * as React from "react";
+
 /**
  * Small trend/delta indicator — up/down arrow + signed value, colored by
  * whether that direction is the good outcome for this particular stat.
@@ -8,6 +10,12 @@ export interface StatBadgeProps {
   unit?: string;
   /** Which direction counts as a good outcome for this stat — "down" for weight lost, "up" for reps/PRs gained. Default "down". */
   goodDirection?: "down" | "up";
+  /** Absolute value below which the change reads as flat (dash "—"). Default `0.05`. */
+  threshold?: number;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function StatBadge(props: StatBadgeProps): JSX.Element;
+export const StatBadge: React.ForwardRefExoticComponent<
+  StatBadgeProps & React.RefAttributes<HTMLDivElement>
+>;

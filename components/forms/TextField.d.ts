@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties, ReactNode } from "react";
 
 /**
@@ -27,7 +28,10 @@ export interface TextFieldProps {
   enterKeyHint?: string;
   /** Adornment rendered inside the single-line field (e.g. an eye toggle). */
   trailing?: ReactNode;
+  className?: string;
   style?: CSSProperties;
 }
 
-export function TextField(props: TextFieldProps): JSX.Element;
+export const TextField: React.ForwardRefExoticComponent<
+  TextFieldProps & React.RefAttributes<HTMLElement>
+>;

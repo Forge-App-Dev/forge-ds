@@ -12,17 +12,20 @@ import { content } from "../shared/content.js";
 // without hijacking focus. Default copy is on-voice (pt-BR, "você", reassuring —
 // changes aren't lost). An optional action ("Tentar de novo") lets the screen
 // offer a manual retry. A PRODUCT component: it carries the app's offline copy.
-export function OfflineBanner({
+export const OfflineBanner = React.forwardRef(function OfflineBanner({
   message = content.offlineBanner.message,
   actionLabel,
   onAction,
   children,
+  className,
   style,
-}) {
+}, ref) {
   const accent = "var(--forge-warning)";
   return (
     <div
+      ref={ref}
       role="status"
+      className={className}
       style={{
         display: "flex",
         alignItems: "center",
@@ -69,4 +72,4 @@ export function OfflineBanner({
       ) : null}
     </div>
   );
-}
+});

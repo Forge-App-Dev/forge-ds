@@ -16,12 +16,14 @@ const KIND = {
   danger: { accent: "var(--forge-danger)", icon: "warn", role: "alert" },
 };
 
-export function InlineAlert({ kind = "warning", title, children }) {
+export const InlineAlert = React.forwardRef(function InlineAlert({ kind = "warning", title, children, className, style }, ref) {
   const s = KIND[kind] || KIND.warning;
   const bg = `color-mix(in srgb, ${s.accent} 12%, var(--forge-surface))`;
   const border = `color-mix(in srgb, ${s.accent} 40%, var(--forge-border))`;
   return (
     <div
+      ref={ref}
+      className={className}
       role={s.role}
       style={{
         display: "flex",
@@ -31,6 +33,7 @@ export function InlineAlert({ kind = "warning", title, children }) {
         borderRadius: "var(--forge-radius-card)",
         border: `var(--forge-border-w) solid ${border}`,
         backgroundColor: bg,
+        ...style,
       }}
     >
       <Icon name={s.icon} color={s.accent} size={16} />
@@ -48,4 +51,4 @@ export function InlineAlert({ kind = "warning", title, children }) {
       </div>
     </div>
   );
-}
+});

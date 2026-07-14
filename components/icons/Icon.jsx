@@ -205,7 +205,7 @@ const PATHS = {
   ),
 };
 
-export function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2, title }) {
+export const Icon = React.forwardRef(function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2, title, className, style }, ref) {
   const render = PATHS[name];
   if (!render) {
     if (typeof console !== "undefined") console.warn(`Icon: glifo desconhecido "${name}" — nada renderizado (ver ICON_NAMES).`);
@@ -218,10 +218,12 @@ export function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2,
   // (icons.jsx uses stroke="currentColor").
   return (
     <svg
+      ref={ref}
       width={size}
       height={size}
       viewBox="0 0 24 24"
-      style={{ color }}
+      className={className}
+      style={{ color, ...style }}
       fill={filled ? "currentColor" : "none"}
       stroke="currentColor"
       strokeWidth={filled ? 1 : strokeWidth}
@@ -235,6 +237,6 @@ export function Icon({ name, color = "currentColor", size = 24, strokeWidth = 2,
       {render()}
     </svg>
   );
-}
+});
 
 export const ICON_NAMES = Object.keys(PATHS);

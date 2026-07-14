@@ -4,9 +4,9 @@ import { Title } from "../../typography/Title.jsx";
 // Screen-top header: small uppercase eyebrow + large Barlow title (the single
 // screen-title style, via <Title size="screenTitle">, so there's one screen
 // title in the system — OP-013/P-12), plus an optional right-aligned slot.
-export function ModuleHeader({ eyebrow, title, right }) {
+export const ModuleHeader = React.forwardRef(function ModuleHeader({ eyebrow, title, right, className, style }, ref) {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 18 }}>
+    <div ref={ref} className={className} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 18, ...style }}>
       <div style={{ minWidth: 0, flex: 1 }}>
         {eyebrow ? (
           <div
@@ -28,4 +28,4 @@ export function ModuleHeader({ eyebrow, title, right }) {
       {right || null}
     </div>
   );
-}
+});

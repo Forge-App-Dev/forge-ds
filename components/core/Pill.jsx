@@ -12,11 +12,12 @@ const SIZES = {
   md: { height: 40, paddingInline: 16, icon: 16 },
 };
 
-export function Pill({ title, onClick, active = false, color = "var(--forge-accent-fill)", size = "md", icon, disabled = false, style }) {
+export const Pill = React.forwardRef(function Pill({ title, onClick, active = false, color = "var(--forge-accent-fill)", size = "md", icon, disabled = false, className, style }, ref) {
   const sz = SIZES[size] || SIZES.md;
   return (
     <button
-      className="forge-focusable"
+      ref={ref}
+      className={["forge-focusable", className].filter(Boolean).join(" ")}
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
       aria-pressed={active}
@@ -45,4 +46,4 @@ export function Pill({ title, onClick, active = false, color = "var(--forge-acce
       {title}
     </button>
   );
-}
+});

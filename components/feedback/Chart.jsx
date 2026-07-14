@@ -45,7 +45,7 @@ function normalizeSeries(series, values, color) {
 
 const fmt = (v) => (typeof v === "number" ? v.toLocaleString("pt-BR") : v);
 
-export function Chart({
+export const Chart = React.forwardRef(function Chart({
   series,
   values,
   variant = "line",
@@ -58,7 +58,9 @@ export function Chart({
   ariaLabel,
   showValues = false,
   height = 200,
-}) {
+  className,
+  style,
+}, ref) {
   const uid = React.useId ? React.useId() : "forge-chart";
   const S = normalizeSeries(series, values, color);
   const W = 320;
@@ -68,7 +70,7 @@ export function Chart({
   // Empty guard (P-10) — mirror MiniChart: render an empty, still-labelled SVG.
   if (S.length === 0) {
     return (
-      <div style={{ overflowX: "auto" }}>
+      <div ref={ref} className={className} style={{ overflowX: "auto", ...style }}>
         <svg
           width="100%"
           height={H}
@@ -132,7 +134,7 @@ export function Chart({
   const gridStroke = { stroke: "var(--forge-border)" };
 
   return (
-    <div style={{ overflowX: "auto" }}>
+    <div ref={ref} className={className} style={{ overflowX: "auto", ...style }}>
       <svg
         width="100%"
         height={H}
@@ -319,4 +321,4 @@ export function Chart({
       ) : null}
     </div>
   );
-}
+});

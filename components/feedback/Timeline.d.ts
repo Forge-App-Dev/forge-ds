@@ -1,12 +1,12 @@
-import { CSSProperties, ReactNode } from "react";
+import * as React from "react";
 
 export interface TimelineItem {
   /** Primary line (e.g. session name). */
-  title?: ReactNode;
+  title?: React.ReactNode;
   /** Timestamp / relative time (e.g. "hoje", "seg 14/07"). */
-  time?: ReactNode;
+  time?: React.ReactNode;
   /** Secondary description line. */
-  description?: ReactNode;
+  description?: React.ReactNode;
   /** Feather glyph — renders a chip marker instead of a plain dot. */
   icon?: string;
   /** Marker tint (falls back to `accent`). */
@@ -24,7 +24,10 @@ export interface TimelineProps {
   items?: TimelineItem[];
   /** Default marker tint (module color / sibling app). */
   accent?: string;
-  style?: CSSProperties;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function Timeline(props: TimelineProps): JSX.Element;
+export const Timeline: React.ForwardRefExoticComponent<
+  TimelineProps & React.RefAttributes<HTMLOListElement>
+>;

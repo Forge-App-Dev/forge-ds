@@ -4,10 +4,12 @@ import React from "react";
 // miniLabel (10.5). Used for field labels, eyebrows, tiny captions.
 // Pass `as="label"` + `htmlFor` to associate it with a form control (OP-111);
 // `htmlFor` is only applied when the element is a real <label>.
-export function Label({ children, size = "label", color = "var(--forge-text-faint)", as = "div", htmlFor, style }) {
+export const Label = React.forwardRef(function Label({ children, size = "label", color = "var(--forge-text-faint)", as = "div", htmlFor, className, style }, ref) {
   const El = as;
   return (
     <El
+      ref={ref}
+      className={className}
       htmlFor={as === "label" ? htmlFor : undefined}
       style={{
         fontFamily: "var(--forge-font-body)",
@@ -22,4 +24,4 @@ export function Label({ children, size = "label", color = "var(--forge-text-fain
       {children}
     </El>
   );
-}
+});

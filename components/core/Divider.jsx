@@ -4,13 +4,15 @@ import React from "react";
 // Draws with `var(--forge-divider)`; pass `margin` (number px or CSS string)
 // for optional spacing along the flow axis. Depth in Forge is by color/border,
 // never shadow (ADR-0028) — this is the border-hairline separator primitive.
-export function Divider({ orientation = "horizontal", margin, color = "var(--forge-divider)", style }) {
+export const Divider = React.forwardRef(function Divider({ orientation = "horizontal", margin, color = "var(--forge-divider)", className, style }, ref) {
   const vertical = orientation === "vertical";
   const m = margin == null ? undefined : typeof margin === "number" ? margin + "px" : margin;
   return (
     <div
+      ref={ref}
       role="separator"
       aria-orientation={orientation}
+      className={className}
       style={{
         flexShrink: 0,
         backgroundColor: color,
@@ -21,4 +23,4 @@ export function Divider({ orientation = "horizontal", margin, color = "var(--for
       }}
     />
   );
-}
+});
