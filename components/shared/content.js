@@ -88,4 +88,35 @@ export const content = {
     // navigation/module-tab-bar/ModuleTabBar.jsx — rótulo da navegação principal.
     nav: "Navegação principal",
   },
+
+  prCelebration: {
+    // product/PRCelebration.jsx — celebração de recorde.
+    title: "Novo recorde!",
+    continueLabel: "Continuar",
+    previous: (v) => `anterior: ${v}`,
+  },
+
+  streakIndicator: {
+    // product/StreakIndicator.jsx — sequência de dias de treino.
+    dayUnit: (n) => (n === 1 ? "dia" : "dias"),
+    label: (total, done, weekLen) =>
+      `Sequência de ${total} ${total === 1 ? "dia" : "dias"}` +
+      (weekLen ? `. ${done} de ${weekLen} ${weekLen === 1 ? "dia" : "dias"} nesta semana` : ""),
+  },
+
+  setLogger: {
+    // product/SetLogger.jsx — linha de registro de série.
+    unit: "kg",
+    weight: "peso",
+    reps: "reps",
+    doneLabel: (set) => `Concluir série ${set != null ? set : ""}`.trim(),
+  },
+
+  imagePicker: {
+    // media/ImagePicker.jsx — chrome do seletor de foto.
+    add: "Adicionar foto",
+    loading: "Carregando foto",
+    selectedAlt: "Foto selecionada",
+    remove: "Remover foto",
+  },
 };

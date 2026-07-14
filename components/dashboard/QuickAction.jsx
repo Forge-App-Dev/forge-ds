@@ -25,7 +25,7 @@ export function QuickAction({ icon, label, onClick, accent, badge, disabled = fa
       onTouchEnd={() => setPressed(false)}
       style={{
         width: "100%",
-        minHeight: "var(--forge-tap-target-min)",
+        minHeight: "var(--forge-tap-target)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

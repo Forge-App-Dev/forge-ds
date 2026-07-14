@@ -1,6 +1,7 @@
 import React from "react";
 import { Stepper } from "../forms/Stepper.jsx";
 import { Icon } from "../icons/Icon";
+import { content } from "../shared/content.js";
 
 // SetLogger — a single set-logging row: weight × reps × check (OP-056). The
 // most-touched control in a training app, so it's a formalized PRODUCT
@@ -16,7 +17,7 @@ export function SetLogger({
   set,
   weight = 0,
   reps = 0,
-  unit = "kg",
+  unit = content.setLogger.unit,
   onWeightChange,
   onRepsChange,
   done = false,
@@ -49,13 +50,13 @@ export function SetLogger({
       ) : null}
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-1)" }}>
-        <Stepper value={weight} onChange={onWeightChange} min={0} step={weightStep} unit={unit} label="peso" disabled={done} />
-        <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700 }}>peso</span>
+        <Stepper value={weight} onChange={onWeightChange} min={0} step={weightStep} unit={unit} label={content.setLogger.weight} disabled={done} />
+        <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700 }}>{content.setLogger.weight}</span>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-1)" }}>
-        <Stepper value={reps} onChange={onRepsChange} min={0} step={repsStep} label="reps" disabled={done} />
-        <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700 }}>reps</span>
+        <Stepper value={reps} onChange={onRepsChange} min={0} step={repsStep} label={content.setLogger.reps} disabled={done} />
+        <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700 }}>{content.setLogger.reps}</span>
       </div>
 
       <button
@@ -63,7 +64,7 @@ export function SetLogger({
         onClick={onToggleDone}
         role="checkbox"
         aria-checked={done}
-        aria-label={`Concluir série ${set != null ? set : ""}`.trim()}
+        aria-label={content.setLogger.doneLabel(set)}
         style={{
           marginLeft: "auto",
           width: "var(--forge-size-control-md)",

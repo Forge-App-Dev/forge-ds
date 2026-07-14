@@ -3,263 +3,328 @@
  "components": [
   {
    "name": "Icon",
-   "sourcePath": "components/icons/Icon.jsx"
+   "sourcePath": "components/icons/Icon.jsx",
+   "status": "stable"
   },
   {
    "name": "ICON_NAMES",
-   "sourcePath": "components/icons/Icon.jsx"
+   "sourcePath": "components/icons/Icon.jsx",
+   "status": "stable"
   },
   {
    "name": "ListItem",
-   "sourcePath": "components/forms/ListItem.jsx"
+   "sourcePath": "components/forms/ListItem.jsx",
+   "status": "stable"
   },
   {
    "name": "Ring",
-   "sourcePath": "components/feedback/ring/Ring.jsx"
+   "sourcePath": "components/feedback/ring/Ring.jsx",
+   "status": "stable"
   },
   {
    "name": "Button",
-   "sourcePath": "components/core/Button.jsx"
+   "sourcePath": "components/core/Button.jsx",
+   "status": "stable"
   },
   {
    "name": "Pill",
-   "sourcePath": "components/core/Pill.jsx"
+   "sourcePath": "components/core/Pill.jsx",
+   "status": "stable"
   },
   {
    "name": "FullScreen",
-   "sourcePath": "components/overlays/full-screen/FullScreen.jsx"
+   "sourcePath": "components/overlays/full-screen/FullScreen.jsx",
+   "status": "stable"
   },
   {
    "name": "AppHeader",
-   "sourcePath": "components/navigation/app-header/AppHeader.jsx"
+   "sourcePath": "components/navigation/app-header/AppHeader.jsx",
+   "status": "stable"
   },
   {
    "name": "Card",
-   "sourcePath": "components/core/Card.jsx"
+   "sourcePath": "components/core/Card.jsx",
+   "status": "stable"
   },
   {
    "name": "ConfirmButton",
-   "sourcePath": "components/core/ConfirmButton.jsx"
+   "sourcePath": "components/core/ConfirmButton.jsx",
+   "status": "stable"
   },
   {
    "name": "HeaderAction",
-   "sourcePath": "components/core/HeaderAction.jsx"
+   "sourcePath": "components/core/HeaderAction.jsx",
+   "status": "stable"
   },
   {
    "name": "EmptyState",
-   "sourcePath": "components/feedback/EmptyState.jsx"
+   "sourcePath": "components/feedback/EmptyState.jsx",
+   "status": "stable"
   },
   {
    "name": "InlineAlert",
-   "sourcePath": "components/feedback/InlineAlert.jsx"
+   "sourcePath": "components/feedback/InlineAlert.jsx",
+   "status": "stable"
   },
   {
    "name": "Spinner",
-   "sourcePath": "components/feedback/Spinner.jsx"
+   "sourcePath": "components/feedback/Spinner.jsx",
+   "status": "stable"
   },
   {
    "name": "StatBadge",
-   "sourcePath": "components/feedback/StatBadge.jsx"
+   "sourcePath": "components/feedback/StatBadge.jsx",
+   "status": "stable"
   },
   {
    "name": "ErrorState",
-   "sourcePath": "components/feedback/ErrorState.jsx"
+   "sourcePath": "components/feedback/ErrorState.jsx",
+   "status": "stable"
   },
   {
    "name": "Skeleton",
-   "sourcePath": "components/feedback/Skeleton.jsx"
+   "sourcePath": "components/feedback/Skeleton.jsx",
+   "status": "stable"
   },
   {
    "name": "SkeletonText",
-   "sourcePath": "components/feedback/Skeleton.jsx"
+   "sourcePath": "components/feedback/Skeleton.jsx",
+   "status": "stable"
   },
   {
    "name": "TargetsCard",
-   "sourcePath": "components/product/TargetsCard.jsx"
+   "sourcePath": "components/product/TargetsCard.jsx",
+   "status": "stable"
   },
   {
    "name": "LoadingScreen",
-   "sourcePath": "components/feedback/loading-screen/LoadingScreen.jsx"
+   "sourcePath": "components/feedback/loading-screen/LoadingScreen.jsx",
+   "status": "stable"
   },
   {
    "name": "MacroMeter",
-   "sourcePath": "components/feedback/macro-meter/MacroMeter.jsx"
+   "sourcePath": "components/feedback/macro-meter/MacroMeter.jsx",
+   "status": "stable"
   },
   {
    "name": "MetaBar",
-   "sourcePath": "components/feedback/meta-bar/MetaBar.jsx"
+   "sourcePath": "components/feedback/meta-bar/MetaBar.jsx",
+   "status": "stable"
   },
   {
    "name": "MiniChart",
-   "sourcePath": "components/feedback/mini-chart/MiniChart.jsx"
+   "sourcePath": "components/feedback/mini-chart/MiniChart.jsx",
+   "status": "stable"
   },
   {
    "name": "QtyInput",
-   "sourcePath": "components/forms/QtyInput.jsx"
+   "sourcePath": "components/forms/QtyInput.jsx",
+   "status": "stable"
   },
   {
    "name": "TextField",
-   "sourcePath": "components/forms/TextField.jsx"
+   "sourcePath": "components/forms/TextField.jsx",
+   "status": "stable"
   },
   {
    "name": "Switch",
-   "sourcePath": "components/forms/Switch.jsx"
+   "sourcePath": "components/forms/Switch.jsx",
+   "status": "stable"
   },
   {
    "name": "Stepper",
-   "sourcePath": "components/forms/Stepper.jsx"
+   "sourcePath": "components/forms/Stepper.jsx",
+   "status": "stable"
   },
   {
    "name": "SearchField",
-   "sourcePath": "components/forms/SearchField.jsx"
+   "sourcePath": "components/forms/SearchField.jsx",
+   "status": "stable"
   },
   {
    "name": "Select",
-   "sourcePath": "components/forms/Select.jsx"
+   "sourcePath": "components/forms/Select.jsx",
+   "status": "stable"
   },
   {
    "name": "ScreenBody",
-   "sourcePath": "components/layout/screen-body/ScreenBody.jsx"
+   "sourcePath": "components/layout/screen-body/ScreenBody.jsx",
+   "status": "stable"
   },
   {
    "name": "Screen",
-   "sourcePath": "components/layout/screen/Screen.jsx"
+   "sourcePath": "components/layout/screen/Screen.jsx",
+   "status": "stable"
   },
   {
    "name": "ModuleHeader",
-   "sourcePath": "components/navigation/module-header/ModuleHeader.jsx"
+   "sourcePath": "components/navigation/module-header/ModuleHeader.jsx",
+   "status": "stable"
   },
   {
    "name": "ModuleTabBar",
-   "sourcePath": "components/navigation/module-tab-bar/ModuleTabBar.jsx"
+   "sourcePath": "components/navigation/module-tab-bar/ModuleTabBar.jsx",
+   "status": "stable"
   },
   {
    "name": "VideoModal",
-   "sourcePath": "components/overlays/VideoModal.jsx"
+   "sourcePath": "components/overlays/VideoModal.jsx",
+   "status": "stable"
   },
   {
    "name": "Panel",
-   "sourcePath": "components/overlays/panel/Panel.jsx"
+   "sourcePath": "components/overlays/panel/Panel.jsx",
+   "status": "stable"
   },
   {
    "name": "Label",
-   "sourcePath": "components/typography/Label.jsx"
+   "sourcePath": "components/typography/Label.jsx",
+   "status": "stable"
   },
   {
    "name": "SectionLabel",
-   "sourcePath": "components/typography/SectionLabel.jsx"
+   "sourcePath": "components/typography/SectionLabel.jsx",
+   "status": "stable"
   },
   {
    "name": "Text",
-   "sourcePath": "components/typography/Text.jsx"
+   "sourcePath": "components/typography/Text.jsx",
+   "status": "stable"
   },
   {
    "name": "Title",
-   "sourcePath": "components/typography/Title.jsx"
+   "sourcePath": "components/typography/Title.jsx",
+   "status": "stable"
   },
   {
    "name": "StatCard",
-   "sourcePath": "components/dashboard/StatCard.jsx"
+   "sourcePath": "components/dashboard/StatCard.jsx",
+   "status": "stable"
   },
   {
    "name": "QuickAction",
-   "sourcePath": "components/dashboard/QuickAction.jsx"
+   "sourcePath": "components/dashboard/QuickAction.jsx",
+   "status": "stable"
   },
   {
    "name": "PageDots",
-   "sourcePath": "components/onboarding/PageDots.jsx"
+   "sourcePath": "components/onboarding/PageDots.jsx",
+   "status": "stable"
   },
   {
    "name": "Pager",
-   "sourcePath": "components/onboarding/Pager.jsx"
+   "sourcePath": "components/onboarding/Pager.jsx",
+   "status": "stable"
   },
   {
    "name": "PRCelebration",
-   "sourcePath": "components/product/PRCelebration.jsx"
+   "sourcePath": "components/product/PRCelebration.jsx",
+   "status": "stable"
   },
   {
    "name": "RestTimer",
-   "sourcePath": "components/product/RestTimer.jsx"
+   "sourcePath": "components/product/RestTimer.jsx",
+   "status": "stable"
   },
   {
    "name": "SetLogger",
-   "sourcePath": "components/product/SetLogger.jsx"
+   "sourcePath": "components/product/SetLogger.jsx",
+   "status": "stable"
   },
   {
    "name": "Divider",
-   "sourcePath": "components/core/Divider.jsx"
+   "sourcePath": "components/core/Divider.jsx",
+   "status": "stable"
   },
   {
    "name": "Checkbox",
-   "sourcePath": "components/forms/Checkbox.jsx"
+   "sourcePath": "components/forms/Checkbox.jsx",
+   "status": "stable"
   },
   {
    "name": "SegmentedControl",
-   "sourcePath": "components/forms/SegmentedControl.jsx"
+   "sourcePath": "components/forms/SegmentedControl.jsx",
+   "status": "stable"
   },
   {
    "name": "PasswordField",
-   "sourcePath": "components/forms/PasswordField.jsx"
+   "sourcePath": "components/forms/PasswordField.jsx",
+   "status": "stable"
   },
   {
    "name": "Slider",
-   "sourcePath": "components/forms/Slider.jsx"
+   "sourcePath": "components/forms/Slider.jsx",
+   "status": "stable"
   },
   {
    "name": "FilterChip",
-   "sourcePath": "components/forms/FilterChip.jsx"
+   "sourcePath": "components/forms/FilterChip.jsx",
+   "status": "stable"
   },
   {
    "name": "ProgressBar",
-   "sourcePath": "components/feedback/ProgressBar.jsx"
+   "sourcePath": "components/feedback/ProgressBar.jsx",
+   "status": "stable"
   },
   {
    "name": "Badge",
-   "sourcePath": "components/feedback/Badge.jsx"
+   "sourcePath": "components/feedback/Badge.jsx",
+   "status": "stable"
   },
   {
    "name": "Avatar",
-   "sourcePath": "components/feedback/Avatar.jsx"
+   "sourcePath": "components/feedback/Avatar.jsx",
+   "status": "stable"
   },
   {
    "name": "MacroRing",
-   "sourcePath": "components/feedback/MacroRing.jsx"
+   "sourcePath": "components/feedback/MacroRing.jsx",
+   "status": "stable"
   },
   {
    "name": "Timeline",
-   "sourcePath": "components/feedback/Timeline.jsx"
+   "sourcePath": "components/feedback/Timeline.jsx",
+   "status": "stable"
   },
   {
    "name": "Tabs",
-   "sourcePath": "components/navigation/Tabs.jsx"
+   "sourcePath": "components/navigation/Tabs.jsx",
+   "status": "stable"
   },
   {
    "name": "Accordion",
-   "sourcePath": "components/navigation/Accordion.jsx"
+   "sourcePath": "components/navigation/Accordion.jsx",
+   "status": "stable"
   },
   {
    "name": "WeekStrip",
-   "sourcePath": "components/navigation/WeekStrip.jsx"
+   "sourcePath": "components/navigation/WeekStrip.jsx",
+   "status": "stable"
   },
   {
    "name": "StreakIndicator",
-   "sourcePath": "components/product/StreakIndicator.jsx"
+   "sourcePath": "components/product/StreakIndicator.jsx",
+   "status": "stable"
   },
   {
    "name": "CoachNote",
-   "sourcePath": "components/product/CoachNote.jsx"
+   "sourcePath": "components/product/CoachNote.jsx",
+   "status": "stable"
   },
   {
    "name": "OfflineBanner",
-   "sourcePath": "components/product/OfflineBanner.jsx"
+   "sourcePath": "components/product/OfflineBanner.jsx",
+   "status": "stable"
   },
   {
    "name": "Chart",
-   "sourcePath": "components/feedback/Chart.jsx"
+   "sourcePath": "components/feedback/Chart.jsx",
+   "status": "stable"
   },
   {
    "name": "ImagePicker",
-   "sourcePath": "components/media/ImagePicker.jsx"
+   "sourcePath": "components/media/ImagePicker.jsx",
+   "status": "stable"
   }
  ],
  "startingPoints": [

@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../icons/Icon";
 import { Skeleton } from "../feedback/Skeleton.jsx";
+import { content } from "../shared/content.js";
 
 // ImagePicker — the VISUAL layer of a photo picker (OP-050): the empty
 // "add photo" placeholder, the selected thumbnail with a remove control, and
@@ -44,7 +45,7 @@ export function ImagePicker({
   shape = "square",
   size = 96,
   loading = false,
-  label = "Adicionar foto",
+  label = content.imagePicker.add,
   alt,
   style,
 }) {
@@ -52,8 +53,8 @@ export function ImagePicker({
   const box = {
     width: size,
     height: size,
-    minWidth: "var(--forge-tap-target-min)",
-    minHeight: "var(--forge-tap-target-min)",
+    minWidth: "var(--forge-tap-target)",
+    minHeight: "var(--forge-tap-target)",
     borderRadius: radius,
     flexShrink: 0,
     boxSizing: "border-box",
@@ -62,7 +63,7 @@ export function ImagePicker({
   // Loading — pulse placeholder at the target size/shape.
   if (loading) {
     return (
-      <div role="status" aria-label="Carregando foto" style={{ position: "relative", ...box, ...style }}>
+      <div role="status" aria-label={content.imagePicker.loading} style={{ position: "relative", ...box, ...style }}>
         <Skeleton
           variant="block"
           width={size}
@@ -80,7 +81,7 @@ export function ImagePicker({
       <div style={{ position: "relative", ...box, ...style }}>
         <img
           src={src}
-          alt={alt || "Foto selecionada"}
+          alt={alt || content.imagePicker.selectedAlt}
           style={{
             width: "100%",
             height: "100%",
@@ -95,13 +96,13 @@ export function ImagePicker({
             type="button"
             className="forge-focusable"
             onClick={onRemove}
-            aria-label="Remover foto"
+            aria-label={content.imagePicker.remove}
             style={{
               position: "absolute",
               top: -10,
               right: -10,
-              width: "var(--forge-tap-target-min)",
-              height: "var(--forge-tap-target-min)",
+              width: "var(--forge-tap-target)",
+              height: "var(--forge-tap-target)",
               padding: 0,
               border: "none",
               background: "transparent",

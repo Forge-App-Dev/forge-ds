@@ -56,7 +56,7 @@ export function Checkbox({ checked = false, indeterminate = false, onChange, lab
         display: "flex",
         alignItems: "center",
         gap: 12,
-        minHeight: "var(--forge-tap-target-min)",
+        minHeight: "var(--forge-tap-target)",
         cursor: disabled ? "default" : "pointer",
         ...style,
       }}
