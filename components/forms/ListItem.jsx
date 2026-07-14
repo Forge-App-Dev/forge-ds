@@ -32,7 +32,7 @@ export function ListItem({ title, subtitle, leading, leadingIcon, trailing, onCl
 
   const base = {
     display: "flex", alignItems: "center", gap: 12, width: "100%",
-    minHeight: "var(--forge-tap-target-min)",
+    minHeight: "var(--forge-tap-target)",
     padding: "10px 2px",
     background: "none", border: "none",
     opacity: disabled ? "var(--forge-opacity-disabled)" : pressed ? "var(--forge-opacity-press)" : 1,

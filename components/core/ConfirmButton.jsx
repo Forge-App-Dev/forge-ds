@@ -29,7 +29,7 @@ export function ConfirmButton({ title = content.confirmButton.title, confirmTitl
         onClick={press}
         aria-label={arming ? confirmTitle : title}
         style={{
-          minHeight: "var(--forge-tap-target-min)",
+          minHeight: "var(--forge-tap-target)",
           height: small ? 34 : 44,
           borderRadius: "var(--forge-radius-chip)",
           borderWidth: "var(--forge-border-w-strong)",

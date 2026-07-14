@@ -14,6 +14,13 @@ const traverse = (_traverseMod.default || _traverseMod);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const NS = "ForgeDesignSystem_7731a5";
 
+// Ciclo de vida do componente (ADR-0070 / T-11): o default é "stable"; liste
+// aqui SÓ os overrides ("experimental" | "deprecated"). Emitido por componente
+// no _ds_manifest.json (campo `status`), tornando a maturidade consultável.
+const COMPONENT_STATUS = {
+  // ex.: "AlgumComponenteNovo": "experimental",
+};
+
 // Ordem canônica (mesma do manifest atual) — componentes primeiro, depois shared.
 const COMPONENTS = [
   ["Card", "components/core/Card.jsx"],
@@ -186,7 +193,7 @@ for (const rel of FILES) {
   body += `\n// ${rel}\ntry { (() => {\n${code}${assign}\n})(); } catch (e) { ${NS === "" ? "" : ""}__ds_ns.__errors.push({ path: ${JSON.stringify(rel)}, error: String((e && e.message) || e) }); }\n`;
   for (const name of exported) {
     if (rel.startsWith("components/shared/")) continue; // utils internos — não expostos
-    manifestComponents.push({ name, sourcePath: rel });
+    manifestComponents.push({ name, sourcePath: rel, status: COMPONENT_STATUS[name] || "stable" });
   }
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../icons/Icon";
 import { Button } from "../core/Button.jsx";
+import { content } from "../shared/content.js";
 
 // PRCelebration — the personal-record moment (OP-054). This is a PRODUCT
 // component: it knows the training domain (a "recorde") and carries brand copy,
@@ -16,13 +17,13 @@ import { Button } from "../core/Button.jsx";
 // mark it beat. role="status" + aria-live announces it to screen readers.
 // `accent` themes the ring/trophy (sibling apps / module color).
 export function PRCelebration({
-  title = "Novo recorde!",
+  title = content.prCelebration.title,
   exercise,
   value,
   unit,
   previous,
   onContinue,
-  continueLabel = "Continuar",
+  continueLabel = content.prCelebration.continueLabel,
   accent,
   style,
 }) {
@@ -53,7 +54,7 @@ export function PRCelebration({
               {unit ? <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-card-title)", color: "var(--forge-text-dim)", fontWeight: 600 }}>{unit}</span> : null}
             </div>
           ) : null}
-          {previous ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-chip)", color: "var(--forge-text-faint)", marginTop: "var(--forge-space-3)" }}>{`anterior: ${previous}`}</div> : null}
+          {previous ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-chip)", color: "var(--forge-text-faint)", marginTop: "var(--forge-space-3)" }}>{content.prCelebration.previous(previous)}</div> : null}
         </div>
       ) : null}
 

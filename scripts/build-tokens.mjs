@@ -124,7 +124,7 @@ const plan = {
     "primitive.dimension.focus.ring-w", "primitive.dimension.focus.ring-offset",
     "primitive.number.opacity.press", "primitive.number.opacity.disabled",
     "primitive.number.z.nav", "primitive.number.z.overlay", "primitive.number.z.fullscreen", "primitive.number.z.video", "primitive.number.z.top",
-    "primitive.dimension.layout.app-max-width", "primitive.dimension.layout.tap-target-min",
+    "primitive.dimension.layout.app-max-width", "primitive.dimension.layout.tap-target-min", "primitive.dimension.layout.tap-target",
     "primitive.number.breakpoint.phone", "primitive.number.breakpoint.large", "primitive.number.breakpoint.xlarge",
     "aliases.radius-card", "aliases.radius-panel", "aliases.radius-input", "aliases.radius-button", "aliases.radius-chip", "aliases.radius-pill",
     "aliases.space-screen-h", "aliases.space-card", "aliases.space-gap", "aliases.space-card-gap",

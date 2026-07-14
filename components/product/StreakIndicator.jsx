@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "../icons/Icon";
+import { content } from "../shared/content.js";
 
 // StreakIndicator — a training streak: a week of dots (a completed day is the
 // accent, an empty day the dimmer token, mirroring the accent-active/dimmer-
@@ -11,19 +12,12 @@ import { Icon } from "../icons/Icon";
 // the true streak length in days; if omitted it falls back to the number of
 // completed days shown. The whole block is a single labeled image for screen
 // readers — the dots are decorative, the aria-label carries the meaning.
-function diasLabel(n) {
-  return `${n} ${n === 1 ? "dia" : "dias"}`;
-}
-
 export function StreakIndicator({ days = [], count, accent, label, style }) {
   const week = Array.isArray(days) ? days : [];
   const doneThisWeek = week.filter(Boolean).length;
   const total = count != null ? count : doneThisWeek;
   const tint = accent || "var(--forge-accent)";
-  const aria =
-    label ||
-    `Sequência de ${diasLabel(total)}` +
-      (week.length ? `. ${doneThisWeek} de ${diasLabel(week.length)} nesta semana` : "");
+  const aria = label || content.streakIndicator.label(total, doneThisWeek, week.length);
 
   return (
     <div
@@ -71,7 +65,7 @@ export function StreakIndicator({ days = [], count, accent, label, style }) {
               fontWeight: 700,
             }}
           >
-            {total === 1 ? "dia" : "dias"}
+            {content.streakIndicator.dayUnit(total)}
           </span>
         </div>
 

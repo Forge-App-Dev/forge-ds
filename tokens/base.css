@@ -28,8 +28,8 @@
 /* Alvo de toque mínimo — expande a área tocável sem alterar o visual do filho.
    Usar em icon buttons pequenos: className="forge-tap-min". */
 .forge-tap-min {
-  min-width: var(--forge-tap-target-min);
-  min-height: var(--forge-tap-target-min);
+  min-width: var(--forge-tap-target);
+  min-height: var(--forge-tap-target);
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -146,6 +146,7 @@ export type ForgeCssVar =
   | "--forge-z-top"
   | "--forge-app-max-width"
   | "--forge-tap-target-min"
+  | "--forge-tap-target"
   | "--forge-bp-phone"
   | "--forge-bp-large"
   | "--forge-bp-xlarge"

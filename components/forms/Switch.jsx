@@ -57,7 +57,7 @@ export function Switch({ checked = false, onChange, label, disabled = false, id,
         alignItems: "center",
         justifyContent: "space-between",
         gap: 12,
-        minHeight: "var(--forge-tap-target-min)",
+        minHeight: "var(--forge-tap-target)",
         cursor: disabled ? "default" : "pointer",
         ...style,
       }}
