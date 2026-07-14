@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx","status":"stable"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx","status":"stable"},{"name":"Button","sourcePath":"components/core/Button.jsx","status":"stable"},{"name":"Pill","sourcePath":"components/core/Pill.jsx","status":"stable"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx","status":"stable"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx","status":"stable"},{"name":"Card","sourcePath":"components/core/Card.jsx","status":"stable"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx","status":"stable"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx","status":"stable"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx","status":"stable"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx","status":"stable"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx","status":"stable"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx","status":"stable"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx","status":"stable"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx","status":"stable"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx","status":"stable"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx","status":"stable"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx","status":"stable"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx","status":"stable"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx","status":"stable"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx","status":"stable"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx","status":"stable"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx","status":"stable"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx","status":"stable"},{"name":"Select","sourcePath":"components/forms/Select.jsx","status":"stable"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx","status":"stable"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx","status":"stable"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx","status":"stable"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx","status":"stable"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx","status":"stable"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx","status":"stable"},{"name":"Label","sourcePath":"components/typography/Label.jsx","status":"stable"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx","status":"stable"},{"name":"Text","sourcePath":"components/typography/Text.jsx","status":"stable"},{"name":"Title","sourcePath":"components/typography/Title.jsx","status":"stable"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx","status":"stable"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx","status":"stable"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx","status":"stable"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx","status":"stable"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx","status":"stable"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx","status":"stable"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx","status":"stable"},{"name":"Divider","sourcePath":"components/core/Divider.jsx","status":"stable"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx","status":"stable"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx","status":"stable"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx","status":"stable"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx","status":"stable"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx","status":"stable"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx","status":"stable"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx","status":"stable"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx","status":"stable"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx","status":"stable"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx","status":"stable"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx","status":"stable"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx","status":"stable"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx","status":"stable"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx","status":"stable"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx","status":"stable"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx","status":"stable"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx","status":"stable"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx","status":"stable"}],"sourceHashes":{"components/shared/color.js":"2bd97297a3f4","components/shared/content.js":"8004acf25d6d","components/shared/useDialogA11y.js":"f50460d75a36","components/icons/Icon.jsx":"ef613111ae58","components/forms/ListItem.jsx":"45197d110369","components/feedback/ring/Ring.jsx":"b13bca8e17e0","components/core/Button.jsx":"fa814e4050a6","components/core/Pill.jsx":"9a64d6acc7ac","components/overlays/full-screen/FullScreen.jsx":"be561b97f404","components/navigation/app-header/AppHeader.jsx":"2e7187dd2112","components/core/Card.jsx":"50e1b07468cd","components/core/ConfirmButton.jsx":"320d81e61f62","components/core/HeaderAction.jsx":"9fdc073f94b9","components/feedback/EmptyState.jsx":"5c805b98fe78","components/feedback/InlineAlert.jsx":"343ee6028135","components/feedback/Spinner.jsx":"74fc6bdf92d1","components/feedback/StatBadge.jsx":"759954135eaf","components/feedback/ErrorState.jsx":"084aac343c1a","components/feedback/Skeleton.jsx":"b5c31a722056","components/product/TargetsCard.jsx":"85c321df96b6","components/feedback/loading-screen/LoadingScreen.jsx":"ca5a4300bb5b","components/feedback/macro-meter/MacroMeter.jsx":"92f78ae15284","components/feedback/meta-bar/MetaBar.jsx":"85dff242ee91","components/feedback/mini-chart/MiniChart.jsx":"ac427f45af1e","components/forms/QtyInput.jsx":"04f368cd3f3e","components/forms/TextField.jsx":"2c4923d80ece","components/forms/Switch.jsx":"f9c879b7bafe","components/forms/Stepper.jsx":"10529eb3f574","components/forms/SearchField.jsx":"d2a580b62259","components/forms/Select.jsx":"7695c0ae7f37","components/layout/screen-body/ScreenBody.jsx":"57b810325947","components/layout/screen/Screen.jsx":"aca591ea8039","components/navigation/module-header/ModuleHeader.jsx":"e923be2602e9","components/navigation/module-tab-bar/ModuleTabBar.jsx":"28df61410181","components/overlays/VideoModal.jsx":"cd9efbd136a5","components/overlays/panel/Panel.jsx":"f6be8f2d6eb2","components/typography/Label.jsx":"8f475fcef0a2","components/typography/SectionLabel.jsx":"da3a3a3089d2","components/typography/Text.jsx":"b20c2433d7d5","components/typography/Title.jsx":"abb08e8ca1f6","components/dashboard/StatCard.jsx":"805fd58c9d5f","components/dashboard/QuickAction.jsx":"6b4af129c3e5","components/onboarding/PageDots.jsx":"3e6ce546bd30","components/onboarding/Pager.jsx":"845c1b10c2aa","components/product/PRCelebration.jsx":"a5dbdfc7c314","components/product/RestTimer.jsx":"60f1ed14f542","components/product/SetLogger.jsx":"fd09f427f3ed","components/core/Divider.jsx":"7e0aaca3ae43","components/forms/Checkbox.jsx":"262072984a35","components/forms/SegmentedControl.jsx":"0ac5a95b5658","components/forms/PasswordField.jsx":"8f66e5a116e8","components/forms/Slider.jsx":"f40565a183fa","components/forms/FilterChip.jsx":"f63959f169d2","components/feedback/ProgressBar.jsx":"bdbbf937f353","components/feedback/Badge.jsx":"90476c463872","components/feedback/Avatar.jsx":"05259bcae084","components/feedback/MacroRing.jsx":"1597530b1a7f","components/feedback/Timeline.jsx":"38ce0486868b","components/navigation/Tabs.jsx":"14f2dbca1928","components/navigation/Accordion.jsx":"60cf25a28afb","components/navigation/WeekStrip.jsx":"b67f1fef2e0b","components/product/StreakIndicator.jsx":"da450350afec","components/product/CoachNote.jsx":"03b9cfb7ecad","components/product/OfflineBanner.jsx":"7d25edd317ff","components/feedback/Chart.jsx":"1196b22d7c27","components/media/ImagePicker.jsx":"3697cb6ec9ab"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx","status":"stable"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx","status":"stable"},{"name":"Button","sourcePath":"components/core/Button.jsx","status":"stable"},{"name":"Pill","sourcePath":"components/core/Pill.jsx","status":"stable"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx","status":"stable"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx","status":"stable"},{"name":"Card","sourcePath":"components/core/Card.jsx","status":"stable"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx","status":"stable"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx","status":"stable"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx","status":"stable"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx","status":"stable"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx","status":"stable"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx","status":"stable"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx","status":"stable"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx","status":"stable"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx","status":"stable"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx","status":"stable"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx","status":"stable"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx","status":"stable"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx","status":"stable"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx","status":"stable"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx","status":"stable"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx","status":"stable"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx","status":"stable"},{"name":"Select","sourcePath":"components/forms/Select.jsx","status":"stable"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx","status":"stable"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx","status":"stable"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx","status":"stable"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx","status":"stable"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx","status":"stable"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx","status":"stable"},{"name":"Label","sourcePath":"components/typography/Label.jsx","status":"stable"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx","status":"stable"},{"name":"Text","sourcePath":"components/typography/Text.jsx","status":"stable"},{"name":"Title","sourcePath":"components/typography/Title.jsx","status":"stable"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx","status":"stable"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx","status":"stable"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx","status":"stable"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx","status":"stable"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx","status":"stable"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx","status":"stable"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx","status":"stable"},{"name":"Divider","sourcePath":"components/core/Divider.jsx","status":"stable"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx","status":"stable"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx","status":"stable"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx","status":"stable"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx","status":"stable"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx","status":"stable"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx","status":"stable"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx","status":"stable"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx","status":"stable"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx","status":"stable"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx","status":"stable"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx","status":"stable"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx","status":"stable"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx","status":"stable"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx","status":"stable"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx","status":"stable"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx","status":"stable"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx","status":"stable"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx","status":"stable"}],"sourceHashes":{"components/shared/color.js":"2bd97297a3f4","components/shared/content.js":"8004acf25d6d","components/shared/useDialogA11y.js":"f50460d75a36","components/icons/Icon.jsx":"ef613111ae58","components/forms/ListItem.jsx":"45197d110369","components/feedback/ring/Ring.jsx":"b13bca8e17e0","components/core/Button.jsx":"fa814e4050a6","components/core/Pill.jsx":"9a64d6acc7ac","components/overlays/full-screen/FullScreen.jsx":"be561b97f404","components/navigation/app-header/AppHeader.jsx":"2e7187dd2112","components/core/Card.jsx":"cfa6eb5ff3a0","components/core/ConfirmButton.jsx":"320d81e61f62","components/core/HeaderAction.jsx":"9fdc073f94b9","components/feedback/EmptyState.jsx":"563343f8270c","components/feedback/InlineAlert.jsx":"5c24226c6244","components/feedback/Spinner.jsx":"74fc6bdf92d1","components/feedback/StatBadge.jsx":"759954135eaf","components/feedback/ErrorState.jsx":"e3424dfd9315","components/feedback/Skeleton.jsx":"b5c31a722056","components/product/TargetsCard.jsx":"1bbe97fe5f41","components/feedback/loading-screen/LoadingScreen.jsx":"ca5a4300bb5b","components/feedback/macro-meter/MacroMeter.jsx":"92f78ae15284","components/feedback/meta-bar/MetaBar.jsx":"85dff242ee91","components/feedback/mini-chart/MiniChart.jsx":"ac427f45af1e","components/forms/QtyInput.jsx":"04f368cd3f3e","components/forms/TextField.jsx":"2c4923d80ece","components/forms/Switch.jsx":"f9c879b7bafe","components/forms/Stepper.jsx":"10529eb3f574","components/forms/SearchField.jsx":"d2a580b62259","components/forms/Select.jsx":"7695c0ae7f37","components/layout/screen-body/ScreenBody.jsx":"e0e100394473","components/layout/screen/Screen.jsx":"aca591ea8039","components/navigation/module-header/ModuleHeader.jsx":"e923be2602e9","components/navigation/module-tab-bar/ModuleTabBar.jsx":"28df61410181","components/overlays/VideoModal.jsx":"cd9efbd136a5","components/overlays/panel/Panel.jsx":"f6be8f2d6eb2","components/typography/Label.jsx":"8f475fcef0a2","components/typography/SectionLabel.jsx":"da3a3a3089d2","components/typography/Text.jsx":"b20c2433d7d5","components/typography/Title.jsx":"abb08e8ca1f6","components/dashboard/StatCard.jsx":"f910acf033a3","components/dashboard/QuickAction.jsx":"5c7a7e8aad5c","components/onboarding/PageDots.jsx":"eb98967d1bf5","components/onboarding/Pager.jsx":"6fb0660148df","components/product/PRCelebration.jsx":"1c7a428a229e","components/product/RestTimer.jsx":"ab7fafa54d65","components/product/SetLogger.jsx":"9076b37cdefb","components/core/Divider.jsx":"7e0aaca3ae43","components/forms/Checkbox.jsx":"262072984a35","components/forms/SegmentedControl.jsx":"0ac5a95b5658","components/forms/PasswordField.jsx":"8f66e5a116e8","components/forms/Slider.jsx":"f40565a183fa","components/forms/FilterChip.jsx":"f63959f169d2","components/feedback/ProgressBar.jsx":"bdbbf937f353","components/feedback/Badge.jsx":"f712cb765160","components/feedback/Avatar.jsx":"05259bcae084","components/feedback/MacroRing.jsx":"e4d17e74acd6","components/feedback/Timeline.jsx":"3e099936b466","components/navigation/Tabs.jsx":"a2a6f6f47e09","components/navigation/Accordion.jsx":"63090a86e5f8","components/navigation/WeekStrip.jsx":"2e8723d59f23","components/product/StreakIndicator.jsx":"a867526289fa","components/product/CoachNote.jsx":"94d1a6a31d20","components/product/OfflineBanner.jsx":"ff0cf1e61bfb","components/feedback/Chart.jsx":"2c54e50474b8","components/media/ImagePicker.jsx":"6bb0d2b8d55f"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -1458,15 +1458,15 @@ const Card = /*#__PURE__*/React.forwardRef(function Card({
     style: {
       flex: 1,
       minWidth: 0,
-      padding: stripeColor ? "var(--forge-space-12)" : "var(--forge-space-card)"
+      padding: stripeColor ? "var(--forge-space-24)" : "var(--forge-space-card)"
     }
   }, header ? /*#__PURE__*/React.createElement("div", {
     style: {
-      marginBottom: "var(--forge-space-5)"
+      marginBottom: "var(--forge-space-10)"
     }
   }, header) : null, children, footer ? /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: "var(--forge-space-5)"
+      marginTop: "var(--forge-space-10)"
     }
   }, footer) : null));
   if (pressable) {
@@ -1609,11 +1609,11 @@ const EmptyState = /*#__PURE__*/React.forwardRef(function EmptyState({
     style: {
       display: "flex",
       alignItems: "center",
-      gap: "var(--forge-space-6)",
+      gap: "var(--forge-space-12)",
       backgroundColor: "var(--forge-surface)",
       border: "var(--forge-border-w) solid var(--forge-border)",
       borderRadius: "var(--forge-radius-card)",
-      padding: "var(--forge-space-8)",
+      padding: "var(--forge-space-16)",
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -1704,9 +1704,9 @@ const InlineAlert = /*#__PURE__*/React.forwardRef(function InlineAlert({
     role: s.role,
     style: {
       display: "flex",
-      gap: "var(--forge-space-5)",
+      gap: "var(--forge-space-10)",
       alignItems: "flex-start",
-      padding: "var(--forge-space-8)",
+      padding: "var(--forge-space-16)",
       borderRadius: "var(--forge-radius-card)",
       border: `var(--forge-border-w) solid ${border}`,
       backgroundColor: bg,
@@ -1853,11 +1853,11 @@ const ErrorState = /*#__PURE__*/React.forwardRef(function ErrorState({
       style: {
         display: "flex",
         alignItems: "center",
-        gap: "var(--forge-space-6)",
+        gap: "var(--forge-space-12)",
         backgroundColor: "var(--forge-surface)",
         border: "var(--forge-border-w) solid var(--forge-border)",
         borderRadius: "var(--forge-radius-card)",
-        padding: "var(--forge-space-8)",
+        padding: "var(--forge-space-16)",
         ...style
       }
     }, /*#__PURE__*/React.createElement("div", {
@@ -1912,8 +1912,8 @@ const ErrorState = /*#__PURE__*/React.forwardRef(function ErrorState({
       flexDirection: "column",
       alignItems: "center",
       textAlign: "center",
-      gap: "var(--forge-space-6)",
-      padding: "var(--forge-space-16) var(--forge-space-8)",
+      gap: "var(--forge-space-12)",
+      padding: "var(--forge-space-32) var(--forge-space-16)",
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -2075,7 +2075,7 @@ const TargetsCard = /*#__PURE__*/React.forwardRef(function TargetsCard({
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      marginBottom: "var(--forge-space-6)"
+      marginBottom: "var(--forge-space-12)"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -2149,7 +2149,7 @@ function Stat({
       fontFamily: "var(--forge-font-body)",
       fontSize: "var(--forge-text-mini-label)",
       color: "var(--forge-text-dim)",
-      marginTop: "var(--forge-space-1)"
+      marginTop: "var(--forge-space-2)"
     }
   }, label));
 }
@@ -3182,8 +3182,8 @@ const ScreenBody = /*#__PURE__*/React.forwardRef(function ScreenBody({
   }, body, /*#__PURE__*/React.createElement("div", {
     style: {
       borderTop: "var(--forge-border-w) solid var(--forge-divider)",
-      padding: "var(--forge-space-12) var(--forge-space-screen-h)",
-      paddingBottom: "max(var(--forge-space-16), env(safe-area-inset-bottom))",
+      padding: "var(--forge-space-24) var(--forge-space-screen-h)",
+      paddingBottom: "max(var(--forge-space-32), env(safe-area-inset-bottom))",
       backgroundColor: "var(--forge-bg)"
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -3769,13 +3769,13 @@ const StatCard = /*#__PURE__*/React.forwardRef(function StatCard({
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: "var(--forge-space-6)"
+      gap: "var(--forge-space-12)"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "center",
-      gap: "var(--forge-space-4)",
+      gap: "var(--forge-space-8)",
       minWidth: 0
     }
   }, icon ? /*#__PURE__*/React.createElement("span", {
@@ -3819,8 +3819,8 @@ const StatCard = /*#__PURE__*/React.forwardRef(function StatCard({
     style: {
       display: "flex",
       alignItems: "baseline",
-      gap: "var(--forge-space-2)",
-      marginTop: "var(--forge-space-5)"
+      gap: "var(--forge-space-4)",
+      marginTop: "var(--forge-space-10)"
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
@@ -3844,12 +3844,12 @@ const StatCard = /*#__PURE__*/React.forwardRef(function StatCard({
       fontFamily: "var(--forge-font-body)",
       fontSize: "var(--forge-text-chip)",
       color: "var(--forge-text-dim)",
-      marginTop: "var(--forge-space-2)",
+      marginTop: "var(--forge-space-4)",
       lineHeight: "var(--forge-lh-chip)"
     }
   }, caption) : null, chart ? /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: "var(--forge-space-6)"
+      marginTop: "var(--forge-space-12)"
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.MiniChart, chart)) : null);
 });
@@ -3895,8 +3895,8 @@ const QuickAction = /*#__PURE__*/React.forwardRef(function QuickAction({
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      gap: "var(--forge-space-5)",
-      padding: "var(--forge-space-8) var(--forge-space-6)",
+      gap: "var(--forge-space-10)",
+      padding: "var(--forge-space-16) var(--forge-space-12)",
       backgroundColor: "var(--forge-surface)",
       border: "var(--forge-border-w) solid var(--forge-border)",
       borderRadius: "var(--forge-radius-card)",
@@ -3977,7 +3977,7 @@ const PageDots = /*#__PURE__*/React.forwardRef(function PageDots({
     style: {
       display: "inline-flex",
       alignItems: "center",
-      gap: "var(--forge-space-3)",
+      gap: "var(--forge-space-6)",
       ...style
     }
   }, Array.from({
@@ -4083,15 +4083,15 @@ const Pager = /*#__PURE__*/React.forwardRef(function Pager({
       alignItems: "center",
       justifyContent: "center",
       textAlign: "center",
-      padding: "var(--forge-space-10)"
+      padding: "var(--forge-space-20)"
     }
   }, slide))), /*#__PURE__*/React.createElement("footer", {
     style: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: "var(--forge-space-8)",
-      padding: "var(--forge-space-8) var(--forge-space-10)"
+      gap: "var(--forge-space-16)",
+      padding: "var(--forge-space-16) var(--forge-space-20)"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -4169,8 +4169,8 @@ const PRCelebration = /*#__PURE__*/React.forwardRef(function PRCelebration({
       flexDirection: "column",
       alignItems: "center",
       textAlign: "center",
-      gap: "var(--forge-space-8)",
-      padding: "var(--forge-space-16) var(--forge-space-10)",
+      gap: "var(--forge-space-16)",
+      padding: "var(--forge-space-32) var(--forge-space-20)",
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -4179,7 +4179,7 @@ const PRCelebration = /*#__PURE__*/React.forwardRef(function PRCelebration({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      gap: "var(--forge-space-8)"
+      gap: "var(--forge-space-16)"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -4225,14 +4225,14 @@ const PRCelebration = /*#__PURE__*/React.forwardRef(function PRCelebration({
       fontFamily: "var(--forge-font-body)",
       fontSize: "var(--forge-text-body)",
       color: "var(--forge-text-dim)",
-      marginBottom: "var(--forge-space-2)"
+      marginBottom: "var(--forge-space-4)"
     }
   }, exercise) : null, value != null ? /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "baseline",
       justifyContent: "center",
-      gap: "var(--forge-space-2)"
+      gap: "var(--forge-space-4)"
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
@@ -4256,7 +4256,7 @@ const PRCelebration = /*#__PURE__*/React.forwardRef(function PRCelebration({
       fontFamily: "var(--forge-font-body)",
       fontSize: "var(--forge-text-chip)",
       color: "var(--forge-text-faint)",
-      marginTop: "var(--forge-space-3)"
+      marginTop: "var(--forge-space-6)"
     }
   }, __ds_scope.content.prCelebration.previous(previous)) : null) : null, onContinue ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "primary",
@@ -4349,7 +4349,7 @@ const RestTimer = /*#__PURE__*/React.forwardRef(function RestTimer({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      gap: "var(--forge-space-8)",
+      gap: "var(--forge-space-16)",
       ...style
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Ring, {
@@ -4382,13 +4382,13 @@ const RestTimer = /*#__PURE__*/React.forwardRef(function RestTimer({
       textTransform: "uppercase",
       color: "var(--forge-text-faint)",
       fontWeight: 700,
-      marginTop: "var(--forge-space-2)"
+      marginTop: "var(--forge-space-4)"
     }
   }, done ? __ds_scope.content.restTimer.statusDone : __ds_scope.content.restTimer.statusResting))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "inline-flex",
       alignItems: "center",
-      gap: "var(--forge-space-6)"
+      gap: "var(--forge-space-12)"
     }
   }, ctrl(__ds_scope.content.restTimer.addTime, "plus", () => setLeft(v => v + 15)), done ? ctrl(__ds_scope.content.restTimer.restart, "refresh", () => {
     setLeft(duration);
@@ -4436,8 +4436,8 @@ const SetLogger = /*#__PURE__*/React.forwardRef(function SetLogger({
     style: {
       display: "flex",
       alignItems: "center",
-      gap: "var(--forge-space-6)",
-      padding: "var(--forge-space-5) var(--forge-space-6)",
+      gap: "var(--forge-space-12)",
+      padding: "var(--forge-space-10) var(--forge-space-12)",
       backgroundColor: "var(--forge-surface)",
       border: `var(--forge-border-w) solid ${done ? tint : "var(--forge-border)"}`,
       borderRadius: "var(--forge-radius-card)",
@@ -4466,7 +4466,7 @@ const SetLogger = /*#__PURE__*/React.forwardRef(function SetLogger({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      gap: "var(--forge-space-1)"
+      gap: "var(--forge-space-2)"
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Stepper, {
     value: weight,
@@ -4490,7 +4490,7 @@ const SetLogger = /*#__PURE__*/React.forwardRef(function SetLogger({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      gap: "var(--forge-space-1)"
+      gap: "var(--forge-space-2)"
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Stepper, {
     value: reps,
@@ -5196,7 +5196,7 @@ const Badge = /*#__PURE__*/React.forwardRef(function Badge({
     style: {
       minWidth: 18,
       height: 18,
-      paddingInline: "var(--forge-space-4)",
+      paddingInline: "var(--forge-space-8)",
       borderRadius: "var(--forge-radius-pill)",
       backgroundColor: bg,
       color: fg,
@@ -5340,7 +5340,7 @@ const MacroRing = /*#__PURE__*/React.forwardRef(function MacroRing({
     style: {
       display: "inline-flex",
       alignItems: "center",
-      gap: "var(--forge-space-10)",
+      gap: "var(--forge-space-20)",
       ...style
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Ring, {
@@ -5355,14 +5355,14 @@ const MacroRing = /*#__PURE__*/React.forwardRef(function MacroRing({
       padding: 0,
       display: "flex",
       flexDirection: "column",
-      gap: "var(--forge-space-4)"
+      gap: "var(--forge-space-8)"
     }
   }, MACROS.map(m => /*#__PURE__*/React.createElement("li", {
     key: m.key,
     style: {
       display: "flex",
       alignItems: "center",
-      gap: "var(--forge-space-4)"
+      gap: "var(--forge-space-8)"
     }
   }, /*#__PURE__*/React.createElement("span", {
     "aria-hidden": "true",
@@ -5389,7 +5389,7 @@ const MacroRing = /*#__PURE__*/React.forwardRef(function MacroRing({
       color: "var(--forge-text-dim)",
       fontWeight: 700,
       fontVariantNumeric: "tabular-nums",
-      paddingLeft: "var(--forge-space-6)"
+      paddingLeft: "var(--forge-space-12)"
     }
   }, Math.round(vals[m.key]), " ", unit)))) : null);
 });
@@ -5432,7 +5432,7 @@ const Timeline = /*#__PURE__*/React.forwardRef(function Timeline({
       key: i,
       style: {
         display: "flex",
-        gap: "var(--forge-space-6)"
+        gap: "var(--forge-space-12)"
       }
     }, /*#__PURE__*/React.createElement("div", {
       style: {
@@ -5473,19 +5473,19 @@ const Timeline = /*#__PURE__*/React.forwardRef(function Timeline({
         flex: 1,
         width: "var(--forge-border-w-strong)",
         minHeight: 16,
-        marginTop: "var(--forge-space-2)",
+        marginTop: "var(--forge-space-4)",
         backgroundColor: "var(--forge-divider)"
       }
     }) : null), /*#__PURE__*/React.createElement("div", {
       style: {
         minWidth: 0,
-        paddingBottom: last ? 0 : "var(--forge-space-8)"
+        paddingBottom: last ? 0 : "var(--forge-space-16)"
       }
     }, /*#__PURE__*/React.createElement("div", {
       style: {
         display: "flex",
         alignItems: "baseline",
-        gap: "var(--forge-space-5)",
+        gap: "var(--forge-space-10)",
         flexWrap: "wrap"
       }
     }, item.title ? /*#__PURE__*/React.createElement("span", {
@@ -5508,7 +5508,7 @@ const Timeline = /*#__PURE__*/React.forwardRef(function Timeline({
         fontSize: "var(--forge-text-body-sm)",
         color: "var(--forge-text-dim)",
         lineHeight: "var(--forge-lh-body-sm)",
-        marginTop: "var(--forge-space-1)"
+        marginTop: "var(--forge-space-2)"
       }
     }, item.description) : null));
   }));
@@ -5574,7 +5574,7 @@ const Tabs = /*#__PURE__*/React.forwardRef(function Tabs({
       style: {
         flex: 1,
         minHeight: 44,
-        padding: "var(--forge-space-3) var(--forge-space-4)",
+        padding: "var(--forge-space-6) var(--forge-space-8)",
         background: "none",
         border: "none",
         borderBottom: `var(--forge-border-w-strong) solid ${on ? accent : "transparent"}`,
@@ -5593,7 +5593,7 @@ const Tabs = /*#__PURE__*/React.forwardRef(function Tabs({
     "aria-labelledby": `${idBase}-tab-${active}`,
     tabIndex: 0,
     style: {
-      paddingTop: "var(--forge-space-12)"
+      paddingTop: "var(--forge-space-24)"
     }
   }, children) : null);
 });
@@ -5660,8 +5660,8 @@ const Accordion = /*#__PURE__*/React.forwardRef(function Accordion({
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      gap: "var(--forge-space-4)",
-      padding: "var(--forge-space-3) 0",
+      gap: "var(--forge-space-8)",
+      padding: "var(--forge-space-6) 0",
       background: "none",
       border: "none",
       cursor: "pointer",
@@ -5694,7 +5694,7 @@ const Accordion = /*#__PURE__*/React.forwardRef(function Accordion({
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      paddingBottom: "var(--forge-space-6)"
+      paddingBottom: "var(--forge-space-12)"
     }
   }, children)));
 });
@@ -5760,7 +5760,7 @@ const WeekStrip = /*#__PURE__*/React.forwardRef(function WeekStrip({
     className: className,
     style: {
       display: "flex",
-      gap: "var(--forge-space-3)",
+      gap: "var(--forge-space-6)",
       ...style
     }
   }, list.map((d, i) => {
@@ -5786,8 +5786,8 @@ const WeekStrip = /*#__PURE__*/React.forwardRef(function WeekStrip({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: "var(--forge-space-1)",
-        padding: "var(--forge-space-3) var(--forge-space-2)",
+        gap: "var(--forge-space-2)",
+        padding: "var(--forge-space-6) var(--forge-space-4)",
         cursor: "pointer",
         borderRadius: "var(--forge-radius-input)",
         border: `var(--forge-border-w) solid ${on ? tint : "var(--forge-border)"}`,
@@ -5859,7 +5859,7 @@ const StreakIndicator = /*#__PURE__*/React.forwardRef(function StreakIndicator({
     style: {
       display: "inline-flex",
       alignItems: "center",
-      gap: "var(--forge-space-6)",
+      gap: "var(--forge-space-12)",
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -5881,13 +5881,13 @@ const StreakIndicator = /*#__PURE__*/React.forwardRef(function StreakIndicator({
     style: {
       display: "flex",
       flexDirection: "column",
-      gap: "var(--forge-space-2)"
+      gap: "var(--forge-space-4)"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "baseline",
-      gap: "var(--forge-space-2)"
+      gap: "var(--forge-space-4)"
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
@@ -5913,7 +5913,7 @@ const StreakIndicator = /*#__PURE__*/React.forwardRef(function StreakIndicator({
     style: {
       display: "inline-flex",
       alignItems: "center",
-      gap: "var(--forge-space-3)"
+      gap: "var(--forge-space-6)"
     }
   }, week.map((done, i) => /*#__PURE__*/React.createElement("span", {
     key: i,
@@ -5954,8 +5954,8 @@ const CoachNote = /*#__PURE__*/React.forwardRef(function CoachNote({
     style: {
       display: "flex",
       alignItems: "center",
-      gap: "var(--forge-space-6)",
-      padding: "var(--forge-space-6) var(--forge-space-8)",
+      gap: "var(--forge-space-12)",
+      padding: "var(--forge-space-12) var(--forge-space-16)",
       borderRadius: "var(--forge-radius-card)",
       backgroundColor: `color-mix(in srgb, ${tint} 10%, var(--forge-surface))`,
       border: `var(--forge-border-w) solid color-mix(in srgb, ${tint} 26%, var(--forge-border))`,
@@ -6020,8 +6020,8 @@ const OfflineBanner = /*#__PURE__*/React.forwardRef(function OfflineBanner({
     style: {
       display: "flex",
       alignItems: "center",
-      gap: "var(--forge-space-5)",
-      padding: "var(--forge-space-6) var(--forge-space-8)",
+      gap: "var(--forge-space-10)",
+      padding: "var(--forge-space-12) var(--forge-space-16)",
       borderRadius: "var(--forge-radius-card)",
       border: `var(--forge-border-w) solid color-mix(in srgb, ${accent} 40%, var(--forge-border))`,
       backgroundColor: `color-mix(in srgb, ${accent} 12%, var(--forge-surface))`,
@@ -6047,7 +6047,7 @@ const OfflineBanner = /*#__PURE__*/React.forwardRef(function OfflineBanner({
       flexShrink: 0,
       border: "none",
       background: "none",
-      padding: "var(--forge-space-2) var(--forge-space-3)",
+      padding: "var(--forge-space-4) var(--forge-space-6)",
       borderRadius: "var(--forge-radius-chip)",
       cursor: "pointer",
       fontFamily: "var(--forge-font-body)",
@@ -6327,15 +6327,15 @@ const Chart = /*#__PURE__*/React.forwardRef(function Chart({
     style: {
       display: "flex",
       flexWrap: "wrap",
-      gap: "var(--forge-space-4)",
-      marginTop: "var(--forge-space-3)"
+      gap: "var(--forge-space-8)",
+      marginTop: "var(--forge-space-6)"
     }
   }, S.map((s, si) => /*#__PURE__*/React.createElement("span", {
     key: si,
     style: {
       display: "inline-flex",
       alignItems: "center",
-      gap: "var(--forge-space-2)",
+      gap: "var(--forge-space-4)",
       fontFamily: "var(--forge-font-body)",
       fontSize: "var(--forge-text-chip)",
       color: "var(--forge-text-dim)"
@@ -6511,8 +6511,8 @@ const ImagePicker = /*#__PURE__*/React.forwardRef(function ImagePicker({
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      gap: "var(--forge-space-2)",
-      padding: "var(--forge-space-3)",
+      gap: "var(--forge-space-4)",
+      padding: "var(--forge-space-6)",
       backgroundColor: "var(--forge-surface)",
       border: "var(--forge-border-w) dashed var(--forge-border-input)",
       color: "var(--forge-text-faint)",

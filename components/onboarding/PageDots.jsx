@@ -8,7 +8,7 @@ import React from "react";
 export const PageDots = React.forwardRef(function PageDots({ count = 0, active = 0, accent, className, style }, ref) {
   const on = accent || "var(--forge-accent)";
   return (
-    <div ref={ref} aria-hidden="true" className={className} style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-3)", ...style }}>
+    <div ref={ref} aria-hidden="true" className={className} style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-6)", ...style }}>
       {Array.from({ length: count }, (_, i) => {
         const isActive = i === active;
         return (

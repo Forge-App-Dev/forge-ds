@@ -112,18 +112,18 @@ const plan = {
     "aliases.forge-tracking-title", "aliases.forge-tracking-label", "aliases.forge-tracking-eyebrow",
   ],
   spacing: [
-    "primitive.dimension.space.0", "primitive.dimension.space.1", "primitive.dimension.space.2", "primitive.dimension.space.3",
-    "primitive.dimension.space.4", "primitive.dimension.space.5", "primitive.dimension.space.6", "primitive.dimension.space.8",
-    "primitive.dimension.space.10", "primitive.dimension.space.12", "primitive.dimension.space.16", "primitive.dimension.space.20",
+    "primitive.dimension.space.0", "primitive.dimension.space.2", "primitive.dimension.space.4", "primitive.dimension.space.6",
+    "primitive.dimension.space.8", "primitive.dimension.space.10", "primitive.dimension.space.12", "primitive.dimension.space.16",
+    "primitive.dimension.space.20", "primitive.dimension.space.24", "primitive.dimension.space.32", "primitive.dimension.space.40",
     "primitive.dimension.space.screen-h", "primitive.dimension.space.card", "primitive.dimension.space.gap", "primitive.dimension.space.card-gap",
     "primitive.dimension.radius.card", "primitive.dimension.radius.panel", "primitive.dimension.radius.input", "primitive.dimension.radius.button",
     "primitive.dimension.radius.chip", "primitive.dimension.radius.pill", "primitive.dimension.radius.video",
     "primitive.dimension.control.sm", "primitive.dimension.control.md", "primitive.dimension.control.lg",
-    "primitive.dimension.icon.sm", "primitive.dimension.icon.md", "primitive.dimension.icon.lg", "primitive.dimension.icon.xl",
+    "primitive.dimension.icon.sm", "primitive.dimension.icon.md", "primitive.dimension.icon.lg",
     "primitive.dimension.border-w.default", "primitive.dimension.border-w.strong",
     "primitive.dimension.focus.ring-w", "primitive.dimension.focus.ring-offset",
     "primitive.number.opacity.press", "primitive.number.opacity.disabled",
-    "primitive.number.z.nav", "primitive.number.z.overlay", "primitive.number.z.fullscreen", "primitive.number.z.video", "primitive.number.z.top",
+    "primitive.number.z.nav", "primitive.number.z.overlay", "primitive.number.z.fullscreen", "primitive.number.z.video",
     "primitive.dimension.layout.app-max-width", "primitive.dimension.layout.tap-target-min", "primitive.dimension.layout.tap-target",
     "primitive.number.breakpoint.phone", "primitive.number.breakpoint.large", "primitive.number.breakpoint.xlarge",
     "aliases.radius-card", "aliases.radius-panel", "aliases.radius-input", "aliases.radius-button", "aliases.radius-chip", "aliases.radius-pill",
@@ -289,7 +289,7 @@ export interface ForgeTokens {
   surface: { canvas: string; default: string; raised: string; panel: string };
   text: { primary: string; secondary: string; tertiary: string; quaternary: string; disabled: string };
   border: { default: string; input: string; divider: string; focus: string };
-  space: Record<0 | 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12 | 16 | 20, number>;
+  space: Record<0 | 2 | 4 | 6 | 8 | 10 | 12 | 16 | 20 | 24 | 32 | 40, number>;
   radius: { chip: number; input: number; button: number; video: number; card: number; panel: number; pill: number };
   control: { sm: number; md: number; lg: number };
   duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;

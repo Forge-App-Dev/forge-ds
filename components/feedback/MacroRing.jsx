@@ -44,15 +44,15 @@ export const MacroRing = React.forwardRef(function MacroRing({
     `Macros: ${MACROS.map((m) => `${m.label.toLowerCase()} ${Math.round(vals[m.key])} ${unit}`).join(", ")}`;
 
   return (
-    <div ref={ref} className={className} style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-10)", ...style }}>
+    <div ref={ref} className={className} style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-20)", ...style }}>
       <Ring size={size} stroke={stroke} segments={segments} label={aria}>
         {center}
       </Ring>
 
       {legend ? (
-        <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "var(--forge-space-4)" }}>
+        <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "var(--forge-space-8)" }}>
           {MACROS.map((m) => (
-            <li key={m.key} style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-4)" }}>
+            <li key={m.key} style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-8)" }}>
               <span
                 aria-hidden="true"
                 style={{ width: 10, height: 10, flexShrink: 0, borderRadius: "var(--forge-radius-pill)", backgroundColor: m.color, display: "inline-block" }}
@@ -60,7 +60,7 @@ export const MacroRing = React.forwardRef(function MacroRing({
               <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body-sm)", color: "var(--forge-text-muted)", fontWeight: 600 }}>
                 {m.label}
               </span>
-              <span style={{ marginLeft: "auto", fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body-sm)", color: "var(--forge-text-dim)", fontWeight: 700, fontVariantNumeric: "tabular-nums", paddingLeft: "var(--forge-space-6)" }}>
+              <span style={{ marginLeft: "auto", fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body-sm)", color: "var(--forge-text-dim)", fontWeight: 700, fontVariantNumeric: "tabular-nums", paddingLeft: "var(--forge-space-12)" }}>
                 {Math.round(vals[m.key])} {unit}
               </span>
             </li>

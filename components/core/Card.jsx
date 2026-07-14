@@ -29,10 +29,10 @@ export const Card = React.forwardRef(function Card({ children, stripeColor, onCl
   const inner = (
     <>
       {stripeColor ? <div style={{ width: 4, flexShrink: 0, backgroundColor: stripeColor }} /> : null}
-      <div style={{ flex: 1, minWidth: 0, padding: stripeColor ? "var(--forge-space-12)" : "var(--forge-space-card)" }}>
-        {header ? <div style={{ marginBottom: "var(--forge-space-5)" }}>{header}</div> : null}
+      <div style={{ flex: 1, minWidth: 0, padding: stripeColor ? "var(--forge-space-24)" : "var(--forge-space-card)" }}>
+        {header ? <div style={{ marginBottom: "var(--forge-space-10)" }}>{header}</div> : null}
         {children}
-        {footer ? <div style={{ marginTop: "var(--forge-space-5)" }}>{footer}</div> : null}
+        {footer ? <div style={{ marginTop: "var(--forge-space-10)" }}>{footer}</div> : null}
       </div>
     </>
   );

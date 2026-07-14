@@ -46,7 +46,7 @@ export const Tabs = React.forwardRef(function Tabs({ tabs, active, onChange, acc
               style={{
                 flex: 1,
                 minHeight: 44,
-                padding: "var(--forge-space-3) var(--forge-space-4)",
+                padding: "var(--forge-space-6) var(--forge-space-8)",
                 background: "none",
                 border: "none",
                 borderBottom: `var(--forge-border-w-strong) solid ${on ? accent : "transparent"}`,
@@ -70,7 +70,7 @@ export const Tabs = React.forwardRef(function Tabs({ tabs, active, onChange, acc
           id={`${idBase}-panel-${active}`}
           aria-labelledby={`${idBase}-tab-${active}`}
           tabIndex={0}
-          style={{ paddingTop: "var(--forge-space-12)" }}
+          style={{ paddingTop: "var(--forge-space-24)" }}
         >
           {children}
         </div>

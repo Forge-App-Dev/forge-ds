@@ -20,8 +20,8 @@ export const CoachNote = React.forwardRef(function CoachNote({ children, icon = 
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--forge-space-6)",
-        padding: "var(--forge-space-6) var(--forge-space-8)",
+        gap: "var(--forge-space-12)",
+        padding: "var(--forge-space-12) var(--forge-space-16)",
         borderRadius: "var(--forge-radius-card)",
         backgroundColor: `color-mix(in srgb, ${tint} 10%, var(--forge-surface))`,
         border: `var(--forge-border-w) solid color-mix(in srgb, ${tint} 26%, var(--forge-border))`,

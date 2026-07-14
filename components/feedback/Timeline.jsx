@@ -21,7 +21,7 @@ export const Timeline = React.forwardRef(function Timeline({ items = [], accent,
         const last = i === list.length - 1;
         const color = item.color || tint;
         return (
-          <li key={i} style={{ display: "flex", gap: "var(--forge-space-6)" }}>
+          <li key={i} style={{ display: "flex", gap: "var(--forge-space-12)" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0, width: 28 }}>
               {item.icon ? (
                 <span
@@ -54,13 +54,13 @@ export const Timeline = React.forwardRef(function Timeline({ items = [], accent,
               {!last ? (
                 <span
                   aria-hidden="true"
-                  style={{ flex: 1, width: "var(--forge-border-w-strong)", minHeight: 16, marginTop: "var(--forge-space-2)", backgroundColor: "var(--forge-divider)" }}
+                  style={{ flex: 1, width: "var(--forge-border-w-strong)", minHeight: 16, marginTop: "var(--forge-space-4)", backgroundColor: "var(--forge-divider)" }}
                 />
               ) : null}
             </div>
 
-            <div style={{ minWidth: 0, paddingBottom: last ? 0 : "var(--forge-space-8)" }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-5)", flexWrap: "wrap" }}>
+            <div style={{ minWidth: 0, paddingBottom: last ? 0 : "var(--forge-space-16)" }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-10)", flexWrap: "wrap" }}>
                 {item.title ? (
                   <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body)", fontWeight: 700, color: "var(--forge-text)" }}>
                     {item.title}
@@ -73,7 +73,7 @@ export const Timeline = React.forwardRef(function Timeline({ items = [], accent,
                 ) : null}
               </div>
               {item.description ? (
-                <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body-sm)", color: "var(--forge-text-dim)", lineHeight: "var(--forge-lh-body-sm)", marginTop: "var(--forge-space-1)" }}>
+                <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body-sm)", color: "var(--forge-text-dim)", lineHeight: "var(--forge-lh-body-sm)", marginTop: "var(--forge-space-2)" }}>
                   {item.description}
                 </div>
               ) : null}

@@ -2,21 +2,21 @@
    GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens). */
 :root {
   --forge-space-0: 0px;
-  --forge-space-1: 2px;
-  --forge-space-2: 4px;
-  --forge-space-3: 6px;
-  --forge-space-4: 8px;
-  --forge-space-5: 10px;
-  --forge-space-6: 12px;
-  --forge-space-8: 16px;
-  --forge-space-10: 20px;
-  --forge-space-12: 24px;
-  --forge-space-16: 32px;
-  --forge-space-20: 40px;
-  --forge-space-screen-h: var(--forge-space-10);
-  --forge-space-card: var(--forge-space-8);
-  --forge-space-gap: var(--forge-space-5);
-  --forge-space-card-gap: var(--forge-space-5);
+  --forge-space-2: 2px;
+  --forge-space-4: 4px;
+  --forge-space-6: 6px;
+  --forge-space-8: 8px;
+  --forge-space-10: 10px;
+  --forge-space-12: 12px;
+  --forge-space-16: 16px;
+  --forge-space-20: 20px;
+  --forge-space-24: 24px;
+  --forge-space-32: 32px;
+  --forge-space-40: 40px;
+  --forge-space-screen-h: var(--forge-space-20);
+  --forge-space-card: var(--forge-space-16);
+  --forge-space-gap: var(--forge-space-10);
+  --forge-space-card-gap: var(--forge-space-10);
   --forge-radius-card: 14px;
   --forge-radius-panel: 18px;
   --forge-radius-input: 10px;
@@ -30,7 +30,6 @@
   --forge-icon-sm: 16px;
   --forge-icon-md: 20px;
   --forge-icon-lg: 24px;
-  --forge-icon-xl: 30px;
   --forge-border-w: 1px;
   --forge-border-w-strong: 1.5px;
   --forge-focus-ring-w: 2px;
@@ -41,7 +40,6 @@
   --forge-z-overlay: 50;
   --forge-z-fullscreen: 60;
   --forge-z-video: 70;
-  --forge-z-top: 100;
   --forge-app-max-width: 480px;
   --forge-tap-target-min: 24px;
   --forge-tap-target: 44px;
