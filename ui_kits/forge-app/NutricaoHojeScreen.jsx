@@ -2,7 +2,7 @@
 // (abbreviated: kcal ring + macro meters, meal list with items).
 function NutricaoHojeScreen({ onAdjust, onEditMeal }) {
   const { Ring, MacroMeter, Button } = window.ForgeDesignSystem_7731a5;
-  const NG = "#10B981";
+  const NG = "var(--forge-nutrition)";
   const totals = { kcal: 1680, p: 92, c: 180, f: 40 };
   const target = { kcal: 2400, proteinG: 150, carbG: 260, fatG: 70 };
   const meals = [

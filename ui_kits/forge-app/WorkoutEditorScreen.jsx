@@ -34,8 +34,8 @@ function WorkoutEditorScreen({ visible, onClose, onEditExercise }) {
         onClick={() => onEditExercise && onEditExercise(null)}
         style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, border: "1px dashed var(--forge-border-input)", borderRadius: 10, padding: 12, marginTop: 4, cursor: "pointer" }}
       >
-        <Icon name="plus" color="#EF4444" size={16} />
-        <span style={{ color: "#EF4444", fontSize: 13, fontFamily: "var(--font-body)", fontWeight: 700 }}>Adicionar exercício</span>
+        <Icon name="plus" color="var(--forge-accent)" size={16} />
+        <span style={{ color: "var(--forge-accent)", fontSize: 13, fontFamily: "var(--font-body)", fontWeight: 700 }}>Adicionar exercício</span>
       </div>
     </FullScreen>
   );

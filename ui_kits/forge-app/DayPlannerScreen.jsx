@@ -24,7 +24,7 @@ function DayPlannerScreen({ visible, onClose }) {
           style={{ display: "flex", alignItems: "center", gap: 12, backgroundColor: "var(--forge-surface)", border: `1px solid ${s.enabled ? "var(--forge-nutrition)" : "var(--forge-border)"}`, borderRadius: 12, padding: 14, marginBottom: 9, cursor: "pointer", opacity: s.enabled ? 1 : 0.55 }}
         >
           <div style={{ width: 20, height: 20, borderRadius: 5, border: `1.5px solid ${s.enabled ? "var(--forge-nutrition)" : "var(--forge-border-input)"}`, backgroundColor: s.enabled ? "var(--forge-nutrition)" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            {s.enabled ? <Icon name="check" color="#0B0F19" size={13} /> : null}
+            {s.enabled ? <Icon name="check" color="var(--forge-on-light)" size={13} /> : null}
           </div>
           <span style={{ flex: 1, color: "var(--forge-text)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 14 }}>{s.label}</span>
         </div>
