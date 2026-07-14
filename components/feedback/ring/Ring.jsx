@@ -10,7 +10,12 @@ import React from "react";
 // design-system tokens like "var(--forge-accent)" resolve. The indeterminate
 // spin uses the global .forge-anim-spin class (tokens/motion.css) instead of
 // an injected <style>, so reduced-motion is honored in one place.
-export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--forge-accent)", track = "var(--forge-surface-raised)", children, indeterminate = false, segments, label }) {
+//
+// `announce` (optional, OP-164): a message announced to screen readers via a
+// polite live region ONLY when a determinate progress reaches 100% (e.g. "Série
+// concluída"). Additive — with no `announce` prop nothing changes; it never
+// affects the visual or the default aria-* behavior.
+export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--forge-accent)", track = "var(--forge-surface-raised)", children, indeterminate = false, segments, label, announce }) {
   const r = (size - stroke) / 2;
   const circ = 2 * Math.PI * r;
   const wrap = { position: "relative", width: size, height: size, display: "flex", alignItems: "center", justifyContent: "center" };
@@ -80,6 +85,9 @@ export function Ring({ size = 120, stroke = 10, progress = 0, color = "var(--for
         />
       </svg>
       {children}
+      {announce && clamped >= 1 ? (
+        <span className="forge-sr-only" role="status" aria-live="polite">{announce}</span>
+      ) : null}
     </div>
   );
 }

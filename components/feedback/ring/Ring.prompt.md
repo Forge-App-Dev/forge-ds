@@ -23,3 +23,5 @@ Circular progress ring, the brand's signature element — background track + acc
 ```
 
 Also drives the app's loading-spinner treatment (see guidelines/animation card).
+
+**Acessibilidade:** determinate expõe `role="progressbar"` + `aria-valuenow/min/max`; passe `label` como nome acessível (ADR-0054). Para anunciar a **conclusão** de um ciclo (série, timer) a um leitor de tela, passe `announce="Série concluída"` — uma região `role="status"`/`aria-live="polite"` invisível aparece só quando `progress` chega a 100% (OP-164). Sem `announce`, nada muda. Ver `docs/accessibility-checklist.md` (§Progresso e feedback) e `docs/a11y-advanced.md`.
