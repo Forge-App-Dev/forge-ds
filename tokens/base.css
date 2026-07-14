@@ -34,3 +34,15 @@
   align-items: center;
   justify-content: center;
 }
+
+/* prefers-reduced-motion: neutraliza TODAS as transições/animações CSS — não só
+   as classes de keyframe de tokens/motion.css, mas também as transições inline
+   dos componentes (Ring, ProgressBar, Tabs, WeekStrip…) — T-28. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

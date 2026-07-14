@@ -39,7 +39,7 @@ export function Tabs({ tabs, active, onChange, accent = "var(--forge-accent)", i
               role="tab"
               id={`${idBase}-tab-${t.id}`}
               aria-selected={on}
-              aria-controls={children != null ? `${idBase}-panel-${t.id}` : undefined}
+              aria-controls={on && children != null ? `${idBase}-panel-${t.id}` : undefined}
               tabIndex={on ? 0 : -1}
               onClick={() => onChange && onChange(t.id)}
               onKeyDown={onKeyDown}

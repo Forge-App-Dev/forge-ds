@@ -53,6 +53,7 @@ export function Select({ value, options = [], onChange, label, placeholder = "Se
             key={String(o.value)}
             title={o.label}
             subtitle={o.subtitle}
+            selected={o.value === value}
             trailing={o.value === value ? <Icon name="check" color="var(--forge-accent)" size={18} /> : null}
             onClick={() => { onChange && onChange(o.value); setOpen(false); }}
           />

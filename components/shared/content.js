@@ -77,4 +77,10 @@ export const content = {
     // Ring accessible label — template kept identical (mm:ss injected).
     ringLabel: (time) => `Descanso: ${time} restantes`,
   },
+
+  metaBar: {
+    // feedback/meta-bar/MetaBar.jsx — nomes acessíveis da barra de progresso.
+    distribution: "Distribuição por refeição",
+    value: "Progresso",
+  },
 };

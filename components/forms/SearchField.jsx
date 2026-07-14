@@ -31,7 +31,7 @@ export function SearchField({ value = "", onChange, placeholder = "Buscar", onSu
         onKeyDown={(e) => { if (e.key === "Enter" && onSubmit) onSubmit(value); }}
         style={{
           flex: 1, minWidth: 0, height: "100%",
-          background: "none", border: "none", outline: "none",
+          background: "none", border: "none",
           color: "var(--forge-text)", fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-input)",
         }}
       />

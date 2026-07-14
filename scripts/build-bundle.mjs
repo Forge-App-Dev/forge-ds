@@ -222,7 +222,7 @@ fs.writeFileSync(path.join(ROOT, "_ds_bundle.js"), bundle);
 // manifest (mantém startingPoints do existente se houver)
 let startingPoints = [];
 try { startingPoints = JSON.parse(fs.readFileSync(path.join(ROOT, "_ds_manifest.json"), "utf8")).startingPoints || []; } catch {}
-const manifest = { namespace: NS, components: manifestComponents.concat([{ name: "ICON_NAMES", sourcePath: "components/icons/Icon.jsx" }]), startingPoints };
+const manifest = { namespace: NS, components: manifestComponents, startingPoints };
 fs.writeFileSync(path.join(ROOT, "_ds_manifest.json"), JSON.stringify(manifest, null, 1));
 
 console.log("bundle gerado:", manifestComponents.length, "exports");

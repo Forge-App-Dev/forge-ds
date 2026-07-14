@@ -22,16 +22,21 @@ export function RestTimer({ duration = 90, running: initialRunning = true, onCom
   const [running, setRunning] = React.useState(initialRunning);
   const done = left <= 0;
 
+  // onComplete num ref: o intervalo não deve reiniciar quando o pai passa um
+  // callback inline novo a cada render (T-23) — senão o countdown treme/reseta.
+  const onCompleteRef = React.useRef(onComplete);
+  React.useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
+
   React.useEffect(() => {
     if (!running || done || typeof window === "undefined") return;
     const id = window.setInterval(() => {
       setLeft((v) => {
-        if (v <= 1) { window.clearInterval(id); if (onComplete) onComplete(); return 0; }
+        if (v <= 1) { window.clearInterval(id); const cb = onCompleteRef.current; if (cb) cb(); return 0; }
         return v - 1;
       });
     }, 1000);
     return () => window.clearInterval(id);
-  }, [running, done, onComplete]);
+  }, [running, done]);
 
   const tint = done ? "var(--forge-success)" : (accent || "var(--forge-accent)");
   const progress = duration > 0 ? left / duration : 0;

@@ -86,7 +86,7 @@ const plan = {
     "semantic.category.ext-1", "semantic.category.ext-2", "semantic.category.ext-3", "semantic.category.ext-4", "semantic.category.ext-5",
     "semantic.category.ext-6", "semantic.category.ext-7", "semantic.category.ext-8", "semantic.category.ext-9",
     "aliases.surface-bg", "aliases.surface-card", "aliases.surface-raised", "aliases.surface-panel",
-    "aliases.border-card", "aliases.border-input", "aliases.text-body", "aliases.text-secondary",
+    "aliases.border-card", "aliases.border-input",
     "semantic.scrim.default", "semantic.scrim.heavy",
     "semantic.border.focus",
     "semantic.feedback.negative",
@@ -184,7 +184,15 @@ function emitCss(token, theme, seen = new Set()) {
 // ---------------------------------------------------------------------------
 function validate() {
   for (const t of all) emitCss(t, "base");
-  console.log(`build-tokens: validações OK (${all.length} tokens; ${emitted.size} emitidos).`);
+  // Nenhum cssVar emitido pode ser reivindicado por dois tokens diferentes (T-20).
+  const byVar = new Map();
+  for (const p of emitted) {
+    const t = byPath.get(p);
+    if (byVar.has(t.cssVar) && byVar.get(t.cssVar) !== p)
+      fail(`cssVar duplicado ${t.cssVar}: reivindicado por ${byVar.get(t.cssVar)} e ${p}`);
+    byVar.set(t.cssVar, p);
+  }
+  console.log(`build-tokens: validações OK (${all.length} tokens; ${emitted.size} emitidos; sem cssVar duplicado).`);
 }
 
 // §6.2.5 — contraste (warning, não bloqueia).

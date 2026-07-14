@@ -19,6 +19,7 @@
     "build": "npm run build:tokens && npm run build:index && npm run build:bundle && npm run build:plan",
     "check:drift": "node scripts/check-drift.mjs",
     "check:adherence": "node scripts/check-adherence.mjs",
+    "check:oncolor": "node scripts/check-oncolor.mjs",
     "test:render": "node scripts/render-test.mjs"
   },
   "devDependencies": {

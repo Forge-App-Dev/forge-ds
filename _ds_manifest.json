@@ -260,10 +260,6 @@
   {
    "name": "ImagePicker",
    "sourcePath": "components/media/ImagePicker.jsx"
-  },
-  {
-   "name": "ICON_NAMES",
-   "sourcePath": "components/icons/Icon.jsx"
   }
  ],
  "startingPoints": [

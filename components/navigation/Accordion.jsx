@@ -80,6 +80,8 @@ export function Accordion({ title, children, open: openProp, defaultOpen = false
         id={panelId}
         role="region"
         aria-labelledby={headerId}
+        inert={!open || undefined}
+        aria-hidden={!open || undefined}
         style={{
           overflow: "hidden",
           maxHeight: open ? 2000 : 0,
