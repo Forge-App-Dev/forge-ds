@@ -25,7 +25,7 @@ export function VideoModal({ visible, onClose, title, children }) {
         onClick={(e) => e.stopPropagation()}
         style={{ display: "flex", flexDirection: "column", flex: 1 }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 18px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 18px", paddingTop: "max(14px, env(safe-area-inset-top))" }}>
           <span id={titleId} style={{ color: "var(--forge-text)", fontFamily: "var(--forge-font-title)", fontSize: 18, textTransform: "uppercase", letterSpacing: "var(--forge-tracking-title)" }}>{title}</span>
           <button
             className="forge-focusable forge-tap-min"

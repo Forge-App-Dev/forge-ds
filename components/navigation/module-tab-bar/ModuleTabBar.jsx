@@ -1,17 +1,23 @@
 import React from "react";
 import { Icon } from "../../icons/Icon";
+import { content } from "../../shared/content.js";
 
-// Module bottom tab bar — controlled by index; active tab tinted with the
-// module's accent color, inactive tabs in textDim.
-export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-accent)" }) {
+// Module bottom navigation bar — app-level navigation BETWEEN modules. É
+// navegação, não um tablist (T-30 / ADR): usa role="navigation" + aria-current
+// ="page" no item ativo (não role="tab"/aria-selected, que exigiria roving
+// tabindex, setas e um tabpanel — ver Tabs para o padrão de abas in-screen).
+// O ativo tem um INDICADOR DE FORMA (barra de accent no topo) + peso maior,
+// além da cor — para não depender só de cor (WCAG 1.4.1). Tinta = accent do
+// módulo (ou o accent do DS por padrão).
+export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-accent)", ariaLabel = content.moduleTabBar.nav }) {
   return (
-    <div
-      role="tablist"
+    <nav
+      role="navigation"
+      aria-label={ariaLabel}
       style={{
         display: "flex",
         backgroundColor: "var(--forge-panel)",
         borderTop: "var(--forge-border-w) solid var(--forge-divider)",
-        paddingTop: 8,
         paddingBottom: "max(8px, env(safe-area-inset-bottom))",
         paddingInline: 4,
       }}
@@ -23,8 +29,7 @@ export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-acc
           <button
             key={t.id}
             className="forge-focusable"
-            role="tab"
-            aria-selected={on}
+            aria-current={on ? "page" : undefined}
             aria-label={t.label}
             onClick={() => onChange && onChange(t.id)}
             style={{
@@ -34,18 +39,22 @@ export function ModuleTabBar({ tabs, active, onChange, accent = "var(--forge-acc
               alignItems: "center",
               justifyContent: "center",
               gap: 3,
-              minHeight: 44,
-              paddingBlock: 2,
+              minHeight: 48,
+              paddingBottom: 6,
               background: "none",
               border: "none",
               cursor: "pointer",
             }}
           >
+            <span
+              aria-hidden="true"
+              style={{ height: 3, width: 22, borderRadius: "0 0 3px 3px", backgroundColor: on ? accent : "transparent", marginBottom: 5 }}
+            />
             <Icon name={t.icon} color={color} size={22} />
-            <span style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 11, color }}>{t.label}</span>
+            <span style={{ fontFamily: "var(--forge-font-body)", fontWeight: on ? 700 : 600, fontSize: 11, color }}>{t.label}</span>
           </button>
         );
       })}
-    </div>
+    </nav>
   );
 }

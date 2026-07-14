@@ -24,8 +24,8 @@ export function Checkbox({ checked = false, indeterminate = false, onChange, lab
       onClick={(e) => { e.stopPropagation(); toggle(); }}
       onKeyDown={(e) => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); } }}
       style={{
-        width: 22,
-        height: 22,
+        width: 24,
+        height: 24,
         borderRadius: "var(--forge-radius-chip)",
         backgroundColor: filled ? "var(--forge-accent)" : "var(--forge-surface-raised)",
         border: `var(--forge-border-w-strong) solid ${filled ? "var(--forge-accent)" : "var(--forge-border-input)"}`,
