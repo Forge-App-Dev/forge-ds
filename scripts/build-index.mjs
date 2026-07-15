@@ -52,6 +52,9 @@ const html = `<!DOCTYPE html>
   .logo { font-family: var(--forge-font-title); font-size: 28px; text-transform: uppercase; letter-spacing: var(--forge-tracking-title); }
   .logo span { color: var(--forge-accent); }
   .tagline { color: var(--forge-text-dim); font-size: 13px; margin-top: 6px; }
+  .nav { margin-top: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .nav a { color: var(--forge-accent); text-decoration: none; font-weight: 700; font-size: 13px; }
+  .nav a:hover { text-decoration: underline; }
   main { max-width: 960px; margin: 0 auto; padding: 20px; }
   .group { margin-bottom: 32px; }
   .group h2 { font-family: var(--forge-font-title); font-size: 13px; letter-spacing: var(--forge-tracking-eyebrow); text-transform: uppercase; color: var(--forge-text-faint); margin: 0 0 10px; }
@@ -67,6 +70,11 @@ const html = `<!DOCTYPE html>
 <header>
   <div class="logo"><span>F</span>orge Design System</div>
   <div class="tagline">Catálogo vivo — direto do repo, sem exportação. Editado aqui, publicado aqui.</div>
+  <div class="nav">
+    <a href="docs/plan/">📋 Roadmap &amp; progresso →</a>
+    <a href="ui_kits/forge-app/index.html">📱 UI Kit (click-through) →</a>
+    <a href="readme.md">📖 README →</a>
+  </div>
 </header>
 <main>
 ${cardsHtml}
