@@ -17,6 +17,22 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.11.0] — 2026-07-15
+Fase 4: fontes self-hosted (fim do Google Fonts em runtime).
+
+### Changed
+- **Fontes self-hosted (T-50).** Removido o `@import` render-blocking do Google
+  Fonts do `typography.css`. Novo `tokens/fonts.css` com `@font-face` e o woff2
+  (subset latin) embutido como `data:` URI — **CSP-safe, offline, sem terceiro em
+  runtime**. Inter 400–800 + Barlow Condensed 600–800 (~301 KB). Importado por
+  `styles.css`; o `typography.css` só declara as famílias `--forge-font-*`.
+
+### Added
+- **`scripts/build-fonts.mjs`** (`npm run build:fonts`) — gera o `tokens/fonts.css`.
+  Fica **fora** da cadeia `npm run build` de propósito: buscar do Google a cada
+  build tornaria o CI dependente de rede e sujeito a drift. `tokens/fonts.css` é um
+  ativo estático commitado; regerar só ao mudar famílias/pesos.
+
 ## [1.10.0] — 2026-07-15
 Fase 4: sistema de tokens redondo — um namespace só, provenance de macros, `.d.ts` gerado.
 Sem mudança visual (renomeações de token com valores idênticos).

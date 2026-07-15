@@ -1,5 +1,7 @@
 /* Forge Design System — typography tokens
    GENERATED — do not edit. Source: tokens/tokens.json (npm run build:tokens).
    Title font: Barlow Condensed (600/700/800), always uppercase, slight tracking.
-   Body font: Inter (400–800). Loaded from Google Fonts (exact match — no substitution needed). */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+   Body font: Inter (400–800).
+   As fontes são SELF-HOSTED em tokens/fonts.css (@font-face, woff2 embutido; sem
+   Google Fonts em runtime — T-50). Este arquivo só declara as famílias --forge-font-*;
+   quem carrega os arquivos é tokens/fonts.css (importado por styles.css). */

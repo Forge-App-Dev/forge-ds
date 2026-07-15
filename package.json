@@ -16,6 +16,7 @@
     "build:index": "node scripts/build-index.mjs",
     "build:plan": "node scripts/build-plan.mjs",
     "build:tokens": "node scripts/build-tokens.mjs",
+    "build:fonts": "node scripts/build-fonts.mjs",
     "build": "npm run build:tokens && npm run build:index && npm run build:bundle && npm run build:plan",
     "check:drift": "node scripts/check-drift.mjs",
     "check:adherence": "node scripts/check-adherence.mjs",
