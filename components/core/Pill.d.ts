@@ -1,24 +1,29 @@
-import React, { CSSProperties } from "react";
+import * as React from "react";
 
 /**
- * Rounded filter/choice chip — outlined when inactive, filled with its color
- * when active. Used for scrollable filter rows (e.g. muscle group filters).
- * `active` is a selection boolean and is surfaced as `aria-pressed`.
+ * Selectable chip (canonical). Outlined when inactive, filled with `color` when
+ * active (drives `aria-pressed`). Optional leading icon, size (sm/md), disabled,
+ * and a result `count` badge. Absorve o papel do antigo FilterChip (deprecado).
+ * Prop de rótulo canônica = `label` (`title` é alias deprecado). Ver ADR-0082.
  */
 export interface PillProps {
-  title: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  /** Chip text (prop canônica). */
+  label?: React.ReactNode;
+  /** @deprecated Use `label`. Alias retrocompatível. */
+  title?: React.ReactNode;
+  /** Selected state — drives fill and `aria-pressed`. Default `false`. */
   active?: boolean;
-  /** Fill color when active — also used to compute readable text contrast. */
+  onClick?: () => void;
+  /** Fill/border color when active (token ref or hex). Default `var(--forge-accent-fill)`. */
   color?: string;
-  /** Size preset — `md` (40px, default) preserves the original height; `sm` is 34px. */
   size?: "sm" | "md";
   /** Optional leading icon (an `ICON_NAMES` glyph). */
   icon?: string;
-  /** Disables interaction and dims the pill. Default `false`. */
+  /** Optional result count shown as a small badge. */
+  count?: number;
   disabled?: boolean;
   className?: string;
-  style?: CSSProperties;
+  style?: React.CSSProperties;
 }
 
 export declare const Pill: React.ForwardRefExoticComponent<

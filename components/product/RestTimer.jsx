@@ -56,7 +56,7 @@ export const RestTimer = React.forwardRef(function RestTimer({ duration = 90, ru
     <div ref={ref} className={className} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-16)", ...style }}>
       <Ring size={size} stroke={10} progress={progress} color={tint} label={content.restTimer.ringLabel(fmt(left))}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 30, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
+          <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: "var(--forge-text-stat)", lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
             {fmt(left)}
           </span>
           <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700, marginTop: "var(--forge-space-4)" }}>

@@ -2,18 +2,23 @@ import React from "react";
 import { onColor } from "../shared/color.js";
 import { Icon } from "../icons/Icon";
 
-// Pill — rounded filter/choice chip: outlined when inactive, filled with its
+// Pill — the canonical selectable chip: outlined when inactive, filled with its
 // `color` when active (text via onColor). `active` is a selection boolean, so it
-// exposes aria-pressed for screen readers (OP-105). Additive (OP-105): optional
-// leading `icon`, a `size` (sm/md — md preserves the original 40px height), and
-// `disabled`. Signature is unchanged for existing callers.
+// exposes aria-pressed for screen readers. Optional leading `icon`, a `size`
+// (sm/md), `disabled`, and an optional result `count` badge.
+//
+// Prop de rótulo canônica = `label` (ADR-0082). `title` continua aceito como
+// alias retrocompatível (deprecado). Este componente ABSORVE o papel do antigo
+// FilterChip (que agora é um alias deprecado sobre Pill) — use Pill numa linha
+// rolável (flex + overflow-x:auto) para filtros com contagem.
 const SIZES = {
   sm: { height: 34, paddingInline: 12, icon: 15 },
   md: { height: 40, paddingInline: 16, icon: 16 },
 };
 
-export const Pill = React.forwardRef(function Pill({ title, onClick, active = false, color = "var(--forge-accent-fill)", size = "md", icon, disabled = false, className, style }, ref) {
+export const Pill = React.forwardRef(function Pill({ title, label, onClick, active = false, color = "var(--forge-accent-fill)", size = "md", icon, count, disabled = false, className, style }, ref) {
   const sz = SIZES[size] || SIZES.md;
+  const text = label != null ? label : title;
   return (
     <button
       ref={ref}
@@ -38,12 +43,36 @@ export const Pill = React.forwardRef(function Pill({ title, onClick, active = fa
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: icon ? 6 : 0,
+        gap: (icon || count != null) ? 6 : 0,
         ...style,
       }}
     >
       {icon ? <Icon name={icon} color="currentColor" size={sz.icon} /> : null}
-      {title}
+      {text}
+      {count != null ? (
+        <span
+          aria-hidden="true"
+          style={{
+            fontVariantNumeric: "tabular-nums",
+            fontSize: "var(--forge-text-mini-label)",
+            fontWeight: 700,
+            color: active ? "currentColor" : "var(--forge-text-dim)",
+            backgroundColor: active
+              ? "color-mix(in srgb, var(--forge-on-accent) 22%, transparent)"
+              : "var(--forge-surface-raised)",
+            borderRadius: "var(--forge-radius-pill)",
+            minWidth: 18,
+            height: 18,
+            paddingInline: 5,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxSizing: "border-box",
+          }}
+        >
+          {count}
+        </span>
+      ) : null}
     </button>
   );
 });

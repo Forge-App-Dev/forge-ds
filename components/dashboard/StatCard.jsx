@@ -50,7 +50,7 @@ export const StatCard = React.forwardRef(function StatCard({
     <Card ref={ref} stripeColor={accent} onClick={onClick} className={className} style={{ marginBottom: 0, ...style }}>
       {head}
       <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-4)", marginTop: "var(--forge-space-10)" }}>
-        <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 30, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
+        <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: "var(--forge-text-stat)", lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
           {value}
         </span>
         {unit ? <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body)", color: "var(--forge-text-dim)", fontWeight: 600 }}>{unit}</span> : null}

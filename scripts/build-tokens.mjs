@@ -100,7 +100,7 @@ const plan = {
     "primitive.fontWeight.body-bold", "primitive.fontWeight.body-extra",
     "primitive.fontSize.logo-lg", "primitive.fontSize.screen-title", "primitive.fontSize.panel-title", "primitive.fontSize.card-title",
     "primitive.fontSize.input", "primitive.fontSize.list-item", "primitive.fontSize.body", "primitive.fontSize.body-sm",
-    "primitive.fontSize.chip", "primitive.fontSize.label", "primitive.fontSize.mini-label",
+    "primitive.fontSize.chip", "primitive.fontSize.label", "primitive.fontSize.mini-label", "primitive.fontSize.stat", "primitive.fontSize.stat-sm",
     "primitive.letterSpacing.title", "primitive.letterSpacing.label", "primitive.letterSpacing.eyebrow",
     "primitive.lineHeight.logo-lg", "primitive.lineHeight.screen-title", "primitive.lineHeight.panel-title", "primitive.lineHeight.card-title",
     "primitive.lineHeight.input", "primitive.lineHeight.list-item", "primitive.lineHeight.body", "primitive.lineHeight.body-sm",

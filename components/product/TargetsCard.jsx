@@ -51,7 +51,7 @@ export const TargetsCard = React.forwardRef(function TargetsCard({
 function Stat({ label, value, unit = "", color }) {
   return (
     <div style={{ textAlign: "center" }}>
-      <div style={{ fontFamily: "var(--forge-font-title)", fontSize: 24, color }}>
+      <div style={{ fontFamily: "var(--forge-font-title)", fontSize: "var(--forge-text-stat-sm)", color }}>
         {value}
         <span style={{ fontSize: "var(--forge-text-chip)" }}>{unit}</span>
       </div>

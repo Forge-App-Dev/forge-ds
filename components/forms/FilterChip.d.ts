@@ -2,6 +2,9 @@ import * as React from "react";
 import { CSSProperties } from "react";
 
 /**
+ * @deprecated Use `Pill` (que agora aceita `count` e a prop canônica `label`) —
+ * ver ADR-0082. Mantido como alias funcional durante a migração.
+ *
  * Selectable filter chip for the scrollable filter row under a SearchField /
  * list header (ADR-0015). Toggle semantics via `aria-pressed`; optional result
  * `count`. Outlined when inactive, filled with `color` when active. Ships as

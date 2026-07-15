@@ -53,7 +53,7 @@ export const PRCelebration = React.forwardRef(function PRCelebration({
           {exercise ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body)", color: "var(--forge-text-dim)", marginBottom: "var(--forge-space-4)" }}>{exercise}</div> : null}
           {value != null ? (
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "var(--forge-space-4)" }}>
-              <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 34, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>{value}</span>
+              <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: "var(--forge-text-screen-title)", lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>{value}</span>
               {unit ? <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-card-title)", color: "var(--forge-text-dim)", fontWeight: 600 }}>{unit}</span> : null}
             </div>
           ) : null}

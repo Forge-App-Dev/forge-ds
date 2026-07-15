@@ -69,6 +69,8 @@ export const tokens = {
   "textChip": 12.5,
   "textLabel": 11.5,
   "textMiniLabel": 10.5,
+  "textStat": 30,
+  "textStatSm": 24,
   "trackingTitle": 0.5,
   "trackingLabel": 1,
   "trackingEyebrow": 2,

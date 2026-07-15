@@ -73,6 +73,8 @@ export type ForgeCssVar =
   | "--text-chip"
   | "--text-label"
   | "--text-mini-label"
+  | "--forge-text-stat"
+  | "--forge-text-stat-sm"
   | "--tracking-title"
   | "--tracking-label"
   | "--tracking-eyebrow"
