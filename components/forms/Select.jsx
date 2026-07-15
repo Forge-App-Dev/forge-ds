@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../icons/Icon";
 import { Panel } from "../overlays/panel/Panel.jsx";
+import { Label } from "../typography/Label.jsx";
 import { ListItem } from "./ListItem.jsx";
 
 // Select — choose one option from a list. Instead of a floating dropdown
@@ -17,12 +18,9 @@ export const Select = React.forwardRef(function Select({ value, options = [], on
   return (
     <div ref={ref} className={className} style={{ marginBottom: 12, ...style }}>
       {label ? (
-        <label
-          id={`${rid}-label`}
-          style={{ display: "block", fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-label)", color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: "var(--forge-tracking-label)", marginBottom: 6 }}
-        >
+        <Label as="label" id={`${rid}-label`} style={{ display: "block", marginBottom: 6 }}>
           {label}
-        </label>
+        </Label>
       ) : null}
       <button
         className="forge-focusable"

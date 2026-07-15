@@ -2,7 +2,7 @@
   "meta": {
     "title": "Forge DS — Parecer & Plano Tático",
     "commit": "88fc717",
-    "version": "v1.12.0",
+    "version": "v1.13.0",
     "components": 63,
     "adrs": 48,
     "updatedAt": "2026-07-15",
@@ -465,12 +465,12 @@
       "id": "T-43",
       "phase": "F3",
       "sev": "inc",
-      "status": "doing",
+      "status": "done",
       "effort": "M",
       "title": "Contrato único de campo/rótulo",
       "ev": "4 campos reimplementam o label inline; prop de rótulo/estado/handler divergem",
       "action": "Compor Label; unificar nomes e o mecanismo de disabled.",
-      "note": "Lote 6b: prop de rótulo canônica = label (Pill migrou title→label alias; botões de ação mantêm title/children — ADR-0082). Falta compor Label nos 4 campos que reimplementam o eyebrow inline (adiado — sensível a verificação visual; fazer com preview)."
+      "note": "Concluído (ADR-0082 fechado): os 4 campos que reimplementavam o eyebrow inline (TextField/Select/SegmentedControl/Slider) agora compõem o primitivo Label. Adicionado só um passthrough de `id` ao Label (p/ o aria-labelledby dos controles custom). Verificado por preview renderizado (SSR real): o style emitido por cada rótulo é idêntico ao inline anterior (Inter 700, text-label, uppercase, tracking-label, text-faint) — DRY sem mudança visual. Aprovado pelo Mateus no preview."
     },
     {
       "id": "T-44",
@@ -835,6 +835,14 @@
       "summary": "T-03: o mapa token→hex do color.js (usado por onColor/resolveColor) deixou de ser hand-synced com colors.css — agora é gerado por build-tokens.mjs a partir de tokens.json, reescrito inline entre marcadores (sem import novo, então o bundle segue intacto — era o risco que segurava o item). Paridade: as 16 chaves antigas têm hex idêntico; +negative +cat-ext-1..9 de cobertura. check-drift garante sincronia. build/adherence/oncolor/render verdes.",
       "tasks": [
         "T-03"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Lote 13 — Fase 4: Label composto nos 4 campos (T-43)",
+      "summary": "T-43: TextField/Select/SegmentedControl/Slider deixam de reimplementar o eyebrow inline e passam a compor o primitivo Label (contrato único de rótulo, fecha o pendente do ADR-0082). Label ganhou passthrough de `id` (p/ aria-labelledby dos controles custom). Sem mudança visual — verificado por preview SSR (style idêntico ao anterior) e aprovado. build/adherence/oncolor/render verdes.",
+      "tasks": [
+        "T-43"
       ]
     }
   ]

@@ -1,4 +1,5 @@
 import React from "react";
+import { Label } from "../typography/Label.jsx";
 
 // Slider — accessible single-value range (e.g. peso alvo, intensidade, volume).
 // Exposes role="slider" + aria-valuemin/max/now (+ aria-valuetext with the unit).
@@ -53,9 +54,7 @@ export const Slider = React.forwardRef(function Slider({ value = 0, onChange, mi
     <div ref={ref} className={className} style={{ ...style }}>
       {label ? (
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 6 }}>
-          <span id={`${rid}-label`} style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-label)", color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: "var(--forge-tracking-label)" }}>
-            {label}
-          </span>
+          <Label as="span" id={`${rid}-label`}>{label}</Label>
           <span aria-hidden="true" style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 18, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums" }}>
             {value}{unit ? <span style={{ fontSize: 12, color: "var(--forge-text-dim)" }}>{unit}</span> : null}
           </span>

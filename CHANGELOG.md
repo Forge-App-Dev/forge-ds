@@ -17,6 +17,18 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.13.0] — 2026-07-15
+Fase 4: contrato único de rótulo de campo.
+
+### Changed
+- **`TextField`, `Select`, `SegmentedControl`, `Slider` compõem o primitivo
+  `Label` (T-43).** Os quatro reimplementavam o mesmo rótulo (eyebrow) inline;
+  agora usam `Label`, fechando o pendente do ADR-0082. **Sem mudança visual** — o
+  estilo emitido por cada rótulo é idêntico ao anterior (verificado por preview
+  renderizado).
+- **`Label` aceita `id`** — para controles custom que referenciam o rótulo via
+  `aria-labelledby` (Select/SegmentedControl/Slider).
+
 ## [1.12.0] — 2026-07-15
 Fase 4: o mapa `TOKEN_HEX` do `color.js` passa a ser gerado.
 

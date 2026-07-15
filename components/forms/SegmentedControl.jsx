@@ -1,5 +1,6 @@
 import React from "react";
 import { onColor } from "../shared/color.js";
+import { Label } from "../typography/Label.jsx";
 
 // SegmentedControl — single choice among 2–3 mutually-exclusive options
 // (e.g. kg / lb, semana / mês). The Forge answer to a radio group (ADR-0008):
@@ -35,12 +36,9 @@ export const SegmentedControl = React.forwardRef(function SegmentedControl({ opt
   return (
     <div ref={ref} className={className} style={{ ...style }}>
       {label ? (
-        <label
-          id={`${rid}-label`}
-          style={{ display: "block", fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: "var(--forge-text-label)", color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: "var(--forge-tracking-label)", marginBottom: 6 }}
-        >
+        <Label as="label" id={`${rid}-label`} style={{ display: "block", marginBottom: 6 }}>
           {label}
-        </label>
+        </Label>
       ) : null}
       <div
         role="radiogroup"
