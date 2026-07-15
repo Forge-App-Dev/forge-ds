@@ -17,6 +17,43 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.14.0] — 2026-07-15
+Pivô RN-first: correção de plataforma + preparo dos tokens para o forge-app consumir.
+
+### Changed
+- **ADR-0080 emendado — web é documentação, RN-first no produto.** O produto é
+  Android/iOS (sem alvo web); **`react-native-web` sai do plano**. Componentes
+  canônicos nascem em React Native puro (promovidos do `forge-app`); o catálogo web
+  segue **estático**. `T-65`/`T-66` reframed no plano.
+- **`tokens/tokens.rn.js` ganhou `tokens.font.*`** com os nomes de família do
+  `@expo-google-fonts` (`BarlowCondensed_700Bold`, `Inter_400Regular`…). Em RN peso
+  **é** família, então o nome web (`"Barlow Condensed"`) não servia. A interface
+  `ForgeTokens` do `.d.ts` acompanha (campo `font`). O cabeçalho do `tokens.rn.js`
+  lista os `useFonts` que o app precisa carregar.
+
+### Added
+- **Tokens de aviso âmbar** `--forge-warn-surface` / `--forge-warn-border` /
+  `--forge-warn-text` (as caixas de lembrete/backup do app) — antes hexes tolerados
+  no allowlist do UI kit, agora tokens de verdade (com origem primitiva). O UI kit
+  passou a consumi-los e os hexes saíram do allowlist do `check-adherence`.
+
+### Notes
+- **`components/shared/color.js` é o `onColor` canônico cross-platform** (web + RN):
+  é JS puro, sem `import`/DOM, importável direto pelo `forge-app` — substitui a
+  heurística de luminância que o app usava por contraste WCAG real.
+
+## [1.13.0] — 2026-07-15
+Fase 4: contrato único de rótulo de campo.
+
+### Changed
+- **`TextField`, `Select`, `SegmentedControl`, `Slider` compõem o primitivo
+  `Label` (T-43).** Os quatro reimplementavam o mesmo rótulo (eyebrow) inline;
+  agora usam `Label`, fechando o pendente do ADR-0082. **Sem mudança visual** — o
+  estilo emitido por cada rótulo é idêntico ao anterior (verificado por preview
+  renderizado).
+- **`Label` aceita `id`** — para controles custom que referenciam o rótulo via
+  `aria-labelledby` (Select/SegmentedControl/Slider).
+
 ## [1.12.0] — 2026-07-15
 Fase 4: o mapa `TOKEN_HEX` do `color.js` passa a ser gerado.
 

@@ -86,9 +86,9 @@ function TreinoHojeScreen({ onContinueWorkout, onEditWorkout }) {
         ))}
       </div>
 
-      <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: 18, borderRadius: 14, border: "1px solid #3a2f1f", backgroundColor: "#1a1610" }}>
+      <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: 18, borderRadius: 14, border: "1px solid var(--forge-warn-border)", backgroundColor: "var(--forge-warn-surface)" }}>
         <Icon name="warn" color={ACCENT} size={18} />
-        <div style={{ flex: 1, fontSize: 13, color: "#c9b896", lineHeight: "20px", fontFamily: "var(--forge-font-body)" }}>
+        <div style={{ flex: 1, fontSize: 13, color: "var(--forge-warn-text)", lineHeight: "20px", fontFamily: "var(--forge-font-body)" }}>
           <span style={{ color: ACCENT, fontFamily: "var(--forge-font-body)", fontWeight: 700 }}>Lembrete do programa. </span>
           Rode por 8–10 semanas antes de reavaliar. Qualidade de execução vale mais que quantidade.
         </div>

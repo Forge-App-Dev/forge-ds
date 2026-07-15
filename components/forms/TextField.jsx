@@ -1,4 +1,5 @@
 import React from "react";
+import { Label } from "../typography/Label.jsx";
 
 // TextField — labelled text input (single or multiline).
 // The label is a real <label htmlFor>, associated to the field by a generated
@@ -47,22 +48,10 @@ export const TextField = React.forwardRef(function TextField({
   return (
     <div ref={ref} className={className} style={{ marginBottom: 12, ...style }}>
       {label ? (
-        <label
-          htmlFor={fieldId}
-          style={{
-            display: "block",
-            fontFamily: "var(--forge-font-body)",
-            fontWeight: 700,
-            fontSize: "var(--forge-text-label)",
-            color: "var(--forge-text-faint)",
-            textTransform: "uppercase",
-            letterSpacing: "var(--forge-tracking-label)",
-            marginBottom: 6,
-          }}
-        >
+        <Label as="label" htmlFor={fieldId} style={{ display: "block", marginBottom: 6 }}>
           {label}
           {required ? <span style={{ color: "var(--forge-danger)" }} aria-hidden="true"> *</span> : null}
-        </label>
+        </Label>
       ) : null}
       {multiline ? (
         <textarea

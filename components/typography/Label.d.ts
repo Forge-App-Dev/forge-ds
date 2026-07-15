@@ -12,6 +12,8 @@ export interface LabelProps {
   as?: keyof JSX.IntrinsicElements;
   /** Id of the associated control — only applied when `as="label"`. */
   htmlFor?: string;
+  /** Own id — use when a control references this label via `aria-labelledby`. */
+  id?: string;
   className?: string;
   style?: CSSProperties;
 }

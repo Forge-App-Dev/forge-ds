@@ -33,9 +33,9 @@ const UI_KIT_HEX_SEM_TOKEN = new Set(
   [
     // Marca Google (logo "Continuar com Google") — cores de terceiro.
     "#4285f4", "#34a853", "#fbbc05", "#ea4335",
-    // Cinzas/âmbares legados do dark theme do kit, sem token exato.
+    // Cinzas legados do dark theme do kit, sem token exato.
     "#8a8a92", "#b0b0b8", "#3a3a42", "#4a4a52",
-    "#3a2f1f", "#1a1610", "#c9b896",
+    // (os âmbares #3a2f1f/#1a1610/#c9b896 foram tokenizados em --forge-warn-* — pivô RN.)
   ].map((h) => h.toLowerCase()),
 );
 

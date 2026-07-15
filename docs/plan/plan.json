@@ -2,11 +2,11 @@
   "meta": {
     "title": "Forge DS — Parecer & Plano Tático",
     "commit": "88fc717",
-    "version": "v1.12.0",
+    "version": "v1.14.0",
     "components": 63,
     "adrs": 48,
     "updatedAt": "2026-07-15",
-    "route": "A — faseado: tokens já → componentes RN + react-native-web depois",
+    "route": "A — RN-first: tokens já; componentes em React Native puro (promovidos do app), oportunista. Web = documentação estática.",
     "verdict": "parcialmente-pronto",
     "statusVocab": [
       "todo",
@@ -85,7 +85,7 @@
       "title": "tokens.json → gerar theme RN (tokens.rn.js) consumido pelo forge-app",
       "ev": "scripts/build-tokens.mjs → tokens/tokens.rn.js",
       "action": "Emitir os tokens resolvidos (dp/ms/número/cor) para import em React Native — o nível 1 de 'consumível'.",
-      "note": "Lote 1: tokens.rn.js gerado e no build. Falta fiar o consumo de ponta a ponta no forge-app (não há o app neste ambiente)."
+      "note": "Lote 1: tokens.rn.js gerado. Pivô (Lote 14): prep RN pronta no DS — (A) tokens.rn.js agora emite tokens.font.* com os nomes do @expo-google-fonts (peso=família em RN; o nome web 'Barlow Condensed' não servia); (B) cores âmbar de aviso tokenizadas (--forge-warn-surface/border/text → warnSurface/warnBorder/warnText, batendo as chaves do app); (C) onColor WCAG do DS confirmado plataforma-neutro (color.js é JS puro, o app importa direto). Falta o passo no app: trocar src/theme/tokens.js pra consumir o tokens.rn.js."
     },
     {
       "id": "T-03",
@@ -465,12 +465,12 @@
       "id": "T-43",
       "phase": "F3",
       "sev": "inc",
-      "status": "doing",
+      "status": "done",
       "effort": "M",
       "title": "Contrato único de campo/rótulo",
       "ev": "4 campos reimplementam o label inline; prop de rótulo/estado/handler divergem",
       "action": "Compor Label; unificar nomes e o mecanismo de disabled.",
-      "note": "Lote 6b: prop de rótulo canônica = label (Pill migrou title→label alias; botões de ação mantêm title/children — ADR-0082). Falta compor Label nos 4 campos que reimplementam o eyebrow inline (adiado — sensível a verificação visual; fazer com preview)."
+      "note": "Concluído (ADR-0082 fechado): os 4 campos que reimplementavam o eyebrow inline (TextField/Select/SegmentedControl/Slider) agora compõem o primitivo Label. Adicionado só um passthrough de `id` ao Label (p/ o aria-labelledby dos controles custom). Verificado por preview renderizado (SSR real): o style emitido por cada rótulo é idêntico ao inline anterior (Inter 700, text-label, uppercase, tracking-label, text-faint) — DRY sem mudança visual. Aprovado pelo Mateus no preview."
     },
     {
       "id": "T-44",
@@ -654,10 +654,10 @@
       "sev": "opo",
       "status": "todo",
       "effort": "A",
-      "title": "Convergir componentes p/ React Native + react-native-web",
-      "ev": "catálogo é mockup; app tem componentes RN próprios",
-      "action": "Promover os componentes RN do forge-app ao pacote; catálogo renderiza o componente real. Nível 3 de 'consumível'.",
-      "note": "Fase 2 do Caminho A. Depende de T-01/T-02."
+      "title": "Promover componentes RN do forge-app para pacote versionado",
+      "ev": "app tem componentes RN próprios; DS web é espelho/spec",
+      "action": "Promover os componentes RN do app (RN puro, sem react-native-web) — modo oportunista 'mexeu na tela, atualiza'.",
+      "note": "REFRAMED (ADR-0080 emendado 2026-07-15): web é perfumaria (Android/iOS, sem alvo web). react-native-web FORA. O canônico nasce em React Native puro, promovido do forge-app; o catálogo web segue estático (specimens). Oportunista, nunca big-bang."
     },
     {
       "id": "T-66",
@@ -668,7 +668,7 @@
       "title": "Publicar @forge/ds como pacote versionado consumível",
       "ev": "package.json private; app não importa",
       "action": "Distribuir (git dep/monorepo) p/ o import real no app.",
-      "note": "Depende de T-65."
+      "note": "Depende de T-65. Pacote RN versionado (@forge/ds) que o app importa — sem alvo web/react-native-web (ADR-0080 emendado)."
     }
   ],
   "preserve": [
@@ -836,6 +836,20 @@
       "tasks": [
         "T-03"
       ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Lote 13 — Fase 4: Label composto nos 4 campos (T-43)",
+      "summary": "T-43: TextField/Select/SegmentedControl/Slider deixam de reimplementar o eyebrow inline e passam a compor o primitivo Label (contrato único de rótulo, fecha o pendente do ADR-0082). Label ganhou passthrough de `id` (p/ aria-labelledby dos controles custom). Sem mudança visual — verificado por preview SSR (style idêntico ao anterior) e aprovado. build/adherence/oncolor/render verdes.",
+      "tasks": [
+        "T-43"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Lote 14 — Pivô RN-first: ADR-0080 emendado + prep de tokens RN",
+      "summary": "Correção de rumo (ADR-0080 emendado): o produto é Android/iOS, SEM alvo web — react-native-web sai do plano; componentes canônicos em RN puro; catálogo web fica estático (perfumaria). T-65/T-66 reframed. Prep de tokens pro app (T-02): (A) tokens.rn.js emite tokens.font.* com nomes do @expo-google-fonts (peso=família em RN); (B) cores âmbar de aviso tokenizadas em --forge-warn-* (+ migrado o UI kit, removido do allowlist do check-adherence); (C) onColor WCAG confirmado plataforma-neutro (color.js JS puro, importável no RN). Reconhecimento do forge-app feito (read-only). build/adherence/oncolor/render verdes.",
+      "tasks": []
     }
   ]
 }

@@ -42,6 +42,9 @@ export type ForgeCssVar =
   | "--forge-scrim-heavy"
   | "--forge-focus-ring"
   | "--forge-negative"
+  | "--forge-warn-surface"
+  | "--forge-warn-border"
+  | "--forge-warn-text"
   | "--forge-on-brand-google-bg"
   | "--forge-on-brand-google-text"
   | "--forge-on-light"
@@ -184,6 +187,9 @@ export interface ForgeTokens {
   "scrimHeavy": string;
   "focusRing": string;
   "negative": string;
+  "warnSurface": string;
+  "warnBorder": string;
+  "warnText": string;
   "onBrandGoogleBg": string;
   "onBrandGoogleText": string;
   "onLight": string;
@@ -279,6 +285,7 @@ export interface ForgeTokens {
   "easeStandard": string;
   "easeLinear": string;
   "easeEmphasized": readonly number[];
+  "font": { "titleSemi": string; "titleBold": string; "titleExtra": string; "bodyRegular": string; "bodyMedium": string; "bodySemi": string; "bodyBold": string; "bodyExtra": string };
 }
 
 export declare const tokens: ForgeTokens;            // valores do tema dark (único)

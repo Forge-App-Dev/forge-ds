@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx","status":"stable"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx","status":"stable"},{"name":"Button","sourcePath":"components/core/Button.jsx","status":"stable"},{"name":"Pill","sourcePath":"components/core/Pill.jsx","status":"stable"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx","status":"stable"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx","status":"stable"},{"name":"Card","sourcePath":"components/core/Card.jsx","status":"stable"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx","status":"stable"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx","status":"stable"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx","status":"stable"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx","status":"stable"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx","status":"stable"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx","status":"stable"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx","status":"stable"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx","status":"stable"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx","status":"stable"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx","status":"stable"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx","status":"stable"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx","status":"stable"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx","status":"stable"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx","status":"stable"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx","status":"stable"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx","status":"stable"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx","status":"stable"},{"name":"Select","sourcePath":"components/forms/Select.jsx","status":"stable"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx","status":"stable"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx","status":"stable"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx","status":"stable"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx","status":"stable"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx","status":"stable"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx","status":"stable"},{"name":"Label","sourcePath":"components/typography/Label.jsx","status":"stable"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx","status":"stable"},{"name":"Text","sourcePath":"components/typography/Text.jsx","status":"stable"},{"name":"Title","sourcePath":"components/typography/Title.jsx","status":"stable"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx","status":"stable"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx","status":"stable"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx","status":"stable"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx","status":"stable"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx","status":"stable"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx","status":"stable"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx","status":"stable"},{"name":"Divider","sourcePath":"components/core/Divider.jsx","status":"stable"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx","status":"stable"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx","status":"stable"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx","status":"stable"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx","status":"stable"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx","status":"stable"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx","status":"stable"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx","status":"stable"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx","status":"stable"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx","status":"stable"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx","status":"stable"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx","status":"stable"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx","status":"stable"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx","status":"stable"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx","status":"stable"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx","status":"stable"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx","status":"stable"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx","status":"stable"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx","status":"stable"}],"sourceHashes":{"components/shared/color.js":"da5faccc9a66","components/shared/content.js":"8004acf25d6d","components/shared/useDialogA11y.js":"f50460d75a36","components/icons/Icon.jsx":"ef613111ae58","components/forms/ListItem.jsx":"45197d110369","components/feedback/ring/Ring.jsx":"b13bca8e17e0","components/core/Button.jsx":"fa814e4050a6","components/core/Pill.jsx":"e06287f8b931","components/overlays/full-screen/FullScreen.jsx":"be561b97f404","components/navigation/app-header/AppHeader.jsx":"2e7187dd2112","components/core/Card.jsx":"cfa6eb5ff3a0","components/core/ConfirmButton.jsx":"320d81e61f62","components/core/HeaderAction.jsx":"9fdc073f94b9","components/feedback/EmptyState.jsx":"563343f8270c","components/feedback/InlineAlert.jsx":"5c24226c6244","components/feedback/Spinner.jsx":"1d042d0977ba","components/feedback/StatBadge.jsx":"759954135eaf","components/feedback/ErrorState.jsx":"e3424dfd9315","components/feedback/Skeleton.jsx":"b5c31a722056","components/product/TargetsCard.jsx":"b7b45965789a","components/feedback/loading-screen/LoadingScreen.jsx":"ca5a4300bb5b","components/feedback/macro-meter/MacroMeter.jsx":"92f78ae15284","components/feedback/meta-bar/MetaBar.jsx":"85dff242ee91","components/feedback/mini-chart/MiniChart.jsx":"590fa4ace188","components/forms/QtyInput.jsx":"04f368cd3f3e","components/forms/TextField.jsx":"2c4923d80ece","components/forms/Switch.jsx":"f9c879b7bafe","components/forms/Stepper.jsx":"10529eb3f574","components/forms/SearchField.jsx":"d2a580b62259","components/forms/Select.jsx":"7695c0ae7f37","components/layout/screen-body/ScreenBody.jsx":"e0e100394473","components/layout/screen/Screen.jsx":"aca591ea8039","components/navigation/module-header/ModuleHeader.jsx":"e923be2602e9","components/navigation/module-tab-bar/ModuleTabBar.jsx":"28df61410181","components/overlays/VideoModal.jsx":"cd9efbd136a5","components/overlays/panel/Panel.jsx":"f6be8f2d6eb2","components/typography/Label.jsx":"8f475fcef0a2","components/typography/SectionLabel.jsx":"da3a3a3089d2","components/typography/Text.jsx":"b20c2433d7d5","components/typography/Title.jsx":"abb08e8ca1f6","components/dashboard/StatCard.jsx":"3806a0ca9c64","components/dashboard/QuickAction.jsx":"5c7a7e8aad5c","components/onboarding/PageDots.jsx":"eb98967d1bf5","components/onboarding/Pager.jsx":"6fb0660148df","components/product/PRCelebration.jsx":"d68ac40f0776","components/product/RestTimer.jsx":"ccaa873d4468","components/product/SetLogger.jsx":"9076b37cdefb","components/core/Divider.jsx":"7e0aaca3ae43","components/forms/Checkbox.jsx":"262072984a35","components/forms/SegmentedControl.jsx":"0ac5a95b5658","components/forms/PasswordField.jsx":"8f66e5a116e8","components/forms/Slider.jsx":"f40565a183fa","components/forms/FilterChip.jsx":"f63959f169d2","components/feedback/ProgressBar.jsx":"bdbbf937f353","components/feedback/Badge.jsx":"f712cb765160","components/feedback/Avatar.jsx":"05259bcae084","components/feedback/MacroRing.jsx":"e4d17e74acd6","components/feedback/Timeline.jsx":"3e099936b466","components/navigation/Tabs.jsx":"a2a6f6f47e09","components/navigation/Accordion.jsx":"63090a86e5f8","components/navigation/WeekStrip.jsx":"2e8723d59f23","components/product/StreakIndicator.jsx":"a867526289fa","components/product/CoachNote.jsx":"94d1a6a31d20","components/product/OfflineBanner.jsx":"ff0cf1e61bfb","components/feedback/Chart.jsx":"2c54e50474b8","components/media/ImagePicker.jsx":"6bb0d2b8d55f"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ForgeDesignSystem_7731a5","components":[{"name":"Icon","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ICON_NAMES","sourcePath":"components/icons/Icon.jsx","status":"stable"},{"name":"ListItem","sourcePath":"components/forms/ListItem.jsx","status":"stable"},{"name":"Ring","sourcePath":"components/feedback/ring/Ring.jsx","status":"stable"},{"name":"Button","sourcePath":"components/core/Button.jsx","status":"stable"},{"name":"Pill","sourcePath":"components/core/Pill.jsx","status":"stable"},{"name":"FullScreen","sourcePath":"components/overlays/full-screen/FullScreen.jsx","status":"stable"},{"name":"AppHeader","sourcePath":"components/navigation/app-header/AppHeader.jsx","status":"stable"},{"name":"Card","sourcePath":"components/core/Card.jsx","status":"stable"},{"name":"ConfirmButton","sourcePath":"components/core/ConfirmButton.jsx","status":"stable"},{"name":"HeaderAction","sourcePath":"components/core/HeaderAction.jsx","status":"stable"},{"name":"EmptyState","sourcePath":"components/feedback/EmptyState.jsx","status":"stable"},{"name":"InlineAlert","sourcePath":"components/feedback/InlineAlert.jsx","status":"stable"},{"name":"Spinner","sourcePath":"components/feedback/Spinner.jsx","status":"stable"},{"name":"StatBadge","sourcePath":"components/feedback/StatBadge.jsx","status":"stable"},{"name":"ErrorState","sourcePath":"components/feedback/ErrorState.jsx","status":"stable"},{"name":"Skeleton","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"SkeletonText","sourcePath":"components/feedback/Skeleton.jsx","status":"stable"},{"name":"TargetsCard","sourcePath":"components/product/TargetsCard.jsx","status":"stable"},{"name":"LoadingScreen","sourcePath":"components/feedback/loading-screen/LoadingScreen.jsx","status":"stable"},{"name":"MacroMeter","sourcePath":"components/feedback/macro-meter/MacroMeter.jsx","status":"stable"},{"name":"MetaBar","sourcePath":"components/feedback/meta-bar/MetaBar.jsx","status":"stable"},{"name":"MiniChart","sourcePath":"components/feedback/mini-chart/MiniChart.jsx","status":"stable"},{"name":"QtyInput","sourcePath":"components/forms/QtyInput.jsx","status":"stable"},{"name":"TextField","sourcePath":"components/forms/TextField.jsx","status":"stable"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx","status":"stable"},{"name":"Stepper","sourcePath":"components/forms/Stepper.jsx","status":"stable"},{"name":"SearchField","sourcePath":"components/forms/SearchField.jsx","status":"stable"},{"name":"Select","sourcePath":"components/forms/Select.jsx","status":"stable"},{"name":"ScreenBody","sourcePath":"components/layout/screen-body/ScreenBody.jsx","status":"stable"},{"name":"Screen","sourcePath":"components/layout/screen/Screen.jsx","status":"stable"},{"name":"ModuleHeader","sourcePath":"components/navigation/module-header/ModuleHeader.jsx","status":"stable"},{"name":"ModuleTabBar","sourcePath":"components/navigation/module-tab-bar/ModuleTabBar.jsx","status":"stable"},{"name":"VideoModal","sourcePath":"components/overlays/VideoModal.jsx","status":"stable"},{"name":"Panel","sourcePath":"components/overlays/panel/Panel.jsx","status":"stable"},{"name":"Label","sourcePath":"components/typography/Label.jsx","status":"stable"},{"name":"SectionLabel","sourcePath":"components/typography/SectionLabel.jsx","status":"stable"},{"name":"Text","sourcePath":"components/typography/Text.jsx","status":"stable"},{"name":"Title","sourcePath":"components/typography/Title.jsx","status":"stable"},{"name":"StatCard","sourcePath":"components/dashboard/StatCard.jsx","status":"stable"},{"name":"QuickAction","sourcePath":"components/dashboard/QuickAction.jsx","status":"stable"},{"name":"PageDots","sourcePath":"components/onboarding/PageDots.jsx","status":"stable"},{"name":"Pager","sourcePath":"components/onboarding/Pager.jsx","status":"stable"},{"name":"PRCelebration","sourcePath":"components/product/PRCelebration.jsx","status":"stable"},{"name":"RestTimer","sourcePath":"components/product/RestTimer.jsx","status":"stable"},{"name":"SetLogger","sourcePath":"components/product/SetLogger.jsx","status":"stable"},{"name":"Divider","sourcePath":"components/core/Divider.jsx","status":"stable"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx","status":"stable"},{"name":"SegmentedControl","sourcePath":"components/forms/SegmentedControl.jsx","status":"stable"},{"name":"PasswordField","sourcePath":"components/forms/PasswordField.jsx","status":"stable"},{"name":"Slider","sourcePath":"components/forms/Slider.jsx","status":"stable"},{"name":"FilterChip","sourcePath":"components/forms/FilterChip.jsx","status":"stable"},{"name":"ProgressBar","sourcePath":"components/feedback/ProgressBar.jsx","status":"stable"},{"name":"Badge","sourcePath":"components/feedback/Badge.jsx","status":"stable"},{"name":"Avatar","sourcePath":"components/feedback/Avatar.jsx","status":"stable"},{"name":"MacroRing","sourcePath":"components/feedback/MacroRing.jsx","status":"stable"},{"name":"Timeline","sourcePath":"components/feedback/Timeline.jsx","status":"stable"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx","status":"stable"},{"name":"Accordion","sourcePath":"components/navigation/Accordion.jsx","status":"stable"},{"name":"WeekStrip","sourcePath":"components/navigation/WeekStrip.jsx","status":"stable"},{"name":"StreakIndicator","sourcePath":"components/product/StreakIndicator.jsx","status":"stable"},{"name":"CoachNote","sourcePath":"components/product/CoachNote.jsx","status":"stable"},{"name":"OfflineBanner","sourcePath":"components/product/OfflineBanner.jsx","status":"stable"},{"name":"Chart","sourcePath":"components/feedback/Chart.jsx","status":"stable"},{"name":"ImagePicker","sourcePath":"components/media/ImagePicker.jsx","status":"stable"}],"sourceHashes":{"components/shared/color.js":"0f1ecbca89da","components/shared/content.js":"8004acf25d6d","components/shared/useDialogA11y.js":"f50460d75a36","components/icons/Icon.jsx":"ef613111ae58","components/forms/ListItem.jsx":"45197d110369","components/feedback/ring/Ring.jsx":"b13bca8e17e0","components/core/Button.jsx":"fa814e4050a6","components/core/Pill.jsx":"e06287f8b931","components/overlays/full-screen/FullScreen.jsx":"be561b97f404","components/navigation/app-header/AppHeader.jsx":"2e7187dd2112","components/core/Card.jsx":"cfa6eb5ff3a0","components/core/ConfirmButton.jsx":"320d81e61f62","components/core/HeaderAction.jsx":"9fdc073f94b9","components/feedback/EmptyState.jsx":"563343f8270c","components/feedback/InlineAlert.jsx":"5c24226c6244","components/feedback/Spinner.jsx":"1d042d0977ba","components/feedback/StatBadge.jsx":"759954135eaf","components/feedback/ErrorState.jsx":"e3424dfd9315","components/feedback/Skeleton.jsx":"b5c31a722056","components/product/TargetsCard.jsx":"b7b45965789a","components/feedback/loading-screen/LoadingScreen.jsx":"ca5a4300bb5b","components/feedback/macro-meter/MacroMeter.jsx":"92f78ae15284","components/feedback/meta-bar/MetaBar.jsx":"85dff242ee91","components/feedback/mini-chart/MiniChart.jsx":"590fa4ace188","components/forms/QtyInput.jsx":"04f368cd3f3e","components/forms/TextField.jsx":"2c95f8f6f974","components/forms/Switch.jsx":"f9c879b7bafe","components/forms/Stepper.jsx":"10529eb3f574","components/forms/SearchField.jsx":"d2a580b62259","components/forms/Select.jsx":"0bde8ae75bbb","components/layout/screen-body/ScreenBody.jsx":"e0e100394473","components/layout/screen/Screen.jsx":"aca591ea8039","components/navigation/module-header/ModuleHeader.jsx":"e923be2602e9","components/navigation/module-tab-bar/ModuleTabBar.jsx":"28df61410181","components/overlays/VideoModal.jsx":"cd9efbd136a5","components/overlays/panel/Panel.jsx":"f6be8f2d6eb2","components/typography/Label.jsx":"16e1f7ddaa2d","components/typography/SectionLabel.jsx":"da3a3a3089d2","components/typography/Text.jsx":"b20c2433d7d5","components/typography/Title.jsx":"abb08e8ca1f6","components/dashboard/StatCard.jsx":"3806a0ca9c64","components/dashboard/QuickAction.jsx":"5c7a7e8aad5c","components/onboarding/PageDots.jsx":"eb98967d1bf5","components/onboarding/Pager.jsx":"6fb0660148df","components/product/PRCelebration.jsx":"d68ac40f0776","components/product/RestTimer.jsx":"ccaa873d4468","components/product/SetLogger.jsx":"9076b37cdefb","components/core/Divider.jsx":"7e0aaca3ae43","components/forms/Checkbox.jsx":"262072984a35","components/forms/SegmentedControl.jsx":"0ab4a668a141","components/forms/PasswordField.jsx":"8f66e5a116e8","components/forms/Slider.jsx":"52e27bdcc62a","components/forms/FilterChip.jsx":"f63959f169d2","components/feedback/ProgressBar.jsx":"bdbbf937f353","components/feedback/Badge.jsx":"f712cb765160","components/feedback/Avatar.jsx":"05259bcae084","components/feedback/MacroRing.jsx":"e4d17e74acd6","components/feedback/Timeline.jsx":"3e099936b466","components/navigation/Tabs.jsx":"a2a6f6f47e09","components/navigation/Accordion.jsx":"63090a86e5f8","components/navigation/WeekStrip.jsx":"2e8723d59f23","components/product/StreakIndicator.jsx":"a867526289fa","components/product/CoachNote.jsx":"94d1a6a31d20","components/product/OfflineBanner.jsx":"ff0cf1e61bfb","components/feedback/Chart.jsx":"2c54e50474b8","components/media/ImagePicker.jsx":"6bb0d2b8d55f"},"inlinedExternals":[],"unexposedExports":[{"name":"onColor","sourcePath":"components/shared/color.js"},{"name":"resolveColor","sourcePath":"components/shared/color.js"},{"name":"useDialogA11y","sourcePath":"components/shared/useDialogA11y.js"}]} */
 
 (() => {
 
@@ -13,6 +13,12 @@ try { (() => {
 // Shared color utilities — single source of truth for color helpers used by
 // any component that needs to reason about an arbitrary fill.
 // Ported from src/theme/tokens.js (mateusutz/forge-app).
+//
+// PLATAFORMA-NEUTRO (web + React Native): este arquivo é JS puro — zero import,
+// sem react-dom, sem DOM. Pode ser consumido pelo forge-app (RN) direto:
+//   import { onColor } from "@forge/ds/components/shared/color.js";
+// É o onColor CANÔNICO dos dois lados. O app deve usar este em vez de reimplementar
+// (a versão antiga do app decidia por luminância simples; esta usa contraste WCAG).
 
 // Map of design-system color TOKENS → literal hex, para helpers que precisam de um
 // hex real (onColor/resolveColor resolvem "var(--forge-x)"). GERADO por
@@ -31,6 +37,9 @@ const TOKEN_HEX = {
   "--forge-danger-fill": "#c94b3b",
   "--forge-nutrition": "#10B981",
   "--forge-negative": "#e36a5a",
+  "--forge-warn-surface": "#1a1610",
+  "--forge-warn-border": "#3a2f1f",
+  "--forge-warn-text": "#c9b896",
   "--forge-macro-protein": "#E5645E",
   "--forge-macro-carb": "#E0A23B",
   "--forge-macro-fat": "#4C9BD6",
@@ -2763,16 +2772,11 @@ const TextField = /*#__PURE__*/React.forwardRef(function TextField({
       marginBottom: 12,
       ...style
     }
-  }, label ? /*#__PURE__*/React.createElement("label", {
+  }, label ? /*#__PURE__*/React.createElement(__ds_scope.Label, {
+    as: "label",
     htmlFor: fieldId,
     style: {
       display: "block",
-      fontFamily: "var(--forge-font-body)",
-      fontWeight: 700,
-      fontSize: "var(--forge-text-label)",
-      color: "var(--forge-text-faint)",
-      textTransform: "uppercase",
-      letterSpacing: "var(--forge-tracking-label)",
       marginBottom: 6
     }
   }, label, required ? /*#__PURE__*/React.createElement("span", {
@@ -3127,16 +3131,11 @@ const Select = /*#__PURE__*/React.forwardRef(function Select({
       marginBottom: 12,
       ...style
     }
-  }, label ? /*#__PURE__*/React.createElement("label", {
+  }, label ? /*#__PURE__*/React.createElement(__ds_scope.Label, {
+    as: "label",
     id: `${rid}-label`,
     style: {
       display: "block",
-      fontFamily: "var(--forge-font-body)",
-      fontWeight: 700,
-      fontSize: "var(--forge-text-label)",
-      color: "var(--forge-text-faint)",
-      textTransform: "uppercase",
-      letterSpacing: "var(--forge-tracking-label)",
       marginBottom: 6
     }
   }, label) : null, /*#__PURE__*/React.createElement("button", {
@@ -3626,19 +3625,22 @@ try { (() => {
 // Label — small uppercase tracked text. Two sizes: label (11.5) and
 // miniLabel (10.5). Used for field labels, eyebrows, tiny captions.
 // Pass `as="label"` + `htmlFor` to associate it with a form control (OP-111);
-// `htmlFor` is only applied when the element is a real <label>.
+// `htmlFor` is only applied when the element is a real <label>. Pass `id` when a
+// control references the label via `aria-labelledby` (custom controls sem htmlFor).
 const Label = /*#__PURE__*/React.forwardRef(function Label({
   children,
   size = "label",
   color = "var(--forge-text-faint)",
   as = "div",
   htmlFor,
+  id,
   className,
   style
 }, ref) {
   const El = as;
   return /*#__PURE__*/React.createElement(El, {
     ref: ref,
+    id: id,
     className: className,
     htmlFor: as === "label" ? htmlFor : undefined,
     style: {
@@ -4774,16 +4776,11 @@ const SegmentedControl = /*#__PURE__*/React.forwardRef(function SegmentedControl
     style: {
       ...style
     }
-  }, label ? /*#__PURE__*/React.createElement("label", {
+  }, label ? /*#__PURE__*/React.createElement(__ds_scope.Label, {
+    as: "label",
     id: `${rid}-label`,
     style: {
       display: "block",
-      fontFamily: "var(--forge-font-body)",
-      fontWeight: 700,
-      fontSize: "var(--forge-text-label)",
-      color: "var(--forge-text-faint)",
-      textTransform: "uppercase",
-      letterSpacing: "var(--forge-tracking-label)",
       marginBottom: 6
     }
   }, label) : null, /*#__PURE__*/React.createElement("div", {
@@ -4971,16 +4968,9 @@ const Slider = /*#__PURE__*/React.forwardRef(function Slider({
       justifyContent: "space-between",
       marginBottom: 6
     }
-  }, /*#__PURE__*/React.createElement("span", {
-    id: `${rid}-label`,
-    style: {
-      fontFamily: "var(--forge-font-body)",
-      fontWeight: 700,
-      fontSize: "var(--forge-text-label)",
-      color: "var(--forge-text-faint)",
-      textTransform: "uppercase",
-      letterSpacing: "var(--forge-tracking-label)"
-    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Label, {
+    as: "span",
+    id: `${rid}-label`
   }, label), /*#__PURE__*/React.createElement("span", {
     "aria-hidden": "true",
     style: {
