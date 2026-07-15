@@ -16,8 +16,10 @@ Após uma revisão de prontidão ("readiness review") do `forge-ds`, consolidamo
 
 ## Decisões já tomadas (não relitigar)
 
-- **Plataforma — Caminho A (ver `decisions/ADR-0080`).** O `forge-ds` é um DS **web** hoje; o `forge-app` é Expo/React Native. Estratégia: **agora** `tokens.json` é a fonte única que gera o theme RN (`tokens/tokens.rn.js`) consumido pelo app + o DS é fonte de conhecimento; **médio prazo** convergir os componentes para **React Native + react-native-web** (tarefa `T-65`). Não reabrir essa escolha sem o dono (Mateus).
+- **Plataforma — RN-first (ver `decisions/ADR-0080`, EMENDADO 2026-07-15).** O produto (`forge-app`) é **Android/iOS, sem alvo web**. **`react-native-web` está FORA.** Os componentes web (react-dom) do `forge-ds` são **spec/espelho** — o catálogo web fica **estático** (documentação, "perfumaria"). Estratégia: **agora** `tokens.json` gera o theme RN (`tokens/tokens.rn.js`) consumido pelo app; **depois** os componentes canônicos nascem em **React Native puro** (promovidos do `forge-app`), oportunista (`T-65`/`T-66`). Não reabrir sem o dono (Mateus).
 - **Tema — dark-only.** O tema claro foi removido do DS e de todos os registros (`T-05`). White-label = trocar **accent + marca + copy** sobre o tema dark único. Não reintroduzir tema claro.
+- **Integração com o app — JÁ COMEÇOU.** O `forge-app/src/theme/tokens.js` agora deriva os valores de `tokens.rn.js` (cópia vendorizada). `onColor` WCAG e a migração de botões p/ `accent-fill` são um upgrade **acoplado e adiado** (mudaria o visual). Detalhe no handoff cross-repo (abaixo).
+- **Handoff completo (4 repos):** `forge-docs/HANDOFF_FORGE_2026-07.md` é o ponto de entrada que amarra `forge-ds` + `forge-app` + `forge-docs` + `forge-public`. Leia-o junto deste guia.
 
 ## Vocabulário de status
 
@@ -50,6 +52,7 @@ npm install
 npm run build        # tokens (+ tokens.rn.js) + index + bundle + plano
 npm run build:plan   # só o dashboard do plano
 node scripts/check-adherence.mjs
+node scripts/check-oncolor.mjs   # contraste WCAG dos pares de marca
 node scripts/render-test.mjs
 node scripts/check-drift.mjs   # regenera tudo e exige árvore git limpa
 ```

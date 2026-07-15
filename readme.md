@@ -3,6 +3,8 @@
 [![CI](https://github.com/Forge-App-Dev/forge-ds/actions/workflows/ci.yml/badge.svg)](https://github.com/Forge-App-Dev/forge-ds/actions/workflows/ci.yml)
 
 > **📋 Plano tático de prontidão (readiness):** parecer + backlog de correções em [`docs/plan/`](docs/plan/README.md). Fonte única de estado: [`docs/plan/plan.json`](docs/plan/plan.json); dashboard navegável gerado em `docs/plan/index.html`. **Continuando o trabalho? Leia [`docs/plan/README.md`](docs/plan/README.md) primeiro.**
+>
+> **🧭 Handoff cross-repo (Forge inteiro — DS + app + docs):** o ponto de entrada que amarra os 4 repositórios é **`forge-docs/HANDOFF_FORGE_2026-07.md`** (o que existe, o que foi feito, o pivô RN-first, a integração de tokens já ligada no `forge-app`, e o que falta). Leia-o junto do guia do plano.
 
 **Forge** is a strength-training + nutrition mobile app family, built with React Native / Expo. This design system is reverse-engineered from the real app codebase and its written design-system spec, so agents can prototype and extend the Forge product line with the correct look, feel, and component vocabulary.
 
