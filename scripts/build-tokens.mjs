@@ -382,6 +382,39 @@ function buildTokensRn() {
 }
 
 // ---------------------------------------------------------------------------
+// 7.6 — TOKEN_HEX de components/shared/color.js (T-03): mapa token→hex que o
+// onColor()/resolveColor() usam. Antes hand-synced com colors.css; agora gerado
+// aqui, entre marcadores, para não sair de sincronia (check-drift força).
+// Escopo: cores que podem ser FILL (semantic.action/feedback/macro/category),
+// exceto foregrounds "on-*". NÃO é um import — o bloco é reescrito inline, então
+// o _ds_bundle.js continua lendo um objeto literal, sem dependência a resolver.
+// ---------------------------------------------------------------------------
+function tokenHexLines() {
+  const prefixes = ["semantic.action.", "semantic.feedback.", "semantic.macro.", "semantic.category."];
+  const out = [];
+  for (const [p, t] of byPath) {
+    if (!t.cssVar) continue;
+    if (!prefixes.some((pre) => p.startsWith(pre))) continue;
+    if (p.split(".").pop().startsWith("on-")) continue; // foreground, não é fill
+    let hex;
+    try { hex = resolveLiteral(t); } catch { continue; }
+    if (!/^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$/.test(hex)) continue;
+    out.push(`  ${JSON.stringify(t.cssVar)}: ${JSON.stringify(hex)},`);
+  }
+  return out;
+}
+function writeTokenHex() {
+  const colorPath = path.join(ROOT, "components", "shared", "color.js");
+  let src = fs.readFileSync(colorPath, "utf8");
+  const eol = src.includes("\r\n") ? "\r\n" : "\n";
+  const block = tokenHexLines().join(eol);
+  const re = /(\/\/ <auto:token-hex>[^\r\n]*\r?\n)[\s\S]*?(\r?\n[ \t]*\/\/ <\/auto:token-hex>)/;
+  if (!re.test(src)) fail("color.js: marcadores <auto:token-hex> não encontrados");
+  src = src.replace(re, (_m, open, close) => open + block + close);
+  fs.writeFileSync(colorPath, src);
+}
+
+// ---------------------------------------------------------------------------
 // run
 // ---------------------------------------------------------------------------
 validate();
@@ -397,5 +430,6 @@ for (const [file, css] of Object.entries(outputs)) snapshotCheck(file, css);
 for (const [file, css] of Object.entries(outputs)) fs.writeFileSync(path.join(TOKENS, file), css);
 fs.writeFileSync(path.join(ROOT, "tokens.d.ts"), buildDts());
 fs.writeFileSync(path.join(TOKENS, "tokens.rn.js"), buildTokensRn());
+writeTokenHex();
 
-console.log("build-tokens: escrito tokens/{colors,typography,spacing,motion}.css + tokens.d.ts + tokens/tokens.rn.js");
+console.log("build-tokens: escrito tokens/{colors,typography,spacing,motion}.css + tokens.d.ts + tokens/tokens.rn.js + TOKEN_HEX de color.js");

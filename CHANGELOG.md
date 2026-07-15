@@ -17,6 +17,19 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.12.0] — 2026-07-15
+Fase 4: o mapa `TOKEN_HEX` do `color.js` passa a ser gerado.
+
+### Changed
+- **`TOKEN_HEX` de `components/shared/color.js` agora é GERADO (T-03).** O mapa
+  token→hex que o `onColor()`/`resolveColor()` usam deixou de ser mantido à mão
+  (espelhando `colors.css`) — `build:tokens` o reescreve **inline** entre marcadores
+  a partir de `tokens.json` (`semantic.action/feedback/macro/category`, exceto
+  foregrounds `on-*`). Sem import novo → o `_ds_bundle.js` segue lendo um objeto
+  literal. As chaves anteriores mantêm hex idêntico (paridade de `onColor`); ganhou
+  `--forge-negative` e `--forge-cat-ext-1..9` (mais cobertura). O `check-drift`
+  garante que não saia de sincronia.
+
 ## [1.11.0] — 2026-07-15
 Fase 4: fontes self-hosted (fim do Google Fonts em runtime).
 

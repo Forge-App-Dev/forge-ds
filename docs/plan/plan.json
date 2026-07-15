@@ -2,7 +2,7 @@
   "meta": {
     "title": "Forge DS — Parecer & Plano Tático",
     "commit": "88fc717",
-    "version": "v1.11.0",
+    "version": "v1.12.0",
     "components": 63,
     "adrs": 48,
     "updatedAt": "2026-07-15",
@@ -91,12 +91,12 @@
       "id": "T-03",
       "phase": "F0",
       "sev": "opo",
-      "status": "todo",
+      "status": "done",
       "effort": "B",
       "title": "Gerar TOKEN_HEX de color.js a partir de tokens.json",
       "ev": "color.js:9-24 — mirror manual",
       "action": "Eliminar o mapa hand-synced; base para onColor 100% coerente com os tokens.",
-      "note": "Adiada: gerar TOKEN_HEX exige color.js importar um arquivo gerado — risco de import não resolvido no _ds_bundle.js. O guard endurecido (T-27) já cobre o caso latente. Fazer junto da revisão de compat do bundle."
+      "note": "Feito: TOKEN_HEX de components/shared/color.js agora é GERADO por build-tokens.mjs a partir de tokens.json (semantic.action/feedback/macro/category, exceto foregrounds on-*), reescrito INLINE entre marcadores <auto:token-hex>. Sem import novo → _ds_bundle.js segue lendo objeto literal (o risco que segurava o item). As 16 chaves antigas mantêm hex idêntico (paridade de onColor); ganhou --forge-negative + cat-ext-1..9 (mais cobertura, menos warnings). check-drift força a sincronia. Fim do mirror manual."
     },
     {
       "id": "T-04",
@@ -827,6 +827,14 @@
       "summary": "T-50: @import render-blocking do Google Fonts eliminado. Fontes agora self-hosted em tokens/fonts.css (@font-face, woff2 subset-latin embutido como data: URI; Inter 400-800 + Barlow Condensed 600-800; ~301KB). CSP-safe, offline, sem dependência de terceiro em runtime. Gerado por scripts/build-fonts.mjs (build:fonts), FORA da cadeia build de propósito (buscar do Google no CI seria não-reproduzível/drift). typography.css só declara as famílias; styles.css importa fonts.css. Docs atualizadas (tokens-architecture, DS_ARTIFACTS). Gates verdes.",
       "tasks": [
         "T-50"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Lote 12 — Fase 4: TOKEN_HEX de color.js gerado (T-03)",
+      "summary": "T-03: o mapa token→hex do color.js (usado por onColor/resolveColor) deixou de ser hand-synced com colors.css — agora é gerado por build-tokens.mjs a partir de tokens.json, reescrito inline entre marcadores (sem import novo, então o bundle segue intacto — era o risco que segurava o item). Paridade: as 16 chaves antigas têm hex idêntico; +negative +cat-ext-1..9 de cobertura. check-drift garante sincronia. build/adherence/oncolor/render verdes.",
+      "tasks": [
+        "T-03"
       ]
     }
   ]

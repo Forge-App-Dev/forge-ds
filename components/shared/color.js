@@ -2,18 +2,23 @@
 // any component that needs to reason about an arbitrary fill.
 // Ported from src/theme/tokens.js (mateusutz/forge-app).
 
-// Map of design-system color TOKENS → literal hex. This mirrors tokens/colors.css
-// and exists only so helpers that need a real hex (onColor) can resolve a token
-// reference like "var(--forge-accent)". TARGET: generated from tokens.json (OP-001);
-// until then, keep in sync with tokens/colors.css by hand.
+// Map of design-system color TOKENS → literal hex, para helpers que precisam de um
+// hex real (onColor/resolveColor resolvem "var(--forge-x)"). GERADO por
+// scripts/build-tokens.mjs a partir de tokens.json (T-03) — NÃO editar à mão; o
+// check-drift falha se sair de sincronia. Fonte: semantic.{action,feedback,macro,category}.
+// O bloco entre os marcadores <auto:token-hex> é reescrito pelo build; o resto
+// (o objeto, os helpers) é estável e não é tocado — por isso não há import novo
+// (o _ds_bundle.js continua lendo um objeto literal, sem dependência a resolver).
 const TOKEN_HEX = {
+  // <auto:token-hex> — GERADO; não editar
   "--forge-accent": "#EF4444",
   "--forge-accent-fill": "#DC2626",
-  "--forge-danger-fill": "#c94b3b",
-  "--forge-nutrition": "#10B981",
   "--forge-success": "#10B981",
   "--forge-warning": "#F59E0B",
   "--forge-danger": "#e36a5a",
+  "--forge-danger-fill": "#c94b3b",
+  "--forge-nutrition": "#10B981",
+  "--forge-negative": "#e36a5a",
   "--forge-macro-protein": "#E5645E",
   "--forge-macro-carb": "#E0A23B",
   "--forge-macro-fat": "#4C9BD6",
@@ -23,6 +28,16 @@ const TOKEN_HEX = {
   "--forge-cat-4": "#10B981",
   "--forge-cat-5": "#F59E0B",
   "--forge-cat-6": "#EC4899",
+  "--forge-cat-ext-1": "#38BDF8",
+  "--forge-cat-ext-2": "#34D399",
+  "--forge-cat-ext-3": "#FB923C",
+  "--forge-cat-ext-4": "#84CC16",
+  "--forge-cat-ext-5": "#F472B6",
+  "--forge-cat-ext-6": "#22D3EE",
+  "--forge-cat-ext-7": "#A78BFA",
+  "--forge-cat-ext-8": "#FBBF24",
+  "--forge-cat-ext-9": "#818CF8",
+  // </auto:token-hex>
 };
 
 // resolveColor(c) — returns a literal hex for a token reference "var(--forge-x)"
@@ -59,9 +74,9 @@ const ON_LIGHT = "#FFFFFF";  // --forge-on-dark (texto branco)
 //   2. devolve o de MAIOR contraste entre branco e escuro;
 //   3. piso: size="large" (≥18,7px bold) → 3:1; padrão (texto normal) → 4,5:1;
 //      abaixo do piso devolve o vencedor e emite console.warn em dev.
-// Tokens fora do mapa TOKEN_HEX (ex.: cat-ext-*) não têm hex conhecido: avisa em
-// dev e devolve texto claro (default seguro). TOKEN_HEX é mantido à mão — gerar
-// de tokens.json é follow-up (T-03).
+// Tokens fora do mapa TOKEN_HEX não têm hex conhecido: avisa em dev e devolve
+// texto claro (default seguro). TOKEN_HEX é GERADO de tokens.json (T-03) — cobre
+// semantic.{action,feedback,macro,category}, inclusive as categorias estendidas.
 export function onColor(input, { size = "normal" } = {}) {
   const hex = resolveColor(input);
   const norm = String(hex).trim().replace(/^#/, "");
