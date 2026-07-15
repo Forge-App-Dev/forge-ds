@@ -1,6 +1,6 @@
 // Forge Design System — barrel de exports.
 // Import components from this file: `import { Button, Card } from "@forge/ds"`.
-// (o lint de aderência exige que componentes venham daqui — ver _adherence.oxlintrc.json)
+// (convenção: importe componentes daqui, do barrel. O CI valida só hex cru — scripts/check-adherence.mjs.)
 
 // core
 export { Button } from "./components/core/Button.jsx";

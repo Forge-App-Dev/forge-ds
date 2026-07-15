@@ -63,11 +63,13 @@ flowchart TD
 ### Regras estruturais
 - **Fundação antes de superfície:** tokens existem antes do componente que os consome
   (FLUXO §4).
-- **Primitivos são domain-free e white-label-safe.** A camada de produto (`product/`,
-  e por posicionamento `dashboard/`/`onboarding/`) **compõe** primitivos e carrega copy —
-  nunca o contrário.
-- **Import só pelo barrel `index.js`** — o lint (`_adherence`) proíbe importar internals
-  de componente. Ver `docs/DS_ARTIFACTS.md`.
+- **Primitivos são domain-free e white-label-safe** — inclui `dashboard/` e
+  `onboarding/` (StatCard, QuickAction, Pager, PageDots **não** carregam domínio
+  nem copy de produto). A camada de PRODUTO é apenas `product/` (RestTimer,
+  SetLogger, TargetsCard, CoachNote…): compõe primitivos e carrega domínio/copy
+  do app — nunca o contrário (T-61).
+- **Import pelo barrel `index.js`** — convenção de import; o CI valida apenas hex
+  cru em `.jsx` (`scripts/check-adherence.mjs`). Ver `docs/DS_ARTIFACTS.md`.
 - **Aderência forçada (o que o CI realmente bloqueia):** o gate `scripts/check-adherence.mjs`
   bloqueia **hex de cor cru** em `.jsx` de `components/` e `ui_kits/forge-app/` — cor sai sempre
   de token `var(--forge-*)` (o UI kit tem um allowlist explícito para hexes de terceiros/legados).
