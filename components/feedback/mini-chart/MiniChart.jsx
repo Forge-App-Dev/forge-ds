@@ -2,7 +2,8 @@ import React from "react";
 
 // MiniChart — small chart of a history (e.g. weight over time).
 // variant="line" (default): 2.5px line + 3.5r dots.
-// variant="bar": simple column bars.
+// variant="bar": colunas com BASE ZERO (altura ∝ valor, não ao min) — não engana
+// (T-63). O line/area segue autoescalado (min→max), padrão para tendência.
 // variant="area": line with a soft filled gradient beneath it.
 // viewBox 280x60, pad 6. Color applied via CSS (currentColor) so tokens
 // resolve. Guards against empty/single-point input (P-10). Gradient id is
@@ -28,7 +29,7 @@ export const MiniChart = React.forwardRef(function MiniChart({ values, color = "
     return (
       <svg ref={ref} className={className} width="100%" height={60} viewBox={`0 0 ${W} ${H}`} style={{ color, ...style }} role="img" aria-label={title || "Gráfico de barras"}>
         {data.map((v, i) => {
-          const h = ((v - min) / range) * (H - 2 * pad - 4) + 4;
+          const h = (Math.max(0, v) / (max > 0 ? max : 1)) * (H - 2 * pad);
           const x = pad + i * bw;
           const y = H - pad - h;
           return <rect key={i} x={x + bw * 0.15} y={y} width={bw * 0.7} height={h} rx={2} fill="currentColor" />;

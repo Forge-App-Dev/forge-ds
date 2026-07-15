@@ -2,7 +2,7 @@
 
 OP-168. Toda mudança nasce direto no repo (ver `FLUXO_EVOLUCAO_DS.md`). Não há PR de
 duas pessoas hoje, mas o checklist é o **portão de qualidade** de qualquer commit —
-o que o lint de aderência (`_adherence.oxlintrc.json`) já valida metade, isto cobre o resto.
+o gate de aderência (`scripts/check-adherence.mjs`) só valida hex de cor cru; este checklist cobre o resto.
 
 ## Componente novo — não entra sem os 6 artefatos
 Um componente só é considerado completo quando existe:
@@ -17,16 +17,16 @@ Um componente só é considerado completo quando existe:
       ring), `role`/`aria-*` corretos, labels associadas, alvo de toque ≥ 44px,
       respeita reduced-motion. (Ver `guidelines/accessibility.card.html`.)
 - [ ] **Tokens-only** — zero hex cru, zero px cru, zero fonte fora de Barlow
-      Condensed/Inter. Só `var(--forge-*)`. (O oxlint bloqueia; não silencie o warning.)
+      Condensed/Inter. Só `var(--forge-*)`. (O `check-adherence.mjs` bloqueia hex de cor cru
+      em `.jsx`; px e fontes são convenção — respeite mesmo sem bloqueio automático.)
 
 ## Regras transversais (qualquer mudança)
 - [ ] **Fundação antes de superfície:** se o componente precisa de um token que não
       existe, o token é criado **antes** (regra de ouro do FLUXO §4).
 - [ ] **Ciclo de vida** (ADR-0070): componente novo entra `@status experimental`
       + `@since <versão>`. Promoção a `stable` é decisão do owner.
-- [ ] **Contrato de props no lint:** ao adicionar/remover prop, atualizar a regra
-      `no-restricted-syntax` correspondente em `_adherence.oxlintrc.json` (a lista de
-      props aceitas por componente é validada ali).
+- [ ] **Contrato de props:** ao adicionar/remover prop, atualizar `.d.ts` e `.prompt.md`.
+      (O gate de aderência **não** valida props — é convenção, mantida pelo autor.)
 - [ ] **Sem anti-patterns** (`guidelines/anti-patterns.card.html`): sem sombra/elevation,
       sem gradiente, sem toast/snackbar, sem bottom sheet, sem uppercase em Inter, sem
       hex cru. (ADR-0001, ADR-0002.)
@@ -41,16 +41,16 @@ Um componente só é considerado completo quando existe:
 ## Mudança de token
 - [ ] Valor dentro da intenção (ex.: contraste) = patch; token novo = minor;
       remover/renomear = major + migração (ADR-0071).
-- [ ] Namespace `--forge-*`; refletido no `x-omelette.tokens` do `_adherence`
-      (regenerado, não editado à mão).
+- [ ] Namespace `--forge-*` em `tokens/*.css` (gerado de `tokens/tokens.json`, não
+      editado à mão).
 
 ---
 
 ## Nota OP-182 — todo `.prompt.md` inclui um exemplo de uso ERRADO
 Agentes aprendem mais com contraexemplo do que só com o caminho feliz. Todo `.prompt.md`
 deve ter, além do uso correto, um bloco **"✗ Não faça"** curto mostrando o erro típico
-daquele componente e por quê — de preferência o erro que o lint de aderência **não** pega
-(o lint já cobre hex/px/props; o prompt cobre o julgamento).
+daquele componente e por quê — de preferência o erro que o gate de aderência **não** pega
+(ele só cobre hex de cor cru; o prompt cobre o julgamento).
 
 ```md
 ## ✓ Uso

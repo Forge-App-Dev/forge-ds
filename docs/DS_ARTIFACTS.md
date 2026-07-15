@@ -10,13 +10,19 @@ o manifest passa a mentir sobre o código. **Regra única: só o script edita.**
 |---|---|---|---|---|
 | **`_ds_bundle.js`** | Bundle único com todos os componentes compilados (Babel/preset-react), namespaced `ForgeDesignSystem_7731a5`, formato `format:4`. É o que uma ferramenta de design/preview consome. Inclui `sourceHash` por componente (base do check-drift, OP-014). | `scripts/build-bundle.mjs` (`npm run build:bundle`) | Qualquer `.jsx` de componente muda | **Sim** |
 | **`_ds_manifest.json`** | Índice de componentes (nome + `sourcePath`) e `startingPoints` (previews). Espelha a lista canônica de `build-bundle.mjs`. Passará a carregar o campo `status` do ciclo de vida (ADR-0070, pendente). | `scripts/build-bundle.mjs` | Componente adicionado/removido/movido | **Sim** |
-| **`_adherence.oxlintrc.json`** | Config oxlint que **impõe** as regras do DS: sem hex/px cru, só Barlow/Inter, contrato de props por componente, import só via `index.js`. Contém `x-omelette` com a lista de tokens e componentes. | Semi-gerado / mantido junto ao build; a lista de props e tokens acompanha os componentes | Props de um componente mudam; token adicionado/removido | **A lista `x-omelette` e as regras de props: sim** (acompanham o gerador). Ajustes de regra novos: com cuidado, via ADR/commit dedicado |
 | **`index.html`** (raiz) | Catálogo do GitHub Pages. Gerado dos metadados `@dsCard group/name/subtitle` no topo de cada `*.card.html`. | `scripts/build-index.mjs` (`npm run build:index`) | Um `.card.html` é criado/removido/renomeado | **Sim** |
+
+> **Gate de aderência:** o único gate de aderência real é `scripts/check-adherence.mjs`, e ele
+> bloqueia **apenas hex de cor cru** em `.jsx` (`components/` + `ui_kits/forge-app/`). Não valida
+> px, contrato de props, import-via-barrel nem fontes. (O antigo `_adherence.oxlintrc.json`, que
+> alegava impor essas regras, nunca era executado — o oxlint não parseava — e foi removido, junto
+> com o órfão `_ds_omelette.json`.)
 
 ## Onde a verdade mora (fonte → artefato)
 - **Componente:** `components/<grupo>/*.jsx` → `_ds_bundle.js` + `_ds_manifest.json`.
 - **Specimen/card:** `*.card.html` (cabeçalho `@dsCard`) → `index.html`.
-- **Tokens:** `tokens/*.css` (`--forge-*`) → citados por `_adherence` `x-omelette.tokens`.
+- **Tokens:** `tokens/*.css` (`--forge-*`) — o gate de aderência
+  (`scripts/check-adherence.mjs`) exige que cor em `.jsx` venha de `var(--forge-*)`, nunca hex cru.
 - **Ciclo de vida:** `@status`/`@since` no `.jsx` → campo `status` do manifest (pendente
   de implementação no `build-bundle.mjs`, ADR-0070).
 

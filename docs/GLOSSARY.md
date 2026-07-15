@@ -6,12 +6,10 @@ OP-180. Termos que confundem por terem história ou parecerem sinônimos. Ordem 
   vermelho `--forge-accent` (`#EF4444`); cada módulo pode ter o seu (Nutrição = verde
   `--forge-nutrition`). **Não confundir com `danger`** (ver abaixo).
 
-- **Aderência (lint de)** — a intenção está documentada em `_adherence.oxlintrc.json`
-  (tokens-only, fontes permitidas, contrato de props), mas o gate de CI que **de fato roda**
-  é `scripts/check-adherence.mjs`, e ele impõe **uma única regra**: nenhum **hex de cor cru**
-  em `.jsx` (`components/` + `ui_kits/forge-app/`) — cor sai de token `var(--forge-*)`. Px cru,
-  fontes e contrato de props ainda são convenção, não bloqueio. "Violar a aderência" hoje =
-  usar hex de cor cru.
+- **Aderência (lint de)** — o gate de CI é `scripts/check-adherence.mjs`, e ele impõe
+  **uma única regra**: nenhum **hex de cor cru** em `.jsx` (`components/` + `ui_kits/forge-app/`)
+  — cor sai de token `var(--forge-*)`. Px cru, fontes, contrato de props e import-via-barrel ainda
+  são convenção, não bloqueio. Não é um oxlintrc. "Violar a aderência" hoje = usar hex de cor cru.
 
 - **Anti-pattern** — prática proibida no sistema (sombra, gradiente, toast, bottom sheet,
   uppercase em Inter, hex cru). Ver `guidelines/anti-patterns.card.html` e ADR-0001/0002.

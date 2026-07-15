@@ -1,7 +1,7 @@
 // check-adherence (OP-002/169): enforcement executável da regra de aderência
 // nº 1 — nenhum hex de cor cru na VIEW de um componente; cor sai sempre de token
-// (var(--forge-*)). Substitui a dependência do _adherence.oxlintrc.json, que o
-// oxlint atual não parseia (usa regras não suportadas).
+// (var(--forge-*)). É o ÚNICO gate de aderência: o antigo _adherence.oxlintrc.json
+// foi removido (o oxlint não o parseava e ele nunca era executado).
 //
 // Escopo: components/**/*.jsx + ui_kits/forge-app/**/*.jsx (as views). Exclui de
 // propósito:

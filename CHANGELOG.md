@@ -17,6 +17,20 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.7.0] — 2026-07-14
+Limpeza de artefatos mortos + correções de honestidade (gráfico e doc de camadas).
+
+### Removed
+- **`_adherence.oxlintrc.json` e `_ds_omelette.json` (artefatos mortos).** O
+  `_adherence.oxlintrc.json` nunca era executado (o oxlint atual não parseava suas regras) e o
+  `_ds_omelette.json` era órfão (nada o gerava ou lia). O único gate de aderência real segue sendo
+  `scripts/check-adherence.mjs` (só hex de cor cru em `.jsx`).
+
+### Changed
+- **`MiniChart variant=bar` agora tem base zero** (não engana visualmente).
+- **Doc de camadas corrigida:** `dashboard/` e `onboarding/` são primitivos domain-free, não
+  camada de produto.
+
 ## [1.6.0] — 2026-07-14
 Tema claro removido (Forge é dark-only) + reconciliações de honestidade da documentação
 (apontadas na revisão de prontidão).
