@@ -2,7 +2,7 @@
   "meta": {
     "title": "Forge DS — Parecer & Plano Tático",
     "commit": "88fc717",
-    "version": "v1.10.0",
+    "version": "v1.11.0",
     "components": 63,
     "adrs": 48,
     "updatedAt": "2026-07-15",
@@ -542,12 +542,12 @@
       "id": "T-50",
       "phase": "F3",
       "sev": "opo",
-      "status": "todo",
+      "status": "done",
       "effort": "M",
       "title": "Self-host de fontes (remover @import Google Fonts)",
       "ev": "typography.css:5 — @import render-blocking/online",
       "action": "Empacotar Barlow/Inter localmente.",
-      "note": "Adiada: self-host de fontes adiciona binários/bloat e é web-específico (RN empacota fontes diferente)."
+      "note": "Feito: fontes self-hosted. @import do Google Fonts REMOVIDO do typography.css; novo tokens/fonts.css (@font-face, Inter 400-800 + Barlow Condensed 600-800, subset latin, woff2 embutido como data: URI — CSP-safe, offline, 301KB). Importado por styles.css. Ativo estático gerado por scripts/build-fonts.mjs (npm run build:fonts) FORA da cadeia build (não depende de rede no CI → sem drift). Zero refs a fonts.googleapis/gstatic no shipped."
     },
     {
       "id": "T-51",
@@ -819,6 +819,14 @@
         "T-48",
         "T-52",
         "T-51"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Lote 11 — Fase 4: fontes self-hosted (remove Google Fonts)",
+      "summary": "T-50: @import render-blocking do Google Fonts eliminado. Fontes agora self-hosted em tokens/fonts.css (@font-face, woff2 subset-latin embutido como data: URI; Inter 400-800 + Barlow Condensed 600-800; ~301KB). CSP-safe, offline, sem dependência de terceiro em runtime. Gerado por scripts/build-fonts.mjs (build:fonts), FORA da cadeia build de propósito (buscar do Google no CI seria não-reproduzível/drift). typography.css só declara as famílias; styles.css importa fonts.css. Docs atualizadas (tokens-architecture, DS_ARTIFACTS). Gates verdes.",
+      "tasks": [
+        "T-50"
       ]
     }
   ]

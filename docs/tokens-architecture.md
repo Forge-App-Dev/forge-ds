@@ -66,6 +66,19 @@ tokens/tokens.json
 **Regra de consumo:** componentes de UI consomem **apenas** `semantic/` e `component/`.
 Nunca `primitive/` direto. Primitivo é matéria-prima do sistema de tokens, não vocabulário de tela.
 
+### Fontes self-hosted (T-50)
+
+O `typography.css` só **declara** as famílias (`--forge-font-title`/`-body`). Os
+arquivos de fonte são **self-hosted** em `tokens/fonts.css` — `@font-face` com woff2
+(subset latin) embutido como `data:` URI: CSP-safe, offline, **sem Google Fonts em
+runtime** (antes havia um `@import` render-blocking). O `styles.css` importa
+`fonts.css` primeiro.
+
+`tokens/fonts.css` é um **ativo estático commitado**, gerado por
+`scripts/build-fonts.mjs` (`npm run build:fonts`) — **fora** da cadeia `npm run build`
+de propósito: buscar do Google a cada build tornaria o CI dependente de rede e sujeito
+a drift. Regerar só ao mudar famílias/pesos e commitar o resultado.
+
 ---
 
 ## 3. Camada 1 — Primitivos

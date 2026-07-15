@@ -21,8 +21,12 @@ o manifest passa a mentir sobre o código. **Regra única: só o script edita.**
 ## Onde a verdade mora (fonte → artefato)
 - **Componente:** `components/<grupo>/*.jsx` → `_ds_bundle.js` + `_ds_manifest.json`.
 - **Specimen/card:** `*.card.html` (cabeçalho `@dsCard`) → `index.html`.
-- **Tokens:** `tokens/*.css` (`--forge-*`) — o gate de aderência
+- **Tokens:** `tokens/{colors,typography,spacing,motion}.css` (`--forge-*`), gerados por
+  `build:tokens` a partir de `tokens/tokens.json` — o gate de aderência
   (`scripts/check-adherence.mjs`) exige que cor em `.jsx` venha de `var(--forge-*)`, nunca hex cru.
+- **Fontes:** `tokens/fonts.css` (self-hosted, woff2 embutido) — **ativo estático**, NÃO
+  regenerado pelo `build:tokens`. Fonte: `scripts/build-fonts.mjs` (`npm run build:fonts`,
+  fora da cadeia `build` — não depende de rede no CI). Regerar só ao mudar famílias/pesos.
 - **Ciclo de vida:** `@status`/`@since` no `.jsx` → campo `status` do manifest (pendente
   de implementação no `build-bundle.mjs`, ADR-0070).
 
