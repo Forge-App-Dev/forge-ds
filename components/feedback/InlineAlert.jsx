@@ -27,9 +27,9 @@ export const InlineAlert = React.forwardRef(function InlineAlert({ kind = "warni
       role={s.role}
       style={{
         display: "flex",
-        gap: "var(--forge-space-5)",
+        gap: "var(--forge-space-10)",
         alignItems: "flex-start",
-        padding: "var(--forge-space-8)",
+        padding: "var(--forge-space-16)",
         borderRadius: "var(--forge-radius-card)",
         border: `var(--forge-border-w) solid ${border}`,
         backgroundColor: bg,

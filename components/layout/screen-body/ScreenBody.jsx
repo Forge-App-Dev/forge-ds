@@ -23,8 +23,8 @@ export const ScreenBody = React.forwardRef(function ScreenBody({ children, foote
       <div
         style={{
           borderTop: "var(--forge-border-w) solid var(--forge-divider)",
-          padding: "var(--forge-space-12) var(--forge-space-screen-h)",
-          paddingBottom: "max(var(--forge-space-16), env(safe-area-inset-bottom))",
+          padding: "var(--forge-space-24) var(--forge-space-screen-h)",
+          paddingBottom: "max(var(--forge-space-32), env(safe-area-inset-bottom))",
           backgroundColor: "var(--forge-bg)",
         }}
       >

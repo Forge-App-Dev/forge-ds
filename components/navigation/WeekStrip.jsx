@@ -42,7 +42,7 @@ export const WeekStrip = React.forwardRef(function WeekStrip({ days = DEFAULT_DA
   };
 
   return (
-    <div ref={ref} role="group" aria-label={label} className={className} style={{ display: "flex", gap: "var(--forge-space-3)", ...style }}>
+    <div ref={ref} role="group" aria-label={label} className={className} style={{ display: "flex", gap: "var(--forge-space-6)", ...style }}>
       {list.map((d, i) => {
         const on = i === selected;
         const isToday = i === today;
@@ -70,8 +70,8 @@ export const WeekStrip = React.forwardRef(function WeekStrip({ days = DEFAULT_DA
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              gap: "var(--forge-space-1)",
-              padding: "var(--forge-space-3) var(--forge-space-2)",
+              gap: "var(--forge-space-2)",
+              padding: "var(--forge-space-6) var(--forge-space-4)",
               cursor: "pointer",
               borderRadius: "var(--forge-radius-input)",
               border: `var(--forge-border-w) solid ${on ? tint : "var(--forge-border)"}`,

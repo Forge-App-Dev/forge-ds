@@ -8,7 +8,7 @@ import { Icon } from "../icons/Icon";
 // forward is a dead end (OP-127).
 export const EmptyState = React.forwardRef(function EmptyState({ icon = "moon", title, subtitle, action, className, style }, ref) {
   return (
-    <div ref={ref} className={className} style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-6)", backgroundColor: "var(--forge-surface)", border: "var(--forge-border-w) solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: "var(--forge-space-8)", ...style }}>
+    <div ref={ref} className={className} style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-12)", backgroundColor: "var(--forge-surface)", border: "var(--forge-border-w) solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: "var(--forge-space-16)", ...style }}>
       <div style={{ width: 34, height: 34, borderRadius: "var(--forge-radius-chip)", backgroundColor: "var(--forge-surface-raised)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
         <Icon name={icon} color="var(--forge-text-faint)" size={16} />
       </div>

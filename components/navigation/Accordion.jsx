@@ -50,8 +50,8 @@ export const Accordion = React.forwardRef(function Accordion({ title, children, 
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: "var(--forge-space-4)",
-          padding: "var(--forge-space-3) 0",
+          gap: "var(--forge-space-8)",
+          padding: "var(--forge-space-6) 0",
           background: "none",
           border: "none",
           cursor: "pointer",
@@ -89,7 +89,7 @@ export const Accordion = React.forwardRef(function Accordion({ title, children, 
           transition: reduce ? "none" : "max-height var(--forge-duration-base) var(--forge-ease-standard), opacity var(--forge-duration-fast) var(--forge-ease-standard)",
         }}
       >
-        <div style={{ paddingBottom: "var(--forge-space-6)" }}>{children}</div>
+        <div style={{ paddingBottom: "var(--forge-space-12)" }}>{children}</div>
       </div>
     </div>
   );

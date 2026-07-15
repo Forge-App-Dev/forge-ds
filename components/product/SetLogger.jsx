@@ -36,8 +36,8 @@ export const SetLogger = React.forwardRef(function SetLogger({
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "var(--forge-space-6)",
-        padding: "var(--forge-space-5) var(--forge-space-6)",
+        gap: "var(--forge-space-12)",
+        padding: "var(--forge-space-10) var(--forge-space-12)",
         backgroundColor: "var(--forge-surface)",
         border: `var(--forge-border-w) solid ${done ? tint : "var(--forge-border)"}`,
         borderRadius: "var(--forge-radius-card)",
@@ -52,12 +52,12 @@ export const SetLogger = React.forwardRef(function SetLogger({
         </span>
       ) : null}
 
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-1)" }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-2)" }}>
         <Stepper value={weight} onChange={onWeightChange} min={0} step={weightStep} unit={unit} label={content.setLogger.weight} disabled={done} />
         <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700 }}>{content.setLogger.weight}</span>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-1)" }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-2)" }}>
         <Stepper value={reps} onChange={onRepsChange} min={0} step={repsStep} label={content.setLogger.reps} disabled={done} />
         <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-mini-label)", letterSpacing: "var(--forge-tracking-label)", textTransform: "uppercase", color: "var(--forge-text-faint)", fontWeight: 700 }}>{content.setLogger.reps}</span>
       </div>

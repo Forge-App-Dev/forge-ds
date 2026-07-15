@@ -61,14 +61,14 @@ export const Pager = React.forwardRef(function Pager({
           <div
             key={i}
             aria-hidden={i === page ? undefined : "true"}
-            style={{ display: i === page ? "flex" : "none", flex: 1, minHeight: 0, flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "var(--forge-space-10)" }}
+            style={{ display: i === page ? "flex" : "none", flex: 1, minHeight: 0, flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "var(--forge-space-20)" }}
           >
             {slide}
           </div>
         ))}
       </div>
 
-      <footer style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--forge-space-8)", padding: "var(--forge-space-8) var(--forge-space-10)" }}>
+      <footer style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--forge-space-16)", padding: "var(--forge-space-16) var(--forge-space-20)" }}>
         <div style={{ minWidth: 64 }}>
           {!isLast ? <Button variant="ghost" size="md" title={skipLabel} onClick={onSkip} /> : null}
         </div>

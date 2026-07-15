@@ -73,6 +73,8 @@ export type ForgeCssVar =
   | "--text-chip"
   | "--text-label"
   | "--text-mini-label"
+  | "--forge-text-stat"
+  | "--forge-text-stat-sm"
   | "--tracking-title"
   | "--tracking-label"
   | "--tracking-eyebrow"
@@ -104,17 +106,17 @@ export type ForgeCssVar =
   | "--forge-tracking-label"
   | "--forge-tracking-eyebrow"
   | "--forge-space-0"
-  | "--forge-space-1"
   | "--forge-space-2"
-  | "--forge-space-3"
   | "--forge-space-4"
-  | "--forge-space-5"
   | "--forge-space-6"
   | "--forge-space-8"
   | "--forge-space-10"
   | "--forge-space-12"
   | "--forge-space-16"
   | "--forge-space-20"
+  | "--forge-space-24"
+  | "--forge-space-32"
+  | "--forge-space-40"
   | "--forge-space-screen-h"
   | "--forge-space-card"
   | "--forge-space-gap"
@@ -132,7 +134,6 @@ export type ForgeCssVar =
   | "--forge-icon-sm"
   | "--forge-icon-md"
   | "--forge-icon-lg"
-  | "--forge-icon-xl"
   | "--forge-border-w"
   | "--forge-border-w-strong"
   | "--forge-focus-ring-w"
@@ -143,7 +144,6 @@ export type ForgeCssVar =
   | "--forge-z-overlay"
   | "--forge-z-fullscreen"
   | "--forge-z-video"
-  | "--forge-z-top"
   | "--forge-app-max-width"
   | "--forge-tap-target-min"
   | "--forge-tap-target"
@@ -177,7 +177,7 @@ export interface ForgeTokens {
   surface: { canvas: string; default: string; raised: string; panel: string };
   text: { primary: string; secondary: string; tertiary: string; quaternary: string; disabled: string };
   border: { default: string; input: string; divider: string; focus: string };
-  space: Record<0 | 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12 | 16 | 20, number>;
+  space: Record<0 | 2 | 4 | 6 | 8 | 10 | 12 | 16 | 20 | 24 | 32 | 40, number>;
   radius: { chip: number; input: number; button: number; video: number; card: number; panel: number; pill: number };
   control: { sm: number; md: number; lg: number };
   duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;

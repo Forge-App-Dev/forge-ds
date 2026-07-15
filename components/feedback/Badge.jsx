@@ -33,7 +33,7 @@ export const Badge = React.forwardRef(function Badge({ count, dot = false, varia
       style={{
         minWidth: 18,
         height: 18,
-        paddingInline: "var(--forge-space-4)",
+        paddingInline: "var(--forge-space-8)",
         borderRadius: "var(--forge-radius-pill)",
         backgroundColor: bg,
         color: fg,

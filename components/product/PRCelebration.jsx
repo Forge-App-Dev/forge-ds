@@ -35,9 +35,9 @@ export const PRCelebration = React.forwardRef(function PRCelebration({
       role="status"
       aria-live="polite"
       className={className}
-      style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "var(--forge-space-8)", padding: "var(--forge-space-16) var(--forge-space-10)", ...style }}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "var(--forge-space-16)", padding: "var(--forge-space-32) var(--forge-space-20)", ...style }}
     >
-      <div className="forge-anim-celebrate" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-8)" }}>
+      <div className="forge-anim-celebrate" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "var(--forge-space-16)" }}>
         <div style={{ position: "relative", width: 96, height: 96, display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ position: "absolute", inset: 0, borderRadius: "var(--forge-radius-pill)", backgroundColor: tint, opacity: 0.14 }} />
           <div style={{ position: "absolute", inset: 12, borderRadius: "var(--forge-radius-pill)", backgroundColor: tint, opacity: 0.22 }} />
@@ -50,14 +50,14 @@ export const PRCelebration = React.forwardRef(function PRCelebration({
 
       {(exercise || value != null) ? (
         <div>
-          {exercise ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body)", color: "var(--forge-text-dim)", marginBottom: "var(--forge-space-2)" }}>{exercise}</div> : null}
+          {exercise ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body)", color: "var(--forge-text-dim)", marginBottom: "var(--forge-space-4)" }}>{exercise}</div> : null}
           {value != null ? (
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "var(--forge-space-2)" }}>
-              <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 34, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>{value}</span>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "var(--forge-space-4)" }}>
+              <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: "var(--forge-text-screen-title)", lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>{value}</span>
               {unit ? <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-card-title)", color: "var(--forge-text-dim)", fontWeight: 600 }}>{unit}</span> : null}
             </div>
           ) : null}
-          {previous ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-chip)", color: "var(--forge-text-faint)", marginTop: "var(--forge-space-3)" }}>{content.prCelebration.previous(previous)}</div> : null}
+          {previous ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-chip)", color: "var(--forge-text-faint)", marginTop: "var(--forge-space-6)" }}>{content.prCelebration.previous(previous)}</div> : null}
         </div>
       ) : null}
 

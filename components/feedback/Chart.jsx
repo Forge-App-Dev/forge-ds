@@ -288,8 +288,8 @@ export const Chart = React.forwardRef(function Chart({
           style={{
             display: "flex",
             flexWrap: "wrap",
-            gap: "var(--forge-space-4)",
-            marginTop: "var(--forge-space-3)",
+            gap: "var(--forge-space-8)",
+            marginTop: "var(--forge-space-6)",
           }}
         >
           {S.map((s, si) => (
@@ -298,7 +298,7 @@ export const Chart = React.forwardRef(function Chart({
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "var(--forge-space-2)",
+                gap: "var(--forge-space-4)",
                 fontFamily: "var(--forge-font-body)",
                 fontSize: "var(--forge-text-chip)",
                 color: "var(--forge-text-dim)",

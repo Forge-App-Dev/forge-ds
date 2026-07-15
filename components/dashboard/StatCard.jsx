@@ -31,8 +31,8 @@ export const StatCard = React.forwardRef(function StatCard({
   style,
 }, ref) {
   const head = (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--forge-space-6)" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-4)", minWidth: 0 }}>
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--forge-space-12)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "var(--forge-space-8)", minWidth: 0 }}>
         {icon ? (
           <span style={{ width: 26, height: 26, borderRadius: "var(--forge-radius-chip)", backgroundColor: "var(--forge-surface-raised)", display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
             <Icon name={icon} color={accent || "var(--forge-text-faint)"} size={15} />
@@ -49,14 +49,14 @@ export const StatCard = React.forwardRef(function StatCard({
   return (
     <Card ref={ref} stripeColor={accent} onClick={onClick} className={className} style={{ marginBottom: 0, ...style }}>
       {head}
-      <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-2)", marginTop: "var(--forge-space-5)" }}>
-        <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: 30, lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-4)", marginTop: "var(--forge-space-10)" }}>
+        <span style={{ fontFamily: "var(--forge-font-title)", fontWeight: 700, fontSize: "var(--forge-text-stat)", lineHeight: 1, color: "var(--forge-text)", fontVariantNumeric: "tabular-nums", letterSpacing: "var(--forge-tracking-title)" }}>
           {value}
         </span>
         {unit ? <span style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-body)", color: "var(--forge-text-dim)", fontWeight: 600 }}>{unit}</span> : null}
       </div>
-      {caption ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-chip)", color: "var(--forge-text-dim)", marginTop: "var(--forge-space-2)", lineHeight: "var(--forge-lh-chip)" }}>{caption}</div> : null}
-      {chart ? <div style={{ marginTop: "var(--forge-space-6)" }}><MiniChart {...chart} /></div> : null}
+      {caption ? <div style={{ fontFamily: "var(--forge-font-body)", fontSize: "var(--forge-text-chip)", color: "var(--forge-text-dim)", marginTop: "var(--forge-space-4)", lineHeight: "var(--forge-lh-chip)" }}>{caption}</div> : null}
+      {chart ? <div style={{ marginTop: "var(--forge-space-12)" }}><MiniChart {...chart} /></div> : null}
     </Card>
   );
 });

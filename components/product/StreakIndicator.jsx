@@ -25,7 +25,7 @@ export const StreakIndicator = React.forwardRef(function StreakIndicator({ days 
       role="img"
       aria-label={aria}
       className={className}
-      style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-6)", ...style }}
+      style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-12)", ...style }}
     >
       <div
         style={{
@@ -42,8 +42,8 @@ export const StreakIndicator = React.forwardRef(function StreakIndicator({ days 
         <Icon name="flame" color={tint} size={18} />
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "var(--forge-space-2)" }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-2)" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "var(--forge-space-4)" }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: "var(--forge-space-4)" }}>
           <span
             style={{
               fontFamily: "var(--forge-font-title)",
@@ -72,7 +72,7 @@ export const StreakIndicator = React.forwardRef(function StreakIndicator({ days 
         </div>
 
         {week.length ? (
-          <div aria-hidden="true" style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-3)" }}>
+          <div aria-hidden="true" style={{ display: "inline-flex", alignItems: "center", gap: "var(--forge-space-6)" }}>
             {week.map((done, i) => (
               <span
                 key={i}
