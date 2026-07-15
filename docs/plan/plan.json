@@ -2,10 +2,10 @@
   "meta": {
     "title": "Forge DS — Parecer & Plano Tático",
     "commit": "88fc717",
-    "version": "v1.9.0",
+    "version": "v1.10.0",
     "components": 63,
-    "adrs": 47,
-    "updatedAt": "2026-07-14",
+    "adrs": 48,
+    "updatedAt": "2026-07-15",
     "route": "A — faseado: tokens já → componentes RN + react-native-web depois",
     "verdict": "parcialmente-pronto",
     "statusVocab": [
@@ -509,23 +509,23 @@
       "id": "T-47",
       "phase": "F3",
       "sev": "inc",
-      "status": "todo",
+      "status": "done",
       "effort": "B",
       "title": "Unificar namespace de tokens (--forge-*)",
       "ev": "aliases sem prefixo convivem com --forge-*",
       "action": "Um vocabulário só.",
-      "note": "Progresso parcial (Lote 8): aliases de cor sem prefixo (--surface-*, --border-card/input) REMOVIDOS — 0 consumidores. Resta o núcleo do tangle: tipografia (primitivo --text-* vs alias --forge-text-*) + migrar os usos de --radius-* sem prefixo. Merece passe dedicado (não-visual, cascata de renomes)."
+      "note": "Feito: a camada de alias reverso inteira foi removida do tokens.json (28 entradas: --surface-*/--border-* no Lote 8; --font-*/--text-*/--tracking-*/--weight-*/--radius-*/--space-*/--app-max-width/--tap-target-min agora). Primitivos renomeados p/ --forge-* (24 cssVars); 90 consumidores crus migrados em 23 arquivos (ui_kit + guidelines; componentes já eram --forge-*). Um namespace só. tokens.rn.js INALTERADO (camelVar remove --forge-); zero cssVar de token sem prefixo; edição cirúrgica (sem reformat do JSON). Doc tokens-architecture.md atualizada."
     },
     {
       "id": "T-48",
       "phase": "F3",
       "sev": "inc",
-      "status": "todo",
+      "status": "done",
       "effort": "B",
       "title": "Macros referenciam a camada primitiva",
       "ev": "tokens.json — macro.* é hex literal no semântico",
       "action": "Apontar p/ primitivos, como os category.* fazem.",
-      "note": "Adiada (baixo valor): macros são identidade fixa; indireção via primitivo agrega pouca provenance."
+      "note": "Feito: semantic.macro (protein/carb/fat) deixou de ser hex literal — agora referencia primitive.color.macro.{protein,carb,fat} (hexes movidos p/ a paleta primitiva). Provenance DTCG de 2 camadas; valores idênticos (#E5645E/#E0A23B/#4C9BD6); RN inalterado."
     },
     {
       "id": "T-49",
@@ -553,23 +553,23 @@
       "id": "T-51",
       "phase": "F3",
       "sev": "opo",
-      "status": "todo",
+      "status": "done",
       "effort": "B",
       "title": "Tokens de motion semânticos (enter/exit/press)",
       "ev": "só existem duration.* primitivos",
       "action": "Camada semântica de motion.",
-      "note": "Adiada: camada semântica de motion adicionaria tokens SEM consumidor (especulativo) — contradiz a limpeza do T-49. Primitivos bastam no tamanho atual."
+      "note": "Resolvido como DECISÃO (ADR-0084): NÃO adicionar camada semântica de motion (enter/exit/press). O consumo real usa duration-fast/base/instant/slow em velocidades que não se agrupam nessas intenções — mapear seria adivinhar/especular (contra a limpeza do T-49); 'press' nem é duração (é opacity-press). Sistema de motion é deliberadamente mínimo (OP-054). Gatilho de revisão registrado (se surgir vocabulário de transição mais rico / convergência RN)."
     },
     {
       "id": "T-52",
       "phase": "F3",
       "sev": "inc",
-      "status": "todo",
+      "status": "done",
       "effort": "B",
       "title": "tokens.d.ts: gerar a interface de valores",
       "ev": "build-tokens.mjs — interface escrita à mão",
       "action": "Gerar a interface inteira da fonte.",
-      "note": "Adiada: gerar a interface de valores do .d.ts do tokens.json — risco médio. A interface hand-written foi mantida em dia à mão (space atualizado no T-45)."
+      "note": "Feito: a interface ForgeTokens do tokens.d.ts agora é GERADA do mesmo conjunto do tokens.rn.js (chaves camelCase + tipo derivado do valor). Antes era escrita à mão E nem batia com a forma flat do tokens.rn.js. Agora bate 137/137 (0 faltando/0 sobrando). ForgeCssVar já era gerado. Sem consumidores da forma antiga (nested), troca segura."
     },
     {
       "id": "T-53",
@@ -808,6 +808,17 @@
       "tasks": [
         "T-54",
         "T-64"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Lote 10 — Fase 4: sistema de tokens redondo (namespace, macros, motion, .d.ts)",
+      "summary": "T-47: camada de alias reverso ELIMINADA (28 entradas) — um namespace só (--forge-*); 24 primitivos renomeados + 90 consumidores migrados (23 arquivos); tokens.rn.js inalterado; edição cirúrgica sem reformat. T-48: semantic.macro passa a referenciar primitive.color.macro (fim do hex literal no semântico). T-52: ForgeTokens do .d.ts agora GERADA do tokens.rn.js (bate 137/137; antes hand-written e divergente). T-51: resolvido como decisão (ADR-0084) — sem camada semântica de motion (seria especulativa). Sem mudança visual; build/adherence/oncolor/render 14/14 verdes.",
+      "tasks": [
+        "T-47",
+        "T-48",
+        "T-52",
+        "T-51"
       ]
     }
   ]

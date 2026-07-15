@@ -19,12 +19,12 @@ function PerfilScreen({ onOpenTargets }) {
           <Icon name="user" color="var(--forge-text-muted)" size={26} />
         </div>
         <div>
-          <div style={{ fontFamily: "var(--font-title)", fontSize: 26, textTransform: "uppercase", color: "var(--forge-text)", lineHeight: "28px" }}>Mateus</div>
-          <div style={{ color: "var(--forge-text-dim)", fontSize: 12.5, fontFamily: "var(--font-body)", marginTop: 2 }}>mateus@email.com</div>
+          <div style={{ fontFamily: "var(--forge-font-title)", fontSize: 26, textTransform: "uppercase", color: "var(--forge-text)", lineHeight: "28px" }}>Mateus</div>
+          <div style={{ color: "var(--forge-text-dim)", fontSize: 12.5, fontFamily: "var(--forge-font-body)", marginTop: 2 }}>mateus@email.com</div>
         </div>
       </div>
 
-      <div style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>
+      <div style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>
         Conta e preferências
       </div>
       {rows.map((r) => (
@@ -37,8 +37,8 @@ function PerfilScreen({ onOpenTargets }) {
             <Icon name={r.icon} color="var(--forge-text-muted)" size={17} />
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ color: "var(--forge-text)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 14 }}>{r.label}</div>
-            <div style={{ color: "var(--forge-text-dim)", fontSize: 12, fontFamily: "var(--font-body)", marginTop: 1 }}>{r.sub}</div>
+            <div style={{ color: "var(--forge-text)", fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 14 }}>{r.label}</div>
+            <div style={{ color: "var(--forge-text-dim)", fontSize: 12, fontFamily: "var(--forge-font-body)", marginTop: 1 }}>{r.sub}</div>
           </div>
           <Icon name="arrow" color="var(--forge-text-dimmer)" size={16} />
         </div>

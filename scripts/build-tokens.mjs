@@ -103,11 +103,6 @@ const plan = {
     "primitive.lineHeight.logo-lg", "primitive.lineHeight.screen-title", "primitive.lineHeight.panel-title", "primitive.lineHeight.card-title",
     "primitive.lineHeight.input", "primitive.lineHeight.list-item", "primitive.lineHeight.body", "primitive.lineHeight.body-sm",
     "primitive.lineHeight.chip", "primitive.lineHeight.label", "primitive.lineHeight.mini-label",
-    "aliases.forge-font-title", "aliases.forge-font-body",
-    "aliases.forge-text-logo-lg", "aliases.forge-text-screen-title", "aliases.forge-text-panel-title", "aliases.forge-text-card-title",
-    "aliases.forge-text-input", "aliases.forge-text-list-item", "aliases.forge-text-body", "aliases.forge-text-body-sm",
-    "aliases.forge-text-chip", "aliases.forge-text-label", "aliases.forge-text-mini-label",
-    "aliases.forge-tracking-title", "aliases.forge-tracking-label", "aliases.forge-tracking-eyebrow",
   ],
   spacing: [
     "primitive.dimension.space.0", "primitive.dimension.space.2", "primitive.dimension.space.4", "primitive.dimension.space.6",
@@ -124,9 +119,6 @@ const plan = {
     "primitive.number.z.nav", "primitive.number.z.overlay", "primitive.number.z.fullscreen", "primitive.number.z.video",
     "primitive.dimension.layout.app-max-width", "primitive.dimension.layout.tap-target-min", "primitive.dimension.layout.tap-target",
     "primitive.number.breakpoint.phone", "primitive.number.breakpoint.large", "primitive.number.breakpoint.xlarge",
-    "aliases.radius-card", "aliases.radius-panel", "aliases.radius-input", "aliases.radius-button", "aliases.radius-chip", "aliases.radius-pill",
-    "aliases.space-screen-h", "aliases.space-card", "aliases.space-gap", "aliases.space-card-gap",
-    "aliases.app-max-width", "aliases.tap-target-min",
   ],
   motion: [
     "primitive.duration.instant", "primitive.duration.fast", "primitive.duration.base", "primitive.duration.slow",
@@ -278,19 +270,34 @@ function buildDts() {
       names.push(n);
     }
   const union = names.map((n) => `  | ${JSON.stringify(n)}`).join("\n");
+
+  // ForgeTokens: GERADA do mesmo conjunto que tokens.rn.js (chaves camelCase,
+  // tipo derivado do valor resolvido) — antes era escrita à mão e nem batia com
+  // a forma flat do tokens.rn.js (T-52).
+  const seenKey = new Set();
+  const fields = [];
+  for (const f of ["colors", "typography", "spacing", "motion"])
+    for (const p of plan[f]) {
+      const t = byPath.get(p);
+      if (t.group === "aliases") continue;
+      const key = camelVar(t.cssVar);
+      if (seenKey.has(key)) continue;
+      seenKey.add(key);
+      const v = rnValue(t);
+      const ty = Array.isArray(v) ? "readonly number[]" : typeof v === "number" ? "number" : "string";
+      fields.push(`  ${JSON.stringify(key)}: ${ty};`);
+    }
+  const iface = fields.join("\n");
+
   return `// GENERATED — do not edit. Fonte: tokens/tokens.json (npm run build:tokens).
 export type ForgeCssVar =
 ${union};
 
+// Forma do objeto \`tokens\` exportado por tokens/tokens.rn.js (tema dark único),
+// gerada do mesmo conjunto de tokens: chaves camelCase, valores resolvidos
+// (string p/ cor/família/keyword, number p/ dp/ms).
 export interface ForgeTokens {
-  color: { accent: string; onAccent: string; success: string; warning: string; danger: string; negative: string; nutrition: string };
-  surface: { canvas: string; default: string; raised: string; panel: string };
-  text: { primary: string; secondary: string; tertiary: string; quaternary: string; disabled: string };
-  border: { default: string; input: string; divider: string; focus: string };
-  space: Record<0 | 2 | 4 | 6 | 8 | 10 | 12 | 16 | 20 | 24 | 32 | 40, number>;
-  radius: { chip: number; input: number; button: number; video: number; card: number; panel: number; pill: number };
-  control: { sm: number; md: number; lg: number };
-  duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;
+${iface}
 }
 
 export declare const tokens: ForgeTokens;            // valores do tema dark (único)

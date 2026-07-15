@@ -17,6 +17,31 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.10.0] — 2026-07-15
+Fase 4: sistema de tokens redondo — um namespace só, provenance de macros, `.d.ts` gerado.
+Sem mudança visual (renomeações de token com valores idênticos).
+
+### Changed
+- **Um namespace só: `--forge-*` (T-47).** A camada de **alias reverso** foi
+  **removida** por completo do `tokens.json` (28 entradas ao todo — `--surface-*`,
+  `--border-*` no 1.8.0; agora `--font-*`, `--text-*`, `--tracking-*`, `--weight-*`,
+  `--radius-*`, `--space-*`, `--app-max-width`, `--tap-target-min`). Os primitivos
+  passaram a emitir `--forge-*` direto (24 cssVars); 90 usos crus migraram em 23
+  arquivos (UI kit + guidelines). Cada token tem exatamente **um** cssVar.
+  `tokens/tokens.rn.js` **inalterado** (as chaves RN independem do prefixo).
+- **`semantic.macro` referencia a camada primitiva (T-48).** As cores de macro
+  (proteína/carbo/gordura) deixaram de ser hex literal no semântico e passam a
+  referenciar `primitive.color.macro.*` (valores idênticos). Provenance DTCG de 2
+  camadas.
+- **`ForgeTokens` do `tokens.d.ts` agora é GERADA (T-52).** Antes escrita à mão e
+  divergente da forma real; agora derivada do mesmo conjunto do `tokens.rn.js`
+  (chaves camelCase + tipos), batendo 1:1 (137 chaves).
+
+### Notes
+- **Sem camada semântica de motion (T-51 → ADR-0084).** Decisão registrada de
+  **não** adicionar tokens `enter/exit/press`: seriam especulativos (o consumo real
+  distingue rapidez, não intenção) e contrariam a limpeza de tokens sem uso.
+
 ## [1.9.0] — 2026-07-14
 Fase 4: modo decorativo do Spinner + matriz de estados por componente.
 

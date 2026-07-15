@@ -46,45 +46,16 @@ export type ForgeCssVar =
   | "--forge-on-brand-google-text"
   | "--forge-on-light"
   | "--forge-on-dark"
-  | "--font-title"
-  | "--font-body"
-  | "--weight-title-semi"
-  | "--weight-title-bold"
-  | "--weight-title-extra"
-  | "--weight-body-regular"
-  | "--weight-body-medium"
-  | "--weight-body-semi"
-  | "--weight-body-bold"
-  | "--weight-body-extra"
-  | "--text-logo-lg"
-  | "--text-screen-title"
-  | "--text-panel-title"
-  | "--text-card-title"
-  | "--text-input"
-  | "--text-list-item"
-  | "--text-body"
-  | "--text-body-sm"
-  | "--text-chip"
-  | "--text-label"
-  | "--text-mini-label"
-  | "--forge-text-stat"
-  | "--forge-text-stat-sm"
-  | "--tracking-title"
-  | "--tracking-label"
-  | "--tracking-eyebrow"
-  | "--forge-lh-logo-lg"
-  | "--forge-lh-screen-title"
-  | "--forge-lh-panel-title"
-  | "--forge-lh-card-title"
-  | "--forge-lh-input"
-  | "--forge-lh-list-item"
-  | "--forge-lh-body"
-  | "--forge-lh-body-sm"
-  | "--forge-lh-chip"
-  | "--forge-lh-label"
-  | "--forge-lh-mini-label"
   | "--forge-font-title"
   | "--forge-font-body"
+  | "--forge-weight-title-semi"
+  | "--forge-weight-title-bold"
+  | "--forge-weight-title-extra"
+  | "--forge-weight-body-regular"
+  | "--forge-weight-body-medium"
+  | "--forge-weight-body-semi"
+  | "--forge-weight-body-bold"
+  | "--forge-weight-body-extra"
   | "--forge-text-logo-lg"
   | "--forge-text-screen-title"
   | "--forge-text-panel-title"
@@ -96,9 +67,22 @@ export type ForgeCssVar =
   | "--forge-text-chip"
   | "--forge-text-label"
   | "--forge-text-mini-label"
+  | "--forge-text-stat"
+  | "--forge-text-stat-sm"
   | "--forge-tracking-title"
   | "--forge-tracking-label"
   | "--forge-tracking-eyebrow"
+  | "--forge-lh-logo-lg"
+  | "--forge-lh-screen-title"
+  | "--forge-lh-panel-title"
+  | "--forge-lh-card-title"
+  | "--forge-lh-input"
+  | "--forge-lh-list-item"
+  | "--forge-lh-body"
+  | "--forge-lh-body-sm"
+  | "--forge-lh-chip"
+  | "--forge-lh-label"
+  | "--forge-lh-mini-label"
   | "--forge-space-0"
   | "--forge-space-2"
   | "--forge-space-4"
@@ -144,18 +128,6 @@ export type ForgeCssVar =
   | "--forge-bp-phone"
   | "--forge-bp-large"
   | "--forge-bp-xlarge"
-  | "--radius-card"
-  | "--radius-panel"
-  | "--radius-input"
-  | "--radius-button"
-  | "--radius-chip"
-  | "--radius-pill"
-  | "--space-screen-h"
-  | "--space-card"
-  | "--space-gap"
-  | "--space-card-gap"
-  | "--app-max-width"
-  | "--tap-target-min"
   | "--forge-duration-instant"
   | "--forge-duration-fast"
   | "--forge-duration-base"
@@ -166,15 +138,147 @@ export type ForgeCssVar =
   | "--forge-ease-linear"
   | "--forge-ease-emphasized";
 
+// Forma do objeto `tokens` exportado por tokens/tokens.rn.js (tema dark único),
+// gerada do mesmo conjunto de tokens: chaves camelCase, valores resolvidos
+// (string p/ cor/família/keyword, number p/ dp/ms).
 export interface ForgeTokens {
-  color: { accent: string; onAccent: string; success: string; warning: string; danger: string; negative: string; nutrition: string };
-  surface: { canvas: string; default: string; raised: string; panel: string };
-  text: { primary: string; secondary: string; tertiary: string; quaternary: string; disabled: string };
-  border: { default: string; input: string; divider: string; focus: string };
-  space: Record<0 | 2 | 4 | 6 | 8 | 10 | 12 | 16 | 20 | 24 | 32 | 40, number>;
-  radius: { chip: number; input: number; button: number; video: number; card: number; panel: number; pill: number };
-  control: { sm: number; md: number; lg: number };
-  duration: Record<"instant" | "fast" | "base" | "slow" | "loopSpin" | "loopPulse", number>;
+  "bg": string;
+  "surface": string;
+  "surfaceRaised": string;
+  "panel": string;
+  "border": string;
+  "borderInput": string;
+  "divider": string;
+  "text": string;
+  "textMuted": string;
+  "textDim": string;
+  "textFaint": string;
+  "textDimmer": string;
+  "accent": string;
+  "accentFill": string;
+  "onAccent": string;
+  "success": string;
+  "warning": string;
+  "danger": string;
+  "dangerFill": string;
+  "nutrition": string;
+  "macroProtein": string;
+  "macroCarb": string;
+  "macroFat": string;
+  "cat1": string;
+  "cat2": string;
+  "cat3": string;
+  "cat4": string;
+  "cat5": string;
+  "cat6": string;
+  "catExt1": string;
+  "catExt2": string;
+  "catExt3": string;
+  "catExt4": string;
+  "catExt5": string;
+  "catExt6": string;
+  "catExt7": string;
+  "catExt8": string;
+  "catExt9": string;
+  "scrim": string;
+  "scrimHeavy": string;
+  "focusRing": string;
+  "negative": string;
+  "onBrandGoogleBg": string;
+  "onBrandGoogleText": string;
+  "onLight": string;
+  "onDark": string;
+  "fontTitle": string;
+  "fontBody": string;
+  "weightTitleSemi": string;
+  "weightTitleBold": string;
+  "weightTitleExtra": string;
+  "weightBodyRegular": string;
+  "weightBodyMedium": string;
+  "weightBodySemi": string;
+  "weightBodyBold": string;
+  "weightBodyExtra": string;
+  "textLogoLg": number;
+  "textScreenTitle": number;
+  "textPanelTitle": number;
+  "textCardTitle": number;
+  "textInput": number;
+  "textListItem": number;
+  "textBody": number;
+  "textBodySm": number;
+  "textChip": number;
+  "textLabel": number;
+  "textMiniLabel": number;
+  "textStat": number;
+  "textStatSm": number;
+  "trackingTitle": number;
+  "trackingLabel": number;
+  "trackingEyebrow": number;
+  "lhLogoLg": number;
+  "lhScreenTitle": number;
+  "lhPanelTitle": number;
+  "lhCardTitle": number;
+  "lhInput": number;
+  "lhListItem": number;
+  "lhBody": number;
+  "lhBodySm": number;
+  "lhChip": number;
+  "lhLabel": number;
+  "lhMiniLabel": number;
+  "space0": number;
+  "space2": number;
+  "space4": number;
+  "space6": number;
+  "space8": number;
+  "space10": number;
+  "space12": number;
+  "space16": number;
+  "space20": number;
+  "space24": number;
+  "space32": number;
+  "space40": number;
+  "spaceScreenH": number;
+  "spaceCard": number;
+  "spaceGap": number;
+  "spaceCardGap": number;
+  "radiusCard": number;
+  "radiusPanel": number;
+  "radiusInput": number;
+  "radiusButton": number;
+  "radiusChip": number;
+  "radiusPill": number;
+  "radiusVideo": number;
+  "sizeControlSm": number;
+  "sizeControlMd": number;
+  "sizeControlLg": number;
+  "iconSm": number;
+  "iconMd": number;
+  "iconLg": number;
+  "borderW": number;
+  "borderWStrong": number;
+  "focusRingW": number;
+  "focusRingOffset": number;
+  "opacityPress": number;
+  "opacityDisabled": number;
+  "zNav": number;
+  "zOverlay": number;
+  "zFullscreen": number;
+  "zVideo": number;
+  "appMaxWidth": number;
+  "tapTargetMin": number;
+  "tapTarget": number;
+  "bpPhone": number;
+  "bpLarge": number;
+  "bpXlarge": number;
+  "durationInstant": number;
+  "durationFast": number;
+  "durationBase": number;
+  "durationSlow": number;
+  "durationLoopSpin": number;
+  "durationLoopPulse": number;
+  "easeStandard": string;
+  "easeLinear": string;
+  "easeEmphasized": readonly number[];
 }
 
 export declare const tokens: ForgeTokens;            // valores do tema dark (único)
