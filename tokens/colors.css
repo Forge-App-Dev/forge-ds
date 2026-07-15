@@ -44,6 +44,9 @@
   --forge-scrim-heavy: rgba(0, 0, 0, 0.94);
   --forge-focus-ring: var(--forge-accent);
   --forge-negative: #e36a5a;
+  --forge-warn-surface: #1a1610;
+  --forge-warn-border: #3a2f1f;
+  --forge-warn-text: #c9b896;
   --forge-on-brand-google-bg: #FFFFFF;
   --forge-on-brand-google-text: #1a1a1a;
   --forge-on-light: #0B0F19;

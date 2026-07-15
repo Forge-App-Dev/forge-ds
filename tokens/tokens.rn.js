@@ -1,6 +1,8 @@
 // GENERATED — do not edit. Fonte: tokens/tokens.json (npm run build:tokens).
 // Tokens do Forge DS resolvidos para React Native (dp/ms/número/cor). Tema dark único.
 // Uso no forge-app: import { tokens } from "@forge/ds/tokens/tokens.rn.js";
+// tokens.font.* traz os nomes de família do @expo-google-fonts (peso = família em RN).
+// O app precisa carregar via useFonts: BarlowCondensed_600SemiBold, BarlowCondensed_700Bold, BarlowCondensed_800ExtraBold, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold, Inter_800ExtraBold.
 export const tokens = {
   "bg": "#0B0F19",
   "surface": "#161E2E",
@@ -44,6 +46,9 @@ export const tokens = {
   "scrimHeavy": "rgba(0, 0, 0, 0.94)",
   "focusRing": "#EF4444",
   "negative": "#e36a5a",
+  "warnSurface": "#1a1610",
+  "warnBorder": "#3a2f1f",
+  "warnText": "#c9b896",
   "onBrandGoogleBg": "#FFFFFF",
   "onBrandGoogleText": "#1a1a1a",
   "onLight": "#0B0F19",
@@ -138,6 +143,16 @@ export const tokens = {
   "durationLoopPulse": 1400,
   "easeStandard": "ease",
   "easeLinear": "linear",
-  "easeEmphasized": [0.2,0,0,1]
+  "easeEmphasized": [0.2,0,0,1],
+  "font": {
+    "titleSemi": "BarlowCondensed_600SemiBold",
+    "titleBold": "BarlowCondensed_700Bold",
+    "titleExtra": "BarlowCondensed_800ExtraBold",
+    "bodyRegular": "Inter_400Regular",
+    "bodyMedium": "Inter_500Medium",
+    "bodySemi": "Inter_600SemiBold",
+    "bodyBold": "Inter_700Bold",
+    "bodyExtra": "Inter_800ExtraBold"
+  }
 };
 export default tokens;

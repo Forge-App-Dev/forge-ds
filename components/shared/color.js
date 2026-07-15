@@ -1,6 +1,12 @@
 // Shared color utilities — single source of truth for color helpers used by
 // any component that needs to reason about an arbitrary fill.
 // Ported from src/theme/tokens.js (mateusutz/forge-app).
+//
+// PLATAFORMA-NEUTRO (web + React Native): este arquivo é JS puro — zero import,
+// sem react-dom, sem DOM. Pode ser consumido pelo forge-app (RN) direto:
+//   import { onColor } from "@forge/ds/components/shared/color.js";
+// É o onColor CANÔNICO dos dois lados. O app deve usar este em vez de reimplementar
+// (a versão antiga do app decidia por luminância simples; esta usa contraste WCAG).
 
 // Map of design-system color TOKENS → literal hex, para helpers que precisam de um
 // hex real (onColor/resolveColor resolvem "var(--forge-x)"). GERADO por
@@ -19,6 +25,9 @@ const TOKEN_HEX = {
   "--forge-danger-fill": "#c94b3b",
   "--forge-nutrition": "#10B981",
   "--forge-negative": "#e36a5a",
+  "--forge-warn-surface": "#1a1610",
+  "--forge-warn-border": "#3a2f1f",
+  "--forge-warn-text": "#c9b896",
   "--forge-macro-protein": "#E5645E",
   "--forge-macro-carb": "#E0A23B",
   "--forge-macro-fat": "#4C9BD6",

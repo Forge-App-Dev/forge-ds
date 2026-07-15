@@ -88,6 +88,7 @@ const plan = {
     "semantic.scrim.default", "semantic.scrim.heavy",
     "semantic.border.focus",
     "semantic.feedback.negative",
+    "semantic.feedback.warn-surface", "semantic.feedback.warn-border", "semantic.feedback.warn-text",
     "semantic.brand-google.bg", "semantic.brand-google.text",
     "semantic.action.on-light", "semantic.action.on-dark",
   ],
@@ -287,6 +288,8 @@ function buildDts() {
       const ty = Array.isArray(v) ? "readonly number[]" : typeof v === "number" ? "number" : "string";
       fields.push(`  ${JSON.stringify(key)}: ${ty};`);
     }
+  const fontFields = rnFontMap().map(([k]) => `${JSON.stringify(k)}: string`).join("; ");
+  fields.push(`  "font": { ${fontFields} };`);
   const iface = fields.join("\n");
 
   return `// GENERATED — do not edit. Fonte: tokens/tokens.json (npm run build:tokens).
@@ -362,6 +365,31 @@ function rnValue(token) {
   }
   return lit; // color, keywords (ease/linear), etc.
 }
+// Mapa família+peso → nome de família do @expo-google-fonts (T-50/pivô RN).
+// Em RN, peso NÃO é aplicado a uma família: cada peso É uma família própria
+// (Inter_700Bold), então tokens.rn.js precisa dos nomes compostos, não de
+// "Inter" + 700 (que não funciona em RN). Derivado de fontFamily × fontWeight.
+const RN_WEIGHT_SUFFIX = { 400: "Regular", 500: "Medium", 600: "SemiBold", 700: "Bold", 800: "ExtraBold" };
+function rnFontMap() {
+  const famBase = {};
+  for (const fam of ["title", "body"]) {
+    const t = byPath.get(`primitive.fontFamily.${fam}`);
+    if (t) famBase[fam] = String(rnValue(t)).replace(/\s+/g, "");
+  }
+  const out = [];
+  for (const [p, t] of byPath) {
+    if (!p.startsWith("primitive.fontWeight.")) continue;
+    const leaf = p.split(".").pop();
+    const fam = leaf.split("-")[0];
+    const w = Number(t.value);
+    const suffix = RN_WEIGHT_SUFFIX[w];
+    if (!famBase[fam] || !suffix) continue;
+    const key = leaf.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+    out.push([key, `${famBase[fam]}_${w}${suffix}`]);
+  }
+  return out;
+}
+
 function buildTokensRn() {
   const seen = new Set();
   const lines = [];
@@ -375,9 +403,14 @@ function buildTokensRn() {
       lines.push(`  ${JSON.stringify(key)}: ${JSON.stringify(rnValue(t))}`);
     }
   }
+  const fontLines = rnFontMap().map(([k, v]) => `    ${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(",\n");
+  lines.push(`  "font": {\n${fontLines}\n  }`);
+  const needed = rnFontMap().map(([, v]) => v).join(", ");
   return "// GENERATED — do not edit. Fonte: tokens/tokens.json (npm run build:tokens).\n" +
     "// Tokens do Forge DS resolvidos para React Native (dp/ms/número/cor). Tema dark único.\n" +
     "// Uso no forge-app: import { tokens } from \"@forge/ds/tokens/tokens.rn.js\";\n" +
+    "// tokens.font.* traz os nomes de família do @expo-google-fonts (peso = família em RN).\n" +
+    `// O app precisa carregar via useFonts: ${needed}.\n` +
     "export const tokens = {\n" + lines.join(",\n") + "\n};\nexport default tokens;\n";
 }
 

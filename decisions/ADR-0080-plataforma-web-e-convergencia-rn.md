@@ -1,5 +1,23 @@
 # ADR-0080: Posicionamento de plataforma — DS web hoje, convergência React Native (Caminho A)
-**Status:** Accepted · **Data:** 2026-07-14 · **Decisor:** Mateus (owner) · **OP/Task:** T-01
+**Status:** Accepted (emendado 2026-07-15) · **Data:** 2026-07-14 · **Decisor:** Mateus (owner) · **OP/Task:** T-01
+
+> ## ⚠️ Emenda (2026-07-15): web é documentação, RN-first no produto
+> O owner esclareceu que **o produto não tem alvo web**: o `forge-app` é Android agora e
+> iOS depois (nasceu como PWA lá atrás, hoje distribui APK/AAB). Logo:
+> - **O produto precisa de componentes React Native — e só.** Não há "rodar em web".
+> - **`react-native-web` está fora.** Ele existia no plano só para o *catálogo web* renderizar
+>   os componentes reais; o owner não quer documentação viva ("web é perfumaria; não preciso que
+>   as coisas fiquem se mexendo lá"). O **catálogo/storybook permanece como specimens estáticos**.
+> - **Correção técnica:** `react-native-web` renderiza componentes *React Native no navegador* — não
+>   o contrário. Os componentes web (react-dom) de hoje são **spec/espelho**, não serão portados;
+>   os componentes canônicos nascem/são promovidos em **React Native puro**.
+>
+> **Decisão vigente:** nível 3 = **promover os componentes RN do `forge-app` para um pacote RN
+> versionado** que o app importa (sem `react-native-web`, sem alvo web). O catálogo web segue
+> estático, como documentação — perfumaria opcional. O resto desta ADR (Caminho A faseado; tokens
+> primeiro; promover em vez de reescrever) continua válido. A Alternativa C abaixo ("web-only como
+> doc") era rejeitada por *não entregar componentes importáveis* — isso deixa de valer: entregamos
+> componentes importáveis **em RN**; só a *renderização web deles* é que foi descartada.
 
 ## Contexto
 O `forge-ds` é implementado em **React-DOM (web)**: componentes usam `div/button/svg`, `onMouseDown/onTouchStart`, `className` e CSS custom properties — nada disso existe em React Native. O `forge-app` (o produto a ser servido) é **Expo/React Native**. Consequência dura: **hoje o app não consegue `import` de componentes do `forge-ds`**. O DS nasceu como *espelho reverso* do app (ver `docs/ARCHITECTURE.md`), então os componentes RN reais já existem no `forge-app`, e o catálogo web do DS é feito de réplicas HTML (mockups), não do componente real.
