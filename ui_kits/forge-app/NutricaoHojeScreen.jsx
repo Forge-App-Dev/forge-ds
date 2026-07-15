@@ -14,20 +14,20 @@ function NutricaoHojeScreen({ onAdjust, onEditMeal }) {
     <div style={{ padding: "8px 20px 24px", maxWidth: 480, margin: "0 auto", boxSizing: "border-box" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 18 }}>
         <div>
-          <div style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "var(--forge-text-faint)", marginBottom: 4 }}>
+          <div style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 12, letterSpacing: 2, textTransform: "uppercase", color: "var(--forge-text-faint)", marginBottom: 4 }}>
             Terça · 11/07/2026
           </div>
-          <div style={{ fontFamily: "var(--font-title)", fontSize: 32, textTransform: "uppercase", color: "var(--forge-text)", lineHeight: "34px" }}>Hoje</div>
+          <div style={{ fontFamily: "var(--forge-font-title)", fontSize: 32, textTransform: "uppercase", color: "var(--forge-text)", lineHeight: "34px" }}>Hoje</div>
         </div>
         <Button small title="Ajustar" color={NG} resolvedColor={NG} onClick={onAdjust} />
       </div>
 
-      <div style={{ backgroundColor: "var(--forge-surface)", border: "1px solid var(--forge-border)", borderRadius: "var(--radius-card)", padding: 16, marginBottom: 14 }}>
+      <div style={{ backgroundColor: "var(--forge-surface)", border: "1px solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: 16, marginBottom: 14 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <Ring size={110} stroke={11} progress={totals.kcal / target.kcal} color={NG}>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontFamily: "var(--font-title)", fontSize: 26, color: "var(--forge-text)" }}>{totals.kcal}</div>
-              <div style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 10, color: "var(--forge-text-dim)" }}>/ {target.kcal} kcal</div>
+              <div style={{ fontFamily: "var(--forge-font-title)", fontSize: 26, color: "var(--forge-text)" }}>{totals.kcal}</div>
+              <div style={{ fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 10, color: "var(--forge-text-dim)" }}>/ {target.kcal} kcal</div>
             </div>
           </Ring>
           <div style={{ flex: 1 }}>
@@ -38,13 +38,13 @@ function NutricaoHojeScreen({ onAdjust, onEditMeal }) {
         </div>
       </div>
 
-      <div style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, marginTop: 14, marginBottom: 8 }}>
+      <div style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, marginTop: 14, marginBottom: 8 }}>
         Café da manhã
       </div>
       {meals.slice(0, 1).map((meal, idx) => (
         <MealCard key={idx} meal={meal} onEdit={onEditMeal} />
       ))}
-      <div style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, marginTop: 14, marginBottom: 8 }}>
+      <div style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, marginTop: 14, marginBottom: 8 }}>
         Almoço
       </div>
       {meals.slice(1, 2).map((meal, idx) => (
@@ -58,11 +58,11 @@ function MealCard({ meal, defaultOpen = false, onEdit }) {
   const [open, setOpen] = React.useState(defaultOpen);
   const { Icon } = window.ForgeDesignSystem_7731a5;
   return (
-    <div onClick={() => setOpen(!open)} style={{ backgroundColor: "var(--forge-surface)", border: "1px solid var(--forge-border)", borderRadius: "var(--radius-card)", padding: 16, marginBottom: 10, cursor: "pointer" }}>
+    <div onClick={() => setOpen(!open)} style={{ backgroundColor: "var(--forge-surface)", border: "1px solid var(--forge-border)", borderRadius: "var(--forge-radius-card)", padding: 16, marginBottom: 10, cursor: "pointer" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ color: "var(--forge-text)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 14 }}>{meal.name}</div>
-          <div style={{ color: "var(--forge-text-dim)", fontFamily: "var(--font-body)", fontSize: 12, marginTop: 2 }}>{meal.kcal} kcal · P {meal.p} · C {meal.c} · G {meal.f}</div>
+          <div style={{ color: "var(--forge-text)", fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 14 }}>{meal.name}</div>
+          <div style={{ color: "var(--forge-text-dim)", fontFamily: "var(--forge-font-body)", fontSize: 12, marginTop: 2 }}>{meal.kcal} kcal · P {meal.p} · C {meal.c} · G {meal.f}</div>
         </div>
         {onEdit ? (
           <button onClick={(e) => { e.stopPropagation(); onEdit(meal); }} style={{ background: "none", border: "none", padding: 4, cursor: "pointer" }}>
@@ -75,8 +75,8 @@ function MealCard({ meal, defaultOpen = false, onEdit }) {
         <div style={{ marginTop: 8 }}>
           {meal.items.map(([name, qty], i) => (
             <div key={i} style={{ display: "flex", justifyContent: "space-between", gap: 8, padding: "4px 0" }}>
-              <span style={{ color: "var(--forge-text-muted)", fontFamily: "var(--font-body)", fontSize: 12.5, flex: 1, minWidth: 0 }}>{name}</span>
-              <span style={{ color: "var(--forge-text-dim)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 12 }}>{qty}</span>
+              <span style={{ color: "var(--forge-text-muted)", fontFamily: "var(--forge-font-body)", fontSize: 12.5, flex: 1, minWidth: 0 }}>{name}</span>
+              <span style={{ color: "var(--forge-text-dim)", fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 12 }}>{qty}</span>
             </div>
           ))}
         </div>

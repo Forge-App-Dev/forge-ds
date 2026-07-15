@@ -14,7 +14,7 @@ function DayPlannerScreen({ visible, onClose }) {
 
   return (
     <FullScreen visible={visible} onClose={onClose} title="Plano do dia" right={<HeaderAction title="Replicar" onClick={() => {}} />} footer={<Button title="Salvar plano" onClick={onClose} style={{ width: "100%" }} />}>
-      <div style={{ color: "var(--forge-text-dim)", fontSize: 13, marginBottom: 16, fontFamily: "var(--font-body)" }}>
+      <div style={{ color: "var(--forge-text-dim)", fontSize: 13, marginBottom: 16, fontFamily: "var(--forge-font-body)" }}>
         Escolha quais refeições fazem parte do seu dia. Isso ajusta a distribuição das metas de macros.
       </div>
       {slots.map((s) => (
@@ -26,7 +26,7 @@ function DayPlannerScreen({ visible, onClose }) {
           <div style={{ width: 20, height: 20, borderRadius: 5, border: `1.5px solid ${s.enabled ? "var(--forge-nutrition)" : "var(--forge-border-input)"}`, backgroundColor: s.enabled ? "var(--forge-nutrition)" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
             {s.enabled ? <Icon name="check" color="var(--forge-on-light)" size={13} /> : null}
           </div>
-          <span style={{ flex: 1, color: "var(--forge-text)", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 14 }}>{s.label}</span>
+          <span style={{ flex: 1, color: "var(--forge-text)", fontFamily: "var(--forge-font-body)", fontWeight: 600, fontSize: 14 }}>{s.label}</span>
         </div>
       ))}
     </FullScreen>

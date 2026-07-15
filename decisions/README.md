@@ -13,7 +13,7 @@ Os números são agrupados por tema, com faixas **reservadas** entre os blocos p
 | **0040–0049** | Arquitetura de tokens | 0040 (arquitetura DTCG de tokens) |
 | **0050–0069** | Cor, contraste, acessibilidade & conteúdo | onColor WCAG, contraste de macros, daltonismo, zoom/reflow, terminologia de leitor de tela, textDimmer, guia de conteúdo, framework "quando usar + a11y" |
 | **0070–0079** | Governança & Design Ops | ciclo de vida do componente, versionamento semântico, escopo do check-drift |
-| **0080+** | Decisões recentes / transversais | 0080 posicionamento de plataforma (web → RN), 0081 tokens de fill de contraste de marca, 0082 vocabulário de botões/chips + prop de rótulo, 0083 registro de ícones (escala/tree-shaking) |
+| **0080+** | Decisões recentes / transversais | 0080 posicionamento de plataforma (web → RN), 0081 tokens de fill de contraste de marca, 0082 vocabulário de botões/chips + prop de rótulo, 0083 registro de ícones (escala/tree-shaking), 0084 sem camada semântica de motion |
 
 Faixas reservadas hoje sem ADR (livres para o tema do bloco): 0033–0039, 0041–0049, 0058–0069.
 

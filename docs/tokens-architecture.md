@@ -21,10 +21,11 @@ viram artefatos gerados).
    escala teórica e o valor real divergem, vence o valor real; a divergência é documentada.
 2. **3 camadas, com a 3ª sob demanda.** Primitivo → Semântico → Componente. A camada de
    componente só existe onde ≥2 consumidores divergem (OP-004 rec. b). Hoje ela é mínima.
-3. **Um namespace só: `--forge-*`** (OP-096). Todo CSS var gerado é prefixado. Os nomes curtos
-   legados (`--radius-card`, `--space-card`, `--surface-card`…) continuam sendo emitidos **como
-   alias reverso** enquanto os consumidores migram — o gerador os produz a partir de um bloco
-   `aliases` explícito no JSON, nunca à mão.
+3. **Um namespace só: `--forge-*`** (OP-096, T-47). Todo CSS var gerado é prefixado — sem exceção.
+   A antiga camada de **alias reverso** (nomes curtos `--radius-card`, `--space-card`,
+   `--surface-card`, `--font-body`, `--text-body`…) **foi removida**: a migração dos consumidores
+   terminou e o bloco `aliases` do JSON deixou de existir. Cada token tem exatamente um cssVar,
+   sempre `--forge-*`.
 4. **Formato W3C DTCG** (OP-101): todo token é `{ "$value", "$type", "$description" }`. Grupos
    carregam `$type` herdado. Referências entre tokens usam a sintaxe de chaves `{grupo.token}`.
 5. **A camada semântica isola o white-label.** Primitivos são absolutos e theme-agnostic; o
@@ -55,11 +56,12 @@ tokens/tokens.json
 │   ├─ category (paleta atribuível)  ·  macro (identidade fixa)
 │   └─ elevation (nível 0/1/2 por cor, ver OP-089)
 │
-├─ component/           camada 3 — só onde há divergência real (mínima hoje)
-│   ├─ button  ·  input  ·  card  ·  panel  ·  chip  ·  control (alturas)
-│
-└─ aliases/             nomes curtos legados → semântico/primitivo (compat, OP-097)
+└─ component/           camada 3 — só onde há divergência real (mínima hoje)
+    ├─ button  ·  input  ·  card  ·  panel  ·  chip  ·  control (alturas)
 ```
+
+> Nota (T-47): a antiga `aliases/` (nomes curtos legados, OP-097) foi **removida** — a migração
+> dos consumidores para `--forge-*` terminou. Não há mais camada de alias no JSON.
 
 **Regra de consumo:** componentes de UI consomem **apenas** `semantic/` e `component/`.
 Nunca `primitive/` direto. Primitivo é matéria-prima do sistema de tokens, não vocabulário de tela.

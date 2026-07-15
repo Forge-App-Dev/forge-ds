@@ -32,7 +32,7 @@ function ExerciseForm({ visible, onClose, exercise }) {
       }
     >
       <TextField label="Nome do exercício" value={name} onChange={setName} placeholder="Ex: Supino Reto" />
-      <div style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, margin: "16px 0 8px" }}>
+      <div style={{ fontFamily: "var(--forge-font-body)", fontWeight: 700, fontSize: 11.5, color: "var(--forge-text-faint)", textTransform: "uppercase", letterSpacing: 1, margin: "16px 0 8px" }}>
         Grupo muscular
       </div>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
