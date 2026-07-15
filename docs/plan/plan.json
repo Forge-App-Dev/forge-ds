@@ -2,7 +2,7 @@
   "meta": {
     "title": "Forge DS — Parecer & Plano Tático",
     "commit": "88fc717",
-    "version": "v1.8.0",
+    "version": "v1.9.0",
     "components": 63,
     "adrs": 47,
     "updatedAt": "2026-07-14",
@@ -586,12 +586,12 @@
       "id": "T-54",
       "phase": "F3",
       "sev": "opo",
-      "status": "todo",
+      "status": "done",
       "effort": "M",
       "title": "Matriz de estados por componente",
       "ev": "faltam default/press/focus/disabled/loading/error/selected",
       "action": "Card por família com a matriz completa.",
-      "note": "Lote 6b: expandir docs/patterns/states-matrix.md por-componente (o geral já existe)."
+      "note": "Feito: docs/patterns/states-matrix.md ganhou a seção 'Matriz por componente (detalhe)' — tabela por família (Ação/Campos/Overlays/Feedback/Navegação/Produto) listando o mecanismo REAL de cada estado por componente (prop do contrato .d.ts), verificado 1:1 contra os .d.ts. Primitivos sem estado listados explicitamente."
     },
     {
       "id": "T-60",
@@ -641,12 +641,12 @@
       "id": "T-64",
       "phase": "F4",
       "sev": "opo",
-      "status": "todo",
+      "status": "done",
       "effort": "B",
       "title": "Consolidar os 3 desenhadores de spinner",
       "ev": "Ring indeterminado, Spinner, LoadingScreen",
       "action": "Um primitivo de spinner reutilizado.",
-      "note": "Adiada: dedup dos 3 desenhadores de spinner exige um MODO DECORATIVO no Spinner (sem role/aria próprios) p/ viver dentro do LoadingScreen sem status aninhado + o track. Não é dedup limpo sem essa API."
+      "note": "Resolvido como decisão (+ API nova): o bloqueador citado era 'falta modo decorativo no Spinner' — IMPLEMENTADO: Spinner com label={null}/\"\" vira decorativo (aria-hidden, sem role/aria-label) p/ viver dentro de contexto que já anuncia loading. Ganho de a11y (evita status aninhado) + documentado no states-matrix e no .d.ts. Ring (determinado, gradiente) e LoadingScreen (track+marca+margens afinadas) mantêm geometria bespoke POR DECISÃO — um swap pixel-idêntico p/ o Spinner mudaria o raio (fórmula do Spinner dá r=33.5 p/ size=72/stroke=5 vs r=31) na tela-assinatura; não vale o risco visual por ~2 linhas."
     },
     {
       "id": "T-65",
@@ -799,6 +799,15 @@
       "summary": "T-60 resolvido como decisão documentada (ADR-0083 + iconography.md): registro monolítico é intencional em 33 ícones; gatilho de divisão explícito (~60 ícones/~600 linhas → módulo ES por ícone, API <Icon name> inalterada); sprite/fonte proibidos com justificativa (currentColor/white-label). T-47 parcial: removidos 6 aliases de cor mortos sem prefixo (--surface-*/--border-card/input, 0 consumidores) — o restante do namespace (tipografia/radius) fica para passe dedicado. Sem mudança visual; build/adherence/oncolor/render verdes.",
       "tasks": [
         "T-60"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "title": "Lote 9 — Fase 4: matriz de estados + modo decorativo do Spinner",
+      "summary": "T-54: states-matrix.md ganhou a matriz POR COMPONENTE (mecanismo real de cada estado, verificado contra os .d.ts). T-64: adicionado o modo decorativo do Spinner (label={null} → aria-hidden, sem role/status aninhado) — o bloqueador que segurava o dedup; Ring/LoadingScreen mantêm geometria bespoke por decisão (swap pixel-idêntico mudaria o raio na tela-assinatura). Sem mudança visual; build/adherence/render 14/14 verdes.",
+      "tasks": [
+        "T-54",
+        "T-64"
       ]
     }
   ]
