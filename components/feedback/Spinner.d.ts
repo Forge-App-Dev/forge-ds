@@ -9,8 +9,12 @@ export interface SpinnerProps {
   size?: number;
   stroke?: number;
   color?: string;
-  /** Accessible name (aria-label). Default "Carregando". */
-  label?: string;
+  /**
+   * Accessible name (aria-label). Default "Carregando".
+   * Pass `null` or "" for DECORATIVE mode (aria-hidden, no role/label) — use
+   * when the surrounding context already announces the loading state.
+   */
+  label?: string | null;
   className?: string;
   style?: React.CSSProperties;
 }

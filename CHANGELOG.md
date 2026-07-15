@@ -17,6 +17,21 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.9.0] — 2026-07-14
+Fase 4: modo decorativo do Spinner + matriz de estados por componente.
+
+### Added
+- **`Spinner` — modo decorativo.** Passar `label={null}` (ou `""`) rende o spinner
+  como decorativo (`aria-hidden`, **sem** `role="status"`/`aria-label`), para uso
+  dentro de um contexto que já anuncia o carregamento (ex.: `Button loading`, uma
+  seção com `aria-busy`). Evita anúncios duplicados no leitor de tela. O padrão
+  segue anunciando (`role="status"`, label "Carregando"). Resolve o bloqueador do
+  T-64; `Ring`/`LoadingScreen` mantêm geometria própria por decisão.
+- **`docs/patterns/states-matrix.md` — matriz por componente.** Além da matriz por
+  família, agora há o detalhe **por componente**: o mecanismo real de cada estado
+  (o prop do contrato) para Ação/Campos/Overlays/Feedback/Navegação/Produto,
+  verificado 1:1 contra os `.d.ts` (T-54).
+
 ## [1.8.0] — 2026-07-14
 Fase 4: decisão de arquitetura de ícones + limpeza de tokens (sem mudança visual).
 
