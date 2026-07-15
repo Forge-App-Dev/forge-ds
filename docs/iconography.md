@@ -33,3 +33,26 @@ traço da família, siga estas regras — são as que os ícones existentes já 
 - ❌ Cor hardcoded no path (quebra tema/white-label e o lint de aderência).
 - ❌ Traço fino demais (1px) ou grosso demais (3px+) — destoa da família.
 - ❌ PNG/emoji/ícone de fonte — o sistema é SVG inline por nome, só.
+
+## Escala, tree-shaking e o gatilho de divisão (T-60)
+
+O registro `PATHS` é **monolítico** (um objeto no `Icon.jsx`, hoje 33 ícones /
+~240 linhas). Importar `Icon` puxa o registro inteiro — não é tree-shakeable por
+ícone. **Isso é intencional na escala atual**, e a decisão foi tomada de olho no
+trade-off, não por descuido:
+
+- **Por que manter monolítico agora:** com dezenas de ícones o peso é irrelevante
+  (paths de contorno são poucos bytes) e a API `<Icon name="flame" />` é a mais
+  simples de consumir — inclusive para IA (um nome de string, `ICON_NAMES` lista
+  tudo) e para a convergência RN (o mesmo `name → componente` mapeia direto para
+  `react-native-svg`). Dividir em 33 módulos hoje seria complexidade sem retorno.
+- **O gatilho de divisão:** quando o catálogo passar de **~60 ícones** _ou_ o
+  `Icon.jsx` cruzar **~600 linhas**, migrar para **um módulo ES por ícone**
+  (`icons/paths/flame.js` etc.), com o `Icon` montando o registro por import —
+  aí o bundler consegue subsetar. A API pública (`<Icon name>`) **não muda**; só
+  a organização interna. Registre um ADR quando isso acontecer.
+- **Por que NÃO sprite nem fonte de ícone** (a proibição continua de pé, e não é
+  contradição com o item acima): sprite (`<use href>`) e icon-font quebram o
+  `stroke="currentColor"` por-token, complicam o white-label e adicionam um passo
+  de build/asset externo. O caminho escalável do Forge é **módulos ES por ícone**
+  (tree-shakeable, mantém currentColor, sem asset externo) — não sprite/fonte.

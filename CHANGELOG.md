@@ -17,6 +17,25 @@ definido em [`decisions/ADR-0071`](decisions/ADR-0071-versionamento-semantico-e-
 ### Added
 - _(nada)_
 
+## [1.8.0] — 2026-07-14
+Fase 4: decisão de arquitetura de ícones + limpeza de tokens (sem mudança visual).
+
+### Added
+- **`decisions/ADR-0083`** e seção nova em `docs/iconography.md` — política de
+  escala do registro de ícones: o registro monolítico é intencional na escala
+  atual (33 ícones); gatilho de divisão explícito (**~60 ícones ou ~600 linhas**
+  → um módulo ES por ícone, mantendo a API `<Icon name>`); sprite/icon-font
+  seguem proibidos, agora com justificativa (quebram `currentColor`/white-label).
+  Resolve T-60 como decisão documentada — sem mudança de código de runtime.
+
+### Removed
+- **Aliases de cor sem prefixo `--surface-bg/-card/-raised/-panel`,
+  `--border-card`, `--border-input`.** Eram compat legada (OP-097) e não tinham
+  nenhum consumidor (0 usos em `components/`, `ui_kits/`, `guidelines/`). Cor
+  sai sempre dos tokens `--forge-*`. Parte do T-47 (unificação de namespace);
+  o restante do tangle (tipografia primitivo↔alias, `--radius-*` sem prefixo)
+  fica para um passe dedicado.
+
 ## [1.7.0] — 2026-07-14
 Limpeza de artefatos mortos + correções de honestidade (gráfico e doc de camadas).
 

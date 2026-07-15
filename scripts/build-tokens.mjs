@@ -85,8 +85,6 @@ const plan = {
     "semantic.category.1", "semantic.category.2", "semantic.category.3", "semantic.category.4", "semantic.category.5", "semantic.category.6",
     "semantic.category.ext-1", "semantic.category.ext-2", "semantic.category.ext-3", "semantic.category.ext-4", "semantic.category.ext-5",
     "semantic.category.ext-6", "semantic.category.ext-7", "semantic.category.ext-8", "semantic.category.ext-9",
-    "aliases.surface-bg", "aliases.surface-card", "aliases.surface-raised", "aliases.surface-panel",
-    "aliases.border-card", "aliases.border-input",
     "semantic.scrim.default", "semantic.scrim.heavy",
     "semantic.border.focus",
     "semantic.feedback.negative",
